@@ -11,6 +11,13 @@
 
 検索ボックスを空にすると再びページネーションに基づくcategoriesをサーバから取得して表示する。
 
+[frontend]
+
+
+
+[backend]
+条件に基づく、カテゴリデータを返すapiを作成。
+
 <hr/>
 
 ## subcategory search

@@ -3,7 +3,7 @@ from fastapi import APIRouter, Path, Query, HTTPException, Depends
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import question as question_cruds, auth as auth_cruds
-from schemas.question import QuestionResponse, QuestionUpdate, QuestionCreate
+from schemas.question import QuestionResponse, QuestionUpdate, QuestionCreate, ProblemCreate
 from schemas.auth import DecodedToken
 from database import get_db
 from cruds import question as question_cruds, category as category_cruds, subcategory as subcategory_cruds
@@ -43,9 +43,9 @@ async def find_by_name(
 ):
     return question_cruds.find_by_name(db, name)
 
-
+# 問題を作成する。
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
-async def create(db: DbDependency, problem_create: ProblemCreate):
+async def create(db: DbDependency, question_create: QuestionCreate):
     found_category = category_cruds.find_by_id(db, question_create.category_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
@@ -55,9 +55,9 @@ async def create(db: DbDependency, problem_create: ProblemCreate):
         raise HTTPException(status_code=404, detail="Category not found")
     return question_cruds.create(db, question_create)
 
-# 出題する問題を生成する。
+# 出題する問題群を生成する。
 @router.post("/generate_problems", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
-async def generate_problems(db: DbDependency, ):
+async def generate_problems(db: DbDependency, ProblemCreate: ProblemCreate):
     return question_cruds.generate_problems(db)
 
 @router.put("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
