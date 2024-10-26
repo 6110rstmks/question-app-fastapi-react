@@ -1,0 +1,18 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 50px;
+    background-color: green;
+    gap: 45px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: cadetblue;
+}
