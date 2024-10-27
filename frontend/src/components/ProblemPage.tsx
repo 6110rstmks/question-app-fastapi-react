@@ -1,45 +1,82 @@
 import { useParams, Link, useLocation } from 'react-router-dom';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 
-    interface Question {
-        id: number;
-        problem: string;
-        answer: string[];
-        subcategory_id: number;
-    }
-
-// type Question {
-//     id: number;
-//     problem: string;
-//     answer: string[];
-//     subcategory_id: number;
-// }
-
-
+interface Question {
+    id: number;
+    problem: string;
+    answer: string[];
+    subcategory_id: number;
+}
 
 const ProblemPage: React.FC = () => {
     const location = useLocation();
     const problemData = location.state as Question[];
+    const [currentProblemIndex, setCurrentProblemIndex] = useState(0);
+    const [currentReviewProblemIndex, setCurrentReviewProblemIndex] = useState(0);
+    const [unsolvedProblems, setUnsolvedProblems] = useState<Question[]>([]);
+    const [unsolvedProblemsIndex, setUnsolvedProblemsIndex] = useState(0);
+    const [reviewFlg, setReviewFlg] = useState(false);
+
+    const handleAnswer_solved = () => {
+        setCurrentProblemIndex(currentProblemIndex + 1);
+    };
+
+    const handleAnswer_unsolved = () => {
+        setUnsolvedProblems([...unsolvedProblems, problemData[currentProblemIndex]]);
+        setCurrentProblemIndex(currentProblemIndex + 1);
+    };
+
+    // 再度出題した用の関数
+    const handleAnswer_solved_review = () => {
+        setCurrentReviewProblemIndex(currentReviewProblemIndex + 1);
+    };
+
+    // 再度出題した用の関数
+    const handleAnswer_unsolved_review = () => {
+        setUnsolvedProblems(unsolvedProblems.filter((problem) => problem.id !== unsolvedProblems[currentReviewProblemIndex].id));
+        setCurrentReviewProblemIndex(currentReviewProblemIndex + 1);
+    };
+
+    // もう一度解けなかった問題に絞って解く。
+    const handleReview = () => {
+        setReviewFlg(true)
+        setCurrentProblemIndex(0);
+    }
+
+    if (currentProblemIndex >= problemData.length) {
+        return <div>
+            <h1>終了</h1>
+            <button onClick={handleReview}>解けなかった問題に絞ってもう一度復習する</button>
+        </div>;
+    }
 
     return (
         <div>
-            <h1>Problem Page</h1>
-            {problemData && problemData.length > 0 ? (
-                problemData.map((question) => (
-                    <div key={question.id}>
-                        <h2>問題: {question.problem}</h2>
-                        <p>回答:</p>
-                        <ul>
-                            {question.answer.map((ans, index) => (
-                                <li key={index}>{ans}</li>
-                            ))}
-                        </ul>
+            {!reviewFlg ? (
+                <div>
+                    <h1>問題{currentProblemIndex + 1}/{problemData.length}</h1>
+                    <div>
+                        <h2>{problemData[currentProblemIndex].problem}</h2>
+                        <h2>{problemData[currentProblemIndex].answer}</h2>
                     </div>
-                ))
+                    <button onClick={handleAnswer_solved}>解けた</button>
+                    <button onClick={handleAnswer_unsolved}>解けなかった</button>
+                </div>
             ) : (
-                <p>No problems available.</p>
+                <div>
+                    <h1>問題{currentProblemIndex + 1}/{unsolvedProblems.length}</h1>
+                    <div>
+                        <h2>{unsolvedProblems[unsolvedProblemsIndex].problem}</h2>
+                        <h2>{unsolvedProblems[unsolvedProblemsIndex].answer}</h2>
+                        {/* <button onClick={() => handleAnswer(true)}>○</button>
+                        <button onClick={() => handleAnswer(false)}>×</button> */}
+                    </div>
+                    <button onClick={handleAnswer_solved_review}>解けた</button>
+                    <button onClick={handleAnswer_unsolved_review}>解けなかった</button>
+                </div>
             )}
         </div>
-    );
+    )
 }
 
 export default ProblemPage
