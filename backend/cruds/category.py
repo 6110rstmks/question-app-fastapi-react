@@ -1,8 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-# from schemas import category
 from schemas.category import CategoryCreate
-from models import Category
+from models import Category, CategoryQuestion
 from fastapi_pagination import Page, add_pagination, paginate
 from sqlalchemy import func
 
@@ -10,6 +9,11 @@ from sqlalchemy import func
 
 def find_all(db: Session):
     query = select(Category)
+    
+    # デバッグ方法。
+    # results = db.execute(query).scalars().all()
+    # for aa in results:
+    #     print(aa.name)
     return db.execute(query).scalars().all()
 
 def find_pagination(db: Session):
@@ -44,10 +48,11 @@ def get_page_count(db: Session):
     print(count_page)
     return count_page
 
+# 問題を一つ持つカテゴリを取得する。
 def find_all_categories_with_questions(db: Session):
-    query = select(Category).join(Category.questions)
-    aaa = db.execute(query).scalars().all()
-    for i in aaa:
-        print(i.name)
-    return db.execute(query).scalars().all()
+    query1 = select(CategoryQuestion.category_id).distinct()
+    category_ids = db.execute(query1).scalars().all()
+    
+    query2 = select(Category).where(Category.id.in_(category_ids))
+    return db.execute(query2).scalars().all()
 

@@ -1,9 +1,11 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from schemas.question import QuestionCreate, QuestionUpdate
+from schemas.problem import ProblemCreate
 from models import Question, SubCategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
-
+from sqlalchemy import func
+from sqlalchemy.dialects import mysql
 
 
 def find_all(db: Session):
@@ -12,6 +14,7 @@ def find_all(db: Session):
 def find_all_in_question(db: Session, question_id: int):
     query1 = select(SubCategoryQuestion).where(SubCategoryQuestion.question_id == question_id)
     print(query1)
+    
     # query = select(Question).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query1).scalars().all()
 
@@ -22,12 +25,32 @@ def find_all_in_category(db: Session, category_id: int):
 def find_all_in_subcategory(db: Session, subcategory_id: int):
     query1 = select(SubCategoryQuestion.question_id).where(SubCategoryQuestion.subcategory_id == subcategory_id)
     question_ids = db.execute(query1).scalars().all()
+    print(question_ids)
     query = select(Question).where(Question.id.in_(question_ids))
     return db.execute(query).scalars().all()
 
 def find_by_id(db: Session, id: int):
     query = select(Question).where(Question.id == id)
     return db.execute(query).scalars().first()
+
+# 問題を出題する
+def generate_problems(db: Session, problem_create: ProblemCreate):
+    if problem_create.type == "random":
+        query = select(Question).order_by(func.random()).limit(10)
+    elif problem_create.type == "category":
+        print(problem_create.category_ids)
+        query1 = select(CategoryQuestion).where(CategoryQuestion.category_id.in_(problem_create.category_ids))
+        results = db.execute(query1).scalars().all()
+        
+        question_ids = [question.question_id for question in results]
+        print(question_ids)
+        
+        query2 = select(Question).where(Question.id.in_(question_ids))
+        return db.execute(query2).scalars().all()
+
+    else:
+        pass
+    
 
 def find_by_name(db: Session, name: str):
     return db.query(Question).filter(Question.name.like(f"%{name}%")).all()
@@ -51,7 +74,6 @@ def create(db: Session, question_create: QuestionCreate):
     except SQLAlchemyError as e:
         db.rollback()
         raise e
-
 
 
 def update(db: Session, id: int, question_update: QuestionUpdate, category_id: int, question_id: int):

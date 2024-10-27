@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Login from './components/login/Login';
-import Logout from './components/login/Logout';
-import Navbar from './components/Navbar';
-import QuestionPage from './components/QuestionPage';
-import CreateCategory from './components/CreateCategory';
-import CreateQuestion from './components/CreateQuestion';
-import SubcategoryPage from './components/SubcategoryPage';
-import SetQuestion from './components/SetQuestion';
+import Home from './components/Home'
+import Login from './components/login/Login'
+import Logout from './components/login/Logout'
+import Navbar from './components/Navbar'
+import QuestionPage from './components/QuestionPage'
+import CreateCategory from './components/CreateCategory'
+import CreateQuestion from './components/CreateQuestion'
+import SubcategoryPage from './components/SubcategoryPage'
+import SetQuestion from './components/SetProblem'
+import ProblemPage from './components/ProblemPage'
 
 const App: React.FC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"));
@@ -32,6 +33,7 @@ const App: React.FC = () => {
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth} />} />
         <Route path="/subcategory/:subcategory_id" element={<SubcategoryPage />} />
         <Route path="/question" element={<QuestionPage />} />
+        <Route path="/problem" element={<ProblemPage />} />
       </Routes>
     </Router>
   );

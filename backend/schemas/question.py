@@ -19,7 +19,7 @@ class QuestionUpdate(BaseModel):
 
 class QuestionResponse(BaseModel):
     id: int = Field(gt=0, examples=[1])
-    problem: str = Field(min_length=2, max_length=20, examples=["列志向データベースの強みを説明せよ"])
+    problem: str = Field(min_length=2, max_length=20, examples=["列志向データベースの強みを説明せよ"], description="問題文")
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     is_correct: bool = Field(default=False, example=False)
     created_at: datetime = Field(default_factory=datetime.now)
@@ -27,7 +27,6 @@ class QuestionResponse(BaseModel):
 
     model_config = ConfigDict(from_attributes=True)
     
-class ProblemCreate(BaseModel):
-    type: str = Field(min_length=2, max_length=20, examples=["category"])
-    incorrected_only_flg: bool = Field(default=False, example=False)
+
+    
     

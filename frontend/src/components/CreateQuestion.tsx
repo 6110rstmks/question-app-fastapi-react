@@ -34,8 +34,11 @@ const CreateQuestion: React.FC = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ problem: problem, answer: answers, category_id: category_id,subcategory_id: subcategory_id }),
-                // body: JSON.stringify({ problem: problem, answer: answers, category_id, subcategory_id: subcategory_id }),
+                body: JSON.stringify({ problem: problem,
+                                        answer: answers,
+                                        category_id: category_id,
+                                        subcategory_id: subcategory_id 
+                                    }),
             });
 
             if (!response.ok) {
