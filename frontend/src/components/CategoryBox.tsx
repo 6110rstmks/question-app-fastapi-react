@@ -17,7 +17,7 @@ interface CategoryBoxProps {
 }
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     const [subcategoriesList, setSubcategoriesList] = useState<Subcategory[]>([]);
-    const [showForm, setShowForm] = useState(false);
+    const [showForm, setShowForm] = useState<boolean>(false);
     const [subCategoryName, setCategoryName] = useState('');
 
     const navigate = useNavigate();
