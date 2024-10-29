@@ -63,7 +63,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
 
     return (
         <div className="postContents" key={category.id}>
-            <div className="category-name">{category.id}：{category.name}</div>
+            <div className="category-name">{category.name}</div>
             <div onClick={handleClick}>➕</div>
             {showForm && (
                 <>
