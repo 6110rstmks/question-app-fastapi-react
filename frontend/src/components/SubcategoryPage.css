@@ -1,3 +1,10 @@
 .questionBox {
     border: 2.5px solid white;
 }
+
+.subcategory-box {
+    width: 44%;
+    display: flex;
+    justify-content: space-between;
+
+}

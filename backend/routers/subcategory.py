@@ -72,10 +72,9 @@ async def update(
 @router.delete("/{id}", response_model=SubCategoryResponse, status_code=status.HTTP_200_OK)
 async def delete(
     db: DbDependency,
-    # user: UserDependency,
     id: int = Path(gt=0)
 ):
-    deleted_item = subcategory_cruds.delete(db, id, user.user_id)
+    deleted_item = subcategory_cruds.delete(db, id)
     if not deleted_item:
         raise HTTPException(status_code=404, detail="Item not deleted")
     return deleted_item

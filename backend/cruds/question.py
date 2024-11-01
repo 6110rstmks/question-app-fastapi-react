@@ -6,6 +6,8 @@ from models import Question, SubCategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import func
 from sqlalchemy.dialects import mysql
+from . import category_question as category_question_cruds
+from . import subcategory_question as subcategory_question_cruds
 
 
 def find_all(db: Session):
@@ -18,11 +20,11 @@ def find_all_in_question(db: Session, question_id: int):
     # query = select(Question).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query1).scalars().all()
 
-def find_all_in_category(db: Session, category_id: int):
+def find_all_questions_in_category(db: Session, category_id: int):
     query = select(Question).where(CategoryQuestion.category_id == category_id)
     return db.execute(query).scalars().all()
 
-def find_all_in_subcategory(db: Session, subcategory_id: int):
+def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
     query1 = select(SubCategoryQuestion.question_id).where(SubCategoryQuestion.subcategory_id == subcategory_id)
     question_ids = db.execute(query1).scalars().all()
     print(question_ids)
@@ -87,10 +89,15 @@ def update(db: Session, id: int, question_update: QuestionUpdate, category_id: i
     return question
 
 
-def delete(db: Session, id: int, user_id: int):
-    question = find_by_id(db, id, user_id)
+def delete(db: Session, id: int):
+    question = find_by_id(db, id)
     if question is None:
         return None
+    
+    subcategory_question_cruds.delete(db, id)
+    category_question_cruds.delete(db, id)
+    
+    
     db.delete(question)
     db.commit()
     return question

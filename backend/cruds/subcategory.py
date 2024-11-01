@@ -1,7 +1,10 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from schemas.subcategory import SubCategoryCreate, SubCategoryUpdate
-from models import SubCategory
+from models import SubCategory, SubCategoryQuestion
+from . import question as question_cruds
+from . import subcategory_question as subcategory_question_cruds
+
 
 
 def find_all(db: Session):
@@ -36,10 +39,25 @@ def update(db: Session, id: int, subcategory_update: SubCategoryUpdate, user_id:
     return subcategory
 
 
-def delete(db: Session, id: int, user_id: int):
-    subcategory = find_by_id(db, id, user_id)
+def delete(db: Session, id: int):
+    subcategory = find_by_id(db, id)
     if subcategory is None:
         return None
+    
+    # subcategoryquestion = subcategory_question_cruds.find_by_subcategory_id(db, id)
+    # if subcategoryquestion:
+    #     db.delete(subcategoryquestion)
+    
+    questions = question_cruds.find_all_questions_in_subcategory(db, id)
+    
+    
+    for question in questions:
+        print(991112223)
+        question_cruds.delete(db, question.id)
+        print(24445656)
+        
     db.delete(subcategory)
+    print(7777777777)
     db.commit()
+    print(5555555)
     return subcategory

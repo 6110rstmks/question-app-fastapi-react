@@ -38,6 +38,19 @@ const SubcategoryPage: React.FC = () => {
     //     navigate(`/subcategory/${subcategory_id}`, { state: category.id });
     // };
 
+    // 削除ボタンを押すと、そのサブカテゴリーを削除する。
+    // その際、「削除してももんだいないか」確認メッセージを表示する。
+    const handleDelete = async () => {
+        const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`, {
+            method: 'DELETE',
+        });
+        if (!response.ok) {
+            throw new Error('Failed to delete subcategory');
+        }
+        navigate('/');
+    }
+
+
     useEffect(() => {
         const getSubcategory = async () => {
             const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
@@ -61,7 +74,10 @@ const SubcategoryPage: React.FC = () => {
 
     return (
         <div>
-            <h1>{subCategoryName}</h1>
+            <div className='subcategory-box'>
+                <h1>{subCategoryName}</h1>
+                <button onClick={handleDelete}>Delete</button>
+            </div>
             <Link 
                 to={{ pathname: "/createquestion" }}
                 state={ids}
