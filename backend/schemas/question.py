@@ -7,19 +7,19 @@ from datetime import datetime
 
 class QuestionCreate(BaseModel):
     
-    problem: str = Field(min_length=2, max_length=20, examples=["列志向データベースの強みを説明せよ"])
+    problem: str = Field(min_length=2, max_length=99, examples=["列志向データベースの強みを説明せよ"])
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     category_id: int = Field(gt=0, example=1)
     subcategory_id: int = Field(gt=0, example=1)
 
 class QuestionUpdate(BaseModel):
-    problem: str = Field(min_length=2, max_length=20, examples=["列志向データベースの強みを説明せよ"])
+    problem: str = Field(min_length=2, max_length=99, examples=["列志向データベースの強みを説明せよ"])
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     is_correct: bool = Field(default=False, example=False)
 
 class QuestionResponse(BaseModel):
     id: int = Field(gt=0, examples=[1])
-    problem: str = Field(min_length=2, max_length=20, examples=["列志向データベースの強みを説明せよ"], description="問題文")
+    problem: str = Field(min_length=2, max_length=99, examples=["列志向データベースの強みを説明せよ"], description="問題文")
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     is_correct: bool = Field(default=False, example=False)
     created_at: datetime = Field(default_factory=datetime.now)

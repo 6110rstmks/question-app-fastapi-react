@@ -28,7 +28,7 @@ const App: React.FC = () => {
         {/* 問題出題画面 */}
         <Route path="/setquestion" element={<SetQuestion />} />
         {/* <Route path="/setquestion" element={<SetQuestion isAuth={isAuth} />} /> */}
-        <Route path="/createquestion" element={<CreateQuestion />} />
+        {/* <Route path="/createquestion" element={<CreateQuestion category_id={}/>} /> */}
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth} />} />
         <Route path="/subcategory/:subcategory_id" element={<SubcategoryPage />} />

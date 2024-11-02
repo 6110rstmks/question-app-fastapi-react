@@ -1,14 +1,20 @@
 import React, { useState, ChangeEvent } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-interface LocationState {
-    subcategory_id: number;
+// interface LocationState {
+//     subcategory_id: number;
+//     category_id: number;
+// }
+
+interface CreateQuestionProps {
     category_id: number;
+    subcategory_id: number;
+    setModalIsOpen: (isOpen: boolean) => void;
 }
 
-const CreateQuestion: React.FC = () => {
+const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory_id, setModalIsOpen}) => {
     const location = useLocation();
-    const { subcategory_id, category_id } = location.state as LocationState;
+    // const { subcategory_id, category_id } = location.state as LocationState;
     const [problem, setProblem] = useState<string>('');
     const [answers, setAnswers] = useState<string[]>(['']);
     const navigate = useNavigate();
@@ -46,7 +52,8 @@ const CreateQuestion: React.FC = () => {
             }
 
             const data = await response.json();
-            navigate(`/subcategory/${subcategory_id}`, { state: category_id });
+            // navigate(`/subcategory/${subcategory_id}`, { state: category_id });
+            setModalIsOpen(false);
         } catch (error) {
             console.error(error);
             // 必要に応じてエラーメッセージをユーザーに表示する
@@ -78,6 +85,8 @@ const CreateQuestion: React.FC = () => {
             ))}
             <button onClick={addAnswerField}>Add Answer</button>
             <button className="questionButton" onClick={createQuestion}>Submit</button>
+            <button onClick={() => setModalIsOpen(false)}>閉じる</button>
+
         </div>
     );
 };

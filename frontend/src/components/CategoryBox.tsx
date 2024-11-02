@@ -15,6 +15,7 @@ export interface Subcategory {
 interface CategoryBoxProps {
     category: Category
 }
+
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     const [subcategoriesList, setSubcategoriesList] = useState<Subcategory[]>([]);
     const [showForm, setShowForm] = useState<boolean>(false);
