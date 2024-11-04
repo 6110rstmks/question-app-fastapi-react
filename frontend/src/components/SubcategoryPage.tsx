@@ -32,11 +32,59 @@ const SubcategoryPage: React.FC = () => {
         subcategory_id: subcategoryId,
         category_id: categoryId
     };
+    const [isEditing, setIsEditing] = useState<boolean>(false); // 編集モードの状態
 
     const [subCategoryName, setSubCategoryName] = useState<string>('');
     const [questionList, setQuestionList] = useState<Question[]>([]);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
+
+    const refreshQuestionList = async () => {
+        const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
+        if (response.ok) {
+            const data: Question[] = await response.json();
+            setQuestionList(data);
+        }
+    };
+
+    // サブカテゴリ名の更新を処理する関数
+    const updateSubcategoryName = async () => {
+        try {
+            const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ 
+                                        name: subCategoryName 
+                                    }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to update subcategory');
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    // ダブルクリックで編集モードに切り替える
+    const handleDoubleClick = () => {
+        setIsEditing(true);
+    };
+
+    // 入力フィールドでの変更を反映
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSubCategoryName(e.target.value);
+    };
+
+    // エンターキーで編集モードを終了し、サブカテゴリ名を更新
+    const handleKeyPress = async (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            setIsEditing(false);
+            await updateSubcategoryName();
+        }
+    };
 
     // 削除ボタンを押すと、そのサブカテゴリーを削除する。
     // その際、「削除」と入力してクリックすることで削除が実行される。
@@ -67,23 +115,34 @@ const SubcategoryPage: React.FC = () => {
             }
         };
 
-        const getQuestions = async () => {
-            const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
-            if (response.ok) {
-                const data: Question[] = await response.json();
-                setQuestionList(data);
-            }
-        };
+        // const getQuestions = async () => {
+        //     const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
+        //     if (response.ok) {
+        //         const data: Question[] = await response.json();
+        //         setQuestionList(data);
+        //     }
+        // };
 
         getSubcategory();
-        getQuestions();
+        // getQuestions();
+        refreshQuestionList();
     }, [subcategory_id]);
 
     return (
         <div className='subcategory-page'>
             <div className='subcategory-box'>
-                <h1>{subCategoryName}</h1>
-                <button className='delete-btn' onClick={handleDelete}>Delete</button>
+            {isEditing ? (
+                    <input
+                        type="text"
+                        value={subCategoryName}
+                        onChange={handleChange}
+                        onKeyPress={handleKeyPress}
+                        onBlur={() => setIsEditing(false)} // フォーカスを外すと編集モードを終了
+                        autoFocus
+                    />
+                ) : (
+                    <h1 onDoubleClick={handleDoubleClick}>{subCategoryName}</h1>
+                )}                <button className='delete-btn' onClick={handleDelete}>Delete</button>
             </div>
             {/* <Link 
                 to={{ pathname: "/createquestion" }}
@@ -93,10 +152,15 @@ const SubcategoryPage: React.FC = () => {
             </Link> */}
             <button onClick={() => setModalIsOpen(true)}>Questionを作成する</button>
             <Modal
-                isOpen={modalIsOpen}
-                contentLabel="Example Modal"
+            isOpen={modalIsOpen}
+            contentLabel="Example Modal"
             >
-                <CreateQuestion category_id={categoryId} subcategory_id={subcategoryId} setModalIsOpen={setModalIsOpen}></CreateQuestion>
+                <CreateQuestion 
+                    category_id={categoryId} 
+                    subcategory_id={subcategoryId} 
+                    setModalIsOpen={setModalIsOpen}
+                    refreshQuestionList={refreshQuestionList}  // 質問リスト更新関数を渡す
+                />
             </Modal>
             <div className='question-container'>
                 {questionList.map((question) => (

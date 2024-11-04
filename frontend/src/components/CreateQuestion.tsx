@@ -10,9 +10,10 @@ interface CreateQuestionProps {
     category_id: number;
     subcategory_id: number;
     setModalIsOpen: (isOpen: boolean) => void;
+    refreshQuestionList: () => void;
 }
 
-const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory_id, setModalIsOpen}) => {
+const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory_id, setModalIsOpen, refreshQuestionList}) => {
     const location = useLocation();
     // const { subcategory_id, category_id } = location.state as LocationState;
     const [problem, setProblem] = useState<string>('');
@@ -51,8 +52,10 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
                 throw new Error('Failed to create question');
             }
 
-            const data = await response.json();
+            // const data = await response.json();
             // navigate(`/subcategory/${subcategory_id}`, { state: category_id });
+            await refreshQuestionList();
+
             setModalIsOpen(false);
         } catch (error) {
             console.error(error);

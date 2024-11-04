@@ -59,11 +59,11 @@ async def create(db: DbDependency, subcategory_create: SubCategoryCreate):
 @router.put("/{id}", response_model=SubCategoryResponse, status_code=status.HTTP_200_OK)
 async def update(
     db: DbDependency,
-    # user: UserDependency,
     subcategory_update: SubCategoryUpdate,
     id: int = Path(gt=0),
 ):
-    updated_item = subcategory_cruds.update(db, id, subcategory_update, user.user_id)
+    print(9998888)
+    updated_item = subcategory_cruds.update2(db, id, subcategory_update)
     if not updated_item:
         raise HTTPException(status_code=404, detail="SubCategory not updated")
     return updated_item

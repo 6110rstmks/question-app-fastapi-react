@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select
+from sqlalchemy import select, update
 from schemas.subcategory import SubCategoryCreate, SubCategoryUpdate
 from models import SubCategory, SubCategoryQuestion
 from . import question as question_cruds
@@ -28,15 +28,31 @@ def create(db: Session, subcategory_create: SubCategoryCreate):
     return new_subcategory
 
 
-def update(db: Session, id: int, subcategory_update: SubCategoryUpdate, user_id: int):
+def update2(db: Session, id: int, subcategory_update: SubCategoryUpdate):
+
     subcategory = find_by_id(db, id)
     if subcategory is None:
         return None
+    
+    stmt = (
+        update(SubCategory).
+        where(SubCategory.id == id).
+        values(name=subcategory_update.name)
+    )
+    print(id)
+    print(stmt)
+    print('-----------------')
+    print(subcategory_update)
 
     subcategory.name = subcategory.name if subcategory_update.name is None else subcategory_update.name
-    db.add(subcategory)
+    print('-----------------')
+    print(subcategory.name)
+    # db.(subcategory)
+    # return subcategory
+    db.execute(stmt)
     db.commit()
-    return subcategory
+    updated_subcategory = find_by_id(db, id)
+    return updated_subcategory
 
 
 def delete(db: Session, id: int):
