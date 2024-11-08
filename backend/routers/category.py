@@ -7,6 +7,7 @@ from schemas.category import CategoryResponse, CategoryCreate
 from schemas import auth
 from database import get_db
 from fastapi import Query
+from config import PAGE_SIZE
 
 
 DbDependency = Annotated[Session, Depends(get_db)]
@@ -21,13 +22,9 @@ router = APIRouter(prefix="/categories", tags=["Categories"])
 @router.get("", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(
     db: DbDependency,
-    # skip: int = 0,
     skip: int = Query(0, ge=0),
-    limit: int = 7
+    limit: int = PAGE_SIZE
     ):
-    return (category_curds.find_all(db))[skip : skip + limit]
-
-
     return (category_curds.find_all(db))[skip : skip + limit]
 
 # page_countのルーティング

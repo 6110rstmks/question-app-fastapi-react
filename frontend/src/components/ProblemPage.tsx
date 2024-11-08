@@ -1,10 +1,13 @@
 import { useParams, Link, useLocation } from 'react-router-dom';
 import React, { useState, ChangeEvent, useEffect } from 'react';
 
+import "./ProblemPage.css"
+
 interface Question {
     id: number;
     problem: string;
     answer: string[];
+    is_correct: boolean;
     subcategory_id: number;
 }
 
@@ -13,6 +16,8 @@ const ProblemPage: React.FC = () => {
     const problemData = location.state as Question[];
     const [currentProblemIndex, setCurrentProblemIndex] = useState(0);
     const [reviewFlg, setReviewFlg] = useState(false);
+
+    // 問題の解答を表示するかどうかのフラグ
     const [showAnswer, setShowAnswer] = useState(false);
 
     // 再出題用の変数
@@ -27,18 +32,33 @@ const ProblemPage: React.FC = () => {
         setShowAnswer(true);
     }
 
-    const handleAnswer_solved = () => {
+    const handleAnswer_solved = (question_id: number) => {
         setCurrentProblemIndex(currentProblemIndex + 1);
-        setShowAnswer(false);
 
+        // 問題に回答したら、次の問題に進んだ時のために解答を非表示にする。
+        setShowAnswer(false);
+        submitIsCorrect(question_id)
     };
 
-    const handleAnswer_unsolved = () => {
+    const handleAnswer_unsolved = (id: number) => {
         setUnsolvedProblems([...unsolvedProblems, problemData[currentProblemIndex]]);
         setCurrentProblemIndex(currentProblemIndex + 1);
         setShowAnswer(false);
-
     };
+
+    // 問題に回答したらサーバにそのQuestionのis_correctをtrueにするpostメソッドを送信。
+    const submitIsCorrect = async (question_id: number) => {
+        const response = await fetch(`http://localhost:8000/questions/change_is_correct/${question_id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ is_correct: true }),
+        })
+
+
+    }
+
 
     // 再度出題した用の関数
     const handleAnswer_solved_review = () => {
@@ -96,7 +116,7 @@ const ProblemPage: React.FC = () => {
                 <div>
                     <h1>問題{currentProblemIndex + 1}/{problemData.length}</h1>
                     <div>
-                        <h2>{problemData[currentProblemIndex].problem}</h2>
+                        <h2>{problemData[currentProblemIndex].problem}<span className='is_correct_text'>{unsolvedProblems[unsolvedProblemsIndex]?.is_correct ? "正答している" : "まだ正答していない"}</span></h2>
                             <button onClick={displayAnswer}>答えを表示する</button>
                         <h2>
                             {showAnswer && (
@@ -106,14 +126,14 @@ const ProblemPage: React.FC = () => {
                             )}
                         </h2>                   
                     </div>
-                    <button onClick={handleAnswer_solved}>解けた</button>
-                    <button onClick={handleAnswer_unsolved}>解けなかった</button>
+                    <button onClick={() => handleAnswer_solved(problemData[currentProblemIndex].id)}>解けた</button>
+                    <button onClick={() => handleAnswer_unsolved(problemData[currentProblemIndex].id)}>解けなかった</button>
                 </div>
             ) : (
                 <div>
                     <h1>【再出】問題{currentReviewProblemIndex + 1}/{unsolvedProblemsNumber}</h1>
                     <div>
-                        <h2>{unsolvedProblems[unsolvedProblemsIndex].problem}</h2>
+                        <h2>{unsolvedProblems[unsolvedProblemsIndex].problem}<span>{unsolvedProblems[unsolvedProblemsIndex]?.is_correct ? "正答している" : "まだ正答していない"}</span></h2>
                         <button onClick={displayAnswer}>答えを表示する</button>
                         <h2>
                             {showAnswer && (

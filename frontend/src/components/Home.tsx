@@ -18,7 +18,7 @@ const Home: React.FC = () => {
     const [page, setPage] = useState<number>(1);
     const [pageCount, setPageCount] = useState<number | null>(null) 
     // 初期値をnullに設定。そうすることで、
-    const [limit, setLimit] = useState(7);
+    const [limit, setLimit] = useState(9);
     useEffect(() => {
         // ページネーションのためのページ数を取得
         const getPageCount = async () => {
@@ -69,19 +69,21 @@ const Home: React.FC = () => {
     }, [page, limit, pageCount])
 
     return (
-        <div className="container">
-            <div className="category-container">
-                {categoryList.map((category) => {
-                    return (
-                        <CategoryBox category={category} key={category.id}></CategoryBox>
-                    )
-                })}
+        <>
+            <div className="container">
+                <div className="category-container">
+                    {categoryList.map((category) => {
+                        return (
+                            <CategoryBox category={category} key={category.id}></CategoryBox>
+                        )
+                    })}
+                </div>
             </div>
             <div className="pagination">
-                <button onClick={() => setPage(page - 1)}>Previous</button>
-                <button onClick={() => setPage(page + 1)}>Next</button>
+                <button className="pagination-btn" onClick={() => setPage(page - 1)}>Previous</button>
+                <button className="pagination-btn left-btn" onClick={() => setPage(page + 1)}>Next</button>
             </div>
-        </div>
+        </>
     )
 }
 

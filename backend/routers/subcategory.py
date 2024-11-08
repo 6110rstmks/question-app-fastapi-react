@@ -62,7 +62,6 @@ async def update(
     subcategory_update: SubCategoryUpdate,
     id: int = Path(gt=0),
 ):
-    print(9998888)
     updated_item = subcategory_cruds.update2(db, id, subcategory_update)
     if not updated_item:
         raise HTTPException(status_code=404, detail="SubCategory not updated")

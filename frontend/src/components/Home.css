@@ -10,7 +10,18 @@
     flex-wrap: wrap;
 }
 
-.pagenation {
+.pagination {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
 
+.pagination-btn {
+    font-size: 19px;
+}
+
+.left-btn {
+    margin-left: 2px;
 }
 

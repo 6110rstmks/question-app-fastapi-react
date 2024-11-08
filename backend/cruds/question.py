@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select
-from schemas.question import QuestionCreate, QuestionUpdate
+from sqlalchemy import select, update
+from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate
 from schemas.problem import ProblemCreate
 from models import Question, SubCategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
@@ -79,13 +79,27 @@ def create(db: Session, question_create: QuestionCreate):
         raise e
 
 
-def update(db: Session, id: int, question_update: QuestionUpdate, category_id: int, question_id: int):
+def update_name(db: Session, id: int, question_update: QuestionUpdate, category_id: int, question_id: int):
     question = find_by_id(db, id)
     if question is None:
         return None
 
     question.name = question.name if question_update.name is None else question_update.name
     db.add(question)
+    db.commit()
+    return question
+
+def update_is_correct(db: Session, id: int, question_is_correct_update: QuestionIsCorrectUpdate):
+    question = find_by_id(db, id)
+    if question is None:
+        return None
+
+    stmt = (
+        update(Question).
+        where(Question.id == id).
+        values(name=question_is_correct_update.is_correct)
+    )
+    db.execute(stmt)
     db.commit()
     return question
 

@@ -1,37 +1,22 @@
-すべてのクエスチョン数をカウントして　 
-
-　 
-
- 
-
-それをファイルエクスポートと一緒にだす。 
-
- 
-
 エクスポートで出力されるフォルダに入っているファイルは以下の構成。計6つのファイル 
 
  
-
 Category 一覧（csv) 
-
- 
 
 Subcategory一覧(csv) 
 
- 
+Question一覧
 
-Question一覧 
 
- 
-
+category-subcategory 一覧 
 Subcategory-quetion　テーブル　の一覧 
+category-question
 
  
 
 マスタデータ（カテゴリ数、subcategory数、question数） 
 
  
-
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
 
  

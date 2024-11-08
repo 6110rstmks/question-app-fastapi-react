@@ -1,6 +1,7 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from functools import lru_cache
 
+PAGE_SIZE = 9
 
 class Settings(BaseSettings):
     secret_key: str
@@ -8,8 +9,6 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file=".env")
 
-
-# 
 @lru_cache()
 def get_settings():
     return Settings()

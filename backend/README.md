@@ -43,5 +43,5 @@ https://jwt.io/
 
 # 機能
 fastapi pagination
-7件づつcategoryを出す。
+9件づつcategoryを出す。
 

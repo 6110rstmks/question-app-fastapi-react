@@ -39,16 +39,6 @@ def update2(db: Session, id: int, subcategory_update: SubCategoryUpdate):
         where(SubCategory.id == id).
         values(name=subcategory_update.name)
     )
-    print(id)
-    print(stmt)
-    print('-----------------')
-    print(subcategory_update)
-
-    subcategory.name = subcategory.name if subcategory_update.name is None else subcategory_update.name
-    print('-----------------')
-    print(subcategory.name)
-    # db.(subcategory)
-    # return subcategory
     db.execute(stmt)
     db.commit()
     updated_subcategory = find_by_id(db, id)
@@ -68,12 +58,8 @@ def delete(db: Session, id: int):
     
     
     for question in questions:
-        print(991112223)
         question_cruds.delete(db, question.id)
-        print(24445656)
         
     db.delete(subcategory)
-    print(7777777777)
     db.commit()
-    print(5555555)
     return subcategory

@@ -3,7 +3,7 @@ from fastapi import APIRouter, Path, Query, HTTPException, Depends, FastAPI, Req
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import question as question_cruds, auth as auth_cruds
-from schemas.question import QuestionResponse, QuestionUpdate, QuestionCreate
+from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate
 from schemas.problem import ProblemCreate
 from schemas.auth import DecodedToken
 from database import get_db
@@ -94,6 +94,21 @@ async def update(
     if not updated_item:
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
+
+
+@router.put("/change_is_correct/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
+async def update(
+    db: DbDependency,
+    question_is_correct_update: QuestionIsCorrectUpdate,
+    id: int = Path(gt=0),
+):
+    # updated_item = question_cruds.update(db, id, question_update, user.user_id)
+    updated_item = question_cruds.update(db, id, question_is_correct_update)
+    if not updated_item:
+        raise HTTPException(status_code=404, detail="Question not updated")
+    return updated_item
+
+
 
 
 @router.delete("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
