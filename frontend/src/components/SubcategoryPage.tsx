@@ -105,6 +105,10 @@ const SubcategoryPage: React.FC = () => {
         navigate('/');
     }
 
+    const handleQuestionClick = (question_id: number) => {
+            navigate(`/question/${question_id}`);
+    }
+
 
     useEffect(() => {
         const getSubcategory = async () => {
@@ -115,16 +119,7 @@ const SubcategoryPage: React.FC = () => {
             }
         };
 
-        // const getQuestions = async () => {
-        //     const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
-        //     if (response.ok) {
-        //         const data: Question[] = await response.json();
-        //         setQuestionList(data);
-        //     }
-        // };
-
         getSubcategory();
-        // getQuestions();
         refreshQuestionList();
     }, [subcategory_id]);
 
@@ -165,7 +160,7 @@ const SubcategoryPage: React.FC = () => {
             <div className='question-container'>
                 {questionList.map((question) => (
                     <div className="question-box" key={question.id}>
-                        <h2>{question.problem}</h2>
+                        <h2 onClick={() => handleQuestionClick(question.id)}>{question.problem}</h2>
                         {question.answer.map((answer, index) => (
                             <p key={index}>{answer}</p>
                         ))}

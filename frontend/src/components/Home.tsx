@@ -69,12 +69,14 @@ const Home: React.FC = () => {
     }, [page, limit, pageCount])
 
     return (
-        <div className="homePage">
-            {categoryList.map((category) => {
-                return (
-                    <CategoryBox category={category} key={category.id}></CategoryBox>
-                )
-            })}
+        <div className="container">
+            <div className="category-container">
+                {categoryList.map((category) => {
+                    return (
+                        <CategoryBox category={category} key={category.id}></CategoryBox>
+                    )
+                })}
+            </div>
             <div className="pagination">
                 <button onClick={() => setPage(page - 1)}>Previous</button>
                 <button onClick={() => setPage(page + 1)}>Next</button>

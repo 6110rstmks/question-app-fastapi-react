@@ -5,7 +5,7 @@ pip install -r requirements.txt
 
 [step1]
 uvicorn main:app --reload
-j
+
 [step2]
 localhost:8000/docs
 にアクセス

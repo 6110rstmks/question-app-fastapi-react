@@ -49,6 +49,7 @@ const CreateCategory: React.FC<CreateCategoryProps> = ({ isAuth }) => {
                         placeholder="タイトルを記入" 
                         value={categoryName}
                         onChange={(e) => setCategoryName(e.target.value)} 
+                        autoFocus
                     />
                 </div>
                 <button className="categoryButton" onClick={createCategory}>

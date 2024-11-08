@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom"
+import "./CategoryBox.css"
 
 export interface Category {
     id: number;
@@ -63,20 +64,29 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     }, [category.id]); 
 
     return (
-        <div className="postContents" key={category.id}>
-            <div className="category-name">{category.name}</div>
-            <div onClick={handleClick}>➕</div>
-            {showForm && (
-                <>
-                    <label>
-                        サブカテゴリー名:
-                        <input type="text" value={subCategoryName} onChange={(e) => setCategoryName(e.target.value)} />
-                    </label>
-                    <button onClick={createSubCategory}>Submit</button>
-                </>
-            )}
+        <div className="category-box" key={category.id}>
+            <div className="category-filed">
+                <div className="plus-btn" onClick={handleClick}>➕</div>
+                <div className="category-name">{category.name}</div>
+            </div>
+            <div className='input-field'>
+                {showForm && (
+                    <>
+                        <label>
+                            サブカテゴリー名:
+                            <input 
+                            type="text" 
+                            value={subCategoryName} 
+                            onChange={(e) => setCategoryName(e.target.value)} 
+                            autoFocus
+                            />
+                        </label>
+                        <button onClick={createSubCategory}>Submit</button>
+                    </>
+                )}
+            </div>
             {subcategoriesList.map((subcategory) => (
-                <div className="subcategory-name" key={subcategory.id} onClick={() => handleSubcategoryClick(subcategory.id)}>●{subcategory.name}</div>
+                <div className="subcategory-name" key={subcategory.id} onClick={() => handleSubcategoryClick(subcategory.id)}>・{subcategory.name}</div>
             ))}
         </div>
     );

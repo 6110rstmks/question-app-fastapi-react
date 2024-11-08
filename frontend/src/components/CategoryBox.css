@@ -1,0 +1,37 @@
+.category-box {
+    background-color: #55883B;
+    box-shadow: 5px 9px 15px -9px;
+    margin-top: 50px;
+    margin-left: 70px;
+    padding: 20px;
+	width: calc(25% - 5px); /* margin padding分を引く */
+}
+
+.category-filed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px dotted rgb(96 139 168);
+
+}
+
+.category-name {
+    font-size: 27px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+.plus-btn {
+    margin-top: 9px;
+}
+
+.input-field {
+    margin-top: 8px;
+}
+
+.subcategory-name {
+    cursor: pointer;
+    margin-top: 11px;
+    font-size: 19.5px;
+}

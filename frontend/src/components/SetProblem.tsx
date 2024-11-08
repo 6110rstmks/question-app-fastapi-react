@@ -49,24 +49,35 @@ const SetQuestion: React.FC = () => {
 
     // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
     const setProblems = async () => {
-        const response = await fetch('http://localhost:8000/questions/generate_problems', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ 
-                                    type: selectedType,
-                                    incorrected_only_flg: incorrectedOnlyFlgChecked,
-                                    problem_number: 5,
-                                    category_ids: selectedCategoryIds
-                                }),
-        });
+        try {
 
-        if (!response.ok) {
-            throw new Error('Failed to create problems');
+            const response = await fetch('http://localhost:8000/questions/generate_problems', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ 
+                                        type: selectedType,
+                                        incorrected_only_flg: incorrectedOnlyFlgChecked,
+                                        problem_number: 5,
+                                        category_ids: selectedCategoryIds
+                                    }),
+            });
+    
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Failed to create problems');
+            }
+            const problemData = await response.json();
+            navigate('/problem', { state: problemData });
+        } catch (error) {
+            if (error instanceof Error) {
+                console.error('Error:', error.message);
+                alert(error.message);  // Display the error message to the user
+            } else {
+                console.error('Unexpected error:', error);
+            }
         }
-        const problemData = await response.json();
-        navigate('/problem', { state: problemData });
     }
     
 

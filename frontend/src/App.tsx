@@ -32,7 +32,7 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth} />} />
         <Route path="/subcategory/:subcategory_id" element={<SubcategoryPage />} />
-        <Route path="/question" element={<QuestionPage />} />
+        <Route path="/question/:question_id" element={<QuestionPage />} />
         <Route path="/problem" element={<ProblemPage />} />
       </Routes>
     </Router>

@@ -38,7 +38,8 @@ def find_by_id(db: Session, id: int):
 # 問題を出題する
 def generate_problems(db: Session, problem_create: ProblemCreate):
     if problem_create.type == "random":
-        query = select(Question).order_by(func.random()).limit(10)
+        query2 = select(Question).order_by(func.random()).limit(10)
+
     elif problem_create.type == "category":
         print(problem_create.category_ids)
         query1 = select(CategoryQuestion).where(CategoryQuestion.category_id.in_(problem_create.category_ids))
@@ -48,10 +49,10 @@ def generate_problems(db: Session, problem_create: ProblemCreate):
         print(question_ids)
         
         query2 = select(Question).where(Question.id.in_(question_ids))
-        return db.execute(query2).scalars().all()
-
     else:
-        pass
+        return '不明なものが入力されました。'
+    return db.execute(query2).scalars().all()
+
     
 
 def find_by_name(db: Session, name: str):
