@@ -2,6 +2,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import select
 from schemas import item
 from models import Item
+import json
 
 
 def find_all(db: Session):
@@ -20,8 +21,6 @@ def find_by_name(db: Session, name: str):
 
 def create(db: Session, item_create: item.ItemCreate, user_id: int):
     new_item = Item(**item_create.model_dump(), user_id=user_id)
-    print(item_create.model_dump())
-    print("sakamotosora")
     db.add(new_item)
     db.commit()
     return new_item
@@ -50,3 +49,4 @@ def delete(db: Session, id: int, user_id: int):
     db.delete(item)
     db.commit()
     return item
+

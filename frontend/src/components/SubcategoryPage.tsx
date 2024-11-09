@@ -20,7 +20,6 @@ export interface Question {
     subcategory_id: number;
 }
 
-
 const SubcategoryPage: React.FC = () => {
     const { subcategory_id } = useParams<{ subcategory_id: string }>();
     const navigate = useNavigate();

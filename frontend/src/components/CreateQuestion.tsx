@@ -73,6 +73,7 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
                     placeholder="タイトルを記入"
                     value={problem}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => setProblem(e.target.value)}
+                    autoFocus
                 />
             </div>
             {answers.map((answer, index) => (

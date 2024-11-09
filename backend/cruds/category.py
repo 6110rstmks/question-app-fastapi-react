@@ -5,6 +5,7 @@ from models import Category, CategoryQuestion
 from fastapi_pagination import Page, add_pagination, paginate
 from sqlalchemy import func
 from config import PAGE_SIZE
+import json
 
 
 def find_all(db: Session, skip: int = 0, limit: int = 10, word: str = None):
@@ -20,7 +21,6 @@ def find_all(db: Session, skip: int = 0, limit: int = 10, word: str = None):
     
     # 検索クエリがある場合はフィルタリング
     if word:
-        print(333666)
         query_stmt = query_stmt.where(Category.name.istartswith(f"%{word}%"))
 
     # 結果を取得してスキップとリミットを適用
@@ -68,3 +68,38 @@ def find_all_categories_with_questions(db: Session):
     query2 = select(Category).where(Category.id.in_(category_ids))
     return db.execute(query2).scalars().all()
 
+
+def export_to_json(db: Session, file_path):
+
+    query_stmt = select(Category)
+    
+    categories = db.execute(query_stmt).scalars().all()
+        
+    data = []
+    
+    for category in categories:
+        category_data = {
+            "id": category.id,
+            "name": category.name,
+            "subcategories": []
+        }
+        
+        for subcategory in category.subcategories:
+            subcategory_data = {
+                "id": subcategory.id,
+                "name": subcategory.name,
+                "questions": []
+            }
+            for subcat_question in subcategory.questions:
+                question = subcat_question.question
+                subcategory_data["questions"].append({
+                    "id": question.id,
+                    "problem": question.problem,
+                    "answer": question.answer,
+                    "is_correct": question.is_correct
+                })
+            category_data["subcategories"].append(subcategory_data)
+        data.append(category_data)
+    
+    with open(file_path, "w", encoding="utf-8") as jsonfile:
+        json.dump(data, jsonfile, indent=4, ensure_ascii=False)

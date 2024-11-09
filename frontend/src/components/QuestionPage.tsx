@@ -2,6 +2,7 @@ import { get } from 'http';
 import React, { useEffect, useState } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom';
 import "./QuestionPage.css"
+import { useNavigate } from "react-router-dom"
 export interface Question {
     id: number;
     problem: string;
@@ -11,8 +12,26 @@ export interface Question {
 }
 
 const QuestionPage: React.FC = () => {
+  const navigate = useNavigate();
   const { question_id } = useParams<{ question_id: string }>();
   const [question, setQuestion] = useState<Question>();
+
+  const handleDelete = async () => {
+
+    let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
+
+    if (confirmation !== '削除') {
+        return;
+    }
+
+    const response = await fetch(`http://localhost:8000/questions/${question_id}`, {
+        method: 'DELETE',
+    });
+    if (!response.ok) {
+        throw new Error('Failed to delete subcategory');
+    }
+    navigate('/');
+}
 
   const getQuestion = async () => {
     const response = await fetch(`http://localhost:8000/questions/${question_id}`);
@@ -38,6 +57,9 @@ const QuestionPage: React.FC = () => {
             {question?.answer.map((answer, index) => (
               <div className='answer' key={index}>{answer}</div>
             ))}
+        </div>
+        <div className='question-delete'>
+            <button onClick={handleDelete}>削除</button>
         </div>
       </div>
     </>
