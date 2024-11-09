@@ -30,6 +30,7 @@ const ProblemPage: React.FC = () => {
 
     const displayAnswer = () => {
         setShowAnswer(true);
+        console.log(unsolvedProblems[unsolvedProblemsIndex]?.is_correct)
     }
 
     const handleAnswer_solved = (question_id: number) => {
@@ -116,7 +117,7 @@ const ProblemPage: React.FC = () => {
                 <div>
                     <h1>問題{currentProblemIndex + 1}/{problemData.length}</h1>
                     <div>
-                        <h2>{problemData[currentProblemIndex].problem}<span className='is_correct_text'>{unsolvedProblems[unsolvedProblemsIndex]?.is_correct ? "正答している" : "まだ正答していない"}</span></h2>
+                        <h2>{problemData[currentProblemIndex].problem}<span className='is_correct_text'>{problemData[currentProblemIndex]?.is_correct ? "正答している" : "まだ正答していない"}</span></h2>
                             <button onClick={displayAnswer}>答えを表示する</button>
                         <h2>
                             {showAnswer && (

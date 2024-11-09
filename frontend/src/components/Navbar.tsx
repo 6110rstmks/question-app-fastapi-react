@@ -13,21 +13,22 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
         <nav>
             <Link to="/">
                 <FontAwesomeIcon icon={faHouse} />
-                ホーム
+                HOME
             </Link>
             {!isAuth ? (
                 <Link to="/login">
                     <FontAwesomeIcon icon={faArrowRightToBracket} />
-                    ログイン
+                    SignIn
                 </Link>
             ) : (
                 <>
                     <Link to="/logout">
                         <FontAwesomeIcon icon={faArrowRightToBracket} />
-                        ログアウト
+                        SignOut
                     </Link>
-                    <Link to="/createcategory">カテゴリ作成</Link>
-                    <Link to="/setquestion">問題を出題する</Link>
+                    <Link to="/setquestion">Set Problem</Link>
+                    <Link to="/setquestion">Data Import</Link>
+                    <Link to="/setquestion">Data Export</Link>
                 </>
             )}
         </nav>

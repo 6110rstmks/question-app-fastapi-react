@@ -23,9 +23,10 @@ router = APIRouter(prefix="/categories", tags=["Categories"])
 async def find_all(
     db: DbDependency,
     skip: int = Query(0, ge=0),
-    limit: int = PAGE_SIZE
+    limit: int = PAGE_SIZE,
+    word: str = None
     ):
-    return (category_curds.find_all(db))[skip : skip + limit]
+    return category_curds.find_all(db, skip=skip, limit=limit, word=word)
 
 # page_countのルーティング
 @router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)

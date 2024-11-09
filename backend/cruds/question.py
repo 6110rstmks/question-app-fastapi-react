@@ -93,11 +93,13 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     question = find_by_id(db, id)
     if question is None:
         return None
+    
+    print(question_is_correct_update.is_correct)
 
     stmt = (
         update(Question).
         where(Question.id == id).
-        values(name=question_is_correct_update.is_correct)
+        values(is_correct=question_is_correct_update.is_correct)
     )
     db.execute(stmt)
     db.commit()

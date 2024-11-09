@@ -7,14 +7,25 @@ from sqlalchemy import func
 from config import PAGE_SIZE
 
 
-def find_all(db: Session):
-    query = select(Category)
+def find_all(db: Session, skip: int = 0, limit: int = 10, word: str = None):
+    # query = select(Category)
     
-    # デバッグ方法。
-    # results = db.execute(query).scalars().all()
-    # for aa in results:
-    #     print(aa.name)
-    return db.execute(query).scalars().all()
+    # # デバッグ方法。
+    # # results = db.execute(query).scalars().all()
+    # # for aa in results:
+    # #     print(aa.name)
+    # return db.execute(query).scalars().all()
+    
+    query_stmt = select(Category)
+    
+    # 検索クエリがある場合はフィルタリング
+    if word:
+        print(333666)
+        query_stmt = query_stmt.where(Category.name.istartswith(f"%{word}%"))
+
+    # 結果を取得してスキップとリミットを適用
+    result = db.execute(query_stmt).scalars().all()
+    return result[skip: skip + limit]
 
 def find_pagination(db: Session):
     query = select(Category)

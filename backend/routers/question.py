@@ -79,10 +79,6 @@ async def find_by_name(
 
 
 
-
-
-
-
 @router.put("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update(
     db: DbDependency,
@@ -102,10 +98,12 @@ async def update(
     question_is_correct_update: QuestionIsCorrectUpdate,
     id: int = Path(gt=0),
 ):
+    print(777766668)
     # updated_item = question_cruds.update(db, id, question_update, user.user_id)
-    updated_item = question_cruds.update(db, id, question_is_correct_update)
+    updated_item = question_cruds.update_is_correct(db, id, question_is_correct_update)
     if not updated_item:
         raise HTTPException(status_code=404, detail="Question not updated")
+    print(54888888)
     return updated_item
 
 

@@ -18,8 +18,6 @@ class QuestionUpdate(BaseModel):
     is_correct: bool = Field(default=False, example=False)
     
 class QuestionIsCorrectUpdate(BaseModel):
-    problem: str = Field(min_length=2, max_length=99, examples=["列志向データベースの強みを説明せよ"])
-    answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     is_correct: bool = Field(default=False, example=False)
 
 class QuestionResponse(BaseModel):

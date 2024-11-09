@@ -5,6 +5,7 @@ import  "./Home.css"
 import { useEffect } from "react"
 // import { auth } from "../firebase"
 import CategoryBox from "./CategoryBox"
+import { Link } from "react-router-dom"
 
 export interface Category {
     id: number;
@@ -19,6 +20,16 @@ const Home: React.FC = () => {
     const [pageCount, setPageCount] = useState<number | null>(null) 
     // 初期値をnullに設定。そうすることで、
     const [limit, setLimit] = useState(9);
+
+    // 検索機能用
+    const [searchWord, setSearchWord] = useState<string>("");
+
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchWord(e.target.value);
+        setPage(1); // 新しい検索時にページをリセット
+        console.log(searchWord)
+    };
+
     useEffect(() => {
         // ページネーションのためのページ数を取得
         const getPageCount = async () => {
@@ -50,7 +61,9 @@ const Home: React.FC = () => {
         const skip = (page - 1) * limit;
         console.log(skip)
         const getCategories = () => {
-            fetch(`http://127.0.0.1:8000/categories?skip=${skip}&limit=${limit}`)
+            // fetch(`http://127.0.0.1:8000/categories?skip=${skip}&limit=${limit}`)
+            const url = `http://127.0.0.1:8000/categories?skip=${skip}&limit=${limit}&word=${searchWord}`;
+            fetch(url)
             .then(response => {
                 if (response.ok) {
                     return response.json();
@@ -66,10 +79,15 @@ const Home: React.FC = () => {
         }
         getCategories()
 
-    }, [page, limit, pageCount])
+    }, [page, limit, pageCount, searchWord])
 
     return (
         <>
+            <Link to="/createcategory">Create Category</Link>
+            <div>
+                カテゴリ検索ボックス
+                <input type="text" value={searchWord} onChange={handleSearch} placeholder="検索キーワードを入力"/>
+                </div>
             <div className="container">
                 <div className="category-container">
                     {categoryList.map((category) => {
