@@ -1,3 +1,8 @@
+#root {
+    background-color: aquamarine;
+}
+
+
 .container {
 
     margin-left: auto;
@@ -17,6 +22,11 @@
     margin-top: 90px;
 }
 
+.search-box {
+    margin: 0 auto;
+    width: 200px;
+}
+
 .pagination-btn {
     font-size: 19px;
 }
@@ -24,4 +34,3 @@
 .left-btn {
     margin-left: 2px;
 }
-

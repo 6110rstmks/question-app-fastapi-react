@@ -1,4 +1,4 @@
-.question-box {
+.question_box {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -8,7 +8,7 @@
     background-color: #f9f9f9;
 }
 
-.question-problem {
+.question_problem {
     font-size: 22px;
 }
 

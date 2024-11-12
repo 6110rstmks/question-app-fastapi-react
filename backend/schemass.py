@@ -1,6 +1,6 @@
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel, Field, ConfigDict
 
 
@@ -46,6 +46,11 @@ class CategoryResponse(BaseModel):
     user_id: int = Field(gt=0, examples=[1])
 
     model_config = ConfigDict(from_attributes=True)
+    
+    
+
+
+
 
 class SubCategoryCreate(BaseModel):
     name: str = Field(min_length = 1, max_length= 20, examples=["g PCA"])

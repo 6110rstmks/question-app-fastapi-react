@@ -1,7 +1,7 @@
 import { get } from 'http';
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import './SetQuestion.css';
+import './SetProblem.module.css';
 
 export interface Category {
     id: number;
@@ -15,6 +15,7 @@ const SetQuestion: React.FC = () => {
     const [answers, setAnswers] = useState<string[]>(['']);
     const [categoryList, setCategoryList] = useState<Category[]>([]);
     const [selectedType, setSelectedType] = useState<string>('random')
+    
     const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(false);
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([]);
 
@@ -116,6 +117,8 @@ const SetQuestion: React.FC = () => {
                     id="scales" 
                     checked={incorrectedOnlyFlgChecked}
                     name="scales"/>未正当の問題から出題する
+                
+                <div>（（ここに未正答の問題数を表示する））</div>
             </div>
 
 

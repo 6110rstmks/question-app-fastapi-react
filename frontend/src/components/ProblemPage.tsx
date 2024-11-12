@@ -1,7 +1,7 @@
 import { useParams, Link, useLocation } from 'react-router-dom';
 import React, { useState, ChangeEvent, useEffect } from 'react';
 
-import "./ProblemPage.css"
+import "./ProblemPage.module.css"
 
 interface Question {
     id: number;

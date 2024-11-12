@@ -1,8 +1,9 @@
 import { get } from 'http';
 import React, { useEffect, useState } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom';
-import "./QuestionPage.css"
 import { useNavigate } from "react-router-dom"
+import styles from './QuestionPage.module.css'
+
 export interface Question {
     id: number;
     problem: string;
@@ -47,18 +48,18 @@ const QuestionPage: React.FC = () => {
 
   return (
     <>
-      <div className='question-box'>
-        <div className='question-problem'>問題：{question?.problem}</div>
-        <div className='question-flg'>
+      <div className={styles.question_box}>
+        <div className={styles.question_problem}>問題：{question?.problem}</div>
+        <div className={styles.question_flg}>
             正解したかどうか：{question?.is_correct ? '正解' : '不正解'}
         </div>
         <div>
-            <p className='question-answer'>答え</p>
+            <p className={styles.question_answer}>答え</p>
             {question?.answer.map((answer, index) => (
               <div className='answer' key={index}>{answer}</div>
             ))}
         </div>
-        <div className='question-delete'>
+        <div className={styles.question_delete}>
             <button onClick={handleDelete}>削除</button>
         </div>
       </div>

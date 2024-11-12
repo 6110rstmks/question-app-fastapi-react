@@ -1,11 +1,12 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from schemas.category import CategoryCreate
-from models import Category, CategoryQuestion
-from fastapi_pagination import Page, add_pagination, paginate
+from schemas.category import CategoryCreate, CategoryImport
+from models import Category, CategoryQuestion, SubCategory, Question, SubCategoryQuestion
 from sqlalchemy import func
 from config import PAGE_SIZE
 import json
+from fastapi import HTTPException, UploadFile
+
 
 
 def find_all(db: Session, skip: int = 0, limit: int = 10, word: str = None):
@@ -103,3 +104,60 @@ def export_to_json(db: Session, file_path):
     
     with open(file_path, "w", encoding="utf-8") as jsonfile:
         json.dump(data, jsonfile, indent=4, ensure_ascii=False)
+
+async def import_json_file(db: Session, file: UploadFile):
+    if file.content_type != "application/json":
+        raise HTTPException(status_code=400, detail="Invalid file type. Please upload a JSON file.")
+
+        # Parse the JSON file
+    content = await file.read()
+    try:
+        data = json.loads(content)
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=400, detail="Invalid JSON format.")
+
+    # Validate and insert data
+    try:
+        categories = [CategoryImport(**category) for category in data]
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Data validation failed: {str(e)}")
+
+    # Import data into the database
+    for category_data in categories:
+        category = Category(id=category_data.id, name=category_data.name, user_id=1)  # Adjust user_id as needed
+        db.add(category)
+
+        for subcategory_data in category_data.subcategories:
+            subcategory = SubCategory(
+                id=subcategory_data.id,
+                name=subcategory_data.name,
+                category=category,
+            )
+            db.add(subcategory)
+
+            for question_data in subcategory_data.questions:
+                question = Question(
+                    id=question_data.id,
+                    problem=question_data.problem,
+                    answer=question_data.answer,
+                    is_correct=question_data.is_correct,
+                )
+                db.add(question)
+
+                # Create SubCategoryQuestion link
+                subcategory_question = SubCategoryQuestion(
+                    subcategory=subcategory,
+                    question=question,
+                )
+                db.add(subcategory_question)
+
+                # Optionally, create a CategoryQuestion link
+                category_question = CategoryQuestion(
+                    category=category,
+                    question=question,
+                )
+                db.add(category_question)
+
+    # Commit the transaction
+    db.commit()
+    return {"message": "Data uploaded successfully"}

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
-import "./SubcategoryPage.css";
 import { useNavigate } from "react-router-dom"
 import Modal from 'react-modal'
 import CreateQuestion from './CreateQuestion';
+import styles from "./SubcategoryPage.module.css";
 
 
 // types.ts
@@ -123,8 +123,8 @@ const SubcategoryPage: React.FC = () => {
     }, [subcategory_id]);
 
     return (
-        <div className='subcategory-page'>
-            <div className='subcategory-box'>
+        <div className={styles.subcategory_page}>
+            <div className={styles.subcategory_box}>
             {isEditing ? (
                     <input
                         type="text"
@@ -136,7 +136,7 @@ const SubcategoryPage: React.FC = () => {
                     />
                 ) : (
                     <h1 onDoubleClick={handleDoubleClick}>{subCategoryName}</h1>
-                )}                <button className='delete-btn' onClick={handleDelete}>Delete</button>
+                )}                <button className={styles.delete_btn} onClick={handleDelete}>Delete</button>
             </div>
             {/* <Link 
                 to={{ pathname: "/createquestion" }}
@@ -144,7 +144,7 @@ const SubcategoryPage: React.FC = () => {
             >
                 Questionを作成する
             </Link> */}
-            <button onClick={() => setModalIsOpen(true)}>Questionを作成する</button>
+            <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Question</button>
             <Modal
             isOpen={modalIsOpen}
             contentLabel="Example Modal"
@@ -156,10 +156,10 @@ const SubcategoryPage: React.FC = () => {
                     refreshQuestionList={refreshQuestionList}  // 質問リスト更新関数を渡す
                 />
             </Modal>
-            <div className='question-container'>
+            <div className={styles.question_container}>
                 {questionList.map((question) => (
-                    <div className="question-box" key={question.id}>
-                        <h2 onClick={() => handleQuestionClick(question.id)}>{question.problem}</h2>
+                    <div className={styles.question_box} key={question.id}>
+                        <h3 onClick={() => handleQuestionClick(question.id)}>{question.problem}</h3>
                         {question.answer.map((answer, index) => (
                             <p key={index}>{answer}</p>
                         ))}

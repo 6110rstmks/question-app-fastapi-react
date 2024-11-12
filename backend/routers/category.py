@@ -1,15 +1,18 @@
 from typing import Annotated
-from fastapi import APIRouter, Path, Query, HTTPException, Depends
+from fastapi import APIRouter, Path, Query, HTTPException, Depends, UploadFile
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category as category_curds, auth as auth_cruds
-from schemas.category import CategoryResponse, CategoryCreate
+from schemas.category import CategoryResponse, CategoryCreate, CategoryImport, SubCategoryImport, QuestionImport
 from schemas import auth
 from database import get_db
 from fastapi import Query
 from config import PAGE_SIZE
 from fastapi.responses import FileResponse
 import os
+import json
+from models import Category, SubCategory, Question, SubCategoryQuestion, CategoryQuestion
+
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
@@ -18,7 +21,6 @@ DbDependency = Annotated[Session, Depends(get_db)]
 router = APIRouter(prefix="/categories", tags=["Categories"])
 
 # tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
-
 
 @router.get("", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(
@@ -69,7 +71,6 @@ async def find_by_name(
 
 @router.post("", response_model=CategoryResponse, status_code=status.HTTP_201_CREATED)
 async def create(db: DbDependency, category_create: CategoryCreate):
-    # return category_curds.create(db, category_create, user.user_id)
     return category_curds.create(db, category_create)
 
 
@@ -84,6 +85,7 @@ async def get_page_count(db: DbDependency):
 async def get_exported_json(db: DbDependency):
     
     EXPORT_DIR = "export_data"
+    
     # ディレクトリが存在しない場合は作成
     os.makedirs(EXPORT_DIR, exist_ok=True)
     FILE_NAME = "categories_export.json"
@@ -99,3 +101,10 @@ async def get_exported_json(db: DbDependency):
     # Return the file as a response
     return FileResponse(FILE_PATH, media_type="application/json", filename="categories_export.json")
 
+
+@router.post("/import", status_code=status.HTTP_201_CREATED)
+async def upload_json(
+    file: UploadFile,
+    db: Session = Depends(get_db),
+):
+    return await category_curds.import_json_file(db, file)
