@@ -135,11 +135,11 @@ const Home: React.FC = () => {
             <div>
                 <Link to="/createcategory">Create Category</Link>
             </div>
-            <div className="search-box">
-                <input type="text" value={searchWord} onChange={handleSearch} placeholder="検索キーワードを入力"/>
+            <div className={styles.search_box}>
+                <input type="text" className={styles.search_input}value={searchWord} onChange={handleSearch} placeholder="Search..."/>
             </div>
-            <div className="container">
-                <div className="category-container">
+            <div className={styles.container}>
+                <div className={styles.category_container}>
                     {categoryList.map((category) => {
                         return (
                             <CategoryBox category={category} key={category.id}></CategoryBox>
@@ -148,8 +148,8 @@ const Home: React.FC = () => {
                 </div>
             </div>
             <div className={styles.pagination}>
-                <button className="pagination-btn" onClick={() => setPage(page - 1)}>Previous</button>
-                <button className="pagination-btn left-btn" onClick={() => setPage(page + 1)}>Next</button>
+                <button className={styles.pagination_btn} onClick={() => setPage(page - 1)}>Previous</button>
+                <button className={`${styles.pagination_btn} ${styles.left_btn}`} onClick={() => setPage(page + 1)}>Next</button>
             </div>
         </>
     )
