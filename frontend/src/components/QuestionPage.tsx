@@ -76,7 +76,7 @@ const QuestionPage: React.FC = () => {
                     // subcategory_id={subcategoryId} 
                     setModalIsOpen={setModalIsOpen}
                     question={question}
-                    // refreshQuestionList={refreshQuestionList}
+                    refreshQuestion={getQuestion}
                 />
             </Modal>
       </div>

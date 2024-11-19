@@ -41,6 +41,17 @@ async def type_exception_handler(request: Request, exc: TypeException):
         status_code=418,
         content={"message": f"{exc.type}という不明なタイプが入力されました。"},
     )
+    
+@router.put("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
+async def update(
+    db: DbDependency,
+    question_update: QuestionUpdate,
+    id: int = Path(gt=0),
+):
+    updated_item = question_cruds.update2(db, id, question_update)
+    if not updated_item:
+        raise HTTPException(status_code=404, detail="Question not updated")
+    return updated_item
 
 # 出題する問題群を生成する。
 @router.post("/generate_problems", response_model=list[QuestionResponse], status_code=status.HTTP_201_CREATED)
@@ -75,38 +86,6 @@ async def find_by_name(
     db: DbDependency, name: str = Query(min_length=2, max_length=20)
 ):
     return question_cruds.find_by_name(db, name)
-
-
-
-@router.put("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
-async def update(
-    db: DbDependency,
-    question_update: QuestionUpdate,
-    id: int = Path(gt=0),
-):
-    # updated_item = question_cruds.update(db, id, question_update, user.user_id)
-    updated_item = question_cruds.update(db, id, question_update)
-    if not updated_item:
-        raise HTTPException(status_code=404, detail="Question not updated")
-    return updated_item
-
-
-# @router.put("/change_is_correct/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
-# async def update(
-#     db: DbDependency,
-#     question_is_correct_update: QuestionIsCorrectUpdate,
-#     id: int = Path(gt=0),
-# ):
-#     print(777766668)
-#     # updated_item = question_cruds.update(db, id, question_update, user.user_id)
-#     updated_item = question_cruds.update_is_correct(db, id, question_is_correct_update)
-#     if not updated_item:
-#         raise HTTPException(status_code=404, detail="Question not updated")
-#     print(54888888)
-#     return updated_item
-
-
-
 
 @router.delete("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def delete(db: DbDependency, id: int = Path(gt=0)):

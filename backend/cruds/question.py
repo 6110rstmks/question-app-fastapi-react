@@ -79,8 +79,8 @@ def create(db: Session, question_create: QuestionCreate):
         raise e
 
 
-def update(db: Session, id: int, question_update: QuestionUpdate):
-
+def update2(db: Session, id: int, question_update: QuestionUpdate):
+    print("uuiii")
     stmt = (
         update(Question).
         where(Question.id == id).
@@ -88,7 +88,6 @@ def update(db: Session, id: int, question_update: QuestionUpdate):
                 problem=question_update.problem,
                 answer=question_update.answer,
                 is_correct=question_update.is_correct
-                
                )
     )
     db.execute(stmt)

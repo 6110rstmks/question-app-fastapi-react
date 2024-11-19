@@ -122,7 +122,7 @@ const Home: React.FC = () => {
 
     return (
         <>
-            <h1>JSONファイルアップロード</h1>
+            <h4>JSONファイルアップロード</h4>
             <form onSubmit={handleFileSubmit}>
                 <div>
                 <input type="file" accept=".json" onChange={handleFileChange} />

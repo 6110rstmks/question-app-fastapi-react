@@ -14,11 +14,11 @@ interface Question {
 interface EditQuestionProps {
   setModalIsOpen: (isOpen: boolean) => void;
   question?: Question;
-  // refreshQuestionList: () => void;
+  refreshQuestion: () => void; // Add this prop
 }
 
 
-const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question}) => {
+const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, refreshQuestion}) => {
     const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "");
     const [inputAnswerValue, setInputAnswerValue] = useState<string[]>(question?.answer || ['']);
     const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false);
@@ -45,12 +45,13 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question}) =
         const updatedQuestion = {
             problem: inputProblemValue,
             answer: inputAnswerValue,
-            is_correct: isCorrect,
-            subcategory_id: question?.subcategory_id,
+            is_correct: isCorrect
+            // subcategory_id: question?.subcategory_id,
         };
 
         try {
-            const response = await fetch(`/questions/${question?.id}`, {
+            // const response = await fetch(`/questions/${question?.id}`, {
+            const response = await fetch('http://localhost:8000/questions/74', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,6 +62,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question}) =
             if (!response.ok) {
                 throw new Error('Failed to update the question.');
             }
+            refreshQuestion(); // Refresh the question
 
             alert('質問が更新されました！');
             setModalIsOpen(false);

@@ -52,7 +52,6 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
                 throw new Error('Failed to create question');
             }
 
-            // const data = await response.json();
             // navigate(`/subcategory/${subcategory_id}`, { state: category_id });
             await refreshQuestionList();
 
