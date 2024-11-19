@@ -43,8 +43,13 @@ def find_by_name(db: Session, name: str):
 
 # def create(db: Session, category_create: category.CategoryCreate, user_id: int):
 def create(db: Session, category_create: CategoryCreate):
+    
+    existing_category = db.query(Category).filter(Category.name == category_create.name).first()
+    if existing_category:
+        raise HTTPException(status_code=400, detail="Category already exists.")
+
     new_category = Category(**category_create.model_dump(), user_id=1)
-    # new_category = Category(**category_create.model_dump())
+    
     db.add(new_category)
     db.commit()
     return new_category
@@ -69,78 +74,127 @@ def find_all_categories_with_questions(db: Session):
     query2 = select(Category).where(Category.id.in_(category_ids))
     return db.execute(query2).scalars().all()
 
+# def export_to_json(db: Session, file_path):
 
-def export_to_json(db: Session, file_path):
+#     query_stmt = select(Category)
+    
+#     categories = db.execute(query_stmt).scalars().all()
+        
+#     data = []
+    
+#     for category in categories:
+#         category_data = {
+#             "category_name": category.name,
+#             "subcategories": []
+#         }
+        
+#         for subcategory in category.subcategories:
+#             subcategory_data = {
+#                 "name": subcategory.name,
+#                 "questions": []
+#             }
+#             for subcat_question in subcategory.questions:
+#                 question = subcat_question.question
+#                 subcategory_data["questions"].append({
+#                     "problem": question.problem,
+#                     "answer": question.answer,
+#                     "is_correct": question.is_correct
+#                 })
+#             category_data["subcategories"].append(subcategory_data)
+#         data.append(category_data)
+    
+#     with open(file_path, "w", encoding="utf-8") as jsonfile:
+#         json.dump(data, jsonfile, indent=4, ensure_ascii=False)
 
+def export_to_json(db: Session, file_path: str):
     query_stmt = select(Category)
     
     categories = db.execute(query_stmt).scalars().all()
         
-    data = []
+    data = {
+        "category": []  # "category"キーを最上位に追加
+    }
     
     for category in categories:
         category_data = {
-            "id": category.id,
-            "name": category.name,
+            "name": category.name,  # "category_name"を"name"に変更
             "subcategories": []
         }
         
         for subcategory in category.subcategories:
             subcategory_data = {
-                "id": subcategory.id,
                 "name": subcategory.name,
                 "questions": []
             }
             for subcat_question in subcategory.questions:
                 question = subcat_question.question
                 subcategory_data["questions"].append({
-                    "id": question.id,
                     "problem": question.problem,
                     "answer": question.answer,
                     "is_correct": question.is_correct
                 })
             category_data["subcategories"].append(subcategory_data)
-        data.append(category_data)
+        data["category"].append(category_data)  # データを"category"キーに追加
     
     with open(file_path, "w", encoding="utf-8") as jsonfile:
         json.dump(data, jsonfile, indent=4, ensure_ascii=False)
 
+
 async def import_json_file(db: Session, file: UploadFile):
+    # Check file type
     if file.content_type != "application/json":
         raise HTTPException(status_code=400, detail="Invalid file type. Please upload a JSON file.")
 
-        # Parse the JSON file
+    # Parse the JSON file
     content = await file.read()
     try:
         data = json.loads(content)
     except json.JSONDecodeError:
         raise HTTPException(status_code=400, detail="Invalid JSON format.")
 
-    # Validate and insert data
-    try:
-        categories = [CategoryImport(**category) for category in data]
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Data validation failed: {str(e)}")
+    if "category" not in data or not isinstance(data["category"], list):
+        raise HTTPException(status_code=400, detail="Invalid JSON structure. 'category' key is required.")
 
-    # Import data into the database
-    for category_data in categories:
-        category = Category(id=category_data.id, name=category_data.name, user_id=1)  # Adjust user_id as needed
+    # Process categories
+    for category_data in data["category"]:
+        category_name = category_data.get("name")
+        
+        if not category_name:
+            raise HTTPException(status_code=400, detail="Category name is required.")
+        
+        if len(find_by_name(db, category_name)) > 0:
+            continue
+
+        # Create and add category
+        category = Category(name=category_name, user_id=1)  # Adjust user_id as needed
         db.add(category)
 
-        for subcategory_data in category_data.subcategories:
-            subcategory = SubCategory(
-                id=subcategory_data.id,
-                name=subcategory_data.name,
-                category=category,
-            )
+        # Process subcategories
+        subcategories = category_data.get("subcategories", [])
+        for subcategory_data in subcategories:
+            subcategory_name = subcategory_data.get("name")
+            if not subcategory_name:
+                raise HTTPException(status_code=400, detail="Subcategory name is required.")
+
+            # Create and add subcategory
+            subcategory = SubCategory(name=subcategory_name, category=category)
             db.add(subcategory)
 
-            for question_data in subcategory_data.questions:
+            # Process questions
+            questions = subcategory_data.get("questions", [])
+            for question_data in questions:
+                problem = question_data.get("problem")
+                answer = question_data.get("answer", [])
+                is_correct = question_data.get("is_correct", False)
+
+                if not problem:
+                    raise HTTPException(status_code=400, detail="Question problem is required.")
+
+                # Create and add question
                 question = Question(
-                    id=question_data.id,
-                    problem=question_data.problem,
-                    answer=question_data.answer,
-                    is_correct=question_data.is_correct,
+                    problem=problem,
+                    answer=answer,
+                    is_correct=is_correct,
                 )
                 db.add(question)
 

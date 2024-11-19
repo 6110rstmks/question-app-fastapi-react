@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
+import Modal from 'react-modal'
+import EditQuestion from './EditQuestion';
 
 export interface Question {
     id: number;
@@ -16,6 +18,8 @@ const QuestionPage: React.FC = () => {
   const navigate = useNavigate();
   const { question_id } = useParams<{ question_id: string }>();
   const [question, setQuestion] = useState<Question>();
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+
 
   const handleDelete = async () => {
 
@@ -37,9 +41,8 @@ const QuestionPage: React.FC = () => {
   const getQuestion = async () => {
     const response = await fetch(`http://localhost:8000/questions/${question_id}`);
     if (response.ok) {
-      const data = await response.json();
-      console.log(data)
-      setQuestion(data);}
+        const data = await response.json();
+        setQuestion(data);}
   }
 
   useEffect(() => {
@@ -48,20 +51,34 @@ const QuestionPage: React.FC = () => {
 
   return (
     <>
-      <div className={styles.question_box}>
-        <div className={styles.question_problem}>問題：{question?.problem}</div>
-        <div className={styles.question_flg}>
-            正解したかどうか：{question?.is_correct ? '正解' : '不正解'}
-        </div>
-        <div>
-            <p className={styles.question_answer}>答え</p>
-            {question?.answer.map((answer, index) => (
-              <div className='answer' key={index}>{answer}</div>
-            ))}
-        </div>
-        <div className={styles.question_delete}>
-            <button onClick={handleDelete}>削除</button>
-        </div>
+        <div className={styles.question_box}>
+          <div className={styles.question_problem}>問題：{question?.problem}</div>
+          <div>
+              正解したかどうか：<div className={styles.question_flg}>{question?.is_correct ? '正解' : '不正解'}</div>
+          </div>
+          <div>
+              <p className={styles.question_answer}>答え</p>
+              {question?.answer.map((answer, index) => (
+                <div className='answer' key={index}>・{answer}</div>
+              ))}
+          </div>
+          <div className={styles.question_delete}>
+              <button onClick={handleDelete}>削除</button>
+          </div>
+          <button onClick={() => setModalIsOpen(true)}>編集</button>
+          <button>サブカテゴリを変更する→モジュールがひらいて、同一カテゴリ内のサブカテゴリを選択できるようにする。</button>
+          <Modal
+                isOpen={modalIsOpen}
+                contentLabel="Example Modal"
+            >
+                <EditQuestion 
+                    // category_id={categoryId} 
+                    // subcategory_id={subcategoryId} 
+                    setModalIsOpen={setModalIsOpen}
+                    question={question}
+                    // refreshQuestionList={refreshQuestionList}
+                />
+            </Modal>
       </div>
     </>
   )

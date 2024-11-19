@@ -5,11 +5,21 @@
     padding: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: #ccffcc;
+}
+
+.question_flg {
+    border: 1px solid green;
+    background-color: #5F9EA0;
+    display: inline-block;
+    border-radius: 11px;
 }
 
 .question_problem {
     font-size: 22px;
+    text-decoration: underline;
 }
 
 .answer {

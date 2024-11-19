@@ -6,17 +6,6 @@
 
 answerの数は特に決まってないので、　プラスボタンをクリックして　アンサーの数を増やす。
 
-
-## category search
-***branch-name: feat/search-category***
-
-部分一致検索
-
-一旦表示されているページネーションのカテゴリをすべてcategoryListから削除して、
-部分検索に一致するカテゴリのみを表示する。
-
-検索ボックスを空にすると再びページネーションに基づくcategoryが表示される。
-
 <hr/>
 
 ## subcategory search
@@ -44,10 +33,7 @@ answerの数は特に決まってないので、　プラスボタンをクリ�
 問題作成はバックエンドが行うのでapi叩くだけ。
 
 
-#### ランダムに問題を出題する
-***branch-name: feat/ask-question-random***  ← feature/ask-questionブランチから派生
 
-問題作成はバックエンドが行うのでapi叩くだけ。
 
 #### Question正解フラグの手動切り替え。
 ***branch-name: feat/ask-question-by-category***  ← feature/ask-questionブランチから派生

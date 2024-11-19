@@ -8,6 +8,7 @@ interface CreateCategoryProps {
 
 const CreateCategory: React.FC<CreateCategoryProps> = ({ isAuth }) => {
     const [categoryName, setCategoryName] = useState<string>("");
+    const [errMessage, setErrorMessage] = useState<string>("");
     const navigate = useNavigate();
 
     const createCategory = async () => {
@@ -21,11 +22,14 @@ const CreateCategory: React.FC<CreateCategoryProps> = ({ isAuth }) => {
             });
 
             if (!response.ok) {
-                throw new Error('Failed to create category');
+                const data = await response.json();
+                console.log(data.detail);
+                setErrorMessage(data.detail)
+                
+            } else {
+                navigate("/");
             }
 
-            await response.json();
-            navigate("/");
         } catch (error) {
             console.error(error);
             // 必要に応じてエラーメッセージをユーザーに表示する
@@ -55,6 +59,7 @@ const CreateCategory: React.FC<CreateCategoryProps> = ({ isAuth }) => {
                 <button className="categoryButton" onClick={createCategory}>
                     作成
                 </button>
+                <div>{errMessage && <p>{errMessage}</p>}</div>
             </div>
         </div>
     );

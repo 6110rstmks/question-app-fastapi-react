@@ -7,31 +7,21 @@ Subcategory一覧(csv)
 
 Question一覧
 
-
 category-subcategory 一覧 
-Subcategory-quetion　テーブル　の一覧 
+Subcategory-quetionテーブルの一覧 
 category-question
 
- 
+マスタデータ（カテゴリ数、subcategory数、question数）→これいらないか。
 
-マスタデータ（カテゴリ数、subcategory数、question数） 
-
- 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
 
- 
+もしくはエクスポート処理、インポート処理をカテゴリ単位で行う。 
 
-もしくは　エクスポート処理、インポート処理を　カテゴリ単位で行う。 
-
-カテゴリ一覧ファイルも一緒に渡すことで、例えばmathファイルをインポートするのを忘れていたときに、フロントエンドに　mathファイルが読み込まれていません。とアラートを出す機能を作成することができる。 
-
- 
+カテゴリ一覧ファイルも一緒に渡すことで、例えばmathファイルをインポートするのを忘れていたときに、フロントエンドにmathファイルが読み込まれていません。とアラートを出す機能を作成することができる。 
 
 Ex) economics 
 
- 
-
-インポートのロジックで　例えば　economicsのカテゴリを作成したら　 
+インポートのロジックで例えばeconomicsのカテゴリを作成したら
 
 new_question = Question(**question_data) 
 

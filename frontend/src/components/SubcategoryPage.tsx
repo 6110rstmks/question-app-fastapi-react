@@ -105,7 +105,7 @@ const SubcategoryPage: React.FC = () => {
     }
 
     const handleQuestionClick = (question_id: number) => {
-            navigate(`/question/${question_id}`);
+        navigate(`/question/${question_id}`);
     }
 
 
@@ -144,10 +144,10 @@ const SubcategoryPage: React.FC = () => {
             >
                 Questionを作成する
             </Link> */}
-            <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Question</button>
+            <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Create Question</button>
             <Modal
-            isOpen={modalIsOpen}
-            contentLabel="Example Modal"
+                isOpen={modalIsOpen}
+                contentLabel="Example Modal"
             >
                 <CreateQuestion 
                     category_id={categoryId} 
@@ -159,13 +159,14 @@ const SubcategoryPage: React.FC = () => {
             <div className={styles.question_container}>
                 {questionList.map((question) => (
                     <div className={styles.question_box} key={question.id}>
-                        <h3 onClick={() => handleQuestionClick(question.id)}>{question.problem}</h3>
+                        <h3 className={styles.problem_text} onClick={() => handleQuestionClick(question.id)}>{question.problem}</h3>
                         {question.answer.map((answer, index) => (
-                            <p key={index}>{answer}</p>
+                            <p className={styles.answer_text} key={index}>・{answer}</p>
                         ))}
                     </div>
                 ))}
             </div>
+            <button className={styles.display_incorrected_question_btn}>未正解の問題に絞って表示する</button>
         </div>
     );
 };

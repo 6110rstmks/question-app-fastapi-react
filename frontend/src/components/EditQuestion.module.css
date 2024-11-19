@@ -1,0 +1,35 @@
+.question_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.question_dot {
+    margin-top: 8px;
+}
+
+.question_problem {
+    /* border: 'none';
+    outline: 'none';
+    background-color: 'transparent';
+    width: '100%';
+    color: 'blue';
+    font-size: '16px'; */
+    width: 100%; /*親要素いっぱい広げる*/
+	padding: 10px 15px; /*ボックスを大きくする*/
+	font-size: 16px;
+	border-radius: 3px; /*ボックス角の丸み*/
+	border: 2px solid #ddd; /*枠線*/
+    border: none;
+    display: inline-block;
+	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+.problem_textbox {
+    width: 56%;
+    border: 1px solid green;
+}
+
+input:focus {
+    outline: none;
+}

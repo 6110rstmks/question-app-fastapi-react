@@ -46,7 +46,6 @@ async def type_exception_handler(request: Request, exc: TypeException):
 @router.post("/generate_problems", response_model=list[QuestionResponse], status_code=status.HTTP_201_CREATED)
 async def generate_problems(db: DbDependency, problem_create: ProblemCreate):
     if problem_create.type != "category" and problem_create.type != "random":
-        print('ここに入った')
         raise TypeException(problem_create.type)
     return question_cruds.generate_problems(db, problem_create)
 
@@ -92,19 +91,19 @@ async def update(
     return updated_item
 
 
-@router.put("/change_is_correct/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
-async def update(
-    db: DbDependency,
-    question_is_correct_update: QuestionIsCorrectUpdate,
-    id: int = Path(gt=0),
-):
-    print(777766668)
-    # updated_item = question_cruds.update(db, id, question_update, user.user_id)
-    updated_item = question_cruds.update_is_correct(db, id, question_is_correct_update)
-    if not updated_item:
-        raise HTTPException(status_code=404, detail="Question not updated")
-    print(54888888)
-    return updated_item
+# @router.put("/change_is_correct/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
+# async def update(
+#     db: DbDependency,
+#     question_is_correct_update: QuestionIsCorrectUpdate,
+#     id: int = Path(gt=0),
+# ):
+#     print(777766668)
+#     # updated_item = question_cruds.update(db, id, question_update, user.user_id)
+#     updated_item = question_cruds.update_is_correct(db, id, question_is_correct_update)
+#     if not updated_item:
+#         raise HTTPException(status_code=404, detail="Question not updated")
+#     print(54888888)
+#     return updated_item
 
 
 

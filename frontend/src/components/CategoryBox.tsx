@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom"
-import "./CategoryBox.css"
+import styles from "./CategoryBox.module.css"
 
 export interface Category {
     id: number;
@@ -64,10 +64,10 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     }, [category.id]); 
 
     return (
-        <div className="category-box" key={category.id}>
-            <div className="category-filed">
-                <div className="plus-btn" onClick={handleClick}>➕</div>
-                <div className="category-name">{category.name}</div>
+        <div className={styles.category_box} key={category.id}>
+            <div className={styles.category_filed}>
+                <div className={styles.plus_btn} onClick={handleClick}>➕</div>
+                <div className={styles.category_name}>{category.name}</div><span>［{subcategoriesList.length}］</span>
             </div>
             <div className='input-field'>
                 {showForm && (
@@ -86,7 +86,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                 )}
             </div>
             {subcategoriesList.map((subcategory) => (
-                <div className="subcategory-name" key={subcategory.id} onClick={() => handleSubcategoryClick(subcategory.id)}>・{subcategory.name}</div>
+                <div className={styles.subcategory_name} key={subcategory.id} onClick={() => handleSubcategoryClick(subcategory.id)}>・{subcategory.name}</div>
             ))}
         </div>
     );

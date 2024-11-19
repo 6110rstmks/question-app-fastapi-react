@@ -18,3 +18,9 @@ alembic revision --autogenerate -m "Add foreign key"
 
 [step5]
 alembic upgrade head
+
+================
+login postgresql
+
+$ docker exec -it {container_name} bash
+$ psql -U fastapiuser -d fleamarket

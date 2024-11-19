@@ -1,13 +1,14 @@
-.category-box {
+.category_box {
     background-color: #55883B;
     box-shadow: 5px 9px 15px -9px;
     margin-top: 50px;
     margin-left: 70px;
     padding: 20px;
 	width: calc(25% - 5px); /* margin padding分を引く */
+    border-radius: 8px;
 }
 
-.category-filed {
+.category_filed {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,22 +16,22 @@
 
 }
 
-.category-name {
+.category_name {
     font-size: 27px;
     font-weight: bold;
     margin-left: 5px;
 }
 
 
-.plus-btn {
+.plus_btn {
     margin-top: 9px;
 }
 
-.input-field {
+.input_field {
     margin-top: 8px;
 }
 
-.subcategory-name {
+.subcategory_name {
     cursor: pointer;
     margin-top: 11px;
     font-size: 19.5px;

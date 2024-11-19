@@ -79,15 +79,22 @@ def create(db: Session, question_create: QuestionCreate):
         raise e
 
 
-def update_name(db: Session, id: int, question_update: QuestionUpdate, category_id: int, question_id: int):
-    question = find_by_id(db, id)
-    if question is None:
-        return None
+def update(db: Session, id: int, question_update: QuestionUpdate):
 
-    question.name = question.name if question_update.name is None else question_update.name
-    db.add(question)
+    stmt = (
+        update(Question).
+        where(Question.id == id).
+        values(
+                problem=question_update.problem,
+                answer=question_update.answer,
+                is_correct=question_update.is_correct
+                
+               )
+    )
+    db.execute(stmt)
     db.commit()
-    return question
+    updated_subcategory = find_by_id(db, id)
+    return updated_subcategory
 
 def update_is_correct(db: Session, id: int, question_is_correct_update: QuestionIsCorrectUpdate):
     question = find_by_id(db, id)
@@ -104,6 +111,8 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     db.execute(stmt)
     db.commit()
     return question
+
+
 
 
 def delete(db: Session, id: int):

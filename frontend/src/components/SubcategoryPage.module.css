@@ -36,12 +36,39 @@
 
 
 .question_box {
-	width: calc(25% - 12px); /* margin padding分を引く */
+    padding-top: 15px;
+    padding-left: 33px;
+    padding-right: 33px;
+	width: calc(25% - 16px); /* margin padding分を引く */
     margin-top: 8px;
-    border: 1px solid green;
+    margin-left: 8px;
+    /* border: 1px solid green; */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: #ccffcc;
+    border-radius: 15px;
 }
-
 .question-box > h3 {
     box-sizing: border-box;
     word-break: break-all;
 }
+
+ .display_incorrected_question_btn {
+    width: 122px;
+    height: 88px;
+    word-wrap: break-word;
+    color: #fff;
+    background-color: #9ACD32;
+    border-radius: 100vh;
+    cursor: pointer;
+ }
+
+ .problem_text {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 18.6px;
+ }
+
+ .answer_text {
+    color: #00b9b3;
+    font-size: 17px;
+ }

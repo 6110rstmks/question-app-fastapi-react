@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 
@@ -66,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
                     </Link>
                     <Link to="/setquestion">Set Problem</Link>
                     <Link to="/setquestion">Data Import</Link>
-                    <div className="export-btn" onClick={handleExport}>Data Export</div>
+                    <div className={styles.export_btn} onClick={handleExport}>Data Export</div>
                 </>
             )}
         </nav>
