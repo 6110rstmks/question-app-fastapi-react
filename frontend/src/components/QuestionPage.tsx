@@ -7,16 +7,11 @@ import Modal from 'react-modal'
 import EditQuestion from './EditQuestion';
 
 
-// interface LocationState {
-//   state?: {
-//     subcategoryName?: string; // category_id の型
-//   };
-// }
-
 export interface Question {
     id: number;
     problem: string;
     answer: string[];
+    memo: string;
     is_correct: boolean;
     subcategory_id: number;
 }
@@ -24,7 +19,6 @@ export interface Question {
 const QuestionPage: React.FC = () => {
   // const location = useLocation() as LocationState;
   const location = useLocation()
-  // const subcategoryName = location.state
   const { subcategoryName, categoryName } = location.state || {};
 
   
@@ -32,9 +26,6 @@ const QuestionPage: React.FC = () => {
   const { question_id } = useParams<{ question_id: string }>();
   const [question, setQuestion] = useState<Question>();
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
-
-  // const subcategoryName = location.state?.subcategoryName;
-
 
   const handleDelete = async () => {
 

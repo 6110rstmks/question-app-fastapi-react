@@ -1,6 +1,7 @@
 import time
 from fastapi import FastAPI, Request, status
-from routers import item, auth, category, subcategory, question
+from routers import category_router, question_router, subcategory_router
+from routers import auth
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_pagination import Page, add_pagination, paginate
 from fastapi.exceptions import RequestValidationError
@@ -29,9 +30,8 @@ async def add_process_time_header(request: Request, call_next):
     response.headers["X-Process-Time"] = str(process_time)
     return response
 
-app.include_router(item.router)
 app.include_router(auth.router)
-app.include_router(category.router)
-app.include_router(subcategory.router)
-app.include_router(question.router)
+app.include_router(category_router.router)
+app.include_router(subcategory_router.router)
+app.include_router(question_router.router)
 add_pagination(app)

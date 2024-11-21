@@ -7,6 +7,7 @@ interface Question {
     id: number;
     problem: string;
     answer: string[];
+    memo: string;
     is_correct: boolean;
     subcategory_id: number;
 }
@@ -21,6 +22,7 @@ interface EditQuestionProps {
 const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, refreshQuestion}) => {
     const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "");
     const [inputAnswerValue, setInputAnswerValue] = useState<string[]>(question?.answer || ['']);
+    const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "");
     const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false);
 
 
@@ -41,7 +43,6 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
     }
 
     const addAnswerInput = () => {
-        console.log(999)
         setInputAnswerValue([...inputAnswerValue, '']);
     }
 
@@ -54,6 +55,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
         const updatedQuestion = {
             problem: inputProblemValue,
             answer: inputAnswerValue,
+            memo: inputMemoValue,
             is_correct: isCorrect
         };
 
@@ -83,6 +85,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
     useEffect(() => {
         setInputProblemValue(question?.problem || "");
         setInputAnswerValue(question?.answer || ['']);
+        setInputMemoValue(question?.memo || "");
         setIsCorrect(question?.is_correct ?? false);
 
       }, [question]);
@@ -137,8 +140,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
                 className={styles.add_button}
             > 答えを追加</button>
 
-                        {/* 正解/不正解のラジオボタン */}
-                        <div className={styles.radio_group}>
+            <div className={styles.radio_group}>
                 <label>
                     <input
                         type="radio"
@@ -157,6 +159,10 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
                     />
                     不正解
                 </label>
+            </div>
+            <div>
+                メモ
+                {inputMemoValue}
             </div>
 
             

@@ -18,6 +18,7 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
     // const { subcategory_id, category_id } = location.state as LocationState;
     const [problem, setProblem] = useState<string>('');
     const [answers, setAnswers] = useState<string[]>(['']);
+    const [memo, setMemo] = useState<string>('');
     const navigate = useNavigate();
 
     const handleAnswerChange = (index: number, value: string) => {
@@ -52,13 +53,10 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
                 throw new Error('Failed to create question');
             }
 
-            // navigate(`/subcategory/${subcategory_id}`, { state: category_id });
             await refreshQuestionList();
 
             setModalIsOpen(false);
         } catch (error) {
-            console.error(error);
-            // 必要に応じてエラーメッセージをユーザーに表示する
         }
     };
 
@@ -86,6 +84,14 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
                     <button onClick={() => removeAnswerField(index)}>Remove</button>
                 </div>
             ))}
+            <div>
+                <input 
+                    type="text"
+                    placeholder='メモを入力'
+                    value={memo}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => setMemo(e.target.value)}
+                />
+            </div>
             <button onClick={addAnswerField}>Add Answer</button>
             <button className="questionButton" onClick={createQuestion}>Submit</button>
             <button onClick={() => setModalIsOpen(false)}>閉じる</button>

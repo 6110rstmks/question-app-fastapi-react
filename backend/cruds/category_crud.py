@@ -117,7 +117,7 @@ def export_to_json(db: Session, file_path: str):
     
     for category in categories:
         category_data = {
-            "name": category.name,  # "category_name"を"name"に変更
+            "name": category.name,
             "subcategories": []
         }
         
@@ -131,6 +131,7 @@ def export_to_json(db: Session, file_path: str):
                 subcategory_data["questions"].append({
                     "problem": question.problem,
                     "answer": question.answer,
+                    "memo": question.memo,
                     "is_correct": question.is_correct
                 })
             category_data["subcategories"].append(subcategory_data)
@@ -185,6 +186,7 @@ async def import_json_file(db: Session, file: UploadFile):
             for question_data in questions:
                 problem = question_data.get("problem")
                 answer = question_data.get("answer", [])
+                memo = question_data.get("memo")
                 is_correct = question_data.get("is_correct", False)
 
                 if not problem:
@@ -194,6 +196,7 @@ async def import_json_file(db: Session, file: UploadFile):
                 question = Question(
                     problem=problem,
                     answer=answer,
+                    memo=memo,
                     is_correct=is_correct,
                 )
                 db.add(question)

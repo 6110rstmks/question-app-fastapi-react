@@ -7,15 +7,12 @@
 |[./document/deploy.md](./document/table_definition.md)|テーブル定義書|
 |[./document/README_feature.md](./document/README_feature.md)|開発予定機能別ブランチ|
 
-
-
-
 ## routers directory vs cruds directory
 
 ### crudsフォルダのファイル
 このファイル内の関数は、主にデータベースに対する直接の操作を行います。SQLAlchemyセッションを使用してデータベースとやり取りし、データの作成、読み取り、更新、削除（CRUD）を実装しています。
 
-### routersフォルダのファイル
+### routersフォルダのファイル(Note to self)
 
 routers/item.py
 このファイルは、APIエンドポイントを定義し、HTTPリクエストを処理するためのルートハンドラーを提供します。具体的には、以下の操作が含まれます：

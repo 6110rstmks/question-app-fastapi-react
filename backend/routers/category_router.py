@@ -53,15 +53,6 @@ async def find_all(
     ):
     return (category_curds.find_all_categories_with_questions(db))[skip : skip + limit]
 
-# カテゴリをIDで取得
-# @router.get("/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
-# async def find_by_id(db: DbDependency, user: UserDependency, id: int = Path(gt=0)): # type: ignore
-#     found_category = category_curds.find_by_id(db, id, user.user_id)
-#     if not found_category:
-#         raise HTTPException(status_code=404, detail="Category not found")
-#     return found_category
-
-
 @router.get("/", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
 async def find_by_name(
     db: DbDependency, name: str = Query(min_length=2, max_length=20)

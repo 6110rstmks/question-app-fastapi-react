@@ -21,6 +21,7 @@ export interface Question {
     id: number;
     problem: string;
     answer: string[];
+    memo: string;
     subcategory_id: number;
 }
 
@@ -169,6 +170,8 @@ const SubcategoryPage: React.FC = () => {
                         {question.answer.map((answer, index) => (
                             <p className={styles.answer_text} key={index}>・{answer}</p>
                         ))}
+                        {/* <div>{question.memo}</div> */}
+                        {/* メモはsubcategoryPageでは表示させない。 */}
                     </div>
                 ))}
             </div>
