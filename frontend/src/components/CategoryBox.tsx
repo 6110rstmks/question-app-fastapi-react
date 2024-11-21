@@ -48,8 +48,13 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     }
 
     const handleSubcategoryClick = (subcategory_id: number) => {
-        navigate(`/subcategory/${subcategory_id}`, { state: category.id });
-      };
+        navigate(`/subcategory/${subcategory_id}`, { 
+            state: { 
+                category_id: category.id, 
+                category_name: category.name 
+            } 
+        });
+    };
 
     useEffect(() => {
         const fetchSubcategories = async () => {

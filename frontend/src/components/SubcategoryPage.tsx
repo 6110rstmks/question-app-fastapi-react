@@ -6,6 +6,10 @@ import CreateQuestion from './CreateQuestion';
 import styles from "./SubcategoryPage.module.css";
 
 
+interface LocationState {
+    category_id: number;
+    category_name: string;
+}
 // types.ts
 export interface Subcategory {
     id: number;
@@ -26,11 +30,7 @@ const SubcategoryPage: React.FC = () => {
 
     const location = useLocation()
     const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
-    const categoryId = location.state as number;
-    const ids = {
-        subcategory_id: subcategoryId,
-        category_id: categoryId
-    };
+    const { category_id, category_name } = location.state as LocationState;
     const [isEditing, setIsEditing] = useState<boolean>(false); // 編集モードの状態
 
     const [subCategoryName, setSubCategoryName] = useState<string>('');
@@ -48,23 +48,20 @@ const SubcategoryPage: React.FC = () => {
 
     // サブカテゴリ名の更新を処理する関数
     const updateSubcategoryName = async () => {
-        try {
-            const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ 
-                                        name: subCategoryName 
-                                    }),
-            });
+        const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                                    name: subCategoryName 
+                                }),
+        });
 
-            if (!response.ok) {
-                throw new Error('Failed to update subcategory');
-            }
-        } catch (error) {
-            console.error(error);
+        if (!response.ok) {
+            throw new Error('Failed to update subcategory');
         }
+
     };
 
     // ダブルクリックで編集モードに切り替える
@@ -105,7 +102,16 @@ const SubcategoryPage: React.FC = () => {
     }
 
     const handleQuestionClick = (question_id: number) => {
-        navigate(`/question/${question_id}`);
+        const subcategory_name = subCategoryName;
+        // navigate(`/question/${question_id}`, { state: subcategory_name });
+        console.log(category_name)
+        navigate(`/question/${question_id}`, { 
+            state: { 
+                subcategoryName: subcategory_name, 
+                categoryName: category_name 
+            } 
+        });
+        
     }
 
 
@@ -150,7 +156,7 @@ const SubcategoryPage: React.FC = () => {
                 contentLabel="Example Modal"
             >
                 <CreateQuestion 
-                    category_id={categoryId} 
+                    category_id={category_id} 
                     subcategory_id={subcategoryId} 
                     setModalIsOpen={setModalIsOpen}
                     refreshQuestionList={refreshQuestionList}  // 質問リスト更新関数を渡す

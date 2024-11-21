@@ -60,6 +60,7 @@ class Question(Base):
     id = Column(Integer, primary_key=True)
     problem = Column(String, nullable=False)
     answer = Column(ARRAY(String), nullable=False)
+    memo = Column(String, nullable=False)
     is_correct = Column(Boolean, nullable=False, default=False)
     updated_at = Column(DateTime, default=datetime.now(), onupdate=datetime.now())
     

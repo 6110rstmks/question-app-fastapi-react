@@ -6,6 +6,13 @@ import styles from './QuestionPage.module.css'
 import Modal from 'react-modal'
 import EditQuestion from './EditQuestion';
 
+
+// interface LocationState {
+//   state?: {
+//     subcategoryName?: string; // category_id の型
+//   };
+// }
+
 export interface Question {
     id: number;
     problem: string;
@@ -15,15 +22,24 @@ export interface Question {
 }
 
 const QuestionPage: React.FC = () => {
-  const navigate = useNavigate();
+  // const location = useLocation() as LocationState;
+  const location = useLocation()
+  // const subcategoryName = location.state
+  const { subcategoryName, categoryName } = location.state || {};
+
+  
+  const navigate = useNavigate()
   const { question_id } = useParams<{ question_id: string }>();
   const [question, setQuestion] = useState<Question>();
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+
+  // const subcategoryName = location.state?.subcategoryName;
 
 
   const handleDelete = async () => {
 
     let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
+    
 
     if (confirmation !== '削除') {
         return;
@@ -51,6 +67,7 @@ const QuestionPage: React.FC = () => {
 
   return (
     <>
+        <div>{categoryName}＞{subcategoryName} ＞ {question?.problem}</div>
         <div className={styles.question_box}>
           <div className={styles.question_problem}>問題：{question?.problem}</div>
           <div>

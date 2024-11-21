@@ -14,6 +14,7 @@ interface Question {
 const ProblemPage: React.FC = () => {
     const location = useLocation();
     const problemData = location.state as Question[];
+    
     const [currentProblemIndex, setCurrentProblemIndex] = useState(0);
     const [reviewFlg, setReviewFlg] = useState(false);
 

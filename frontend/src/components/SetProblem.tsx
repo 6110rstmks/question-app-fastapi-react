@@ -11,8 +11,6 @@ export interface Category {
 
 const SetQuestion: React.FC = () => {
     const location = useLocation();
-    const [problem, setProblem] = useState<string>('');
-    const [answers, setAnswers] = useState<string[]>(['']);
     const [categoryList, setCategoryList] = useState<Category[]>([]);
     const [selectedType, setSelectedType] = useState<string>('random')
     

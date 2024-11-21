@@ -5,18 +5,15 @@ from schemas.problem import ProblemCreate
 from models import Question, SubCategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import func
-from sqlalchemy.dialects import mysql
-from . import category_question as category_question_cruds
-from . import subcategory_question as subcategory_question_cruds
-
+# from sqlalchemy.dialects import mysql
+from . import category_question_crud as category_question_cruds
+from . import subcategory_question_crud as subcategory_question_cruds
 
 def find_all(db: Session):
     return db.query(Question).all()
 
 def find_all_in_question(db: Session, question_id: int):
     query1 = select(SubCategoryQuestion).where(SubCategoryQuestion.question_id == question_id)
-    print(query1)
-    
     # query = select(Question).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query1).scalars().all()
 
@@ -80,13 +77,15 @@ def create(db: Session, question_create: QuestionCreate):
 
 
 def update2(db: Session, id: int, question_update: QuestionUpdate):
-    print("uuiii")
+    print(888)
+    print(question_update.is_correct)
     stmt = (
         update(Question).
         where(Question.id == id).
         values(
                 problem=question_update.problem,
                 answer=question_update.answer,
+                memo=question_update.memo,
                 is_correct=question_update.is_correct
                )
     )
@@ -100,8 +99,6 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     if question is None:
         return None
     
-    print(question_is_correct_update.is_correct)
-
     stmt = (
         update(Question).
         where(Question.id == id).
@@ -110,9 +107,6 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     db.execute(stmt)
     db.commit()
     return question
-
-
-
 
 def delete(db: Session, id: int):
     question = find_by_id(db, id)

@@ -38,7 +38,16 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
     // 正解/不正解の選択変更処理
     const handleIsCorrectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setIsCorrect(event.target.value === 'true');
-    };
+    }
+
+    const addAnswerInput = () => {
+        console.log(999)
+        setInputAnswerValue([...inputAnswerValue, '']);
+    }
+
+    const removeAnswerInput = (indexToRemove: number) => {
+        setInputAnswerValue(inputAnswerValue.filter((_, index) => index !== indexToRemove));
+    }
 
     const updateQuestion = async () => {
 
@@ -46,12 +55,11 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
             problem: inputProblemValue,
             answer: inputAnswerValue,
             is_correct: isCorrect
-            // subcategory_id: question?.subcategory_id,
         };
 
         try {
             // const response = await fetch(`/questions/${question?.id}`, {
-            const response = await fetch('http://localhost:8000/questions/74', {
+            const response = await fetch(`http://localhost:8000/questions/${question?.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -91,7 +99,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
             />
             </div>
             <div>答え</div>
-            {question?.answer.map((answer, index) => (
+            {/* {question?.answer.map((answer, index) => (
                 <div className={styles.question_row}>
                     <span className={styles.question_dot}>・</span>
                     <input 
@@ -102,7 +110,32 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
 
                     />
                 </div>
+            ))} */}
+
+            {inputAnswerValue.map((answer, index) => (
+                <div key={index} className={styles.question_row}>
+                    <span className={styles.question_dot}>・</span>
+                    <input 
+                        type='text'
+                        value={answer}
+                        onChange={(event) => handleAnswerChange(event, index)}
+                        className={styles.question_problem}
+                    />
+                    {inputAnswerValue.length > 1 && (
+                        <button 
+                            onClick={() => removeAnswerInput(index)}
+                            className={styles.remove_button}
+                        >
+                            削除
+                        </button>
+                    )}
+                </div>
             ))}
+
+            <button 
+                onClick={addAnswerInput} 
+                className={styles.add_button}
+            > 答えを追加</button>
 
                         {/* 正解/不正解のラジオボタン */}
                         <div className={styles.radio_group}>

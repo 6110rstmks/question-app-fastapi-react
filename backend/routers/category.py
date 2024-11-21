@@ -2,7 +2,7 @@ from typing import Annotated
 from fastapi import APIRouter, Path, Query, HTTPException, Depends, UploadFile
 from sqlalchemy.orm import Session
 from starlette import status
-from cruds import category as category_curds, auth as auth_cruds
+from cruds import category_crud as category_curds
 from schemas.category import CategoryResponse, CategoryCreate, CategoryImport, SubCategoryImport, QuestionImport
 from schemas import auth
 from database import get_db

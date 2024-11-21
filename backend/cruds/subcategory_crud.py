@@ -2,8 +2,8 @@ from sqlalchemy.orm import Session
 from sqlalchemy import select, update
 from schemas.subcategory import SubCategoryCreate, SubCategoryUpdate
 from models import SubCategory, SubCategoryQuestion
-from . import question as question_cruds
-from . import subcategory_question as subcategory_question_cruds
+from . import question_crud as question_cruds
+from . import subcategory_question_crud as subcategory_question_cruds
 
 
 
