@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './EditQuestion.module.css'
 import { useState, useEffect } from 'react'
 
-
 interface Question {
     id: number;
     problem: string;
@@ -13,11 +12,10 @@ interface Question {
 }
 
 interface EditQuestionProps {
-  setModalIsOpen: (isOpen: boolean) => void;
-  question?: Question;
-  refreshQuestion: () => void; // Add this prop
+    setModalIsOpen: (isOpen: boolean) => void;
+    question?: Question;
+    refreshQuestion: () => void;
 }
-
 
 const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, refreshQuestion}) => {
     const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "");
@@ -25,19 +23,16 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
     const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "");
     const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false);
 
-
-    // 入力値が変更されたときの処理
     const handleProblemChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setInputProblemValue(event.target.value);
+        setInputProblemValue(event.target.value);
     };
 
     const handleAnswerChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
-        const updatedAnswers = [...inputAnswerValue]; // 配列のコピーを作成
-        updatedAnswers[index] = event.target.value;   // 対象のインデックスを更新
+        const updatedAnswers = [...inputAnswerValue];
+        updatedAnswers[index] = event.target.value;
         setInputAnswerValue(updatedAnswers);
     }
 
-    // 正解/不正解の選択変更処理
     const handleIsCorrectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setIsCorrect(event.target.value === 'true');
     }
@@ -51,7 +46,6 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
     }
 
     const updateQuestion = async () => {
-
         const updatedQuestion = {
             problem: inputProblemValue,
             answer: inputAnswerValue,
@@ -60,7 +54,6 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
         };
 
         try {
-            // const response = await fetch(`/questions/${question?.id}`, {
             const response = await fetch(`http://localhost:8000/questions/${question?.id}`, {
                 method: 'PUT',
                 headers: {
@@ -72,8 +65,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
             if (!response.ok) {
                 throw new Error('Failed to update the question.');
             }
-            refreshQuestion(); // Refresh the question
-
+            refreshQuestion();
             alert('質問が更新されました！');
             setModalIsOpen(false);
         } catch (error) {
@@ -87,86 +79,97 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
         setInputAnswerValue(question?.answer || ['']);
         setInputMemoValue(question?.memo || "");
         setIsCorrect(question?.is_correct ?? false);
-
-      }, [question]);
+    }, [question]);
 
     return (
-        <div>
-            <div className={styles.problem_textbox}>
-                問題:
-            <input 
-                type='text'
-                value={inputProblemValue}
-                onChange={handleProblemChange}
-                className={styles.question_problem}
-            />
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <h2 className={styles.title}>問題の編集</h2>
             </div>
-            <div>答え</div>
-            {/* {question?.answer.map((answer, index) => (
-                <div className={styles.question_row}>
-                    <span className={styles.question_dot}>・</span>
-                    <input 
-                        type='text'
-                        value={inputAnswerValue[index]}
-                        onChange={(event) => handleAnswerChange(event, index)}
-                        className={styles.question_problem}
-
-                    />
-                </div>
-            ))} */}
-
-            {inputAnswerValue.map((answer, index) => (
-                <div key={index} className={styles.question_row}>
-                    <span className={styles.question_dot}>・</span>
-                    <input 
-                        type='text'
-                        value={answer}
-                        onChange={(event) => handleAnswerChange(event, index)}
-                        className={styles.question_problem}
-                    />
-                    {inputAnswerValue.length > 1 && (
-                        <button 
-                            onClick={() => removeAnswerInput(index)}
-                            className={styles.remove_button}
-                        >
-                            削除
-                        </button>
-                    )}
-                </div>
-            ))}
-
-            <button 
-                onClick={addAnswerInput} 
-                className={styles.add_button}
-            > 答えを追加</button>
-
-            <div className={styles.radio_group}>
-                <label>
-                    <input
-                        type="radio"
-                        value="true"
-                        checked={isCorrect === true}
-                        onChange={handleIsCorrectChange}
-                    />
-                    正解
-                </label>
-                <label>
-                    <input
-                        type="radio"
-                        value="false"
-                        checked={isCorrect === false}
-                        onChange={handleIsCorrectChange}
-                    />
-                    不正解
-                </label>
-            </div>
-            <div>
-                メモ
-                {inputMemoValue}
-            </div>
-
             
-            <button onClick={updateQuestion}>送信</button>
+            <div className={styles.content}>
+                <div className={styles.formGroup}>
+                    <label className={styles.label}>問題:</label>
+                    <input 
+                        type='text'
+                        value={inputProblemValue}
+                        onChange={handleProblemChange}
+                        className={styles.textInput}
+                    />
+                </div>
+
+                <div className={styles.answerContainer}>
+                    <div className={styles.answerHeader}>
+                        <label className={styles.label}>答え:</label>
+                        <button 
+                            onClick={addAnswerInput} 
+                            className={styles.secondaryButton}
+                        >
+                            答えを追加
+                        </button>
+                    </div>
+                    
+                    {inputAnswerValue.map((answer, index) => (
+                        <div key={index} className={styles.answerRow}>
+                            <input 
+                                type='text'
+                                value={answer}
+                                onChange={(event) => handleAnswerChange(event, index)}
+                                className={styles.answerInput}
+                            />
+                            {inputAnswerValue.length > 1 && (
+                                <button 
+                                    onClick={() => removeAnswerInput(index)}
+                                    className={styles.deleteButton}
+                                >
+                                    削除
+                                </button>
+                            )}
+                        </div>
+                    ))}
+                </div>
+
+                <div className={styles.formGroup}>
+                    <label className={styles.label}>判定:</label>
+                    <div className={styles.radioGroup}>
+                        <label className={styles.radioLabel}>
+                            <input
+                                type="radio"
+                                value="true"
+                                checked={isCorrect === true}
+                                onChange={handleIsCorrectChange}
+                                className={styles.radio}
+                            />
+                            正解
+                        </label>
+                        <label className={styles.radioLabel}>
+                            <input
+                                type="radio"
+                                value="false"
+                                checked={isCorrect === false}
+                                onChange={handleIsCorrectChange}
+                                className={styles.radio}
+                            />
+                            不正解
+                        </label>
+                    </div>
+                </div>
+
+                <div className={styles.formGroup}>
+                    <label className={styles.label}>メモ:</label>
+                    <textarea
+                        value={inputMemoValue}
+                        onChange={(e) => setInputMemoValue(e.target.value)}
+                        className={styles.memoInput}
+                    />
+                </div>
+
+                <div className={styles.footer}>
+                    <button onClick={updateQuestion} className={styles.primaryButton}>
+                        保存
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }

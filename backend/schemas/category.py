@@ -7,9 +7,8 @@ class ItemStatus(Enum):
     ON_SALE = "ON_SALE"
     SOLD_OUT = "SOLD_OUT"
 
-
 class CategoryCreate(BaseModel):
-    name: str = Field(min_length=2, max_length=20, examples=["PC"])
+    name: str = Field(min_length=2, examples=["PC"])
     # user_id: int = Field(gt=0, examples=[1])
 
 class CategoryResponse(BaseModel):

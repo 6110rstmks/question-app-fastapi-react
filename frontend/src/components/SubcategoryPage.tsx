@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import Modal from 'react-modal'
 import CreateQuestion from './CreateQuestion';
 import styles from "./SubcategoryPage.module.css";
+import styles_common from "./common.module.css";
 
 
 interface LocationState {

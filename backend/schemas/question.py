@@ -6,7 +6,6 @@ from typing import List
 from datetime import datetime
 
 class QuestionCreate(BaseModel):
-    
     problem: str = Field(min_length=2, max_length=99, examples=["列志向データベースの強みを説明せよ"])
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     memo: str = Field(min_length=2, max_length=99, examples=["ここにquestionに関するメモを記入できます。"])

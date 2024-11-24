@@ -10,6 +10,12 @@ from fastapi import HTTPException, UploadFile
 
 
 def find_all(db: Session, skip: int = 0, limit: int = 10, word: str = None):
+
+    # カテゴリテーブルがそんざいするかどうかの確認。
+    # なければreturn Noneとする。
+    if not db.query(Category).first():
+        return None  
+    
     # query = select(Category)
     
     # # デバッグ方法。
@@ -44,7 +50,12 @@ def find_by_name(db: Session, name: str):
 # def create(db: Session, category_create: category.CategoryCreate, user_id: int):
 def create(db: Session, category_create: CategoryCreate):
     
-    existing_category = db.query(Category).filter(Category.name == category_create.name).first()
+    # case insensitiveとする。
+    existing_category = (
+        db.query(Category)
+        .filter(func.lower(Category.name) == func.lower(category_create.name))
+        .first()
+    )
     if existing_category:
         raise HTTPException(status_code=400, detail="Category already exists.")
 
@@ -73,38 +84,6 @@ def find_all_categories_with_questions(db: Session):
     
     query2 = select(Category).where(Category.id.in_(category_ids))
     return db.execute(query2).scalars().all()
-
-# def export_to_json(db: Session, file_path):
-
-#     query_stmt = select(Category)
-    
-#     categories = db.execute(query_stmt).scalars().all()
-        
-#     data = []
-    
-#     for category in categories:
-#         category_data = {
-#             "category_name": category.name,
-#             "subcategories": []
-#         }
-        
-#         for subcategory in category.subcategories:
-#             subcategory_data = {
-#                 "name": subcategory.name,
-#                 "questions": []
-#             }
-#             for subcat_question in subcategory.questions:
-#                 question = subcat_question.question
-#                 subcategory_data["questions"].append({
-#                     "problem": question.problem,
-#                     "answer": question.answer,
-#                     "is_correct": question.is_correct
-#                 })
-#             category_data["subcategories"].append(subcategory_data)
-#         data.append(category_data)
-    
-#     with open(file_path, "w", encoding="utf-8") as jsonfile:
-#         json.dump(data, jsonfile, indent=4, ensure_ascii=False)
 
 def export_to_json(db: Session, file_path: str):
     query_stmt = select(Category)

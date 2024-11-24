@@ -47,11 +47,22 @@ async def update(
     question_update: QuestionUpdate,
     id: int = Path(gt=0),
 ):
-    print(id)
     updated_item = question_crud.update2(db, id, question_update)
     if not updated_item:
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
+
+@router.put("/edit_flg/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
+async def update_correct_flg(
+    db: DbDependency,
+    question_update: QuestionIsCorrectUpdate,
+    id: int = Path(gt=0),
+):
+    updated_item = question_crud.update_correct_flg(db, id, question_update)
+    if not updated_item:
+        raise HTTPException(status_code=404, detail="Question not updated")
+    return updated_item
+
 
 # 出題する問題群を生成する。
 @router.post("/generate_problems", response_model=list[QuestionResponse], status_code=status.HTTP_201_CREATED)

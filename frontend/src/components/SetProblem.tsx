@@ -1,152 +1,205 @@
-import { get } from 'http';
-import React, { useState, ChangeEvent, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import './SetProblem.module.css';
+import React, { useEffect, useState } from 'react';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import Modal from 'react-modal';
+import CreateQuestion from './CreateQuestion';
+import styles from './SubcategoryPage.module.css';
 
-export interface Category {
-    id: number;
-    name: string;
-    user_id: number;    
+interface LocationState {
+    category_id: number;
+    category_name: string;
 }
 
-const SetQuestion: React.FC = () => {
-    const location = useLocation();
-    const [categoryList, setCategoryList] = useState<Category[]>([]);
-    const [selectedType, setSelectedType] = useState<string>('random')
-    
-    const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(false);
-    const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([]);
+interface Question {
+    id: number;
+    problem: string;
+    answer: string[];
+    memo: string;
+    subcategory_id: number;
+}
 
-
-
+const SubcategoryPage: React.FC = () => {
+    const { subcategory_id } = useParams<{ subcategory_id: string }>();
     const navigate = useNavigate();
-    const getCategories = async () => {
-        // const response = await fetch('http://localhost:8000/categories/all')
-        const response = await fetch('http://localhost:8000/categories/all_categories_with_questions')
-        if (response.ok) {
-            const data: Category[] = await response.json();
-            setCategoryList(data);
-            console.log(data)
-        }
-    }
-    const handleTypeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSelectedType(event.target.value);
-    }
+    const location = useLocation();
+    const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
+    const { category_id, category_name } = location.state as LocationState;
+    
+    const [isEditing, setIsEditing] = useState<boolean>(false);
+    const [subCategoryName, setSubCategoryName] = useState<string>('');
+    const [questionList, setQuestionList] = useState<Question[]>([]);
+    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+    const [expandedQuestions, setExpandedQuestions] = useState<{ [key: number]: boolean }>({});
 
-    const handleCheckboxChange = (categoryId: number) => {
-        console.log(selectedCategoryIds)
-        setSelectedCategoryIds((prevSelected) => {
-            // すでに選択されている場合は取り除き、選択されていない場合は追加する
-            if (prevSelected.includes(categoryId)) {
-                return prevSelected.filter((id) => id !== categoryId);
-            } else {
-                return [...prevSelected, categoryId];
+    const toggleQuestion = (questionId: number) => {
+        setExpandedQuestions(prev => ({
+            ...prev,
+            [questionId]: !prev[questionId]
+        }));
+    };
+
+    const refreshQuestionList = async () => {
+        const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
+        if (response.ok) {
+            const data: Question[] = await response.json();
+            setQuestionList(data);
+        }
+    };
+
+    const updateSubcategoryName = async () => {
+        const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name: subCategoryName }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to update subcategory');
+        }
+    };
+
+    const handleDelete = async () => {
+        let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
+        if (confirmation !== '削除') return;
+
+        const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`, {
+            method: 'DELETE',
+        });
+        if (!response.ok) {
+            throw new Error('Failed to delete subcategory');
+        }
+        navigate('/');
+    };
+
+    const handleQuestionClick = (question_id: number) => {
+        navigate(`/question/${question_id}`, {
+            state: {
+                subcategoryName: subCategoryName,
+                categoryName: category_name
             }
         });
     };
-    
-
-    // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
-    const setProblems = async () => {
-        try {
-
-            const response = await fetch('http://localhost:8000/questions/generate_problems', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ 
-                                        type: selectedType,
-                                        incorrected_only_flg: incorrectedOnlyFlgChecked,
-                                        problem_number: 5,
-                                        category_ids: selectedCategoryIds
-                                    }),
-            });
-    
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.message || 'Failed to create problems');
-            }
-            const problemData = await response.json();
-            navigate('/problem', { state: problemData });
-        } catch (error) {
-            if (error instanceof Error) {
-                console.error('Error:', error.message);
-                alert(error.message);  // Display the error message to the user
-            } else {
-                console.error('Unexpected error:', error);
-            }
-        }
-    }
-    
 
     useEffect(() => {
-        getCategories()
-    }, [])
+        const getSubcategory = async () => {
+            const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
+            if (response.ok) {
+                const data = await response.json();
+                setSubCategoryName(data.name);
+            }
+        };
+
+        getSubcategory();
+        refreshQuestionList();
+    }, [subcategory_id]);
+
     return (
-        <div className="">
-            <p>出題する問題数：「５」</p>
-
-            <form action="">
-                <label>
-                    <input 
-                    type="radio" 
-                    name="type" 
-                    value="random"
-                    checked={selectedType === 'random'}
-                    onChange={handleTypeChange}
-                    />ランダムに出題
-                </label>
-                <br></br>
-                <label>
-                    <input 
-                    type="radio" 
-                    name="type"
-                    value="category"
-                    checked={selectedType === 'category'}
-                    onChange={handleTypeChange}
-                    />カテゴリから選択
-                </label>
-            </form>
-
-            <div className='solve-again-checkbox'>
-                <input 
-                    type="checkbox" 
-                    id="scales" 
-                    checked={incorrectedOnlyFlgChecked}
-                    name="scales"/>未正当の問題から出題する
-                
-                <div>（（ここに未正答の問題数を表示する））</div>
+        <div className={styles.container}>
+            {/* Breadcrumb Navigation */}
+            <div className={styles.breadcrumb}>
+                <button onClick={() => navigate(-1)} className={styles.breadcrumbButton}>
+                    ←戻る
+                </button>
+                <span>/</span>
+                <span>{category_name}</span>
+                <span>/</span>
+                <span>{subCategoryName}</span>
             </div>
 
-
-            {selectedType === 'category' && (
-            <div className='bbb'>
-                <p>以下からカテゴリを選択する。</p>
-                {categoryList.map((category) => (
-                    <div key={category.id}>
+            {/* Header Section */}
+            <div className={styles.headerSection}>
+                <div className={styles.headerLeft}>
+                    {isEditing ? (
                         <input
-                            type="checkbox"
-                            id={`checkbox-${category.id}`}
-                            checked={selectedCategoryIds.includes(category.id)}
-                            onChange={() => handleCheckboxChange(category.id)}
+                            type="text"
+                            value={subCategoryName}
+                            onChange={(e) => setSubCategoryName(e.target.value)}
+                            onKeyPress={(e) => e.key === 'Enter' && updateSubcategoryName()}
+                            onBlur={() => setIsEditing(false)}
+                            className={styles.titleInput}
+                            autoFocus
                         />
-                        <label htmlFor={`checkbox-${category.id}`}>
-                            <span>{category.name}</span>
-                        </label>
+                    ) : (
+                        <h1 
+                            className={styles.title}
+                            onDoubleClick={() => setIsEditing(true)}
+                        >
+                            {subCategoryName}
+                        </h1>
+                    )}
+                    <button
+                        onClick={handleDelete}
+                        className={styles.deleteButton}
+                    >
+                        削除
+                    </button>
+                </div>
+                <button 
+                    onClick={() => setModalIsOpen(true)}
+                    className={styles.createButton}
+                >
+                    問題を作成
+                </button>
+            </div>
+
+            {/* Questions List */}
+            <div className={styles.questionList}>
+                {questionList.map((question) => (
+                    <div key={question.id} className={styles.questionCard}>
+                        <div 
+                            className={styles.questionHeader}
+                            onClick={() => toggleQuestion(question.id)}
+                        >
+                            <div className={styles.questionTitleWrapper}>
+                                <h3 className={styles.questionTitle}>{question.problem}</h3>
+                                <span className={`${styles.chevronIcon} ${expandedQuestions[question.id] ? styles.chevronIconRotated : ''}`}>
+                                    ▼
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div className={`
+                            ${styles.questionContent}
+                            ${expandedQuestions[question.id] ? styles.questionContentExpanded : styles.questionContentCollapsed}
+                        `}>
+                            <div className={styles.answerList}>
+                                {question.answer.map((answer, index) => (
+                                    <div key={index} className={styles.answerItem}>
+                                        <span className={styles.bullet}>•</span>
+                                        <span>{answer}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className={styles.detailsButton}>
+                                <button
+                                    onClick={() => handleQuestionClick(question.id)}
+                                    className={styles.createButton}
+                                >
+                                    詳細を見る
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
-            )}
 
-            <br></br>
-            <div>
-                <button className="set-question-box" onClick={setProblems}>問題を出題。</button>
-            </div>
-
-
+            {/* Create Question Modal */}
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={() => setModalIsOpen(false)}
+                className={styles.modal}
+                overlayClassName={styles.modalOverlay}
+            >
+                <CreateQuestion
+                    category_id={category_id}
+                    subcategory_id={subcategoryId}
+                    setModalIsOpen={setModalIsOpen}
+                    refreshQuestionList={refreshQuestionList}
+                />
+            </Modal>
         </div>
     );
-}
+};
 
-export default SetQuestion
+export default SubcategoryPage;

@@ -57,6 +57,7 @@ def find_by_name(db: Session, name: str):
 
 
 def create(db: Session, question_create: QuestionCreate):
+    print(999)
     try:
         question_data = question_create.model_dump(exclude={"category_id", "subcategory_id"})
         new_question = Question(**question_data)
@@ -77,8 +78,6 @@ def create(db: Session, question_create: QuestionCreate):
 
 
 def update2(db: Session, id: int, question_update: QuestionUpdate):
-    print(888)
-    print(question_update.is_correct)
     stmt = (
         update(Question).
         where(Question.id == id).
@@ -93,6 +92,20 @@ def update2(db: Session, id: int, question_update: QuestionUpdate):
     db.commit()
     updated_subcategory = find_by_id(db, id)
     return updated_subcategory
+
+def update_correct_flg(db: Session, id: int, question_update: QuestionUpdate):
+    question = find_by_id(db, id)
+    if question is None:
+        return None
+    
+    stmt = (
+        update(Question).
+        where(Question.id == id).
+        values(is_correct=question_update.is_correct)
+    )
+    db.execute(stmt)
+    db.commit()
+    return question
 
 def update_is_correct(db: Session, id: int, question_is_correct_update: QuestionIsCorrectUpdate):
     question = find_by_id(db, id)

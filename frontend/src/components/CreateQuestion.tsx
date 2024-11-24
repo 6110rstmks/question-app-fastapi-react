@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import styles from "./CreateQuestion.module.css"
 
 // interface LocationState {
 //     subcategory_id: number;
@@ -36,14 +37,36 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
     };
 
     const createQuestion = async () => {
+
+        // 問題文が空の場合はエラーを表示
+        if (!problem) {
+            alert('問題文を入力してください');
+            return;
+        }
+
+        // メモが空の場合はエラーを表示
+        if (!memo) {
+            alert('メモを入力してください');
+            return;
+        }
+
+        // メモが二文字以下の場合はエラーを表示
+        if (memo.length < 2) {
+            alert('メモは2文字以上で入力してください');
+            return;
+        }
+        
+
         try {
             const response = await fetch('http://localhost:8000/questions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ problem: problem,
+                body: JSON.stringify({ 
+                                        problem: problem,
                                         answer: answers,
+                                        memo: memo,
                                         category_id: category_id,
                                         subcategory_id: subcategory_id 
                                     }),
@@ -67,8 +90,9 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
                 <div>Problem</div>
                 <input
                     type="text"
-                    placeholder="タイトルを記入"
+                    placeholder="問題文を入力"
                     value={problem}
+                    className={styles.input_problem}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => setProblem(e.target.value)}
                     autoFocus
                 />
@@ -78,6 +102,7 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
                     <div>Answer {index + 1}</div>
                     <textarea
                         placeholder="投稿内容を記入"
+                        className={styles.input_problem}
                         value={answer}
                         onChange={(e: ChangeEvent<HTMLTextAreaElement>) => handleAnswerChange(index, e.target.value)}
                     />

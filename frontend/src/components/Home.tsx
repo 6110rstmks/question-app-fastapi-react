@@ -20,8 +20,7 @@ const Home: React.FC = () => {
     const [pageCount, setPageCount] = useState<number | null>(null) 
     // 初期値をnullに設定。そうすることで、
     const [limit, setLimit] = useState(9);
-    const [file, setFile] = useState<File | null>(null);
-    const [message, setMessage] = useState<string>("");
+
 
     // 検索機能用
     const [searchWord, setSearchWord] = useState<string>("");
@@ -31,43 +30,9 @@ const Home: React.FC = () => {
         setPage(1); // 新しい検索時にページをリセット
         console.log(searchWord)
     };
-  
-    // ファイル選択時のイベントハンドラ
-    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      if (event.target.files && event.target.files.length > 0) {
-        setFile(event.target.files[0]);
-      }
-    };
-  
-    // フォーム送信時のイベントハンドラ
-    const handleFileSubmit = async (event: React.FormEvent) => {
-        event.preventDefault();
 
-        if (!file) {
-          setMessage("ファイルを選択してください");
-          return;
-        }
-    
-        const formData = new FormData();
-        formData.append("file", file);
-    
-        try {
-          const response = await fetch("http://127.0.0.1:8000/categories/import", {
-            method: "POST",
-            body: formData,
-          });
-    
-          if (response.ok) {
-            const data = await response.json();
-            setMessage("アップロード成功: " + data.message);
-          } else {
-            const errorData = await response.json();
-            setMessage("エラー: " + (errorData.detail || "アップロードに失敗しました"));
-          }
-        } catch (error) {
-          setMessage("エラー: " + error);
-        }
-    };
+  
+
 
     useEffect(() => {
         // ページネーションのためのページ数を取得
@@ -122,21 +87,19 @@ const Home: React.FC = () => {
 
     return (
         <>
-            <h4>JSONファイルアップロード</h4>
-            <form onSubmit={handleFileSubmit}>
-                <div>
-                <input type="file" accept=".json" onChange={handleFileChange} />
-                </div>
-                <button type="submit" style={{ marginTop: "10px" }}>
-                アップロード
-                </button>
-            </form>
-            {message && <p>{message}</p>}
             <div>
                 <Link to="/createcategory">Create Category</Link>
             </div>
-            <div className={styles.search_box}>
-                <input type="text" className={styles.search_input}value={searchWord} onChange={handleSearch} placeholder="Search..."/>
+            <div className={styles.search_section}>
+                <div className={styles.search_container}>
+                    <input type="text" className={styles.search_box}value={searchWord} onChange={handleSearch} placeholder="カテゴリ検索"/>
+                </div>
+                <div className={styles.search_container}>
+                    <input type="text" className={styles.search_box}value={searchWord} onChange={handleSearch} placeholder="サブカテゴリ検索"/>
+                </div>
+                <div className={styles.search_container}>
+                    <input type="text" className={styles.search_box}value={searchWord} onChange={handleSearch} placeholder="カテゴリ or サブカテゴリ検索"/>
+                </div>
             </div>
             <div className={styles.container}>
                 <div className={styles.category_container}>
