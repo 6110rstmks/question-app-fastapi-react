@@ -57,8 +57,6 @@ const ProblemPage: React.FC = () => {
             },
             body: JSON.stringify({ is_correct: true }),
         })
-
-
     }
 
 

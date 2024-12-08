@@ -36,6 +36,7 @@ const SubcategoryPage: React.FC = () => {
     const [isEditing, setIsEditing] = useState<boolean>(false); // 編集モードの状態
 
     const [subCategoryName, setSubCategoryName] = useState<string>('');
+    const [subcategory, setSubcategory] = useState<Subcategory>();
     const [questionList, setQuestionList] = useState<Question[]>([]);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
@@ -105,8 +106,6 @@ const SubcategoryPage: React.FC = () => {
 
     const handleQuestionClick = (question_id: number) => {
         const subcategory_name = subCategoryName;
-        // navigate(`/question/${question_id}`, { state: subcategory_name });
-        console.log(category_name)
         navigate(`/question/${question_id}`, { 
             state: { 
                 subcategoryName: subcategory_name, 

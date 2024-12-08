@@ -30,16 +30,9 @@ async def create(db: DbDependency, question_create: QuestionCreate):
         raise HTTPException(status_code=404, detail="Category not found")
     return question_crud.create(db, question_create)
 
-class TypeException(Exception):
-    def __init__(self, type: str):
-        self.type = type
+
         
-@app.exception_handler(TypeException)
-async def type_exception_handler(request: Request, exc: TypeException):
-    return JSONResponse(
-        status_code=418,
-        content={"message": f"{exc.type}という不明なタイプが入力されました。"},
-    )
+
     
 @router.put("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update(
@@ -64,12 +57,6 @@ async def update_correct_flg(
     return updated_item
 
 
-# 出題する問題群を生成する。
-@router.post("/generate_problems", response_model=list[QuestionResponse], status_code=status.HTTP_201_CREATED)
-async def generate_problems(db: DbDependency, problem_create: ProblemCreate):
-    if problem_create.type != "category" and problem_create.type != "random":
-        raise TypeException(problem_create.type)
-    return question_crud.generate_problems(db, problem_create)
 
 @router.get("", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all(db: DbDependency):

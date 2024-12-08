@@ -10,9 +10,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
 
-    const handleExport = async () => {
-        console.log("export");
-    
+    const handleExport = async () => {    
         try {
             const response = await fetch("http://localhost:8000/categories/export", {
                 method: "GET",

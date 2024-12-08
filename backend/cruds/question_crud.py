@@ -4,7 +4,6 @@ from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUp
 from schemas.problem import ProblemCreate
 from models import Question, SubCategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
-from sqlalchemy import func
 # from sqlalchemy.dialects import mysql
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
@@ -32,32 +31,11 @@ def find_by_id(db: Session, id: int):
     query = select(Question).where(Question.id == id)
     return db.execute(query).scalars().first()
 
-# 問題を出題する
-def generate_problems(db: Session, problem_create: ProblemCreate):
-    if problem_create.type == "random":
-        query2 = select(Question).order_by(func.random()).limit(10)
-
-    elif problem_create.type == "category":
-        print(problem_create.category_ids)
-        query1 = select(CategoryQuestion).where(CategoryQuestion.category_id.in_(problem_create.category_ids))
-        results = db.execute(query1).scalars().all()
-        
-        question_ids = [question.question_id for question in results]
-        print(question_ids)
-        
-        query2 = select(Question).where(Question.id.in_(question_ids))
-    else:
-        return '不明なものが入力されました。'
-    return db.execute(query2).scalars().all()
-
-    
 
 def find_by_name(db: Session, name: str):
     return db.query(Question).filter(Question.name.like(f"%{name}%")).all()
 
-
 def create(db: Session, question_create: QuestionCreate):
-    print(999)
     try:
         question_data = question_create.model_dump(exclude={"category_id", "subcategory_id"})
         new_question = Question(**question_data)
@@ -68,7 +46,6 @@ def create(db: Session, question_create: QuestionCreate):
         new_subcategory_question = SubCategoryQuestion(subcategory_id=question_create.subcategory_id, question_id=new_question.id)
         db.add(new_category_question)
         db.add(new_subcategory_question)
-        
         db.commit()
         
         return new_question
@@ -127,9 +104,7 @@ def delete(db: Session, id: int):
         return None
     
     subcategory_question_cruds.delete(db, id)
-    category_question_cruds.delete(db, id)
-    
-    
+    category_question_cruds.delete(db, id)   
     db.delete(question)
     db.commit()
     return question
