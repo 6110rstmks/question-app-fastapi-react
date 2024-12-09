@@ -21,7 +21,6 @@ const Home: React.FC = () => {
     // 初期値をnullに設定。そうすることで、
     const [limit, setLimit] = useState(9);
 
-
     // 検索機能用
     const [searchWord, setSearchWord] = useState<string>("");
 
@@ -30,9 +29,6 @@ const Home: React.FC = () => {
         setPage(1); // 新しい検索時にページをリセット
         console.log(searchWord)
     };
-
-  
-
 
     useEffect(() => {
         // ページネーションのためのページ数を取得
@@ -65,7 +61,6 @@ const Home: React.FC = () => {
         const skip = (page - 1) * limit;
         console.log(skip)
         const getCategories = () => {
-            // fetch(`http://127.0.0.1:8000/categories?skip=${skip}&limit=${limit}`)
             const url = `http://127.0.0.1:8000/categories?skip=${skip}&limit=${limit}&word=${searchWord}`;
             fetch(url)
             .then(response => {

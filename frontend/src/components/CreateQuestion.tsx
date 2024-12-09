@@ -2,11 +2,6 @@ import React, { useState, ChangeEvent } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from "./CreateQuestion.module.css"
 
-// interface LocationState {
-//     subcategory_id: number;
-//     category_id: number;
-// }
-
 interface CreateQuestionProps {
     category_id: number;
     subcategory_id: number;
@@ -15,12 +10,9 @@ interface CreateQuestionProps {
 }
 
 const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory_id, setModalIsOpen, refreshQuestionList}) => {
-    const location = useLocation();
-    // const { subcategory_id, category_id } = location.state as LocationState;
     const [problem, setProblem] = useState<string>('');
     const [answers, setAnswers] = useState<string[]>(['']);
     const [memo, setMemo] = useState<string>('');
-    const navigate = useNavigate();
 
     const handleAnswerChange = (index: number, value: string) => {
         const newAnswers = [...answers];
@@ -32,9 +24,9 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
         setAnswers([...answers, '']);
     };
 
-    const removeAnswerField = (index: number) => {
-        setAnswers(answers.filter((_, i) => i !== index));
-    };
+    const removeAnswerInput = (indexToRemove: number) => {
+        setAnswers(answers.filter((_, index) => index !== indexToRemove));
+    }
 
     const createQuestion = async () => {
 
@@ -84,44 +76,74 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
     };
 
     return (
-        <div className="postQuestion">
-            <h1>Questionを作成</h1>
-            <div className="inputPost">
-                <div>Problem</div>
-                <input
-                    type="text"
-                    placeholder="問題文を入力"
-                    value={problem}
-                    className={styles.input_problem}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => setProblem(e.target.value)}
-                    autoFocus
-                />
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <h2 className={styles.title}>Create Question</h2>
             </div>
-            {answers.map((answer, index) => (
-                <div key={index} className="inputPost">
-                    <div>Answer {index + 1}</div>
-                    <textarea
-                        placeholder="投稿内容を記入"
-                        className={styles.input_problem}
-                        value={answer}
-                        onChange={(e: ChangeEvent<HTMLTextAreaElement>) => handleAnswerChange(index, e.target.value)}
-                    />
-                    <button onClick={() => removeAnswerField(index)}>Remove</button>
-                </div>
-            ))}
-            <div>
-                <input 
-                    type="text"
-                    placeholder='メモを入力'
-                    value={memo}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => setMemo(e.target.value)}
-                />
-            </div>
-            <button onClick={addAnswerField}>Add Answer</button>
-            <button className="questionButton" onClick={createQuestion}>Submit</button>
-            <button onClick={() => setModalIsOpen(false)}>閉じる</button>
 
-        </div>
+            <div className={styles.content}>
+                <div className={styles.formGroup}>
+                    <label className={styles.label}>Problem:</label>
+                    <input
+                            type="text"
+                            placeholder="問題文を入力"
+                            value={problem}
+                            className={styles.textInput}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => setProblem(e.target.value)}
+                            autoFocus
+                        />
+                    </div>
+
+                <div className={styles.answerContainer}>
+                    <div className={styles.answerHeader}>
+                        <label className={styles.label}>Answer:</label>
+                        <button 
+                            onClick={addAnswerField} 
+                            className={styles.secondaryButton}
+                        >
+                            答えを追加
+                        </button>
+                    </div>
+
+                    {answers.map((answer, index) => (
+                        <div key={index} className={styles.answerRow}>
+                            <textarea
+                                placeholder="投稿内容を記入"
+                                className={styles.answerInput}
+                                value={answer}
+                                onChange={(e: ChangeEvent<HTMLTextAreaElement>) => handleAnswerChange(index, e.target.value)}
+                            />
+                        {answers.length > 1 && (
+                            <button 
+                                onClick={() => removeAnswerInput(index)}
+                                className={styles.deleteButton}
+                            >
+                                削除
+                            </button>
+                        )}               
+                        </div>
+                    ))}
+                </div>
+
+                    <div className={styles.formGroup}>
+                            <label className={styles.label}>Memo:</label>
+                            <textarea
+                                value={memo}
+                                onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setMemo(e.target.value)}
+                                className={styles.memoInput}
+                            />
+                    </div>
+
+                    <div className={styles.footer}>
+                        <button onClick={createQuestion} className={styles.primaryButton}>
+                            Save
+                        </button>
+                    </div>   
+                    <div>                        
+                        <button onClick={() => setModalIsOpen(false)}>閉じる</button>
+                    </div> 
+                </div>        
+            </div>
     );
 };
 

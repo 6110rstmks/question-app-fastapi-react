@@ -59,6 +59,8 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     useEffect(() => {
         const fetchSubcategories = async () => {
             const response = await fetch(`http://localhost:8000/subcategories/category_id/${category.id}`);
+            // const response = await fetch(`http://localhost:8000/subcategories/category_id/${category.id}/?limit=0`);
+
             if (response.ok) {
                 const data: Subcategory[] = await response.json();
                 setSubcategoriesList(data);
@@ -93,6 +95,10 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
             {subcategoriesList.map((subcategory) => (
                 <div className={styles.subcategory_name} key={subcategory.id} onClick={() => handleSubcategoryClick(subcategory.id)}>・{subcategory.name}</div>
             ))}
+            {/* 6件以上サブカテゴリが存在する場合は、「もっとみる」ボタンを表示させる */}
+            {subcategoriesList.length >= 6 && (
+                <button className={styles.more_btn}>もっとみる</button>
+            )}
         </div>
     );
 }

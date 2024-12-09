@@ -10,9 +10,13 @@ from . import subcategory_question_crud as subcategory_question_cruds
 def find_all(db: Session):
     return db.query(SubCategory).all()
 
-def find_all_subcategories_in_category(db: Session, category_id: int):
+def find_subcategories_in_category(db: Session, category_id: int, limit: int):
+    print(limit)
+    print('sss')
     query = select(SubCategory).where(SubCategory.category_id == category_id)
-    return db.execute(query).scalars().all()
+    result = db.execute(query).scalars().all()
+    # 6件まで表示
+    return result[0: 0 + limit]
 
 def find_by_id(db: Session, id: int):
     query = select(SubCategory).where(SubCategory.id == id)

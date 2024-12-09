@@ -84,12 +84,12 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <h2 className={styles.title}>問題の編集</h2>
+                <h2 className={styles.title}>Edit Question</h2>
             </div>
             
             <div className={styles.content}>
                 <div className={styles.formGroup}>
-                    <label className={styles.label}>問題:</label>
+                    <label className={styles.label}>Problem:</label>
                     <input 
                         type='text'
                         value={inputProblemValue}
@@ -100,7 +100,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
 
                 <div className={styles.answerContainer}>
                     <div className={styles.answerHeader}>
-                        <label className={styles.label}>答え:</label>
+                        <label className={styles.label}>Answer:</label>
                         <button 
                             onClick={addAnswerInput} 
                             className={styles.secondaryButton}
@@ -140,7 +140,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />
-                            正解
+                            Correct
                         </label>
                         <label className={styles.radioLabel}>
                             <input
@@ -150,13 +150,13 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />
-                            不正解
+                            Incorrect
                         </label>
                     </div>
                 </div>
 
                 <div className={styles.formGroup}>
-                    <label className={styles.label}>メモ:</label>
+                    <label className={styles.label}>Memo:</label>
                     <textarea
                         value={inputMemoValue}
                         onChange={(e) => setInputMemoValue(e.target.value)}
@@ -166,7 +166,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
 
                 <div className={styles.footer}>
                     <button onClick={updateQuestion} className={styles.primaryButton}>
-                        保存
+                        Save
                     </button>
                 </div>
             </div>

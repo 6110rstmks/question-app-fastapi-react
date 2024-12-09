@@ -27,7 +27,7 @@ async def find_all(db: DbDependency):
 async def find_by_id(
     db: DbDependency, 
     # user: UserDependency, 
-    id: int = Path(gt=0)
+    id: int = Path(gt=0),
 ):
     # found_subcategory = subcategory_cruds.find_by_id(db, id, user.user_id)
     found_subcategory = subcategory_crud.find_by_id(db, id)
@@ -36,12 +36,17 @@ async def find_by_id(
     return found_subcategory
 
 @router.get("/category_id/{category_id}", response_model=list[SubCategoryResponse], status_code=status.HTTP_200_OK)
-async def find_all_subcategories_in_category(db: DbDependency, category_id: int = Path(gt=0)):
-    return subcategory_crud.find_all_subcategories_in_category(db, category_id)
+async def find_subcategories_in_category(
+    db: DbDependency, 
+    category_id: int = Path(gt=0),
+    limit: int = Query(6)
+):
+    return subcategory_crud.find_subcategories_in_category(db, category_id, limit)
 
 @router.get("/", response_model=list[SubCategoryResponse], status_code=status.HTTP_200_OK)
 async def find_by_name(
-    db: DbDependency, name: str = Query(min_length=2, max_length=20)
+    db: DbDependency,
+    name: str = Query(min_length=2, max_length=20)
 ):
     return subcategory_crud.find_by_name(db, name)
 
