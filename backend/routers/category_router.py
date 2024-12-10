@@ -2,7 +2,7 @@ from typing import Annotated
 from fastapi import APIRouter, Path, Query, HTTPException, Depends, UploadFile
 from sqlalchemy.orm import Session
 from starlette import status
-from cruds import category_crud as category_curds
+from cruds import category_crud as category_cruds
 from schemas.category import CategoryResponse, CategoryCreate, CategoryImport, SubCategoryImport, QuestionImport
 from schemas import auth
 from database import get_db
@@ -12,7 +12,7 @@ from fastapi.responses import FileResponse
 import os
 import json
 from models import Category, SubCategory, Question, SubCategoryQuestion, CategoryQuestion
-
+from git import Repo
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
@@ -29,13 +29,12 @@ async def find_all(
     limit: int = PAGE_SIZE,
     word: str = None
     ):
-    return category_curds.find_all(db, skip=skip, limit=limit, word=word)
+    return category_cruds.find_all(db, skip=skip, limit=limit, word=word)
 
 # page_countのルーティング
 @router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)
 async def get_page_count(db: DbDependency):
-    return category_curds.get_page_count(db)
-
+    return category_cruds.get_page_count(db)
 
 @router.get("/all", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(
@@ -43,7 +42,7 @@ async def find_all(
     skip: int = Query(0, ge=0),
     limit: int = 7
 ):
-    return (category_curds.find_all(db))[skip : skip + limit]
+    return (category_cruds.find_all(db))[skip : skip + limit]
 
 @router.get("/all_categories_with_questions", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(
@@ -51,26 +50,29 @@ async def find_all(
     skip: int = Query(0, ge=0),
     limit: int = 7
     ):
-    return (category_curds.find_all_categories_with_questions(db))[skip : skip + limit]
+    return (category_cruds.find_all_categories_with_questions(db))[skip : skip + limit]
 
-@router.get("/", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
+@router.get("/", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
 async def find_by_name(
     db: DbDependency, name: str = Query(min_length=2, max_length=20)
 ):
-    return category_curds.find_by_name(db, name)
+    return category_cruds.find_by_name(db, name)
 
+@router.get("/category_id/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
+async def find_by_id(
+    db: DbDependency,
+    id: int = Path(gt=0),
+):
+    return category_cruds.find_by_id(db, id)
 
 @router.post("", response_model=CategoryResponse, status_code=status.HTTP_201_CREATED)
 async def create(db: DbDependency, category_create: CategoryCreate):
-    return category_curds.create(db, category_create)
-
+    return category_cruds.create(db, category_create)
 
 # page_countのルーティング
 @router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)
 async def get_page_count(db: DbDependency):
-    print(888899999)
-    return category_curds.get_page_count(db)
-
+    return category_cruds.get_page_count(db)
 
 @router.get("/export", response_class=FileResponse)
 async def get_exported_json(db: DbDependency):
@@ -83,7 +85,19 @@ async def get_exported_json(db: DbDependency):
     FILE_PATH = os.path.join(EXPORT_DIR, FILE_NAME)
     
     # Generate the JSON file (optional: generate dynamically each request)
-    category_curds.export_to_json(db, FILE_PATH)
+    category_cruds.export_to_json(db, FILE_PATH)
+    
+    # GitHubにプッシュする処理
+    try:
+        if not os.path.exists(os.path.join(EXPORT_DIR, ".git")):
+            Repo.init(EXPORT_DIR)  # 初期化されていない場合はリポジトリを初期化
+        repo = Repo(EXPORT_DIR)
+        repo.git.add(FILE_NAME)
+        repo.index.commit("Export categories data")
+        origin = repo.remote(name="origin")
+        origin.push()
+    except Exception as e:
+        print(f"GitHub push failed: {str(e)}")
     
     # Check if the file exists
     if not os.path.exists(FILE_PATH):
@@ -92,10 +106,9 @@ async def get_exported_json(db: DbDependency):
     # Return the file as a response
     return FileResponse(FILE_PATH, media_type="application/json", filename="categories_export.json")
 
-
 @router.post("/import", status_code=status.HTTP_201_CREATED)
 async def upload_json(
     file: UploadFile,
     db: Session = Depends(get_db),
 ):
-    return await category_curds.import_json_file(db, file)
+    return await category_cruds.import_json_file(db, file)

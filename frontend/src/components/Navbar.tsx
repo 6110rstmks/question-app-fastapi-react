@@ -71,4 +71,4 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
     );
 }
 
-export default Navbar;
+export default Navbar

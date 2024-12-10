@@ -11,6 +11,7 @@ import SubcategoryPage from './components/SubcategoryPage'
 import ProblemPage from './components/ProblemPage'
 import ImportPage from './components/ImportPage'
 import SetProblem from './components/SetProblem'
+import CategoryPage from './components/CategoryPage'
 
 const App: React.FC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"));
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         {/* <Route path="/createquestion" element={<CreateQuestion category_id={}/>} /> */}
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth} />} />
+        <Route path="/category/:category_id" element={<CategoryPage />} />
         <Route path="/subcategory/:subcategory_id" element={<SubcategoryPage />} />
         <Route path="/question/:question_id" element={<QuestionPage />} />
         <Route path="/problem" element={<ProblemPage />} />

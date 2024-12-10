@@ -17,6 +17,7 @@ nav a:hover {
     color: cadetblue;
 }
 
-.export-btn {
+.export_btn {
     cursor: pointer;
+    color: white;
 }

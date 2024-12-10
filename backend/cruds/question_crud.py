@@ -13,7 +13,6 @@ def find_all(db: Session):
 
 def find_all_in_question(db: Session, question_id: int):
     query1 = select(SubCategoryQuestion).where(SubCategoryQuestion.question_id == question_id)
-    # query = select(Question).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query1).scalars().all()
 
 def find_all_questions_in_category(db: Session, category_id: int):
@@ -23,7 +22,6 @@ def find_all_questions_in_category(db: Session, category_id: int):
 def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
     query1 = select(SubCategoryQuestion.question_id).where(SubCategoryQuestion.subcategory_id == subcategory_id)
     question_ids = db.execute(query1).scalars().all()
-    print(question_ids)
     query = select(Question).where(Question.id.in_(question_ids))
     return db.execute(query).scalars().all()
 

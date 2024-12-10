@@ -72,9 +72,7 @@ def get_page_count(db: Session):
                     select(func.count()).
                     select_from(Category)
                 )
-    # count_page = count_page // 9 + 1
     count_page = count_page // PAGE_SIZE + 1
-    print(count_page)
     return count_page
 
 # 問題を一つ持つカテゴリを取得する。
@@ -118,7 +116,6 @@ def export_to_json(db: Session, file_path: str):
     
     with open(file_path, "w", encoding="utf-8") as jsonfile:
         json.dump(data, jsonfile, indent=4, ensure_ascii=False)
-
 
 async def import_json_file(db: Session, file: UploadFile):
     # Check file type

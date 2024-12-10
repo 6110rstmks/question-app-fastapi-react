@@ -69,11 +69,9 @@ const Home: React.FC = () => {
                 }
             })
             .then(data => {
-                // if (data.length === 0) {
                 if (data.length > 0) {
                     setCategoryList(data)
                 }
-                // return
             })
         }
         getCategories()

@@ -1,4 +1,4 @@
-from typing import Annotated
+from typing import Annotated, Optional
 from fastapi import APIRouter, Path, Query, HTTPException, Depends
 from sqlalchemy.orm import Session
 from starlette import status
@@ -8,12 +8,10 @@ from schemas.auth import DecodedToken
 from database import get_db
 from cruds import category_crud, subcategory_crud
 
-
 DbDependency = Annotated[Session, Depends(get_db)]
 
 UserDependency = Annotated[DecodedToken, Depends(auth_cruds.get_current_user)]
 
-# 
 router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
 
 # tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
@@ -21,7 +19,6 @@ router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
 @router.get("", response_model=list[SubCategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(db: DbDependency):
     return subcategory_crud.find_all(db)
-
 
 @router.get("/{id}", response_model=SubCategoryResponse, status_code=status.HTTP_200_OK)
 async def find_by_id(
@@ -39,7 +36,7 @@ async def find_by_id(
 async def find_subcategories_in_category(
     db: DbDependency, 
     category_id: int = Path(gt=0),
-    limit: int = Query(6)
+    limit: Optional[int] = None 
 ):
     return subcategory_crud.find_subcategories_in_category(db, category_id, limit)
 
@@ -50,7 +47,6 @@ async def find_by_name(
 ):
     return subcategory_crud.find_by_name(db, name)
 
-
 @router.post("/", response_model=SubCategoryResponse, status_code=status.HTTP_201_CREATED)
 # async def create(db: DbDependency, category_id: int, subcategory_create: SubCategoryCreate):
 async def create(db: DbDependency, subcategory_create: SubCategoryCreate):
@@ -59,7 +55,6 @@ async def create(db: DbDependency, subcategory_create: SubCategoryCreate):
         raise HTTPException(status_code=404, detail="Category not found")
     pass
     return subcategory_crud.create(db, subcategory_create)
-
 
 @router.put("/{id}", response_model=SubCategoryResponse, status_code=status.HTTP_200_OK)
 async def update(

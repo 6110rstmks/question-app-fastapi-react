@@ -5,16 +5,19 @@ from models import SubCategory, SubCategoryQuestion
 from . import question_crud as question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 
-
-
 def find_all(db: Session):
     return db.query(SubCategory).all()
 
 def find_subcategories_in_category(db: Session, category_id: int, limit: int):
+    print(333555)
     print(limit)
-    print('sss')
+        
     query = select(SubCategory).where(SubCategory.category_id == category_id)
     result = db.execute(query).scalars().all()
+    
+    if limit is None:  # limitが指定されていない場合
+        return result
+    
     # 6件まで表示
     return result[0: 0 + limit]
 
@@ -31,9 +34,7 @@ def create(db: Session, subcategory_create: SubCategoryCreate):
     db.commit()
     return new_subcategory
 
-
 def update2(db: Session, id: int, subcategory_update: SubCategoryUpdate):
-
     subcategory = find_by_id(db, id)
     if subcategory is None:
         return None
@@ -47,7 +48,6 @@ def update2(db: Session, id: int, subcategory_update: SubCategoryUpdate):
     db.commit()
     updated_subcategory = find_by_id(db, id)
     return updated_subcategory
-
 
 def delete(db: Session, id: int):
     subcategory = find_by_id(db, id)

@@ -43,8 +43,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     
         const data: Subcategory = await response.json();
         setSubcategoriesList((prev) => [...prev, data]);
-        setCategoryName('');
-        
+        setCategoryName('');  
     }
 
     const handleSubcategoryClick = (subcategory_id: number) => {
@@ -56,10 +55,14 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
         });
     };
 
+    const moveCategoryPage = () => {
+        navigate(`/category/${category.id}`);
+    }
+
     useEffect(() => {
         const fetchSubcategories = async () => {
-            const response = await fetch(`http://localhost:8000/subcategories/category_id/${category.id}`);
-            // const response = await fetch(`http://localhost:8000/subcategories/category_id/${category.id}/?limit=0`);
+            // const response = await fetch(`http://localhost:8000/subcategories/category_id/${category.id}`);
+            const response = await fetch(`http://localhost:8000/subcategories/category_id/${category.id}/?limit=6`);
 
             if (response.ok) {
                 const data: Subcategory[] = await response.json();
@@ -97,7 +100,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
             ))}
             {/* 6件以上サブカテゴリが存在する場合は、「もっとみる」ボタンを表示させる */}
             {subcategoriesList.length >= 6 && (
-                <button className={styles.more_btn}>もっとみる</button>
+                <button onClick={moveCategoryPage} className={styles.more_btn}>もっとみる</button>
             )}
         </div>
     );

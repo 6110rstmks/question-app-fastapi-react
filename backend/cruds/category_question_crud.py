@@ -12,10 +12,8 @@ def find_by_question_id(db: Session, id: int):
 
 def delete(db: Session, question_id: int):
     categoryquestion = find_by_question_id(db, question_id)
-    print('oyatsu')
     if categoryquestion is None:
         return None
     db.delete(categoryquestion)
     db.commit()
-    print('oyatsu2')
     return categoryquestion

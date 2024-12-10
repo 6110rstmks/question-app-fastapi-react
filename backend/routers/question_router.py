@@ -10,7 +10,6 @@ from database import get_db
 from cruds import subcategory_crud as subcategory_cruds
 from fastapi.responses import JSONResponse
 
-
 DbDependency = Annotated[Session, Depends(get_db)]
 
 router = APIRouter(prefix="/questions", tags=["Questions"])
@@ -56,8 +55,6 @@ async def update_correct_flg(
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
 
-
-
 @router.get("", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all(db: DbDependency):
     return question_crud.find_all(db)
@@ -77,7 +74,6 @@ async def find_all_questions_in_category(db: DbDependency, category_id: int = Pa
 @router.get("/subcategory_id/{subcategory_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all_questions_in_subcategory(db: DbDependency, subcategory_id: int = Path(gt=0)):
     return question_crud.find_all_questions_in_subcategory(db, subcategory_id)
-
 
 @router.get("/", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_by_name(
