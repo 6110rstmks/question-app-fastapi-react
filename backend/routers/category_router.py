@@ -95,27 +95,27 @@ async def get_exported_json(db: DbDependency):
     
     # GitHubにプッシュする処理
     # うまくいかないので諦める。
-    try:
-        # リポジトリの初期化または読み込み
-        if not os.path.exists(os.path.join(EXPORT_DIR, ".git")):
-            print(49739)
-            repo = Repo.init(EXPORT_DIR)
-            repo.create_remote("origin", REMOTE_URL)  # リモートリポジトリを追加
-        else:
-            print(27236)
-            repo = Repo(EXPORT_DIR)
-            # print(repo.remotes)
-            if "origin" not in repo.remotes:
-                print(4874687387)
-                repo.create_remote("origin", REMOTE_URL)  # リモートリポジトリを追加
+    # try:
+    #     # リポジトリの初期化または読み込み
+    #     if not os.path.exists(os.path.join(EXPORT_DIR, ".git")):
+    #         print(49739)
+    #         repo = Repo.init(EXPORT_DIR)
+    #         repo.create_remote("origin", REMOTE_URL)  # リモートリポジトリを追加
+    #     else:
+    #         print(27236)
+    #         repo = Repo(EXPORT_DIR)
+    #         # print(repo.remotes)
+    #         if "origin" not in repo.remotes:
+    #             print(4874687387)
+    #             repo.create_remote("origin", REMOTE_URL)  # リモートリポジトリを追加
 
-        print(337979)
-        repo.git.add(FILE_NAME)
-        repo.index.commit("Export categories data")
-        origin = repo.remote(name="origin")
-        origin.push()
-    except Exception as e:
-        return {"error": f"GitHub push failed: {str(e)}"}
+    #     print(337979)
+    #     repo.git.add(FILE_NAME)
+    #     repo.index.commit("Export categories data")
+    #     origin = repo.remote(name="origin")
+    #     origin.push()
+    # except Exception as e:
+    #     return {"error": f"GitHub push failed: {str(e)}"}
     
     # Check if the file exists
     if not os.path.exists(FILE_PATH):
