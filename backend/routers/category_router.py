@@ -1,5 +1,5 @@
 from typing import Annotated
-from fastapi import APIRouter, Path, Query, HTTPException, Depends, UploadFile
+from fastapi import APIRouter, Path, Query, Depends, UploadFile
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud as category_cruds
@@ -10,8 +10,6 @@ from fastapi import Query
 from config import PAGE_SIZE
 from fastapi.responses import FileResponse
 import os
-import json
-from models import Category, SubCategory, Question, SubCategoryQuestion, CategoryQuestion
 from git import Repo
 
 DbDependency = Annotated[Session, Depends(get_db)]
@@ -83,21 +81,41 @@ async def get_exported_json(db: DbDependency):
     os.makedirs(EXPORT_DIR, exist_ok=True)
     FILE_NAME = "categories_export.json"
     FILE_PATH = os.path.join(EXPORT_DIR, FILE_NAME)
+    # 本番で稼働させる場合は、環境変数にて設定
+    REMOTE_URL = "https://github.com/6110rstmks/question-app-fastapi-react.git"
+    
+    EXPORT_DIR = os.path.abspath("export_data")
+    FILE_PATH = os.path.join(EXPORT_DIR, "categories_export.json")
     
     # Generate the JSON file (optional: generate dynamically each request)
     category_cruds.export_to_json(db, FILE_PATH)
     
+    print(FILE_PATH)
+    print(373287)
+    
     # GitHubにプッシュする処理
+    # うまくいかないので諦める。
     try:
+        # リポジトリの初期化または読み込み
         if not os.path.exists(os.path.join(EXPORT_DIR, ".git")):
-            Repo.init(EXPORT_DIR)  # 初期化されていない場合はリポジトリを初期化
-        repo = Repo(EXPORT_DIR)
+            print(49739)
+            repo = Repo.init(EXPORT_DIR)
+            repo.create_remote("origin", REMOTE_URL)  # リモートリポジトリを追加
+        else:
+            print(27236)
+            repo = Repo(EXPORT_DIR)
+            # print(repo.remotes)
+            if "origin" not in repo.remotes:
+                print(4874687387)
+                repo.create_remote("origin", REMOTE_URL)  # リモートリポジトリを追加
+
+        print(337979)
         repo.git.add(FILE_NAME)
         repo.index.commit("Export categories data")
         origin = repo.remote(name="origin")
         origin.push()
     except Exception as e:
-        print(f"GitHub push failed: {str(e)}")
+        return {"error": f"GitHub push failed: {str(e)}"}
     
     # Check if the file exists
     if not os.path.exists(FILE_PATH):
@@ -105,6 +123,7 @@ async def get_exported_json(db: DbDependency):
     
     # Return the file as a response
     return FileResponse(FILE_PATH, media_type="application/json", filename="categories_export.json")
+
 
 @router.post("/import", status_code=status.HTTP_201_CREATED)
 async def upload_json(
