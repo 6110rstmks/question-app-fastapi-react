@@ -1,0 +1,256 @@
+{
+    "category": [
+        {
+            "name": "aws",
+            "subcategories": [
+                {
+                    "name": "ECS",
+                    "questions": [
+                        {
+                            "problem": "oiuoiu",
+                            "answer": [
+                                "iou"
+                            ],
+                            "memo": "oiu",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "タスク　サービス　クラスタ　について　説明してください",
+                            "answer": [
+                                "タスク　→ コンテナ群のこと（dockerなどをイメージすると良い)",
+                                "サービス　→ クラスタ内でコンテナ群（タスク）を管理するもの（役割）",
+                                "クラスタ　→ 一番外の大枠"
+                            ],
+                            "memo": "ECSの基本について",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "IAM",
+                    "questions": [
+                        {
+                            "problem": "どうして複数のポリシーをひとつにまとめてroleとして扱うのか",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "複数のポリシーをひとつにまとめてroleとして扱うことで、複数のポリシーをひとつのエンティティに紐づけることができるため、管理がしやすくなる",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "fargate",
+                    "questions": [
+                        {
+                            "problem": "ECS on ECS とECS on Fargateの違いをのべよ",
+                            "answer": [
+                                "xxx"
+                            ],
+                            "memo": "ECS on ECS とECS on Fargateの違い",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "codepipeline",
+                    "questions": [
+                        {
+                            "problem": "green-blue 環境について説明してください",
+                            "answer": [
+                                "アプリケーションをデプロイする際、例えばオンプレミスな物理サーバ上で動作するアプリケーションの場合、メンテナンス日を設けて一時的にサービス停止させたりしてサーバ上で動作するアプリケーションを入れ替えたりすることが多いかと思います。",
+                                "ブルーグリーンデプロイメントはアプリケーションをデプロイする際のデプロイ方式の１つでAWS等のクラウドサービスでアプリケーションをデプロイする場合、クラウドのメリットの１つとなるサービス作成・廃棄することが簡単にできることを活かして、もう１セットのサービスを用意して、テストしてから切り替えることで安全に、ダウンタイムもほぼ無いリリースができる技術となります。"
+                            ],
+                            "memo": "aaaaaaa",
+                            "is_correct": true
+                        }
+                    ]
+                },
+                {
+                    "name": "storage",
+                    "questions": [
+                        {
+                            "problem": "storageで容量無制限なのはs3, EFS, EBS？",
+                            "answer": [
+                                "S3"
+                            ],
+                            "memo": "hhhhh",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "VPC",
+                    "questions": [
+                        {
+                            "problem": "セキュリティグループがステートフルとはどういうことですか？",
+                            "answer": [
+                                "ネットワークACLはステートレスです。この場合のステートレスとは、出の通信と入りの通信（戻ってくる通信）は別々に評価されます。つまり、出の通信は許可するが、戻ってくる入りの通信は拒否するということが可能になります。\n\nセキュリティグループはステートフルです。出の通信が許可されていれば、入りの通信（戻ってくる通信）は自動的に許可されます。"
+                            ],
+                            "memo": "いい",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "SQS",
+                    "questions": [
+                        {
+                            "problem": "なぜ可視性タイムアウトを行う必要があるのか。",
+                            "answer": [
+                                "メッセージの重複処理を防ぐ"
+                            ],
+                            "memo": "くぁ",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "SQSの可視性タイムアウトについて具体例を出して説明してください。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "あああ",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "用語であるプロデューサ、メッセージ、コンシューマについて頭でアウトプットしてください。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "おいう",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "NAT gateway",
+                    "questions": [
+                        {
+                            "problem": "どのようなユースケースで用いるか。",
+                            "answer": [
+                                "あるインスタンスがインターネットへはアクセスしつつインターネットからアクセスされないようなセキュリティ要件が求められる場合。インターネットにアクセスしたい場合としては外部のAPIを使用したい場合など"
+                            ],
+                            "memo": "くぁ",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "NAT gatewayはpublic subnetに配置する？それともprivate subnet?",
+                            "answer": [
+                                "public subnet"
+                            ],
+                            "memo": "aaa",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Kinesis Data Streams",
+                    "questions": [
+                        {
+                            "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
+                            "answer": [
+                                "データの削除の観点では、SQSではキューからデータを取り出した際に、処理が完了したデータは削除するのに対して、kinesisの方では一度取り出したデータを削除せず一定期間保持します。",
+                                "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
+                            ],
+                            "memo": "ああ",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "System Manager",
+                    "questions": []
+                },
+                {
+                    "name": "Aurora",
+                    "questions": []
+                },
+                {
+                    "name": "test",
+                    "questions": []
+                }
+            ]
+        },
+        {
+            "name": "math",
+            "subcategories": [
+                {
+                    "name": "calculus",
+                    "questions": [
+                        {
+                            "problem": "ジョルダンの公式について知っていることをアウトプットしてください。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "kkklk\nk\n\n\n\n\n\n\n\n\n\n\nslkjk",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Chemistry",
+            "subcategories": []
+        },
+        {
+            "name": "biology",
+            "subcategories": [
+                {
+                    "name": "physiology",
+                    "questions": []
+                },
+                {
+                    "name": "development",
+                    "questions": []
+                },
+                {
+                    "name": "taxnomy",
+                    "questions": []
+                }
+            ]
+        },
+        {
+            "name": "economics",
+            "subcategories": []
+        },
+        {
+            "name": "linux",
+            "subcategories": []
+        },
+        {
+            "name": "network",
+            "subcategories": [
+                {
+                    "name": "VLAN",
+                    "questions": []
+                }
+            ]
+        },
+        {
+            "name": "dbt",
+            "subcategories": [
+                {
+                    "name": "snapshot",
+                    "questions": []
+                },
+                {
+                    "name": "model materialization",
+                    "questions": [
+                        {
+                            "problem": "snapshotとは？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "ss",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "snowflake",
+            "subcategories": []
+        }
+    ]
+}
