@@ -11,6 +11,7 @@ from config import PAGE_SIZE
 from fastapi.responses import FileResponse
 import os
 from git import Repo
+from src import data_io
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
@@ -67,56 +68,19 @@ async def find_by_id(
 async def create(db: DbDependency, category_create: CategoryCreate):
     return category_cruds.create(db, category_create)
 
-# page_countのルーティング
-@router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)
-async def get_page_count(db: DbDependency):
-    return category_cruds.get_page_count(db)
-
 @router.get("/export", response_class=FileResponse)
 async def get_exported_json(db: DbDependency):
     
-    EXPORT_DIR = "export_data"
-    
+    EXPORT_DIR = "export_data" 
+    FILE_NAME = "categories_export2.json"
+
     # ディレクトリが存在しない場合は作成
     os.makedirs(EXPORT_DIR, exist_ok=True)
-    FILE_NAME = "categories_export.json"
     FILE_PATH = os.path.join(EXPORT_DIR, FILE_NAME)
-    # 本番で稼働させる場合は、環境変数にて設定
-    REMOTE_URL = "https://github.com/6110rstmks/question-app-fastapi-react.git"
     
     EXPORT_DIR = os.path.abspath("export_data")
-    FILE_PATH = os.path.join(EXPORT_DIR, "categories_export.json")
-    
-    # Generate the JSON file (optional: generate dynamically each request)
-    category_cruds.export_to_json(db, FILE_PATH)
-    
-    print(FILE_PATH)
-    print(373287)
-    
-    # GitHubにプッシュする処理
-    # うまくいかないので諦める。
-    # try:
-    #     # リポジトリの初期化または読み込み
-    #     if not os.path.exists(os.path.join(EXPORT_DIR, ".git")):
-    #         print(49739)
-    #         repo = Repo.init(EXPORT_DIR)
-    #         repo.create_remote("origin", REMOTE_URL)  # リモートリポジトリを追加
-    #     else:
-    #         print(27236)
-    #         repo = Repo(EXPORT_DIR)
-    #         # print(repo.remotes)
-    #         if "origin" not in repo.remotes:
-    #             print(4874687387)
-    #             repo.create_remote("origin", REMOTE_URL)  # リモートリポジトリを追加
-
-    #     print(337979)
-    #     repo.git.add(FILE_NAME)
-    #     repo.index.commit("Export categories data")
-    #     origin = repo.remote(name="origin")
-    #     origin.push()
-    # except Exception as e:
-    #     return {"error": f"GitHub push failed: {str(e)}"}
-    
+    data_io.export_to_json(db, FILE_PATH)
+    git_push_json_file()
     # Check if the file exists
     if not os.path.exists(FILE_PATH):
         return {"error": "File not found"}
@@ -131,3 +95,17 @@ async def upload_json(
     db: Session = Depends(get_db),
 ):
     return await category_cruds.import_json_file(db, file)
+
+def git_push_json_file():
+    EXPORT_DIR = os.path.abspath("export_data")
+
+    REPO_DIR = os.path.abspath(os.path.join(os.path.abspath(""), ".."))
+    INDEX_ADD_FILE_PATH = os.path.join(EXPORT_DIR, "categories_export2.json")
+    repo = Repo(REPO_DIR)
+    
+    if repo.git.diff(INDEX_ADD_FILE_PATH):  
+        # Check if there are unstaged changes for the file
+        repo.index.add([INDEX_ADD_FILE_PATH])
+        repo.index.commit("Export categories data")
+        origin = repo.remote(name="origin")
+        origin.push()

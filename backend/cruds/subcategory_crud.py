@@ -4,14 +4,12 @@ from schemas.subcategory import SubCategoryCreate, SubCategoryUpdate
 from models import SubCategory, SubCategoryQuestion
 from . import question_crud as question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
+from fastapi import HTTPException
 
 def find_all(db: Session):
     return db.query(SubCategory).all()
 
-def find_subcategories_in_category(db: Session, category_id: int, limit: int):
-    print(333555)
-    print(limit)
-        
+def find_subcategories_in_category(db: Session, category_id: int, limit: int):       
     query = select(SubCategory).where(SubCategory.category_id == category_id)
     result = db.execute(query).scalars().all()
     
@@ -29,6 +27,16 @@ def find_by_name(db: Session, name: str):
     return db.query(SubCategory).filter(SubCategory.name.like(f"%{name}%")).all()
 
 def create(db: Session, subcategory_create: SubCategoryCreate):
+
+    existing_subcategory = (
+        db.query(SubCategory)
+        .filter(SubCategory.name == subcategory_create.name)
+        .first()
+    )
+    
+    if existing_subcategory:
+        return HTTPException(status_code=400, detail="Subcategory already exists")
+
     new_subcategory = SubCategory(**subcategory_create.model_dump())
     db.add(new_subcategory)
     db.commit()
