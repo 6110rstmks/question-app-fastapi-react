@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import Modal from 'react-modal'
-import CreateQuestion from './CreateQuestion';
+import CreateQuestion from '../CreateQuestion';
 import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
-import { Subcategory } from '../types/Subcategory';
-import { Question } from '../types/Question';
+import { Subcategory } from '../../types/Subcategory';
+import { Question } from '../../types/Question';
 interface LocationState {
     category_id: number;
     category_name: string;

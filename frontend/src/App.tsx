@@ -5,13 +5,13 @@ import Home from './components/Home'
 import Login from './components/login/Login'
 import Logout from './components/login/Logout'
 import Navbar from './components/Navbar'
-import QuestionPage from './components/QuestionPage'
+import QuestionPage from './components/question/QuestionPage'
 import CreateCategory from './components/CreateCategory'
-import SubcategoryPage from './components/SubcategoryPage'
-import ProblemPage from './components/ProblemPage'
+import SubcategoryPage from './components/subcategory/SubcategoryPage'
+import ProblemPage from './components/problem/ProblemPage'
 import ImportPage from './components/ImportPage'
-import SetProblem from './components/SetProblem'
-import CategoryPage from './components/CategoryPage'
+import SetProblem from './components/problem/SetProblem'
+import CategoryPage from './components/category/CategoryPage'
 
 const App: React.FC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"));

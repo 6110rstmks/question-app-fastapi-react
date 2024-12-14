@@ -1,10 +1,7 @@
 import React, { useState } from "react"
 
-
-
 const ImportPage = () => {
 
-      
     // ファイル選択時のイベントハンドラ
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files.length > 0) {

@@ -1,5 +1,6 @@
 import { useParams, Link, useLocation } from 'react-router-dom';
 import React, { useState, ChangeEvent, useEffect } from 'react';
+import { Question } from '../../types/Question';
 
 import "./ProblemPage.module.css"
 
@@ -51,16 +52,11 @@ const ProblemPage: React.FC = () => {
         })
     }
 
-
     // 再度出題した用の関数
     const handleAnswer_solved_review = () => {
-        console.log(unsolvedProblems[0].id)
-        // setUnsolvedProblems(unsolvedProblems.filter((problem) => problem.id !== unsolvedProblems[currentReviewProblemIndex].id));
         setUnsolvedProblems(unsolvedProblems.filter((problem) => problem.id !== unsolvedProblems[0].id));
-        console.log(unsolvedProblems)
         setCurrentReviewProblemIndex(currentReviewProblemIndex + 1);
         setShowAnswer(false);
-
     };
 
     // 再度出題した用の関数
