@@ -8,4 +8,7 @@
 
 ## 検索機能ボタンを配置
 
-[検索機能Readme](../search.md)  
+詳しくは以下を参照。<br>
+[検索機能Readme](../../search.md)  
+
+

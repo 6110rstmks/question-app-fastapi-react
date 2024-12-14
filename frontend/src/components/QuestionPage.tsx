@@ -48,6 +48,7 @@ const QuestionPage: React.FC = () => {
         navigate('/');
     }
 
+    // idからquestionを取得
     const getQuestion = async () => {
         const response = await fetch(`http://localhost:8000/questions/${question_id}`);
         if (response.ok) {

@@ -10,7 +10,6 @@ interface Question {
     is_correct: boolean;
     subcategory_id: number;
 }
-
 interface EditQuestionProps {
     setModalIsOpen: (isOpen: boolean) => void;
     question?: Question;
@@ -122,7 +121,7 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
                                     onClick={() => removeAnswerInput(index)}
                                     className={styles.deleteButton}
                                 >
-                                    削除
+                                    Delete
                                 </button>
                             )}
                         </div>

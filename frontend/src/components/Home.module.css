@@ -10,17 +10,17 @@
     width: 95%;
 }
 
-.category_container {
+/* .category_container {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
-.pagination {
+/* .pagination {
     display: block;
     width: 200px;
     margin: 0 auto;
     margin-top: 90px;
-}
+} */
 
 .search_section {
     display: flex;

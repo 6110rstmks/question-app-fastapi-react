@@ -5,26 +5,27 @@ import Modal from 'react-modal'
 import CreateQuestion from './CreateQuestion';
 import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
-
-
+import { Subcategory } from '../types/Subcategory';
+import { Question } from '../types/Question';
 interface LocationState {
     category_id: number;
     category_name: string;
 }
-// types.ts
-export interface Subcategory {
-    id: number;
-    name: string;
-    category_id: number;
-}
 
-export interface Question {
-    id: number;
-    problem: string;
-    answer: string[];
-    memo: string;
-    subcategory_id: number;
-}
+// // types.ts
+// export interface Subcategory {
+//     id: number;
+//     name: string;
+//     category_id: number;
+// }
+
+// export interface Question {
+//     id: number;
+//     problem: string;
+//     answer: string[];
+//     memo: string;
+//     subcategory_id: number;
+// }
 
 const SubcategoryPage: React.FC = () => {
     const { subcategory_id } = useParams<{ subcategory_id: string }>();

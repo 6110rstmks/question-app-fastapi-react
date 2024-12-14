@@ -3,14 +3,6 @@ import React, { useState, ChangeEvent, useEffect } from 'react';
 
 import "./ProblemPage.module.css"
 
-interface Question {
-    id: number;
-    problem: string;
-    answer: string[];
-    is_correct: boolean;
-    subcategory_id: number;
-}
-
 const ProblemPage: React.FC = () => {
     const location = useLocation();
     const problemData = location.state as Question[];
