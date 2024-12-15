@@ -1,83 +1,75 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 import styles from "./CategoryBox.module.css"
-
-export interface Category {
-    id: number;
-    name: string;
-}
-
-export interface Subcategory {
-    id: number;
-    name: string;
-    category_id: number;
-}
+import { Category } from "../../types/Category"
+import { Subcategory } from "../../types/Subcategory"
+import { useCategoryBox } from "./hooks/useCategoryBox"
 
 interface CategoryBoxProps {
     category: Category
 }
 
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
-    const [subcategoriesList, setSubcategoriesList] = useState<Subcategory[]>([]);
     const [showForm, setShowForm] = useState<boolean>(false);
-    const [subCategoryName, setCategoryName] = useState('');
+    const [subcategoryName, setSubcategoryName] = useState('');
+    const { subcategories, fetchSubcategories, addSubcategory } = useCategoryBox(category.id);
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        fetchSubcategories();
+    }, [fetchSubcategories]);
 
     const handleClick = () => {
         setShowForm(!showForm);
     }
 
-    const createSubcategory = async () => {
-        const response = await fetch('http://localhost:8000/subcategories/', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name: subCategoryName, category_id: category.id }),
-          });
-    
-          if (!response.ok) {
-            throw new Error('Failed to create subcategory');
-          }
-    
-        const data: Subcategory = await response.json();
-        setSubcategoriesList((prev) => [...prev, data]);
-        setCategoryName('');  
+    const handleCreateSubcategory = async () => {
+        if (!subcategoryName.trim()) return;
+
+        try {
+            const response = await fetch('http://localhost:8000/subcategories/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: subcategoryName, category_id: category.id }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to create subcategory');
+            }
+
+            const data = await response.json() as Subcategory;
+            addSubcategory(data);
+            setSubcategoryName("");
+            setShowForm(false);
+        } catch (error) {
+            console.error("Error creating subcategory:", error);
+        }
     }
 
-    const handleSubcategoryClick = (subcategory_id: number) => {
-        navigate(`/subcategory/${subcategory_id}`, { 
-            state: { 
-                category_id: category.id, 
-                category_name: category.name 
-            } 
+    const handleNavigateToSubcategory = (subcategoryId: number) => {
+        navigate(`/subcategory/${subcategoryId}`, {
+            state: {
+                category_id: category.id,
+                category_name: category.name,
+            },
         });
-    };
+    }
 
-    const moveCategoryPage = () => {
+    const handleNavigateToCategoryPage = () => {
         navigate(`/category/${category.id}`);
     }
 
-    useEffect(() => {
-        const fetchSubcategories = async () => {
-            // const response = await fetch(`http://localhost:8000/subcategories/category_id/${category.id}`);
-            const response = await fetch(`http://localhost:8000/subcategories/category_id/${category.id}/?limit=6`);
-
-            if (response.ok) {
-                const data: Subcategory[] = await response.json();
-                setSubcategoriesList(data);
-            }
-        };
-
-        fetchSubcategories();
-    }, [category.id]); 
 
     return (
         <div className={styles.category_box} key={category.id}>
             <div className={styles.category_filed}>
-                <div className={styles.plus_btn} onClick={handleClick}>➕</div>
-                <div className={styles.category_name}>{category.name}</div><span>［{subcategoriesList.length}］</span>
+                <div className={styles.plus_btn} 
+                    onClick={handleClick}>➕</div>
+                <div className={styles.category_name}>{category.name}</div>
+                <span>［{subcategories.length}］</span>
             </div>
             <div className='input-field'>
                 {showForm && (
@@ -86,21 +78,32 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                             サブカテゴリー名:
                             <input 
                             type="text" 
-                            value={subCategoryName} 
-                            onChange={(e) => setCategoryName(e.target.value)} 
+                            value={subcategoryName} 
+                            onChange={(e) => setSubcategoryName(e.target.value)} 
                             autoFocus
                             />
                         </label>
-                        <button onClick={createSubcategory}>Submit</button>
+                        <button onClick={handleCreateSubcategory}>Submit</button>
                     </>
                 )}
             </div>
-            {subcategoriesList.map((subcategory) => (
-                <div className={styles.subcategory_name} key={subcategory.id} onClick={() => handleSubcategoryClick(subcategory.id)}>・{subcategory.name}</div>
-            ))}
+            <div>
+                {subcategories.map((subcategory: Subcategory) => (
+                    <div
+                        className={styles.subcategory_name}
+                        key={subcategory.id}
+                        onClick={() => handleNavigateToSubcategory(subcategory.id)}
+                    >
+                        ・{subcategory.name}
+                    </div>
+                ))}
+            </div>
+ 
             {/* 6件以上サブカテゴリが存在する場合は、「もっとみる」ボタンを表示させる */}
-            {subcategoriesList.length >= 6 && (
-                <button onClick={moveCategoryPage} className={styles.more_btn}>もっとみる</button>
+            {subcategories.length >= 6 && (
+                <button 
+                onClick={handleNavigateToCategoryPage} 
+                className={styles.more_btn}>もっとみる</button>
             )}
         </div>
     );

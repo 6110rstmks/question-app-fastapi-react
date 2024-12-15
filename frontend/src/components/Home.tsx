@@ -8,15 +8,15 @@ import styles from "./Home.module.css";
 
 const Home: React.FC = () => {
     const [page, setPage] = useState<number>(1);
-    const [limit] = useState<number>(9);
-    const [searchWord, setSearchWord] = useState<string>("");
+    const [limit] = useState<number>(6);
+    const [searchCategoryWord, setSearchCategoryWord] = useState<string>("");
 
-    const { categoryList, pageCount } = useCategories(page, limit, searchWord);
+    const { categoryList, pageCount } = useCategories(page, limit, searchCategoryWord);
 
     return (
         <>
             <Link to="/createcategory">Create Category</Link>
-            <SearchCategory searchWord={searchWord} setSearchWord={setSearchWord} page={page} setPage={setPage} />
+            <SearchCategory searchWord={searchCategoryWord} setSearchWord={setSearchCategoryWord} page={page} setPage={setPage} />
             <div className={styles.container}>
                 <CategoryList categories={categoryList} />
             </div>

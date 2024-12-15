@@ -39,7 +39,7 @@ async def get_page_count(db: DbDependency):
 async def find_all(
     db: DbDependency,
     skip: int = Query(0, ge=0),
-    limit: int = 7
+    limit: int = 5
 ):
     return (category_cruds.find_all(db))[skip : skip + limit]
 
