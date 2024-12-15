@@ -3,7 +3,7 @@ from fastapi import APIRouter, Path, Query, Depends, UploadFile
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud as category_cruds
-from schemas.category import CategoryResponse, CategoryCreate, CategoryImport, SubCategoryImport, QuestionImport
+from schemas.category import CategoryResponse, CategoryCreate, CategoryImport, SubcategoryImport, QuestionImport
 from schemas import auth
 from database import get_db
 from fastapi import Query

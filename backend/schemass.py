@@ -47,12 +47,7 @@ class CategoryResponse(BaseModel):
 
     model_config = ConfigDict(from_attributes=True)
     
-    
-
-
-
-
-class SubCategoryCreate(BaseModel):
+class SubcategoryCreate(BaseModel):
     name: str = Field(min_length = 1, max_length= 20, examples=["g PCA"])
     category_id: int = Field(gt=0, examples=[1])
 

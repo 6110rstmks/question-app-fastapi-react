@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from models import Category, CategoryQuestion, SubCategory, Question, SubCategoryQuestion
+from models import Category, CategoryQuestion, Subcategory, Question, SubcategoryQuestion
 import json
 from fastapi import HTTPException, UploadFile
 from cruds.category_crud import find_by_name
@@ -76,7 +76,7 @@ async def import_json_file(db: Session, file: UploadFile):
                 raise HTTPException(status_code=400, detail="Subcategory name is required.")
 
             # Create and add subcategory
-            subcategory = SubCategory(name=subcategory_name, category=category)
+            subcategory = Subcategory(name=subcategory_name, category=category)
             db.add(subcategory)
 
             # Process questions
@@ -99,8 +99,8 @@ async def import_json_file(db: Session, file: UploadFile):
                 )
                 db.add(question)
 
-                # Create SubCategoryQuestion link
-                subcategory_question = SubCategoryQuestion(
+                # Create SubcategoryQuestion link
+                subcategory_question = SubcategoryQuestion(
                     subcategory=subcategory,
                     question=question,
                 )

@@ -1,6 +1,6 @@
 // hooks/useCategories.ts
 import { useEffect, useState } from "react";
-import { fetchCategories, fetchPageCount } from "../api/categoryApi";
+import { fetchCategories, fetchPageCount } from "../api/CategoryAPI";
 import { Category } from "../types/Category";
 
 export const useCategories = (page: number, limit: number, searchWord: string) => {

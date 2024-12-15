@@ -9,6 +9,7 @@ export interface Category {
     user_id: number;    
 }
 
+// 問題を出題して、
 const SetProblem: React.FC = () => {
     const [categoryList, setCategoryList] = useState<Category[]>([]);
     const [selectedType, setSelectedType] = useState<string>('random')
@@ -19,7 +20,6 @@ const SetProblem: React.FC = () => {
 
     const navigate = useNavigate();
     const getCategories = async () => {
-        // const response = await fetch('http://localhost:8000/categories/all')
         const response = await fetch('http://localhost:8000/categories/all_categories_with_questions')
         if (response.ok) {
             const data: Category[] = await response.json();

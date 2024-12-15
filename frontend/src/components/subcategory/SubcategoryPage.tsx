@@ -36,7 +36,7 @@ const SubcategoryPage: React.FC = () => {
     const { category_id, category_name } = location.state as LocationState;
     const [isEditing, setIsEditing] = useState<boolean>(false); // 編集モードの状態
 
-    const [subCategoryName, setSubCategoryName] = useState<string>('');
+    const [subCategoryName, setSubcategoryName] = useState<string>('');
     const [subcategory, setSubcategory] = useState<Subcategory>();
     const [questionList, setQuestionList] = useState<Question[]>([]);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
@@ -75,7 +75,7 @@ const SubcategoryPage: React.FC = () => {
 
     // 入力フィールドでの変更を反映
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSubCategoryName(e.target.value);
+        setSubcategoryName(e.target.value);
     };
 
     // エンターキーで編集モードを終了し、サブカテゴリ名を更新
@@ -122,7 +122,7 @@ const SubcategoryPage: React.FC = () => {
             const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
             if (response.ok) {
                 const data: Subcategory = await response.json();
-                setSubCategoryName(data.name);
+                setSubcategoryName(data.name);
             }
         };
 

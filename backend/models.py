@@ -34,10 +34,10 @@ class Category(Base):
     )
 
     user = relationship("User", back_populates="categories")
-    subcategories = relationship("SubCategory", back_populates="category")
+    subcategories = relationship("Subcategory", back_populates="category")
     questions = relationship("CategoryQuestion", back_populates="category")
     
-class SubCategory(Base):
+class Subcategory(Base):
     __tablename__ = "subcategories"
 
     id = Column(Integer, primary_key=True)
@@ -51,7 +51,7 @@ class SubCategory(Base):
     # ↓なぜsubcategoriesと複数形なのか
     category = relationship("Category", back_populates="subcategories")
     
-    questions = relationship("SubCategoryQuestion", back_populates="subcategory")
+    questions = relationship("SubcategoryQuestion", back_populates="subcategory")
 
     
 class Question(Base):
@@ -64,10 +64,10 @@ class Question(Base):
     is_correct = Column(Boolean, nullable=False, default=False)
     updated_at = Column(DateTime, default=datetime.now(), onupdate=datetime.now())
     
-    subcategories = relationship("SubCategoryQuestion", back_populates="question")
+    subcategories = relationship("SubcategoryQuestion", back_populates="question")
     categories = relationship("CategoryQuestion", back_populates="question")
     
-class SubCategoryQuestion(Base):
+class SubcategoryQuestion(Base):
     __tablename__ = "subcategory_question"
     subcategory_id = Column(
         Integer, ForeignKey("subcategories.id"), primary_key=True
@@ -75,7 +75,7 @@ class SubCategoryQuestion(Base):
     question_id = Column(
         Integer, ForeignKey("questions.id"), primary_key=True
     )
-    subcategory = relationship("SubCategory", back_populates="questions")
+    subcategory = relationship("Subcategory", back_populates="questions")
     question = relationship("Question", back_populates="subcategories")
     
 class CategoryQuestion(Base):

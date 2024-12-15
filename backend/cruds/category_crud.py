@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, func
-from schemas.category import CategoryCreate, CategoryImport
+from schemas.category import CategoryCreate
 from models import Category, CategoryQuestion
 from config import PAGE_SIZE
 from fastapi import HTTPException
@@ -72,7 +72,8 @@ def get_page_count(db: Session):
     count_page = count_page // PAGE_SIZE + 1
     return count_page
 
-# 問題を一つ持つカテゴリを取得する。
+# Questionを一つでも持つCategoryをすべて取得する。
+# Problem生成画面にて、Categoryを選択する際に使用する。
 def find_all_categories_with_questions(db: Session):
     query1 = select(CategoryQuestion.category_id).distinct()
     category_ids = db.execute(query1).scalars().all()

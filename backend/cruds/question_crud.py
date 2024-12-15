@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import select, update
 from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate
 from schemas.problem import ProblemCreate
-from models import Question, SubCategoryQuestion, CategoryQuestion
+from models import Category, Subcategory, Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
 # from sqlalchemy.dialects import mysql
 from . import category_question_crud as category_question_cruds
@@ -12,7 +12,7 @@ def find_all(db: Session):
     return db.query(Question).all()
 
 def find_all_in_question(db: Session, question_id: int):
-    query1 = select(SubCategoryQuestion).where(SubCategoryQuestion.question_id == question_id)
+    query1 = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query1).scalars().all()
 
 def find_all_questions_in_category(db: Session, category_id: int):
@@ -20,7 +20,7 @@ def find_all_questions_in_category(db: Session, category_id: int):
     return db.execute(query).scalars().all()
 
 def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
-    query1 = select(SubCategoryQuestion.question_id).where(SubCategoryQuestion.subcategory_id == subcategory_id)
+    query1 = select(SubcategoryQuestion.question_id).where(SubcategoryQuestion.subcategory_id == subcategory_id)
     question_ids = db.execute(query1).scalars().all()
     query = select(Question).where(Question.id.in_(question_ids))
     return db.execute(query).scalars().all()
@@ -29,6 +29,17 @@ def find_by_id(db: Session, id: int):
     query = select(Question).where(Question.id == id)
     return db.execute(query).scalars().first()
 
+def find_category_by_question_id(db: Session, question_id: int):
+    query = select(CategoryQuestion).where(CategoryQuestion.question_id == question_id)
+    categoryquestion = db.execute(query).scalars().first()
+    query2 = select(Category).where(Category.id == categoryquestion.category_id) 
+    return db.execute(query2).scalars().first()
+
+def find_subcategory_by_question_id(db: Session, question_id: int):
+    query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
+    subcategoryquestion = db.execute(query).scalars().first()
+    query2 = select(Subcategory).where(Subcategory.id == subcategoryquestion.subcategory_id)
+    return db.execute(query2).scalars().first()
 
 def find_by_name(db: Session, name: str):
     return db.query(Question).filter(Question.name.like(f"%{name}%")).all()
@@ -41,7 +52,7 @@ def create(db: Session, question_create: QuestionCreate):
         db.commit()
 
         new_category_question = CategoryQuestion(category_id=question_create.category_id, question_id=new_question.id)
-        new_subcategory_question = SubCategoryQuestion(subcategory_id=question_create.subcategory_id, question_id=new_question.id)
+        new_subcategory_question = SubcategoryQuestion(subcategory_id=question_create.subcategory_id, question_id=new_question.id)
         db.add(new_category_question)
         db.add(new_subcategory_question)
         db.commit()

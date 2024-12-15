@@ -4,20 +4,22 @@ from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud, question_crud
 from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate
+from schemas.category import CategoryResponse
+from schemas.subcategory import SubcategoryResponse
 from schemas.problem import ProblemCreate
 # from schemaa.auth import DecodedToken
 from database import get_db
 from cruds import subcategory_crud as subcategory_cruds
-from fastapi.responses import JSONResponse
 
 DbDependency = Annotated[Session, Depends(get_db)]
+
+# tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
 
 router = APIRouter(prefix="/questions", tags=["Questions"])
 app = FastAPI()
 
-# tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
 
-# 問題を作成する。
+# Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
 async def create(db: DbDependency, question_create: QuestionCreate):
     found_category = category_crud.find_by_id(db, question_create.category_id)
@@ -28,11 +30,8 @@ async def create(db: DbDependency, question_create: QuestionCreate):
     if not found_subcategory:
         raise HTTPException(status_code=404, detail="Category not found")
     return question_crud.create(db, question_create)
-
-
-        
-
     
+# Questionを更新するエンドポイント
 @router.put("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update(
     db: DbDependency,
@@ -44,6 +43,7 @@ async def update(
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
 
+# Questionのcorrect_flgカラムを更新するエンドポイント
 @router.put("/edit_flg/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update_correct_flg(
     db: DbDependency,
@@ -55,11 +55,12 @@ async def update_correct_flg(
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
 
+# Questionを全て取得するエンドポイント
 @router.get("", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all(db: DbDependency):
     return question_crud.find_all(db)
 
-
+# Question IDからQuestionを取得するエンドポイント
 @router.get("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def find_by_id(db: DbDependency, id: int = Path(gt=0)):
     found_question = question_crud.find_by_id(db, id)
@@ -67,6 +68,23 @@ async def find_by_id(db: DbDependency, id: int = Path(gt=0)):
         raise HTTPException(status_code=404, detail="Question not found")
     return found_question
 
+# question_idからQuestionに紐づくCategoryを取得するエンドポイント
+@router.get("/get_category/{question_id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
+async def find_category_by_question_id(db: DbDependency, question_id: int = Path(gt=0)):
+    found_category = question_crud.find_category_by_question_id(db, question_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    return found_category
+
+# question_idからQuestionに紐づくSubcategoryを取得するエンドポイント
+@router.get("/get_subcategory/{question_id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
+async def find_subcategory_by_question_id(db: DbDependency, question_id: int = Path(gt=0)):
+    found_subcategory = question_crud.find_subcategory_by_question_id(db, question_id)
+    if not found_subcategory:
+        raise HTTPException(status_code=404, detail="Subcategory not found")
+    return found_subcategory
+
+# Category IDに紐づくQuestionsを取得するエンドポイント
 @router.get("/category_id/{category_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all_questions_in_category(db: DbDependency, category_id: int = Path(gt=0)):
     return question_crud.find_all_questions_in_category(db, category_id)
@@ -75,12 +93,8 @@ async def find_all_questions_in_category(db: DbDependency, category_id: int = Pa
 async def find_all_questions_in_subcategory(db: DbDependency, subcategory_id: int = Path(gt=0)):
     return question_crud.find_all_questions_in_subcategory(db, subcategory_id)
 
-@router.get("/", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
-async def find_by_name(
-    db: DbDependency, name: str = Query(min_length=2, max_length=20)
-):
-    return question_crud.find_by_name(db, name)
 
+# Questionを削除するエンドポイント
 @router.delete("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def delete(db: DbDependency, id: int = Path(gt=0)):
     # deleted_item = question_cruds.delete(db, id, user.user_id)

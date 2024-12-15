@@ -1,13 +1,13 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from schemas.subcategory import SubCategoryCreate, SubCategoryUpdate
-from models import SubCategoryQuestion
+from schemas.subcategory import SubcategoryCreate, SubcategoryUpdate
+from models import SubcategoryQuestion
 
 def find_all(db: Session):
-    return db.query(SubCategoryQuestion).all()
+    return db.query(SubcategoryQuestion).all()
 
 def find_by_question_id(db: Session, id: int):
-    query = select(SubCategoryQuestion).where(SubCategoryQuestion.question_id == id)
+    query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == id)
     return db.execute(query).scalars().first()
 
 

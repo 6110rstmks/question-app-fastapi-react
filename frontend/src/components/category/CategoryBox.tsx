@@ -28,7 +28,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
         setShowForm(!showForm);
     }
 
-    const createSubCategory = async () => {
+    const createSubcategory = async () => {
         const response = await fetch('http://localhost:8000/subcategories/', {
             method: 'POST',
             headers: {
@@ -91,7 +91,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                             autoFocus
                             />
                         </label>
-                        <button onClick={createSubCategory}>Submit</button>
+                        <button onClick={createSubcategory}>Submit</button>
                     </>
                 )}
             </div>
