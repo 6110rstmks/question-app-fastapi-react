@@ -7,14 +7,6 @@
                     "name": "ECS",
                     "questions": [
                         {
-                            "problem": "oiuoiu",
-                            "answer": [
-                                "iou"
-                            ],
-                            "memo": "oiu",
-                            "is_correct": false
-                        },
-                        {
                             "problem": "タスク　サービス　クラスタ　について　説明してください",
                             "answer": [
                                 "タスク　→ コンテナ群のこと（dockerなどをイメージすると良い)",
@@ -165,7 +157,7 @@
                     "questions": []
                 },
                 {
-                    "name": "test",
+                    "name": "EC2 インスタンス",
                     "questions": []
                 }
             ]
@@ -197,7 +189,16 @@
             "subcategories": [
                 {
                     "name": "physiology",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "単細胞生物（ゾウリムシ）の体液濃度調節について知っていることをのべよ",
+                            "answer": [
+                                "収縮胞によって体内にはいってくる水分を常に放出"
+                            ],
+                            "memo": "aa",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "development",
@@ -250,6 +251,10 @@
         },
         {
             "name": "snowflake",
+            "subcategories": []
+        },
+        {
+            "name": "python",
             "subcategories": []
         }
     ]
