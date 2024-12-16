@@ -22,6 +22,27 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
     const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "");
     const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false);
 
+useEffect(() => {
+    const disableBackButton = () => {
+        window.history.pushState(null, '', window.location.href);
+    };
+
+    // 初回設定
+    disableBackButton();
+
+    const handlePopState = () => {
+        alert("このページでは戻るボタンは無効です。");
+        disableBackButton(); // 履歴を再設定
+    };
+
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+        window.removeEventListener('popstate', handlePopState);
+    };
+}, []);
+    
+
     const handleProblemChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputProblemValue(event.target.value);
     };

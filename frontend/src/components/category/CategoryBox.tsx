@@ -12,7 +12,7 @@ interface CategoryBoxProps {
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
     const [subcategoryName, setSubcategoryName] = useState('');
-    const { subcategories, fetchSubcategories, addSubcategory } = useCategoryBox(category.id);
+    const { subcategories, questionCounts, fetchSubcategories, addSubcategory } = useCategoryBox(category.id);
 
     const navigate = useNavigate();
 
@@ -94,7 +94,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                         key={subcategory.id}
                         onClick={() => handleNavigateToSubcategory(subcategory.id)}
                     >
-                        ・{subcategory.name}
+                        ・{subcategory.name} ({questionCounts[subcategory.id] || 0})
                     </div>
                 ))}
             </div>
