@@ -64,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
                     </Link>
                     <Link to="/setquestion">Set Problem</Link>
                     <Link to="/import">Data Import</Link>
-                    <div className={styles.export_btn} onClick={handleExport}>Data Export</div>
+                    <div className={styles.export_btn} onClick={handleExport}>Data Export to Local & Github</div>
                 </>
             )}
         </nav>
