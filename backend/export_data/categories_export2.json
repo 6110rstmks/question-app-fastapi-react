@@ -177,6 +177,10 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "complex number",
+                    "questions": []
                 }
             ]
         },
@@ -188,7 +192,15 @@
             "name": "biology",
             "subcategories": [
                 {
-                    "name": "physiology",
+                    "name": "development",
+                    "questions": []
+                },
+                {
+                    "name": "taxnomy",
+                    "questions": []
+                },
+                {
+                    "name": "physiology 体液濃度調節",
                     "questions": [
                         {
                             "problem": "単細胞生物（ゾウリムシ）の体液濃度調節について知っていることをのべよ",
@@ -201,11 +213,7 @@
                     ]
                 },
                 {
-                    "name": "development",
-                    "questions": []
-                },
-                {
-                    "name": "taxnomy",
+                    "name": "physiology",
                     "questions": []
                 }
             ]
