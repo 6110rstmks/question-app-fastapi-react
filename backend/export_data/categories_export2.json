@@ -264,6 +264,45 @@
         {
             "name": "python",
             "subcategories": []
+        },
+        {
+            "name": "deeplearning",
+            "subcategories": [
+                {
+                    "name": "CNN",
+                    "questions": [
+                        {
+                            "problem": "CNNについて説明してください。",
+                            "answer": [
+                                "CNNとは、「Convolutional Neural Network」を略した言葉であり、日本語では「畳み込みニューラルネットワーク」とも呼ばれています。いくつもの深い層を持ったニューラルネットワークであり、主に画像認識の分野において価値を生んでいるネットワークです。"
+                            ],
+                            "memo": "aa",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "kl",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "overfitting",
+                    "questions": [
+                        {
+                            "problem": "explan overfitting",
+                            "answer": [
+                                "過学習とは、「コンピューターが手元にあるデータから学習しすぎた結果、予測がうまくできなくなってしまった」という状態です。\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
