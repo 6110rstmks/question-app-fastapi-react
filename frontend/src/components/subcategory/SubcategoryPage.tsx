@@ -12,21 +12,6 @@ interface LocationState {
     category_name: string;
 }
 
-// // types.ts
-// export interface Subcategory {
-//     id: number;
-//     name: string;
-//     category_id: number;
-// }
-
-// export interface Question {
-//     id: number;
-//     problem: string;
-//     answer: string[];
-//     memo: string;
-//     subcategory_id: number;
-// }
-
 const SubcategoryPage: React.FC = () => {
     const { subcategory_id } = useParams<{ subcategory_id: string }>();
     const navigate = useNavigate();
@@ -37,9 +22,13 @@ const SubcategoryPage: React.FC = () => {
     const [isEditing, setIsEditing] = useState<boolean>(false); // 編集モードの状態
 
     const [subCategoryName, setSubcategoryName] = useState<string>('');
-    const [subcategory, setSubcategory] = useState<Subcategory>();
     const [questionList, setQuestionList] = useState<Question[]>([]);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+    const [isOn, setIsOn] = useState(false); // ボタンの状態を管理
+
+    const handleClick = () => {
+        setIsOn((prev) => !prev); // 状態をトグルする
+    };
 
 
     const refreshQuestionList = async () => {
@@ -132,6 +121,12 @@ const SubcategoryPage: React.FC = () => {
 
     return (
         <div className={styles.subcategory_page}>
+            <button 
+                className={`${styles.toggleButton} ${isOn ? styles.on : styles.off}`} 
+                onClick={handleClick}
+            >
+                {isOn ? "ON" : "OFF"}
+            </button>
             <div className={styles.subcategory_box}>
             {isEditing ? (
                     <input
@@ -146,12 +141,6 @@ const SubcategoryPage: React.FC = () => {
                     <h1 onDoubleClick={handleDoubleClick}>{subCategoryName}</h1>
                 )}                <button className={styles.delete_btn} onClick={handleDelete}>Delete</button>
             </div>
-            {/* <Link 
-                to={{ pathname: "/createquestion" }}
-                state={ids}
-            >
-                Questionを作成する
-            </Link> */}
             <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Create Question</button>
             <Modal
                 isOpen={modalIsOpen}
@@ -167,12 +156,13 @@ const SubcategoryPage: React.FC = () => {
             <div className={styles.question_container}>
                 {questionList.map((question) => (
                     <div className={styles.question_box} key={question.id}>
-                        <h3 className={styles.problem_text} onClick={() => handleQuestionClick(question.id)}>{question.problem}</h3>
-                        {question.answer.map((answer, index) => (
+                        <h3 className={styles.problem_text} onClick={() => handleQuestionClick(question.id)}>
+                            {question.problem}
+                        </h3>
+                        {/* isOn が true の場合のみ answer を表示 */}
+                        {isOn && question.answer.map((answer, index) => (
                             <p className={styles.answer_text} key={index}>・{answer}</p>
                         ))}
-                        {/* <div>{question.memo}</div> */}
-                        {/* メモはsubcategoryPageでは表示させない。 */}
                     </div>
                 ))}
             </div>

@@ -8,7 +8,7 @@ from schemas import auth
 from database import get_db
 from fastapi import Query
 from config import PAGE_SIZE
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 import os
 from git import Repo
 from src import data_io
@@ -21,7 +21,7 @@ router = APIRouter(prefix="/categories", tags=["Categories"])
 
 # tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
 
-@router.get("", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
+@router.get("/home", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(
     db: DbDependency,
     skip: int = Query(0, ge=0),
@@ -51,11 +51,6 @@ async def find_all(
     ):
     return (category_cruds.find_all_categories_with_questions(db))[skip : skip + limit]
 
-@router.get("/", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
-async def find_by_name(
-    db: DbDependency, name: str = Query(min_length=2, max_length=20)
-):
-    return category_cruds.find_by_name(db, name)
 
 @router.get("/category_id/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
 async def find_by_id(

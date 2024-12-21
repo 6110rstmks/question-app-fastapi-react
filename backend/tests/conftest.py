@@ -13,7 +13,7 @@ from models import Base, Item
 from schemass import DecodedToken
 from main import app
 from database import get_db
-from cruds.auth import get_current_user
+from backend.cruds.auth_crud import get_current_user
 
 
 @pytest.fixture()

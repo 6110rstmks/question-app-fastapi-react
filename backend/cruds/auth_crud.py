@@ -18,7 +18,6 @@ SECRET_KEY = get_settings().secret_key
 
 oauth2_schema = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
-
 def create_user(db: Session, user_create: auth.UserCreate):
     salt = base64.b64encode(os.urandom(32))
     hashed_password = hashlib.pbkdf2_hmac(
@@ -42,7 +41,6 @@ def check_user_already_exists(db: Session, user_create: auth.UserCreate):
         return True
     return False
 
-
 def authenticate_user(db: Session, username: str, password: str):
     user = db.query(User).filter(User.username == username).first()
     if not user:
@@ -54,7 +52,6 @@ def authenticate_user(db: Session, username: str, password: str):
     if user.password != hashed_password:
         return None
     return user
-
 
 
 def create_access_token(username: str, user_id: int, expires_delta: timedelta):

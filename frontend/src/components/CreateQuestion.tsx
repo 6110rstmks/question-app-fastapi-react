@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, useEffect, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from "./CreateQuestion.module.css"
 
@@ -13,6 +13,23 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
     const [problem, setProblem] = useState<string>('');
     const [answers, setAnswers] = useState<string[]>(['']);
     const [memo, setMemo] = useState<string>('');
+
+    const blockBrowserBack = useCallback(() => {
+        window.history.go(1)
+    }, [])
+    
+    useEffect(() => {
+        // 直前の履歴に現在のページを追加
+        window.history.pushState(null, '', window.location.href)
+    
+        // 直前の履歴と現在のページのループ
+        window.addEventListener('popstate', blockBrowserBack)
+    
+        // クリーンアップは忘れない
+        return () => {
+            window.removeEventListener('popstate', blockBrowserBack)
+        }
+    }, [blockBrowserBack])
 
     const handleAnswerChange = (index: number, value: string) => {
         const newAnswers = [...answers];
@@ -34,45 +51,28 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
         if (!problem) {
             alert('問題文を入力してください');
             return;
+        } 
+
+        const response = await fetch('http://localhost:8000/questions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                                    problem: problem,
+                                    answer: answers,
+                                    memo: memo,
+                                    category_id: category_id,
+                                    subcategory_id: subcategory_id 
+                                }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to create question');
         }
 
-        // メモが空の場合はエラーを表示
-        if (!memo) {
-            alert('メモを入力してください');
-            return;
-        }
-
-        // メモが二文字以下の場合はエラーを表示
-        if (memo.length < 2) {
-            alert('メモは2文字以上で入力してください');
-            return;
-        }
-        
-
-        try {
-            const response = await fetch('http://localhost:8000/questions', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ 
-                                        problem: problem,
-                                        answer: answers,
-                                        memo: memo,
-                                        category_id: category_id,
-                                        subcategory_id: subcategory_id 
-                                    }),
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to create question');
-            }
-
-            await refreshQuestionList();
-
-            setModalIsOpen(false);
-        } catch (error) {
-        }
+        await refreshQuestionList();
+        setModalIsOpen(false);
     };
 
     return (

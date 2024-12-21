@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './components/Home'
 import Login from './components/login/Login'
 import Logout from './components/login/Logout'
@@ -21,7 +21,9 @@ const App: React.FC = () => {
       <Navbar isAuth={isAuth} />
       <Routes>
         {/* 最初の画面 */}
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Navigate to="/categories/home" replace />} /> */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/categories/home" element={<Home />} />
 
         {/* カテゴリ作成画面 */}
         <Route path="/createcategory" element={<CreateCategory isAuth={isAuth} />} />

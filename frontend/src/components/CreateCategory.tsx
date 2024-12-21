@@ -25,7 +25,6 @@ const CreateCategory: React.FC<CreateCategoryProps> = ({ isAuth }) => {
                 const data = await response.json();
                 console.log(data.detail);
                 setErrorMessage(data.detail)
-                
             } else {
                 navigate("/");
             }

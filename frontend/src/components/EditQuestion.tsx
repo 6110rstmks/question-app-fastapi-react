@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './EditQuestion.module.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 interface Question {
     id: number;
@@ -22,26 +22,22 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, re
     const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "");
     const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false);
 
-useEffect(() => {
-    const disableBackButton = () => {
-        window.history.pushState(null, '', window.location.href);
-    };
-
-    // 初回設定
-    disableBackButton();
-
-    const handlePopState = () => {
-        alert("このページでは戻るボタンは無効です。");
-        disableBackButton(); // 履歴を再設定
-    };
-
-    window.addEventListener('popstate', handlePopState);
-
-    return () => {
-        window.removeEventListener('popstate', handlePopState);
-    };
-}, []);
+    const blockBrowserBack = useCallback(() => {
+        window.history.go(1)
+    }, [])
     
+    useEffect(() => {
+        // 直前の履歴に現在のページを追加
+        window.history.pushState(null, '', window.location.href)
+    
+        // 直前の履歴と現在のページのループ
+        window.addEventListener('popstate', blockBrowserBack)
+    
+        // クリーンアップは忘れない
+        return () => {
+            window.removeEventListener('popstate', blockBrowserBack)
+        }
+    }, [blockBrowserBack])
 
     const handleProblemChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputProblemValue(event.target.value);
@@ -101,7 +97,7 @@ useEffect(() => {
         setIsCorrect(question?.is_correct ?? false);
     }, [question]);
 
-    return (
+    return (   
         <div className={styles.container}>
             <div className={styles.header}>
                 <h2 className={styles.title}>Edit Question</h2>
