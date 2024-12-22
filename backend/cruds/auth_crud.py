@@ -19,6 +19,7 @@ SECRET_KEY = get_settings().secret_key
 oauth2_schema = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
 def create_user(db: Session, user_create: auth.UserCreate):
+    print(2786879)
     salt = base64.b64encode(os.urandom(32))
     hashed_password = hashlib.pbkdf2_hmac(
         "sha256", user_create.password.encode(), salt, 1000
@@ -41,6 +42,8 @@ def check_user_already_exists(db: Session, user_create: auth.UserCreate):
         return True
     return False
 
+# 処理概要
+# フロントからきたパスワードをハッシュ化して、ユーザーを認証する
 def authenticate_user(db: Session, username: str, password: str):
     user = db.query(User).filter(User.username == username).first()
     if not user:

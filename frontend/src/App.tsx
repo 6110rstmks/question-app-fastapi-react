@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Home from './components/Home'
 import Login from './components/login/Login'
 import Logout from './components/login/Logout'
+import Signup from './components/login/Signup'
 import Navbar from './components/Navbar'
 import QuestionPage from './components/question/QuestionPage'
 import CreateCategory from './components/CreateCategory'
@@ -34,6 +35,7 @@ const App: React.FC = () => {
         {/* <Route path="/createquestion" element={<CreateQuestion category_id={}/>} /> */}
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth} />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/category/:category_id" element={<CategoryPage />} />
         <Route path="/subcategory/:subcategory_id" element={<SubcategoryPage />} />
         <Route path="/question/:question_id" element={<QuestionPage />} />
