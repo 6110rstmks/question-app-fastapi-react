@@ -17,12 +17,6 @@ const Signup: React.FC = () => {
     const [password, setPassword] = useState<string>('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        // const { name, value } = e.target;
-        // setForm({
-        // ...form,
-        // [name]: value
-        // });
-
         if (e.target.name === 'username') {
             setUsername(e.target.value);
         } else if (e.target.name === 'password') {
@@ -51,7 +45,8 @@ const Signup: React.FC = () => {
         }
 
         const data = await response.json();
-        setSuccess('Signup successful! Welcome ' + data.username);
+        setSuccess('Signup successful!');
+
     };
 
   return (

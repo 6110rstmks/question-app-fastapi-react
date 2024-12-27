@@ -3,10 +3,13 @@ from enum import Enum
 from typing import Optional
 from pydantic import BaseModel, Field, ConfigDict
 
-class UserCreate(BaseModel):
+class UserSignIn(BaseModel):
     username: str = Field(min_length=2, examples=["user1"])
     password: str = Field(min_length=8, examples=["test1234"])
 
+class UserCreate(BaseModel):
+    username: str = Field(min_length=2, examples=["user1"])
+    password: str = Field(min_length=8, examples=["test1234"])
 
 class UserResponse(BaseModel):
     id: int = Field(gt=0, examples=[1])

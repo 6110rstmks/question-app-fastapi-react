@@ -5,7 +5,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import auth_crud as auth_cruds
-from schemas.auth import UserCreate, UserResponse, Token
+from schemas.auth import UserCreate, UserResponse, Token, UserSignIn
 from database import get_db
 
 
@@ -18,7 +18,6 @@ FormDependency = Annotated[OAuth2PasswordRequestForm, Depends()]
     "/signup", response_model=UserResponse, status_code=status.HTTP_201_CREATED
 )
 async def create_user(db: DbDependency, user_create: UserCreate):
-    print(99999)
     if auth_cruds.check_user_already_exists(db, user_create):
         raise HTTPException(status_code=400, detail="User already exists")
     return auth_cruds.create_user(db, user_create)
@@ -34,8 +33,9 @@ async def read_users_me(current_user: UserResponse = Depends(auth_cruds.get_curr
 
 
 @router.post("/login", status_code=status.HTTP_200_OK, response_model=Token)
-async def login(db: DbDependency, form_data: FormDependency):
-    user = auth_cruds.authenticate_user(db, form_data.username, form_data.password)
+async def login(db: DbDependency, user_signin: UserSignIn):
+    print(user_signin)
+    user = auth_cruds.authenticate_user(db, user_signin.username, user_signin.password)
     if not user:
         raise HTTPException(status_code=401, detail="Incorrect username or password")
 
