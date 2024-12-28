@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 import styles from "./CategoryBox.module.css"
 import { Category } from "../../types/Category"
-import { Subcategory } from "../../types/Subcategory"
+import { Subcategory, SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
 
 interface CategoryBoxProps {
@@ -12,12 +12,22 @@ interface CategoryBoxProps {
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
     const [subcategoryName, setSubcategoryName] = useState('');
-    const { subcategories, questionCounts, fetchSubcategories, addSubcategory } = useCategoryBox(category.id);
+    // const { subcategories, questionCounts, fetchSubcategories, fetchQuestionCount, addSubcategory } = useCategoryBox(category.id);
+    const { subcategories, fetchSubcategories, fetchQuestionCount, addSubcategory } = useCategoryBox(category.id);
 
     const navigate = useNavigate();
-
     useEffect(() => {
+        console.log(subcategories)
+        // const fetchQuestionCount2 = async (subcategoryId: number) => {
+        //     const response = await fetch(`http://localhost:8000/questions/count?subcategory_id=${subcategoryId}`);
+        //     if (response.ok) {
+        //         const { count } = await response.json();
+        //         console.log(count)
+        //         setQuestionCounts((prev) => ({ ...prev, [subcategoryId]: count }));
+        //     }
+        // };
         fetchSubcategories();
+        // fetchQuestionCount2(category.id);
     }, [fetchSubcategories]);
 
     const handleClick = () => {
@@ -40,7 +50,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                 throw new Error('Failed to create subcategory');
             }
 
-            const data = await response.json() as Subcategory;
+            const data = await response.json() as SubcategoryWithQuestionCount;
             addSubcategory(data);
             setSubcategoryName("");
             setShowForm(false);
@@ -49,7 +59,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
         }
     }
 
-    const handleNavigateToSubcategory = (subcategoryId: number) => {
+    const handleNavigateToSubcategoryPage = (subcategoryId: number) => {
         navigate(`/subcategory/${subcategoryId}`, {
             state: {
                 category_id: category.id,
@@ -57,11 +67,10 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
             },
         });
     }
-
+    
     const handleNavigateToCategoryPage = () => {
         navigate(`/category/${category.id}`);
     }
-
 
     return (
         <div className={styles.category_box} key={category.id}>
@@ -88,13 +97,13 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                 )}
             </div>
             <div>
-                {subcategories.map((subcategory: Subcategory) => (
+                {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
                     <div
                         className={styles.subcategory_name}
                         key={subcategory.id}
-                        onClick={() => handleNavigateToSubcategory(subcategory.id)}
+                        onClick={() => handleNavigateToSubcategoryPage(subcategory.id)}
                     >
-                        ・{subcategory.name} ({questionCounts[subcategory.id] || 0})
+                        ・{subcategory.name} ({subcategory.question_count || 0})
                     </div>
                 ))}
             </div>

@@ -1,16 +1,16 @@
 import React, { useState, useCallback } from 'react';
-import { Subcategory } from "../../../types/Subcategory";
-
+import { Subcategory, SubcategoryWithQuestionCount } from "../../../types/Subcategory";
 
 export const useCategoryBox = (categoryId: number) => {
-    const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
+    const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([]);
     const [questionCounts, setQuestionCounts] = useState<{ [key: number]: number }>({});
 
     const fetchSubcategories = useCallback(async () => {
         try {
             const response = await fetch(`http://localhost:8000/subcategories/category_id/${categoryId}/?limit=6`);
             if (response.ok) {
-                const data: Subcategory[] = await response.json();
+                const data: SubcategoryWithQuestionCount[] = await response.json();
+                console.log(data)
                 setSubcategories(data);
             } else {
                 console.error("Failed to fetch subcategories");
@@ -28,12 +28,11 @@ export const useCategoryBox = (categoryId: number) => {
         } else {
             console.error('Failed to fetch question count for subcategory', subcategoryId);
         }
-
     };
 
-    const addSubcategory = (subcategory: Subcategory) => {
+    const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
         setSubcategories((prev) => [...prev, subcategory]);
     };
 
-    return { subcategories, questionCounts, fetchSubcategories, addSubcategory };
+    return { subcategories, questionCounts, fetchSubcategories, fetchQuestionCount, addSubcategory };
 };

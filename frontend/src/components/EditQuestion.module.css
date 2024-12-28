@@ -101,6 +101,10 @@
   border: 1px solid #e5e7eb;
 }
 
+.closeButton {
+  margin-left: 19px;
+}
+
 .secondaryButton:hover {
   background-color: #f9fafb;
 }
@@ -154,7 +158,8 @@
 
 .footer {
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
   padding-top: 1.5rem;
   border-top: 1px solid #e5e7eb;
 }

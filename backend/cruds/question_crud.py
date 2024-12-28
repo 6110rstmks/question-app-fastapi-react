@@ -117,3 +117,9 @@ def delete(db: Session, id: int):
     db.delete(question)
     db.commit()
     return question
+
+# あるサブカテゴリに紐づくQuestionの数を取得する
+def get_question_count_in_subcategory(db: Session, subcategory_id: int):
+    query = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
+    return db.execute(query).scalars().count()
+    

@@ -5,7 +5,7 @@ import Modal from 'react-modal'
 import CreateQuestion from '../CreateQuestion';
 import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
-import { Subcategory } from '../../types/Subcategory';
+import { Subcategory, SubcategoryWithQuestionCount } from '../../types/Subcategory';
 import { Question } from '../../types/Question';
 interface LocationState {
     category_id: number;
@@ -19,17 +19,20 @@ const SubcategoryPage: React.FC = () => {
     const location = useLocation()
     const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
     const { category_id, category_name } = location.state as LocationState;
+    
+    // サブカテゴリ名の編集モードの状態を管理
     const [isEditing, setIsEditing] = useState<boolean>(false); // 編集モードの状態
 
     const [subCategoryName, setSubcategoryName] = useState<string>('');
     const [questionList, setQuestionList] = useState<Question[]>([]);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
-    const [isOn, setIsOn] = useState(false); // ボタンの状態を管理
 
+    // 表示非表示ボタンの状態を管理
+    const [isOn, setIsOn] = useState(false); 
+    
     const handleClick = () => {
-        setIsOn((prev) => !prev); // 状態をトグルする
+        setIsOn((prev) => !prev)
     };
-
 
     const refreshQuestionList = async () => {
         const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
@@ -57,7 +60,7 @@ const SubcategoryPage: React.FC = () => {
 
     };
 
-    // ダブルクリックで編集モードに切り替える
+    // ダブルクリックでサブカテゴリ名の編集モードに切り替える
     const handleDoubleClick = () => {
         setIsEditing(true);
     };
@@ -97,7 +100,9 @@ const SubcategoryPage: React.FC = () => {
     const handleQuestionClick = (question_id: number) => {
         const subcategory_name = subCategoryName;
         navigate(`/question/${question_id}`, { 
-            state: { 
+            state: {
+                category_id: category_id,
+                subcategory_id: subcategory_id,
                 subcategoryName: subcategory_name, 
                 categoryName: category_name 
             } 
@@ -105,12 +110,12 @@ const SubcategoryPage: React.FC = () => {
         
     }
 
-
     useEffect(() => {
         const getSubcategory = async () => {
             const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
             if (response.ok) {
-                const data: Subcategory = await response.json();
+                console.log(response);
+                const data: SubcategoryWithQuestionCount = await response.json();
                 setSubcategoryName(data.name);
             }
         };
@@ -125,7 +130,7 @@ const SubcategoryPage: React.FC = () => {
                 className={`${styles.toggleButton} ${isOn ? styles.on : styles.off}`} 
                 onClick={handleClick}
             >
-                {isOn ? "ON" : "OFF"}
+                {isOn ? "答えを一括非表示" : "答えを一括表示"}
             </button>
             <div className={styles.subcategory_box}>
             {isEditing ? (

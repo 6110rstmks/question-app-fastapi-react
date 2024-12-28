@@ -3,7 +3,7 @@ from fastapi import APIRouter, Path, Query, HTTPException, Depends
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import auth_crud as auth_cruds
-from schemas.subcategory import SubcategoryResponse, SubcategoryUpdate, SubcategoryCreate
+from schemas.subcategory import SubcategoryResponse, SubcategoryUpdate, SubcategoryCreate, SubcategoryResponseWithQuestionCount
 from schemas.auth import DecodedToken
 from database import get_db
 from cruds import category_crud, subcategory_crud
@@ -32,7 +32,8 @@ async def find_by_id(
         raise HTTPException(status_code=404, detail="Subcategory not found")
     return found_subcategory
 
-@router.get("/category_id/{category_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
+# @router.get("/category_id/{category_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
+@router.get("/category_id/{category_id}", response_model=list[SubcategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
 async def find_subcategories_in_category(
     db: DbDependency, 
     category_id: int = Path(gt=0),

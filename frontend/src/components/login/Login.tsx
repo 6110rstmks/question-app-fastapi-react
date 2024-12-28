@@ -15,13 +15,14 @@ const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
 
 
     // 既にログインしている場合は、ホーム画面にリダイレクト
-    // useEffect(() => {
-    //     const token = localStorage.getItem('access_token');
-    //     if (token) {
-    //         navigate('/categories/home');
-    //     }
-    // }, [navigate]);
+    useEffect(() => {
+        const token = localStorage.getItem('access_token');
+        if (token) {
+            navigate('/categories/home');
+        }
+    }, [navigate]);
 
+    // googleAuthでログイン
     const handleLoginInWithGoogle = (): void => {
         signInWithPopup(auth, provider).then((result) => {
             localStorage.setItem("isAuth", "true");
@@ -30,6 +31,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
         });
     };
 
+    // ユーザネームとパスワードでログイン
     const handleLogin = async (e: FormEvent): Promise<void> => {
         e.preventDefault();
         setError('');

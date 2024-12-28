@@ -6,7 +6,6 @@ from cruds import category_crud, question_crud
 from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate
 from schemas.category import CategoryResponse
 from schemas.subcategory import SubcategoryResponse
-from schemas.problem import ProblemCreate
 # from schemaa.auth import DecodedToken
 from database import get_db
 from cruds import subcategory_crud as subcategory_cruds
@@ -57,8 +56,18 @@ async def update_correct_flg(
 
 # Questionを全て取得するエンドポイント
 @router.get("", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
-async def find_all(db: DbDependency):
+async def find_all(
+    db: DbDependency
+    ):
     return question_crud.find_all(db)
+
+@router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count(
+    db: DbDependency,
+    subcategory_id: int = Query(gt=0)
+    ):
+    return question_crud.get_question_count_in_subcategory(db, subcategory_id)
+
 
 # Question IDからQuestionを取得するエンドポイント
 @router.get("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)

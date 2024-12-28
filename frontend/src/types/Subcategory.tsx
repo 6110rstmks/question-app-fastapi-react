@@ -3,3 +3,7 @@ export interface Subcategory {
     name: string;
     category_id: number;
 }
+
+export interface SubcategoryWithQuestionCount extends Subcategory {
+    question_count: number;
+}
