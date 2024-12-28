@@ -18,5 +18,8 @@ Atomic designを参考にすべきか。
 
 債務分離
 
-## 
+## 関数名の統一
+ページ遷移を行う関数
+例）
+handleNavigateToCategoryPage(CategoryBox.tsx)
 
