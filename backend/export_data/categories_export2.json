@@ -54,7 +54,7 @@
                                 "ブルーグリーンデプロイメントはアプリケーションをデプロイする際のデプロイ方式の１つでAWS等のクラウドサービスでアプリケーションをデプロイする場合、クラウドのメリットの１つとなるサービス作成・廃棄することが簡単にできることを活かして、もう１セットのサービスを用意して、テストしてから切り替えることで安全に、ダウンタイムもほぼ無いリリースができる技術となります。"
                             ],
                             "memo": "aaaaaaa",
-                            "is_correct": true
+                            "is_correct": false
                         }
                     ]
                 },
@@ -166,7 +166,24 @@
                         {
                             "problem": "どうしてELBを使用するか。説明してください。",
                             "answer": [
-                                "例えば、Webサーバーとして機能するEC2インスタンスが複数台あり、それらへアクセスを分散させて安定稼働を図りたい場合等に用いられる。"
+                                "例えば、Webサーバーとして機能するEC2インスタンスが複数台あり、それらへアクセスを分散させて安定稼働を図りたい場合等に用いられる。",
+                                "同じ構成のec2インスタンスを別々のAZに配置することがえき、負荷分散が可能です。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "NLBはOSI参照モデルの第何層で動作するか？",
+                            "answer": [
+                                "4層"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ELBのconnection drainingについて説明してください",
+                            "answer": [
+                                "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を停止する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。\n"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -196,6 +213,56 @@
                             "problem": "ルートテーブルの「ターゲット」には何を指定するか？二つ答えよ",
                             "answer": [
                                 "local, インターネットゲートウェイやNATゲートウェイ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "S3",
+                    "questions": [
+                        {
+                            "problem": "アクセス頻度が決まっていないデータをS3に保存する場合、どのストレージクラスにデータを保存すれば良いか",
+                            "answer": [
+                                "s3 intelligent-tiering"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "standard-IAやone-zone IAのIAは何という意味か。",
+                            "answer": [
+                                "infrequency access.  低頻度アクセス用のストレージ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "S3 glacierの種類を3つ述べてください",
+                            "answer": [
+                                "glacier deep archive, glacier instant retrieval, glacier flexible retriebal"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Route53",
+                    "questions": [
+                        {
+                            "problem": "Route53は何をするサービスか？",
+                            "answer": [
+                                "独自のDNSサーバをAWS上に設置するサービス"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "AWSにおいて、CNAMEレコードではなくて、ALIASレコードを使用すべき理由。",
+                            "answer": [
+                                "https://www.youtube.com/watch?v=Ly_7Z5BPcOc\n\n上記の動画の3分から視聴してください。"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -341,6 +408,14 @@
                             "problem": "CNNが価値を発揮している分野は何か？",
                             "answer": [
                                 "一般物体認識"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "CNNは日本語でなんと呼ばれている？",
+                            "answer": [
+                                "畳み込みニューラルネットワーク"
                             ],
                             "memo": "",
                             "is_correct": false
