@@ -28,3 +28,13 @@ handleNavigateToCategoryPage(CategoryBox.tsx)
 例）
 handleAddCategory, handleAddSubcategory
 
+- Category,Subcategory,Questionを削除する関数<br>
+例）
+handleDeleteCategory
+
+- idからモデル全体（Category,Subcategory,Question）を取得する関数<br>
+fetchCategory, fetchSubcategory
+
+
+
+

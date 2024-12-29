@@ -108,7 +108,6 @@ const SubcategoryPage: React.FC = () => {
                 categoryName: category_name 
             } 
         });
-        
     }
 
     useEffect(() => {

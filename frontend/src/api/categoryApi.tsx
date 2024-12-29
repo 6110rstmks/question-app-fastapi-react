@@ -16,3 +16,11 @@ export const fetchPageCount = async () => {
     }
     throw new Error("Failed to fetch page count");
 };
+
+export const fetchCategory = async (category_id: number) => {
+    const url = `http://localhost:8000/categories/category_id/${category_id}`
+    const response = await fetch(url)
+    if (response.ok) {
+        return await response.json();
+    }
+}
