@@ -8,6 +8,8 @@ import styles_common from "./common.module.css";
 import { SubcategoryWithQuestionCount } from '../../types/Subcategory';
 import { Question } from '../../types/Question';
 import { fetchQuestionsBySubcategoryId } from '../../api/QuestionAPI';
+import { updateSubcategoryName } from '../../api/SubcategoryAPI';
+
 interface LocationState {
     category_id: number;
     category_name: string;
@@ -24,7 +26,7 @@ const SubcategoryPage: React.FC = () => {
     // サブカテゴリ名の編集モードの状態を管理
     const [isEditing, setIsEditing] = useState<boolean>(false); // 編集モードの状態
 
-    const [subCategoryName, setSubcategoryName] = useState<string>('');
+    const [subcategoryName, setSubcategoryName] = useState<string>('');
     const [questions, setQuestions] = useState<Question[]>([]);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
@@ -33,24 +35,6 @@ const SubcategoryPage: React.FC = () => {
     
     const handleClick = () => {
         setIsOn((prev) => !prev)
-    };
-
-    // サブカテゴリ名の更新を処理する関数
-    const updateSubcategoryName = async () => {
-        const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ 
-                                    name: subCategoryName 
-                                }),
-        });
-
-        if (!response.ok) {
-            throw new Error('Failed to update subcategory');
-        }
-
     };
 
     // ダブルクリックでサブカテゴリ名の編集モードに切り替える
@@ -67,7 +51,7 @@ const SubcategoryPage: React.FC = () => {
     const handleKeyPress = async (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
             setIsEditing(false);
-            await updateSubcategoryName();
+            await updateSubcategoryName(subcategoryId, subcategoryName);
         }
     };
 
@@ -91,12 +75,12 @@ const SubcategoryPage: React.FC = () => {
     }
 
     const handleNavigateToQuestionPage = (question_id: number) => {
-        const subcategory_name = subCategoryName;
+        // const subcategory_name = subcategoryName;
         navigate(`/question/${question_id}`, { 
             state: {
                 category_id: category_id,
                 subcategory_id: subcategory_id,
-                subcategoryName: subcategory_name, 
+                subcategoryName: subcategoryName, 
                 categoryName: category_name 
             } 
         });
@@ -108,7 +92,7 @@ const SubcategoryPage: React.FC = () => {
             setQuestions(data);
         })();
 
-        const getSubcategory = async () => {
+        const fetchSubcategory = async () => {
             const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
             if (response.ok) {
                 const data: SubcategoryWithQuestionCount = await response.json();
@@ -116,7 +100,7 @@ const SubcategoryPage: React.FC = () => {
             }
         };
 
-        getSubcategory();
+        fetchSubcategory();
     }, [subcategory_id]);
 
     return (
@@ -131,14 +115,14 @@ const SubcategoryPage: React.FC = () => {
             {isEditing ? (
                     <input
                         type="text"
-                        value={subCategoryName}
+                        value={subcategoryName}
                         onChange={handleChange}
                         onKeyPress={handleKeyPress}
                         onBlur={() => setIsEditing(false)} // フォーカスを外すと編集モードを終了
                         autoFocus
                     />
                 ) : (
-                    <h1 onDoubleClick={handleDoubleClick}>{subCategoryName}</h1>
+                    <h1 onDoubleClick={handleDoubleClick}>{subcategoryName}</h1>
                 )}                <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>
             <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Create Question</button>

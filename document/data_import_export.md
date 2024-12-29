@@ -16,20 +16,18 @@ data_io.py
 
 1. questionsのjsonファイルに新たにquestionが作成されるたびにjsonファイルにも新規のquestionを追記。
 
-categories.json
-subcategories.json
-questions.json
+categories.csv
+subcategories.csv
+questions.csv
 category_question.json
 subcategory_question.json
 
 新規でquestionを作成する毎に、githubへquestions.json, category_question.json, subcategory_question.jsonを作成する。
 
 
-2. category,subcategory,questionを入れ後にした形でexportする。
-
+2. category,subcategory,questionを入れ子にした形でexportする。
 
 zipファイルにしてexportする。
-
 
 ### インポート・エクスポートする際のデータの形<hr>
 タイプ2でエクスポートしたファイルの中身例

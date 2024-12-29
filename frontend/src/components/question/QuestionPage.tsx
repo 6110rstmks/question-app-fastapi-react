@@ -3,7 +3,7 @@ import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
 import Modal from 'react-modal'
-import EditQuestion from '../EditQuestion';
+import EditQuestion from './QuestionEdit';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
 import { fetchQuestion, updateIsCorrect, deleteQuestion } from '../../api/QuestionAPI'
@@ -38,12 +38,11 @@ const QuestionPage: React.FC = () => {
       <>
         <div>
             <Link to={`/category/${category_id}`}>{categoryName}</Link>
+            <span> ＞ </span>
             <Link
                 to={`/subcategory/${subcategory_id}`}
                 state={{ category_id }}
-            >         
-                {subcategoryName}
-            </Link>
+            >{subcategoryName}</Link>
         </div>
         <div className={styles.question_box}>
             <div className={styles.question_header}>
