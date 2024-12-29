@@ -15,14 +15,6 @@
                             ],
                             "memo": "ECSの基本について",
                             "is_correct": false
-                        },
-                        {
-                            "problem": "oi",
-                            "answer": [
-                                "oi"
-                            ],
-                            "memo": "",
-                            "is_correct": false
                         }
                     ]
                 },
@@ -35,6 +27,14 @@
                                 ""
                             ],
                             "memo": "複数のポリシーをひとつにまとめてroleとして扱うことで、複数のポリシーをひとつのエンティティに紐づけることができるため、管理がしやすくなる",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "おいうお",
+                            "answer": [
+                                "いう"
+                            ],
+                            "memo": "いおう",
                             "is_correct": false
                         }
                     ]
@@ -340,6 +340,14 @@
                 {
                     "name": "physiology",
                     "questions": []
+                },
+                {
+                    "name": "kkkkk",
+                    "questions": []
+                },
+                {
+                    "name": "jjjjjjjjj",
+                    "questions": []
                 }
             ]
         },
@@ -463,6 +471,14 @@
         },
         {
             "name": "typescript",
+            "subcategories": []
+        },
+        {
+            "name": "database",
+            "subcategories": []
+        },
+        {
+            "name": "css",
             "subcategories": []
         }
     ]
