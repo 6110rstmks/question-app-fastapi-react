@@ -7,7 +7,7 @@ import { fetchAllCategoriesWithQuestions } from '../../api/CategoryAPI';
 
 // 問題を出題して、
 const SetProblem: React.FC = () => {
-    const [categoryList, setCategoryList] = useState<Category[]>([]);
+    const [categories, setCategories] = useState<Category[]>([]);
     const [selectedType, setSelectedType] = useState<string>('random')
     const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(false);
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([]);
@@ -19,7 +19,6 @@ const SetProblem: React.FC = () => {
     }
 
     const handleCheckboxChange = (categoryId: number) => {
-        console.log(selectedCategoryIds)
         setSelectedCategoryIds((prevSelected) => {
             // すでに選択されている場合は取り除き、選択されていない場合は追加する
             if (prevSelected.includes(categoryId)) {
@@ -74,7 +73,7 @@ const SetProblem: React.FC = () => {
     useEffect(() => {
         (async () => {
             const response = await fetchAllCategoriesWithQuestions();
-            setCategoryList(response);
+            setCategories(response);
         })()
     }, [])
     return (
@@ -120,7 +119,7 @@ const SetProblem: React.FC = () => {
             {selectedType === 'category' && (
             <div className='bbb'>
                 <p>以下からカテゴリを選択する。</p>
-                {categoryList.map((category) => (
+                {categories.map((category) => (
                     <div key={category.id}>
                         <input
                             type="checkbox"

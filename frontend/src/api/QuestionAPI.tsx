@@ -24,11 +24,8 @@ export const getSubcategoryByQuestionId = async (question_id: number) => {
 
 export const fetchQuestion = async (question_id: number) => {
 // 数値型から文字列型に変換
-    const questionId = question_id.toString();
-    const url = `http://localhost:8000/questions/${questionId}`;
-    const url2 = `http://localhost:8000/questions/${question_id}`;
+    const url = `http://localhost:8000/questions/${question_id}`;
     const response = await fetch(url);
-    const response2 = await fetch(url2);
     if (response.ok) {
         return await response.json();
     }
@@ -58,5 +55,12 @@ export const deleteQuestion = async (question_id: number): Promise<void> => {
     });
     if (!response.ok) {
         throw new Error('Failed to delete question');
+    }
+};
+
+export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {
+    const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
+    if (response.ok) {
+        return await response.json();
     }
 };

@@ -1,14 +1,15 @@
 import React, { useState, ChangeEvent, useEffect, useCallback } from 'react';
 import styles from "./QuestionCreate.module.css"
-
+import { fetchQuestionsBySubcategoryId } from '../../api/QuestionAPI'
+import { Question } from '../../types/Question'
 interface QuestionCreateProps {
     category_id: number;
     subcategory_id: number;
     setModalIsOpen: (isOpen: boolean) => void;
-    refreshQuestionList: () => void;
+    setQuestions: (questions: Question[]) => void;
 }
 
-const QuestionCreate: React.FC<QuestionCreateProps> = ({category_id, subcategory_id, setModalIsOpen, refreshQuestionList}) => {
+const QuestionCreate: React.FC<QuestionCreateProps> = ({category_id, subcategory_id, setModalIsOpen, setQuestions}) => {
     const [problem, setProblem] = useState<string>('');
     const [answers, setAnswers] = useState<string[]>(['']);
     const [memo, setMemo] = useState<string>('');
@@ -69,8 +70,8 @@ const QuestionCreate: React.FC<QuestionCreateProps> = ({category_id, subcategory
         if (!response.ok) {
             throw new Error('Failed to create question');
         }
-
-        await refreshQuestionList();
+        const data = await fetchQuestionsBySubcategoryId(subcategory_id)
+        setQuestions(data);
         setModalIsOpen(false);
     };
 
@@ -139,7 +140,7 @@ const QuestionCreate: React.FC<QuestionCreateProps> = ({category_id, subcategory
                         </button>
                     </div>   
                     <div>                        
-                        <button onClick={() => setModalIsOpen(false)}>閉じる</button>
+                        <button onClick={() => setModalIsOpen(false)}>Close</button>
                     </div> 
                 </div>        
             </div>

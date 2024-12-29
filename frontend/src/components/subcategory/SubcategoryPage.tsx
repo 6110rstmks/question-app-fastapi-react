@@ -7,6 +7,7 @@ import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
 import { SubcategoryWithQuestionCount } from '../../types/Subcategory';
 import { Question } from '../../types/Question';
+import { fetchQuestionsBySubcategoryId } from '../../api/QuestionAPI';
 interface LocationState {
     category_id: number;
     category_name: string;
@@ -24,7 +25,7 @@ const SubcategoryPage: React.FC = () => {
     const [isEditing, setIsEditing] = useState<boolean>(false); // 編集モードの状態
 
     const [subCategoryName, setSubcategoryName] = useState<string>('');
-    const [questionList, setQuestionList] = useState<Question[]>([]);
+    const [questions, setQuestions] = useState<Question[]>([]);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
     // 表示非表示ボタンの状態を管理
@@ -32,15 +33,6 @@ const SubcategoryPage: React.FC = () => {
     
     const handleClick = () => {
         setIsOn((prev) => !prev)
-    };
-
-    // Questionが追加、更新された際も合わせてQuestionListを更新する関数
-    const refreshQuestionList = async () => {
-        const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
-        if (response.ok) {
-            const data: Question[] = await response.json();
-            setQuestionList(data);
-        }
     };
 
     // サブカテゴリ名の更新を処理する関数
@@ -111,6 +103,11 @@ const SubcategoryPage: React.FC = () => {
     }
 
     useEffect(() => {
+        (async () => {
+            const data = await fetchQuestionsBySubcategoryId(subcategoryId);
+            setQuestions(data);
+        })();
+
         const getSubcategory = async () => {
             const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
             if (response.ok) {
@@ -120,7 +117,6 @@ const SubcategoryPage: React.FC = () => {
         };
 
         getSubcategory();
-        refreshQuestionList();
     }, [subcategory_id]);
 
     return (
@@ -154,11 +150,11 @@ const SubcategoryPage: React.FC = () => {
                     category_id={category_id} 
                     subcategory_id={subcategoryId} 
                     setModalIsOpen={setModalIsOpen}
-                    refreshQuestionList={refreshQuestionList}  // 質問リスト更新関数を渡す
+                    setQuestions={setQuestions}
                 />
             </Modal>
             <div className={styles.question_container}>
-                {questionList.map((question) => (
+                {questions.map((question) => (
                     <div className={styles.question_box} key={question.id}>
                         <h3 className={styles.problem_text} onClick={() => handleNavigateToQuestionPage(question.id)}>
                             {question.problem}

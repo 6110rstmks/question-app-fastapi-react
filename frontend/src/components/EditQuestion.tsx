@@ -3,7 +3,6 @@ import styles from './EditQuestion.module.css'
 import { useState, useEffect, useCallback } from 'react'
 import { Question } from '../types/Question'
 import { fetchQuestion } from '../api/QuestionAPI'
-import { useQuestionPage} from './question/hooks/useQuestionPage'
 
 interface EditQuestionProps {
     setModalIsOpen: (isOpen: boolean) => void;
