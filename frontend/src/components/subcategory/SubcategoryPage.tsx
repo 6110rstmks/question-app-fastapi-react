@@ -5,7 +5,7 @@ import Modal from 'react-modal'
 import CreateQuestion from '../CreateQuestion';
 import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
-import { Subcategory, SubcategoryWithQuestionCount } from '../../types/Subcategory';
+import { SubcategoryWithQuestionCount } from '../../types/Subcategory';
 import { Question } from '../../types/Question';
 interface LocationState {
     category_id: number;
@@ -34,6 +34,7 @@ const SubcategoryPage: React.FC = () => {
         setIsOn((prev) => !prev)
     };
 
+    // Questionが追加、更新された際も合わせてQuestionListを更新する関数
     const refreshQuestionList = async () => {
         const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
         if (response.ok) {
@@ -80,7 +81,7 @@ const SubcategoryPage: React.FC = () => {
 
     // 削除ボタンを押すと、そのサブカテゴリーを削除する。
     // その際、「削除」と入力してクリックすることで削除が実行される。
-    const handleDelete = async () => {
+    const handleDeleteSubcategory = async () => {
 
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
 
@@ -97,7 +98,7 @@ const SubcategoryPage: React.FC = () => {
         navigate('/');
     }
 
-    const handleQuestionClick = (question_id: number) => {
+    const handleNavigateToQuestionPage = (question_id: number) => {
         const subcategory_name = subCategoryName;
         navigate(`/question/${question_id}`, { 
             state: {
@@ -144,7 +145,7 @@ const SubcategoryPage: React.FC = () => {
                     />
                 ) : (
                     <h1 onDoubleClick={handleDoubleClick}>{subCategoryName}</h1>
-                )}                <button className={styles.delete_btn} onClick={handleDelete}>Delete</button>
+                )}                <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>
             <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Create Question</button>
             <Modal
@@ -161,7 +162,7 @@ const SubcategoryPage: React.FC = () => {
             <div className={styles.question_container}>
                 {questionList.map((question) => (
                     <div className={styles.question_box} key={question.id}>
-                        <h3 className={styles.problem_text} onClick={() => handleQuestionClick(question.id)}>
+                        <h3 className={styles.problem_text} onClick={() => handleNavigateToQuestionPage(question.id)}>
                             {question.problem}
                         </h3>
                         {/* isOn が true の場合のみ answer を表示 */}

@@ -10,7 +10,6 @@ const Home: React.FC = () => {
     const [page, setPage] = useState<number>(1);
     const [limit] = useState<number>(6);
     const [searchCategoryWord, setSearchCategoryWord] = useState<string>("");
-
     const { categoryList, pageCount } = useCategories(page, limit, searchCategoryWord);
 
     return (

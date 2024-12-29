@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 import styles from "./CategoryBox.module.css"
 import { Category } from "../../types/Category"
-import { Subcategory, SubcategoryWithQuestionCount } from "../../types/Subcategory"
+import { SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
 
 interface CategoryBoxProps {
@@ -12,29 +12,14 @@ interface CategoryBoxProps {
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
     const [subcategoryName, setSubcategoryName] = useState('');
-    // const { subcategories, questionCounts, fetchSubcategories, fetchQuestionCount, addSubcategory } = useCategoryBox(category.id);
-    const { subcategories, fetchSubcategories, fetchQuestionCount, addSubcategory } = useCategoryBox(category.id);
-
+    const { subcategories, addSubcategory } = useCategoryBox(category.id);
     const navigate = useNavigate();
-    useEffect(() => {
-        console.log(subcategories)
-        // const fetchQuestionCount2 = async (subcategoryId: number) => {
-        //     const response = await fetch(`http://localhost:8000/questions/count?subcategory_id=${subcategoryId}`);
-        //     if (response.ok) {
-        //         const { count } = await response.json();
-        //         console.log(count)
-        //         setQuestionCounts((prev) => ({ ...prev, [subcategoryId]: count }));
-        //     }
-        // };
-        fetchSubcategories();
-        // fetchQuestionCount2(category.id);
-    }, [fetchSubcategories]);
 
     const handleClick = () => {
         setShowForm(!showForm);
     }
 
-    const handleCreateSubcategory = async () => {
+    const handleAddSubcategory = async () => {
         if (!subcategoryName.trim()) return;
 
         try {
@@ -92,7 +77,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                             autoFocus
                             />
                         </label>
-                        <button onClick={handleCreateSubcategory}>Submit</button>
+                        <button onClick={handleAddSubcategory}>Submit</button>
                     </>
                 )}
             </div>
@@ -112,7 +97,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
             {subcategories.length >= 6 && (
                 <button 
                 onClick={handleNavigateToCategoryPage} 
-                className={styles.more_btn}>もっとみる</button>
+                className={styles.more_btn}>See More</button>
             )}
         </div>
     );

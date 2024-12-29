@@ -17,7 +17,6 @@ export interface Question {
 }
 
 const QuestionPage: React.FC = () => {
-  // const location = useLocation() as LocationState;
     const location = useLocation()
     const { category_id, subcategory_id, subcategoryName, categoryName } = location.state || {};
     const navigate = useNavigate()
@@ -27,10 +26,8 @@ const QuestionPage: React.FC = () => {
     const [changeModalIsOpen, setChangeModalIsOpen] = useState<boolean>(false);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
-    const handleDelete = async () => {
-
+    const handleDeleteQuestion = async () => {
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
-        
         if (confirmation !== '削除') {
             return;
         }
@@ -121,7 +118,7 @@ const QuestionPage: React.FC = () => {
           </div>
           </div>
           <div className={styles.question_actions}>
-            <button onClick={handleDelete} className={styles.delete}>
+            <button onClick={handleDeleteQuestion} className={styles.delete}>
                 削除
             </button>
             <button onClick={() => setEditModalIsOpen(true)}>編集</button>

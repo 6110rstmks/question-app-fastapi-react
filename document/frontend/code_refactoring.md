@@ -19,7 +19,12 @@ Atomic designを参考にすべきか。
 債務分離
 
 ## 関数名の統一
-ページ遷移を行う関数
+
+- ページ遷移を行う関数<br>
 例）
 handleNavigateToCategoryPage(CategoryBox.tsx)
+
+- Category,Subcategory,Questionを追加する関数<br>
+例）
+handleAddCategory, handleAddSubcategory
 
