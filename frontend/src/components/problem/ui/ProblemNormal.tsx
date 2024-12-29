@@ -6,13 +6,15 @@ import { getCategoryByQuestionId, getSubcategoryByQuestionId } from "../../../ap
 
 interface Props {
     problem: Question;
+    currentProblemIndex: number;
+    problemLength: number;
     showAnswer: boolean;
     onShowAnswer: () => void;
     onSolved: () => void;
     onUnsolved: () => void;
 }
 
-const ProblemNormal: React.FC<Props> = ({ problem, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
+const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
     const [category, setCategory] = useState<Category | null>(null);
     const [subcategory, setSubcategory] = useState<Subcategory | null>(null);
 
@@ -21,18 +23,27 @@ const ProblemNormal: React.FC<Props> = ({ problem, showAnswer, onShowAnswer, onS
             setCategory(data);
         })
         getSubcategoryByQuestionId(problem.id).then((data) => {
-            console.log(`problem.id: ${problem.id}`);
-            console.log(data);
             setSubcategory(data);
         })
     }, [problem])
 
     return (
         <div>
-            <div>{category?.name}　＞　{subcategory?.name}</div>
+            <div>{category?.name}＞{subcategory?.name}</div>
+            <div>{currentProblemIndex + 1} / {problemLength}</div>
             <h1>{problem.problem}</h1>
             <button onClick={onShowAnswer}>答えを表示する</button>
-            {showAnswer && <p>{problem.answer}</p>}
+            {showAnswer && (
+                <div>
+                    {problem.answer.length > 0 ? (
+                    problem.answer.map((ans, index) => (
+                        <p key={index}>{ans}</p>
+                    ))
+                    ) : (
+                    <p>解答はまだ作成されていません</p>
+                    )}
+                </div>
+            )}
             <div>
                 <button onClick={onSolved}>解けた</button>
                 <button onClick={onUnsolved}>解けなかった</button>

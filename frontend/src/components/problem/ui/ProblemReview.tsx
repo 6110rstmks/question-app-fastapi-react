@@ -28,11 +28,24 @@ const ReviewProblem: React.FC<Props> = ({ problem, showAnswer, onShowAnswer, onS
     }, [problem])
     return (
         <div>
+            <div>{category?.name}＞{subcategory?.name}</div>
             <h1>再出題: {problem.problem}</h1>
             <button onClick={onShowAnswer}>答えを表示する</button>
-            {showAnswer && <p>{problem.answer}</p>}
-            <button onClick={onSolved}>解けた</button>
-            <button onClick={onUnsolved}>解けなかった</button>
+            {showAnswer && (
+                <div>
+                    {problem.answer.length > 0 ? (
+                    problem.answer.map((ans, index) => (
+                        <p key={index}>{ans}</p>
+                    ))
+                    ) : (
+                    <p>解答はまだ作成されていません</p>
+                    )}
+                </div>
+            )}
+            <div>
+                <button onClick={onSolved}>解けた</button>
+                <button onClick={onUnsolved}>解けなかった</button>
+            </div>
         </div>
     );
 };

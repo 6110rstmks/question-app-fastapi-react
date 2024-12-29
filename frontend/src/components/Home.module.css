@@ -2,55 +2,11 @@
     background-color: #81daca;
 }
 
-
 .container {
 
     margin-left: auto;
     margin-right: auto;
     width: 95%;
-}
-
-/* .category_container {
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* .pagination {
-    display: block;
-    width: 200px;
-    margin: 0 auto;
-    margin-top: 90px;
-} */
-
-.search_section {
-    display: flex;
-}
-
-.search_container {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-
-.search_box {
-    padding: 12px 20px;
-    width: 300px;
-    border: 2px solid #4CAF50;
-    border-radius: 25px;
-    font-size: 16px;
-    outline: none;
-    transition: all 0.3s ease;
-
-}
-
-.search_box:focus {
-    border-color: #45a049;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
-}
-
-.search_box::placeholder {
-    color: #999;
 }
 
 .pagination_btn {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useCategories } from "../hooks/useCategories";
 import CategoryList from "./category/CategoryList";
-import SearchCategory from "./SearchCategory";
+import SearchCategory from "./category/CategorySearch";
 import Pagination from "./Pagination";
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";

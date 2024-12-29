@@ -7,15 +7,21 @@ const useProblemPage = (problemData: Question[]) => {
     const [showAnswer, setShowAnswer] = useState(false);
     const [unsolvedProblems, setUnsolvedProblems] = useState<Question[]>([]);
     const [currentReviewProblemIndex, setCurrentReviewProblemIndex] = useState(0);
+    console.log(problemData);
+    // console.log(problemData[currentProblemIndex].id);
+    console.log(currentProblemIndex);
 
     // 「解けた」ボタンを押すと次の問題に進む。その際、問題のis_correctをtrueにするリクエストを送信。
-    const handleAnswerSolved = (question_id: number) => {
+    // const handleAnswerSolved = (question_id: number) => {
+    const handleAnswerSolved = () => {
+        console.log(9888)
         setCurrentProblemIndex((prev) => prev + 1);
         setShowAnswer(false);
-        submitIsCorrect(question_id);
+        // submitIsCorrect(question_id);
     };
 
     const handleAnswerUnsolved = () => {
+        console.log(6668)
         setUnsolvedProblems((prev) => [...prev, problemData[currentProblemIndex]]);
         setCurrentProblemIndex((prev) => prev + 1);
         setShowAnswer(false);

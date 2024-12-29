@@ -1,14 +1,14 @@
 import React from 'react'
-import styles from "./Home.module.css"
+import styles from './CategorySearch.module.css'
 
-interface SearchCategoryProps {
+interface CategorySearchProps {
     searchWord: string;
     setSearchWord: (searchWord: string) => void;
     page: number;
     setPage: (page: number) => void;
 }
 
-const SearchCategory: React.FC<SearchCategoryProps> = ( { searchWord, setSearchWord, setPage }) => {
+const CategorySearch: React.FC<CategorySearchProps> = ( { searchWord, setSearchWord, setPage }) => {
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchWord(e.target.value);
         setPage(1); // 新しい検索時にページをリセット
@@ -31,4 +31,4 @@ const SearchCategory: React.FC<SearchCategoryProps> = ( { searchWord, setSearchW
   )
 }
 
-export default SearchCategory
+export default CategorySearch
