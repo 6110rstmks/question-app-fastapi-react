@@ -1,20 +1,20 @@
 import React from 'react'
-import styles from './EditQuestion.module.css'
+import styles from './QuestionEdit.module.css'
 import { useState, useEffect, useCallback } from 'react'
-import { Question } from '../types/Question'
-import { fetchQuestion } from '../api/QuestionAPI'
+import { Question } from '../../types/Question'
+import { fetchQuestion } from '../../api/QuestionAPI'
 
-interface EditQuestionProps {
+interface QuestionEditProps {
     setModalIsOpen: (isOpen: boolean) => void;
     question?: Question;
     setQuestion: (question: Question) => void;
 }
 
-const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, setQuestion}) => {
-    const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "");
-    const [inputAnswerValue, setInputAnswerValue] = useState<string[]>(question?.answer || ['']);
-    const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "");
-    const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false);
+const QuestionEdit: React.FC<QuestionEditProps> = ({setModalIsOpen, question, setQuestion}) => {
+    const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "")
+    const [inputAnswerValue, setInputAnswerValue] = useState<string[]>(question?.answer || [''])
+    const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "")
+    const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false)
 
     const blockBrowserBack = useCallback(() => {
         window.history.go(1)
@@ -189,4 +189,4 @@ const EditQuestion: React.FC<EditQuestionProps> = ({setModalIsOpen, question, se
     )
 }
 
-export default EditQuestion
+export default QuestionEdit

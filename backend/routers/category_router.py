@@ -67,7 +67,7 @@ async def create(db: DbDependency, category_create: CategoryCreate):
 async def get_exported_json(db: DbDependency):
     
     EXPORT_DIR = "export_data" 
-    FILE_NAME = "categories_export2.json"
+    FILE_NAME = "categories_export3.json"
 
     # ディレクトリが存在しない場合は作成
     os.makedirs(EXPORT_DIR, exist_ok=True)
@@ -81,7 +81,7 @@ async def get_exported_json(db: DbDependency):
         return {"error": "File not found"}
     
     # Return the file as a response
-    return FileResponse(FILE_PATH, media_type="application/json", filename="categories_export.json")
+    return FileResponse(FILE_PATH, media_type="application/json", filename="data_export.json")
 
 
 @router.post("/import", status_code=status.HTTP_201_CREATED)
@@ -95,12 +95,22 @@ def git_push_json_file():
     EXPORT_DIR = os.path.abspath("export_data")
 
     REPO_DIR = os.path.abspath(os.path.join(os.path.abspath(""), ".."))
-    INDEX_ADD_FILE_PATH = os.path.join(EXPORT_DIR, "categories_export2.json")
+    INDEX_ADD_FILE_PATH = os.path.join(EXPORT_DIR, "categories_export3.json")
     repo = Repo(REPO_DIR)
+    repo.index.add([INDEX_ADD_FILE_PATH])
+    is_untracked = INDEX_ADD_FILE_PATH not in repo.git.ls_files().splitlines()
     
-    if repo.git.diff(INDEX_ADD_FILE_PATH):  
+    if 'backup/json' not in repo.branches:
+        repo.git.checkout('HEAD', b='backup/json')  # Create and switch to the new branch
+    else:
+        repo.git.checkout('backup/json')  #
+    
+    if repo.git.diff(INDEX_ADD_FILE_PATH) or is_untracked:  
+        print(903098308)
         # Check if there are unstaged changes for the file
         repo.index.add([INDEX_ADD_FILE_PATH])
         repo.index.commit("Export categories data")
         origin = repo.remote(name="origin")
-        origin.push()
+        # origin.push()
+        
+        origin.push('backup/json')
