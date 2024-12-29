@@ -6,9 +6,6 @@ from . import question_crud as question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 from fastapi import HTTPException
 
-def find_all(db: Session):
-    return db.query(Subcategory).all()
-
 def find_subcategories_in_category(db: Session, category_id: int, limit: int):       
     query = select(Subcategory).where(Subcategory.category_id == category_id)
     result = db.execute(query).scalars().all()

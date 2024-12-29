@@ -32,7 +32,6 @@ async def find_by_id(
         raise HTTPException(status_code=404, detail="Subcategory not found")
     return found_subcategory
 
-# @router.get("/category_id/{category_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 @router.get("/category_id/{category_id}", response_model=list[SubcategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
 async def find_subcategories_in_category(
     db: DbDependency, 

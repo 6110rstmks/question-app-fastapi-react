@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
-import { fetchSubcategories } from "../../../api/SubcategoryAPI";
+import { fetchSubcategoriesForHomePage } from "../../../api/SubcategoryAPI";
 
 export const useCategoryBox = (categoryId: number) => {
     const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([]);
@@ -11,7 +11,7 @@ export const useCategoryBox = (categoryId: number) => {
 
     useEffect(() => {
         (async () => {
-            const subcategories = await fetchSubcategories(categoryId);
+            const subcategories = await fetchSubcategoriesForHomePage(categoryId);
             setSubcategories(subcategories);
         })();
     }, []);
