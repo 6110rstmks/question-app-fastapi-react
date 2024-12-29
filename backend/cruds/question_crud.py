@@ -4,7 +4,6 @@ from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUp
 from schemas.problem import ProblemCreate
 from models import Category, Subcategory, Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
-# from sqlalchemy.dialects import mysql
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 
@@ -61,7 +60,6 @@ def create(db: Session, question_create: QuestionCreate):
     except SQLAlchemyError as e:
         db.rollback()
         raise e
-
 
 def update2(db: Session, id: int, question_update: QuestionUpdate):
     stmt = (

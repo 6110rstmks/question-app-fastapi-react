@@ -5,6 +5,7 @@ import json
 from fastapi import HTTPException, UploadFile
 from cruds.category_crud import find_by_name
 
+# 詳細はdocument/data_import_export.mdを参照
 def export_to_json(db: Session, file_path: str):
     query_stmt = select(Category)
     
@@ -38,6 +39,7 @@ def export_to_json(db: Session, file_path: str):
     
     with open(file_path, "w", encoding="utf-8") as jsonfile:
         json.dump(data, jsonfile, indent=4, ensure_ascii=False)
+
 
 async def import_json_file(db: Session, file: UploadFile):
     # Check file type
