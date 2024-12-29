@@ -106,11 +106,12 @@ def git_push_json_file():
         repo.git.checkout('backup/json')  #
     
     if repo.git.diff(INDEX_ADD_FILE_PATH) or is_untracked:  
-        print(903098308)
         # Check if there are unstaged changes for the file
         repo.index.add([INDEX_ADD_FILE_PATH])
         repo.index.commit("Export categories data")
         origin = repo.remote(name="origin")
-        # origin.push()
         
         origin.push('backup/json')
+        
+    repo.git.checkout('main')  #
+
