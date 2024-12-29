@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import Modal from 'react-modal'
-import CreateQuestion from '../CreateQuestion';
+import QuestionCreate from '../question/QuestionCreate';
 import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
 import { SubcategoryWithQuestionCount } from '../../types/Subcategory';
@@ -114,7 +114,6 @@ const SubcategoryPage: React.FC = () => {
         const getSubcategory = async () => {
             const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
             if (response.ok) {
-                console.log(response);
                 const data: SubcategoryWithQuestionCount = await response.json();
                 setSubcategoryName(data.name);
             }
@@ -151,7 +150,7 @@ const SubcategoryPage: React.FC = () => {
                 isOpen={modalIsOpen}
                 contentLabel="Example Modal"
             >
-                <CreateQuestion 
+                <QuestionCreate 
                     category_id={category_id} 
                     subcategory_id={subcategoryId} 
                     setModalIsOpen={setModalIsOpen}

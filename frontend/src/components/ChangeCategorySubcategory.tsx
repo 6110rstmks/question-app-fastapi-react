@@ -1,21 +1,13 @@
 import React from 'react'
-
-interface Question {
-  id: number;
-  problem: string;
-  answer: string[];
-  memo: string;
-  is_correct: boolean;
-  subcategory_id: number;
-}
+import { Question } from '../types/Question'
 
 interface ChangeCategorySubcategoryProps {
   setModalIsOpen: (isOpen: boolean) => void;
   question?: Question;
-  refreshQuestion: () => void;
+  setQuestion: (question: Question) => void;
 }
 
-const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({setModalIsOpen, question, refreshQuestion}) => {
+const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({setModalIsOpen, question, setQuestion}) => {
   return (
     // クエスチョンに紐づくカテゴリ、サブカテゴリを階層形式と表示してそこから選択ボックスで選択
     <div>ChangeCategorySubcategory</div>

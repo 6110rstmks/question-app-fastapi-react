@@ -1,15 +1,14 @@
 import React, { useState, ChangeEvent, useEffect, useCallback } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import styles from "./CreateQuestion.module.css"
+import styles from "./QuestionCreate.module.css"
 
-interface CreateQuestionProps {
+interface QuestionCreateProps {
     category_id: number;
     subcategory_id: number;
     setModalIsOpen: (isOpen: boolean) => void;
     refreshQuestionList: () => void;
 }
 
-const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory_id, setModalIsOpen, refreshQuestionList}) => {
+const QuestionCreate: React.FC<QuestionCreateProps> = ({category_id, subcategory_id, setModalIsOpen, refreshQuestionList}) => {
     const [problem, setProblem] = useState<string>('');
     const [answers, setAnswers] = useState<string[]>(['']);
     const [memo, setMemo] = useState<string>('');
@@ -147,4 +146,5 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({category_id, subcategory
     );
 };
 
-export default CreateQuestion;
+export default QuestionCreate;
+

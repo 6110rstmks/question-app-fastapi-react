@@ -18,6 +18,9 @@ Atomic designを参考にすべきか。
 
 債務分離
 
+# 関数について
+引数に指定するid(category_id, subcategory_id)のデータ型は全てnumberに統一
+
 ## 関数名の統一
 
 - ページ遷移を行う関数<br>

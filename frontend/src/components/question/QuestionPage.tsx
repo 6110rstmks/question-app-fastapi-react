@@ -1,75 +1,38 @@
-import { get } from 'http';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
 import Modal from 'react-modal'
 import EditQuestion from '../EditQuestion';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
-
-export interface Question {
-    id: number;
-    problem: string;
-    answer: string[];
-    memo: string;
-    is_correct: boolean;
-    subcategory_id: number;
-}
+import { useQuestionPage } from './hooks/useQuestionPage'
+import { fetchQuestion, updateIsCorrect, deleteQuestion } from '../../api/QuestionAPI'
 
 const QuestionPage: React.FC = () => {
     const location = useLocation()
     const { category_id, subcategory_id, subcategoryName, categoryName } = location.state || {};
     const navigate = useNavigate()
     const { question_id } = useParams<{ question_id: string }>();
-    const [question, setQuestion] = useState<Question>();
+    const questionId = Number(question_id)
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
     const [changeModalIsOpen, setChangeModalIsOpen] = useState<boolean>(false);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
+    const { question, setQuestion } = useQuestionPage(questionId);
 
     const handleDeleteQuestion = async () => {
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
         if (confirmation !== '削除') {
             return;
         }
-
-        const response = await fetch(`http://localhost:8000/questions/${question_id}`, {
-            method: 'DELETE',
-        })
-
-        if (!response.ok) {
-            throw new Error('Failed to delete subcategory');
-        }
+        await deleteQuestion(questionId); // API コール
         navigate('/');
     }
 
-    // idからquestionを取得
-    const getQuestion = async () => {
-        const response = await fetch(`http://localhost:8000/questions/${question_id}`);
-        if (response.ok) {
-            const data = await response.json();
-            setQuestion(data)
-        }
-    }
-
-  const updateIsCorrect = async () => {
-    const response = await fetch(`http://localhost:8000/questions/edit_flg/${question_id}`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-                                is_correct: !question?.is_correct 
-                            }),
-    });
-    if (!response.ok) {
-        throw new Error('Failed to update is_correct');
-    }
-    getQuestion();
-  }
-
-  useEffect(() => {
-    getQuestion();
-  }, [])
+    const handleUpdateIsCorrect = async () => {
+        await updateIsCorrect(question!); // API コール
+        const data = await fetchQuestion(question!.id); // データをリフレッシュ
+        setQuestion(data)
+  };
 
   return (
       <>
@@ -90,7 +53,7 @@ const QuestionPage: React.FC = () => {
                         className={`${styles.question_is_flg_value} ${
                         question?.is_correct ? styles.correct : styles.incorrect
                         }`}
-                        onClick={updateIsCorrect}
+                        onClick={handleUpdateIsCorrect}
                     >
                 {question?.is_correct ? '正解' : '不正解'}
               </div>
@@ -119,7 +82,7 @@ const QuestionPage: React.FC = () => {
           </div>
           <div className={styles.question_actions}>
             <button onClick={handleDeleteQuestion} className={styles.delete}>
-                削除
+                DELETE
             </button>
             <button onClick={() => setEditModalIsOpen(true)}>編集</button>
             <button onClick={() => setChangeModalIsOpen(true)}>カテゴリまたは、サブカテゴリを変更する</button>
@@ -128,14 +91,14 @@ const QuestionPage: React.FC = () => {
             <EditQuestion
               setModalIsOpen={setEditModalIsOpen}
               question={question}
-              refreshQuestion={getQuestion}
+              setQuestion={setQuestion}
             />
           </Modal>
           <Modal isOpen={changeModalIsOpen} contentLabel="Example Modal">
             <ChangeCategorySubcategory
-              setModalIsOpen={setChangeModalIsOpen}
+              setModalIsOpen={setEditModalIsOpen}
               question={question}
-              refreshQuestion={getQuestion}
+              setQuestion={setQuestion}
             />
           </Modal>
         </div>

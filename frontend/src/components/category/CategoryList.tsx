@@ -10,7 +10,6 @@ interface CategoryListProps {
 const CategoryList: React.FC<CategoryListProps> = ({ categories }) => {
     return (
         <div className={styles.container}>
-
             <div className={styles.category_container}>
                 {categories.map((category) => (
                     <CategoryBox category={category} key={category.id} />

@@ -2,12 +2,8 @@ import { get } from 'http';
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './SetProblem.module.css';
-
-export interface Category {
-    id: number;
-    name: string;
-    user_id: number;    
-}
+import { Category } from '../../types/Category';
+import { fetchAllCategoriesWithQuestions } from '../../api/CategoryAPI';
 
 // 問題を出題して、
 const SetProblem: React.FC = () => {
@@ -16,17 +12,8 @@ const SetProblem: React.FC = () => {
     const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(false);
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([]);
     const [problemCnt, setProblemCnt] = useState<number>(5);
-
-
     const navigate = useNavigate();
-    const getCategories = async () => {
-        const response = await fetch('http://localhost:8000/categories/all_categories_with_questions')
-        if (response.ok) {
-            const data: Category[] = await response.json();
-            setCategoryList(data);
-            console.log(data)
-        }
-    }
+
     const handleTypeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedType(event.target.value);
     }
@@ -86,7 +73,10 @@ const SetProblem: React.FC = () => {
     
 
     useEffect(() => {
-        getCategories()
+        (async () => {
+            const response = await fetchAllCategoriesWithQuestions();
+            setCategoryList(response);
+        })()
     }, [])
     return (
         <div className="">
