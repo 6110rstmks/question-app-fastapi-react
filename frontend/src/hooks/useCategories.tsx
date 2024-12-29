@@ -6,14 +6,15 @@ import { isAuthenticated } from "../utils/auth";
 import { useNavigate } from "react-router-dom"
 
 export const useCategories = (page: number, limit: number, searchCategoryWord: string) => {
-    const [categoryList, setCategoryList] = useState<Category[]>([]);
-    const [pageCount, setPageCount] = useState<number | null>(null);
-    const navigate = useNavigate();
+    const [categories, setCategories] = useState<Category[]>([])
+    // アプリの初期状態はカテゴリがまだ作成されていないため、ページ数はnull
+    const [pageCount, setPageCount] = useState<number | null>(null)
+    const navigate = useNavigate()
 
     useEffect(() => {
         // 未ログイン時にリダイレクト
         if (!isAuthenticated()) {
-            navigate('/login');
+            navigate('/login')
             return;
         }
         const loadPageCount = async () => {
@@ -31,14 +32,14 @@ export const useCategories = (page: number, limit: number, searchCategoryWord: s
         const loadCategories = async () => {
             const skip = (page - 1) * limit;
             try {
-                const categories = await fetchCategories(skip, limit, searchCategoryWord);
-                setCategoryList(categories);
+                const categories: Category[] = await fetchCategories(skip, limit, searchCategoryWord)
+                setCategories(categories)
             } catch (error) {
-                console.error(error);
+                console.error(error)
             }
         };
         loadCategories();
-    }, [page, limit, searchCategoryWord]);
+    }, [page, limit, searchCategoryWord])
 
-    return { categoryList, pageCount };
+    return { categories, pageCount }
 };

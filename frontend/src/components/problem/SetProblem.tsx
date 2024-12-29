@@ -71,7 +71,6 @@ const SetProblem: React.FC = () => {
         }
     }
     
-
     useEffect(() => {
         (async () => {
             const response = await fetchAllCategoriesWithQuestions();

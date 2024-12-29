@@ -10,14 +10,14 @@ const Home: React.FC = () => {
     const [page, setPage] = useState<number>(1);
     const [limit] = useState<number>(6);
     const [searchCategoryWord, setSearchCategoryWord] = useState<string>("");
-    const { categoryList, pageCount } = useCategories(page, limit, searchCategoryWord);
+    const { categories, pageCount } = useCategories(page, limit, searchCategoryWord);
 
     return (
         <>
             <Link to="/createcategory">Create Category</Link>
             <SearchCategory searchWord={searchCategoryWord} setSearchWord={setSearchCategoryWord} page={page} setPage={setPage} />
             <div className={styles.container}>
-                <CategoryList categories={categoryList} />
+                <CategoryList categories={categories} />
             </div>
             <Pagination
                 currentPage={page}

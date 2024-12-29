@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from functools import lru_cache
 
-PAGE_SIZE = 9
+PAGE_SIZE = 6
 
 class Settings(BaseSettings):
     secret_key: str

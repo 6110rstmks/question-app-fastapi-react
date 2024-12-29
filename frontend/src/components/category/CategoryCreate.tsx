@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./CreateCategory.module.css";
+import styles from "./CategoryCreate.module.css";
 
-interface CreateCategoryProps {
+interface CategoryCreateProps {
     isAuth: boolean;
 }
 
-const CreateCategory: React.FC<CreateCategoryProps> = ({ isAuth }) => {
+const CategoryCreate: React.FC<CategoryCreateProps> = ({ isAuth }) => {
     const [categoryName, setCategoryName] = useState<string>("");
     const [errMessage, setErrorMessage] = useState<string>("");
     const navigate = useNavigate();
@@ -64,4 +64,4 @@ const CreateCategory: React.FC<CreateCategoryProps> = ({ isAuth }) => {
     );
 };
 
-export default CreateCategory;
+export default CategoryCreate;
