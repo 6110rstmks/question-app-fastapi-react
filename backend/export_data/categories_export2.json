@@ -7,13 +7,21 @@
                     "name": "ECS",
                     "questions": [
                         {
-                            "problem": "タスク　サービス　クラスタ　について　説明してください",
+                            "problem": "タスク　サービス　クラスタ　について　説明してください。",
                             "answer": [
                                 "タスク　→ コンテナ群のこと（dockerなどをイメージすると良い)",
                                 "サービス　→ クラスタ内でコンテナ群（タスク）を管理するもの（役割）",
                                 "クラスタ　→ 一番外の大枠"
                             ],
                             "memo": "ECSの基本について",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "oi",
+                            "answer": [
+                                "oi"
+                            ],
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
@@ -245,6 +253,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "glacierについて、なぜデータの長期保存に向いているのか",
+                            "answer": [
+                                "s3のストレージクラスの中では最もコストが安いから"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -444,6 +460,10 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "typescript",
+            "subcategories": []
         }
     ]
 }
