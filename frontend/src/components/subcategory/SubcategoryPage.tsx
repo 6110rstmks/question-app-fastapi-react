@@ -5,7 +5,7 @@ import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreate';
 import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
-import { fetchSubcategory, updateSubcategoryName } from '../../api/SubcategoryAPI';
+import { updateSubcategoryName } from '../../api/SubcategoryAPI';
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
 interface LocationState {
     category_id: number;
