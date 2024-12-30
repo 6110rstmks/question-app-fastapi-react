@@ -4,25 +4,10 @@
             "name": "aws",
             "subcategories": [
                 {
-                    "name": "ECS",
-                    "questions": [
-                        {
-                            "problem": "タスク　サービス　クラスタ　について　説明してください。",
-                            "answer": [
-                                "タスク　→ コンテナ群のこと（dockerなどをイメージすると良い)",
-                                "サービス　→ クラスタ内でコンテナ群（タスク）を管理するもの（役割）",
-                                "クラスタ　→ 一番外の大枠"
-                            ],
-                            "memo": "ECSの基本について",
-                            "is_correct": false
-                        }
-                    ]
-                },
-                {
                     "name": "IAM",
                     "questions": [
                         {
-                            "problem": "どうして複数のポリシーをひとつにまとめてroleとして扱うのか",
+                            "problem": "どうして複数のポリシーをひとつにまとめてroleとして扱うのか.",
                             "answer": [
                                 ""
                             ],
@@ -153,6 +138,14 @@
                             ],
                             "memo": "ああ",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "シャドーとは？",
+                            "answer": [
+                                "流れてくる一連のデータレコードを保持します。データが乗っかるベルトコンベアのようなものとイメージいただけると良いです。1 つの Kinesis Data Streams の中には複数のシャードが存在します。シャードが増えれば増えるほど、一度に流せるデータの量が増えます。Kinesis Data Streams のスケーリングの単位でもあります。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -282,12 +275,44 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "AWSのRoute53で使用されるレコードを全て列挙してください。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
                 {
-                    "name": "oioiu",
-                    "questions": []
+                    "name": "STS",
+                    "questions": [
+                        {
+                            "problem": "Assume Role について説明してください。",
+                            "answer": [
+                                "あるAWSリソースまたはアプリケーションが、別のIAMロールを引き受けて、そのロールに付与されている一時的な権限を利用する"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "ECS",
+                    "questions": [
+                        {
+                            "problem": "タスク　サービス　クラスタ　について　説明してください。",
+                            "answer": [
+                                "タスク　→ コンテナ群のこと（dockerなどをイメージすると良い)",
+                                "サービス　→ クラスタ内でコンテナ群（タスク）を管理するもの（役割）",
+                                "クラスタ　→ 一番外の大枠"
+                            ],
+                            "memo": "ECSの基本について",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -300,7 +325,7 @@
                         {
                             "problem": "ジョルダンの公式について知っていることをアウトプットしてください。",
                             "answer": [
-                                ""
+                                "0≤x≤  2 π ​   において，  2 π x ≤ sin ⁡ x ≤ x π 2 ​  x≤sinx≤x"
                             ],
                             "memo": "kkklk\nk\n\n\n\n\n\n\n\n\n\n\nslkjk",
                             "is_correct": false
@@ -343,10 +368,6 @@
                 },
                 {
                     "name": "physiology",
-                    "questions": []
-                },
-                {
-                    "name": "jjjjjjjjj",
                     "questions": []
                 },
                 {
@@ -479,7 +500,21 @@
         },
         {
             "name": "database",
-            "subcategories": []
+            "subcategories": [
+                {
+                    "name": "view",
+                    "questions": [
+                        {
+                            "problem": "viewを使用する目的は？",
+                            "answer": [
+                                "ビューとして定義しておけば、ユーザーはビューにアクセスするだけで自動的に作成済みのクエリが実行されるため、開発効率を大幅に削減することが可能となります。\n\n→つまり結合したテーブルを保存できるということ→同じSQLの繰り返しを防げる"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "css",
