@@ -29,5 +29,11 @@ export const updateSubcategoryName = async (subcategory_id: number, subcategoryN
     if (!response.ok) {
         throw new Error('Failed to update subcategory');
     }
+};
 
+export const fetchSubcategory = async (subcategory_id: number) => {
+    const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
+    if (response.ok) {
+        return response.json()
+    }
 };

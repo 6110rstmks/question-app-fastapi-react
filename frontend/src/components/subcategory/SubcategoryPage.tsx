@@ -5,11 +5,8 @@ import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreate';
 import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
-import { SubcategoryWithQuestionCount } from '../../types/Subcategory';
-import { Question } from '../../types/Question';
-import { fetchQuestionsBySubcategoryId } from '../../api/QuestionAPI';
-import { updateSubcategoryName } from '../../api/SubcategoryAPI';
-
+import { fetchSubcategory, updateSubcategoryName } from '../../api/SubcategoryAPI';
+import { useSubcategoryPage } from './hooks/useSubcategoryPage';
 interface LocationState {
     category_id: number;
     category_name: string;
@@ -22,30 +19,15 @@ const SubcategoryPage: React.FC = () => {
     const location = useLocation()
     const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
     const { category_id, category_name } = location.state as LocationState;
+    const { subcategoryName, setSubcategoryName, questions, setQuestions } = useSubcategoryPage(subcategoryId)
     
     // サブカテゴリ名の編集モードの状態を管理
-    const [isEditing, setIsEditing] = useState<boolean>(false); // 編集モードの状態
-
-    const [subcategoryName, setSubcategoryName] = useState<string>('');
-    const [questions, setQuestions] = useState<Question[]>([]);
+    // ダブルクリックでサブカテゴリ名の編集モードに切り替える
+    const [isEditing, setIsEditing] = useState<boolean>(false);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
-    // 表示非表示ボタンの状態を管理
+    // 回答の表示非表示ボタンの状態を管理
     const [isOn, setIsOn] = useState(false); 
-    
-    const handleClick = () => {
-        setIsOn((prev) => !prev)
-    };
-
-    // ダブルクリックでサブカテゴリ名の編集モードに切り替える
-    const handleDoubleClick = () => {
-        setIsEditing(true);
-    };
-
-    // 入力フィールドでの変更を反映
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSubcategoryName(e.target.value);
-    };
 
     // エンターキーで編集モードを終了し、サブカテゴリ名を更新
     const handleKeyPress = async (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -69,13 +51,12 @@ const SubcategoryPage: React.FC = () => {
             method: 'DELETE',
         });
         if (!response.ok) {
-            throw new Error('Failed to delete subcategory');
+            prompt('Failed to delete subcategory');
         }
         navigate('/');
     }
 
     const handleNavigateToQuestionPage = (question_id: number) => {
-        // const subcategory_name = subcategoryName;
         navigate(`/question/${question_id}`, { 
             state: {
                 category_id: category_id,
@@ -86,32 +67,11 @@ const SubcategoryPage: React.FC = () => {
         });
     }
 
-    useEffect(() => {
-        // CategoryBoxからSubcategoryPageに移動する際に、CategoryBoxがページの下の方の場合、
-        // SubcategoryPageに移動した際にページの一番上にスクロールする。
-        window.scrollTo(0, 0);
-
-        (async () => {
-            const data = await fetchQuestionsBySubcategoryId(subcategoryId);
-            setQuestions(data);
-        })();
-
-        const fetchSubcategory = async () => {
-            const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
-            if (response.ok) {
-                const data: SubcategoryWithQuestionCount = await response.json();
-                setSubcategoryName(data.name);
-            }
-        };
-
-        fetchSubcategory();
-    }, [subcategory_id]);
-
     return (
         <div className={styles.subcategory_page}>
             <button 
                 className={`${styles.toggleButton} ${isOn ? styles.on : styles.off}`} 
-                onClick={handleClick}
+                onClick={() => setIsOn((prev) => !prev)}
             >
                 {isOn ? "答えを一括非表示" : "答えを一括表示"}
             </button>
@@ -120,14 +80,20 @@ const SubcategoryPage: React.FC = () => {
                     <input
                         type="text"
                         value={subcategoryName}
-                        onChange={handleChange}
+                        // onChange={handleChange}
+                        onChange={(e) => setSubcategoryName(e.target.value)}
                         onKeyPress={handleKeyPress}
                         onBlur={() => setIsEditing(false)} // フォーカスを外すと編集モードを終了
                         autoFocus
                     />
                 ) : (
-                    <h1 onDoubleClick={handleDoubleClick}>{subcategoryName}</h1>
-                )}                <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
+                    <h1 
+                        // onDoubleClick={handleDoubleClick}
+                        onDoubleClick={() => setIsEditing(true)}
+                        >{subcategoryName}
+                    </h1>
+                )}                
+                <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>
             <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Create Question</button>
             <Modal

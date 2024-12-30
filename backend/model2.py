@@ -7,6 +7,12 @@ from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import relationship
+from sqlalchemy.orm import Column
+from sqlalchemy.orm import String
+from sqlalchemy.orm import DateTime
+from sqlalchemy.orm import Boolean
+from sqlalchemy.orm import ARRAY
+from datetime import datetime
 
 class Base(DeclarativeBase):
     pass

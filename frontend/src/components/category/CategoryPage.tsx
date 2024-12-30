@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from "./CategoryPage.module.css"
 import { SubcategoryWithQuestionCount } from '../../types/Subcategory';
-import { Category } from '../../types/Category';
 import { useCategoryPage } from "./hooks/useCategoryPage";
 
 const CategoryPage = () => {

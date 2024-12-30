@@ -14,10 +14,6 @@ const SetProblem: React.FC = () => {
     const [problemCnt, setProblemCnt] = useState<number>(5);
     const navigate = useNavigate();
 
-    const handleTypeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSelectedType(event.target.value);
-    }
-
     const handleCheckboxChange = (categoryId: number) => {
         setSelectedCategoryIds((prevSelected) => {
             // すでに選択されている場合は取り除き、選択されていない場合は追加する
@@ -28,15 +24,6 @@ const SetProblem: React.FC = () => {
             }
         });
     };
-
-    const handleIncrement = () => {
-        setProblemCnt(problemCnt + 1);
-      };
-    
-      const handleDecrement = () => {
-        setProblemCnt(problemCnt - 1);
-      };
-    
 
     // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
     const setProblems = async () => {
@@ -76,6 +63,7 @@ const SetProblem: React.FC = () => {
             setCategories(response);
         })()
     }, [])
+
     return (
         <div className={styles.problemSelector}>
             <h2>問題選択</h2>
@@ -130,13 +118,7 @@ const SetProblem: React.FC = () => {
                         <input
                         type="checkbox"
                         checked={selectedCategoryIds.includes(category.id)}
-                        onChange={() => {
-                            setSelectedCategoryIds(prev =>
-                            prev.includes(category.id)
-                                ? prev.filter(id => id !== category.id)
-                                : [...prev, category.id]
-                            );
-                        }}
+                        onChange={() => handleCheckboxChange(category.id)}
                         />
                         <span>{category.name}</span>
                     </label>
