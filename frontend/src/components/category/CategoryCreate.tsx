@@ -44,9 +44,9 @@ const CategoryCreate: React.FC<CategoryCreateProps> = ({ isAuth }) => {
     return (
         <div className="createPostPage">
             <div className="postContainer">
-                <h1>カテゴリを作成</h1>
+                <h1>Create Category</h1>
                 <div className="inputPost">
-                    <div>カテゴリ名</div>
+                    <div>CategoryName</div>
                     <input 
                         type="text" 
                         placeholder="タイトルを記入" 
@@ -56,7 +56,7 @@ const CategoryCreate: React.FC<CategoryCreateProps> = ({ isAuth }) => {
                     />
                 </div>
                 <button className="categoryButton" onClick={createCategory}>
-                    作成
+                    Create
                 </button>
                 <div>{errMessage && <p>{errMessage}</p>}</div>
             </div>

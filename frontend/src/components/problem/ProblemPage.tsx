@@ -15,9 +15,13 @@ const ProblemPage: React.FC = () => {
         showAnswer,
         unsolvedProblems,
         currentReviewProblemIndex,
+        currentReviewProblemIndex2,
+        totalReviewProblemIndex,
         setShowAnswer,
         handleAnswerSolved,
         handleAnswerUnsolved,
+        handleAnswerSolvedReview,
+        handleAnswerUnsolvedReview,
         handleReview,
     } = useProblemPage(problemData);
 
@@ -34,11 +38,13 @@ const ProblemPage: React.FC = () => {
             {reviewFlg ? (
                 <ProblemReview
                     problem={unsolvedProblems[currentReviewProblemIndex]}
+                    currentReviewProblemIndex={currentReviewProblemIndex}
+                    currentReviewProblemIndex2={currentReviewProblemIndex2}
+                    problemLength={totalReviewProblemIndex}
                     showAnswer={showAnswer}
                     onShowAnswer={() => setShowAnswer(true)}
-                    // onSolved={() => handleAnswerSolved(problemData[currentProblemIndex].id)}
-                    onSolved={handleAnswerSolved}
-                    onUnsolved={handleAnswerUnsolved}
+                    onSolved={handleAnswerSolvedReview}
+                    onUnsolved={handleAnswerUnsolvedReview}
                 />
             ) : (
                 <ProblemNormal

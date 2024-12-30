@@ -6,13 +6,16 @@ import { getCategoryByQuestionId, getSubcategoryByQuestionId } from "../../../ap
 
 interface Props {
     problem: Question;
+    currentReviewProblemIndex: number;
+    currentReviewProblemIndex2: number;
+    problemLength: number;
     showAnswer: boolean;
     onShowAnswer: () => void;
     onSolved: () => void;
     onUnsolved: () => void;
 }
 
-const ReviewProblem: React.FC<Props> = ({ problem, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
+const ReviewProblem: React.FC<Props> = ({ problem, currentReviewProblemIndex, currentReviewProblemIndex2, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
     const [category, setCategory] = useState<Category | null>(null);
     const [subcategory, setSubcategory] = useState<Subcategory | null>(null);
 
@@ -29,7 +32,9 @@ const ReviewProblem: React.FC<Props> = ({ problem, showAnswer, onShowAnswer, onS
     return (
         <div>
             <div>{category?.name}＞{subcategory?.name}</div>
-            <h1>再出題: {problem.problem}</h1>
+            <div>{currentReviewProblemIndex2 + 1} / {problemLength}</div>
+            <h1>再出題: </h1>
+            <h1>{problem.problem}</h1>
             <button onClick={onShowAnswer}>答えを表示する</button>
             {showAnswer && (
                 <div>

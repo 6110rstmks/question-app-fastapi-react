@@ -7,23 +7,34 @@ const useProblemPage = (problemData: Question[]) => {
     const [showAnswer, setShowAnswer] = useState(false);
     const [unsolvedProblems, setUnsolvedProblems] = useState<Question[]>([]);
     const [currentReviewProblemIndex, setCurrentReviewProblemIndex] = useState(0);
-    console.log(problemData);
-    // console.log(problemData[currentProblemIndex].id);
-    console.log(currentProblemIndex);
+    const [currentReviewProblemIndex2, setCurrentReviewProblemIndex2] = useState(0);
+    const [totalReviewProblemIndex, setTotalReviewProblemIndex] = useState(0);
 
     // 「解けた」ボタンを押すと次の問題に進む。その際、問題のis_correctをtrueにするリクエストを送信。
     // const handleAnswerSolved = (question_id: number) => {
     const handleAnswerSolved = () => {
-        console.log(9888)
         setCurrentProblemIndex((prev) => prev + 1);
         setShowAnswer(false);
         // submitIsCorrect(question_id);
     };
 
     const handleAnswerUnsolved = () => {
-        console.log(6668)
         setUnsolvedProblems((prev) => [...prev, problemData[currentProblemIndex]]);
         setCurrentProblemIndex((prev) => prev + 1);
+        setShowAnswer(false);
+    };
+
+    // 再度出題した用の関数
+    const handleAnswerSolvedReview = () => {
+        setUnsolvedProblems(unsolvedProblems.filter((problem) => problem.id !== unsolvedProblems[currentReviewProblemIndex].id));
+        setCurrentReviewProblemIndex2((prev) => prev + 1);
+        setShowAnswer(false);
+    };
+
+    // 再度出題した用の関数
+    const handleAnswerUnsolvedReview = () => {
+        setCurrentReviewProblemIndex((prev) => prev + 1);
+        setCurrentReviewProblemIndex2((prev) => prev + 1);
         setShowAnswer(false);
     };
 
@@ -38,12 +49,14 @@ const useProblemPage = (problemData: Question[]) => {
         });
     };
 
-    // 「解けなかった問題を再度復習する」ボタンを押すと問題の際出題画面に移行する。
+    // 「解けなかった問題を再度復習する」ボタンを押すと問題の再出題画面に移行する。
     const handleReview = () => {
         setReviewFlg(true);
         setCurrentProblemIndex(0);
         setCurrentReviewProblemIndex(0);
+        setCurrentReviewProblemIndex2(0);
         setShowAnswer(false);
+        setTotalReviewProblemIndex(unsolvedProblems.length)
     };
 
     return {
@@ -52,9 +65,13 @@ const useProblemPage = (problemData: Question[]) => {
         showAnswer,
         unsolvedProblems,
         currentReviewProblemIndex,
+        currentReviewProblemIndex2,
+        totalReviewProblemIndex,
         setShowAnswer,
         handleAnswerSolved,
         handleAnswerUnsolved,
+        handleAnswerSolvedReview,
+        handleAnswerUnsolvedReview,
         handleReview,
     };
 };

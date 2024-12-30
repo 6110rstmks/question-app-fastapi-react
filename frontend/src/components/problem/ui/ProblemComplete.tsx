@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface Props {
     unsolvedCount: number;
@@ -14,6 +15,8 @@ const ProblemComplete: React.FC<Props> = ({ unsolvedCount, onReview }) => {
             ) : (
                 <p>全問正解！</p>
             )}
+            <Link to="/categories/home">Back to Home</Link>
+
         </div>
     );
 };
