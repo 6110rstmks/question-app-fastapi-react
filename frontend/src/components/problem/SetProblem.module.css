@@ -1,12 +1,95 @@
-.solve-again-checkbox {
-    margin-top: 20px;
+.problemSelector {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
 }
 
-
-.set-question-box {
-    margin-top: 20px;
+.problemCount {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
-.problemCnt {
-    display: flex;
+.counterButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.counterButtons button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.counterButtons button:hover {
+  background-color: #e5e7eb;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.radioGroup label,
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.categorySection {
+  margin-top: 24px;
+}
+
+.categorySection p {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  margin-top: 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #1d4ed8;
 }

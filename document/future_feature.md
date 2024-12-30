@@ -1,8 +1,8 @@
 # 将来実装予定の案
 
-今週・今月に解いた問題をグラフとして表示させる。
+当日・今週・今月に解いた問題をグラフとして表示させる。
 
-回答ログはanswer_logsテーブルに格納。
+回答ログはanswer_logs_today, answer_logs_this_week, answer_logs_this_monthテーブルに格納。
 
 テーブル構造
 
@@ -10,8 +10,6 @@
 - question_id
 - is_correct 正解したかどうか
 - date
-
-
 
 
 ===========
@@ -26,8 +24,9 @@ githubのあるブランチ(save/log)を回答ログのデータベースとし�
 
 回答が完了したら、ブランチ(save/log)を切ってそれに対してanwswer_log/answer_log.jsonのコミットプッシュを行う。
 
-データの集計を行う際は
-ブランチ(save/log)のanswer_logディレクトリをpullして、すべてのjsonファイルを一旦dbにinsertするなどして、集計を行う。
+データの集計を行う際（データ集計を行うのボタンをクリック）は
+ブランチ(save/log)のanswer_logディレクトリをpullして、すべてのcsvファイルを一旦dbにinsertするなどして、集計を行う。
+dbに入れる必要はないかもしれない。
 
 =============<br>
 Questionテーブルに「問題にふれた回数」のカラムを追加。

@@ -77,70 +77,75 @@ const SetProblem: React.FC = () => {
         })()
     }, [])
     return (
-        <div className="">
-            <div className={styles.problemCnt}>
-                <p>出題する問題数：「{problemCnt}」</p>
-                <button onClick={handleIncrement}>+</button>
-                <button onClick={handleDecrement}>-</button>
+        <div className={styles.problemSelector}>
+            <h2>問題選択</h2>
+            
+            <div className={styles.problemCount}>
+                <span>出題する問題数：{problemCnt}</span>
+                <div className={styles.counterButtons}>
+                <button onClick={() => setProblemCnt(prev => Math.max(1, prev - 1))}>-</button>
+                <button onClick={() => setProblemCnt(prev => prev + 1)}>+</button>
+                </div>
             </div>
 
-
-            <form action="">
+            <div className={styles.radioGroup}>
                 <label>
-                    <input 
-                    type="radio" 
-                    name="type" 
+                <input
+                    type="radio"
+                    name="type"
                     value="random"
                     checked={selectedType === 'random'}
-                    onChange={handleTypeChange}
-                    />ランダムに出題
+                    onChange={(e) => setSelectedType(e.target.value)}
+                />
+                <span>ランダムに出題</span>
                 </label>
-                <br></br>
+                
                 <label>
-                    <input 
-                    type="radio" 
+                <input
+                    type="radio"
                     name="type"
                     value="category"
                     checked={selectedType === 'category'}
-                    onChange={handleTypeChange}
-                    />カテゴリから選択
+                    onChange={(e) => setSelectedType(e.target.value)}
+                />
+                <span>カテゴリから選択</span>
                 </label>
-            </form>
-
-            <div className='solve-again-checkbox'>
-                <input 
-                    type="checkbox" 
-                    id="scales" 
-                    checked={incorrectedOnlyFlgChecked}
-                    name="scales"/>未正当の問題から出題する
             </div>
 
+            <label className={styles.checkboxLabel}>
+                <input
+                type="checkbox"
+                checked={incorrectedOnlyFlgChecked}
+                onChange={(e) => setIncorrectedOnlyFlgChecked(e.target.checked)}
+                />
+                <span>未正当の問題から出題する</span>
+            </label>
 
             {selectedType === 'category' && (
-            <div className='bbb'>
+                <div className={styles.categorySection}>
                 <p>以下からカテゴリを選択する。</p>
-                {categories.map((category) => (
-                    <div key={category.id}>
+                <div className={styles.categoryList}>
+                    {categories.map((category) => (
+                    <label key={category.id} className="checkbox-label">
                         <input
-                            type="checkbox"
-                            id={`checkbox-${category.id}`}
-                            checked={selectedCategoryIds.includes(category.id)}
-                            onChange={() => handleCheckboxChange(category.id)}
+                        type="checkbox"
+                        checked={selectedCategoryIds.includes(category.id)}
+                        onChange={() => {
+                            setSelectedCategoryIds(prev =>
+                            prev.includes(category.id)
+                                ? prev.filter(id => id !== category.id)
+                                : [...prev, category.id]
+                            );
+                        }}
                         />
-                        <label htmlFor={`checkbox-${category.id}`}>
-                            <span>{category.name}</span>
-                        </label>
-                    </div>
-                ))}
-            </div>
+                        <span>{category.name}</span>
+                    </label>
+                    ))}
+                </div>
+                </div>
             )}
 
-            <br></br>
-            <div>
-                <button className="set-question-box" onClick={setProblems}>問題を出題。</button>
-            </div>
-
-
+            <button className={styles.submitButton} onClick={setProblems}>問題を出題</button>
         </div>
     );
 }
