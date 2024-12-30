@@ -4,11 +4,13 @@ import { Category } from "../types/Category";
 import { fetchCategories, fetchPageCount } from "../api/CategoryAPI";
 import { isAuthenticated } from "../utils/auth";
 import { useNavigate } from "react-router-dom"
+import { fetchQuestionCount } from "../api/QuestionAPI"
 
 export const useCategories = (page: number, limit: number, searchCategoryWord: string) => {
     const [categories, setCategories] = useState<Category[]>([])
     // アプリの初期状態はカテゴリがまだ作成されていないため、ページ数はnull
     const [pageCount, setPageCount] = useState<number | null>(null)
+    const [questionCount, setQuestionCount] = useState<number | null>(null)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -31,15 +33,16 @@ export const useCategories = (page: number, limit: number, searchCategoryWord: s
     useEffect(() => {
         const loadCategories = async () => {
             const skip = (page - 1) * limit;
-            try {
-                const categories: Category[] = await fetchCategories(skip, limit, searchCategoryWord)
-                setCategories(categories)
-            } catch (error) {
-                console.error(error)
-            }
+            const categories: Category[] = await fetchCategories(skip, limit, searchCategoryWord)
+            setCategories(categories)
+
+            const data = await fetchQuestionCount()
+            console.log(data)
+            setQuestionCount(data.count)
+
         };
         loadCategories();
     }, [page, limit, searchCategoryWord])
 
-    return { categories, pageCount }
+    return { categories, pageCount, questionCount }
 };

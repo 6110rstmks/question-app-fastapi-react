@@ -19,7 +19,6 @@ SECRET_KEY = get_settings().secret_key
 oauth2_schema = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
 def create_user(db: Session, user_create: auth.UserCreate):
-    print(2786879)
     salt = base64.b64encode(os.urandom(32))
     hashed_password = hashlib.pbkdf2_hmac(
         "sha256", user_create.password.encode(), salt, 1000

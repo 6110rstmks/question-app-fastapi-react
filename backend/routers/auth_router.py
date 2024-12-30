@@ -34,7 +34,6 @@ async def read_users_me(current_user: UserResponse = Depends(auth_cruds.get_curr
 
 @router.post("/login", status_code=status.HTTP_200_OK, response_model=Token)
 async def login(db: DbDependency, user_signin: UserSignIn):
-    print(user_signin)
     user = auth_cruds.authenticate_user(db, user_signin.username, user_signin.password)
     if not user:
         raise HTTPException(status_code=401, detail="Incorrect username or password")

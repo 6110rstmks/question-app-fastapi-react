@@ -23,7 +23,6 @@ export const getSubcategoryByQuestionId = async (question_id: number) => {
 }
 
 export const fetchQuestion = async (question_id: number) => {
-// 数値型から文字列型に変換
     const url = `http://localhost:8000/questions/${question_id}`;
     const response = await fetch(url);
     if (response.ok) {
@@ -63,4 +62,10 @@ export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {
     if (response.ok) {
         return await response.json();
     }
+};
+
+// すべてのQuestionの数を取得するAPI
+export const fetchQuestionCount = async () => {
+    const response = await fetch('http://localhost:8000/questions/count');
+    return await response.json();
 };

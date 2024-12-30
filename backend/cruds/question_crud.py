@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select, update
+from sqlalchemy import select, update, func
 from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate
 from schemas.problem import ProblemCreate
 from models import Category, Subcategory, Question, SubcategoryQuestion, CategoryQuestion
@@ -116,8 +116,16 @@ def delete(db: Session, id: int):
     db.commit()
     return question
 
-# あるサブカテゴリに紐づくQuestionの数を取得する
-def get_question_count_in_subcategory(db: Session, subcategory_id: int):
-    query = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
-    return db.execute(query).scalars().count()
+# あるサブカテゴリに紐づくQuestionの数を取得する（使用されていない）
+# def get_question_count_in_subcategory(db: Session, subcategory_id: int):
+#     query = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
+#     return db.execute(query).scalars().count()
+
+def get_question_count(db: Session):
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question)
+                )
+    
+    return count
     

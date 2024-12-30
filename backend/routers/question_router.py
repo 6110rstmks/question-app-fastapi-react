@@ -6,7 +6,7 @@ from cruds import category_crud, question_crud
 from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate
 from schemas.category import CategoryResponse
 from schemas.subcategory import SubcategoryResponse
-# from schemaa.auth import DecodedToken
+# from schema.auth import DecodedToken
 from database import get_db
 from cruds import subcategory_crud as subcategory_cruds
 
@@ -61,14 +61,6 @@ async def find_all(
     ):
     return question_crud.find_all(db)
 
-@router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_count(
-    db: DbDependency,
-    subcategory_id: int = Query(gt=0)
-    ):
-    return question_crud.get_question_count_in_subcategory(db, subcategory_id)
-
-
 # Question IDからQuestionを取得するエンドポイント
 @router.get("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def find_by_id(db: DbDependency, id: int = Path(gt=0)):
@@ -111,3 +103,9 @@ async def delete(db: DbDependency, id: int = Path(gt=0)):
     if not deleted_item:
         raise HTTPException(status_code=404, detail="Item not deleted")
     return deleted_item
+
+# Question数を取得するエンドポイント
+@router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count(db: DbDependency):
+    print(8383)
+    return question_crud.get_question_count(db)

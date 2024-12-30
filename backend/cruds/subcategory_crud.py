@@ -13,7 +13,6 @@ def find_subcategories_in_category(db: Session, category_id: int, limit: int):
     # サブカテゴリに紐づくQuestion数を取得
     for subcategory in result:
         subcategory.question_count = len(subcategory.questions)
-        print(len(subcategory.questions))
     
     if limit is None:  # limitが指定されていない場合
         return result

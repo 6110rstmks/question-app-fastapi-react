@@ -113,5 +113,5 @@ def git_push_json_file():
         
         origin.push('backup/json')
         
-    repo.git.checkout('main')  #
+    repo.git.checkout('main') # Switch back to the main branch
 
