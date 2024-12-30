@@ -11,10 +11,13 @@ interface PaginationProps {
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
     const handlePrevious = () => {
         if (currentPage > 1) onPageChange(currentPage - 1);
+        window.scrollTo(0, 0);
+
     };
 
     const handleNext = () => {
         if (totalPages === null || currentPage < totalPages) onPageChange(currentPage + 1);
+        window.scrollTo(0, 0);
     };
 
     return (

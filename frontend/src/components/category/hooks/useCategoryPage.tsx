@@ -13,6 +13,8 @@ export const useCategoryPage = (categoryId: number) => {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+
         (async () => {
             const subcategories = await fetchSubcategories(categoryId);
             setSubcategories(subcategories);

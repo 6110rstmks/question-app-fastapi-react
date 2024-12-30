@@ -87,6 +87,10 @@ const SubcategoryPage: React.FC = () => {
     }
 
     useEffect(() => {
+        // CategoryBoxからSubcategoryPageに移動する際に、CategoryBoxがページの下の方の場合、
+        // SubcategoryPageに移動した際にページの一番上にスクロールする。
+        window.scrollTo(0, 0);
+
         (async () => {
             const data = await fetchQuestionsBySubcategoryId(subcategoryId);
             setQuestions(data);

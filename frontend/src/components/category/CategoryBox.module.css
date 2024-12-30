@@ -6,6 +6,7 @@
     padding: 20px;
 	width: calc(25% - 5px); /* margin padding分を引く */
     border-radius: 8px;
+    height: 300.5px;
 }
 
 .category_filed {
