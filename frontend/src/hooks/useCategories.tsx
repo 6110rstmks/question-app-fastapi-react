@@ -36,9 +36,9 @@ export const useCategories = (page: number, limit: number, searchCategoryWord: s
             const categories: Category[] = await fetchCategories(skip, limit, searchCategoryWord)
             setCategories(categories)
 
-            const data = await fetchQuestionCount()
-            console.log(data)
-            setQuestionCount(data.count)
+            // const data = await fetchQuestionCount()
+            // console.log(data)
+            // setQuestionCount(data.count)
 
         };
         loadCategories();
