@@ -67,7 +67,7 @@ async def create(db: DbDependency, category_create: CategoryCreate):
 async def get_exported_json(db: DbDependency):
     
     EXPORT_DIR = "export_data" 
-    FILE_NAME = "categories_export3.json"
+    FILE_NAME = "categories_export4.json"
 
     # ディレクトリが存在しない場合は作成
     os.makedirs(EXPORT_DIR, exist_ok=True)
@@ -95,7 +95,7 @@ def git_push_json_file():
     EXPORT_DIR = os.path.abspath("export_data")
 
     REPO_DIR = os.path.abspath(os.path.join(os.path.abspath(""), ".."))
-    INDEX_ADD_FILE_PATH = os.path.join(EXPORT_DIR, "categories_export3.json")
+    INDEX_ADD_FILE_PATH = os.path.join(EXPORT_DIR, "categories_export4.json")
     repo = Repo(REPO_DIR)
     repo.index.add([INDEX_ADD_FILE_PATH])
     is_untracked = INDEX_ADD_FILE_PATH not in repo.git.ls_files().splitlines()
