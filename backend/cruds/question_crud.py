@@ -1,7 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func
 from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate
-from schemas.problem import ProblemCreate
 from models import Category, Subcategory, Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
@@ -127,5 +126,5 @@ def get_question_count(db: Session):
                     select_from(Question)
                 )
     
-    return count
+    return int(count)
     

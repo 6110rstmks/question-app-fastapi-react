@@ -22,7 +22,11 @@ export const useCategories = (page: number, limit: number, searchCategoryWord: s
         const loadPageCount = async () => {
             try {
                 const count = await fetchPageCount();
+                console.log(count)
                 setPageCount(count);
+                
+                const data = await fetchQuestionCount()
+                setQuestionCount(data)
             } catch (error) {
                 console.error(error);
             }
@@ -35,10 +39,6 @@ export const useCategories = (page: number, limit: number, searchCategoryWord: s
             const skip = (page - 1) * limit;
             const categories: Category[] = await fetchCategories(skip, limit, searchCategoryWord)
             setCategories(categories)
-
-            // const data = await fetchQuestionCount()
-            // console.log(data)
-            // setQuestionCount(data.count)
 
         };
         loadCategories();

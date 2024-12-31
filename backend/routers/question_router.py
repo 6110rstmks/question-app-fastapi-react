@@ -17,6 +17,10 @@ DbDependency = Annotated[Session, Depends(get_db)]
 router = APIRouter(prefix="/questions", tags=["Questions"])
 app = FastAPI()
 
+# Question数を取得するエンドポイント
+@router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count(db: DbDependency):
+    return question_crud.get_question_count(db)
 
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
@@ -104,8 +108,3 @@ async def delete(db: DbDependency, id: int = Path(gt=0)):
         raise HTTPException(status_code=404, detail="Item not deleted")
     return deleted_item
 
-# Question数を取得するエンドポイント
-@router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_count(db: DbDependency):
-    print(8383)
-    return question_crud.get_question_count(db)

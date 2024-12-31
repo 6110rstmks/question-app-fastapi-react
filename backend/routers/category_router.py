@@ -118,16 +118,16 @@ def git_push_json_file():
         repo.index.commit("Export categories data")
         origin = repo.remote(name="origin")
         
-        origin.push('bsackup/json')
-        # origin.push()
+        # origin.push('bsackup/json')
+        origin.push()
         
-    repo.git.checkout('main') # Switch back to the main branch
+    # repo.git.checkout('main') # Switch back to the main branch
         
     
     # if repo.git.stash('list'):
     #     repo.git.stash('pop')
     
-    if 'backup/json' in repo.branches:
-        repo.git.branch('-D', 'bsackup/json')  # D
+    # if 'backup/json' in repo.branches:
+    #     repo.git.branch('-D', 'bsackup/json')  # D
 
 

@@ -67,5 +67,7 @@ export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {
 // すべてのQuestionの数を取得するAPI
 export const fetchQuestionCount = async () => {
     const response = await fetch('http://localhost:8000/questions/count');
-    return await response.json();
+    if (response.ok) {
+        return await response.json();
+    }
 };
