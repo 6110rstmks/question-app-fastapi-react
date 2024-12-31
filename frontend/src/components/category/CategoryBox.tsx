@@ -58,14 +58,14 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     }
 
     return (
-        <div className={styles.category_box} key={category.id}>
-            <div className={styles.category_filed}>
-                <div className={styles.plus_btn} 
+        <div className={styles.categoryBox} key={category.id}>
+            <div className={styles.categoryFiled}>
+                <div className={styles.plusBtn} 
                     onClick={handleClick}>➕</div>
-                <div className={styles.category_name}>{category.name}</div>
+                <div className={styles.categoryName}>{category.name}</div>
                 <span>［{subcategories.length}］</span>
             </div>
-            <div className='input-field'>
+            <div className='inputField'>
                 {showForm && (
                     <>
                         <label>
@@ -84,7 +84,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
             <div>
                 {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
                     <div
-                        className={styles.subcategory_name}
+                        className={styles.subcategoryName}
                         key={subcategory.id}
                         onClick={() => handleNavigateToSubcategoryPage(subcategory.id)}
                     >
@@ -97,7 +97,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
             {subcategories.length >= 6 && (
                 <button 
                 onClick={handleNavigateToCategoryPage} 
-                className={styles.more_btn}>See More</button>
+                className={styles.moreBtn}>See More</button>
             )}
         </div>
     );

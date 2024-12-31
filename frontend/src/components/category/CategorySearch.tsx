@@ -23,9 +23,6 @@ const CategorySearch: React.FC<CategorySearchProps> = ( { searchWord, setSearchW
             <div className={styles.search_container}>
                 <input type="text" className={styles.search_box}value={searchWord} onChange={handleSearch} placeholder="サブカテゴリ検索"/>
             </div>
-            <div className={styles.search_container}>
-                <input type="text" className={styles.search_box}value={searchWord} onChange={handleSearch} placeholder="カテゴリ or サブカテゴリ検索"/>
-            </div>
         </div>
     </div>
   )
