@@ -124,8 +124,8 @@ def git_push_json_file():
     repo.git.checkout('main') # Switch back to the main branch
         
     
-    if repo.git.stash('list'):
-        repo.git.stash('pop')
+    # if repo.git.stash('list'):
+    #     repo.git.stash('pop')
     
     if 'backup/json' in repo.branches:
         repo.git.branch('-D', 'bsackup/json')  # D
