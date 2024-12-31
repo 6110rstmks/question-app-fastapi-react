@@ -147,7 +147,24 @@
                 },
                 {
                     "name": "Aurora",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "amazon auroraにはリードレプリカが存在するが、amazon RDSはリードレプリカの機能は持ち合わせているか",
+                            "answer": [
+                                "持ち合わせている。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "auroraはスループットが高いことで有名だが、どのようにして高いことをawsは謳っているか",
+                            "answer": [
+                                "Mysqlの5倍のスループット、postgresqlの3倍のスループット"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "EC2 インスタンス",
@@ -501,6 +518,14 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "3値論理",
+                    "questions": []
+                },
+                {
+                    "name": "key",
+                    "questions": []
                 }
             ]
         },
