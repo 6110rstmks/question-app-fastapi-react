@@ -1,11 +1,13 @@
 .search_section {
     display: flex;
+    justify-content: center;
+
 }
 
 .search_container {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
+    /* margin: 20px; */
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .search_box {

@@ -3,10 +3,10 @@
 }
 
 .container {
-
-    margin-left: auto;
-    margin-right: auto;
     width: 95%;
+}
+.containerA {
+    display: flex;
 }
 
 .pagination_btn {
@@ -16,4 +16,15 @@
 
 .left_btn {
     margin-left: 2px;
+}
+
+.createCategoryBtn {
+    width: 88px;
+    height: 88px;
+    word-wrap: break-word;
+    color: #fff;
+    background-color: #9ACD32;
+    border-radius: 100vh;
+    cursor: pointer;
+    text-decoration: none;
 }

@@ -14,9 +14,16 @@ const Home: React.FC = () => {
 
     return (
         <>
-            <Link to="/createcategory">Create Category</Link>
-            <h1>残りの不正解のQuestion数をここに表示。{questionCount}</h1>
-            <SearchCategory searchWord={searchCategoryWord} setSearchWord={setSearchCategoryWord} page={page} setPage={setPage} />
+            <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
+            <h3>不正解のQuestion数：{questionCount}</h3>
+            <div className={styles.containerA}>
+                <Pagination
+                    currentPage={page}
+                    totalPages={pageCount}
+                    onPageChange={(newPage) => setPage(newPage)}
+                />
+                <SearchCategory searchWord={searchCategoryWord} setSearchWord={setSearchCategoryWord} page={page} setPage={setPage} />
+            </div>
             <div className={styles.container}>
                 <CategoryList categories={categories} />
             </div>
