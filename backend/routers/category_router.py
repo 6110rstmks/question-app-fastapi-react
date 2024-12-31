@@ -100,18 +100,34 @@ def git_push_json_file():
     repo.index.add([INDEX_ADD_FILE_PATH])
     is_untracked = INDEX_ADD_FILE_PATH not in repo.git.ls_files().splitlines()
     
-    if 'backup/json' not in repo.branches:
-        repo.git.checkout('HEAD', b='backup/json')  # Create and switch to the new branch
-    else:
-        repo.git.checkout('backup/json')  #
+
+    # if repo.is_dirty(untracked_files=True):
+    #     repo.git.stash('push', '-m', 'Save current changes before branch switch')
     
+    if 'bsackup/json' not in repo.branches:
+        repo.git.checkout('HEAD', b='bsackup/json')  # Create and switch to the new branch
+        print(2221111)
+    # else:
+    #     repo.git.checkout('backup/json')  #
+        
+    print(287297)
+
     if repo.git.diff(INDEX_ADD_FILE_PATH) or is_untracked:  
         # Check if there are unstaged changes for the file
-        repo.index.add([INDEX_ADD_FILE_PATH])
+        # repo.index.add([INDEX_ADD_FILE_PATH])
         repo.index.commit("Export categories data")
         origin = repo.remote(name="origin")
         
-        origin.push('backup/json')
+        origin.push('bsackup/json')
+        # origin.push()
         
     repo.git.checkout('main') # Switch back to the main branch
+        
+    
+    if repo.git.stash('list'):
+        repo.git.stash('pop')
+    
+    if 'backup/json' in repo.branches:
+        repo.git.branch('-D', 'bsackup/json')  # D
+
 

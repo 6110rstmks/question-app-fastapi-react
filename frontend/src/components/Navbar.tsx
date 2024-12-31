@@ -29,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
             link.href = url;
     
             // ファイル名を設定（バックエンド側で指定した名前と一致させる）
-            link.download = "categories.json";
+            link.download = "categories_export4.json";
     
             // ダウンロードをトリガー
             document.body.appendChild(link);
