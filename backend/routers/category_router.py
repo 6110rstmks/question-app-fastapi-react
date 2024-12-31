@@ -81,7 +81,7 @@ async def get_exported_json(db: DbDependency):
         return {"error": "File not found"}
     
     # Return the file as a response
-    return FileResponse(FILE_PATH, media_type="application/json", filename="data_export.json")
+    return FileResponse(FILE_PATH, media_type="application/json", filename="categories_export4.json")
 
 
 @router.post("/import", status_code=status.HTTP_201_CREATED)
