@@ -488,6 +488,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "having clause",
+                    "questions": [
+                        {
+                            "problem": "having clauseを応用して何ができるか",
+                            "answer": [
+                                "歯抜けのデータを探すことができる。"
+                            ],
+                            "memo": "https://qiita.com/ryosuketter/items/8d41db1148ee8be6ddc3\n",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
