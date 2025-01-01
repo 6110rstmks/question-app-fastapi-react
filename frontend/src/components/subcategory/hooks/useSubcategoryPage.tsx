@@ -2,8 +2,12 @@ import { useEffect, useState } from 'react'
 import { fetchSubcategory } from '../../../api/SubcategoryAPI'
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
+import { Category } from '../../../types/Category'
 
-export const useSubcategoryPage = (subcategoryId: number) => {
+export const useSubcategoryPage = (
+    subcategoryId: number,
+    category: Category
+) => {
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const [questions, setQuestions] = useState<Question[]>([]);
 
@@ -19,6 +23,11 @@ export const useSubcategoryPage = (subcategoryId: number) => {
             const data2 = await fetchSubcategory(subcategoryId);
             setSubcategoryName(data2.name)
         })();
+
+        if (category) {
+            localStorage.setItem('categoryInfo', JSON.stringify(category));
+        }
+
     }, [subcategoryId]);
     return { subcategoryName, setSubcategoryName, questions, setQuestions }
 }

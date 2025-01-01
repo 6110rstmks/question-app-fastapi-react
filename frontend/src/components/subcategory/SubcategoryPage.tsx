@@ -7,9 +7,9 @@ import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
 import { updateSubcategoryName } from '../../api/SubcategoryAPI';
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
+import { Category } from '../../types/Category';
 interface LocationState {
-    category_id: number;
-    category_name: string;
+    category: Category
 }
 
 const SubcategoryPage: React.FC = () => {
@@ -18,8 +18,8 @@ const SubcategoryPage: React.FC = () => {
 
     const location = useLocation()
     const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
-    const { category_id, category_name } = location.state as LocationState;
-    const { subcategoryName, setSubcategoryName, questions, setQuestions } = useSubcategoryPage(subcategoryId)
+    const category = location.state as Category;
+    const { subcategoryName, setSubcategoryName, questions, setQuestions } = useSubcategoryPage(subcategoryId, location.state)
     
     // サブカテゴリ名の編集モードの状態を管理
     // ダブルクリックでサブカテゴリ名の編集モードに切り替える
@@ -59,10 +59,10 @@ const SubcategoryPage: React.FC = () => {
     const handleNavigateToQuestionPage = (question_id: number) => {
         navigate(`/question/${question_id}`, { 
             state: {
-                category_id: category_id,
+                category_id: category.id,
                 subcategory_id: subcategory_id,
                 subcategoryName: subcategoryName, 
-                categoryName: category_name 
+                categoryName: category.name 
             } 
         });
     }
@@ -101,7 +101,7 @@ const SubcategoryPage: React.FC = () => {
                 contentLabel="Example Modal"
             >
                 <QuestionCreate 
-                    category_id={category_id} 
+                    category_id={category.id} 
                     subcategory_id={subcategoryId} 
                     setModalIsOpen={setModalIsOpen}
                     setQuestions={setQuestions}
@@ -109,7 +109,9 @@ const SubcategoryPage: React.FC = () => {
             </Modal>
             <div className={styles.question_container}>
                 {questions.map((question) => (
-                    <div className={styles.question_box} key={question.id}>
+                    <div 
+                    className={`${styles.question_box} ${question.is_correct ? styles.correct : styles.incorrect}`} 
+                    key={question.id}>
                         <h3 className={styles.problem_text} onClick={() => handleNavigateToQuestionPage(question.id)}>
                             {question.problem}
                         </h3>

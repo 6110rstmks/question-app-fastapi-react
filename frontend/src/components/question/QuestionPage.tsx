@@ -10,7 +10,6 @@ import { fetchQuestion, updateIsCorrect, deleteQuestion } from '../../api/Questi
 
 const QuestionPage: React.FC = () => {
     const location = useLocation()
-    // const { category_id, subcategory_id, subcategoryName, categoryName } = location.state || {};
     const navigate = useNavigate()
     const { question_id } = useParams<{ question_id: string }>();
     const questionId = Number(question_id)

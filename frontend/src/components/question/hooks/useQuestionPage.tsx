@@ -20,6 +20,8 @@ export const useQuestionPage = (
         })();
 
         // カテゴリ情報をローカルストレージに保存
+        // ローカルストレージに保存する理由は、リロード時にカテゴリ情報が消えないようにするため
+        // リロードした場合、QuestionPageからカテゴリ情報を取得できないため、カテゴリ情報はローカルストレージから取得する
         if (initialCategoryInfo) {
             setCategoryInfo(initialCategoryInfo);
             localStorage.setItem('categoryInfo', JSON.stringify(initialCategoryInfo));
