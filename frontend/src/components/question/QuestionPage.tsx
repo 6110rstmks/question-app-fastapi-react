@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
@@ -10,14 +10,17 @@ import { fetchQuestion, updateIsCorrect, deleteQuestion } from '../../api/Questi
 
 const QuestionPage: React.FC = () => {
     const location = useLocation()
-    const { category_id, subcategory_id, subcategoryName, categoryName } = location.state || {};
+    // const { category_id, subcategory_id, subcategoryName, categoryName } = location.state || {};
     const navigate = useNavigate()
     const { question_id } = useParams<{ question_id: string }>();
     const questionId = Number(question_id)
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
     const [changeModalIsOpen, setChangeModalIsOpen] = useState<boolean>(false);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
-    const { question, setQuestion } = useQuestionPage(questionId);
+
+    const { question, setQuestion, categoryInfo, setCategoryInfo } = useQuestionPage(questionId, location.state);
+    const { category_id, subcategory_id, subcategoryName, categoryName } = categoryInfo;
+
 
     const handleDeleteQuestion = async () => {
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
@@ -32,7 +35,17 @@ const QuestionPage: React.FC = () => {
         await updateIsCorrect(question!); // API コール
         const data = await fetchQuestion(question!.id); // データをリフレッシュ
         setQuestion(data)
-  };
+    }
+
+    // ページ遷移時にカテゴリ情報をローカルストレージに保存
+    useEffect(() => {
+      if (location.state) {
+          const { category_id, subcategory_id, subcategoryName, categoryName } = location.state;
+          const newCategoryInfo = { category_id, subcategory_id, subcategoryName, categoryName };
+          setCategoryInfo(newCategoryInfo);
+          localStorage.setItem('categoryInfo', JSON.stringify(newCategoryInfo));
+      }
+    }, [location.state]);
 
   return (
       <>
@@ -79,6 +92,7 @@ const QuestionPage: React.FC = () => {
             </div>
           </div>
           </div>
+          <button>サブカテゴリ内のQuestion一覧に戻る。</button>
           <div className={styles.question_actions}>
             <button onClick={handleDeleteQuestion} className={styles.delete}>
                 DELETE
@@ -96,8 +110,10 @@ const QuestionPage: React.FC = () => {
           <Modal isOpen={changeModalIsOpen} contentLabel="Example Modal">
             <ChangeCategorySubcategory
               setModalIsOpen={setEditModalIsOpen}
+              subcategoryName={subcategoryName}
               question={question}
               setQuestion={setQuestion}
+              categoryId={category_id}
             />
           </Modal>
         </div>

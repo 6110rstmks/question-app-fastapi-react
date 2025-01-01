@@ -8,7 +8,8 @@ import { fetchQuestionCount } from "../api/QuestionAPI"
 
 export const useCategories = (page: number, limit: number, searchCategoryWord: string) => {
     const [categories, setCategories] = useState<Category[]>([])
-    // アプリの初期状態はカテゴリがまだ作成されていないため、ページ数はnull
+
+    // アプリの初期状態の場合はカテゴリがまだ作成されていないためpageCount,questionCountはnull
     const [pageCount, setPageCount] = useState<number | null>(null)
     const [questionCount, setQuestionCount] = useState<number | null>(null)
     const navigate = useNavigate()
@@ -20,16 +21,12 @@ export const useCategories = (page: number, limit: number, searchCategoryWord: s
             return;
         }
         const loadPageCount = async () => {
-            try {
-                const count = await fetchPageCount();
-                console.log(count)
-                setPageCount(count);
-                
-                const data = await fetchQuestionCount()
-                setQuestionCount(data)
-            } catch (error) {
-                console.error(error);
-            }
+            const count = await fetchPageCount();
+            setPageCount(count);
+            
+            const data = await fetchQuestionCount()
+            setQuestionCount(data)
+
         };
         loadPageCount();
     }, []);

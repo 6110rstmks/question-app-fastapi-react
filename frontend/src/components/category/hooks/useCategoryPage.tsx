@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
-import { fetchSubcategories } from "../../../api/SubcategoryAPI";
+import { fetchSubcategoriesByCategoryId } from "../../../api/SubcategoryAPI";
 import { fetchCategory } from "../../../api/CategoryAPI";
 import { Category } from "../../../types/Category";
 
@@ -16,7 +16,7 @@ export const useCategoryPage = (categoryId: number) => {
         window.scrollTo(0, 0);
 
         (async () => {
-            const subcategories = await fetchSubcategories(categoryId);
+            const subcategories = await fetchSubcategoriesByCategoryId(categoryId);
             setSubcategories(subcategories);
 
             const category = await fetchCategory(categoryId);

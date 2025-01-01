@@ -39,7 +39,6 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
             link.remove();
             window.URL.revokeObjectURL(url);
     
-            console.log("File downloaded successfully.");
         } catch (error) {
             console.error("Error exporting file:", error);
         }

@@ -7,7 +7,7 @@ export const fetchSubcategoriesForHomePage = async (category_id: number) => {
     throw new Error("Failed to fetch subcategories");
 };
 
-export const fetchSubcategories = async (category_id: number) => {
+export const fetchSubcategoriesByCategoryId = async (category_id: number) => {
     const response = await fetch(`http://localhost:8000/subcategories/category_id/${category_id}/`);
     if (response.ok) {
         return response.json();
