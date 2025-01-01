@@ -12,6 +12,7 @@ export const useCategories = (page: number, limit: number, searchCategoryWord: s
     // アプリの初期状態の場合はカテゴリがまだ作成されていないためpageCount,questionCountはnull
     const [pageCount, setPageCount] = useState<number | null>(null)
     const [questionCount, setQuestionCount] = useState<number | null>(null)
+    
     const navigate = useNavigate()
 
     useEffect(() => {

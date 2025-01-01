@@ -14,10 +14,7 @@ const CategoryPage = () => {
 
     const handleNavigateToSubcategoryPage = (subcategory_id: number) => {
         navigate(`/subcategory/${subcategory_id}`, { 
-            state: { 
-                category_id: category_id, 
-                category_name: category?.name 
-            } 
+            state: category
         });
     };
 

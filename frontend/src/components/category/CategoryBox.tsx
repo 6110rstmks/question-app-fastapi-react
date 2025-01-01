@@ -46,10 +46,6 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
 
     const handleNavigateToSubcategoryPage = (subcategoryId: number) => {
         navigate(`/subcategory/${subcategoryId}`, {
-            // state: {
-            //     category_id: category.id,
-            //     category_name: category.name,
-            // },
             state: category
         });
     }

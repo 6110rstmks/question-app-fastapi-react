@@ -21,6 +21,8 @@ const QuestionCreate: React.FC<QuestionCreateProps> = ({category_id, subcategory
     useEffect(() => {
         // 直前の履歴に現在のページを追加
         window.history.pushState(null, '', window.location.href)
+
+        console.log(category_id)
     
         // 直前の履歴と現在のページのループ
         window.addEventListener('popstate', blockBrowserBack)
