@@ -5,16 +5,7 @@
             "subcategories": [
                 {
                     "name": "IAM",
-                    "questions": [
-                        {
-                            "problem": "どうして複数のポリシーをひとつにまとめてroleとして扱うのか.",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "複数のポリシーをひとつにまとめてroleとして扱うことで、複数のポリシーをひとつのエンティティに紐づけることができるため、管理がしやすくなる",
-                            "is_correct": false
-                        }
-                    ]
+                    "questions": []
                 },
                 {
                     "name": "fargate",
@@ -52,7 +43,7 @@
                                 "S3"
                             ],
                             "memo": "hhhhh",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -138,6 +129,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "fsd",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -159,7 +158,23 @@
                         {
                             "problem": "auroraはスループットが高いことで有名だが、どのようにして高いことをawsは謳っているか",
                             "answer": [
-                                "Mysqlの5倍のスループット、postgresqlの3倍のスループット"
+                                "Mysqlの5倍のスループット、postgresqlの3倍のスループット   つまりMySQLの最大5倍、PostgreSQLの最大3倍高速"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "RDSではリードレプリカを最大5個まで作成できるが、Auroraではリードレプリカを何個作成できるか",
+                            "answer": [
+                                "15"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "aurora serverlessはどのような特徴があるか",
+                            "answer": [
+                                "webアプリケーションのニーズに応じて、自動的に起動、シャットダウン、および自動でDBインスタンスをきどうする"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -168,7 +183,16 @@
                 },
                 {
                     "name": "EC2 インスタンス",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "1年間または3年間の長期利用を予約することで費用を抑えることができるのはリザーブドインスタンスかオンデマンドインスタンスか。",
+                            "answer": [
+                                "リザーブドインスタンす　→  名前の意味通り"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "ELB",
@@ -246,7 +270,7 @@
                                 "infrequency access.  低頻度アクセス用のストレージ"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "S3 glacierの種類を3つ述べてください",
@@ -260,6 +284,14 @@
                             "problem": "glacierについて、なぜデータの長期保存に向いているのか",
                             "answer": [
                                 "s3のストレージクラスの中では最もコストが安いから"
+                            ],
+                            "memo": "",
+                            "is_correct": true
+                        },
+                        {
+                            "problem": "データの使用頻度が不明であり、アクセスされるデータとアクセスされないデータが混在している場合はどのs3ストレージクラスを使用するか",
+                            "answer": [
+                                "s3 intelligent-tiering\n"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -292,6 +324,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "route53のヘルスチェエクは何をする",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -319,6 +359,19 @@
                                 "クラスタ　→ 一番外の大枠"
                             ],
                             "memo": "ECSの基本について",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "aws organization",
+                    "questions": [
+                        {
+                            "problem": "aws organizationの目的",
+                            "answer": [
+                                " 複数のawsアカウントを一元管理する"
+                            ],
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
@@ -526,6 +579,19 @@
                 {
                     "name": "key",
                     "questions": []
+                },
+                {
+                    "name": "パーティション",
+                    "questions": [
+                        {
+                            "problem": "パーティションを使用するとどうなるのか？",
+                            "answer": [
+                                "検索が速くなる"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
