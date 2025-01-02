@@ -66,6 +66,8 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
             return;
         }
 
+        alert('所属するサブカテゴリが変更されました。')
+        setModalIsOpen(false);
     }
 
     return (

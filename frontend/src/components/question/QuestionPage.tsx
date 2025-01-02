@@ -108,7 +108,7 @@ const QuestionPage: React.FC = () => {
           </Modal>
           <Modal isOpen={changeModalIsOpen} contentLabel="Example Modal">
             <ChangeCategorySubcategory
-              setModalIsOpen={setEditModalIsOpen}
+              setModalIsOpen={setChangeModalIsOpen}
               subcategoryName={subcategoryName}
               question={question}
               setQuestion={setQuestion}
