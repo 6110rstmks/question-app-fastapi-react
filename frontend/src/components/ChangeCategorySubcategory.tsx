@@ -2,20 +2,20 @@ import React, { useEffect } from 'react'
 import { Question } from '../types/Question'
 import { Subcategory } from '../types/Subcategory'
 import { useState } from 'react'
-import { fetchSubcategoriesByCategoryId } from '../api/SubcategoryAPI'
+import { fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
 import { SubcategoryWithQuestionCount } from '../types/Subcategory'
 import { fetchSubcategoryQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 
 interface ChangeCategorySubcategoryProps {
   setModalIsOpen: (isOpen: boolean) => void;
-  subcategoryName: string
+  setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithQuestionCount[]) => void;
   question?: Question;
   setQuestion: (question: Question) => void;
   categoryId: number;
 }
 
-const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({setModalIsOpen, subcategoryName, question, setQuestion, categoryId}) => {
+const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({setModalIsOpen, setSubcategoriesRelatedToQuestion, question, setQuestion, categoryId}) => {
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [selectedSubcategoryIds, setSelectedSubcategoryIds] = useState<number[]>([]);
 
@@ -68,6 +68,10 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
 
         alert('所属するサブカテゴリが変更されました。')
         setModalIsOpen(false);
+        
+        const data = await fetchSubcategoriesByQuestionId(question!.id);
+        console.log(data)
+        setSubcategoriesRelatedToQuestion(data);
     }
 
     return (

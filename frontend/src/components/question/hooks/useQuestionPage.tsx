@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Question } from '../../../types/Question'
 import { fetchQuestion } from '../../../api/QuestionAPI'
+import { fetchSubcategoriesByQuestionId } from '../../../api/SubcategoryAPI'
 import { Subcategory } from '../../../types/Subcategory'
 
 export const useQuestionPage = (
@@ -23,14 +24,7 @@ export const useQuestionPage = (
             const data: Question = await fetchQuestion(question_id);
             setQuestion(data);
 
-            const response = await fetch(`http://localhost:8000/subcategories/question_id/${question_id}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-            const data2 = await response.json();
-            console.log(data2)
+            const data2: Subcategory[] = await fetchSubcategoriesByQuestionId(question_id);
             setSubcategories(data2);
         })();
 
@@ -43,7 +37,7 @@ export const useQuestionPage = (
         }
     }, [question_id, initialCategoryInfo]);
 
-    return { subcategories, question, setQuestion, categoryInfo, setCategoryInfo };
+    return { subcategories, setSubcategories, question, setQuestion, categoryInfo, setCategoryInfo };
 }
 
 

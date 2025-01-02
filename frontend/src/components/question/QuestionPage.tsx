@@ -17,7 +17,7 @@ const QuestionPage: React.FC = () => {
     const [changeSubcategoryModalIsOpen, setChangeSubcategoryModalIsOpen] = useState<boolean>(false);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
-    const { subcategories, question, setQuestion, categoryInfo, setCategoryInfo } = useQuestionPage(questionId, location.state);
+    const { subcategories, setSubcategories, question, setQuestion, categoryInfo, setCategoryInfo } = useQuestionPage(questionId, location.state);
     const { category_id, subcategory_id, subcategoryName, categoryName } = categoryInfo;
 
     const handleDeleteQuestion = async () => {
@@ -120,7 +120,7 @@ const QuestionPage: React.FC = () => {
           <Modal isOpen={changeSubcategoryModalIsOpen} contentLabel="Example Modal">
             <ChangeCategorySubcategory
               setModalIsOpen={setChangeSubcategoryModalIsOpen}
-              subcategoryName={subcategoryName}
+              setSubcategoriesRelatedToQuestion={setSubcategories}
               question={question}
               setQuestion={setQuestion}
               categoryId={category_id}
