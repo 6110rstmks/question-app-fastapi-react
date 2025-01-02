@@ -18,8 +18,7 @@ const SubcategoryPage: React.FC = () => {
 
     const location = useLocation()
     const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
-    const category = location.state as Category;
-    const { subcategoryName, setSubcategoryName, questions, setQuestions } = useSubcategoryPage(subcategoryId, location.state)
+    const { subcategoryName, setSubcategoryName, questions, setQuestions, categoryI } = useSubcategoryPage(subcategoryId, location.state)
     
     // サブカテゴリ名の編集モードの状態を管理
     // ダブルクリックでサブカテゴリ名の編集モードに切り替える
@@ -59,13 +58,20 @@ const SubcategoryPage: React.FC = () => {
     const handleNavigateToQuestionPage = (question_id: number) => {
         navigate(`/question/${question_id}`, { 
             state: {
-                category_id: category.id,
+                category_id: categoryI.id,
                 subcategory_id: subcategory_id,
                 subcategoryName: subcategoryName, 
-                categoryName: category.name 
+                categoryName: categoryI.name 
             } 
         });
     }
+    
+    useEffect(() => {
+        if (location.state) {
+            const category = location.state;
+            localStorage.setItem('category', JSON.stringify(category));
+        }
+    }, [location.state]);
 
     return (
         <div className={styles.subcategory_page}>
@@ -101,7 +107,7 @@ const SubcategoryPage: React.FC = () => {
                 contentLabel="Example Modal"
             >
                 <QuestionCreate 
-                    category_id={category.id} 
+                    category_id={categoryI.id} 
                     subcategory_id={subcategoryId} 
                     setModalIsOpen={setModalIsOpen}
                     setQuestions={setQuestions}

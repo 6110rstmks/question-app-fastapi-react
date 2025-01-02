@@ -6,11 +6,16 @@ import { Category } from '../../../types/Category'
 
 export const useSubcategoryPage = (
     subcategoryId: number,
-    category: Category
+    category: Category,
 ) => {
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const [questions, setQuestions] = useState<Question[]>([]);
 
+    const [categoryI, setCategoryI] = useState(() => {
+        
+        const saved = localStorage.getItem('categoryInfo');
+        return saved ? JSON.parse(saved) : {};
+    })
     useEffect(() => {
         // CategoryBoxからSubcategoryPageに移動する際に、CategoryBoxがページの下の方の場合、
         // SubcategoryPageに移動した際にページの一番上にスクロールする。
@@ -29,6 +34,6 @@ export const useSubcategoryPage = (
         }
 
     }, [subcategoryId]);
-    return { subcategoryName, setSubcategoryName, questions, setQuestions }
+    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryI }
 }
 
