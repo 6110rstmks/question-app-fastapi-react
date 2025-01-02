@@ -4,6 +4,9 @@ import { Subcategory } from '../types/Subcategory'
 import { useState } from 'react'
 import { fetchSubcategoriesByCategoryId } from '../api/SubcategoryAPI'
 import { SubcategoryWithQuestionCount } from '../types/Subcategory'
+import { fetchSubcategoryQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
+import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
+
 interface ChangeCategorySubcategoryProps {
   setModalIsOpen: (isOpen: boolean) => void;
   subcategoryName: string
@@ -14,35 +17,54 @@ interface ChangeCategorySubcategoryProps {
 
 const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({setModalIsOpen, subcategoryName, question, setQuestion, categoryId}) => {
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
-    const [selectedSubcategories, setSelectedSubcategories] = useState<number[]>([]);
+    const [selectedSubcategoryIds, setSelectedSubcategoryIds] = useState<number[]>([]);
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value, checked } = event.target;
         const subcategoryId = parseInt(value, 10);
 
-        setSelectedSubcategories((prev) =>
+        setSelectedSubcategoryIds((prev) =>
             checked
                 ? [...prev, subcategoryId] // チェックされた場合、IDを追加
                 : prev.filter((id) => id !== subcategoryId) // チェックが外れた場合、IDを削除
         );
+        console.log(selectedSubcategoryIds)
     };
 
     useEffect(() => {
         (async () => {
-            const data = await fetchSubcategoriesByCategoryId(categoryId);
+            const data: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId);
             setSubcategories(data);
-        
-            // 初期表示で`subcategoryName`が一致するものをチェック
-            const matchedSubcategory = data.find(
-                (subcategory: Subcategory) => subcategory.name === subcategoryName
-            );
-            if (matchedSubcategory) {
-                setSelectedSubcategories([matchedSubcategory.id]);
-            }
-        })();
-      }, [categoryId, ]);
 
-    const handleChangeSubcategory = () => {
+            const data2 = await fetchSubcategoryQuestionsByQuestionId(question!.id);
+            console.log(data2)
+        
+            setSelectedSubcategoryIds(data2.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategory_id));
+        })();
+      }, [categoryId]);
+
+    const handleChangeBelongingToSubcategory = async () => {
+        // チェックボックスが全て外れている場合、警告
+        if (selectedSubcategoryIds.length === 0) {
+            alert('サブカテゴリを選択してください');
+            return;
+        }
+
+        const response = await fetch(`http://localhost:8000/questions/change_belongs_to_subcategoryId`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                subcategory_ids: selectedSubcategoryIds,
+                question_id: question?.id
+            })
+        });
+
+        if (!response.ok) {
+            alert('Failed to update the question.');
+            return;
+        }
 
     }
 
@@ -56,7 +78,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
                         type="checkbox"
                         name="subcategory"
                         value={subcategory.id}
-                        checked={selectedSubcategories.includes(subcategory.id)} // 初期チェック状態
+                        checked={selectedSubcategoryIds.includes(subcategory.id)} // 初期チェック状態
                         onChange={handleCheckboxChange}
                         />
                         {subcategory.name}
@@ -64,7 +86,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
                 ))}
     
             </div>
-            <button onClick={handleChangeSubcategory}>変更する</button>
+            <button onClick={handleChangeBelongingToSubcategory}>変更する</button>
         </div>
     )
 }

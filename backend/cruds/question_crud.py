@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select, update, func
-from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate
+from sqlalchemy import select, update, func, and_
+from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
 from models import Category, Subcategory, Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
@@ -8,10 +8,6 @@ from . import subcategory_question_crud as subcategory_question_cruds
 
 def find_all(db: Session):
     return db.query(Question).all()
-
-def find_all_in_question(db: Session, question_id: int):
-    query1 = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
-    return db.execute(query1).scalars().all()
 
 def find_all_questions_in_category(db: Session, category_id: int):
     query = select(Question).where(CategoryQuestion.category_id == category_id)
@@ -23,10 +19,11 @@ def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
     query = select(Question).where(Question.id.in_(question_ids))
     return db.execute(query).scalars().all()
 
-def find_by_id(db: Session, id: int):
+def find_question_by_id(db: Session, id: int):
     query = select(Question).where(Question.id == id)
     return db.execute(query).scalars().first()
 
+# これはどう考えても、category_crudに書くべきだと思う
 def find_category_by_question_id(db: Session, question_id: int):
     query = select(CategoryQuestion).where(CategoryQuestion.question_id == question_id)
     categoryquestion = db.execute(query).scalars().first()
@@ -73,11 +70,11 @@ def update2(db: Session, id: int, question_update: QuestionUpdate):
     )
     db.execute(stmt)
     db.commit()
-    updated_subcategory = find_by_id(db, id)
+    updated_subcategory = find_question_by_id(db, id)
     return updated_subcategory
 
 def update_correct_flg(db: Session, id: int, question_update: QuestionUpdate):
-    question = find_by_id(db, id)
+    question = find_question_by_id(db, id)
     if question is None:
         return None
     
@@ -91,7 +88,7 @@ def update_correct_flg(db: Session, id: int, question_update: QuestionUpdate):
     return question
 
 def update_is_correct(db: Session, id: int, question_is_correct_update: QuestionIsCorrectUpdate):
-    question = find_by_id(db, id)
+    question = find_question_by_id(db, id)
     if question is None:
         return None
     
@@ -105,7 +102,7 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     return question
 
 def delete(db: Session, id: int):
-    question = find_by_id(db, id)
+    question = find_question_by_id(db, id)
     if question is None:
         return None
     
@@ -115,11 +112,6 @@ def delete(db: Session, id: int):
     db.commit()
     return question
 
-# あるサブカテゴリに紐づくQuestionの数を取得する（使用されていない）
-# def get_question_count_in_subcategory(db: Session, subcategory_id: int):
-#     query = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
-#     return db.execute(query).scalars().count()
-
 def get_question_count(db: Session):
     count = db.scalar(
                     select(func.count()).
@@ -127,4 +119,31 @@ def get_question_count(db: Session):
                 )
     
     return int(count)
+
+def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate):
+
+    # チェックボックスが外された場合は、SubcategoryQuestionから削除する。
+    current_subcategories = db.query(SubcategoryQuestion).filter_by(question_id=changeSubcategoryUpdate.question_id).all()
+    print(current_subcategories)
+
+    for subcategory_id in changeSubcategoryUpdate.subcategory_ids:
+        # 重複チェック
+        existing_record = db.query(SubcategoryQuestion).filter_by(
+            subcategory_id=subcategory_id,
+            question_id=changeSubcategoryUpdate.question_id
+        ).first()
+        
+        # レコードが存在しない場合のみ挿入
+        if not existing_record:
+            new_subcategory_question = SubcategoryQuestion(
+                subcategory_id=subcategory_id, 
+                question_id=changeSubcategoryUpdate.question_id
+            )
+            db.add(new_subcategory_question)
+            db.commit()
+
+    return changeSubcategoryUpdate.subcategory_ids
+
     
+
+

@@ -21,7 +21,10 @@ class QuestionUpdate(BaseModel):
     
 class QuestionIsCorrectUpdate(BaseModel):
     is_correct: bool = Field(default=False, example=False)
-
+    
+class QuestionBelongsToSubcategoryIdUpdate(BaseModel):
+    subcategory_ids: List[int] = Field(..., example=[1, 2, 3])
+    question_id: int = Field(gt=0, example=1)
 class QuestionResponse(BaseModel):
     id: int = Field(gt=0, examples=[1])
     problem: str = Field(min_length=2, max_length=99, examples=["列志向データベースの強みを説明せよ"], description="問題文")

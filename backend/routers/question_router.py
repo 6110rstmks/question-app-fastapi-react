@@ -3,9 +3,10 @@ from fastapi import APIRouter, Path, Query, HTTPException, Depends, FastAPI, Req
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud, question_crud
-from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate
+from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate, QuestionBelongsToSubcategoryIdUpdate
 from schemas.category import CategoryResponse
 from schemas.subcategory import SubcategoryResponse
+from schemas.subcategory_question import SubcategoryQuestionResponse
 # from schema.auth import DecodedToken
 from database import get_db
 from cruds import subcategory_crud as subcategory_cruds
@@ -17,6 +18,13 @@ DbDependency = Annotated[Session, Depends(get_db)]
 router = APIRouter(prefix="/questions", tags=["Questions"])
 app = FastAPI()
 
+@router.put("/change_belongs_to_subcategoryId", response_model=list[int], status_code=status.HTTP_200_OK)
+async def change_belongs_to_subcategoryId(
+    db: DbDependency,
+    changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate
+):
+    return question_crud.change_belongs_to_subcategoryId(db, changeSubcategoryUpdate)
+
 # Question数を取得するエンドポイント
 @router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_count(db: DbDependency):
@@ -24,7 +32,10 @@ async def get_question_count(db: DbDependency):
 
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
-async def create(db: DbDependency, question_create: QuestionCreate):
+async def create(
+    db: DbDependency, 
+    question_create: QuestionCreate
+):
     found_category = category_crud.find_by_id(db, question_create.category_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
@@ -67,8 +78,8 @@ async def find_all(
 
 # Question IDからQuestionを取得するエンドポイント
 @router.get("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
-async def find_by_id(db: DbDependency, id: int = Path(gt=0)):
-    found_question = question_crud.find_by_id(db, id)
+async def find_question_by_id(db: DbDependency, id: int = Path(gt=0)):
+    found_question = question_crud.find_question_by_id(db, id)
     if not found_question:
         raise HTTPException(status_code=404, detail="Question not found")
     return found_question

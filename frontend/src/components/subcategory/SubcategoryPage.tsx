@@ -7,10 +7,6 @@ import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
 import { updateSubcategoryName } from '../../api/SubcategoryAPI';
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
-import { Category } from '../../types/Category';
-interface LocationState {
-    category: Category
-}
 
 const SubcategoryPage: React.FC = () => {
     const { subcategory_id } = useParams<{ subcategory_id: string }>();
@@ -68,8 +64,8 @@ const SubcategoryPage: React.FC = () => {
     
     useEffect(() => {
         if (location.state) {
-            const category = location.state;
-            localStorage.setItem('category', JSON.stringify(category));
+            const categoryI = location.state;
+            localStorage.setItem('category', JSON.stringify(categoryI));
         }
     }, [location.state]);
 
@@ -86,7 +82,6 @@ const SubcategoryPage: React.FC = () => {
                     <input
                         type="text"
                         value={subcategoryName}
-                        // onChange={handleChange}
                         onChange={(e) => setSubcategoryName(e.target.value)}
                         onKeyPress={handleKeyPress}
                         onBlur={() => setIsEditing(false)} // フォーカスを外すと編集モードを終了
@@ -94,7 +89,6 @@ const SubcategoryPage: React.FC = () => {
                     />
                 ) : (
                     <h1 
-                        // onDoubleClick={handleDoubleClick}
                         onDoubleClick={() => setIsEditing(true)}
                         >{subcategoryName}
                     </h1>
@@ -128,7 +122,10 @@ const SubcategoryPage: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <button className={styles.display_incorrected_question_btn}>未正解の問題に絞って表示する</button>
+            <button 
+                className={styles.display_incorrected_question_btn}
+                >未正解の問題に絞って表示する
+            </button>
         </div>
     );
 };
