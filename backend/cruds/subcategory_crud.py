@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func
 from schemas.subcategory import SubcategoryCreate, SubcategoryUpdate
-from models import Subcategory, Question
+from models import Subcategory, SubcategoryQuestion
 from . import question_crud as question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 from fastapi import HTTPException
@@ -24,10 +24,23 @@ def find_by_id(db: Session, id: int):
     query = select(Subcategory).where(Subcategory.id == id)
     return db.execute(query).scalars().first()
 
+def find_subcategories_by_question_id(db: Session, question_id: int):
+    query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
+    results = db.execute(query).scalars().all()
+    
+    subcategory_ids = []
+    for result in results:
+        print(result.subcategory_id)
+        subcategory_ids.append(result.subcategory_id)
+        
+    query2 = select(Subcategory).where(Subcategory.id.in_(subcategory_ids))
+        
+    return db.execute(query2).scalars().all()
+
 def find_by_name(db: Session, name: str):
     return db.query(Subcategory).filter(Subcategory.name.like(f"%{name}%")).all()
 
-def create(db: Session, subcategory_create: SubcategoryCreate):
+def create_subcategory(db: Session, subcategory_create: SubcategoryCreate):
 
     existing_subcategory = (
         db.query(Subcategory)
@@ -58,7 +71,7 @@ def update2(db: Session, id: int, subcategory_update: SubcategoryUpdate):
     updated_subcategory = find_by_id(db, id)
     return updated_subcategory
 
-def delete(db: Session, id: int):
+def delete_subcategory(db: Session, id: int):
     subcategory = find_by_id(db, id)
     if subcategory is None:
         return None
@@ -68,7 +81,6 @@ def delete(db: Session, id: int):
     #     db.delete(subcategoryquestion)
     
     questions = question_cruds.find_all_questions_in_subcategory(db, id)
-    
     
     for question in questions:
         question_cruds.delete(db, question.id)

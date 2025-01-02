@@ -20,6 +20,13 @@ router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
 async def find_all(db: DbDependency):
     return subcategory_crud.find_all(db)
 
+@router.get("/question_id/{question_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
+async def find_subcategories_by_question_id(
+    db: DbDependency,
+    question_id: int = Path(gt=0)
+):
+    return subcategory_crud.find_subcategories_by_question_id(db, question_id)
+
 @router.get("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def find_by_id(
     db: DbDependency, 
@@ -49,12 +56,12 @@ async def find_by_name(
 
 @router.post("/", response_model=SubcategoryResponse, status_code=status.HTTP_201_CREATED)
 # async def create(db: DbDependency, category_id: int, subcategory_create: SubcategoryCreate):
-async def create(db: DbDependency, subcategory_create: SubcategoryCreate):
+async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCreate):
     found_category = category_crud.find_by_id(db, subcategory_create.category_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
     pass
-    return subcategory_crud.create(db, subcategory_create)
+    return subcategory_crud.create_subcategory(db, subcategory_create)
 
 @router.put("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def update(
@@ -69,11 +76,11 @@ async def update(
 
 
 @router.delete("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
-async def delete(
+async def delete_subcategory(
     db: DbDependency,
     id: int = Path(gt=0)
 ):
-    deleted_item = subcategory_crud.delete(db, id)
+    deleted_item = subcategory_crud.delete_subcategory(db, id)
     if not deleted_item:
         raise HTTPException(status_code=404, detail="Item not deleted")
     return deleted_item

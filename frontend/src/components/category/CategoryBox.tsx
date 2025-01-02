@@ -62,10 +62,10 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                 <div className={styles.categoryName}>{category.name}</div>
                 <span>［{subcategories.length}］</span>
             </div>
-            <div className='inputField'>
+            <div className={styles.inputField}>
                 {showForm && (
                     <>
-                        <label>
+                        <label className={styles.inputField}>
                             サブカテゴリー名:
                             <input 
                             type="text" 

@@ -14,12 +14,11 @@ const QuestionPage: React.FC = () => {
     const { question_id } = useParams<{ question_id: string }>();
     const questionId = Number(question_id)
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
-    const [changeModalIsOpen, setChangeModalIsOpen] = useState<boolean>(false);
+    const [changeSubcategoryModalIsOpen, setChangeSubcategoryModalIsOpen] = useState<boolean>(false);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
-    const { question, setQuestion, categoryInfo, setCategoryInfo } = useQuestionPage(questionId, location.state);
+    const { subcategories, question, setQuestion, categoryInfo, setCategoryInfo } = useQuestionPage(questionId, location.state);
     const { category_id, subcategory_id, subcategoryName, categoryName } = categoryInfo;
-
 
     const handleDeleteQuestion = async () => {
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
@@ -36,6 +35,16 @@ const QuestionPage: React.FC = () => {
         setQuestion(data)
     }
 
+    // このQuestionPageに遷移した元のSubcategoryPage
+    const handleNavigateToPreviousSubcategoryPage = () => {
+        console.log(categoryName)
+        const category = { id: category_id, name: categoryName };
+
+        navigate(`/subcategory/${subcategory_id}`, {
+            state: category
+        });
+    }
+
     // ページ遷移時にカテゴリ情報をローカルストレージに保存
     useEffect(() => {
       if (location.state) {
@@ -48,14 +57,16 @@ const QuestionPage: React.FC = () => {
 
   return (
       <>
-        <div>
-            <Link to={`/category/${category_id}`}>{categoryName}</Link>
-            <span> ＞ </span>
-            <Link
-                to={`/subcategory/${subcategory_id}`}
-                state={{ category_id }}
-            >{subcategoryName}</Link>
-        </div>
+        {subcategories.map((subcategory) => (         
+            <div>
+                <Link to={`/category/${subcategory.category_id}`}>{categoryName}</Link>
+                <span> ＞ </span>
+                <Link
+                    to={`/subcategory/${subcategory.id}`}
+                    state={{ category_id }}
+                >{subcategory.name}</Link>
+            </div>
+        ))  }
         <div className={styles.question_box}>
             <div className={styles.question_header}>
                 <div className={styles.question_problem}>問題：{question?.problem}</div>
@@ -91,13 +102,13 @@ const QuestionPage: React.FC = () => {
             </div>
           </div>
           </div>
-          <button>サブカテゴリ内のQuestion一覧に戻る。</button>
+          <button onClick={handleNavigateToPreviousSubcategoryPage}>サブカテゴリ内のQuestion一覧に戻る。</button>
           <div className={styles.question_actions}>
             <button onClick={handleDeleteQuestion} className={styles.delete}>
                 DELETE
             </button>
             <button onClick={() => setEditModalIsOpen(true)}>編集</button>
-            <button onClick={() => setChangeModalIsOpen(true)}>カテゴリまたは、サブカテゴリを変更する</button>
+            <button onClick={() => setChangeSubcategoryModalIsOpen(true)}>カテゴリまたは、サブカテゴリを変更する</button>
           </div>
           <Modal isOpen={editModalIsOpen} contentLabel="Example Modal">
             <EditQuestion
@@ -106,9 +117,9 @@ const QuestionPage: React.FC = () => {
               setQuestion={setQuestion}
             />
           </Modal>
-          <Modal isOpen={changeModalIsOpen} contentLabel="Example Modal">
+          <Modal isOpen={changeSubcategoryModalIsOpen} contentLabel="Example Modal">
             <ChangeCategorySubcategory
-              setModalIsOpen={setChangeModalIsOpen}
+              setModalIsOpen={setChangeSubcategoryModalIsOpen}
               subcategoryName={subcategoryName}
               question={question}
               setQuestion={setQuestion}
