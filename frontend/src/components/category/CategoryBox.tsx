@@ -74,7 +74,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                             autoFocus
                             />
                         </label>
-                        <button onClick={handleAddSubcategory}>Submit</button>
+                        <button className={styles.submitBtn} onClick={handleAddSubcategory}>Submit</button>
                     </>
                 )}
             </div>
