@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreate';
@@ -8,13 +8,18 @@ import styles_common from "./common.module.css";
 import { updateSubcategoryName } from '../../api/SubcategoryAPI';
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
 
+interface locationState {
+    category_id: number;
+    category_name: string;
+}
+
 const SubcategoryPage: React.FC = () => {
     const { subcategory_id } = useParams<{ subcategory_id: string }>();
     const navigate = useNavigate();
 
     const location = useLocation()
     const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
-    const { subcategoryName, setSubcategoryName, questions, setQuestions, categoryI } = useSubcategoryPage(subcategoryId, location.state)
+    const { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo } = useSubcategoryPage(subcategoryId, location.state)
     
     // サブカテゴリ名の編集モードの状態を管理
     // ダブルクリックでサブカテゴリ名の編集モードに切り替える
@@ -54,20 +59,13 @@ const SubcategoryPage: React.FC = () => {
     const handleNavigateToQuestionPage = (question_id: number) => {
         navigate(`/question/${question_id}`, { 
             state: {
-                category_id: categoryI.id,
+                category_id: categoryInfo.id,
                 subcategory_id: subcategory_id,
                 subcategoryName: subcategoryName, 
-                categoryName: categoryI.name 
+                categoryName: categoryInfo.name 
             } 
         });
     }
-    
-    useEffect(() => {
-        if (location.state) {
-            const categoryI = location.state;
-            localStorage.setItem('category', JSON.stringify(categoryI));
-        }
-    }, [location.state]);
 
     return (
         <div className={styles.subcategory_page}>
@@ -78,6 +76,7 @@ const SubcategoryPage: React.FC = () => {
                 {isOn ? "答えを一括非表示" : "答えを一括表示"}
             </button>
             <div className={styles.subcategory_box}>
+            <span>{categoryInfo.name}＞</span>
             {isEditing ? (
                     <input
                         type="text"
@@ -88,9 +87,10 @@ const SubcategoryPage: React.FC = () => {
                         autoFocus
                     />
                 ) : (
-                    <h1 
-                        onDoubleClick={() => setIsEditing(true)}
-                        >{subcategoryName}
+                    <h1 >
+                        <span
+                            onDoubleClick={() => setIsEditing(true)}
+                        >{subcategoryName}</span>
                     </h1>
                 )}                
                 <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
@@ -101,7 +101,7 @@ const SubcategoryPage: React.FC = () => {
                 contentLabel="Example Modal"
             >
                 <QuestionCreate 
-                    category_id={categoryI.id} 
+                    category_id={categoryInfo.id} 
                     subcategory_id={subcategoryId} 
                     setModalIsOpen={setModalIsOpen}
                     setQuestions={setQuestions}

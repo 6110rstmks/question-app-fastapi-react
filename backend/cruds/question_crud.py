@@ -6,7 +6,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 
-def find_all(db: Session):
+def find_all_questions(db: Session):
     return db.query(Question).all()
 
 def find_all_questions_in_category(db: Session, category_id: int):
