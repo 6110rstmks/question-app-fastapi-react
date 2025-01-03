@@ -111,10 +111,12 @@ async def find_all_questions_in_subcategory(db: DbDependency, subcategory_id: in
 
 
 # Questionを削除するエンドポイント
-@router.delete("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
-async def delete(db: DbDependency, id: int = Path(gt=0)):
+@router.delete("/{question_id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
+async def delete(
+    db: DbDependency, question_id: int = Path(gt=0)
+):
     # deleted_item = question_cruds.delete(db, id, user.user_id)
-    deleted_item = question_crud.delete(db, id)
+    deleted_item = question_crud.delete(db, question_id)
     if not deleted_item:
         raise HTTPException(status_code=404, detail="Item not deleted")
     return deleted_item

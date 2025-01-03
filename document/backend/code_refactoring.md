@@ -13,3 +13,11 @@ find_question_by_question_id ⭕️
 
 create ❌
 create_question ⭕️
+
+## 変数名命名規則
+Model A + Model B
+Model Aの複数形 + Model Bの複数形
+
+ex.
+subcategoryquestion
+subcategoriesquestions

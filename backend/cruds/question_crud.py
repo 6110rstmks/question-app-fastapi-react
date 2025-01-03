@@ -101,13 +101,15 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     db.commit()
     return question
 
-def delete(db: Session, id: int):
-    question = find_question_by_id(db, id)
+def delete(db: Session, question_id: int):
+    print(333938)
+    question = find_question_by_id(db, question_id)
+    print(2298)
     if question is None:
         return None
     
-    subcategory_question_cruds.delete(db, id)
-    category_question_cruds.delete(db, id)   
+    subcategory_question_cruds.delete_subcategoryquestion(db, question_id)
+    category_question_cruds.delete(db, question_id)   
     db.delete(question)
     db.commit()
     return question

@@ -15,4 +15,4 @@ async def find_by_question_id(
     db: DbDependency,
     question_id: int = Path(gt=0),
 ):
-    return subcategory_question_cruds.find_subcategory_question_by_question_id(db, question_id)
+    return subcategory_question_cruds.find_subcategoriesquestions_by_question_id(db, question_id)
