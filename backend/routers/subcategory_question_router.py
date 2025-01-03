@@ -11,7 +11,7 @@ DbDependency = Annotated[Session, Depends(get_db)]
 router = APIRouter(prefix="/subcategory_questions", tags=["SubcategoryQuestions"])
 
 @router.get("/{question_id}", response_model=list[SubcategoryQuestionResponse], status_code=status.HTTP_200_OK)
-async def find_by_question_id(
+async def find_subcategoriesquestions_by_question_id(
     db: DbDependency,
     question_id: int = Path(gt=0),
 ):

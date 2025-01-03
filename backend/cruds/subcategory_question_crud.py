@@ -9,20 +9,16 @@ def find_subcategoriesquestions_by_question_id(db: Session, question_id: int):
     query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query).scalars().all()
 
-def find_by_question_id(db: Session, id: int):
+def find_subcategoryquestion_by_question_id(db: Session, id: int):
     query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == id)
     return db.execute(query).scalars().first()
 
-
-
-
-def delete_subcategoryquestion(db: Session, question_id: int):
+def delete_subcategoriesquestions(db: Session, question_id: int):
     subcategoriesquestions = find_subcategoriesquestions_by_question_id(db, question_id)
     if subcategoriesquestions is None:
         return None
     
     for subcategoryquestion in subcategoriesquestions:
         db.delete(subcategoryquestion)
-    # db.delete(subcategoriesquestions)
     db.commit()
     return subcategoriesquestions

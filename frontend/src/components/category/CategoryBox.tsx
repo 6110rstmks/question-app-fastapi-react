@@ -79,14 +79,18 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                 )}
             </div>
             <div>
-                {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
-                    <div
-                        className={styles.subcategoryName}
-                        key={subcategory.id}
-                        onClick={() => handleNavigateToSubcategoryPage(subcategory.id)}
-                    >
-                        ・{subcategory.name} ({subcategory.question_count || 0})
+                {subcategories.map((subcategory: SubcategoryWithQuestionCount, index) => (
+                    <div>
+                        <div
+                            className={styles.subcategoryName}
+                            key={subcategory.id}
+                            onClick={() => handleNavigateToSubcategoryPage(subcategory.id)}
+                        >
+                            {subcategory.name} ({subcategory.question_count || 0})
+                        </div>
+                        <div className={styles.dottedBorder}></div>
                     </div>
+                    
                 ))}
             </div>
  

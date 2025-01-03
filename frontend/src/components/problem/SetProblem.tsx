@@ -1,6 +1,5 @@
-import { get } from 'http';
-import React, { useState, ChangeEvent, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './SetProblem.module.css';
 import { Category } from '../../types/Category';
 import { fetchAllCategoriesWithQuestions } from '../../api/CategoryAPI';
@@ -69,7 +68,7 @@ const SetProblem: React.FC = () => {
             <h2>問題選択</h2>
             
             <div className={styles.problemCount}>
-                <span>出題する問題数：{problemCnt}</span>
+                <span>Number of Questions to Answer：{problemCnt}</span>
                 <div className={styles.counterButtons}>
                 <button onClick={() => setProblemCnt(prev => Math.max(1, prev - 1))}>-</button>
                 <button onClick={() => setProblemCnt(prev => prev + 1)}>+</button>
@@ -85,7 +84,7 @@ const SetProblem: React.FC = () => {
                     checked={selectedType === 'random'}
                     onChange={(e) => setSelectedType(e.target.value)}
                 />
-                <span>ランダムに出題</span>
+                <span>Random Selection</span>
                 </label>
                 
                 <label>
@@ -96,7 +95,7 @@ const SetProblem: React.FC = () => {
                     checked={selectedType === 'category'}
                     onChange={(e) => setSelectedType(e.target.value)}
                 />
-                <span>カテゴリから選択</span>
+                <span>Select by Category</span>
                 </label>
             </div>
 
@@ -106,12 +105,12 @@ const SetProblem: React.FC = () => {
                 checked={incorrectedOnlyFlgChecked}
                 onChange={(e) => setIncorrectedOnlyFlgChecked(e.target.checked)}
                 />
-                <span>未正当の問題から出題する</span>
+                <span>Include Only Incorrectly Answered Questions</span>
             </label>
 
             {selectedType === 'category' && (
                 <div className={styles.categorySection}>
-                <p>以下からカテゴリを選択する。</p>
+                <p>Choose a Category from Below:</p>
                 <div className={styles.categoryList}>
                     {categories.map((category) => (
                     <label key={category.id} className="checkbox-label">
@@ -127,7 +126,7 @@ const SetProblem: React.FC = () => {
                 </div>
             )}
 
-            <button className={styles.submitButton} onClick={setProblems}>問題を出題</button>
+            <button className={styles.submitButton} onClick={setProblems}>Submit Questions</button>
         </div>
     );
 }

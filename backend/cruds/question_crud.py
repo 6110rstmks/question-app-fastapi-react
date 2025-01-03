@@ -108,7 +108,7 @@ def delete(db: Session, question_id: int):
     if question is None:
         return None
     
-    subcategory_question_cruds.delete_subcategoryquestion(db, question_id)
+    subcategory_question_cruds.delete_subcategoriesquestions(db, question_id)
     category_question_cruds.delete(db, question_id)   
     db.delete(question)
     db.commit()
@@ -130,10 +130,6 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
     current_subcategories = []
     for result in results:
         current_subcategories.append(result.subcategory_id)
-        
-    print(current_subcategories)
-    print('dkijdi')
-    print(changeSubcategoryUpdate.subcategory_ids)
     
     # current_subcategorisとchangeSubcategoryUpdate.subcategory_idsの差分を取得
     # これが削除対象
@@ -155,7 +151,6 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
     # changeSubcategoryUpdate.subcategory_idsとcurrent_subcategoriesの差分を取得
     # これが追加対象
     add_subcategories = list(set(changeSubcategoryUpdate.subcategory_ids) - set(current_subcategories))
-    print(add_subcategories)
     
     for subcategory_id in changeSubcategoryUpdate.subcategory_ids:
         # 重複チェック

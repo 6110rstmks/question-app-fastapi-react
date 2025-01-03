@@ -93,12 +93,12 @@ async def find_category_by_question_id(db: DbDependency, question_id: int = Path
     return found_category
 
 # question_idからQuestionに紐づくSubcategoryを取得するエンドポイント
-@router.get("/get_subcategory/{question_id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
-async def find_subcategory_by_question_id(db: DbDependency, question_id: int = Path(gt=0)):
-    found_subcategory = question_crud.find_subcategory_by_question_id(db, question_id)
-    if not found_subcategory:
-        raise HTTPException(status_code=404, detail="Subcategory not found")
-    return found_subcategory
+# @router.get("/get_subcategory/{question_id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
+# async def find_subcategory_by_question_id(db: DbDependency, question_id: int = Path(gt=0)):
+#     found_subcategory = question_crud.find_subcategory_by_question_id(db, question_id)
+#     if not found_subcategory:
+#         raise HTTPException(status_code=404, detail="Subcategory not found")
+#     return found_subcategory
 
 # Category IDに紐づくQuestionsを取得するエンドポイント
 @router.get("/category_id/{category_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)

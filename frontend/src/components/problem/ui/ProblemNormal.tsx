@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Question } from "../../../types/Question";
 import { Category } from "../../../types/Category";
 import { Subcategory } from "../../../types/Subcategory";
-import { getCategoryByQuestionId, getSubcategoryByQuestionId } from "../../../api/QuestionAPI";
+import { getCategoryByQuestionId } from "../../../api/QuestionAPI";
+import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI";
 
 interface Props {
     problem: Question;
@@ -16,20 +17,23 @@ interface Props {
 
 const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
     const [category, setCategory] = useState<Category | null>(null);
-    const [subcategory, setSubcategory] = useState<Subcategory | null>(null);
+    const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
 
     useEffect(() => {
         getCategoryByQuestionId(problem.id).then((data) => {
             setCategory(data);
         })
-        getSubcategoryByQuestionId(problem.id).then((data) => {
-            setSubcategory(data);
+        fetchSubcategoriesByQuestionId(problem.id).then((data) => {
+            console.log(data)
+            setSubcategories(data);
         })
     }, [problem])
 
     return (
         <div>
-            <div>{category?.name}＞{subcategory?.name}</div>
+            {subcategories.map((subcategory) => (
+                <div>{category?.name}＞{subcategory?.name}</div>
+            ))}
             <div>{currentProblemIndex + 1} / {problemLength}</div>
             <h1>{problem.problem}</h1>
             <button onClick={onShowAnswer}>答えを表示する</button>

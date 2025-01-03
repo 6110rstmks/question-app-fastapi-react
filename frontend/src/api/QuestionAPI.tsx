@@ -11,17 +11,6 @@ export const getCategoryByQuestionId = async (question_id: number) => {
     return await response.json()
 }
 
-// Questionに紐づくSubcategoryを取得するAPI
-export const getSubcategoryByQuestionId = async (question_id: number) => {
-    const response = await fetch(`http://localhost:8000/questions/get_subcategory/${question_id}`, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    })
-    return await response.json()
-}
-
 export const fetchQuestion = async (question_id: number) => {
     const url = `http://localhost:8000/questions/${question_id}`;
     const response = await fetch(url);

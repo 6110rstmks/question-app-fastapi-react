@@ -37,7 +37,6 @@ const QuestionPage: React.FC = () => {
 
     // このQuestionPageに遷移した元のSubcategoryPage
     const handleNavigateToPreviousSubcategoryPage = () => {
-        console.log(categoryName)
         const category = { id: category_id, name: categoryName };
 
         navigate(`/subcategory/${subcategory_id}`, {
@@ -102,13 +101,13 @@ const QuestionPage: React.FC = () => {
             </div>
           </div>
           </div>
-          <button onClick={handleNavigateToPreviousSubcategoryPage}>サブカテゴリ内のQuestion一覧に戻る。</button>
+          <button onClick={handleNavigateToPreviousSubcategoryPage}>Back to サブカテゴリ内のQuestion一覧</button>
           <div className={styles.question_actions}>
             <button onClick={handleDeleteQuestion} className={styles.delete}>
                 DELETE
             </button>
             <button onClick={() => setEditModalIsOpen(true)}>編集</button>
-            <button onClick={() => setChangeSubcategoryModalIsOpen(true)}>カテゴリまたは、サブカテゴリを変更する</button>
+            <button onClick={() => setChangeSubcategoryModalIsOpen(true)}>Change subcategory or category</button>
           </div>
           <Modal isOpen={editModalIsOpen} contentLabel="Example Modal">
             <EditQuestion
