@@ -22,15 +22,15 @@ const ProblemPage: React.FC = () => {
         handleAnswerUnsolved,
         handleAnswerSolvedReview,
         handleAnswerUnsolvedReview,
-        handleReview,
+        handleNavigateToProblemReviewPage,
     } = useProblemPage(problemData);
 
     if (reviewFlg && currentReviewProblemIndex >= unsolvedProblems.length) {
-        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleReview} />;
+        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />;
     }
 
     if (currentProblemIndex >= problemData.length) {
-        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleReview} />;
+        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />;
     }
 
     return (

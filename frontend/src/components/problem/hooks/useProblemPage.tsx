@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Question } from "../../../types/Question";
 
 const useProblemPage = (problemData: Question[]) => {
@@ -10,8 +10,7 @@ const useProblemPage = (problemData: Question[]) => {
     const [currentReviewProblemIndex2, setCurrentReviewProblemIndex2] = useState(0);
     const [totalReviewProblemIndex, setTotalReviewProblemIndex] = useState(0);
 
-    // 「解けた」ボタンを押すと次の問題に進む。その際、問題のis_correctをtrueにするリクエストを送信。
-    // const handleAnswerSolved = (question_id: number) => {
+    // 「解けた」ボタンを押すと次の問題に進む。
     const handleAnswerSolved = () => {
         setCurrentProblemIndex((prev) => prev + 1);
         setShowAnswer(false);
@@ -50,7 +49,7 @@ const useProblemPage = (problemData: Question[]) => {
     };
 
     // 「解けなかった問題を再度復習する」ボタンを押すと問題の再出題画面に移行する。
-    const handleReview = () => {
+    const handleNavigateToProblemReviewPage = () => {
         setReviewFlg(true);
         setCurrentProblemIndex(0);
         setCurrentReviewProblemIndex(0);
@@ -58,6 +57,11 @@ const useProblemPage = (problemData: Question[]) => {
         setShowAnswer(false);
         setTotalReviewProblemIndex(unsolvedProblems.length)
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+
+    }, [])
 
     return {
         currentProblemIndex,
@@ -72,7 +76,7 @@ const useProblemPage = (problemData: Question[]) => {
         handleAnswerUnsolved,
         handleAnswerSolvedReview,
         handleAnswerUnsolvedReview,
-        handleReview,
+        handleNavigateToProblemReviewPage,
     };
 };
 

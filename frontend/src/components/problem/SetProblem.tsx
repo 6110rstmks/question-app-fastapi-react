@@ -16,6 +16,7 @@ const SetProblem: React.FC = () => {
     const handleCheckboxChange = (categoryId: number) => {
         setSelectedCategoryIds((prevSelected) => {
             // すでに選択されている場合は取り除き、選択されていない場合は追加する
+
             if (prevSelected.includes(categoryId)) {
                 return prevSelected.filter((id) => id !== categoryId);
             } else {
@@ -26,6 +27,11 @@ const SetProblem: React.FC = () => {
 
     // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
     const setProblems = async () => {
+        if (selectedType === 'category' && selectedCategoryIds.length === 0) {
+            alert('Please select at least one category');
+            return;
+        }
+
         try {
             const response = await fetch('http://localhost:8000/problems/generate_problems', {
                 method: 'POST',
@@ -113,13 +119,13 @@ const SetProblem: React.FC = () => {
                 <p>Choose a Category from Below:</p>
                 <div className={styles.categoryList}>
                     {categories.map((category) => (
-                    <label key={category.id} className="checkbox-label">
+                    <label key={category.id} className={styles.checkboxLabel}>
                         <input
                         type="checkbox"
                         checked={selectedCategoryIds.includes(category.id)}
                         onChange={() => handleCheckboxChange(category.id)}
                         />
-                        <span>{category.name}</span>
+                        <div>{category.name}</div>
                     </label>
                     ))}
                 </div>
