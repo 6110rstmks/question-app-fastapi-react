@@ -5,7 +5,7 @@ from models import Category, CategoryQuestion
 from config import PAGE_SIZE
 from fastapi import HTTPException
 
-def find_all(db: Session, skip: int = 0, limit: int = 10, word: str = None):
+def find_all(db: Session, limit: int, skip: int = 0,  word: str = None):
 
     # カテゴリテーブルがそんざいするかどうかの確認。
     # なければreturn Noneとする。

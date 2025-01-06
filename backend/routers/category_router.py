@@ -24,8 +24,8 @@ router = APIRouter(prefix="/categories", tags=["Categories"])
 @router.get("/home", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(
     db: DbDependency,
-    skip: int = Query(0, ge=0),
     limit: int = PAGE_SIZE,
+    skip: int = Query(0, ge=0),
     word: str = None
     ):
     return category_cruds.find_all(db, skip=skip, limit=limit, word=word)
