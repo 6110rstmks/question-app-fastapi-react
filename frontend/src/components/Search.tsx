@@ -12,12 +12,12 @@ interface SearchProps {
 }
 
 const Search: React.FC<SearchProps> = ({
-  type,
-  searchCategoryWord = '',
-  searchSubcategoryWord = '',
-  setSearchCategoryWord,
-  setSearchSubcategoryWord,
-  setPage,
+    type,
+    searchCategoryWord = '',
+    searchSubcategoryWord = '',
+    setSearchCategoryWord,
+    setSearchSubcategoryWord,
+    setPage,
 }) => {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (type === 'category') {

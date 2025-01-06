@@ -4,7 +4,7 @@ import styles from "./CategoryBox.module.css"
 import { Category } from "../../types/Category"
 import { SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
-
+import { handleNavigateToCategoryPage, handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
 interface CategoryBoxProps {
     category: Category
 }
@@ -14,10 +14,6 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     const [subcategoryName, setSubcategoryName] = useState('');
     const { subcategories, addSubcategory } = useCategoryBox(category.id);
     const navigate = useNavigate();
-
-    const handleClick = () => {
-        setShowForm(!showForm);
-    }
 
     const handleAddSubcategory = async () => {
         if (!subcategoryName.trim()) return;
@@ -44,21 +40,21 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
         }
     }
 
-    const handleNavigateToSubcategoryPage = (subcategoryId: number) => {
-        navigate(`/subcategory/${subcategoryId}`, {
-            state: category
-        });
-    }
+    // const handleNavigateToSubcategoryPage = (subcategoryId: number) => {
+    //     navigate(`/subcategory/${subcategoryId}`, {
+    //         state: category
+    //     });
+    // }
     
-    const handleNavigateToCategoryPage = () => {
-        navigate(`/category/${category.id}`);
-    }
+    // const handleNavigateToCategoryPage = () => {
+    //     navigate(`/category/${category.id}`);
+    // }
 
     return (
         <div className={styles.categoryBox} key={category.id}>
             <div className={styles.categoryFiled}>
                 <div className={styles.plusBtn} 
-                    onClick={handleClick}>➕</div>
+                    onClick={() => setShowForm(!showForm)}>➕</div>
                 <div className={styles.categoryName}>{category.name}</div>
                 <span>［{subcategories.length}］</span>
             </div>
@@ -84,7 +80,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
                         <div
                             className={styles.subcategoryName}
                             key={subcategory.id}
-                            onClick={() => handleNavigateToSubcategoryPage(subcategory.id)}
+                            onClick={() => handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}
                         >
                             {subcategory.name} ({subcategory.question_count || 0})
                         </div>
@@ -97,7 +93,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
             {/* 6件以上サブカテゴリが存在する場合は、「もっとみる」ボタンを表示させる */}
             {subcategories.length >= 6 && (
                 <button 
-                onClick={handleNavigateToCategoryPage} 
+                onClick={() => handleNavigateToCategoryPage(navigate, category)} 
                 className={styles.moreBtn}>See More</button>
             )}
         </div>

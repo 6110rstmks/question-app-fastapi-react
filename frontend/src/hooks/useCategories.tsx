@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Category } from "../types/Category";
 import { fetchCategories, fetchPageCount } from "../api/CategoryAPI";
-import { isAuthenticated } from "../utils/auth";
+import { isAuthenticated } from "../utils/auth_function";
 import { useNavigate } from "react-router-dom"
 import { fetchQuestionCount } from "../api/QuestionAPI"
 

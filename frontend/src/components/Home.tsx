@@ -23,20 +23,6 @@ const Home: React.FC = () => {
                     totalPages={pageCount}
                     onPageChange={(newPage) => setPage(newPage)}
                 />
-                {/* <CategorySearch 
-                    searchCategoryWord={searchCategoryWord}
-                    setSearchCategoryWord={setSearchCategoryWord}
-                    setSearchSubcategoryWord={setSearchSubcategoryWord}
-                    page={page} 
-                    setPage={setPage} 
-                />
-                <SubcategorySearch 
-                    setSearchCategoryWord={setSearchCategoryWord} 
-                    searchSubcategoryWord={searchSubcategoryWord}
-                    setSearchSubcategoryWord={setSearchSubcategoryWord}
-                    page={page} 
-                    setPage={setPage} 
-                /> */}
                 <Search 
                     type="category"
                     searchCategoryWord={searchCategoryWord}
@@ -54,9 +40,7 @@ const Home: React.FC = () => {
                     setPage={setPage} 
                 />
             </div>
-            <div className={styles.container}>
-                <CategoryList categories={categories} />
-            </div>
+            <CategoryList categories={categories} />
             <Pagination
                 currentPage={page}
                 totalPages={pageCount}
