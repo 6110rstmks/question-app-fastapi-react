@@ -11,9 +11,7 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
     # テーブルの存在確認を行う理由はデフォルトでは。
     if not db.query(Category).first():
         return None  
-    
-    # query = select(Category)
-    
+        
     # # デバッグ方法。
     # # results = db.execute(query).scalars().all()
     # # for aa in results:
@@ -34,9 +32,6 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
 
     # 結果を取得してスキップとリミットを適用
     result = db.execute(query_stmt).scalars().all()
-    
-    for aa in result:
-        print(aa.name)
     return result[skip: skip + limit]
 
 def find_pagination(db: Session):
