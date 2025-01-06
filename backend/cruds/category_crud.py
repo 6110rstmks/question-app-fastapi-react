@@ -20,10 +20,12 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
     
     query_stmt = select(Category)
     
-    # 検索クエリがある場合はフィルタリング
+    # Category欄で検索した場合
     if category_word:
         query_stmt = query_stmt.where(Category.name.istartswith(f"%{category_word}%"))
 
+    # Subcategory欄で検索した場合
+    # そのSubcategoryを持つCategoryを取得する。
     if subcategory_word:
         query2 = select(Subcategory).where(Subcategory.name.istartswith(f"%{subcategory_word}%"))
         results = db.execute(query2).scalars().all()
