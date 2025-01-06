@@ -36,3 +36,62 @@ Questionテーブルに「問題にふれた回数」のカラムを追加。
 categoryboxで表示するcategoryの順番を変更できるようにする、
 ピン留めボタンを押すことで、そのcategoryboxを先頭に移動させる。
 実装方法としては
+
+=================
+サブカテゴリで検索することで、それに該当するcategoryboxを表示させる。
+
+サブカテゴリ検索ボックスを空にすることで初期状態に戻る。
+
+＝＝＝＝＝＝＝＝＝＝＝
+ctrl + bで
+questionpageにおいてquestionのanswerを表示させる。
+以下、参考
+```
+import React, { useEffect } from 'react';
+
+const useKeyboardShortcut = (keyCombination: string, callback: () => void) => {
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const keys = keyCombination.split('+');
+      const keySet = new Set(keys.map(k => k.trim().toLowerCase()));
+
+      const isMatch = keySet.has(event.key.toLowerCase()) && 
+                      (keySet.has('ctrl') === event.ctrlKey) &&
+                      (keySet.has('alt') === event.altKey) &&
+                      (keySet.has('shift') === event.shiftKey);
+
+      if (isMatch) {
+        event.preventDefault();
+        callback();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [keyCombination, callback]);
+};
+
+const App = () => {
+  useKeyboardShortcut('Ctrl+S', () => {
+    console.log('Ctrl+S pressed');
+    alert('Save action triggered');
+  });
+
+  useKeyboardShortcut('Alt+M', () => {
+    console.log('Alt+M pressed');
+    alert('Open modal action triggered');
+  });
+
+  return (
+    <div>
+      <h1>React App with Shortcuts</h1>
+      <p>Try pressing Ctrl+S or Alt+M!</p>
+    </div>
+  );
+};
+
+export default App;
+
+```
