@@ -2,15 +2,18 @@ import React from 'react'
 import styles from './CategorySearch.module.css'
 
 interface CategorySearchProps {
-    searchWord: string;
-    setSearchWord: (searchWord: string) => void;
+    searchCategoryWord: string;
+    setSearchCategoryWord: (searchWord: string) => void;
+    searchSubcategoryWord: string;
+    setSearchSubcategoryWord: (searchSubcategoryWord: string) => void;
     page: number;
     setPage: (page: number) => void;
 }
 
-const CategorySearch: React.FC<CategorySearchProps> = ( { searchWord, setSearchWord, setPage }) => {
+const CategorySearch: React.FC<CategorySearchProps> = ( { searchCategoryWord, setSearchCategoryWord, searchSubcategoryWord, setSearchSubcategoryWord,setPage }) => {
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchWord(e.target.value);
+        setSearchSubcategoryWord('');
+        setSearchCategoryWord(e.target.value);
         setPage(1); // 新しい検索時にページをリセット
     };
 
@@ -18,7 +21,10 @@ const CategorySearch: React.FC<CategorySearchProps> = ( { searchWord, setSearchW
     <div>
         <div className={styles.search_section}>
             <div className={styles.search_container}>
-                <input type="text" className={styles.search_box}value={searchWord} onChange={handleSearch} placeholder="カテゴリ検索"/>
+                <input type="text" className={styles.search_box}
+                    value={searchCategoryWord} 
+                    onChange={handleSearch} 
+                placeholder="カテゴリ検索"/>
             </div>
         </div>
     </div>

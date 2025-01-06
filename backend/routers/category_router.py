@@ -26,9 +26,10 @@ async def find_all(
     db: DbDependency,
     limit: int = PAGE_SIZE,
     skip: int = Query(0, ge=0),
-    word: str = None
-    ):
-    return category_cruds.find_all(db, skip=skip, limit=limit, word=word)
+    categoryWord: str = None,
+    subcategoryWord: str = None
+):
+    return category_cruds.find_all(db, skip=skip, limit=limit, category_word=categoryWord, subcategory_word=subcategoryWord)
 
 # page_countのルーティング
 @router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)

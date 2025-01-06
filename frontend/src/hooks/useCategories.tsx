@@ -6,7 +6,12 @@ import { isAuthenticated } from "../utils/auth";
 import { useNavigate } from "react-router-dom"
 import { fetchQuestionCount } from "../api/QuestionAPI"
 
-export const useCategories = (page: number, limit: number, searchCategoryWord: string) => {
+export const useCategories = (
+    page: number,
+    limit: number,
+    searchCategoryWord: string,
+    searchSubcategoryWord: string
+) => {
     const [categories, setCategories] = useState<Category[]>([])
 
     // アプリの初期状態の場合はカテゴリがまだ作成されていないためpageCount,questionCountはnull
@@ -35,12 +40,12 @@ export const useCategories = (page: number, limit: number, searchCategoryWord: s
     useEffect(() => {
         const loadCategories = async () => {
             const skip = (page - 1) * limit;
-            const categories: Category[] = await fetchCategories(skip, limit, searchCategoryWord)
+            const categories: Category[] = await fetchCategories(skip, limit, searchCategoryWord, searchSubcategoryWord)
             setCategories(categories)
 
         };
         loadCategories();
-    }, [page, limit, searchCategoryWord])
+    }, [page, limit, searchCategoryWord, searchSubcategoryWord]);
 
     return { categories, pageCount, questionCount }
 };

@@ -1,14 +1,14 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, func
 from schemas.category import CategoryCreate
-from models import Category, CategoryQuestion
+from models import Category, CategoryQuestion, Subcategory
 from config import PAGE_SIZE
 from fastapi import HTTPException
 
-def find_all(db: Session, limit: int, skip: int = 0,  word: str = None):
+def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None):
 
     # カテゴリテーブルがそんざいするかどうかの確認。
-    # なければreturn Noneとする。
+    # テーブルの存在確認を行う理由はデフォルトでは。
     if not db.query(Category).first():
         return None  
     
@@ -23,11 +23,20 @@ def find_all(db: Session, limit: int, skip: int = 0,  word: str = None):
     query_stmt = select(Category)
     
     # 検索クエリがある場合はフィルタリング
-    if word:
-        query_stmt = query_stmt.where(Category.name.istartswith(f"%{word}%"))
+    if category_word:
+        query_stmt = query_stmt.where(Category.name.istartswith(f"%{category_word}%"))
+
+    if subcategory_word:
+        query2 = select(Subcategory).where(Subcategory.name.istartswith(f"%{subcategory_word}%"))
+        results = db.execute(query2).scalars().all()
+        category_ids = [result.category_id for result in results]
+        query_stmt = query_stmt.where(Category.id.in_(category_ids))
 
     # 結果を取得してスキップとリミットを適用
     result = db.execute(query_stmt).scalars().all()
+    
+    for aa in result:
+        print(aa.name)
     return result[skip: skip + limit]
 
 def find_pagination(db: Session):
@@ -63,7 +72,8 @@ def create(db: Session, category_create: CategoryCreate):
     return new_category
 
 # ページネーション
-def get_page_count(db: Session):
+# def get_page_count(db: Session) -> int: 
+def get_page_count(db: Session): 
 
     count_page = db.scalar(
                     select(func.count()).
