@@ -17,14 +17,6 @@
                             ],
                             "memo": "ECS on ECS とECS on Fargateの違い",
                             "is_correct": false
-                        },
-                        {
-                            "problem": "lj",
-                            "answer": [
-                                "lkj"
-                            ],
-                            "memo": "lkj",
-                            "is_correct": false
                         }
                     ]
                 },
@@ -38,14 +30,6 @@
                                 "ブルーグリーンデプロイメントはアプリケーションをデプロイする際のデプロイ方式の１つでAWS等のクラウドサービスでアプリケーションをデプロイする場合、クラウドのメリットの１つとなるサービス作成・廃棄することが簡単にできることを活かして、もう１セットのサービスを用意して、テストしてから切り替えることで安全に、ダウンタイムもほぼ無いリリースができる技術となります。"
                             ],
                             "memo": "aaaaaaa",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "lj",
-                            "answer": [
-                                "lkj"
-                            ],
-                            "memo": "lkj",
                             "is_correct": false
                         }
                     ]
@@ -72,6 +56,22 @@
                                 "ネットワークACLはステートレスです。この場合のステートレスとは、出の通信と入りの通信（戻ってくる通信）は別々に評価されます。つまり、出の通信は許可するが、戻ってくる入りの通信は拒否するということが可能になります。\n\nセキュリティグループはステートフルです。出の通信が許可されていれば、入りの通信（戻ってくる通信）は自動的に許可されます。"
                             ],
                             "memo": "いい",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "VPC間で接続する方法は二つを答えて",
+                            "answer": [
+                                "VPC ピアリング接続、transit gateway"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "VPC間でのせつぞくにおいて、ネットワーク構成が複雑な場合は二つある方法のうちどちらを選ぶか。",
+                            "answer": [
+                                "transit gateway"
+                            ],
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
@@ -266,6 +266,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "インターネットゲートウェイをルートテーブルに設定するとどうなるか",
+                            "answer": [
+                                "インターネットと直接接続できる状態にできる。デフォルトのルートテーブルVPC内しかルーティングが向いていません。"
+                            ],
+                            "memo": "\nインターネットゲートウェイは「VPCという閉じられた世界」から「膨大なインターネットの世界へ」とつなぐ門としての役割を担っています。",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -311,6 +319,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "s3 glacier flexible retrievalとglacier instant retrievalのうち迅速にデータを取り出し可能なのはどちらか",
+                            "answer": [
+                                "glacier flexible retrieval"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -343,6 +359,14 @@
                         },
                         {
                             "problem": "route53のヘルスチェエクは何をする",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
                             "answer": [
                                 ""
                             ],
@@ -391,6 +415,10 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "transit gateway",
+                    "questions": []
                 }
             ]
         },
@@ -619,6 +647,48 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "indexに関係のあるalgorithmのジャンルは？",
+                            "answer": [
+                                "tree"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "無所属",
+                    "questions": [
+                        {
+                            "problem": "データはどこにはいってるの？そもそも",
+                            "answer": [
+                                "ディスク　hdd ssd"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "transaction",
+                    "questions": [
+                        {
+                            "problem": "トランザクションTはチェックポイント取得後に完了したが，その後にシステム障害が発生した。データベースをトランザクションTの終了直後の状態に戻すために用いられる復旧技法はどれか。ロールバック？ロールフォワード",
+                            "answer": [
+                                "ロールフォワード"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ロールバックのイメージが「巻き戻し」に対して、ロールフォワードのイメージは何か？",
+                            "answer": [
+                                "先へ進める"
+                            ],
+                            "memo": "https://itmanabi.com/rollback-rollforward/",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -627,6 +697,24 @@
         {
             "name": "css",
             "subcategories": []
+        },
+        {
+            "name": "algorithm",
+            "subcategories": [
+                {
+                    "name": "tree",
+                    "questions": [
+                        {
+                            "problem": "AVL treeの定義",
+                            "answer": [
+                                "二分探索木にさらに どのノードにおいても左の子の高さと右の子の高さの差が 1 以下"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
