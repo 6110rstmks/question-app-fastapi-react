@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import styles from "./CategoryBox.module.css"
 import { Category } from "../../types/Category"
@@ -11,44 +11,8 @@ interface CategoryBoxProps {
 
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
-    const [subcategoryName, setSubcategoryName] = useState('');
-    const { subcategories, addSubcategory } = useCategoryBox(category.id);
+    const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory } = useCategoryBox(category.id, setShowForm);
     const navigate = useNavigate();
-
-    const handleAddSubcategory = async () => {
-        if (!subcategoryName.trim()) return;
-
-        try {
-            const response = await fetch('http://localhost:8000/subcategories/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name: subcategoryName, category_id: category.id }),
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to create subcategory');
-            }
-
-            const data = await response.json() as SubcategoryWithQuestionCount;
-            addSubcategory(data);
-            setSubcategoryName("");
-            setShowForm(false);
-        } catch (error) {
-            console.error("Error creating subcategory:", error);
-        }
-    }
-
-    // const handleNavigateToSubcategoryPage = (subcategoryId: number) => {
-    //     navigate(`/subcategory/${subcategoryId}`, {
-    //         state: category
-    //     });
-    // }
-    
-    // const handleNavigateToCategoryPage = () => {
-    //     navigate(`/category/${category.id}`);
-    // }
 
     return (
         <div className={styles.categoryBox} key={category.id}>
