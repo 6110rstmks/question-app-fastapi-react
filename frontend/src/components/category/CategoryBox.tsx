@@ -6,12 +6,13 @@ import { SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
 import { handleNavigateToCategoryPage, handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
 interface CategoryBoxProps {
-    category: Category
+    category: Category,
+    searchSubcategoryWord: string
 }
 
-const CategoryBox: React.FC<CategoryBoxProps> = ({ category }) => {
+const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWord }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
-    const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory } = useCategoryBox(category.id, setShowForm);
+    const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory } = useCategoryBox(category.id, setShowForm, searchSubcategoryWord);
     const navigate = useNavigate();
 
     return (

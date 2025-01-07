@@ -5,6 +5,7 @@ import { fetchSubcategoriesForHomePage } from "../../../api/SubcategoryAPI";
 export const useCategoryBox = (
     categoryId: number,
     setShowForm: (showForm: boolean) => void,
+    searchSubcategoryWord: string
 ) => {
     const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([]);
     const [subcategoryName, setSubcategoryName] = useState<string>('');
@@ -36,10 +37,10 @@ export const useCategoryBox = (
 
     useEffect(() => {
         (async () => {
-            const subcategories = await fetchSubcategoriesForHomePage(categoryId);
+            const subcategories = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord);
             setSubcategories(subcategories);
         })();
-    }, []);
+    }, [searchSubcategoryWord]);
 
     return { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory };
 };

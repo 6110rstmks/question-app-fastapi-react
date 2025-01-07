@@ -40,7 +40,7 @@ const Home: React.FC = () => {
                     setPage={setPage} 
                 />
             </div>
-            <CategoryList categories={categories} />
+            <CategoryList categories={categories} searchSubcategoryWord={searchSubcategoryWord} />
             <Pagination
                 currentPage={page}
                 totalPages={pageCount}

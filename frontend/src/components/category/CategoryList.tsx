@@ -5,14 +5,15 @@ import { Category } from "../../types/Category";
 
 interface CategoryListProps {
     categories: Category[];
+    searchSubcategoryWord: string;
 }
 
-const CategoryList: React.FC<CategoryListProps> = ({ categories }) => {
+const CategoryList: React.FC<CategoryListProps> = ({ categories, searchSubcategoryWord }) => {
     return (
         <div className={styles.container}>
             <div className={styles.category_container}>
                 {categories.map((category) => (
-                    <CategoryBox category={category} key={category.id} />
+                    <CategoryBox category={category} searchSubcategoryWord={searchSubcategoryWord} key={category.id} />
                 ))}
             </div>
         </div>

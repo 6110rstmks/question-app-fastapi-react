@@ -43,9 +43,10 @@ async def find_by_id(
 async def find_subcategories_in_category(
     db: DbDependency, 
     category_id: int = Path(gt=0),
-    limit: Optional[int] = None 
+    limit: Optional[int] = None,
+    searchSubcategoryWord: Optional[str] = None
 ):
-    return subcategory_crud.find_subcategories_in_category(db, category_id, limit)
+    return subcategory_crud.find_subcategories_in_category(db, category_id, limit, searchSubcategoryWord)
 
 @router.get("/", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_by_name(

@@ -6,13 +6,23 @@ from . import question_crud as question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 from fastapi import HTTPException
 
-def find_subcategories_in_category(db: Session, category_id: int, limit: int):       
-    query = select(Subcategory).where(Subcategory.category_id == category_id)
+def find_subcategories_in_category(db: Session, category_id: int, limit: int, searchSubcategoryWord: str):
+    print(category_id)
+    
+    if searchSubcategoryWord:
+        query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.name.istartswith(f"%{searchSubcategoryWord}%"))
+        print(3332211)
+    
+    else:     
+        print(3334928)  
+        query = select(Subcategory).where(Subcategory.category_id == category_id)
+
     result = db.execute(query).scalars().all()
 
     # サブカテゴリに紐づくQuestion数を取得
     for subcategory in result:
         subcategory.question_count = len(subcategory.questions)
+        print(subcategory.name)
     
     if limit is None:  # limitが指定されていない場合
         return result
