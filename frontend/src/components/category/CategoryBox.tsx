@@ -41,10 +41,10 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWo
             </div>
             <div>
                 {subcategories.map((subcategory: SubcategoryWithQuestionCount, index) => (
-                    <div>
+                    <div key={index}>
                         <div
                             className={styles.subcategoryName}
-                            key={subcategory.id}
+                            // key={subcategory.id}
                             onClick={() => handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}
                         >
                             {subcategory.name} ({subcategory.question_count || 0})
