@@ -207,6 +207,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "通常のインスタンス購入方式はオンデマンドインスタンス、リザーブドインスタンス、スポットインスタンスのどれか？",
+                            "answer": [
+                                "オンデマンドインスタンス"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -418,6 +426,10 @@
                 },
                 {
                     "name": "transit gateway",
+                    "questions": []
+                },
+                {
+                    "name": "RDS",
                     "questions": []
                 }
             ]
