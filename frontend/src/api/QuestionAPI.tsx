@@ -20,7 +20,7 @@ export const fetchQuestion = async (question_id: number) => {
 }
 
 // Questionのis_correctを更新するAPI
-export const updateIsCorrect = async (question: Question) => {
+export const updateQuestionIsCorrect = async (question: Question) => {
     const response = await fetch(`http://localhost:8000/questions/edit_flg/${question.id}`, {
         method: 'PUT',
         headers: {

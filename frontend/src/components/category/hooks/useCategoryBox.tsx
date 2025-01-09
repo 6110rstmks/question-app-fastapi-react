@@ -1,14 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
 import { fetchSubcategoriesForHomePage } from "../../../api/SubcategoryAPI";
 
 export const useCategoryBox = (
     categoryId: number,
+    showForm: boolean,
     setShowForm: (showForm: boolean) => void,
     searchSubcategoryWord: string
 ) => {
     const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([]);
     const [subcategoryName, setSubcategoryName] = useState<string>('');
+    const categoryBoxRef = useRef<HTMLDivElement | null>(null);
+
 
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
         setSubcategories((prev) => [...prev, subcategory]);
@@ -35,6 +38,20 @@ export const useCategoryBox = (
         setShowForm(false);
     }
 
+    const adjustHeight = () => {
+        if (categoryBoxRef.current) {
+            if (showForm) {
+                categoryBoxRef.current.style.height = "450px"; // フォームが表示されるときの高さ
+            } else {
+                categoryBoxRef.current.style.height = "400.5px"; // フォームが非表示のときの高さ
+            }
+        }
+    };
+
+    useEffect(() => {
+        adjustHeight();
+    }, [showForm]);
+
     useEffect(() => {
         (async () => {
             const subcategories = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord);
@@ -42,5 +59,6 @@ export const useCategoryBox = (
         })();
     }, [searchSubcategoryWord]);
 
-    return { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory };
+    return { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, adjustHeight, categoryBoxRef };
+    // return { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef };
 };

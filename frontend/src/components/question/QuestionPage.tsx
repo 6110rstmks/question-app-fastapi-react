@@ -6,7 +6,7 @@ import Modal from 'react-modal'
 import EditQuestion from './QuestionEdit';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
-import { fetchQuestion, updateIsCorrect, deleteQuestion } from '../../api/QuestionAPI'
+import { fetchQuestion, updateQuestionIsCorrect, deleteQuestion } from '../../api/QuestionAPI'
 
 const QuestionPage: React.FC = () => {
     const location = useLocation()
@@ -30,7 +30,7 @@ const QuestionPage: React.FC = () => {
     }
 
     const handleUpdateIsCorrect = async () => {
-        await updateIsCorrect(question!); // API コール
+        await updateQuestionIsCorrect(question!); // API コール
         const data = await fetchQuestion(question!.id); // データをリフレッシュ
         setQuestion(data)
     }
@@ -76,10 +76,10 @@ const QuestionPage: React.FC = () => {
                         }`}
                         onClick={handleUpdateIsCorrect}
                     >
-                {question?.is_correct ? '正解' : '不正解'}
-              </div>
+                    {question?.is_correct ? '正解' : '不正解'}
+                    </div>
+                </div>
             </div>
-          </div>
           <div>
           <div className={styles.answer_container}>
             <div

@@ -4,6 +4,8 @@ import { Category } from "../../../types/Category";
 import { Subcategory } from "../../../types/Subcategory";
 import { getCategoryByQuestionId } from "../../../api/QuestionAPI";
 import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI";
+import styles from './ProblemNormal.module.css'
+import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
 
 interface Props {
     problem: Question;
@@ -19,24 +21,36 @@ const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemL
     const [category, setCategory] = useState<Category | null>(null);
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
 
+    const handleUpdateIsCorrect = async () => {
+        await updateQuestionIsCorrect(problem!); // API コール
+    }
+
     useEffect(() => {
         getCategoryByQuestionId(problem.id).then((data) => {
             setCategory(data);
         })
         fetchSubcategoriesByQuestionId(problem.id).then((data) => {
-            console.log(data)
             setSubcategories(data);
         })
     }, [problem])
 
     return (
         <div>
+            <div>{currentProblemIndex + 1} / {problemLength}</div>
             {subcategories.map((subcategory) => (
                 <div>{category?.name}＞{subcategory?.name}</div>
             ))}
-            <div>{currentProblemIndex + 1} / {problemLength}</div>
-            <h1>{problem.problem}</h1>
-            <button onClick={onShowAnswer}>答えを表示する</button>
+                <div className={styles.question_problem}>問題：{problem?.problem}</div>
+                <div className={styles.question_is_flg}>
+                    <div
+                        className={`${styles.question_is_flg_value} ${
+                        problem?.is_correct ? styles.correct : styles.incorrect
+                        }`}
+                        onClick={handleUpdateIsCorrect}
+                    >
+                    {problem.is_correct ? '正解' : '不正解'}
+                    </div>
+                </div>            <button onClick={onShowAnswer}>答えを表示する</button>
             {showAnswer && (
                 <div>
                     {problem.answer.length > 0 ? (

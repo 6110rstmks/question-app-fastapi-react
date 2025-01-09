@@ -12,11 +12,11 @@ interface CategoryBoxProps {
 
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWord }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
-    const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory } = useCategoryBox(category.id, setShowForm, searchSubcategoryWord);
+    const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef } = useCategoryBox(category.id, showForm, setShowForm, searchSubcategoryWord);
     const navigate = useNavigate();
 
     return (
-        <div className={styles.categoryBox} key={category.id}>
+        <div className={styles.categoryBox} key={category.id} ref={categoryBoxRef}>
             <div className={styles.categoryFiled}>
                 <div className={styles.plusBtn} 
                     onClick={() => setShowForm(!showForm)}>➕</div>
