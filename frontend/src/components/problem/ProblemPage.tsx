@@ -12,7 +12,7 @@ const ProblemPage: React.FC = () => {
     const {
         currentProblemIndex, // 現在の問題番号
         reviewFlg, // レビューモードかどうか
-        showAnswer,
+        showAnswer, // 答えを表示する
         unsolvedProblems,
         currentReviewProblemIndex,
         currentReviewProblemIndex2,
@@ -25,10 +25,12 @@ const ProblemPage: React.FC = () => {
         handleNavigateToProblemReviewPage,
     } = useProblemPage(problemData);
 
+    // レビューモードが終わったら、終了画面を表示
     if (reviewFlg && currentReviewProblemIndex >= unsolvedProblems.length) {
         return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />;
     }
 
+    // 通常出題が終わったら、終了画面を表示
     if (currentProblemIndex >= problemData.length) {
         return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />;
     }
@@ -53,7 +55,6 @@ const ProblemPage: React.FC = () => {
                     problemLength={problemData.length}
                     showAnswer={showAnswer}
                     onShowAnswer={() => setShowAnswer(true)}
-                    // onSolved={() => handleAnswerSolved(unsolvedProblems[0].id)}
                     onSolved={handleAnswerSolved}
                     onUnsolved={handleAnswerUnsolved}
                 />

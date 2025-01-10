@@ -10,20 +10,20 @@ const useProblemPage = (problemData: Question[]) => {
     const [currentReviewProblemIndex2, setCurrentReviewProblemIndex2] = useState(0);
     const [totalReviewProblemIndex, setTotalReviewProblemIndex] = useState(0);
 
-    // 「解けた」ボタンを押すと次の問題に進む。
+    // 通常モードにおいて「解けた」ボタンを押すと次の問題に進む。
     const handleAnswerSolved = () => {
         setCurrentProblemIndex((prev) => prev + 1);
         setShowAnswer(false);
-        // submitIsCorrect(question_id);
     };
 
+    // 通常モードにおいて「解けなかった」ボタンを押すと未解決の問題リストに追加され、次の問題に進む。
     const handleAnswerUnsolved = () => {
         setUnsolvedProblems((prev) => [...prev, problemData[currentProblemIndex]]);
         setCurrentProblemIndex((prev) => prev + 1);
         setShowAnswer(false);
     };
 
-    // 再度出題した用の関数
+    // レビューモードで「解けた」ボタンを押すと次の問題に進む。
     const handleAnswerSolvedReview = () => {
         setUnsolvedProblems(unsolvedProblems.filter((problem) => problem.id !== unsolvedProblems[currentReviewProblemIndex].id));
         setCurrentReviewProblemIndex2((prev) => prev + 1);
@@ -37,18 +37,7 @@ const useProblemPage = (problemData: Question[]) => {
         setShowAnswer(false);
     };
 
-    // Problem(Question)に正答できたならそのQuestionのis_correctをtrueにするリクエストを送信。
-    const submitIsCorrect = async (question_id: number) => {
-        await fetch(`http://localhost:8000/questions/change_is_correct/${question_id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ is_correct: true }),
-        });
-    };
-
-    // 「解けなかった問題を再度復習する」ボタンを押すと問題の再出題画面に移行する。
+    // 「解けなかった問題を再度復習する」ボタンを押すと問題のレビューモードに移行する。
     const handleNavigateToProblemReviewPage = () => {
         setReviewFlg(true);
         setCurrentProblemIndex(0);
@@ -60,7 +49,6 @@ const useProblemPage = (problemData: Question[]) => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-
     }, [])
 
     return {

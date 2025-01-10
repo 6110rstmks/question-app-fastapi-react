@@ -17,13 +17,13 @@ export const useQuestionPage = (
         return saved ? JSON.parse(saved) : initialCategoryInfo || {};
     });
 
-
     useEffect(() => {
         // 質問データを取得して設定
         (async () => {
             const data: Question = await fetchQuestion(question_id);
             setQuestion(data);
 
+            // 所属するサブカテゴリを変更する際に使用する。
             const data2: Subcategory[] = await fetchSubcategoriesByQuestionId(question_id);
             setSubcategories(data2);
         })();
@@ -36,6 +36,10 @@ export const useQuestionPage = (
             localStorage.setItem('categoryInfo', JSON.stringify(initialCategoryInfo));
         }
     }, [question_id, initialCategoryInfo]);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return { subcategories, setSubcategories, question, setQuestion, categoryInfo, setCategoryInfo };
 }

@@ -27,7 +27,7 @@ const ReviewProblem: React.FC<Props> = ({ problem, currentReviewProblemIndex, cu
         // ローカルの状態を即座に反転
         setLocalProblem((prev) => ({
             ...prev,
-            is_correct: !prev.is_correct,
+            is_correct: !prev.is_correct
         }));
 
         await updateQuestionIsCorrect(problem!); // API コール
