@@ -54,11 +54,11 @@ async def find_all(
 
 
 @router.get("/category_id/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
-async def find_by_id(
+async def find_category_by_id(
     db: DbDependency,
     id: int = Path(gt=0),
 ):
-    return category_cruds.find_by_id(db, id)
+    return category_cruds.find_category_by_id(db, id)
 
 @router.post("", response_model=CategoryResponse, status_code=status.HTTP_201_CREATED)
 async def create(db: DbDependency, category_create: CategoryCreate):
@@ -83,6 +83,18 @@ async def get_exported_json(db: DbDependency):
     
     # Return the file as a response
     return FileResponse(FILE_PATH, media_type="application/json", filename="categories_export4.json")
+
+#    # ZIPファイルのパス
+#     zip_path = "files.zip"
+    
+#     # 複数のファイルをまとめる
+#     files_to_include = ["file1.json", "file2.json"]
+#     with zipfile.ZipFile(zip_path, "w") as zipf:
+#         for file in files_to_include:
+#             zipf.write(file, arcname=Path(file).name)
+    
+#     # ZIPファイルをレスポンスとして返す
+#     return FileResponse(zip_path, media_type="application/zip", filename="files.zip")
 
 
 @router.post("/import", status_code=status.HTTP_201_CREATED)
@@ -111,7 +123,6 @@ def git_push_json_file():
     # else:
     #     repo.git.checkout('backup/json')  #
         
-    print(287297)
 
     if repo.git.diff(INDEX_ADD_FILE_PATH) or is_untracked:  
         # Check if there are unstaged changes for the file

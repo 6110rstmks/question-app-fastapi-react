@@ -30,7 +30,7 @@ def find_subcategories_in_category(db: Session, category_id: int, limit: int, se
     # 6件まで表示
     return result[0: 0 + limit]
 
-def find_by_id(db: Session, id: int):
+def find_subcategory_by_id(db: Session, id: int):
     query = select(Subcategory).where(Subcategory.id == id)
     return db.execute(query).scalars().first()
 
@@ -47,7 +47,7 @@ def find_subcategories_by_question_id(db: Session, question_id: int):
         
     return db.execute(query2).scalars().all()
 
-def find_by_name(db: Session, name: str):
+def find_subcategory_by_name(db: Session, name: str):
     return db.query(Subcategory).filter(Subcategory.name.like(f"%{name}%")).all()
 
 def create_subcategory(db: Session, subcategory_create: SubcategoryCreate):
@@ -67,7 +67,7 @@ def create_subcategory(db: Session, subcategory_create: SubcategoryCreate):
     return new_subcategory
 
 def update2(db: Session, id: int, subcategory_update: SubcategoryUpdate):
-    subcategory = find_by_id(db, id)
+    subcategory = find_subcategory_by_id(db, id)
     if subcategory is None:
         return None
     
@@ -78,17 +78,13 @@ def update2(db: Session, id: int, subcategory_update: SubcategoryUpdate):
     )
     db.execute(stmt)
     db.commit()
-    updated_subcategory = find_by_id(db, id)
+    updated_subcategory = find_subcategory_by_id(db, id)
     return updated_subcategory
 
 def delete_subcategory(db: Session, id: int):
-    subcategory = find_by_id(db, id)
+    subcategory = find_subcategory_by_id(db, id)
     if subcategory is None:
         return None
-    
-    # subcategoryquestion = subcategory_question_cruds.find_by_subcategory_id(db, id)
-    # if subcategoryquestion:
-    #     db.delete(subcategoryquestion)
     
     questions = question_cruds.find_all_questions_in_subcategory(db, id)
     

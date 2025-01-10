@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select, update, func, and_
+from sqlalchemy import select, update, func
 from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
 from models import Category, Subcategory, Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
@@ -30,6 +30,7 @@ def find_category_by_question_id(db: Session, question_id: int):
     query2 = select(Category).where(Category.id == categoryquestion.category_id) 
     return db.execute(query2).scalars().first()
 
+# これはどう考えても、category_crudに書くべきだと思う
 def find_subcategory_by_question_id(db: Session, question_id: int):
     query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
     subcategoryquestion = db.execute(query).scalars().first()
@@ -73,19 +74,19 @@ def update2(db: Session, id: int, question_update: QuestionUpdate):
     updated_subcategory = find_question_by_id(db, id)
     return updated_subcategory
 
-def update_correct_flg(db: Session, id: int, question_update: QuestionUpdate):
-    question = find_question_by_id(db, id)
-    if question is None:
-        return None
+# def update_correct_flg(db: Session, id: int, question_update: QuestionUpdate):
+#     question = find_question_by_id(db, id)
+#     if question is None:
+#         return None
     
-    stmt = (
-        update(Question).
-        where(Question.id == id).
-        values(is_correct=question_update.is_correct)
-    )
-    db.execute(stmt)
-    db.commit()
-    return question
+#     stmt = (
+#         update(Question).
+#         where(Question.id == id).
+#         values(is_correct=question_update.is_correct)
+#     )
+#     db.execute(stmt)
+#     db.commit()
+#     return question
 
 def update_is_correct(db: Session, id: int, question_is_correct_update: QuestionIsCorrectUpdate):
     question = find_question_by_id(db, id)
@@ -101,10 +102,8 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     db.commit()
     return question
 
-def delete(db: Session, question_id: int):
-    print(333938)
+def delete_question(db: Session, question_id: int):
     question = find_question_by_id(db, question_id)
-    print(2298)
     if question is None:
         return None
     

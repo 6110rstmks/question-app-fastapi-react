@@ -41,12 +41,11 @@ def find_pagination(db: Session):
     query = select(Category)
     return db.execute(query).scalars().all()
 
-def find_by_id(db: Session, id: int):
+def find_category_by_id(db: Session, id: int):
     query = select(Category).where(Category.id == id)
     return db.execute(query).scalars().first()
 
-def find_by_name(db: Session, name: str):
-    # return db.query(Category).filter(Category.name.like(f"%{name}%")).all()
+def find_category_by_name(db: Session, name: str):
     query = select(Category).where(Category.name.like(f"%{name}%"))
     return db.execute(query).scalars().all()
 

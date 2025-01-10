@@ -3,7 +3,6 @@ from sqlalchemy import select
 from models import Category, CategoryQuestion, Subcategory, Question, SubcategoryQuestion
 import json
 from fastapi import HTTPException, UploadFile
-from cruds.category_crud import find_by_name
 
 # 詳細はdocument/data_import_export.mdを参照
 def export_to_json(db: Session, file_path: str):
@@ -27,6 +26,8 @@ def export_to_json(db: Session, file_path: str):
                 "questions": []
             }
             for subcat_question in subcategory.questions:
+                print("サブカテゴリ", subcategory)
+                print("サブカテゴリの問題", subcat_question)
                 question = subcat_question.question
                 subcategory_data["questions"].append({
                     "problem": question.problem,

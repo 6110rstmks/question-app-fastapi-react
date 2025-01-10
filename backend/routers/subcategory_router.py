@@ -18,7 +18,7 @@ router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
 
 @router.get("", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(db: DbDependency):
-    return subcategory_crud.find_all(db)
+    return subcategory_crud.find_subcategories_in_category(db)
 
 @router.get("/question_id/{question_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_subcategories_by_question_id(
@@ -28,13 +28,12 @@ async def find_subcategories_by_question_id(
     return subcategory_crud.find_subcategories_by_question_id(db, question_id)
 
 @router.get("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
-async def find_by_id(
+async def find_subcategory_by_id(
     db: DbDependency, 
     # user: UserDependency, 
     id: int = Path(gt=0),
 ):
-    # found_subcategory = subcategory_cruds.find_by_id(db, id, user.user_id)
-    found_subcategory = subcategory_crud.find_by_id(db, id)
+    found_subcategory = subcategory_crud.find_subcategory_by_id(db, id)
     if not found_subcategory:
         raise HTTPException(status_code=404, detail="Subcategory not found")
     return found_subcategory
@@ -53,12 +52,12 @@ async def find_by_name(
     db: DbDependency,
     name: str = Query(min_length=2, max_length=20)
 ):
-    return subcategory_crud.find_by_name(db, name)
+    return subcategory_crud.find_subcategory_by_name(db, name)
 
 @router.post("/", response_model=SubcategoryResponse, status_code=status.HTTP_201_CREATED)
 # async def create(db: DbDependency, category_id: int, subcategory_create: SubcategoryCreate):
 async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCreate):
-    found_category = category_crud.find_by_id(db, subcategory_create.category_id)
+    found_category = category_crud.find_category_by_id(db, subcategory_create.category_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
     pass

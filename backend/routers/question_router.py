@@ -36,7 +36,7 @@ async def create(
     db: DbDependency, 
     question_create: QuestionCreate
 ):
-    found_category = category_crud.find_by_id(db, question_create.category_id)
+    found_category = category_crud.find_category_by_id(db, question_create.category_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
     
@@ -64,7 +64,7 @@ async def update_correct_flg(
     question_update: QuestionIsCorrectUpdate,
     id: int = Path(gt=0),
 ):
-    updated_item = question_crud.update_correct_flg(db, id, question_update)
+    updated_item = question_crud.update_is_correct(db, id, question_update)
     if not updated_item:
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
@@ -116,7 +116,7 @@ async def delete(
     db: DbDependency, question_id: int = Path(gt=0)
 ):
     # deleted_item = question_cruds.delete(db, id, user.user_id)
-    deleted_item = question_crud.delete(db, question_id)
+    deleted_item = question_crud.delete_question(db, question_id)
     if not deleted_item:
         raise HTTPException(status_code=404, detail="Item not deleted")
     return deleted_item
