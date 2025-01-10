@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { fetchSubcategory } from '../../../api/SubcategoryAPI'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { Category } from '../../../types/Category'
@@ -12,13 +12,42 @@ export const useSubcategoryPage = (
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const [questions, setQuestions] = useState<Question[]>([]);
     const location = useLocation()
-    
+    const navigate = useNavigate();
 
     const [categoryInfo, setCategoryInfo] = useState(() => {
         const saved = localStorage.getItem('categoryInfo');
         console.log(saved)
         return saved ? JSON.parse(saved) : {};
     })
+
+    const handleNavigateToQuestionPage = (question_id: number) => {
+        navigate(`/question/${question_id}`, { 
+            state: {
+                category_id: categoryInfo.id,
+                subcategory_id: subcategoryId,
+                categoryName: categoryInfo.name,
+                subcategoryName: subcategoryName,
+            } 
+        });
+    }
+
+    //「削除」と入力してクリックすることで削除が実行される。
+    const handleDeleteSubcategory = async () => {
+
+        let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
+
+        if (confirmation !== '削除') {
+            return;
+        }
+
+        const response = await fetch(`http://localhost:8000/subcategories/${subcategoryId}`, {
+            method: 'DELETE',
+        });
+        if (!response.ok) {
+            prompt('Failed to delete subcategory');
+        }
+        navigate('/');
+    }
 
     useEffect(() => {
         if (location.state) {
@@ -45,6 +74,6 @@ export const useSubcategoryPage = (
         }
 
     }, [subcategoryId]);
-    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo }
+    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleNavigateToQuestionPage, handleDeleteSubcategory };
 }
 

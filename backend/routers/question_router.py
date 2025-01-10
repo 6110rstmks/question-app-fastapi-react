@@ -40,7 +40,7 @@ async def create(
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
     
-    found_subcategory = subcategory_cruds.find_by_id(db, question_create.subcategory_id)
+    found_subcategory = subcategory_cruds.find_subcategory_by_id(db, question_create.subcategory_id)
     if not found_subcategory:
         raise HTTPException(status_code=404, detail="Category not found")
     return question_crud.create(db, question_create)

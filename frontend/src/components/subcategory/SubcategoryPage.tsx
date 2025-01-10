@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import Modal from 'react-modal'
@@ -15,11 +15,15 @@ interface locationState {
 
 const SubcategoryPage: React.FC = () => {
     const { subcategory_id } = useParams<{ subcategory_id: string }>();
-    const navigate = useNavigate();
 
     const location = useLocation()
     const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
-    const { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo } = useSubcategoryPage(subcategoryId, location.state)
+    const { subcategoryName, 
+        setSubcategoryName, 
+        questions, setQuestions, 
+        categoryInfo, 
+        handleNavigateToQuestionPage, 
+        handleDeleteSubcategory} = useSubcategoryPage(subcategoryId, location.state)
     
     // サブカテゴリ名の編集モードの状態を管理
     // ダブルクリックでサブカテゴリ名の編集モードに切り替える
@@ -36,36 +40,6 @@ const SubcategoryPage: React.FC = () => {
             await updateSubcategoryName(subcategoryId, subcategoryName);
         }
     };
-
-    // 削除ボタンを押すと、そのサブカテゴリーを削除する。
-    // その際、「削除」と入力してクリックすることで削除が実行される。
-    const handleDeleteSubcategory = async () => {
-
-        let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
-
-        if (confirmation !== '削除') {
-            return;
-        }
-
-        const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`, {
-            method: 'DELETE',
-        });
-        if (!response.ok) {
-            prompt('Failed to delete subcategory');
-        }
-        navigate('/');
-    }
-
-    const handleNavigateToQuestionPage = (question_id: number) => {
-        navigate(`/question/${question_id}`, { 
-            state: {
-                category_id: categoryInfo.id,
-                subcategory_id: subcategory_id,
-                subcategoryName: subcategoryName, 
-                categoryName: categoryInfo.name 
-            } 
-        });
-    }
 
     return (
         <div className={styles.subcategory_page}>

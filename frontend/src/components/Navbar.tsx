@@ -46,22 +46,22 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
 
     return (
         <nav>
-            <Link to="/">
+            <Link to="/" className={styles.clickable}>
                 <FontAwesomeIcon icon={faHouse} />
                 HOME
             </Link>
             {!isAuth ? (
-                <Link to="/login">
+                <Link to="/login" className={styles.clickable}>
                     <FontAwesomeIcon icon={faArrowRightToBracket} />
                     SignIn
                 </Link>
             ) : (
                 <>
-                    <Link to="/logout">
+                    <Link to="/logout" className={styles.clickable}>
                         <FontAwesomeIcon icon={faArrowRightToBracket} />
                         SignOut
                     </Link>
-                    <Link to="/setquestion">Set Problem</Link>
+                    <Link to="/setquestion" className={styles.clickable}>Set Problem</Link>
                     <Link to="/import" className={styles.clickable}>
                         Data Import
                         <div className={styles.tooltip}>システム特有のjsonファイルをインポートすることでデータの引き継ぎができます。</div>
