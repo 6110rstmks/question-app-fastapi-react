@@ -11,7 +11,7 @@ import CategoryCreate from './components/category/CategoryCreate'
 import SubcategoryPage from './components/subcategory/SubcategoryPage'
 import ProblemPage from './components/problem/ProblemPage'
 import ImportPage from './components/ImportPage'
-import SetProblem from './components/problem/SetProblem'
+import SetProblem from './components/problem/SetProblemPage'
 import CategoryPage from './components/category/CategoryPage'
 
 const App: React.FC = () => {

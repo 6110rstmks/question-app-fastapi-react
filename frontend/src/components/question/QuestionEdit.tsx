@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './QuestionEdit.module.css'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, ChangeEvent } from 'react'
 import { Question } from '../../types/Question'
 import { fetchQuestion } from '../../api/QuestionAPI'
 
@@ -37,9 +37,10 @@ const QuestionEdit: React.FC<QuestionEditProps> = ({setModalIsOpen, question, se
         setInputProblemValue(event.target.value);
     };
 
-    const handleAnswerChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
+    // const handleAnswerChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
+    const handleAnswerChange = (index: number, value: string) => {
         const updatedAnswers = [...inputAnswerValue];
-        updatedAnswers[index] = event.target.value;
+        updatedAnswers[index] = value;
         setInputAnswerValue(updatedAnswers);
     }
 
@@ -123,10 +124,10 @@ const QuestionEdit: React.FC<QuestionEditProps> = ({setModalIsOpen, question, se
                     
                     {inputAnswerValue.map((answer, index) => (
                         <div key={index} className={styles.answerRow}>
-                            <input 
-                                type='text'
+                            <textarea 
+                                placeholder="投稿内容を記入"
                                 value={answer}
-                                onChange={(event) => handleAnswerChange(event, index)}
+                                onChange={(event: ChangeEvent<HTMLTextAreaElement>) => handleAnswerChange(index, event.target.value)}
                                 className={styles.answerInput}
                             />
                             {inputAnswerValue.length > 1 && (

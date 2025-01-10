@@ -6,10 +6,10 @@ export const fetchCategories = async (skip: number, limit: number, searchCategor
     if (response.ok) {
         return response.json();
     }
-    throw new Error("Failed to fetch categories");
 };
 
 // questionを一つでも持つcategoryをすべて取得
+// 問題出題画面にて使用する。
 export const fetchAllCategoriesWithQuestions = async () => {
     const url = 'http://localhost:8000/categories/all_categories_with_questions'
     const response = await fetch(url)

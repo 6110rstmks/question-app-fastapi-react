@@ -23,6 +23,10 @@ Atomic designを参考にすべきか。
 
 ## 関数名の統一
 
+- onclickイベントなどのイベントで発火する関数はあたまにhandleとつける。
+<br>
+handleAddCategory
+
 - ページ遷移を行う関数<br>
 例）
 handleNavigateToCategoryPage(CategoryBox.tsx)
@@ -35,8 +39,10 @@ handleAddCategory, handleAddSubcategory
 例）
 handleDeleteCategory
 
-- idからモデル全体（Category,Subcategory,Question）を取得する関数<br>
+- idからモデル全体（Category,Subcategory,Question）を取得するAPIを叩く関数<br>
 fetchCategory, fetchSubcategory
+
+
 
 
 

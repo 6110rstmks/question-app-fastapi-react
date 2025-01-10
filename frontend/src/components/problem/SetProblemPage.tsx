@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './SetProblem.module.css';
+import styles from './SetProblemPage.module.css';
 import { Category } from '../../types/Category';
 import { fetchAllCategoriesWithQuestions } from '../../api/CategoryAPI';
 
@@ -13,9 +13,16 @@ const SetProblem: React.FC = () => {
     const [problemCnt, setProblemCnt] = useState<number>(5);
     const navigate = useNavigate();
 
+    // カテゴリに紐づく問題数を取得
+    // const fetchAllCategoriesWithQuestions = async () => {
+    //     const response = await fetch('http://localhost:8000/categories');
+    //     const data = await response.json();
+    //     return data;
+    // }
+
     const handleCheckboxChange = (categoryId: number) => {
         setSelectedCategoryIds((prevSelected) => {
-            // すでに選択されている場合は取り除き、選択されていない場合は追加する
+            // すでにカテゴリが選択されている場合は取り除き、選択されていない場合は追加する
 
             if (prevSelected.includes(categoryId)) {
                 return prevSelected.filter((id) => id !== categoryId);
@@ -32,34 +39,25 @@ const SetProblem: React.FC = () => {
             return;
         }
 
-        try {
-            const response = await fetch('http://localhost:8000/problems/generate_problems', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ 
-                                        type: selectedType,
-                                        incorrected_only_flg: incorrectedOnlyFlgChecked,
-                                        problem_cnt: problemCnt,
-                                        category_ids: selectedCategoryIds
-                                    }),
-            });
-    
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.message || 'Failed to create problems');
-            }
-            const problemData = await response.json();
-            navigate('/problem', { state: problemData });
-        } catch (error) {
-            if (error instanceof Error) {
-                console.error('Error:', error.message);
-                alert(error.message);  // Display the error message to the user
-            } else {
-                console.error('Unexpected error:', error);
-            }
+        const response = await fetch('http://localhost:8000/problems/generate_problems', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                                    type: selectedType,
+                                    incorrected_only_flg: incorrectedOnlyFlgChecked,
+                                    problem_cnt: problemCnt,
+                                    category_ids: selectedCategoryIds
+                                }),
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Failed to create problems');
         }
+        const problemData = await response.json();
+        navigate('/problem', { state: problemData });
     }
     
     useEffect(() => {
@@ -72,7 +70,6 @@ const SetProblem: React.FC = () => {
     return (
         <div className={styles.problemSelector}>
             <h2>問題選択</h2>
-            
             <div className={styles.problemCount}>
                 <span>Number of Questions to Answer：{problemCnt}</span>
                 <div className={styles.counterButtons}>
@@ -107,9 +104,9 @@ const SetProblem: React.FC = () => {
 
             <label className={styles.checkboxLabel}>
                 <input
-                type="checkbox"
-                checked={incorrectedOnlyFlgChecked}
-                onChange={(e) => setIncorrectedOnlyFlgChecked(e.target.checked)}
+                    type="checkbox"
+                    checked={incorrectedOnlyFlgChecked}
+                    onChange={(e) => setIncorrectedOnlyFlgChecked(e.target.checked)}
                 />
                 <span>Include Only Incorrectly Answered Questions</span>
             </label>
@@ -125,10 +122,11 @@ const SetProblem: React.FC = () => {
                         checked={selectedCategoryIds.includes(category.id)}
                         onChange={() => handleCheckboxChange(category.id)}
                         />
-                        <div>{category.name}</div>
+                        <div>{category.name}《問題数》</div>
                     </label>
                     ))}
                 </div>
+                <div>《問題数》は問題数</div>
                 </div>
             )}
 

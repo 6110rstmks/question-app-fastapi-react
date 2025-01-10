@@ -1,16 +1,3 @@
-.input_problem {
-    width: 70%;
-    width: 100%; /*親要素いっぱい広げる*/
-	padding: 10px 15px; /*ボックスを大きくする*/
-	font-size: 16px;
-	border-radius: 3px; /*ボックス角の丸み*/
-	border: 2px solid #ddd; /*枠線*/
-    border: none;
-    display: inline-block;
-	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
-}
-
-
 input:focus {
     outline: none;
 }
@@ -172,6 +159,8 @@ input:focus {
 .footer {
   display: flex;
   justify-content: flex-end;
+  /* justify-content: space-between; */
+
   padding-top: 1.5rem;
   border-top: 1px solid #e5e7eb;
 }
