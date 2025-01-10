@@ -33,7 +33,6 @@ export const updateQuestionIsCorrect = async (question: Question) => {
     if (!response.ok) {
         throw new Error('Failed to update is_correct');
     }
-    fetchQuestion(question.id);
 }
 
 // Questionを削除するAPI

@@ -20,12 +20,31 @@ interface Props {
 const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
     const [category, setCategory] = useState<Category | null>(null);
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
+    const [localProblem, setLocalProblem] = useState<Question>(problem); // ローカル状態を追加
+
 
     const handleUpdateIsCorrect = async () => {
+
+        // ローカルの状態を即座に反転
+        setLocalProblem((prev) => ({
+            ...prev,
+            is_correct: !prev.is_correct,
+        }));
+
         await updateQuestionIsCorrect(problem!); // API コール
+        const updatedProblem = await fetchQuestion(localProblem.id); // データをリフレッシュ
+        console.log(updatedProblem)
+
+        setLocalProblem(updatedProblem); // 最新のデータをローカルに反映
+
+
+        const data = await fetchQuestion(problem!.id); // データをリフレッシュ
+        console.log(data)
     }
 
     useEffect(() => {
+        setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
+
         getCategoryByQuestionId(problem.id).then((data) => {
             setCategory(data);
         })
@@ -40,25 +59,26 @@ const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemL
             {subcategories.map((subcategory) => (
                 <div>{category?.name}＞{subcategory?.name}</div>
             ))}
-                <div className={styles.question_problem}>問題：{problem?.problem}</div>
-                <div className={styles.question_is_flg}>
+            <div className={styles.question_problem}>問題：{localProblem.problem}</div>
+            <div className={styles.question_is_flg}>
                     <div
                         className={`${styles.question_is_flg_value} ${
-                        problem?.is_correct ? styles.correct : styles.incorrect
+                            localProblem.is_correct ? styles.correct : styles.incorrect
                         }`}
                         onClick={handleUpdateIsCorrect}
                     >
-                    {problem.is_correct ? '正解' : '不正解'}
+                    {localProblem.is_correct ? '正解' : '不正解'}
                     </div>
-                </div>            <button onClick={onShowAnswer}>答えを表示する</button>
+                </div>            
+                <button onClick={onShowAnswer}>答えを表示する</button>
             {showAnswer && (
                 <div>
-                    {problem.answer.length > 0 ? (
-                    problem.answer.map((ans, index) => (
-                        <p key={index}>{ans}</p>
-                    ))
+                    {localProblem.answer.length > 0 ? (
+                        localProblem.answer.map((ans, index) => (
+                            <p key={index}>{ans}</p>
+                        ))
                     ) : (
-                    <p>解答はまだ作成されていません</p>
+                        <p>解答はまだ作成されていません</p>
                     )}
                 </div>
             )}
