@@ -145,14 +145,6 @@
                             ],
                             "memo": "",
                             "is_correct": false
-                        },
-                        {
-                            "problem": "fsd",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": false
                         }
                     ]
                 },
@@ -177,7 +169,7 @@
                                 "Mysqlの5倍のスループット、postgresqlの3倍のスループット   つまりMySQLの最大5倍、PostgreSQLの最大3倍高速"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "RDSではリードレプリカを最大5個まで作成できるが、Auroraではリードレプリカを何個作成できるか",
@@ -215,6 +207,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "スケジュールドリザーブドインスタンスは廃止になりました。その代用としてどのようなサービスで同じ要件を満たすか。",
+                            "answer": [
+                                "オンデマンドインスタンスのキャパシティー予約"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -228,7 +228,7 @@
                                 "同じ構成のec2インスタンスを別々のAZに配置することがえき、負荷分散が可能です。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "NLBはOSI参照モデルの第何層で動作するか？",
@@ -242,6 +242,14 @@
                             "problem": "ELBのconnection drainingについて説明してください",
                             "answer": [
                                 "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を停止する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ELBにおいて複数のアベイラビリティーゾーンに設置された複数のEC2インスタンスに着信要求を均等に分散する機能をなんというか？",
+                            "answer": [
+                                "クロスゾーン負荷分散"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -294,7 +302,7 @@
                                 "s3 intelligent-tiering"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "standard-IAやone-zone IAのIAは何という意味か。",
@@ -332,6 +340,14 @@
                             "problem": "s3 glacier flexible retrievalとglacier instant retrievalのうち迅速にデータを取り出し可能なのはどちらか",
                             "answer": [
                                 "glacier flexible retrieval"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Glacier ではデータをアップロードすると、そのデータをアーカイブ化して圧縮します。その上で、（A)というスペースにデータを保存します。（A)に入る単語は？",
+                            "answer": [
+                                "ボールト vault"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -430,6 +446,47 @@
                 },
                 {
                     "name": "RDS",
+                    "questions": []
+                },
+                {
+                    "name": "S3 glacier",
+                    "questions": [
+                        {
+                            "problem": "S3 glacierの種類を3つ述べてください",
+                            "answer": [
+                                "glacier deep archive, glacier instant retrieval, glacier flexible retriebal"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Glacier ではデータをアップロードすると、そのデータをアーカイブ化して圧縮します。その上で、（A)というスペースにデータを保存します。（A)に入る単語は？",
+                            "answer": [
+                                "ボールト vault"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "glacierについて、なぜデータの長期保存に向いているのか",
+                            "answer": [
+                                "s3のストレージクラスの中では最もコストが安いから"
+                            ],
+                            "memo": "",
+                            "is_correct": true
+                        },
+                        {
+                            "problem": "s3 glacier flexible retrievalとglacier instant retrievalのうち迅速にデータを取り出し可能なのはどちらか",
+                            "answer": [
+                                "glacier flexible retrieval"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "elasticache",
                     "questions": []
                 }
             ]
@@ -589,7 +646,7 @@
                                 "過学習が起きる原因としては、予測や分類をするうえで、訓練データ中の本質的でないノイズのようなデータにまで、過剰に「合う」ように学習が行われることや、多数の重み係数を少数のデータから決めようとすることが挙げられます。一旦、過学習の傾向が現れると、未知データに対する性能が落ちていくことが生じます。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 }
