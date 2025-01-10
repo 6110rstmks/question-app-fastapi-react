@@ -22,9 +22,7 @@ const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemL
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [localProblem, setLocalProblem] = useState<Question>(problem); // ローカル状態を追加
 
-
     const handleUpdateIsCorrect = async () => {
-
         // ローカルの状態を即座に反転
         setLocalProblem((prev) => ({
             ...prev,
@@ -33,13 +31,7 @@ const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemL
 
         await updateQuestionIsCorrect(problem!); // API コール
         const updatedProblem = await fetchQuestion(localProblem.id); // データをリフレッシュ
-        console.log(updatedProblem)
-
         setLocalProblem(updatedProblem); // 最新のデータをローカルに反映
-
-
-        const data = await fetchQuestion(problem!.id); // データをリフレッシュ
-        console.log(data)
     }
 
     useEffect(() => {
@@ -61,16 +53,16 @@ const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemL
             ))}
             <div className={styles.question_problem}>問題：{localProblem.problem}</div>
             <div className={styles.question_is_flg}>
-                    <div
-                        className={`${styles.question_is_flg_value} ${
-                            localProblem.is_correct ? styles.correct : styles.incorrect
-                        }`}
-                        onClick={handleUpdateIsCorrect}
-                    >
+                <div
+                    className={`${styles.question_is_flg_value} ${
+                        localProblem.is_correct ? styles.correct : styles.incorrect
+                    }`}
+                    onClick={handleUpdateIsCorrect}
+                >
                     {localProblem.is_correct ? '正解' : '不正解'}
-                    </div>
-                </div>            
-                <button onClick={onShowAnswer}>答えを表示する</button>
+                </div>
+            </div>            
+            <button onClick={onShowAnswer}>答えを表示する</button>
             {showAnswer && (
                 <div>
                     {localProblem.answer.length > 0 ? (
