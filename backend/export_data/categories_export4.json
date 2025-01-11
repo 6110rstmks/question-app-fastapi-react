@@ -44,6 +44,22 @@
                             ],
                             "memo": "hhhhh",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "EBSの指標のIOPSとは？",
+                            "answer": [
+                                "IOPSの「PS」の部分は「Per Second(1秒あたりの)」という意味があるので、統合して考えるとIOPSとは「ストレージが1秒あたりに処理できるI/Oアクセスの数」ということになります。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "IOPS数値が高いと何がいいのか？ ",
+                            "answer": [
+                                "データ量の急激な増加が問題視されている中、システムパフォーマンスが低下し、相対的に生産性が低下してしまっています。ストレージのIOPS数値が高いと、システムパフォーマンスを最大限に高め、生産性も向上できるのです。"
+                            ],
+                            "memo": "",
+                            "is_correct": true
                         }
                     ]
                 },
@@ -98,9 +114,35 @@
                         {
                             "problem": "用語であるプロデューサ、メッセージ、コンシューマについて頭でアウトプットしてください。",
                             "answer": [
-                                ""
+                                "プロデューサ：メッセージを送るアプリ\n",
+                                "コンシューマ：メッセージを受け取るアプリ"
                             ],
                             "memo": "おいう",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "sqsのデッドレターキューについて説明",
+                            "answer": [
+                                " 正常に処理できないメッセージがキュー内に残り続けないように、移動させる機能になります。\n「これもう処理出来ないよ」って箱に入れるイメージかな？"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "標準キューとFIFOキューのうち、配信順序をベストエフォートではなく、必ず保証したい場合は、どちらを使用するか？",
+                            "answer": [
+                                "FIFOキュー"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
+                            "answer": [
+                                "データの削除の観点では、SQSではキューからデータを取り出した際に、処理が完了したデータは削除するのに対して、kinesisの方では一度取り出したデータを削除せず一定期間保持します。",
+                                "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
+                            ],
+                            "memo": "ああ",
                             "is_correct": false
                         }
                     ]
@@ -446,7 +488,16 @@
                 },
                 {
                     "name": "RDS",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "lambda関数からrdsに接続して使用したい場合は、何を使用するのが良いか",
+                            "answer": [
+                                "rds proxy"
+                            ],
+                            "memo": "Lambda を利用してrdsにアクセスする際は　rds proxyと覚える。\n",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "S3 glacier",
@@ -777,6 +828,24 @@
                             "problem": "AVL treeの定義",
                             "answer": [
                                 "二分探索木にさらに どのノードにおいても左の子の高さと右の子の高さの差が 1 以下"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "システム設計",
+            "subcategories": [
+                {
+                    "name": "raid",
+                    "questions": [
+                        {
+                            "problem": "raid0をなんとよぶ",
+                            "answer": [
+                                "ストライピング"
                             ],
                             "memo": "",
                             "is_correct": false
