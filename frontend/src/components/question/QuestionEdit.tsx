@@ -56,6 +56,14 @@ const QuestionEdit: React.FC<QuestionEditProps> = ({setModalIsOpen, question, se
         setInputAnswerValue(inputAnswerValue.filter((_, index) => index !== indexToRemove));
     }
 
+    const handleCloseModal = () => {
+        let confirmation = prompt("本当にCloseしますか？　「Y」と入力");
+        if (confirmation !== 'Y') {
+            return;
+        }
+        setModalIsOpen(false);
+    }
+
     const updateQuestion = async () => {
         const updatedQuestion = {
             problem: inputProblemValue,
@@ -178,7 +186,8 @@ const QuestionEdit: React.FC<QuestionEditProps> = ({setModalIsOpen, question, se
                 </div>
 
                 <div className={styles.footer}>
-                    <button onClick={() => setModalIsOpen(false)} className={`${styles.secondaryButton} ${styles.closeButton}`}>
+                    {/* <button onClick={() => setModalIsOpen(false)} className={`${styles.secondaryButton} ${styles.closeButton}`}> */}
+                    <button onClick={handleCloseModal} className={`${styles.secondaryButton} ${styles.closeButton}`}>
                         Close
                     </button>      
                     <button onClick={updateQuestion} className={styles.primaryButton}>

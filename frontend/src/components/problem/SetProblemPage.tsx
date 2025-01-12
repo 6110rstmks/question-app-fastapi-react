@@ -126,7 +126,7 @@ const SetProblem: React.FC = () => {
                     </label>
                     ))}
                 </div>
-                <div>《問題数》は問題数</div>
+                <div>《  》は問題数</div>
                 </div>
             )}
 
