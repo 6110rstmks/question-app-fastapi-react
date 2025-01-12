@@ -69,6 +69,14 @@
  }
 
  .answer_text {
-    color: #00b9b3;
+    color: black;
     font-size: 15px;
+ }
+
+ .correct {
+    background-color: rgb(175, 234, 175);
+ }
+
+ .incorrect {
+    background-color: rgb(237, 129, 129);
  }
