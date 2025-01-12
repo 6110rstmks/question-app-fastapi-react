@@ -616,6 +616,27 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "physiology 酸素解離度曲線",
+                    "questions": [
+                        {
+                            "problem": "酸素解離度曲線が左にシフトすると酸素と結合しやすくなるか。結合しにくくなるか。ネットで曲線を検索して図を見て答えて",
+                            "answer": [
+                                "結合しやすくなる。\n理由は、酸素濃度が同じであるのに対して、HbO2の割合が増えるから。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "酸素解離度曲線を英語で答えよ",
+                            "answer": [
+                                "oxygen-hemoglobin dissociation curve"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
