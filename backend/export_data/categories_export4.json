@@ -46,7 +46,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "EBSの指標のIOPSとは？",
+                            "problem": "EBSの指標のIOPSについてせつめいしてください",
                             "answer": [
                                 "IOPSの「PS」の部分は「Per Second(1秒あたりの)」という意味があるので、統合して考えるとIOPSとは「ストレージが1秒あたりに処理できるI/Oアクセスの数」ということになります。\n"
                             ],
@@ -59,7 +59,7 @@
                                 "データ量の急激な増加が問題視されている中、システムパフォーマンスが低下し、相対的に生産性が低下してしまっています。ストレージのIOPS数値が高いと、システムパフォーマンスを最大限に高め、生産性も向上できるのです。"
                             ],
                             "memo": "",
-                            "is_correct": true
+                            "is_correct": false
                         }
                     ]
                 },
@@ -125,7 +125,7 @@
                             "answer": [
                                 " 正常に処理できないメッセージがキュー内に残り続けないように、移動させる機能になります。\n「これもう処理出来ないよ」って箱に入れるイメージかな？"
                             ],
-                            "memo": "",
+                            "memo": "参考サイト\nhttps://qiita.com/memomaruRey/items/af1cfa19a20071b48ffe",
                             "is_correct": false
                         },
                         {
@@ -595,6 +595,27 @@
                 {
                     "name": "physiology",
                     "questions": []
+                },
+                {
+                    "name": "physiology ear",
+                    "questions": [
+                        {
+                            "problem": "コルチ器を構成するものが二つある。答えよ",
+                            "answer": [
+                                "おおい膜、聴細胞"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "聴細胞は何の振動により興奮させられるか。",
+                            "answer": [
+                                "基底膜"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
