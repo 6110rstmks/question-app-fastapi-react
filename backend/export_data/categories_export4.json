@@ -484,7 +484,16 @@
                 },
                 {
                     "name": "transit gateway",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": " VPC とオンプレミスネットワークを接続するクラウドルーターにはどのサービスがあるか？",
+                            "answer": [
+                                "transit gateway"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "RDS",
@@ -539,6 +548,52 @@
                 {
                     "name": "elasticache",
                     "questions": []
+                },
+                {
+                    "name": "vpc エンドポイント",
+                    "questions": [
+                        {
+                            "problem": "vpcエンドポイントには型が二つある。それらを答えよ",
+                            "answer": [
+                                "ゲートウェイ型とインターフェース型"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "vpcエンドポイントのゲートウェイ型では二つのサービスのみが対応している。それらを答えよ",
+                            "answer": [
+                                "S3, dynamodb"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "インターフェース型のVPCエンドポイントは、(A)と呼ばれるサービスを使って、各サービスを接続させることができる。(A)は？",
+                            "answer": [
+                                "PrivateLink"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "ネットワーク",
+                    "questions": []
+                },
+                {
+                    "name": "cloudfront",
+                    "questions": [
+                        {
+                            "problem": "署名付きURLと署名付きCookieにおいて現在のURLを変更したくない場合はどちらを利用する？",
+                            "answer": [
+                                "署名付きCookie"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
