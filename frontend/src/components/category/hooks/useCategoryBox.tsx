@@ -13,9 +13,9 @@ export const useCategoryBox = (
     const categoryBoxRef = useRef<HTMLDivElement | null>(null);
 
 
-    const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
-        setSubcategories((prev) => [...prev, subcategory]);
-    };
+    // const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
+    //     setSubcategories((prev) => [...prev, subcategory]);
+    // };
 
     const handleAddSubcategory = async () => {
         if (!subcategoryName.trim()) return;
@@ -33,7 +33,7 @@ export const useCategoryBox = (
         }
 
         const data = await response.json() as SubcategoryWithQuestionCount;
-        addSubcategory(data);
+        // addSubcategory(data);
         setSubcategoryName("");
         setShowForm(false);
     }
