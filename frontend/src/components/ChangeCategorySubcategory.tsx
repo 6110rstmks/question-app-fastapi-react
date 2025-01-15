@@ -28,7 +28,6 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
                 ? [...prev, subcategoryId] // チェックされた場合、IDを追加
                 : prev.filter((id) => id !== subcategoryId) // チェックが外れた場合、IDを削除
         );
-        console.log(selectedSubcategoryIds)
     };
 
     useEffect(() => {
@@ -37,7 +36,6 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
             setSubcategories(data);
 
             const data2 = await fetchSubcategoryQuestionsByQuestionId(question!.id);
-            console.log(data2)
         
             setSelectedSubcategoryIds(data2.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategory_id));
         })();
@@ -70,7 +68,6 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
         setModalIsOpen(false);
         
         const data = await fetchSubcategoriesByQuestionId(question!.id);
-        console.log(data)
         setSubcategoriesRelatedToQuestion(data);
     }
 

@@ -17,10 +17,6 @@ nav a:hover {
     color: cadetblue;
 }
 
-.export_btn {
-    cursor: pointer;
-    color: white;
-}
 
 .clickable {
     display: inline-block;

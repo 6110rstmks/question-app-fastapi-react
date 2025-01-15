@@ -16,6 +16,15 @@ router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
 
 # tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
 
+@router.post("/", response_model=SubcategoryResponse, status_code=status.HTTP_201_CREATED)
+# async def create(db: DbDependency, category_id: int, subcategory_create: SubcategoryCreate):
+async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCreate):
+    found_category = category_crud.find_category_by_id(db, subcategory_create.category_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    pass
+    return subcategory_crud.create_subcategory(db, subcategory_create)
+
 @router.get("", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(db: DbDependency):
     return subcategory_crud.find_subcategories_in_category(db)
@@ -54,14 +63,6 @@ async def find_by_name(
 ):
     return subcategory_crud.find_subcategory_by_name(db, name)
 
-@router.post("/", response_model=SubcategoryResponse, status_code=status.HTTP_201_CREATED)
-# async def create(db: DbDependency, category_id: int, subcategory_create: SubcategoryCreate):
-async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCreate):
-    found_category = category_crud.find_category_by_id(db, subcategory_create.category_id)
-    if not found_category:
-        raise HTTPException(status_code=404, detail="Category not found")
-    pass
-    return subcategory_crud.create_subcategory(db, subcategory_create)
 
 @router.put("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def update(

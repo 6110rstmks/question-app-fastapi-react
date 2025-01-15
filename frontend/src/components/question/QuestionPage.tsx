@@ -38,7 +38,6 @@ const QuestionPage: React.FC = () => {
     // このQuestionPageに遷移した元のSubcategoryPageに戻る
     const handleNavigateToPreviousSubcategoryPage = () => {
         const category = { id: category_id, name: categoryName };
-        console.log(category)
 
         navigate(`/subcategory/${subcategory_id}`, {
             state: category

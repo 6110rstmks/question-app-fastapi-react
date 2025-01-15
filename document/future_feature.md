@@ -9,7 +9,7 @@
 - id
 - question_id
 - is_correct 正解したかどうか
-- date
+- date 最後に解いた日付
 
 
 ===========

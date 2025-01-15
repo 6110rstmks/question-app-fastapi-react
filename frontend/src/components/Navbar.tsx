@@ -66,7 +66,10 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
                         Data Import
                         <div className={styles.tooltip}>システム特有のjsonファイルをインポートすることでデータの引き継ぎができます。</div>
                     </Link>
-                    <div className={styles.export_btn} onClick={handleExport}>Data Export to Local & Github</div>
+                    <div className={styles.clickable} onClick={handleExport}>
+                        Data Export to Local & Github
+                        <div className={styles.tooltip}>githubにデータを保管します。</div>
+                    </div>
                 </>
             )}
         </nav>

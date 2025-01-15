@@ -24,7 +24,6 @@ const ProblemPage: React.FC = () => {
 
     const displayAnswer = () => {
         setShowAnswer(true);
-        console.log(unsolvedProblems[unsolvedProblemsIndex]?.is_correct)
     }
 
     const handleAnswer_solved = (question_id: number) => {
@@ -68,7 +67,6 @@ const ProblemPage: React.FC = () => {
 
     // もう一度解けなかった問題に絞って解く。
     const handleReview = () => {
-        console.log(unsolvedProblems)
         setReviewFlg(true)
         setCurrentProblemIndex(0);
         setCurrentReviewProblemIndex(0);

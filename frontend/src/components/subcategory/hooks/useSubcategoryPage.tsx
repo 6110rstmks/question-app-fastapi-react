@@ -16,7 +16,6 @@ export const useSubcategoryPage = (
 
     const [categoryInfo, setCategoryInfo] = useState(() => {
         const saved = localStorage.getItem('categoryInfo');
-        console.log(saved)
         return saved ? JSON.parse(saved) : {};
     })
 

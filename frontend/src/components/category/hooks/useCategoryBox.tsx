@@ -13,12 +13,15 @@ export const useCategoryBox = (
     const categoryBoxRef = useRef<HTMLDivElement | null>(null);
 
 
-    // const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
-    //     setSubcategories((prev) => [...prev, subcategory]);
-    // };
+    const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
+        setSubcategories((prev) => [...prev, subcategory]);
+    };
 
     const handleAddSubcategory = async () => {
-        if (!subcategoryName.trim()) return;
+        if (!subcategoryName.trim()) {
+            alert('サブカテゴリー名を入力してください');
+            return
+        }
 
         const response = await fetch('http://localhost:8000/subcategories/', {
             method: 'POST',
@@ -33,7 +36,12 @@ export const useCategoryBox = (
         }
 
         const data = await response.json() as SubcategoryWithQuestionCount;
-        // addSubcategory(data);
+        console.log(subcategories.length)
+
+        if (subcategories.length < 6) {
+            console.log(9879)
+            addSubcategory(data);
+        }
         setSubcategoryName("");
         setShowForm(false);
     }
@@ -60,5 +68,4 @@ export const useCategoryBox = (
     }, [searchSubcategoryWord]);
 
     return { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, adjustHeight, categoryBoxRef };
-    // return { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef };
 };
