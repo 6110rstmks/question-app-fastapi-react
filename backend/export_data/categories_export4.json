@@ -921,6 +921,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "sql",
+                    "questions": [
+                        {
+                            "problem": "lazy loadingについて説明してください。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
