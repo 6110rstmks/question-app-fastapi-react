@@ -834,19 +834,6 @@
                     ]
                 },
                 {
-                    "name": "having clause",
-                    "questions": [
-                        {
-                            "problem": "having clauseを応用して何ができるか",
-                            "answer": [
-                                "歯抜けのデータを探すことができる。"
-                            ],
-                            "memo": "https://qiita.com/ryosuketter/items/8d41db1148ee8be6ddc3\n",
-                            "is_correct": false
-                        }
-                    ]
-                },
-                {
                     "name": "3値論理",
                     "questions": []
                 },
@@ -889,19 +876,6 @@
                     ]
                 },
                 {
-                    "name": "無所属",
-                    "questions": [
-                        {
-                            "problem": "データはどこにはいってるの？そもそも",
-                            "answer": [
-                                "ディスク　hdd ssd"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        }
-                    ]
-                },
-                {
                     "name": "transaction",
                     "questions": [
                         {
@@ -918,6 +892,32 @@
                                 "先へ進める"
                             ],
                             "memo": "https://itmanabi.com/rollback-rollforward/",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "データはどこにはいってるの？そもそも",
+                            "answer": [
+                                "ディスク　hdd ssd"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "sql having clause",
+                    "questions": [
+                        {
+                            "problem": "having clauseを応用して何ができるか",
+                            "answer": [
+                                "歯抜けのデータを探すことができる。"
+                            ],
+                            "memo": "https://qiita.com/ryosuketter/items/8d41db1148ee8be6ddc3\n",
                             "is_correct": false
                         }
                     ]
