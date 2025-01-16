@@ -1,5 +1,9 @@
-export const fetchSubcategoriesForHomePage = async (category_id: number, searchSubcategoryWord: string) => {
-    const url = `http://localhost:8000/subcategories/category_id/${category_id}/?limit=6&searchSubcategoryWord=${searchSubcategoryWord}`;
+// ホーム画面の初期状態にて、サブカテゴリー一覧を取得するためのAPI
+// 問題文検索を行った際も、以下のAPIでカテゴリー一覧を取得する
+// export const fetchSubcategoriesForHomePage = async (category_id: number, searchSubcategoryWord: string) => {
+export const fetchSubcategoriesForHomePage = async (category_id: number, searchSubcategoryWord: string, searchQuestionWord: string) => {
+    // const url = `http://localhost:8000/subcategories/category_id/${category_id}/?limit=6&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}`;
+    const url = `http://localhost:8000/subcategories/category_id/${category_id}?limit=6&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}`;
     const response = await fetch(url);
     if (response.ok) {
         return response.json();

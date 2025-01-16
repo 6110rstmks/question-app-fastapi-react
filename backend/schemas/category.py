@@ -1,11 +1,7 @@
 from datetime import datetime
-from enum import Enum
 from typing import Optional, List
 from pydantic import BaseModel, Field, ConfigDict
 
-class ItemStatus(Enum):
-    ON_SALE = "ON_SALE"
-    SOLD_OUT = "SOLD_OUT"
 
 class CategoryCreate(BaseModel):
     name: str = Field(min_length=2, examples=["PC"])

@@ -10,7 +10,8 @@ export const useCategories = (
     page: number,
     limit: number,
     searchCategoryWord: string,
-    searchSubcategoryWord: string
+    searchSubcategoryWord: string,
+    searchQuestionWord: string
 ) => {
     const [categories, setCategories] = useState<Category[]>([])
 
@@ -44,13 +45,14 @@ export const useCategories = (
                                                     skip,
                                                     limit,
                                                     searchCategoryWord,
-                                                    searchSubcategoryWord
+                                                    searchSubcategoryWord,
+                                                    searchQuestionWord
                                                 )
             setCategories(categories)
 
         };
         loadCategories();
-    }, [page, limit, searchCategoryWord, searchSubcategoryWord]);
+    }, [page, limit, searchCategoryWord, searchSubcategoryWord, searchQuestionWord]);
 
     return { categories, pageCount, questionCount }
 };

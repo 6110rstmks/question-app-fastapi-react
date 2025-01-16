@@ -2,27 +2,6 @@ from datetime import datetime
 from sqlalchemy import Column, Integer, String, Enum, DateTime, ForeignKey, ARRAY, Boolean
 from sqlalchemy.orm import relationship
 from database import Base
-from schemas import item
-
-
-class Item(Base):
-    __tablename__ = "items"
-
-    id = Column(Integer, primary_key=True)
-    # id = mapped_column(Integer, primary_key=True)
-    name = Column(String, nullable=False)
-    price = Column(Integer, nullable=False)
-    description = Column(String, nullable=True)
-    status = Column(Enum(item.ItemStatus), nullable=False, default=item.ItemStatus.ON_SALE)
-    created_at = Column(DateTime, default=datetime.now())
-    updated_at = Column(DateTime, default=datetime.now(), onupdate=datetime.now())
-    user_id = Column(
-        Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False
-    )
-
-    user = relationship("User", back_populates="items")
-    
-# =================================================================================================
     
 class Category(Base):
     __tablename__ = "categories"
@@ -100,5 +79,4 @@ class User(Base):
     created_at = Column(DateTime, default=datetime.now())
     updated_at = Column(DateTime, default=datetime.now(), onupdate=datetime.now())
 
-    items = relationship("Item", back_populates="user")
     categories = relationship("Category", back_populates="user")

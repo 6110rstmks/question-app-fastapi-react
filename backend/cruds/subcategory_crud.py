@@ -1,33 +1,40 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func
 from schemas.subcategory import SubcategoryCreate, SubcategoryUpdate
-from models import Subcategory, SubcategoryQuestion
+from models import Subcategory, SubcategoryQuestion, Question
 from . import question_crud as question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 from fastapi import HTTPException
 
-def find_subcategories_in_category(db: Session, category_id: int, limit: int, searchSubcategoryWord: str):
-    print(category_id)
+def find_subcategories_in_categorybox(db: Session, category_id: int, limit: int, searchSubcategoryWord: str, searchQuestionWord: str):
     
     if searchSubcategoryWord:
         query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.name.istartswith(f"%{searchSubcategoryWord}%"))
-        print(3332211)
-    
+    elif searchQuestionWord and len(searchQuestionWord) >= 3:
+        query2 = select(Question.id).where(Question.problem.istartswith(f"%{searchQuestionWord}%"))
+        question_ids = db.execute(query2).scalars().all()
+        
+        print("question_ids", question_ids)
+        
+        query3 = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id.in_(question_ids))
+        subcategory_ids = db.execute(query3).scalars().all()
+        
+        print("subcategory_ids", subcategory_ids)
+        
+        query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.id.in_(subcategory_ids))
     else:     
-        print(3334928)  
         query = select(Subcategory).where(Subcategory.category_id == category_id)
 
     result = db.execute(query).scalars().all()
 
-    # サブカテゴリに紐づくQuestion数を取得
+    # サブカテゴリに紐づくQuestion数を取得してSubcategoryモデルに付加
     for subcategory in result:
         subcategory.question_count = len(subcategory.questions)
-        print(subcategory.name)
     
     if limit is None:  # limitが指定されていない場合
         return result
     
-    # 6件まで表示
+    # 6件(limit)まで表示
     return result[0: 0 + limit]
 
 def find_subcategory_by_id(db: Session, id: int):
@@ -40,7 +47,6 @@ def find_subcategories_by_question_id(db: Session, question_id: int):
     
     subcategory_ids = []
     for result in results:
-        print(result.subcategory_id)
         subcategory_ids.append(result.subcategory_id)
         
     query2 = select(Subcategory).where(Subcategory.id.in_(subcategory_ids))
@@ -89,7 +95,7 @@ def delete_subcategory(db: Session, id: int):
     questions = question_cruds.find_all_questions_in_subcategory(db, id)
     
     for question in questions:
-        question_cruds.delete(db, question.id)
+        question_cruds.delete_question(db, question.id)
         
     db.delete(subcategory)
     db.commit()

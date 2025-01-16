@@ -27,9 +27,10 @@ async def find_all(
     limit: int = PAGE_SIZE,
     skip: int = Query(0, ge=0),
     categoryWord: str = None,
-    subcategoryWord: str = None
+    subcategoryWord: str = None,
+    questionWord: str = None
 ):
-    return category_cruds.find_all(db, skip=skip, limit=limit, category_word=categoryWord, subcategory_word=subcategoryWord)
+    return category_cruds.find_all(db, skip=skip, limit=limit, category_word=categoryWord, subcategory_word=subcategoryWord, question_word=questionWord)
 
 # page_countのルーティング
 @router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)
@@ -119,7 +120,6 @@ def git_push_json_file():
     
     if 'bsackup/json' not in repo.branches:
         repo.git.checkout('HEAD', b='bsackup/json')  # Create and switch to the new branch
-        print(2221111)
     # else:
     #     repo.git.checkout('backup/json')  #
         

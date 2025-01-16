@@ -92,5 +92,4 @@ class User(Base):
     created_at = Column(DateTime, default=datetime.now())
     updated_at = Column(DateTime, default=datetime.now(), onupdate=datetime.now())
 
-    items = relationship("Item", back_populates="user")
     categories = relationship("Category", back_populates="user")

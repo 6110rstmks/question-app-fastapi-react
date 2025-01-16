@@ -13,10 +13,8 @@ def generate_problems(db: Session, problem_create: ProblemCreate):
         query2 = select(Question).where(Question.is_correct == false()).order_by(func.random()).limit(problem_create.problem_cnt)
 
     elif problem_create.type == "category":
-        query1 = select(CategoryQuestion).where(CategoryQuestion.category_id.in_(problem_create.category_ids))
-        results = db.execute(query1).scalars().all()
-        
-        question_ids = [question.question_id for question in results]        
+        query1 = select(CategoryQuestion.question_id).where(CategoryQuestion.category_id.in_(problem_create.category_ids))
+        question_ids = db.execute(query1).scalars().all()        
         query2 = select(Question).where(Question.id.in_(question_ids)).limit(problem_create.problem_cnt)
     else:
         return '不明なものが入力されました。'

@@ -6,7 +6,8 @@ export const useCategoryBox = (
     categoryId: number,
     showForm: boolean,
     setShowForm: (showForm: boolean) => void,
-    searchSubcategoryWord: string
+    searchSubcategoryWord: string,
+    searchQuestionWord: string
 ) => {
     const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([]);
     const [subcategoryName, setSubcategoryName] = useState<string>('');
@@ -62,10 +63,10 @@ export const useCategoryBox = (
 
     useEffect(() => {
         (async () => {
-            const subcategories = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord);
+            const subcategories = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord, searchQuestionWord);
             setSubcategories(subcategories);
         })();
-    }, [searchSubcategoryWord]);
+    }, [searchSubcategoryWord, searchQuestionWord]);
 
     return { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, adjustHeight, categoryBoxRef };
 };

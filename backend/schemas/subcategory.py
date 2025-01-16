@@ -6,7 +6,7 @@ class SubcategoryCreate(BaseModel):
     category_id: int = Field(gt=0, examples=[1])
     
 class SubcategoryUpdate(BaseModel):
-    name: Optional[str] = Field(None, min_length=2, examples=["q normalization"])
+    name: Optional[str] = Field(None, min_length=1, examples=["q normalization"])
 
 class SubcategoryResponse(BaseModel):
     id: int = Field(gt=0, examples=[1])

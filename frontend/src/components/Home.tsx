@@ -11,7 +11,8 @@ const Home: React.FC = () => {
     const [limit] = useState<number>(6);
     const [searchCategoryWord, setSearchCategoryWord] = useState<string>("");
     const [searchSubcategoryWord, setSearchSubcategoryWord] = useState<string>("");
-    const { categories, pageCount, questionCount } = useCategories(page, limit, searchCategoryWord, searchSubcategoryWord);
+    const [searchQuestionWord, setSearchQuestionWord] = useState<string>("");
+    const { categories, pageCount, questionCount } = useCategories(page, limit, searchCategoryWord, searchSubcategoryWord, searchQuestionWord);
 
     return (
         <>
@@ -28,6 +29,7 @@ const Home: React.FC = () => {
                     searchCategoryWord={searchCategoryWord}
                     setSearchCategoryWord={setSearchCategoryWord}
                     setSearchSubcategoryWord={setSearchSubcategoryWord}
+                    setSearchQuestionWord={setSearchQuestionWord}
                     page={page} 
                     setPage={setPage} 
                 />
@@ -36,11 +38,21 @@ const Home: React.FC = () => {
                     searchSubcategoryWord={searchSubcategoryWord}
                     setSearchCategoryWord={setSearchCategoryWord}
                     setSearchSubcategoryWord={setSearchSubcategoryWord}
+                    setSearchQuestionWord={setSearchQuestionWord}
+                    page={page} 
+                    setPage={setPage} 
+                />
+                <Search 
+                    type="question"
+                    searchQuestionWord={searchQuestionWord}
+                    setSearchCategoryWord={setSearchCategoryWord}
+                    setSearchSubcategoryWord={setSearchSubcategoryWord}
+                    setSearchQuestionWord={setSearchQuestionWord}
                     page={page} 
                     setPage={setPage} 
                 />
             </div>
-            <CategoryList categories={categories} searchSubcategoryWord={searchSubcategoryWord} />
+            <CategoryList categories={categories} searchSubcategoryWord={searchSubcategoryWord} searchQuestionWord={searchQuestionWord} />
             <Pagination
                 currentPage={page}
                 totalPages={pageCount}

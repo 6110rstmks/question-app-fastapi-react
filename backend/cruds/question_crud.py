@@ -14,10 +14,16 @@ def find_all_questions_in_category(db: Session, category_id: int):
     return db.execute(query).scalars().all()
 
 def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
-    query1 = select(SubcategoryQuestion.question_id).where(SubcategoryQuestion.subcategory_id == subcategory_id)
-    question_ids = db.execute(query1).scalars().all()
-    query = select(Question).where(Question.id.in_(question_ids))
-    return db.execute(query).scalars().all()
+    # query1 = select(SubcategoryQuestion.question_id).where(SubcategoryQuestion.subcategory_id == subcategory_id)
+    # question_ids = db.execute(query1).scalars().all()
+    # query = select(Question).where(Question.id.in_(question_ids))
+    # return db.execute(query).scalars().all()
+
+
+    query1 = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
+    subcategoriesquestions = db.execute(query1).scalars().all()
+    questions = [subcategoryquestion.question for subcategoryquestion in subcategoriesquestions]
+    return questions
 
 def find_question_by_id(db: Session, id: int):
     query = select(Question).where(Question.id == id)
@@ -74,20 +80,6 @@ def update2(db: Session, id: int, question_update: QuestionUpdate):
     updated_subcategory = find_question_by_id(db, id)
     return updated_subcategory
 
-# def update_correct_flg(db: Session, id: int, question_update: QuestionUpdate):
-#     question = find_question_by_id(db, id)
-#     if question is None:
-#         return None
-    
-#     stmt = (
-#         update(Question).
-#         where(Question.id == id).
-#         values(is_correct=question_update.is_correct)
-#     )
-#     db.execute(stmt)
-#     db.commit()
-#     return question
-
 def update_is_correct(db: Session, id: int, question_is_correct_update: QuestionIsCorrectUpdate):
     question = find_question_by_id(db, id)
     if question is None:
@@ -133,7 +125,6 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
     # current_subcategorisとchangeSubcategoryUpdate.subcategory_idsの差分を取得
     # これが削除対象
     delete_subcategories = list(set(current_subcategories) - set(changeSubcategoryUpdate.subcategory_ids))
-    print(delete_subcategories)
     
     for subcategory_id in delete_subcategories:
         # 重複チェック

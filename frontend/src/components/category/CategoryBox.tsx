@@ -7,12 +7,14 @@ import { useCategoryBox } from "./hooks/useCategoryBox"
 import { handleNavigateToCategoryPage, handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
 interface CategoryBoxProps {
     category: Category,
-    searchSubcategoryWord: string
+    searchSubcategoryWord: string,
+    searchQuestionWord: string
 }
 
-const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWord }) => {
+const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWord, searchQuestionWord }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
-    const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef } = useCategoryBox(category.id, showForm, setShowForm, searchSubcategoryWord);
+    // const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef } = useCategoryBox(category.id, showForm, setShowForm, searchSubcategoryWord);
+    const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef } = useCategoryBox(category.id, showForm, setShowForm, searchSubcategoryWord, searchQuestionWord);
     const navigate = useNavigate();
 
     return (
