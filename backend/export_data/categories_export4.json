@@ -709,6 +709,19 @@
                 {
                     "name": "VLAN",
                     "questions": []
+                },
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "インターネットゲートウェイについて説明してください。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -943,6 +956,14 @@
                             "problem": "raid0をなんとよぶ",
                             "answer": [
                                 "ストライピング"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "raid0の目的は？",
+                            "answer": [
+                                "パフォーマンスを向上させる。\n具体的にはデータを複数のディスクに分散して書き込む（ストライピング）ことで、読み書き速度が単一のディスクよりも大幅に向上します。"
                             ],
                             "memo": "",
                             "is_correct": false
