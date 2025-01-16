@@ -5,13 +5,38 @@
             "subcategories": [
                 {
                     "name": "IAM",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "ljljl",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ljlkjlkjlj",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "こんにちは",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "fargate",
                     "questions": [
                         {
-                            "problem": "ECS on ECS とECS on Fargateの違いをのべよ",
+                            "problem": "ECS on EC2 とECS on Fargateの違いをのべよ",
                             "answer": [
                                 "xxx"
                             ],
@@ -156,7 +181,7 @@
                                 "あるインスタンスがインターネットへはアクセスしつつインターネットからアクセスされないようなセキュリティ要件が求められる場合。インターネットにアクセスしたい場合としては外部のAPIを使用したい場合など"
                             ],
                             "memo": "くぁ",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "NAT gatewayはpublic subnetに配置する？それともprivate subnet?",
@@ -331,7 +356,7 @@
                                 "インターネットと直接接続できる状態にできる。デフォルトのルートテーブルVPC内しかルーティングが向いていません。"
                             ],
                             "memo": "\nインターネットゲートウェイは「VPCという閉じられた世界」から「膨大なインターネットの世界へ」とつなぐ門としての役割を担っています。",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -558,7 +583,7 @@
                                 "ゲートウェイ型とインターフェース型"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "vpcエンドポイントのゲートウェイ型では二つのサービスのみが対応している。それらを答えよ",
