@@ -26,8 +26,7 @@ def export_to_json(db: Session, file_path: str):
                 "questions": []
             }
             for subcat_question in subcategory.questions:
-                print("サブカテゴリ", subcategory)
-                print("サブカテゴリの問題", subcat_question)
+
                 question = subcat_question.question
                 subcategory_data["questions"].append({
                     "problem": question.problem,
