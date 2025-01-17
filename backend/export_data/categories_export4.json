@@ -598,6 +598,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "DLM",
+                    "questions": [
+                        {
+                            "problem": "DLMはAWSの何のサービスと一緒に使うか？",
+                            "answer": [
+                                "EBS"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
