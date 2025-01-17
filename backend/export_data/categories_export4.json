@@ -500,7 +500,7 @@
                                 "rds proxy"
                             ],
                             "memo": "Lambda を利用してrdsにアクセスする際は　rds proxyと覚える。\n",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
