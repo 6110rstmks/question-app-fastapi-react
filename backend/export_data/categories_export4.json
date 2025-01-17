@@ -4,35 +4,6 @@
             "name": "aws",
             "subcategories": [
                 {
-                    "name": "IAM",
-                    "questions": [
-                        {
-                            "problem": "ljljl",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "ljlkjlkjlj",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "こんにちは",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        }
-                    ]
-                },
-                {
                     "name": "fargate",
                     "questions": [
                         {
@@ -84,7 +55,7 @@
                                 "データ量の急激な増加が問題視されている中、システムパフォーマンスが低下し、相対的に生産性が低下してしまっています。ストレージのIOPS数値が高いと、システムパフォーマンスを最大限に高め、生産性も向上できるのです。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -265,7 +236,7 @@
                                 "リザーブドインスタンす　→  名前の意味通り"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "通常のインスタンス購入方式はオンデマンドインスタンス、リザーブドインスタンス、スポットインスタンスのどれか？",
@@ -824,7 +795,7 @@
                                 "過学習とは、「コンピューターが手元にあるデータから学習しすぎた結果、予測がうまくできなくなってしまった」という状態です。\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "what is the cause of 'overfitting'?",
@@ -930,7 +901,7 @@
                                 "ディスク　hdd ssd"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
