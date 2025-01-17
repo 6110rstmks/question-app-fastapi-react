@@ -165,36 +165,6 @@
                     ]
                 },
                 {
-                    "name": "Kinesis Data Streams",
-                    "questions": [
-                        {
-                            "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
-                            "answer": [
-                                "データの削除の観点では、SQSではキューからデータを取り出した際に、処理が完了したデータは削除するのに対して、kinesisの方では一度取り出したデータを削除せず一定期間保持します。",
-                                "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
-                            ],
-                            "memo": "ああ",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "シャドーとは？",
-                            "answer": [
-                                "流れてくる一連のデータレコードを保持します。データが乗っかるベルトコンベアのようなものとイメージいただけると良いです。1 つの Kinesis Data Streams の中には複数のシャードが存在します。シャードが増えれば増えるほど、一度に流せるデータの量が増えます。Kinesis Data Streams のスケーリングの単位でもあります。"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "Zero administration = 管理不要はkinesis data firehose かkinesis data streamsのどちらか",
-                            "answer": [
-                                "kinesis data firehose"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        }
-                    ]
-                },
-                {
                     "name": "System Manager",
                     "questions": []
                 },
@@ -229,6 +199,14 @@
                             "problem": "aurora serverlessはどのような特徴があるか",
                             "answer": [
                                 "webアプリケーションのニーズに応じて、自動的に起動、シャットダウン、および自動でDBインスタンスをきどうする"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "auroraはdefaultでマルチAZに対応している。まるかばつか",
+                            "answer": [
+                                "まる"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -614,6 +592,68 @@
                             "problem": "DLMはAWSの何のサービスと一緒に使うか？",
                             "answer": [
                                 "EBS"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Kinesis Data Streams / firehose",
+                    "questions": [
+                        {
+                            "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
+                            "answer": [
+                                "データの削除の観点では、SQSではキューからデータを取り出した際に、処理が完了したデータは削除するのに対して、kinesisの方では一度取り出したデータを削除せず一定期間保持します。",
+                                "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
+                            ],
+                            "memo": "ああ",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "シャドーとは？",
+                            "answer": [
+                                "流れてくる一連のデータレコードを保持します。データが乗っかるベルトコンベアのようなものとイメージいただけると良いです。1 つの Kinesis Data Streams の中には複数のシャードが存在します。シャードが増えれば増えるほど、一度に流せるデータの量が増えます。Kinesis Data Streams のスケーリングの単位でもあります。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Zero administration = 管理不要はkinesis data firehose かkinesis data streamsのどちらか",
+                            "answer": [
+                                "kinesis data firehose"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "受け取ったデータを受け取ってからすぐに送信先に保存するためのサービスはkinesis data stream？firehose?",
+                            "answer": [
+                                "firehose"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "データの転送が主な用途なのはkinesis data stream? firehose?",
+                            "answer": [
+                                "Kinesis Data Firehose"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "kinesis data firehose のデータの転送先を2つ答えよ",
+                            "answer": [
+                                "s3, redshift"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "kinesis data firehoseにおいてデータ変換機能を有効化することで、データを取り込んだ時に（A)が呼び出され、その記述に沿って形式が変換されます。（A)は？",
+                            "answer": [
+                                "lambda関数"
                             ],
                             "memo": "",
                             "is_correct": false
