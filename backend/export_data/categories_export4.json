@@ -183,6 +183,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "Zero administration = 管理不要はkinesis data firehose かkinesis data streamsのどちらか",
+                            "answer": [
+                                "kinesis data firehose"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
