@@ -43,10 +43,6 @@ const SubcategoryPage: React.FC = () => {
         }
     };
 
-    
-
-
-
     return (
         <div className={styles.subcategory_page}>
             <button 
@@ -59,21 +55,21 @@ const SubcategoryPage: React.FC = () => {
             className={styles.subcategory_box}>
             <span>{categoryInfo.name}＞</span>
             {isEditing ? (
-                    <input
-                        type="text"
-                        value={subcategoryName}
-                        onChange={(e) => setSubcategoryName(e.target.value)}
-                        onKeyPress={handleKeyPress}
-                        onBlur={() => setIsEditing(false)} // フォーカスを外すと編集モードを終了
-                        autoFocus
-                    />
-                ) : (
-                    <h1 >
-                        <span
-                            onDoubleClick={() => setIsEditing(true)}
-                        >{subcategoryName}</span>
-                    </h1>
-                )}                
+                <input
+                    type="text"
+                    value={subcategoryName}
+                    onChange={(e) => setSubcategoryName(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    onBlur={() => setIsEditing(false)} // フォーカスを外すと編集モードを終了
+                    autoFocus
+                />
+            ) : (
+                <h1 >
+                    <span
+                        onDoubleClick={() => setIsEditing(true)}
+                    >{subcategoryName}</span>
+                </h1>
+            )}                
                 <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>
             <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Create Question</button>
@@ -98,7 +94,14 @@ const SubcategoryPage: React.FC = () => {
                         </h3>
                         {/* isOn が true の場合のみ answer を表示 */}
                         {isOn && question.answer.map((answer, index) => (
-                            <p className={styles.answer_text} key={index}>・{answer}</p>
+                            <div key={index}>
+                                {answer.split('\n').map((line, i) => (
+                                <React.Fragment key={i}>
+                                    {line}
+                                    <br />
+                                </React.Fragment>
+                                ))}
+                            </div>
                         ))}
                     </div>
                 ))}

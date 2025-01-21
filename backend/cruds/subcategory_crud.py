@@ -63,9 +63,11 @@ def create_subcategory(db: Session, subcategory_create: SubcategoryCreate):
         .filter(Subcategory.name == subcategory_create.name)
         .first()
     )
-    
-    if existing_subcategory.category_id == subcategory_create.category_id:
-        return HTTPException(status_code=400, detail="Subcategory already exists")
+        
+    # if文を入れ子にしている理由はexisting_subcategoryがNoneの場合にエラーが発生するため
+    if existing_subcategory:
+        if existing_subcategory.category_id == subcategory_create.category_id:
+            return HTTPException(status_code=400, detail="Subcategory already exists")
 
     new_subcategory = Subcategory(**subcategory_create.model_dump())
     db.add(new_subcategory)
