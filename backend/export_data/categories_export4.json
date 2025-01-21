@@ -697,6 +697,19 @@
                 {
                     "name": "complex number",
                     "questions": []
+                },
+                {
+                    "name": "vector",
+                    "questions": [
+                        {
+                            "problem": "「ベクトル終点の存在範囲」の解法を二つ答えよ",
+                            "answer": [
+                                "係数の関係式(条件式)\n係数の範囲"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -778,7 +791,21 @@
         },
         {
             "name": "economics",
-            "subcategories": []
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "「独占」により物の価格を不自然に操作する　例",
+                            "answer": [
+                                "diamond"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "linux",
