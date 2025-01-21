@@ -4,6 +4,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { Category } from '../../../types/Category'
+import { handleNavigateToCategoryPage } from '../../../utils/navigate_function'
+
 
 export const useSubcategoryPage = (
     subcategoryId: number,
@@ -13,6 +15,7 @@ export const useSubcategoryPage = (
     const [questions, setQuestions] = useState<Question[]>([]);
     const location = useLocation()
     const navigate = useNavigate();
+    
 
     const [categoryInfo, setCategoryInfo] = useState(() => {
         const saved = localStorage.getItem('categoryInfo');
@@ -29,6 +32,10 @@ export const useSubcategoryPage = (
             } 
         });
     }
+
+    // const handleNavigateToCategoryPage = () => {
+    //     handleNavigateToCategoryPage(navigate, category)
+    // }
 
     //「削除」と入力してクリックすることで削除が実行される。
     const handleDeleteSubcategory = async () => {
@@ -73,6 +80,6 @@ export const useSubcategoryPage = (
         }
 
     }, [subcategoryId]);
-    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleNavigateToQuestionPage, handleDeleteSubcategory };
+    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleNavigateToQuestionPage, handleDeleteSubcategory, handleNavigateToCategoryPage };
 }
 

@@ -64,7 +64,7 @@ def create_subcategory(db: Session, subcategory_create: SubcategoryCreate):
         .first()
     )
     
-    if existing_subcategory:
+    if existing_subcategory.category_id == subcategory_create.category_id:
         return HTTPException(status_code=400, detail="Subcategory already exists")
 
     new_subcategory = Subcategory(**subcategory_create.model_dump())

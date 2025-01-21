@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import { useNavigate } from "react-router-dom"
 import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreate';
 import styles from "./SubcategoryPage.module.css";
 import styles_common from "./common.module.css";
 import { updateSubcategoryName } from '../../api/SubcategoryAPI';
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
+import { handleNavigateToCategoryPage } from '../../utils/navigate_function';
 
 interface locationState {
     category_id: number;
@@ -23,7 +23,9 @@ const SubcategoryPage: React.FC = () => {
         questions, setQuestions, 
         categoryInfo, 
         handleNavigateToQuestionPage, 
-        handleDeleteSubcategory} = useSubcategoryPage(subcategoryId, location.state)
+        handleDeleteSubcategory,
+        handleNavigateToCategoryPage
+    } = useSubcategoryPage(subcategoryId, location.state)
     
     // サブカテゴリ名の編集モードの状態を管理
     // ダブルクリックでサブカテゴリ名の編集モードに切り替える
@@ -41,6 +43,10 @@ const SubcategoryPage: React.FC = () => {
         }
     };
 
+    
+
+
+
     return (
         <div className={styles.subcategory_page}>
             <button 
@@ -49,7 +55,8 @@ const SubcategoryPage: React.FC = () => {
             >
                 {isOn ? "答えを一括非表示" : "答えを一括表示"}
             </button>
-            <div className={styles.subcategory_box}>
+            <div 
+            className={styles.subcategory_box}>
             <span>{categoryInfo.name}＞</span>
             {isEditing ? (
                     <input
