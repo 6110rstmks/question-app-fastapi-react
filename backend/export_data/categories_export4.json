@@ -482,6 +482,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "transit gatewayは究極なにか？",
+                            "answer": [
+                                "ルーター"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "transit gatewayはどのようにやくす？",
+                            "answer": [
+                                "TGW"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -572,7 +588,7 @@
                                 "PrivateLink"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "vpcエンドポイントのゲートウェイ型を使用したいケースを一つ答えよ",
@@ -879,6 +895,14 @@
                             "problem": "インターネットゲートウェイについて説明してください。",
                             "answer": [
                                 ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "推移的ルーティングについて説明してください。",
+                            "answer": [
+                                "直接せつぞくされていない二つのネットワーク間について、中間のネットワークを経由して通信すること"
                             ],
                             "memo": "",
                             "is_correct": false
