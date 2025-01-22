@@ -133,6 +133,21 @@ const QuestionPage: React.FC = () => {
                 categoryId={category_id}
                 />
             </Modal>
+            <div>
+                {question?.memo && (
+                    <div className={styles.memo}>
+                        <h3>メモ</h3>
+                        <p>
+                        {question.memo.split('\n').map((line, index) => (
+                            <React.Fragment key={index}>
+                            {line}
+                            <br />
+                            </React.Fragment>
+                        ))}
+                        </p>
+                    </div>
+                )}
+            </div>
         </div>
       </>
   )
