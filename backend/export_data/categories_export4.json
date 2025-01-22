@@ -514,6 +514,14 @@
                             ],
                             "memo": "参考\nhttps://www.youtube.com/watch?v=YrlxdSPCINA",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "VPCピアリングとtransit gatewayは似たような機能だが、ネットワークが複雑な場合はどちらを使う？",
+                            "answer": [
+                                "transit gateway"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -726,6 +734,19 @@
                             "problem": "kinesis data firehoseにおいてデータ変換機能を有効化することで、データを取り込んだ時に（A)が呼び出され、その記述に沿って形式が変換されます。（A)は？",
                             "answer": [
                                 "lambda関数"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "VPC ピアリング",
+                    "questions": [
+                        {
+                            "problem": "VPCピアリングとtransit gatewayは似たような機能だが、ネットワークが複雑な場合はどちらを使う？",
+                            "answer": [
+                                "transit gateway"
                             ],
                             "memo": "",
                             "is_correct": false
