@@ -597,6 +597,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "オンプレミス環境からもAWSサービスにネットワーク接続できるのはインターフェース型か、ゲートウェイ型か。",
+                            "answer": [
+                                "インターフェース型"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -739,7 +747,7 @@
                             "answer": [
                                 "正接の利用\n法線ベクトル利用"
                             ],
-                            "memo": "https://examist.jp/mathematics/trigonometric/line-angle/\n↑参考",
+                            "memo": "https://examist.jp/mathematics/trigonometric/line-angle/\nhttps://math.nakaken88.com/textbook/standard-normal-vector-and-angle-between-lines/\n↑参考",
                             "is_correct": false
                         }
                     ]
