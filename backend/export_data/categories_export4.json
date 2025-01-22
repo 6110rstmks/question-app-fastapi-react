@@ -581,6 +581,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "VPCエンドポイントの説明について（A)にあてはまるものを答えて。VPCとその他のAWSサービスを（A)を経由せずに接続できるサービス。",
+                            "answer": [
+                                "インターネット"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
