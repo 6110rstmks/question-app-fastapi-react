@@ -11,7 +11,7 @@
                             "answer": [
                                 "xxx"
                             ],
-                            "memo": "ECS on ECS とECS on Fargateの違い",
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
@@ -38,7 +38,7 @@
                             "answer": [
                                 "S3"
                             ],
-                            "memo": "hhhhh",
+                            "memo": "",
                             "is_correct": true
                         },
                         {
@@ -586,6 +586,14 @@
                             "problem": "VPCエンドポイントの説明について（A)にあてはまるものを答えて。VPCとその他のAWSサービスを（A)を経由せずに接続できるサービス。",
                             "answer": [
                                 "インターネット"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "VPCエンドポイントのゲートウェイ型のコストは無料？有料？",
+                            "answer": [
+                                "無料"
                             ],
                             "memo": "",
                             "is_correct": false
