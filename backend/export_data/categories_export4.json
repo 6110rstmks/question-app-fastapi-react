@@ -486,7 +486,7 @@
                         {
                             "problem": "transit gatewayは究極なにか？",
                             "answer": [
-                                "ルーター"
+                                "中央ハブ"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -497,6 +497,22 @@
                                 "TGW"
                             ],
                             "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "transit gatewayには二つの部品がある。なにとなにか。",
+                            "answer": [
+                                "transit gateway アタッチメントとtransit gatewayルートテーブル"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "VPCの接続元とVPCの接続先の二つあるとき、Transit gatewayアタッチメントはいくつ作成するか",
+                            "answer": [
+                                "二つ"
+                            ],
+                            "memo": "参考\nhttps://www.youtube.com/watch?v=YrlxdSPCINA",
                             "is_correct": false
                         }
                     ]
