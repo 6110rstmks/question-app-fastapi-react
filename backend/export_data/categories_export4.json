@@ -130,7 +130,7 @@
                                 "FIFOキュー"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
@@ -177,7 +177,7 @@
                                 "持ち合わせている。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "auroraはスループットが高いことで有名だが、どのようにして高いことをawsは謳っているか",
@@ -230,7 +230,7 @@
                                 "オンデマンドインスタンス"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "スケジュールドリザーブドインスタンスは廃止になりました。その代用としてどのようなサービスで同じ要件を満たすか。",
@@ -297,7 +297,7 @@
                                 "宛先のIPアドレス"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ルートテーブルの「ターゲット」には何を指定するか？二つ答えよ",
@@ -918,6 +918,30 @@
                             "problem": "一塩基多型（SNP）について説明",
                             "answer": [
                                 "DNAの塩基配列に1つの塩基が変化した遺伝的変異"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
+                            "answer": [
+                                "×\nスプライシングは真核生物のみで行われる。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "スプライシングにおいて除去される配列の名称をなんという？",
+                            "answer": [
+                                "イントロン"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "真核生物においてスプライシングはどこで行われるか？",
+                            "answer": [
+                                "核"
                             ],
                             "memo": "",
                             "is_correct": false
