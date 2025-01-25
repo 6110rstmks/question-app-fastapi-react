@@ -913,6 +913,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "一塩基多型（SNP）について説明",
+                            "answer": [
+                                "DNAの塩基配列に1つの塩基が変化した遺伝的変異"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
