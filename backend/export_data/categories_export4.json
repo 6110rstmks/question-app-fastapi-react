@@ -902,6 +902,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "genetics",
+                    "questions": [
+                        {
+                            "problem": "一塩基多型をアルファベット三文字でなんという？",
+                            "answer": [
+                                "SNP"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
