@@ -57,6 +57,7 @@ const SetProblem: React.FC = () => {
             throw new Error(errorData.message || 'Failed to create problems');
         }
         const problemData = await response.json();
+        console.log(problemData)
         navigate('/problem', { state: problemData });
     }
     
