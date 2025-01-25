@@ -945,6 +945,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "RNAは二本鎖である。マルカバツか。",
+                            "answer": [
+                                "×\n一本鎖"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
