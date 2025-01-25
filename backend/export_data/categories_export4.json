@@ -837,7 +837,16 @@
                 },
                 {
                     "name": "physiology",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "苦味受容体を反応させる苦味物質の名称は？",
+                            "answer": [
+                                "フェニルチオカルバミド"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "physiology ear",
@@ -875,6 +884,19 @@
                             "problem": "酸素解離度曲線を英語で答えよ",
                             "answer": [
                                 "oxygen-hemoglobin dissociation curve"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "physiology nerve",
+                    "questions": [
+                        {
+                            "problem": "個々のニューロンにおける活動電位の大きさは、神経が刺激の強さの情報を伝える仕組みに関与しているか。",
+                            "answer": [
+                                "違う。\n正解は「個々のニューロンにおける興奮の頻度」"
                             ],
                             "memo": "",
                             "is_correct": false
