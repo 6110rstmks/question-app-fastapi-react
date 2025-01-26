@@ -1298,6 +1298,32 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "English",
+            "subcategories": [
+                {
+                    "name": "問題文",
+                    "questions": [
+                        {
+                            "problem": "やあエリカ",
+                            "answer": [
+                                "say Erika"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "虫歯",
+                            "answer": [
+                                "cavity"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
