@@ -809,7 +809,21 @@
         },
         {
             "name": "Chemistry",
-            "subcategories": []
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "MOS Metal-Oxide-Semiconductor 記憶素子",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "biology",
@@ -1357,6 +1371,22 @@
                             "problem": "~するのに適格とする",
                             "answer": [
                                 "qualify (object) to do "
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "What qualifies us to receive pension? ",
+                            "answer": [
+                                " 何が私達が年金をもらうのに適格としますか？"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "water authority",
+                            "answer": [
+                                "水道局"
                             ],
                             "memo": "",
                             "is_correct": false
