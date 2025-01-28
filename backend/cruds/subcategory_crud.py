@@ -13,9 +13,7 @@ def find_subcategories_in_categorybox(db: Session, category_id: int, limit: int,
     elif searchQuestionWord and len(searchQuestionWord) >= 3:
         query2 = select(Question.id).where(Question.problem.istartswith(f"%{searchQuestionWord}%"))
         question_ids = db.execute(query2).scalars().all()
-        
-        print("question_ids", question_ids)
-        
+                
         query3 = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id.in_(question_ids))
         subcategory_ids = db.execute(query3).scalars().all()
         
@@ -42,12 +40,14 @@ def find_subcategory_by_id(db: Session, id: int):
     return db.execute(query).scalars().first()
 
 def find_subcategories_by_question_id(db: Session, question_id: int):
-    query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
-    results = db.execute(query).scalars().all()
+    # query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
+    query = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id == question_id)
+    # results = db.execute(query).scalars().all()
+    subcategory_ids = db.execute(query).scalars().all()
     
-    subcategory_ids = []
-    for result in results:
-        subcategory_ids.append(result.subcategory_id)
+    # subcategory_ids = []
+    # for result in results:
+    #     subcategory_ids.append(result.subcategory_id)
         
     query2 = select(Subcategory).where(Subcategory.id.in_(subcategory_ids))
         

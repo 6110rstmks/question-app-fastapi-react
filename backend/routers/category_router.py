@@ -3,7 +3,7 @@ from fastapi import APIRouter, Path, Query, Depends, UploadFile
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud as category_cruds
-from schemas.category import CategoryResponse, CategoryCreate, CategoryImport, SubcategoryImport, QuestionImport
+from schemas.category import CategoryResponse, CategoryCreate, CategoryResponseWithQuestionCount
 from schemas import auth
 from database import get_db
 from fastapi import Query
@@ -45,14 +45,13 @@ async def find_all(
 ):
     return (category_cruds.find_all(db))[skip : skip + limit]
 
-@router.get("/all_categories_with_questions", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
+@router.get("/all_categories_with_questions", response_model=list[CategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
 async def find_all(
     db: DbDependency,
     skip: int = Query(0, ge=0),
     limit: int = 7
     ):
     return (category_cruds.find_all_categories_with_questions(db))[skip : skip + limit]
-
 
 @router.get("/category_id/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
 async def find_category_by_id(

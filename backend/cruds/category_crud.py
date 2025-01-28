@@ -7,7 +7,6 @@ from fastapi import HTTPException
 
 def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None):
 
-
     # カテゴリテーブルがそんざいするかどうかの確認。
     # テーブルの存在確認を行う理由はデフォルトでは。
     if not db.query(Category).first():
@@ -97,4 +96,15 @@ def find_all_categories_with_questions(db: Session):
     category_ids = db.execute(query1).scalars().all()
     
     query2 = select(Category).where(Category.id.in_(category_ids))
-    return db.execute(query2).scalars().all()
+    result = db.execute(query2).scalars().all()
+
+    for category in result:
+        category.question_count = len(category.questions)
+
+        category.incorrected_answered_question_count = 0
+        
+        for categoryquestion in category.questions:
+            if categoryquestion.question.is_correct == False:
+                category.incorrected_answered_question_count += 1
+                    
+    return result

@@ -1,24 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './SetProblemPage.module.css';
-import { Category } from '../../types/Category';
+import { Category, CategoryWithQuestionCount } from '../../types/Category';
 import { fetchAllCategoriesWithQuestions } from '../../api/CategoryAPI';
+
 
 // 問題を出題して、
 const SetProblem: React.FC = () => {
-    const [categories, setCategories] = useState<Category[]>([]);
+    const [categories, setCategories] = useState<CategoryWithQuestionCount[]>([]);
     const [selectedType, setSelectedType] = useState<string>('random')
     const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(false);
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([]);
     const [problemCnt, setProblemCnt] = useState<number>(5);
+    const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false);
     const navigate = useNavigate();
-
-    // カテゴリに紐づく問題数を取得
-    // const fetchAllCategoriesWithQuestions = async () => {
-    //     const response = await fetch('http://localhost:8000/categories');
-    //     const data = await response.json();
-    //     return data;
-    // }
 
     const handleCheckboxChange = (categoryId: number) => {
         setSelectedCategoryIds((prevSelected) => {
@@ -107,7 +102,12 @@ const SetProblem: React.FC = () => {
                 <input
                     type="checkbox"
                     checked={incorrectedOnlyFlgChecked}
-                    onChange={(e) => setIncorrectedOnlyFlgChecked(e.target.checked)}
+                    onChange={(e) => {
+                        setIncorrectedOnlyFlgChecked(e.target.checked); // 現在のチェック状態を更新
+                        if (e.target.checked) {
+                            setToggleQuestionCnt((prev) => !prev); // チェックされた場合に questionCnt を true にする
+                        }
+                    }}
                 />
                 <span>Include Only Incorrectly Answered Questions</span>
             </label>
@@ -123,7 +123,14 @@ const SetProblem: React.FC = () => {
                         checked={selectedCategoryIds.includes(category.id)}
                         onChange={() => handleCheckboxChange(category.id)}
                         />
-                        <div>{category.name}《問題数》</div>
+                        <div
+                        >{category.name} 
+                            <span>
+                                {toggleQuestionCnt 
+                                    ? `《${category.incorrected_answered_question_count}》`
+                                    : `《${category.question_count}》`}
+                            </span>
+                        </div>
                     </label>
                     ))}
                 </div>

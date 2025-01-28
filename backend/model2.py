@@ -3,7 +3,6 @@ from typing import List
 
 from sqlalchemy import ForeignKey
 from sqlalchemy import Integer
-from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import relationship
@@ -28,7 +27,7 @@ class Category(Base):
 
     user = relationship("User", back_populates="categories")
     subcategories = relationship("SubCategory", back_populates="category")
-    questions = relationship("CategoryQuestion", back_populates="category")
+    questions = relationship("Question", back_populates="category")
     
 class SubCategory(Base):
     __tablename__ = "subcategories"

@@ -13,7 +13,6 @@ export const useCategoryBox = (
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const categoryBoxRef = useRef<HTMLDivElement | null>(null);
 
-
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
         setSubcategories((prev) => [...prev, subcategory]);
     };

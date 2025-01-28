@@ -28,3 +28,12 @@ class CategoryImport(BaseModel):
     name: str = Field(min_length=2, max_length=50)
     subcategories: List[SubcategoryImport] = []
     
+class CategoryResponseWithQuestionCount(BaseModel):
+    id: int
+    name: str
+    user_id: int
+    question_count: int
+    incorrected_answered_question_count: int
+
+    model_config = ConfigDict(from_attributes=True)
+    
