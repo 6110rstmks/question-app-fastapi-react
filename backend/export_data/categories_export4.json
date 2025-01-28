@@ -84,7 +84,7 @@
                                 "transit gateway"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -193,7 +193,7 @@
                                 "15"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "aurora serverlessはどのような特徴があるか",
@@ -374,7 +374,7 @@
                                 "ボールト vault"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -555,7 +555,7 @@
                                 "ボールト vault"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "glacierについて、なぜデータの長期保存に向いているのか",
@@ -1000,7 +1000,7 @@
                                 "diamond"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1387,6 +1387,30 @@
                             "problem": "water authority",
                             "answer": [
                                 "水道局"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "nobility",
+                            "answer": [
+                                "the quality of being noble in character, mind, birth, or rank"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "#banks are free to make a number of new loans",
+                            "answer": [
+                                "　銀行はたくさんの新規ローンを自由に行う"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "大気圧",
+                            "answer": [
+                                "atmospheric pressure"
                             ],
                             "memo": "",
                             "is_correct": false
