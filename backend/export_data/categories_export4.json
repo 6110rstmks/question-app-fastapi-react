@@ -784,6 +784,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "(A)を利用することで、オンプレミスのADにあるユーザ情報を使用して、AWSアプリケーションに接続することができる。",
+                            "answer": [
+                                "AD connector"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -1359,7 +1367,7 @@
                                 "say Erika"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "虫歯",
