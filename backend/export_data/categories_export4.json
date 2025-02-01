@@ -773,6 +773,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "aws directory service",
+                    "questions": [
+                        {
+                            "problem": "aws directory serviceの種類を3つ答えよ",
+                            "answer": [
+                                "simpleAD\naws microsoft managed AD\nAD connector"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
