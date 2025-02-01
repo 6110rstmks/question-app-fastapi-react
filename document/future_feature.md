@@ -8,6 +8,8 @@
 
 - id
 - question_id
+- problem
+- answer
 - is_correct 正解したかどうか
 - date 最後に解いた日付
 

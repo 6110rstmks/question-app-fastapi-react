@@ -72,6 +72,7 @@ const SubcategoryPage: React.FC = () => {
             )}                
                 <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>
+            <button>このサブカテゴリから問題を出題する。</button>
             <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Create Question</button>
             <Modal
                 isOpen={modalIsOpen}

@@ -103,10 +103,8 @@ const SetProblem: React.FC = () => {
                     type="checkbox"
                     checked={incorrectedOnlyFlgChecked}
                     onChange={(e) => {
-                        setIncorrectedOnlyFlgChecked(e.target.checked); // 現在のチェック状態を更新
-                        if (e.target.checked) {
-                            setToggleQuestionCnt((prev) => !prev); // チェックされた場合に questionCnt を true にする
-                        }
+                        setIncorrectedOnlyFlgChecked(e.target.checked)
+                        setToggleQuestionCnt((prev) => !prev)
                     }}
                 />
                 <span>Include Only Incorrectly Answered Questions</span>
@@ -119,9 +117,9 @@ const SetProblem: React.FC = () => {
                     {categories.map((category) => (
                     <label key={category.id} className={styles.checkboxLabel}>
                         <input
-                        type="checkbox"
-                        checked={selectedCategoryIds.includes(category.id)}
-                        onChange={() => handleCheckboxChange(category.id)}
+                            type="checkbox"
+                            checked={selectedCategoryIds.includes(category.id)}
+                            onChange={() => handleCheckboxChange(category.id)}
                         />
                         <div
                         >{category.name} 
