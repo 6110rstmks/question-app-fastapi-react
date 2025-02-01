@@ -210,6 +210,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "global databaseはRDSの機能か。auroraの機能か",
+                            "answer": [
+                                "aurora"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -481,7 +489,7 @@
                                 "transit gateway"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "transit gatewayは究極なにか？",
@@ -747,6 +755,19 @@
                             "problem": "VPCピアリングとtransit gatewayは似たような機能だが、ネットワークが複雑な場合はどちらを使う？",
                             "answer": [
                                 "transit gateway"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "lambda",
+                    "questions": [
+                        {
+                            "problem": "lambdaはVPC内に構成することができるか",
+                            "answer": [
+                                "できる"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1411,6 +1432,24 @@
                             "problem": "大気圧",
                             "answer": [
                                 "atmospheric pressure"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "security",
+            "subcategories": [
+                {
+                    "name": "ディレクトリサービス",
+                    "questions": [
+                        {
+                            "problem": "ディレクトリサービスとはなんですか？",
+                            "answer": [
+                                "ユーザ名、パスワード、メールアドレスなどをまとめて管理するサービスのこと"
                             ],
                             "memo": "",
                             "is_correct": false
