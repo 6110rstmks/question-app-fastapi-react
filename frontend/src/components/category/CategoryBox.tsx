@@ -13,7 +13,6 @@ interface CategoryBoxProps {
 
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWord, searchQuestionWord }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
-    // const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef } = useCategoryBox(category.id, showForm, setShowForm, searchSubcategoryWord);
     const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef } = useCategoryBox(category.id, showForm, setShowForm, searchSubcategoryWord, searchQuestionWord);
     const navigate = useNavigate();
 

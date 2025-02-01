@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './SetProblemPage.module.css';
-import { Category, CategoryWithQuestionCount } from '../../types/Category';
+import { CategoryWithQuestionCount } from '../../types/Category';
+import { Subcategory } from '../../types/Subcategory'; 
 import { fetchAllCategoriesWithQuestions } from '../../api/CategoryAPI';
+import { fetchSubcategoriesByCategoryId } from '../../api/SubcategoryAPI';
 
-
-// 問題を出題して、
 const SetProblem: React.FC = () => {
     const [categories, setCategories] = useState<CategoryWithQuestionCount[]>([]);
+    const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [selectedType, setSelectedType] = useState<string>('random')
     const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(false);
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([]);
@@ -15,7 +16,13 @@ const SetProblem: React.FC = () => {
     const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false);
     const navigate = useNavigate();
 
-    const handleCheckboxChange = (categoryId: number) => {
+    const handleCheckboxChange = async (categoryId: number) => {
+
+        // カテゴリに紐づくサブカテゴリを取得する
+        const subcategories = await fetchSubcategoriesByCategoryId(categoryId);
+        setSubcategories(subcategories);
+        console.log(subcategories)
+
         setSelectedCategoryIds((prevSelected) => {
             // すでにカテゴリが選択されている場合は取り除き、選択されていない場合は追加する
 
@@ -97,7 +104,6 @@ const SetProblem: React.FC = () => {
                 <span>Select by Category</span>
                 </label>
             </div>
-
             <label className={styles.checkboxLabel}>
                 <input
                     type="checkbox"
@@ -110,31 +116,48 @@ const SetProblem: React.FC = () => {
                 <span>Include Only Incorrectly Answered Questions</span>
             </label>
 
-            {selectedType === 'category' && (
-                <div className={styles.categorySection}>
-                <p>Choose a Category from Below:</p>
-                <div className={styles.categoryList}>
-                    {categories.map((category) => (
-                    <label key={category.id} className={styles.checkboxLabel}>
-                        <input
-                            type="checkbox"
-                            checked={selectedCategoryIds.includes(category.id)}
-                            onChange={() => handleCheckboxChange(category.id)}
-                        />
-                        <div
-                        >{category.name} 
-                            <span>
-                                {toggleQuestionCnt 
-                                    ? `《${category.incorrected_answered_question_count}》`
-                                    : `《${category.question_count}》`}
-                            </span>
-                        </div>
-                    </label>
-                    ))}
-                </div>
-                <div>《  》は問題数</div>
-                </div>
-            )}
+
+                {selectedType === 'category' && (
+                    <div className={styles.categorySection}>
+                    <p>Choose a Category from Below:</p>
+                    <div className={styles.categoryList}>
+                        {categories.map((category) => (
+                            <div key={category.id} className={styles.categoryItem}>
+                                <label className={styles.checkboxLabel}>
+                                    <input
+                                        type="checkbox"
+                                        checked={selectedCategoryIds.includes(category.id)}
+                                        onChange={() => handleCheckboxChange(category.id)}
+                                    />
+                                </label>
+                                <div className={styles.categoryContent}>
+                                    <span>{category.name}</span> 
+                                    <span>
+                                        {toggleQuestionCnt 
+                                            ? `《${category.incorrected_answered_question_count}》`
+                                            : `《${category.question_count}》`}
+                                    </span>
+                                    <div>
+                                        <span>🔽</span>
+                                        <div>
+                                        {subcategories
+                                            .filter((subcategory) => subcategory.category_id === category.id)
+                                            .map((subcategory) => (
+                                                <div key={subcategory.id}>
+                                                    <span>{subcategory.name}</span>
+                                                </div>
+                                            ))
+                                        }
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div>《  》は問題数</div>
+                    </div>
+                )}
 
             <button className={styles.submitButton} onClick={setProblems}>Submit Questions</button>
         </div>
