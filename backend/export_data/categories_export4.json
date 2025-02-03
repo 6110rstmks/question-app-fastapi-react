@@ -599,6 +599,22 @@
                             "answer": [
                                 "データの保存、処理をメモリ上で行うこと"
                             ],
+                            "memo": "AWS RDSでは処理をメモリ、データはストレージに保存しているのに対して、\nelastic cacheではメモリで処理してデータもメモリに保存している。",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "elasticacheの種類2つ",
+                            "answer": [
+                                "memcached\nredis"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "memcachedとredisのうちマルチスレッドはどちらか？",
+                            "answer": [
+                                "memcached"
+                            ],
                             "memo": "",
                             "is_correct": false
                         }
