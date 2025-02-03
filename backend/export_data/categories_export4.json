@@ -593,7 +593,16 @@
                 },
                 {
                     "name": "elasticache",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "インメモリデータベースとは？",
+                            "answer": [
+                                "データの保存、処理をメモリ上で行うこと"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "vpc エンドポイント",
