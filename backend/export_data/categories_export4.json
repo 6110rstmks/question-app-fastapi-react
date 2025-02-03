@@ -794,6 +794,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "Amazon Managed Service for Apache Flink",
+                    "questions": [
+                        {
+                            "problem": "Amazon Managed Service for Apache Flinkではストリーミングデータをクエリ処理によって分割してから、直接に（A)に保存することができます",
+                            "answer": [
+                                "Amazon S3バケット"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
