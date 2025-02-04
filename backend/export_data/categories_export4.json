@@ -9,10 +9,10 @@
                         {
                             "problem": "ECS on EC2 とECS on Fargateの違いをのべよ",
                             "answer": [
-                                "xxx"
+                                ""
                             ],
                             "memo": "",
-                            "is_correct": true
+                            "is_correct": false
                         }
                     ]
                 },
@@ -672,7 +672,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "オンプレミス環境からもAWSサービスにネットワーク接続できるのはインターフェース型か、ゲートウェイ型か。",
+                            "problem": "VPCエンドポイントにおいてオンプレミス環境からもAWSサービスにネットワーク接続できるのはインターフェース型か、ゲートウェイ型か。",
                             "answer": [
                                 "インターフェース型"
                             ],
