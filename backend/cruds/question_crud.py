@@ -113,6 +113,15 @@ def get_question_count(db: Session):
     
     return int(count)
 
+def get_question_uncorrected_count(db: Session):
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    where(Question.is_correct == False)
+                )
+    
+    return int(count)
+
 def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate):
 
     # チェックボックスが外された場合は、SubcategoryQuestionから削除する。

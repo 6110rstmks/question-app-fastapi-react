@@ -84,12 +84,12 @@ const QuestionPage: React.FC = () => {
             <div>
             <div className={styles.answer_container}>
                 <div
-                className={`${styles.answer_toggle} ${
-                    showAnswer ? styles.show : ''
-                }`}
-                onClick={() => setShowAnswer(!showAnswer)}
+                    className={`${styles.answer_toggle} ${
+                        showAnswer ? styles.show : ''
+                    }`}
+                    onClick={() => setShowAnswer(!showAnswer)}
                 >
-                {showAnswer ? '答えを隠す' : '答えを表示する'}
+                    {showAnswer ? '答えを隠す' : '答えを表示する'}
                 </div>
                 <div
                     className={`${styles.answer_text} ${

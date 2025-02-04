@@ -30,6 +30,12 @@ async def change_belongs_to_subcategoryId(
 async def get_question_count(db: DbDependency):
     return question_crud.get_question_count(db)
 
+# 不正解のuestion数を取得するエンドポイント
+@router.get("/uncorrected_count", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_uncorrected_count(db: DbDependency):
+    return question_crud.get_question_uncorrected_count(db)
+
+
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
 async def create(

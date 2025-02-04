@@ -13,12 +13,13 @@ const Home: React.FC = () => {
     const [searchSubcategoryWord, setSearchSubcategoryWord] = useState<string>("");
     const [searchQuestionWord, setSearchQuestionWord] = useState<string>("");
     const [searchAnswerWord, setSearchAnswerWord] = useState<string>("");
-    const { categories, pageCount, questionCount } = useCategories(page, limit, searchCategoryWord, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
+    const { categories, pageCount, questionCount, uncorrectedquestionCount } = useCategories(page, limit, searchCategoryWord, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
 
     return (
         <>
             <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
-            <h3>不正解のQuestion数：{questionCount}</h3>
+            <h3>すべてのQuestionの数：{questionCount}</h3>
+            <h3>不正解のQuestion数：{uncorrectedquestionCount}</h3>
             <div className={styles.containerA}>
                 <Pagination
                     currentPage={page}

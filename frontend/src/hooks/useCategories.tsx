@@ -4,7 +4,7 @@ import { Category } from "../types/Category";
 import { fetchCategories, fetchPageCount } from "../api/CategoryAPI";
 import { isAuthenticated } from "../utils/auth_function";
 import { useNavigate } from "react-router-dom"
-import { fetchQuestionCount } from "../api/QuestionAPI"
+import { fetchQuestionCount, fetchUncorrectedQuestionCount } from "../api/QuestionAPI"
 
 export const useCategories = (
     page: number,
@@ -19,6 +19,7 @@ export const useCategories = (
     // アプリの初期状態の場合はカテゴリがまだ作成されていないためpageCount,questionCountはnull
     const [pageCount, setPageCount] = useState<number | null>(null)
     const [questionCount, setQuestionCount] = useState<number | null>(null)
+    const [uncorrectedquestionCount, setUncorrectedquestionCount] = useState<number | null>(null)
     
     const navigate = useNavigate()
 
@@ -32,8 +33,11 @@ export const useCategories = (
             const count = await fetchPageCount();
             setPageCount(count);
             
-            const data = await fetchQuestionCount()
-            setQuestionCount(data)
+            const questionCnt = await fetchQuestionCount()
+            setQuestionCount(questionCnt)
+
+            const uncorrectedQuestionCnt = await fetchUncorrectedQuestionCount()
+            setUncorrectedquestionCount(uncorrectedQuestionCnt)
 
         };
         loadPageCount();
@@ -56,5 +60,5 @@ export const useCategories = (
         loadCategories();
     }, [page, limit, searchCategoryWord, searchSubcategoryWord, searchQuestionWord, searchAnswerWord]);
 
-    return { categories, pageCount, questionCount }
+    return { categories, pageCount, questionCount, uncorrectedquestionCount }
 };

@@ -106,3 +106,13 @@ input[type="checkbox"] {
 .checkboxLabel {
   margin-top: -15px;
 }
+
+.subcategories {
+  display: none;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.subcategories.showAll {
+  display: block;
+}

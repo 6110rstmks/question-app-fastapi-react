@@ -59,3 +59,10 @@ export const fetchQuestionCount = async () => {
         return await response.json();
     }
 };
+
+export const fetchUncorrectedQuestionCount = async () => {
+    const response = await fetch('http://localhost:8000/questions/uncorrected_count');
+    if (response.ok) {
+        return await response.json();
+    }
+};

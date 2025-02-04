@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './SetProblemPage.module.css';
-import { CategoryWithQuestionCount } from '../../types/Category';
-import { Subcategory } from '../../types/Subcategory'; 
-import { fetchAllCategoriesWithQuestions } from '../../api/CategoryAPI';
-import { fetchSubcategoriesByCategoryId } from '../../api/SubcategoryAPI';
+import { CategoryWithQuestionCount } from '../../types/Category'
+import { Subcategory } from '../../types/Subcategory';
+import { fetchAllCategoriesWithQuestions } from '../../api/CategoryAPI'
+import { fetchSubcategoriesByCategoryId } from '../../api/SubcategoryAPI'
 
 const SetProblem: React.FC = () => {
-    const [categories, setCategories] = useState<CategoryWithQuestionCount[]>([]);
-    const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
+    const [categories, setCategories] = useState<CategoryWithQuestionCount[]>([])
+    const [subcategories, setSubcategories] = useState<Subcategory[]>([])
     const [selectedType, setSelectedType] = useState<string>('random')
     const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(false);
-    const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([]);
-    const [problemCnt, setProblemCnt] = useState<number>(5);
-    const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false);
+    const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([])
+    const [problemCnt, setProblemCnt] = useState<number>(5)
+    const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false)
+    const [showAll, setShowAll] = useState<boolean>(false)
     const navigate = useNavigate();
 
     const handleCheckboxChange = async (categoryId: number) => {
+
+        console.log(3987297)
+        setShowAll(true)
 
         // カテゴリに紐づくサブカテゴリを取得する
         const subcategories = await fetchSubcategoriesByCategoryId(categoryId);
@@ -137,7 +141,11 @@ const SetProblem: React.FC = () => {
                                             ? `《${category.incorrected_answered_question_count}》`
                                             : `《${category.question_count}》`}
                                     </span>
-                                    <div>
+                                    <div
+                                        className={`${styles.subcategories} ${
+                                            showAll ? styles.showAll : ''
+                                        }`}
+                                    >
                                         <span>🔽</span>
                                         <div>
                                             <label>
