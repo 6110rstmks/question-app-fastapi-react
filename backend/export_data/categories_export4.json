@@ -12,7 +12,7 @@
                                 "xxx"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -105,7 +105,7 @@
                                 ""
                             ],
                             "memo": "あああ",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "用語であるプロデューサ、メッセージ、コンシューマについて頭でアウトプットしてください。",
@@ -432,7 +432,7 @@
                         {
                             "problem": "route53のconnection drainingについて説明してください。",
                             "answer": [
-                                ""
+                                "登録解除された、もしくは異常のあるターゲットに対するリクエストを切断するまでの待機時間を設定する機能です\nデフォルトでは300秒になっています。\n\n"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -529,7 +529,7 @@
                                 "transit gateway"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -669,7 +669,7 @@
                                 "無料"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "オンプレミス環境からもAWSサービスにネットワーク接続できるのはインターフェース型か、ゲートウェイ型か。",
@@ -782,7 +782,7 @@
                                 "transit gateway"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
