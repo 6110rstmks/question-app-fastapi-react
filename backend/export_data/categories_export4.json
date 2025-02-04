@@ -160,7 +160,7 @@
                                 "public subnet"
                             ],
                             "memo": "aaa",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -419,7 +419,7 @@
                                 ""
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -694,7 +694,7 @@
                                 "署名付きCookie"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -705,6 +705,14 @@
                             "problem": "DLMはAWSの何のサービスと一緒に使うか？",
                             "answer": [
                                 "EBS"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "awsの DLMを使用することでなにができる。",
+                            "answer": [
+                                "Amazon EBSのボリュームのスナップショット作成"
                             ],
                             "memo": "",
                             "is_correct": false
