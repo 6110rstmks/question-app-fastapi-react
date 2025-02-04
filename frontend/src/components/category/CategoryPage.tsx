@@ -21,6 +21,7 @@ const CategoryPage = () => {
     return (
         <div>
             <h2>{category?.name}</h2>
+            <h1>ここに検索ボックスを設置</h1>
             {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
                 <div className={styles.subcategory_name} key={subcategory.id} onClick={() => handleNavigateToSubcategoryPage(subcategory.id)}>
                     ・{subcategory.name}

@@ -2,13 +2,15 @@ import React from 'react';
 import styles from './Search.module.css';
 
 interface SearchProps {
-    type: 'category' | 'subcategory' | 'question';
+    type: 'category' | 'subcategory' | 'question' | 'answer';
     searchCategoryWord?: string;
     searchSubcategoryWord?: string;
     searchQuestionWord?: string;
+    searchAnswerWord?: string;
     setSearchCategoryWord: (word: string) => void;
     setSearchSubcategoryWord: (word: string) => void;
     setSearchQuestionWord: (word: string) => void;
+    setSearchAnswerWord: (word: string) => void;
     page: number;
     setPage: (page: number) => void;
 }
@@ -18,24 +20,35 @@ const Search: React.FC<SearchProps> = ({
     searchCategoryWord = '',
     searchSubcategoryWord = '',
     searchQuestionWord = '',
+    searchAnswerWord = '',  
     setSearchCategoryWord,
     setSearchSubcategoryWord,
     setSearchQuestionWord,
+    setSearchAnswerWord,
     setPage,
 }) => {
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (type === 'category') {
+            setSearchCategoryWord(e.target.value);
             setSearchSubcategoryWord('');
             setSearchQuestionWord('');
-            setSearchCategoryWord(e.target.value);
+            setSearchAnswerWord('');
         } else if (type === 'subcategory') {
             setSearchCategoryWord('');
-            setSearchQuestionWord('');
             setSearchSubcategoryWord(e.target.value);
-        } else {
+            setSearchQuestionWord('');
+            setSearchAnswerWord('');
+        } else if (type === 'question') {
             setSearchCategoryWord('');
             setSearchSubcategoryWord('');
             setSearchQuestionWord(e.target.value);
+            setSearchAnswerWord('');
+        }
+        else {
+            setSearchCategoryWord('');
+            setSearchSubcategoryWord('');
+            setSearchQuestionWord('');
+            setSearchAnswerWord(e.target.value);
         }
         setPage(1);
     };
@@ -48,10 +61,12 @@ const Search: React.FC<SearchProps> = ({
               className={styles.search_box}
               value={
                 type === 'category'
-                  ? searchCategoryWord
-                  : type === 'subcategory'
-                  ? searchSubcategoryWord
-                  : searchQuestionWord
+                    ? searchCategoryWord
+                    : type === 'subcategory'
+                    ? searchSubcategoryWord
+                    : type === 'question'
+                    ? searchQuestionWord
+                    : searchAnswerWord
               }
               onChange={handleSearch}
               placeholder={`${
@@ -59,7 +74,9 @@ const Search: React.FC<SearchProps> = ({
                   ? 'カテゴリ'
                   : type === 'subcategory'
                   ? 'サブカテゴリ'
-                  : '質問'
+                  : type === 'question'
+                  ? '質問'
+                  : '解答'
               }検索`}
             />
           </div>

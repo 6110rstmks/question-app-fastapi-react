@@ -140,10 +140,26 @@ const SetProblem: React.FC = () => {
                                     <div>
                                         <span>🔽</span>
                                         <div>
+                                            <label>
+                                                <input
+                                                    type="checkbox"
+                                                    checked
+                                                    // onChange={() => handleCheckboxChange(category.id)}
+                                                />
+                                            </label>
+                                            <div>All</div>
+                                        </div>
+                                        <div>
                                         {subcategories
                                             .filter((subcategory) => subcategory.category_id === category.id)
                                             .map((subcategory) => (
                                                 <div key={subcategory.id}>
+                                                    <label>
+                                                        <input
+                                                            type="checkbox"
+                                                            // onChange={() => handleCheckboxChange(category.id)}
+                                                        />
+                                                    </label>
                                                     <span>{subcategory.name}</span>
                                                 </div>
                                             ))

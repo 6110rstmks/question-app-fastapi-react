@@ -1,7 +1,7 @@
 // ホーム画面の初期状態にて、カテゴリー一覧を取得するためのAPI
 // カテゴリ検索を行った際も、以下のAPIでカテゴリー一覧を取得する
-export const fetchCategories = async (skip: number, limit: number, searchCategoryWord: string, searchSubcategoryWord: string, searchQuestionWord: string) => {
-    const url = `http://127.0.0.1:8000/categories/home?skip=${skip}&limit=${limit}&categoryWord=${searchCategoryWord}&subcategoryWord=${searchSubcategoryWord}&questionWord=${searchQuestionWord}`;
+export const fetchCategories = async (skip: number, limit: number, searchCategoryWord: string, searchSubcategoryWord: string, searchQuestionWord: string, searchAnswerWord: string) => {
+    const url = `http://127.0.0.1:8000/categories/home?skip=${skip}&limit=${limit}&categoryWord=${searchCategoryWord}&subcategoryWord=${searchSubcategoryWord}&questionWord=${searchQuestionWord}&answerWord=${searchAnswerWord}`;
     const response = await fetch(url);
     if (response.ok) {
         return response.json();

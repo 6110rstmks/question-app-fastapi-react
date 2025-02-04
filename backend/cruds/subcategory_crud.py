@@ -3,24 +3,37 @@ from sqlalchemy import select, update, func
 from schemas.subcategory import SubcategoryCreate, SubcategoryUpdate
 from models import Subcategory, SubcategoryQuestion, Question
 from . import question_crud as question_cruds
-from . import subcategory_question_crud as subcategory_question_cruds
 from fastapi import HTTPException
 
-def find_subcategories_in_categorybox(db: Session, category_id: int, limit: int, searchSubcategoryWord: str, searchQuestionWord: str):
+# カテゴリbox内で表示するサブカテゴリを取得
+def find_subcategories_in_categorybox(db: Session, category_id: int, limit: int, searchSubcategoryWord: str, searchQuestionWord: str, searchAnswerWord: str):
     
     if searchSubcategoryWord:
+
         query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.name.istartswith(f"%{searchSubcategoryWord}%"))
+
     elif searchQuestionWord and len(searchQuestionWord) >= 3:
         query2 = select(Question.id).where(Question.problem.istartswith(f"%{searchQuestionWord}%"))
         question_ids = db.execute(query2).scalars().all()
-                
+             
+        query3 = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id.in_(question_ids))
+        subcategory_ids = db.execute(query3).scalars().all()        
+        query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.id.in_(subcategory_ids))
+
+    elif searchAnswerWord and len(searchAnswerWord) >= 3:
+        query2 = select(Question.id).where(
+            func.array_to_string(Question.answer, ',').ilike(f"%{searchAnswerWord}%")
+        )
+        question_ids = db.execute(query2).scalars().all()
+        
         query3 = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id.in_(question_ids))
         subcategory_ids = db.execute(query3).scalars().all()
-        
+
+        print("やまもと")
         print("subcategory_ids", subcategory_ids)
         
         query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.id.in_(subcategory_ids))
-    else:     
+    else:
         query = select(Subcategory).where(Subcategory.category_id == category_id)
 
     result = db.execute(query).scalars().all()
@@ -76,6 +89,7 @@ def create_subcategory(db: Session, subcategory_create: SubcategoryCreate):
 
 def update2(db: Session, id: int, subcategory_update: SubcategoryUpdate):
     subcategory = find_subcategory_by_id(db, id)
+
     if subcategory is None:
         return None
     

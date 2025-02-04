@@ -53,9 +53,10 @@ async def find_subcategories_in_category(
     category_id: int = Path(gt=0),
     limit: Optional[int] = None,
     searchSubcategoryWord: Optional[str] = None,
-    searchQuestionWord: Optional[str] = None
+    searchQuestionWord: Optional[str] = None,
+    searchAnswerWord: Optional[str] = None
 ):
-    return subcategory_crud.find_subcategories_in_categorybox(db, category_id, limit, searchSubcategoryWord, searchQuestionWord)
+    return subcategory_crud.find_subcategories_in_categorybox(db, category_id, limit, searchSubcategoryWord, searchQuestionWord, searchAnswerWord)
 
 @router.get("/", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_by_name(

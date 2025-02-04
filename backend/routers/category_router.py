@@ -28,9 +28,10 @@ async def find_all(
     skip: int = Query(0, ge=0),
     categoryWord: str = None,
     subcategoryWord: str = None,
-    questionWord: str = None
+    questionWord: str = None,
+    answerWord: str = None
 ):
-    return category_cruds.find_all(db, skip=skip, limit=limit, category_word=categoryWord, subcategory_word=subcategoryWord, question_word=questionWord)
+    return category_cruds.find_all(db, skip=skip, limit=limit, category_word=categoryWord, subcategory_word=subcategoryWord, question_word=questionWord, answer_word=answerWord)
 
 # page_countのルーティング
 @router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)

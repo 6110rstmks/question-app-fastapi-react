@@ -5,7 +5,7 @@ from models import Category, CategoryQuestion, Subcategory, SubcategoryQuestion,
 from config import PAGE_SIZE
 from fastapi import HTTPException
 
-def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None):
+def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None, answer_word: str = None):
 
     # カテゴリテーブルがそんざいするかどうかの確認。
     # テーブルの存在確認を行う理由はデフォルトでは。
@@ -34,14 +34,21 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
         query2 = select(Question.id).where(Question.problem.istartswith(f"%{question_word}%"))
         question_ids = db.execute(query2).scalars().all()
         
-        print("questionids", question_ids)
         
         query3 = select(CategoryQuestion.category_id).where(CategoryQuestion.question_id.in_(question_ids))
         category_ids = db.execute(query3).scalars().all()
         
-        print(category_ids)
         
         query_stmt = query_stmt.where(Category.id.in_(category_ids))  
+    
+    if answer_word:
+        query2 = select(Question.id).where(
+            func.array_to_string(Question.answer, ',').ilike(f"%{answer_word}%")
+        )
+        question_ids = db.execute(query2).scalars().all()
+        query3 = select(CategoryQuestion.category_id).where(CategoryQuestion.question_id.in_(question_ids))
+        category_ids = db.execute(query3).scalars().all()      
+        query_stmt = query_stmt.where(Category.id.in_(category_ids))
 
     # 結果を取得してスキップとリミットを適用
     result = db.execute(query_stmt).scalars().all()
