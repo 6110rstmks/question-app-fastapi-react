@@ -588,6 +588,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "glaicertはデフォルトで保存データを暗号化しているサービスか？",
+                            "answer": [
+                                "YES"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
