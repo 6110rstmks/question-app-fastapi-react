@@ -285,6 +285,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "Auto ScalingグループにALBのターゲットグループを構成して、EC2インスタンスを複数の（A）に分散させます。",
+                            "answer": [
+                                "AZ\nリージョンではない"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -543,6 +551,14 @@
                             ],
                             "memo": "Lambda を利用してrdsにアクセスする際は　rds proxyと覚える。\n",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "global databaseはRDSの機能か。auroraの機能か",
+                            "answer": [
+                                "aurora"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -661,7 +677,7 @@
                                 "アプリケーション(EC2)がVPC内にデプロイされており、Amazon S3に頻繁にデータをアップロードまたはダウンロードする。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "VPCエンドポイントの説明について（A)にあてはまるものを答えて。VPCとその他のAWSサービスを（A)を経由せずに接続できるサービス。",
@@ -753,7 +769,7 @@
                                 "kinesis data firehose"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "受け取ったデータを受け取ってからすぐに送信先に保存するためのサービスはkinesis data stream？firehose?",
@@ -761,7 +777,7 @@
                                 "firehose"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "データの転送が主な用途なのはkinesis data stream? firehose?",
@@ -769,7 +785,7 @@
                                 "Kinesis Data Firehose"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "kinesis data firehose のデータの転送先を2つ答えよ",
@@ -777,7 +793,7 @@
                                 "s3, redshift"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "kinesis data firehoseにおいてデータ変換機能を有効化することで、データを取り込んだ時に（A)が呼び出され、その記述に沿って形式が変換されます。（A)は？",
@@ -785,7 +801,7 @@
                                 "lambda関数"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1581,6 +1597,62 @@
                             "problem": "They tried to make sense of the email from their boss.",
                             "answer": [
                                 "－ 彼等は、上司から送られてきたメールの意味を理解しようとした。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "blanket term",
+                            "answer": [
+                                "総称"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "電圧",
+                            "answer": [
+                                "voltage"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "• There is no danger of contagion.",
+                            "answer": [
+                                "感染の危険はありません"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Harriet felt more estranged from her daughter than ever”",
+                            "answer": [
+                                "ハリエットは娘との距離をかつてないほど感じていた」。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "causative verb",
+                            "answer": [
+                                "使役動詞"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "instantaneous",
+                            "answer": [
+                                "瞬間的な、即座の"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "My plan doesn't mesh with yours.\"",
+                            "answer": [
+                                "（私の計画はあなたの計画と噛み合わない。調和しない）\n\n"
                             ],
                             "memo": "",
                             "is_correct": false
