@@ -18,18 +18,12 @@ interface Props {
 }
 
 const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
-    const [category, setCategory] = useState<Category | null>(null);
-    const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
-    const [localProblem, setLocalProblem] = useState<Question>(problem); // ローカル状態を追加
+    const [category, setCategory] = useState<Category | null>(null)
+    const [subcategories, setSubcategories] = useState<Subcategory[]>([])
+    const [localProblem, setLocalProblem] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
 
     const handleUpdateIsCorrect = async () => {
-        // ローカルの状態を即座に反転
-        setLocalProblem((prev) => ({
-            ...prev,
-            is_correct: !prev.is_correct,
-        }));
-
-        await updateQuestionIsCorrect(problem!); // API コール
+        await updateQuestionIsCorrect(localProblem!); // API コール
         const updatedProblem = await fetchQuestion(localProblem.id); // データをリフレッシュ
         setLocalProblem(updatedProblem); // 最新のデータをローカルに反映
     }
@@ -40,6 +34,7 @@ const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemL
         getCategoryByQuestionId(problem.id).then((data) => {
             setCategory(data);
         })
+
         fetchSubcategoriesByQuestionId(problem.id).then((data) => {
             setSubcategories(data);
         })

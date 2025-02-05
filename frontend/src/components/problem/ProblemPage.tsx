@@ -1,14 +1,14 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import { Question } from "../../types/Question";
-import useProblemPage from "./hooks/useProblemPage";
+import React from "react"
+import { useLocation } from "react-router-dom"
+import { Question } from "../../types/Question"
+import useProblemPage from "./hooks/useProblemPage"
 import ProblemNormal from "./ui/ProblemNormal"
-import ProblemReview from "./ui/ProblemReview";
-import ProblemComplete from "./ui/ProblemComplete";
+import ProblemReview from "./ui/ProblemReview"
+import ProblemComplete from "./ui/ProblemComplete"
 
 const ProblemPage: React.FC = () => {
-    const location = useLocation();
-    const problemData = location.state as Question[];
+    const location = useLocation()
+    const problemData = location.state as Question[]
     const {
         currentProblemIndex, // 現在の問題番号
         reviewFlg, // レビューモードかどうか
@@ -27,12 +27,12 @@ const ProblemPage: React.FC = () => {
 
     // レビューモードが終わったら、終了画面を表示
     if (reviewFlg && currentReviewProblemIndex >= unsolvedProblems.length) {
-        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />;
+        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />
     }
 
     // 通常出題が終わったら、終了画面を表示
     if (currentProblemIndex >= problemData.length) {
-        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />;
+        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />
     }
 
     return (

@@ -24,13 +24,7 @@ const ReviewProblem: React.FC<Props> = ({ problem, currentReviewProblemIndex, cu
     const [localProblem, setLocalProblem] = useState<Question>(problem); // ローカル状態を追加
 
     const handleUpdateIsCorrect = async () => {
-        // ローカルの状態を即座に反転
-        setLocalProblem((prev) => ({
-            ...prev,
-            is_correct: !prev.is_correct
-        }));
-
-        await updateQuestionIsCorrect(problem!); // API コール
+        await updateQuestionIsCorrect(localProblem!); // API コール
         const updatedProblem = await fetchQuestion(localProblem.id); // データをリフレッシュ
         setLocalProblem(updatedProblem); // 最新のデータをローカルに反映
     }
