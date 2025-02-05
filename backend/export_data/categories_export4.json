@@ -848,6 +848,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "dynamodb",
+                    "questions": [
+                        {
+                            "problem": "DynamoDBストリームはDynamoDB テーブルに保存されたデータ項目の（A)をキャプチャする機能です。",
+                            "answer": [
+                                "変更"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
