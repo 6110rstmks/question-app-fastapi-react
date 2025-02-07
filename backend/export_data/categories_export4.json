@@ -1394,6 +1394,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "windows functionの例を二つあげて",
+                            "answer": [
+                                "row_number, ranm"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -1523,7 +1531,7 @@
                                 "水道局"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "nobility",
