@@ -891,11 +891,11 @@
                     "name": "calculus",
                     "questions": [
                         {
-                            "problem": "ジョルダンの公式について知っていることをアウトプットしてください。",
+                            "problem": "ジョルダンの不等式について知っていることをアウトプットしてください。",
                             "answer": [
                                 "0≤x≤  2 π ​   において，  2 π x ≤ sin ⁡ x ≤ x π 2 ​  x≤sinx≤x,"
                             ],
-                            "memo": "kkklk\nk\n\n\n\n\n\n\n\n\n\n\nslkjk",
+                            "memo": "https://examist.jp/wp-content/uploads/mathematics/derivation-application/totusei-sessen-futousiki-20170318@2x.png",
                             "is_correct": false
                         }
                     ]
@@ -1419,6 +1419,14 @@
                                 "⚫︎Ranking window functions"
                             ],
                             "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "sqlにおいて内部結合と外部結合ではどちらが高速ですか.またその理由",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "内部結合\nマッチする行のみ取得するため、処理対象のデータ量が少ない",
                             "is_correct": false
                         }
                     ]
