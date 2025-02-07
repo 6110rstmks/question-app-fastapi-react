@@ -11,9 +11,9 @@
                     "name": "fargate",
                     "questions": [
                         {
-                            "problem": "ECS on EC2 とECS on Fargateの違いをのべよ",
+                            "problem": "ECS on EC2 とECS on Fargateおいてインフラ管理を行う必要があるのはどちらか",
                             "answer": [
-                                ""
+                                "ECS on EC2"
                             ],
                             "memo": "",
                             "is_correct": false
