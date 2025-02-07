@@ -1334,6 +1334,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "インデックスを作成すると検索が早くなる代わりに何が遅くなる？",
+                            "answer": [
+                                "insert update"
+                            ],
+                            "memo": "\n",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1399,6 +1407,16 @@
                             "problem": "windows functionの例を二つあげて",
                             "answer": [
                                 "row_number, ranm"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "window functionは3つに分類できる。こたえよ",
+                            "answer": [
+                                "⚫︎Aggregate window functions\n",
+                                "⚫︎Value window functions\n",
+                                "⚫︎Ranking window functions"
                             ],
                             "memo": "",
                             "is_correct": false
