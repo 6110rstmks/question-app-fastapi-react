@@ -1,6 +1,10 @@
 {
     "category": [
         {
+            "name": "music",
+            "subcategories": []
+        },
+        {
             "name": "aws",
             "subcategories": [
                 {
@@ -484,7 +488,7 @@
                                 " 複数のawsアカウントを一元管理する"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -505,7 +509,7 @@
                                 "中央ハブ"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "transit gatewayはどのようにやくす？",
@@ -1223,14 +1227,6 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "kl",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
                             "problem": "CNNの主要な層のうち、プーリング層について説明してください。",
                             "answer": [
                                 "また、プーリング層では条件に応じて、画像内のある領域毎に画像のサンプリング操作を行います。\n\n例えば、図では画像内で2×2の範囲毎に最大値を取り出す操作(マックスプーリング)を行っています。\n\n以下、このプーリングを行う範囲をウィンドウと呼ぶことにします。"
@@ -1495,7 +1491,7 @@
                                 "cardiovascular disease"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "psychics",
