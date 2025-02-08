@@ -1484,6 +1484,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "raid2とraid0の違いは？",
+                            "answer": [
+                                "ともにデータの書き込みにストライピングを用います。\nRAID0との大きな違いは、HDDが故障した際でもデータの復元が行える点です。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "細分化したデータを複数の磁気ディスクに巡回的に並列入出力することによって，転送速度の向上を図っている。これはraid?の説明？",
+                            "answer": [
+                                "0"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "raid2,3の読み書き単位がビットに対して、raid4,5の読み書き単位は何か？",
+                            "answer": [
+                                "ブロック"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
