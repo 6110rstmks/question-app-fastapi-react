@@ -80,7 +80,7 @@
                                 "VPC ピアリング接続、transit gateway"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "VPC間でのせつぞくにおいて、ネットワーク構成が複雑な場合は二つある方法のうちどちらを選ぶか。",
@@ -615,7 +615,7 @@
                                 "YES"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1473,6 +1473,14 @@
                             "problem": "raid0の目的は？",
                             "answer": [
                                 "パフォーマンスを向上させる。\n具体的にはデータを複数のディスクに分散して書き込む（ストライピング）ことで、読み書き速度が単一のディスクよりも大幅に向上します。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "RAID1は、同じデータを（A）ハードディスクに書き込みすることで耐障害性を高めた構成です。",
+                            "answer": [
+                                "2本の"
                             ],
                             "memo": "",
                             "is_correct": false
