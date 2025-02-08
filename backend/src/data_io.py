@@ -3,6 +3,7 @@ from sqlalchemy import select
 from models import Category, CategoryQuestion, Subcategory, Question, SubcategoryQuestion
 import json
 from fastapi import HTTPException, UploadFile
+from cruds import category_crud as category_cruds
 
 # 詳細はdocument/data_import_export.mdを参照
 def export_to_json(db: Session, file_path: str):
@@ -63,7 +64,7 @@ async def import_json_file(db: Session, file: UploadFile):
         if not category_name:
             raise HTTPException(status_code=400, detail="Category name is required.")
         
-        if len(find_by_name(db, category_name)) > 0:
+        if len(category_cruds.find_category_by_name(db, category_name)) > 0:
             continue
 
         # Create and add category

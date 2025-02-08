@@ -3,6 +3,7 @@
 当日・今週・今月に解いた問題をグラフとして表示させる。
 
 回答ログはanswer_logs_today, answer_logs_this_week, answer_logs_this_monthテーブルに格納。
+翌日の12:00に全件削除するcronを走らせる。
 
 テーブル構造
 
@@ -21,6 +22,8 @@
 
 problemPage.tsxの問題出題画面と異なることは、問題出題画面にわざわざ飛ばなくても、QuestionPage.tsxから問題に回答してログを残せるということ。
 
+画面設計をまず考える必要がある。
+
 ===========<br>
 githubのあるブランチ(save/log)を回答ログのデータベースとして使用する。
 
@@ -32,24 +35,23 @@ dbに入れる必要はないかもしれない。
 
 =============<br>
 Questionテーブルに「問題にふれた回数」のカラムを追加。
-
+→どのタイミングでこのカラムをカウントするかというと
 
 ==============
+
 categoryboxで表示するcategoryの順番を変更できるようにする、
 ピン留めボタンを押すことで、そのcategoryboxを先頭に移動させる。
 実装方法としてテーブルのカラム構成を考える。
 
-テーブル構成案
-sql
-コピーする
-編集する
+
 CREATE TABLE category (
     id INT PRIMARY KEY AUTO_INCREMENT,      -- カテゴリID
     name VARCHAR(255) NOT NULL,            -- カテゴリ名
     description TEXT,                      -- カテゴリ説明
     pinned_order INT DEFAULT NULL,         -- ピン留めカテゴリの順序（NULLの場合は通常カテゴリ）
-    display_order INT DEFAULT NULL         -- 通常カテゴリの表示順序（NULLはピン留めカテゴリが先）
+    <!-- display_order INT DEFAULT NULL         -- 通常カテゴリの表示順序（NULLはピン留めカテゴリが先） -->
 );
+
 カラムの詳細
 pinned_order:
 
@@ -154,7 +156,3 @@ const App = () => {
 export default App;
 
 ```
-
-========
-dockerのバックエンドサーバをもう一つ建てて、
-data importの検証を行う。

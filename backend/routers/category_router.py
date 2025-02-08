@@ -13,6 +13,7 @@ import os
 from git import Repo
 from src import data_io
 
+
 DbDependency = Annotated[Session, Depends(get_db)]
 
 # UserDependency = Annotated[auth.DecodedToken, Depends(auth_cruds.get_current_user)]
@@ -103,7 +104,7 @@ async def upload_json(
     file: UploadFile,
     db: Session = Depends(get_db),
 ):
-    return await category_cruds.import_json_file(db, file)
+    return await data_io.import_json_file(db, file)
 
 def git_push_json_file():
     EXPORT_DIR = os.path.abspath("export_data")
