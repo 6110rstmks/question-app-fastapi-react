@@ -22,7 +22,10 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWo
             <div className={styles.categoryFiled}>
                 <div className={styles.plusBtn} 
                     onClick={() => setShowForm(!showForm)}>➕</div>
-                <div className={styles.categoryName}>{category.name}</div>
+                <div 
+                    className={styles.categoryName}
+                    onClick={() => handleNavigateToCategoryPage(navigate, category)}
+                >{category.name}</div>
                 <span>［{subcategories.length}］</span>
             </div>
             <div className={styles.inputField}>
