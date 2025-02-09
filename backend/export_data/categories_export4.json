@@ -993,6 +993,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "(a, b)を中心とする円の(p, q)における接線の方程式",
+                            "answer": [
+                                "(p-a)(x-a) + (q-b)(y-b) = r^2"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "the prove that an equilateral triangle has the maximum area among all triangles with a fixed perimeter",
+                            "answer": [
+                                "正三角形にならない時に面積が最大になると仮定すると、ある隣合う2辺が存在してその長さが長さが異なる。\nこのとき、三角形の各頂点をA,B,Cとして、長さの異なる2辺をAB,ACとする。\nここで、AをAB+ACが一定になるように動かすことを考えると、楕円の定義から、AはB,Cを焦点とする楕円上を動く。ここで面積が最大になるのは、Aが直線BCから最も離れる時、つまりAが楕円の短軸の端点にあるときであり、このときにAB=ACとなるので、B,Cを固定したままAB+ACを変化させずに、AB=ACとなるようにAを動かすことで、面積をさらに大きくすることができ、最大性の仮定に矛盾する。\nよって、面積は正三角形の時に最大となる。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
