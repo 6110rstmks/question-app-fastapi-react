@@ -977,6 +977,14 @@
                             ],
                             "memo": "https://examist.jp/mathematics/trigonometric/line-angle/\nhttps://math.nakaken88.com/textbook/standard-normal-vector-and-angle-between-lines/\n↑参考",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "(a, 0),(b, 0)を通る直線のequation",
+                            "answer": [
+                                "x/a + y/b = 1"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
