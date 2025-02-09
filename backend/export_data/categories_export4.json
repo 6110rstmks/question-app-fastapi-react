@@ -59,7 +59,7 @@
                                 "データ量の急激な増加が問題視されている中、システムパフォーマンスが低下し、相対的に生産性が低下してしまっています。ストレージのIOPS数値が高いと、システムパフォーマンスを最大限に高め、生産性も向上できるのです。"
                             ],
                             "memo": "",
-                            "is_correct": true
+                            "is_correct": false
                         }
                     ]
                 },
@@ -933,6 +933,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "integral",
+                    "questions": [
+                        {
+                            "problem": "■area(integral) 解法",
+                            "answer": [
+                                "直線や扇形を含む図形 -> パズルする"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -1441,7 +1454,20 @@
             "name": "algorithm",
             "subcategories": [
                 {
-                    "name": "tree",
+                    "name": "データ構造",
+                    "questions": [
+                        {
+                            "problem": "後に来たデータを先に処理する（LIFO（Last in First out：後入先出法））のデータ構造をなんというか",
+                            "answer": [
+                                "スタック"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "データ構造 tree",
                     "questions": [
                         {
                             "problem": "AVL treeの定義",
@@ -1505,6 +1531,14 @@
                             "problem": "raid2,3の読み書き単位がビットに対して、raid4,5の読み書き単位は何か？",
                             "answer": [
                                 "ブロック"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "raid4では冗長ディスクの構成が固定に対して、raid5では冗長ディスクの構成が何か？",
+                            "answer": [
+                                "分散"
                             ],
                             "memo": "",
                             "is_correct": false
