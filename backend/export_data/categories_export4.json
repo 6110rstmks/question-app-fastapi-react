@@ -898,6 +898,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "auto scaling",
+                    "questions": [
+                        {
+                            "problem": "ECSはAutoScalingに対応しているか？",
+                            "answer": [
+                                "している。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
