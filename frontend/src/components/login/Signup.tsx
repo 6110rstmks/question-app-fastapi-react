@@ -37,9 +37,6 @@ const Signup: React.FC = () => {
             },
             body: JSON.stringify({ username, password })
         });
-
-        console.log(response.ok)
-
         if (!response.ok) {
             throw new Error('Failed to sign up. Please try again.');
         }

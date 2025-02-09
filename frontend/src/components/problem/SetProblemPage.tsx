@@ -19,13 +19,11 @@ const SetProblem: React.FC = () => {
 
     const handleCheckboxChange = async (categoryId: number) => {
 
-        console.log(3987297)
         setShowAll(true)
 
         // カテゴリに紐づくサブカテゴリを取得する
         const subcategories = await fetchSubcategoriesByCategoryId(categoryId);
         setSubcategories(subcategories);
-        console.log(subcategories)
 
         setSelectedCategoryIds((prevSelected) => {
             // すでにカテゴリが選択されている場合は取り除き、選択されていない場合は追加する
@@ -63,7 +61,6 @@ const SetProblem: React.FC = () => {
             throw new Error(errorData.message || 'Failed to create problems');
         }
         const problemData = await response.json();
-        console.log(problemData)
         navigate('/problem', { state: problemData });
     }
     
