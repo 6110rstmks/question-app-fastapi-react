@@ -1058,6 +1058,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "limit",
+                    "questions": [
+                        {
+                            "problem": "極限の値が与えられている数列の極限の解法",
+                            "answer": [
+                                "n次式型　→　打ち消す\n1次方程式　→　まるごと置換"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
