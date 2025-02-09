@@ -4,8 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { Category } from '../../../types/Category'
-import { handleNavigateToCategoryPage } from '../../../utils/navigate_function'
-
 
 export const useSubcategoryPage = (
     subcategoryId: number,
@@ -80,6 +78,6 @@ export const useSubcategoryPage = (
         }
 
     }, [subcategoryId]);
-    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleNavigateToQuestionPage, handleDeleteSubcategory, handleNavigateToCategoryPage };
+    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleNavigateToQuestionPage, handleDeleteSubcategory };
 }
 

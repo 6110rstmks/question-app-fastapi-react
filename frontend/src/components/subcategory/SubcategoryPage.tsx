@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreate';
 import styles from "./SubcategoryPage.module.css";
@@ -8,10 +8,6 @@ import { updateSubcategoryName } from '../../api/SubcategoryAPI';
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
 import { handleNavigateToCategoryPage } from '../../utils/navigate_function';
 
-interface locationState {
-    category_id: number;
-    category_name: string;
-}
 
 const SubcategoryPage: React.FC = () => {
     const { subcategory_id } = useParams<{ subcategory_id: string }>();
@@ -24,7 +20,6 @@ const SubcategoryPage: React.FC = () => {
         categoryInfo, 
         handleNavigateToQuestionPage, 
         handleDeleteSubcategory,
-        handleNavigateToCategoryPage
     } = useSubcategoryPage(subcategoryId, location.state)
     
     // サブカテゴリ名の編集モードの状態を管理
@@ -43,6 +38,9 @@ const SubcategoryPage: React.FC = () => {
         }
     };
 
+    const navigate = useNavigate();
+    
+
     return (
         <div className={styles.subcategory_page}>
             <button 
@@ -52,24 +50,25 @@ const SubcategoryPage: React.FC = () => {
                 {isOn ? "答えを一括非表示" : "答えを一括表示"}
             </button>
             <div 
-            className={styles.subcategory_box}>
-            <span>{categoryInfo.name}＞</span>
-            {isEditing ? (
-                <input
-                    type="text"
-                    value={subcategoryName}
-                    onChange={(e) => setSubcategoryName(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    onBlur={() => setIsEditing(false)} // フォーカスを外すと編集モードを終了
-                    autoFocus
-                />
-            ) : (
-                <h1 >
-                    <span
-                        onDoubleClick={() => setIsEditing(true)}
-                    >{subcategoryName}</span>
-                </h1>
-            )}                
+                className={styles.subcategory_box}
+            >
+                <span onClick={() => handleNavigateToCategoryPage(navigate, categoryInfo)}>{categoryInfo.name}＞</span>
+                {isEditing ? (
+                    <input
+                        type="text"
+                        value={subcategoryName}
+                        onChange={(e) => setSubcategoryName(e.target.value)}
+                        onKeyPress={handleKeyPress}
+                        onBlur={() => setIsEditing(false)} // フォーカスを外すと編集モードを終了
+                        autoFocus
+                    />
+                ) : (
+                    <h1 >
+                        <span
+                            onDoubleClick={() => setIsEditing(true)}
+                        >{subcategoryName}</span>
+                    </h1>
+                )}                
                 <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>
             <button>このサブカテゴリから問題を出題する。</button>

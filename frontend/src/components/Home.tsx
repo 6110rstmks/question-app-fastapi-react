@@ -18,7 +18,7 @@ const Home: React.FC = () => {
     return (
         <>
             <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
-            <h3>すべてのQuestionの数：{questionCount}</h3>
+            <h3>The total number of Questions：{questionCount}</h3>
             <h3>不正解のQuestion数：{uncorrectedquestionCount}</h3>
             <div className={styles.containerA}>
                 <Pagination
