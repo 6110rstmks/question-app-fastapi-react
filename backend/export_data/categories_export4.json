@@ -2,24 +2,7 @@
     "category": [
         {
             "name": "music",
-            "subcategories": [
-                {
-                    "name": "ssss",
-                    "questions": []
-                },
-                {
-                    "name": "aaaa",
-                    "questions": []
-                },
-                {
-                    "name": "aaaaa",
-                    "questions": []
-                },
-                {
-                    "name": "sdfs",
-                    "questions": []
-                }
-            ]
+            "subcategories": []
         },
         {
             "name": "aws",
@@ -973,7 +956,16 @@
                 },
                 {
                     "name": "m",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "x^2 = 1 ⇔x = 1 or x = -1 or x = 2の真偽",
+                            "answer": [
+                                "左から右は真\n右から左は偽"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "2d figure",
@@ -1016,6 +1008,19 @@
                             "problem": "根号（A）に外す。",
                             "answer": [
                                 "基本的"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "probability",
+                    "questions": [
+                        {
+                            "problem": "サイコロの最大値、最小値の確率の問題の初手",
+                            "answer": [
+                                "x = kとなる確率P(x=k)とする"
                             ],
                             "memo": "",
                             "is_correct": false
