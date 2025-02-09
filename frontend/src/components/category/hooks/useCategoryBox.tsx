@@ -37,10 +37,8 @@ export const useCategoryBox = (
         }
 
         const data = await response.json() as SubcategoryWithQuestionCount;
-        console.log(subcategories.length)
 
         if (subcategories.length < 6) {
-            console.log(9879)
             addSubcategory(data);
         }
         setSubcategoryName("");

@@ -21,6 +21,7 @@ const CategoryPage = () => {
         });
     };
 
+
     const handleAddSubcategory = async () => {
         if (!subcategoryName.trim()) {
             alert('サブカテゴリー名を入力してください');
@@ -40,12 +41,8 @@ const CategoryPage = () => {
         }
 
         const data = await response.json() as SubcategoryWithQuestionCount;
-        console.log(subcategories.length)
 
-        if (subcategories.length < 6) {
-            console.log(9879)
-            addSubcategory(data);
-        }
+        addSubcategory(data);
         setSubcategoryName("");
     }
 
