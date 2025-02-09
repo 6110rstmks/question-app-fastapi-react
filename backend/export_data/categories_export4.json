@@ -591,14 +591,6 @@
                                 "s3のストレージクラスの中では最もコストが安いから"
                             ],
                             "memo": "",
-                            "is_correct": true
-                        },
-                        {
-                            "problem": "s3 glacier flexible retrievalとglacier instant retrievalのうち迅速にデータを取り出し可能なのはどちらか",
-                            "answer": [
-                                "glacier flexible retrieval"
-                            ],
-                            "memo": "",
                             "is_correct": false
                         },
                         {
@@ -616,6 +608,14 @@
                             ],
                             "memo": "",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "ミリ秒単位で瞬時にデータが取得可能なglacierの種類は何か？",
+                            "answer": [
+                                "glacier instant retrieval"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1099,7 +1099,7 @@
                                 "臭化銀"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 }
@@ -1820,7 +1820,7 @@
                                 "－ 彼等は、上司から送られてきたメールの意味を理解しようとした。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "blanket term",
