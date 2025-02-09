@@ -892,6 +892,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "Auto Scalingグループの最大のEC2の起動台数はいくつか",
+                            "answer": [
+                                "5"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
