@@ -5,6 +5,7 @@ import { Category } from "../../types/Category"
 import { SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
 import { handleNavigateToCategoryPage, handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
+
 interface CategoryBoxProps {
     category: Category,
     searchSubcategoryWord: string,
@@ -49,7 +50,6 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWo
                     <div key={index}>
                         <div
                             className={styles.subcategoryName}
-                            // key={subcategory.id}
                             onClick={() => handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}
                         >
                             {subcategory.name} ({subcategory.question_count || 0})

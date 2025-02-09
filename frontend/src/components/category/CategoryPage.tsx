@@ -52,25 +52,31 @@ const CategoryPage = () => {
     return (
         <div>
             <h2>{category?.name}</h2>
-            <h1>ここに検索ボックスを設置</h1>
-            {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
-                <div className={styles.subcategory_name} key={subcategory.id} onClick={() => handleNavigateToSubcategoryPage(subcategory.id)}>
-                    ・{subcategory.name}
-                    <span>【{subcategory.question_count}】</span>
-                </div>
-                
-            ))}
+            <div>
+                <label className={styles.inputField}>
+                    サブカテゴリー名:
+                    <input 
+                    type="text" 
+                    value={subcategoryName} 
+                    onChange={(e) => setSubcategoryName(e.target.value)} 
+                    autoFocus
+                    />
+                </label>
+                <button className={styles.submitBtn} onClick={handleAddSubcategory}>Submit</button>
+            </div>
 
-            <label className={styles.inputField}>
-                サブカテゴリー名:
-                <input 
-                type="text" 
-                value={subcategoryName} 
-                onChange={(e) => setSubcategoryName(e.target.value)} 
-                autoFocus
-                />
-            </label>
-            <button className={styles.submitBtn} onClick={handleAddSubcategory}>Submit</button>
+            <h1>ここに検索ボックスを設置</h1>
+
+            <div>        
+                {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
+                    <div className={styles.subcategory_name} key={subcategory.id} onClick={() => handleNavigateToSubcategoryPage(subcategory.id)}>
+                        ・{subcategory.name}
+                        <span>【{subcategory.question_count}】</span>
+                    </div>
+                    
+                ))}
+            </div>
+
         </div>
     )
 }
