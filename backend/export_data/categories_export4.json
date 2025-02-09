@@ -936,7 +936,7 @@
                             "answer": [
                                 "In+2から部分積分法で進める"
                             ],
-                            "memo": "",
+                            "memo": "https://examist.jp/mathematics/integration-expression/sekibunzenkasiki/",
                             "is_correct": false
                         }
                     ]
@@ -1811,6 +1811,14 @@
                             "problem": "My plan doesn't mesh with yours.\"",
                             "answer": [
                                 "（私の計画はあなたの計画と噛み合わない。調和しない）\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Parabola",
+                            "answer": [
+                                "放物線\n"
                             ],
                             "memo": "",
                             "is_correct": false
