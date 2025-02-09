@@ -897,6 +897,22 @@
                             ],
                             "memo": "https://examist.jp/wp-content/uploads/mathematics/derivation-application/totusei-sessen-futousiki-20170318@2x.png",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "はさみうちのげんりをするときにたまーに一緒に使う定理",
+                            "answer": [
+                                "二項定理"
+                            ],
+                            "memo": "例をくれ",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "瞬間部分積分が有効なパターン２",
+                            "answer": [
+                                "整式×　三角関数\n整式　×　指数関数"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -943,6 +959,14 @@
                                 "直線や扇形を含む図形 -> パズルする"
                             ],
                             "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "斜軸回転体の初手　",
+                            "answer": [
+                                "斜めの変数で体積を設定"
+                            ],
+                            "memo": "https://hiraocafe.com/note/shajikukihon.html",
                             "is_correct": false
                         }
                     ]
