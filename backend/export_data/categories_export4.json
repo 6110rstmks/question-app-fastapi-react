@@ -1961,6 +1961,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "#過去は何の意味もない",
+                            "answer": [
+                                "#the past is of no consequence\""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "停止　（stop以外で）",
+                            "answer": [
+                                "suspension"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
