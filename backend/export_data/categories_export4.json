@@ -902,6 +902,10 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "クライアントVPN",
+                    "questions": []
                 }
             ]
         },
@@ -1882,6 +1886,22 @@
                             "problem": "Parabola",
                             "answer": [
                                 "放物線\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "extravagant meal",
+                            "answer": [
+                                "ごちそう"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "trespass",
+                            "answer": [
+                                "不法侵入"
                             ],
                             "memo": "",
                             "is_correct": false
