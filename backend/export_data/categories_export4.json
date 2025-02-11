@@ -420,7 +420,7 @@
                         {
                             "problem": "AWSのRoute53で使用されるレコードを全て列挙してください。",
                             "answer": [
-                                ""
+                                "A（Address）レコード\nAAAA（IPv6 Address）レコード\nCNAME（Canonical Name）レコード\nAliasレコード（Route 53独自）"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -431,7 +431,7 @@
                                 "指定したエンドポイント（IPアドレスやドメイン名）に対して定期的にリクエストを送り、その応答を監視することで、エンドポイントの可用性や健全性を確認する機能です。"
                             ],
                             "memo": "",
-                            "is_correct": true
+                            "is_correct": false
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
