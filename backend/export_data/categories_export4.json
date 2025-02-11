@@ -222,6 +222,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "Amazon AuroraのリージョンまたぎでDBを同期してくれる機能」をなんという？",
+                            "answer": [
+                                "グローバルDB"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
