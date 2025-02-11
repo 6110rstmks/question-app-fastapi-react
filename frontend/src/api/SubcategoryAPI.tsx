@@ -18,7 +18,7 @@ export const fetchSubcategoriesByCategoryId = async (category_id: number, search
     let url = `http://localhost:8000/subcategories/category_id/${category_id}`;
     
     if (searchSubcategoryWord) {
-        url += `?subcategoryWord=${encodeURIComponent(searchSubcategoryWord)}`;
+        url += `?searchSubcategoryWord=${searchSubcategoryWord}`;
     }
 
     const response = await fetch(url);

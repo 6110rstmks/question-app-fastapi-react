@@ -7,9 +7,7 @@ from fastapi import HTTPException
 
 # カテゴリbox内で表示するサブカテゴリを取得
 def find_subcategories_in_categorybox(db: Session, category_id: int, limit: int, searchSubcategoryWord: str, searchQuestionWord: str, searchAnswerWord: str):
-    
     if searchSubcategoryWord:
-
         query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.name.istartswith(f"%{searchSubcategoryWord}%"))
 
     elif searchQuestionWord and len(searchQuestionWord) >= 3:
@@ -28,9 +26,6 @@ def find_subcategories_in_categorybox(db: Session, category_id: int, limit: int,
         
         query3 = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id.in_(question_ids))
         subcategory_ids = db.execute(query3).scalars().all()
-
-        print("やまもと")
-        print("subcategory_ids", subcategory_ids)
         
         query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.id.in_(subcategory_ids))
     else:

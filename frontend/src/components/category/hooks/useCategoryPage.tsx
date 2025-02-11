@@ -52,7 +52,7 @@ export const useCategoryPage = (categoryId: number) => {
             const category = await fetchCategory(categoryId);
             setCategory(category);
         })();
-    }, [searchWord]);
+    }, []);
 
     useEffect(() => {
         (async () => {
