@@ -22,7 +22,6 @@ const CategoryPage = () => {
                     type="text" 
                     value={subcategoryName} 
                     onChange={(e) => setSubcategoryName(e.target.value)} 
-                    autoFocus
                     />
                 </label>
                 <button className={styles.submitBtn} onClick={handleAddSubcategory}>Submit</button>
@@ -36,6 +35,7 @@ const CategoryPage = () => {
                     value={searchWord}
                     onChange={handleSearch}
                     placeholder="Search"
+                    autoFocus
                     />
                 </div>
             </div>
