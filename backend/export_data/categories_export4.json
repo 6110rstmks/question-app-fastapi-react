@@ -230,6 +230,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "global databaseはRDSの機能か。auroraの機能か",
+                            "answer": [
+                                "aurora"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -420,9 +428,9 @@
                         {
                             "problem": "AWSにおいて、CNAMEレコードではなくて、ALIASレコードを使用すべき理由。",
                             "answer": [
-                                "https://www.youtube.com/watch?v=Ly_7Z5BPcOc\n\n上記の動画の3分から視聴してください。"
+                                "CNAMEレコード名でアクセスしたらAレコード名を返す。\nでも通信するためにはIPアドレスが欲しいので、Aレコードが返されたらそのAレコード名を使用して名前解決をしてIPアドレスを受け取る。\n\n対して、Aliasレコードでは、クライアントとRoute53の通信は１回で済むのでCNAMEを使うよりも通信の速度が上がる"
                             ],
-                            "memo": "",
+                            "memo": "https://www.youtube.com/watch?v=Ly_7Z5BPcOc\n\n上記の動画の3分から視聴してください。",
                             "is_correct": false
                         },
                         {
@@ -571,6 +579,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "amazon auroraにはリードレプリカが存在するが、amazon RDSはリードレプリカの機能は持ち合わせているか",
+                            "answer": [
+                                "持ち合わせている。"
+                            ],
+                            "memo": "",
+                            "is_correct": true
                         }
                     ]
                 },
