@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
@@ -54,6 +54,20 @@ const QuestionPage: React.FC = () => {
             localStorage.setItem('categoryInfo', JSON.stringify(newCategoryInfo));
       }
     }, [location.state]);
+
+    const handleKeyDown = useCallback((event: KeyboardEvent) => {
+        if (!event.ctrlKey && event.key.toLowerCase() === 'b') {
+            event.preventDefault();
+            setShowAnswer(prev => !prev);
+        }
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [handleKeyDown]);
 
   return (
       <>
@@ -149,6 +163,7 @@ const QuestionPage: React.FC = () => {
                 )}
             </div>
         </div>
+        <h1>ctr + b で問題を表示・非表示</h1>
       </>
   )
 }
