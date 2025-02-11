@@ -428,7 +428,7 @@
                         {
                             "problem": "route53のヘルスチェエクは何をする",
                             "answer": [
-                                ""
+                                "指定したエンドポイント（IPアドレスやドメイン名）に対して定期的にリクエストを送り、その応答を監視することで、エンドポイントの可用性や健全性を確認する機能です。"
                             ],
                             "memo": "",
                             "is_correct": true
@@ -575,7 +575,7 @@
                                 "glacier deep archive, glacier instant retrieval, glacier flexible retriebal"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Glacier ではデータをアップロードすると、そのデータをアーカイブ化して圧縮します。その上で、（A)というスペースにデータを保存します。（A)に入る単語は？",
