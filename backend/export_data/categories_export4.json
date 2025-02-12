@@ -2047,6 +2047,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "what is adjective related to nose?",
+                            "answer": [
+                                "nasal"
+                            ],
+                            "memo": "ex)\nthe nasal cavity 鼻腔\nnasal congestion 鼻詰まり",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "He chose a reputable lawyer to handle his legal matters.",
+                            "answer": [
+                                "（彼は法律問題を扱うために評判の良い弁護士を選んだ。）\n\nreputable:評判の良い"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
