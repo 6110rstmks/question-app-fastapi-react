@@ -5,6 +5,8 @@ import { Category } from "../../types/Category"
 import { SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
 import { handleNavigateToCategoryPage, handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
+import { FaGithub } from 'react-icons/fa'
+
 
 interface CategoryBoxProps {
     category: Category,
@@ -23,6 +25,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWo
             <div className={styles.categoryFiled}>
                 <div className={styles.plusBtn} 
                     onClick={() => setShowForm(!showForm)}>➕</div>
+                <FaGithub />
                 <div 
                     className={styles.categoryName}
                     onClick={() => handleNavigateToCategoryPage(navigate, category)}
