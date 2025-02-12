@@ -2063,6 +2063,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "This flashlight's kaput. : ",
+                            "answer": [
+                                "この懐中電灯 は壊れてる。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "After the storm, many houses were kaput",
+                            "answer": [
+                                "嵐の後、多くの家が壊れていました。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
