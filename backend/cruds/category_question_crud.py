@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from models import CategoryQuestion
+from models2 import CategoryQuestion
 
 def find_all(db: Session):
     return db.query(CategoryQuestion).all()

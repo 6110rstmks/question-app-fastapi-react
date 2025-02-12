@@ -1,18 +1,21 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, func
 from schemas.category import CategoryCreate
-from models import Category, CategoryQuestion, Subcategory, SubcategoryQuestion, Question
+from models2 import Category, CategoryQuestion, Subcategory, SubcategoryQuestion, Question
 from config import PAGE_SIZE
 from fastapi import HTTPException
 
 def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None, answer_word: str = None):
 
+    print(97297320)
     # カテゴリテーブルがそんざいするかどうかの確認。
     # テーブルの存在確認を行う理由はデフォルトでは。
     if not db.query(Category).first():
         return None  
     
     query_stmt = select(Category)
+    
+    print(222)
     
     # Category欄で検索した場合
     if category_word:
@@ -24,6 +27,8 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
         query2 = select(Subcategory.category_id).where(Subcategory.name.istartswith(f"%{subcategory_word}%"))
         category_ids = db.execute(query2).scalars().all()
         query_stmt = query_stmt.where(Category.id.in_(category_ids))
+
+    print(221827)
     
     # Question欄で検索した場合
     # そのQuestionを持つSubcategoryを取得するしてCategoriesで返す。
@@ -52,6 +57,7 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
 
     # 結果を取得してスキップとリミットを適用
     result = db.execute(query_stmt).scalars().all()
+    print(221212)
     return result[skip: skip + limit]
 
 def find_pagination(db: Session):

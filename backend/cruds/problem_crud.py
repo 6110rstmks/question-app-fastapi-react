@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from schemas.problem import ProblemCreate
 from sqlalchemy import select, func
-from models import Question, CategoryQuestion
+from models2 import Question, CategoryQuestion
 from sqlalchemy.sql.expression import false
 import random
 

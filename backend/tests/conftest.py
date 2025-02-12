@@ -9,7 +9,7 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.pool import StaticPool
 from sqlalchemy.orm import Session, sessionmaker
-from models import Base, Item
+from backend.models2 import Base, Item
 from schemass import DecodedToken
 from main import app
 from database import get_db

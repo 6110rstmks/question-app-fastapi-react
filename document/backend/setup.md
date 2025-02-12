@@ -11,7 +11,7 @@ localhost:8000/docs
 にアクセス
 
 [step3]
-alembic revision --autogenerate -m "Create user tables"
+alembic revision --autogenerate -m "alter questions column"
 
 [step4]
 alembic revision --autogenerate -m "Add foreign key"
@@ -49,13 +49,20 @@ $ GRANT INSERT, UPDATE, DELETE, SELECT ON category_question TO sorasakamoto;
 
 $ GRANT INSERT, UPDATE, DELETE, SELECT ON subcategory_question TO sorasakamoto;
 
+$ GRANT all privileges on alembic_version to sorasakamoto;
 
+GRANT ALL PRIVILEGES ON TABLE questions TO sorasakamoto;
+GRANT ALL PRIVILEGES ON TABLE categories TO sorasakamoto;
+GRANT ALL PRIVILEGES ON TABLE subcategories TO sorasakamoto;
 
+ALTER TABLE questions OWNER TO sorasakamoto;
+ALTER TABLE categories OWNER TO sorasakamoto;
+ALTER TABLE subcategories OWNER TO sorasakamoto;
+ALTER TABLE category_question OWNER TO sorasakamoto;
+ALTER TABLE subcategory_question OWNER TO sorasakamoto;
+ALTER TABLE users OWNER TO sorasakamoto;
 
-$ GRANT USAGE, SELECT, UPDATE ON SEQUENCE users_id_seq TO sorasakamoto;
+insert into 
 
-$ GRANT USAGE, SELECT, UPDATE ON SEQUENCE categories_id_seq TO sorasakamoto;
-
-$ GRANT USAGE, SELECT, UPDATE ON SEQUENCE subcategories_id_seq TO sorasakamoto;
 
 $ GRANT USAGE, SELECT, UPDATE ON SEQUENCE questions_id_seq TO sorasakamoto;

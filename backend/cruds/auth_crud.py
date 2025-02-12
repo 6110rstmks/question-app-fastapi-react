@@ -8,7 +8,7 @@ from fastapi.security import OAuth2PasswordBearer
 from jose import jwt, JWTError
 from sqlalchemy.orm import Session
 from schemas import auth
-from models import User
+from models2 import User
 from config import get_settings
 from sqlalchemy import select
 

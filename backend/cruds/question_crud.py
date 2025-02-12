@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func
 from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
-from models import Category, Subcategory, Question, SubcategoryQuestion, CategoryQuestion
+from models2 import Category, Subcategory, Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds

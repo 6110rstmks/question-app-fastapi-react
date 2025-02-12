@@ -30,9 +30,8 @@ class QuestionResponse(BaseModel):
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     memo: str = Field(max_length=300, examples=["ここにquestionに関するメモを記入できます。"])
     is_correct: bool = Field(default=False, example=False)
-    created_at: datetime = Field(default_factory=datetime.now)
-    updated_at: datetime = Field(default_factory=datetime.now)
-
+    answer_count: int = Field(default=0, example=0)
+    last_answered_date: datetime = Field(default_factory=datetime.today)
     model_config = ConfigDict(from_attributes=True)
     
 

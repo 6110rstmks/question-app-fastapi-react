@@ -1,8 +1,23 @@
-from datetime import datetime
-from sqlalchemy import Column, Integer, String, Enum, DateTime, ForeignKey, ARRAY, Boolean
+from __future__ import annotations
+from typing import List
+
+from sqlalchemy import ForeignKey
+from sqlalchemy import Integer
+from sqlalchemy.orm import mapped_column
+from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import relationship
-from database import Base
-    
+from sqlalchemy import Column
+from sqlalchemy import String
+from sqlalchemy import DateTime
+from sqlalchemy import Boolean
+from sqlalchemy import ARRAY
+from sqlalchemy import Date
+from datetime import datetime
+from sqlalchemy.sql import func
+
+class Base(DeclarativeBase):
+    pass
+
 class Category(Base):
     __tablename__ = "categories"
 
@@ -29,7 +44,6 @@ class Subcategory(Base):
     # category = relationship("Category", back_populates="subcategory")
     # ↓なぜsubcategoriesと複数形なのか
     category = relationship("Category", back_populates="subcategories")
-    
     questions = relationship("SubcategoryQuestion", back_populates="subcategory")
 
     
@@ -39,9 +53,10 @@ class Question(Base):
     id = Column(Integer, primary_key=True)
     problem = Column(String, nullable=False)
     answer = Column(ARRAY(String), nullable=False)
-    memo = Column(String, nullable=False)
+    memo = Column(String)
     is_correct = Column(Boolean, nullable=False, default=False)
-    updated_at = Column(DateTime, default=datetime.now(), onupdate=datetime.now())
+    answer_count = Column(Integer, nullable=False, default=0)
+    last_answered_date = Column(Date, default=func.current_date(), onupdate=func.current_date())
     
     subcategories = relationship("SubcategoryQuestion", back_populates="question")
     categories = relationship("CategoryQuestion", back_populates="question")

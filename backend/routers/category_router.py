@@ -1,4 +1,4 @@
-from typing import Annotated
+from typing import Annotated, Optional
 from fastapi import APIRouter, Path, Query, Depends, UploadFile
 from sqlalchemy.orm import Session
 from starlette import status
@@ -22,7 +22,7 @@ router = APIRouter(prefix="/categories", tags=["Categories"])
 
 # tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
 
-@router.get("/home", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
+@router.get("/home", response_model=Optional[list[CategoryResponse]], status_code=status.HTTP_200_OK)
 async def find_all(
     db: DbDependency,
     limit: int = PAGE_SIZE,

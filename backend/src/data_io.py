@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from models import Category, CategoryQuestion, Subcategory, Question, SubcategoryQuestion
+from models2 import Category, CategoryQuestion, Subcategory, Question, SubcategoryQuestion
 import json
 from fastapi import HTTPException, UploadFile
 from cruds import category_crud as category_cruds
