@@ -2087,6 +2087,38 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "first, second , third , forth, fifthなどをなんとよぶ？",
+                            "answer": [
+                                "序数"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "what is Austria’s capita",
+                            "answer": [
+                                "vienna"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "He was huffing and puffing after carrying all those heavy boxes upstairs.",
+                            "answer": [
+                                "彼は重い箱を全部2階へ運んだ後、息を切らせていた。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "It’s his stock in trade to huff and puff without doing anything himself.",
+                            "answer": [
+                                "自分は何もせずに文句だけは言うのは、彼の専売特許です。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
