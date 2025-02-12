@@ -1934,7 +1934,7 @@
                                 "ごちそう"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "trespass",
@@ -2124,6 +2124,14 @@
                             "problem": "He fought bravely against his foe in the final battle.",
                             "answer": [
                                 "（彼は最後の戦いで勇敢に敵と戦った。）\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "he workers dismantled the old bridge to make way for a new one.",
+                            "answer": [
+                                "（作業員たちは新しい橋を建設するために、古い橋を解体した。）\n\n"
                             ],
                             "memo": "",
                             "is_correct": false
