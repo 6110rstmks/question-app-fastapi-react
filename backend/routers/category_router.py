@@ -50,10 +50,11 @@ async def find_all(
 @router.get("/all_categories_with_questions", response_model=list[CategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
 async def find_all(
     db: DbDependency,
-    skip: int = Query(0, ge=0),
-    limit: int = 7
+    # skip: int = Query(0, ge=0),
+    # limit: int = 7
     ):
-    return (category_cruds.find_all_categories_with_questions(db))[skip : skip + limit]
+    return (category_cruds.find_all_categories_with_questions(db))
+    # return (category_cruds.find_all_categories_with_questions(db))[skip : skip + limit]
 
 @router.get("/category_id/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
 async def find_category_by_id(
