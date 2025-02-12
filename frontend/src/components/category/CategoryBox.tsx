@@ -5,7 +5,7 @@ import { Category } from "../../types/Category"
 import { SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
 import { handleNavigateToCategoryPage, handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
-import { FaGithub } from 'react-icons/fa'
+import { TiPinOutline, TiPin } from "react-icons/ti";
 
 
 interface CategoryBoxProps {
@@ -18,19 +18,25 @@ interface CategoryBoxProps {
 const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWord, searchQuestionWord, searchAnswerWord }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
     const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef } = useCategoryBox(category.id, showForm, setShowForm, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
+    const [isPinned, setIsPinned] = useState(false);
+
     const navigate = useNavigate();
 
     return (
         <div className={styles.categoryBox} key={category.id} ref={categoryBoxRef}>
             <div className={styles.categoryFiled}>
-                <div className={styles.plusBtn} 
-                    onClick={() => setShowForm(!showForm)}>➕</div>
-                <FaGithub />
+                <div onClick={() => setIsPinned(!isPinned)}>
+                    {isPinned ? <TiPin /> : <TiPinOutline />}
+                </div>
                 <div 
                     className={styles.categoryName}
                     onClick={() => handleNavigateToCategoryPage(navigate, category)}
-                >{category.name}</div>
+                    >{category.name}
+                </div>
                 <span>［{subcategories.length}］</span>
+                <div className={styles.plusBtn} 
+                    onClick={() => setShowForm(!showForm)}>➕
+                </div>
             </div>
             <div className={styles.inputField}>
                 {showForm && (

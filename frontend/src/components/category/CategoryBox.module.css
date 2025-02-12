@@ -31,9 +31,11 @@
     width: 1.5rem;
     height: 1.5rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     transition: transform 0.2s;
+    margin-left: auto; /* 右端に寄せる */
+
   }
   
   .plusBtn:hover {
