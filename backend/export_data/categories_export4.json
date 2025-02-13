@@ -587,6 +587,14 @@
                             ],
                             "memo": "",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "global databaseはRDSの機能か。auroraの機能か",
+                            "answer": [
+                                "aurora"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -942,6 +950,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "AWSにおいて、リージョンの中にAZ（アベイラビリティゾーン）があるか、AZ（アベイラビリティゾーン）の中にリージョンがあるかどっちか？",
+                            "answer": [
+                                "リージョンの中にAZがある。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -1098,6 +1114,14 @@
                             "problem": "logxがはいった積分に1/xがある→",
                             "answer": [
                                 "　→  微分系の接触を疑う。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "対数の真数が複雑→",
+                            "answer": [
+                                " 置換"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2148,6 +2172,14 @@
                             "problem": "he workers dismantled the old bridge to make way for a new one.",
                             "answer": [
                                 "（作業員たちは新しい橋を建設するために、古い橋を解体した。）\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "the time interval from the time of submission of a process to the time of the completion of the process",
+                            "answer": [
+                                "turnaround time"
                             ],
                             "memo": "",
                             "is_correct": false
