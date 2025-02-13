@@ -1085,6 +1085,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "sinxcosxを見たら（A）に変更する。’",
+                            "answer": [
+                                "基本　sin2xにする"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2038,7 +2046,7 @@
                                 "誰も怒らせたくない"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "standard deviation",
