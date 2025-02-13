@@ -159,11 +159,11 @@
                     "name": "NAT gateway",
                     "questions": [
                         {
-                            "problem": "どのようなユースケースで用いるか。",
+                            "problem": "NAT gatewayはどのようなユースケースで用いるか。",
                             "answer": [
                                 "あるインスタンスがインターネットへはアクセスしつつインターネットからアクセスされないようなセキュリティ要件が求められる場合。インターネットにアクセスしたい場合としては外部のAPIを使用したい場合など"
                             ],
-                            "memo": "くぁ",
+                            "memo": "",
                             "is_correct": true
                         },
                         {
@@ -173,6 +173,14 @@
                             ],
                             "memo": "aaa",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "NAT gatewayネットワークの単元で学習したNATのサービスだが、NATは送信時に送信元のプライベートIPをルータの（A）に変換する。",
+                            "answer": [
+                                "パブリック"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
