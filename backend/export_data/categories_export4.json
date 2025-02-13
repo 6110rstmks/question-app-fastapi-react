@@ -2251,6 +2251,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "3ウェイハンドシェイクと紐づくプロトコルは？",
+                            "answer": [
+                                "TCP"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "IPアドレスはコンピュータに設定するのではなく、正確には（A）に設定する。",
+                            "answer": [
+                                "NIC"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
