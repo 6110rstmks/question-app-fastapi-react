@@ -1093,6 +1093,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "logxがはいった積分に1/xがある→",
+                            "answer": [
+                                "　→  微分系の接触を疑う。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
