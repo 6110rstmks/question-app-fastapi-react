@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Question } from "../../../types/Question";
 
 const useProblemPage = (problemData: Question[]) => {
@@ -9,6 +9,8 @@ const useProblemPage = (problemData: Question[]) => {
     const [currentReviewProblemIndex, setCurrentReviewProblemIndex] = useState(0);
     const [currentReviewProblemIndex2, setCurrentReviewProblemIndex2] = useState(0);
     const [totalReviewProblemIndex, setTotalReviewProblemIndex] = useState(0);
+
+
 
     // 通常モードにおいて「解けた」ボタンを押すと次の問題に進む。
     const handleAnswerSolved = () => {
@@ -46,6 +48,20 @@ const useProblemPage = (problemData: Question[]) => {
         setShowAnswer(false);
         setTotalReviewProblemIndex(unsolvedProblems.length)
     };
+
+    const handleKeyDown = useCallback((event: KeyboardEvent) => {
+        if (!event.ctrlKey && event.key.toLowerCase() === 'b') {
+            event.preventDefault();
+            setShowAnswer(prev => !prev);
+        }
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [handleKeyDown]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
