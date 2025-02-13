@@ -16,7 +16,7 @@
                                 "ECS on EC2"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -109,7 +109,7 @@
                                 "メッセージの重複処理を防ぐ"
                             ],
                             "memo": "くぁ",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "SQSの可視性タイムアウトについて具体例を出して説明してください。",
@@ -386,7 +386,7 @@
                                 "glacier deep archive, glacier instant retrieval, glacier flexible retriebal"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "glacierについて、なぜデータの長期保存に向いているのか",
@@ -536,7 +536,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "transit gatewayはどのようにやくす？",
+                            "problem": "transit gatewayはどのように略す？",
                             "answer": [
                                 "TGW"
                             ],
@@ -859,6 +859,14 @@
                             ],
                             "memo": "",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "VPCピアリングを行なって二つのVPCを接続したい場合、VPCピアリング接続をマネジメントコンソールから設定するだけでは十分な設定ではない。他にどのような作業が必要か？",
+                            "answer": [
+                                "サブネットのルートテーブルに送信先にVPCのIPアドレスを設定する。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -918,7 +926,7 @@
                                 "変更"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
