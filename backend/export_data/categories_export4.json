@@ -89,6 +89,14 @@
                             ],
                             "memo": "",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "VPCとAZ（アベイラビリティゾーン）の関係を答えて。　「VPCは複数のAZに（）ている。」",
+                            "answer": [
+                                "またがって、"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
