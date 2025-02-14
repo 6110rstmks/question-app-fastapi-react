@@ -2413,6 +2413,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "\"She ordered a salad, followed by a steak for the main course.\"",
+                            "answer": [
+                                "彼女はサラダを注文し、続いてメインコースとしてステーキを注文しました。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
