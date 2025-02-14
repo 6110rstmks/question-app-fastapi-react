@@ -2453,6 +2453,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "Pollution is a pervasive problem that affects every corner of the planet.",
+                            "answer": [
+                                "（汚染は地球の隅々にまで影響を及ぼす蔓延した問題である。）\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
