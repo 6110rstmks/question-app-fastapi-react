@@ -1149,6 +1149,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "分母が因数分解の形　→",
+                            "answer": [
+                                "部分因数分解\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2204,6 +2212,22 @@
                             "problem": "the time interval from the time of submission of a process to the time of the completion of the process",
                             "answer": [
                                 "turnaround time"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "His London accent is very slightly nuanced by an occasional Russian pronunciation.",
+                            "answer": [
+                                "彼のロンドン訛りには、時折ロシア語の発音が混じる。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The procurement of raw materials is essential for maintaining production efficiency.",
+                            "answer": [
+                                "（原材料の調達は、生産効率を維持するために不可欠である。）\n\n"
                             ],
                             "memo": "",
                             "is_correct": false
