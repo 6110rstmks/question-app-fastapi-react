@@ -20,12 +20,12 @@ const Home: React.FC = () => {
             <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
             <h3>The total number of Questions：{questionCount}</h3>
             <h3>不正解のQuestion数：{uncorrectedquestionCount}</h3>
-            <div className={styles.containerA}>
-                <Pagination
+            <Pagination
                     currentPage={page}
                     totalPages={pageCount}
                     onPageChange={(newPage) => setPage(newPage)}
-                />
+            />
+            <div className={styles.containerA}>
                 <Search 
                     type="category"
                     searchCategoryWord={searchCategoryWord}

@@ -3,7 +3,6 @@ import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreate';
 import styles from "./SubcategoryPage.module.css";
-import styles_common from "./common.module.css";
 import { updateSubcategoryName } from '../../api/SubcategoryAPI';
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
 import { handleNavigateToCategoryPage } from '../../utils/navigate_function';
@@ -20,6 +19,8 @@ const SubcategoryPage: React.FC = () => {
         categoryInfo, 
         handleNavigateToQuestionPage, 
         handleDeleteSubcategory,
+        showAnswer,
+        setShowAnswer
     } = useSubcategoryPage(subcategoryId, location.state)
     
     // サブカテゴリ名の編集モードの状態を管理
@@ -28,7 +29,6 @@ const SubcategoryPage: React.FC = () => {
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
     // 回答の表示非表示ボタンの状態を管理
-    const [isOn, setIsOn] = useState(false); 
 
     // エンターキーで編集モードを終了し、サブカテゴリ名を更新
     const handleKeyPress = async (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -37,17 +37,17 @@ const SubcategoryPage: React.FC = () => {
             await updateSubcategoryName(subcategoryId, subcategoryName);
         }
     };
-
+    
     const navigate = useNavigate();
     
 
     return (
         <div className={styles.subcategory_page}>
             <button 
-                className={`${styles.toggleButton} ${isOn ? styles.on : styles.off}`} 
-                onClick={() => setIsOn((prev) => !prev)}
+                className={`${styles.toggleButton} ${showAnswer ? styles.on : styles.off}`} 
+                onClick={() => setShowAnswer((prev) => !prev)}
             >
-                {isOn ? "答えを一括非表示" : "答えを一括表示"}
+                {showAnswer ? "答えを一括非表示" : "答えを一括表示"}
             </button>
             <div 
                 className={styles.subcategory_box}
@@ -93,7 +93,7 @@ const SubcategoryPage: React.FC = () => {
                             {question.problem}
                         </h3>
                         {/* isOn が true の場合のみ answer を表示 */}
-                        {isOn && question.answer.map((answer, index) => (
+                        {showAnswer && question.answer.map((answer, index) => (
                             <div key={index}>
                                 {answer.split('\n').map((line, i) => (
                                 <React.Fragment key={i}>

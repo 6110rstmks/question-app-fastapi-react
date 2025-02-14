@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { fetchSubcategory } from '../../../api/SubcategoryAPI'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
@@ -14,6 +14,7 @@ export const useSubcategoryPage = (
     const location = useLocation()
     const navigate = useNavigate();
     
+    const [showAnswer, setShowAnswer] = useState(false); 
 
     const [categoryInfo, setCategoryInfo] = useState(() => {
         const saved = localStorage.getItem('categoryInfo');
@@ -53,6 +54,20 @@ export const useSubcategoryPage = (
         navigate('/');
     }
 
+    const handleKeyDown = useCallback((event: KeyboardEvent) => {
+        if (!event.ctrlKey && event.key.toLowerCase() === 'b') {
+            event.preventDefault();
+            setShowAnswer(prev => !prev);
+        }
+    }, []);
+    
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [handleKeyDown]);
+
     useEffect(() => {
         if (location.state) {
             setCategoryInfo(location.state);
@@ -78,6 +93,6 @@ export const useSubcategoryPage = (
         }
 
     }, [subcategoryId]);
-    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleNavigateToQuestionPage, handleDeleteSubcategory };
+    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleNavigateToQuestionPage, handleDeleteSubcategory, showAnswer, setShowAnswer };
 }
 
