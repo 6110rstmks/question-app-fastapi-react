@@ -947,7 +947,7 @@
                                 "している。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Auto Scalingグループの最大のEC2の起動台数はいくつか",
@@ -2228,7 +2228,7 @@
                                 "（彼は最後の戦いで勇敢に敵と戦った。）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "he workers dismantled the old bridge to make way for a new one.",
@@ -2434,6 +2434,14 @@
                             "problem": "Hypochlorous acid",
                             "answer": [
                                 "次亜塩素酸"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "30分以内に確認して",
+                            "answer": [
+                                "check within 30m"
                             ],
                             "memo": "",
                             "is_correct": false
