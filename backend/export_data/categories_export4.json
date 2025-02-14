@@ -2225,6 +2225,14 @@
                             "is_correct": false
                         },
                         {
+                            "problem": "compriseは自動詞か他動詞か？",
+                            "answer": [
+                                "他動詞\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
                             "problem": "The procurement of raw materials is essential for maintaining production efficiency.",
                             "answer": [
                                 "（原材料の調達は、生産効率を維持するために不可欠である。）\n\n"
@@ -2292,6 +2300,14 @@
                             "problem": "I undertook an intensive Arabic course.",
                             "answer": [
                                 "私はアラビア語の集中コースを受講した。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "contestant",
+                            "answer": [
+                                "コンテスト参加者、競技者"
                             ],
                             "memo": "",
                             "is_correct": false
