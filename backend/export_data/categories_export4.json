@@ -2421,6 +2421,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "The researchers found a strong causation between smoking and lung cancer.",
+                            "answer": [
+                                "（研究者たちは喫煙と肺がんの間に強い因果関係を見つけた。）\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Hypochlorous acid",
+                            "answer": [
+                                "次亜塩素酸"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
