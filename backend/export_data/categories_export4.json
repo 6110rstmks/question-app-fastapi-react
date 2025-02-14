@@ -2118,7 +2118,7 @@
                                 "標準偏差"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "what is adjective related to nose?",
@@ -2228,6 +2228,46 @@
                             "problem": "The procurement of raw materials is essential for maintaining production efficiency.",
                             "answer": [
                                 "（原材料の調達は、生産効率を維持するために不可欠である。）\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "lava",
+                            "answer": [
+                                "溶岩"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "tavern",
+                            "answer": [
+                                "居酒屋"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "valiant knight",
+                            "answer": [
+                                "勇敢な騎士"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "minion",
+                            "answer": [
+                                "部下　従者"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "contagion 発音",
+                            "answer": [
+                                "kəntéidʒən"
                             ],
                             "memo": "",
                             "is_correct": false
