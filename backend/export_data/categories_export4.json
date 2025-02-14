@@ -2381,6 +2381,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "I’ll use all my extra power to finish this project ahead of schedule.",
+                            "answer": [
+                                "（このプロジェクトを予定より早く終わらせるために、余力をすべて使うよ。）\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "sepal",
+                            "answer": [
+                                "花弁"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "\"the company has a proprietary right to the property”",
+                            "answer": [
+                                "🔹 会社はその財産（資産）に対する所有権を持っている。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
