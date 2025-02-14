@@ -4,6 +4,7 @@
 
 .containerA {
     display: flex;
+    margin-top: 14px;
 }
 
 .createCategoryBtn {
