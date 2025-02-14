@@ -1379,6 +1379,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "細胞",
+                    "questions": [
+                        {
+                            "problem": "what is Telomere ",
+                            "answer": [
+                                "a region of repetitive DNA sequences at the end of a chromosome"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -2233,6 +2246,14 @@
                             "is_correct": false
                         },
                         {
+                            "problem": "He had his driving license revoked.",
+                            "answer": [
+                                "彼は運転免許を剥奪された。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
                             "problem": "The procurement of raw materials is essential for maintaining production efficiency.",
                             "answer": [
                                 "（原材料の調達は、生産効率を維持するために不可欠である。）\n\n"
@@ -2308,6 +2329,30 @@
                             "problem": "contestant",
                             "answer": [
                                 "コンテスト参加者、競技者"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "I hope you don’t take offense, but I think your idea needs some improvement.",
+                            "answer": [
+                                "（気を悪くしないでほしいんだけど、君のアイデアはもう少し改善が必要だと思うよ。）\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "irritant",
+                            "answer": [
+                                "刺激物"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Digital watermarking",
+                            "answer": [
+                                "電子透かし"
                             ],
                             "memo": "",
                             "is_correct": false
