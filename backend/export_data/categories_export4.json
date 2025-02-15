@@ -2477,6 +2477,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "The weather this morning is foggy. ",
+                            "answer": [
+                                "今朝の天気は霧がかかっている。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
