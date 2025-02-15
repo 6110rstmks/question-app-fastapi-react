@@ -2469,6 +2469,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "We need to egress the building quickly in case of an emergency.",
+                            "answer": [
+                                "緊急時には、すぐに建物を出る必要があります。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
