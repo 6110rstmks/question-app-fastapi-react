@@ -46,7 +46,6 @@ const QuestionPage: React.FC = () => {
 
     // ページ遷移時にカテゴリ情報をローカルストレージに保存
     useEffect(() => {
-
       if (location.state) {
             const { category_id, subcategory_id, subcategoryName, categoryName } = location.state;
             const newCategoryInfo = { category_id, subcategory_id, subcategoryName, categoryName };
@@ -56,7 +55,8 @@ const QuestionPage: React.FC = () => {
     }, [location.state]);
 
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
-        if (!event.ctrlKey && event.key.toLowerCase() === 'b') {
+
+        if (event.ctrlKey && event.key.toLowerCase() === 'b') {
             event.preventDefault();
             setShowAnswer(prev => !prev);
         }

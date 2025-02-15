@@ -55,7 +55,7 @@ export const useSubcategoryPage = (
     }
 
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
-        if (!event.ctrlKey && event.key.toLowerCase() === 'b') {
+        if (event.ctrlKey && event.key.toLowerCase() === 'b') {
             event.preventDefault();
             setShowAnswer(prev => !prev);
         }
