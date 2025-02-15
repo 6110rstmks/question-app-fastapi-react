@@ -95,3 +95,14 @@ class User(Base):
     updated_at = Column(DateTime, default=datetime.now(), onupdate=datetime.now())
 
     categories = relationship("Category", back_populates="user")
+
+class AnswerLogs(Base):
+    __tablename__ = "answer_logs"
+
+    id = Column(Integer, primary_key=True)
+    category_id = Column(Integer, nullable=False)
+    subcategory_id = Column(Integer, nullable=False)
+    question_id = Column(Integer, nullable=False)
+    is_correct = Column(Boolean, nullable=False)
+    
+    
