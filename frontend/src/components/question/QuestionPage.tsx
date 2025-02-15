@@ -164,6 +164,7 @@ const QuestionPage: React.FC = () => {
             </div>
         </div>
         <h1>ctr + b で問題を表示・非表示</h1>
+        <div>この問題を回答した回数{question?.answer_count}</div>
       </>
   )
 }

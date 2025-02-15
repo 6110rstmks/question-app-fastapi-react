@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Question } from "../../../types/Question";
+import { incrementAnswerCount } from "../../../api/QuestionAPI";
 
 const useProblemPage = (problemData: Question[]) => {
     const [currentProblemIndex, setCurrentProblemIndex] = useState(0);
@@ -16,6 +17,9 @@ const useProblemPage = (problemData: Question[]) => {
     const handleAnswerSolved = () => {
         setCurrentProblemIndex((prev) => prev + 1);
         setShowAnswer(false);
+
+        // answer_countをインクリメントするAPIを叩く
+        incrementAnswerCount(problemData[currentProblemIndex].id);
     };
 
     // 通常モードにおいて「解けなかった」ボタンを押すと未解決の問題リストに追加され、次の問題に進む。

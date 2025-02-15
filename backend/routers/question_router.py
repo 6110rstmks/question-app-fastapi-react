@@ -63,6 +63,16 @@ async def update(
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
 
+@router.put("/increment_answer_count/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
+async def increment_answer_count(
+    db: DbDependency,
+    id: int = Path(gt=0),
+):
+    updated_item = question_crud.increment_answer_count(db, id)
+    if not updated_item:
+        raise HTTPException(status_code=404, detail="Question not updated")
+    return updated_item
+
 # Questionのcorrect_flgカラムを更新するエンドポイント
 @router.put("/edit_flg/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update_correct_flg(

@@ -4,4 +4,5 @@ export interface Question {
     answer: string[];
     memo: string;
     is_correct: boolean;
+    answer_count: number;
 }

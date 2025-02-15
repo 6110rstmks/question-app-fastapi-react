@@ -66,3 +66,16 @@ export const fetchUncorrectedQuestionCount = async () => {
         return await response.json();
     }
 };
+
+// Questionのanswer_cntをインクリメントするAPI
+export const incrementAnswerCount = async (question_id: number) => {
+    const response = await fetch(`http://localhost:8000/questions/increment_answer_count/${question_id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    if (!response.ok) {
+        throw new Error('Failed to increment answer_cnt');
+    }
+}

@@ -169,6 +169,17 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
 
     return changeSubcategoryUpdate.subcategory_ids
 
+def increment_answer_count(db: Session, question_id: int):
+    stmt = (
+        update(Question).
+        where(Question.id == question_id).
+        values(answer_count=Question.answer_count + 1)
+    )
+    db.execute(stmt)
+    db.commit()
+    return find_question_by_id(db, question_id)
+
+
     
 
 
