@@ -2461,6 +2461,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "The egress in the emergency exit was blocked by debris",
+                            "answer": [
+                                "緊急脱出口のegressががれきで塞がれていた。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
