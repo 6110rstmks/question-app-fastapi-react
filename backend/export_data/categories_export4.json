@@ -2485,6 +2485,39 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "異物　英語で　2通りの表現",
+                            "answer": [
+                                "foreign substance",
+                                "foreign object"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "It is imperative that you arrive on time for the meeting",
+                            "answer": [
+                                "会議には時間通りに到着することが必須です。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "オキソニウムイオン",
+                            "answer": [
+                                "oxonium ion"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "A: When will we arrive?　B: Beats me.",
+                            "answer": [
+                                "（いつ着くの？）\n（さっぱりわからないよ。）"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
