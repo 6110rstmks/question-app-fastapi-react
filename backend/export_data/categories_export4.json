@@ -1678,14 +1678,6 @@
                     "name": "sql",
                     "questions": [
                         {
-                            "problem": "lazy loadingについて説明してください。",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
                             "problem": "windows functionの例を二つあげて",
                             "answer": [
                                 "row_number, ranm"
@@ -1900,7 +1892,7 @@
                                 "the quality of being noble in character, mind, birth, or rank"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "#banks are free to make a number of new loans",
@@ -1980,7 +1972,7 @@
                                 "voltage"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "• There is no danger of contagion.",
@@ -2020,7 +2012,7 @@
                                 "（私の計画はあなたの計画と噛み合わない。調和しない）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Parabola",
@@ -2260,7 +2252,7 @@
                                 "他動詞\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "He had his driving license revoked.",
@@ -2268,7 +2260,7 @@
                                 "彼は運転免許を剥奪された。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The procurement of raw materials is essential for maintaining production efficiency.",
@@ -2300,7 +2292,7 @@
                                 "勇敢な騎士"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "minion",
@@ -2340,7 +2332,7 @@
                                 "私はアラビア語の集中コースを受講した。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "contestant",
@@ -2396,7 +2388,7 @@
                                 "花弁"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "\"the company has a proprietary right to the property”",
@@ -2452,7 +2444,7 @@
                                 "はい、どうぞ。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Pollution is a pervasive problem that affects every corner of the planet.",
