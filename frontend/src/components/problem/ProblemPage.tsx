@@ -40,7 +40,6 @@ const ProblemPage: React.FC = () => {
             {reviewFlg ? (
                 <ProblemReview
                     problem={unsolvedProblems[currentReviewProblemIndex]}
-                    currentReviewProblemIndex={currentReviewProblemIndex}
                     currentReviewProblemIndex2={currentReviewProblemIndex2}
                     problemLength={totalReviewProblemIndex}
                     showAnswer={showAnswer}

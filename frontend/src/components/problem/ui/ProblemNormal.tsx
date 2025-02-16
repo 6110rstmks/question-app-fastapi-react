@@ -8,13 +8,13 @@ import styles from './ProblemNormal.module.css'
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
 
 interface Props {
-    problem: Question;
-    currentProblemIndex: number;
-    problemLength: number;
-    showAnswer: boolean;
-    onShowAnswer: () => void;
-    onSolved: () => void;
-    onUnsolved: () => void;
+    problem: Question
+    currentProblemIndex: number
+    problemLength: number
+    showAnswer: boolean
+    onShowAnswer: () => void
+    onSolved: () => void
+    onUnsolved: () => void
 }
 
 const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
@@ -61,8 +61,15 @@ const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemL
             {showAnswer && (
                 <div>
                     {localProblem.answer.length > 0 ? (
-                        localProblem.answer.map((ans, index) => (
-                            <p key={index}>{ans}</p>
+                        localProblem?.answer.map((answer, index) => (
+                            <div key={index}>
+                                {answer.split('\n').map((line, i) => (
+                                <React.Fragment key={i}>
+                                    {line}
+                                    <br />
+                                </React.Fragment>
+                                ))}
+                            </div>
                         ))
                     ) : (
                         <p>解答はまだ作成されていません</p>

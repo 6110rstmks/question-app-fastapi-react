@@ -38,7 +38,6 @@ const QuestionPage: React.FC = () => {
     // このQuestionPageに遷移した元のSubcategoryPageに戻る
     const handleNavigateToPreviousSubcategoryPage = () => {
         const category = { id: category_id, name: categoryName };
-
         navigate(`/subcategory/${subcategory_id}`, {
             state: category
         });
@@ -111,14 +110,14 @@ const QuestionPage: React.FC = () => {
                     }`}
                 >
                     {question?.answer.map((answer, index) => (
-                    <div key={index}>
-                        {answer.split('\n').map((line, i) => (
-                        <React.Fragment key={i}>
-                            {line}
-                            <br />
-                        </React.Fragment>
-                        ))}
-                    </div>
+                        <div key={index}>
+                            {answer.split('\n').map((line, i) => (
+                            <React.Fragment key={i}>
+                                {line}
+                                <br />
+                            </React.Fragment>
+                            ))}
+                        </div>
                     ))}
                 </div>
             </div>
