@@ -468,7 +468,7 @@
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
                             "answer": [
-                                "構成\nアクティブ: メインのリソース（プライマリ）が通常はすべてのトラフィックを処理します。\nパッシブ: フェイルオーバーの際にのみ使用されるバックアップのリソース（セカンダリ）。\n\n============+\n構成\n複数のリソースが同時に「アクティブ」として動作します。\n通常は複数のリソース間でトラフィックが分散されます。"
+                                "構成\nアクティブ: メインのリソース（プライマリ）が通常はすべてのトラフィックを処理します。\nパッシブ: フェイルオーバーの際にのみ使用されるバックアップのリソース（セカンダリ）。\n\n\n============+\n構成\n複数のリソースが同時に「アクティブ」として動作します。\n通常は複数のリソース間でトラフィックが分散されます。"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2164,7 +2164,7 @@
                                 "この懐中電灯 は壊れてる。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "After the storm, many houses were kaput",
@@ -2515,6 +2515,38 @@
                             "problem": "A: When will we arrive?　B: Beats me.",
                             "answer": [
                                 "（いつ着くの？）\n（さっぱりわからないよ。）"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "they should stop that absurd fighting.",
+                            "answer": [
+                                "あんなばかげた喧嘩はやめるべき"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "some people are daunted by technology.",
+                            "answer": [
+                                "技術を恐れる人もいる。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The pandemic took a heavy toll on the economy",
+                            "answer": [
+                                "パンデミックは経済に大きな打撃を与えた。\n\ntoll: 被害"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The toll booth collects money for the road. ",
+                            "answer": [
+                                "料金所は道路のための料金を集めます。\n"
                             ],
                             "memo": "",
                             "is_correct": false
