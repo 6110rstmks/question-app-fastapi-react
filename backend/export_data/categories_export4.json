@@ -1723,7 +1723,7 @@
                                 "スタック"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -2084,7 +2084,7 @@
                                 "しか"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "simultaneous equation",
@@ -2300,7 +2300,7 @@
                                 "部下　従者"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "contagion 発音",
@@ -2555,6 +2555,14 @@
                             "problem": "The company's debt has become a burden on its finances.",
                             "answer": [
                                 "その会社の借金は財政に負担をかけている。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The burden of her speech was the importance of education in today's society.",
+                            "answer": [
+                                "彼女のスピーチの主題は、今日の社会における教育の重要性だった。\n"
                             ],
                             "memo": "",
                             "is_correct": false
