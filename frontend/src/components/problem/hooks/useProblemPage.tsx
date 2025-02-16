@@ -11,8 +11,6 @@ const useProblemPage = (problemData: Question[]) => {
     const [currentReviewProblemIndex2, setCurrentReviewProblemIndex2] = useState(0);
     const [totalReviewProblemIndex, setTotalReviewProblemIndex] = useState(0);
 
-
-
     // 通常モードにおいて「解けた」ボタンを押すと次の問題に進む。
     const handleAnswerSolved = () => {
         setCurrentProblemIndex((prev) => prev + 1);
@@ -54,9 +52,15 @@ const useProblemPage = (problemData: Question[]) => {
     };
 
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
-        if (event.ctrlKey && event.key.toLowerCase() === 'b') {
+        if (event.ctrlKey && (event.key.toLowerCase() === 'k' || event.key.toLowerCase() === 'b')) {
             event.preventDefault();
             setShowAnswer(prev => !prev);
+        } else if (event.ctrlKey && event.key.toLowerCase() === 'j') {
+            event.preventDefault();
+            handleAnswerSolved();
+        } else if (event.ctrlKey && event.key.toLowerCase() === 'l') {
+            event.preventDefault();
+            handleAnswerUnsolved();
         }
     }, []);
 
