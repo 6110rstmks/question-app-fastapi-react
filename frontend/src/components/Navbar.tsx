@@ -70,6 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
                         Data Export to Local & Github
                         <div className={styles.tooltip}>githubにデータを保管します。</div>
                     </div>
+                    <Link to="/report_page">回答レポートを表示</Link>
                 </>
             )}
         </nav>

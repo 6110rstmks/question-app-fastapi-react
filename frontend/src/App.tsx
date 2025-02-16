@@ -13,6 +13,7 @@ import ProblemPage from './components/problem/ProblemPage'
 import ImportPage from './components/ImportPage'
 import SetProblem from './components/problem/SetProblemPage'
 import CategoryPage from './components/category/CategoryPage'
+import ReportPage from './components/ReportPage'
 
 const App: React.FC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"));
@@ -40,6 +41,7 @@ const App: React.FC = () => {
         <Route path="/question/:question_id" element={<QuestionPage />} />
         <Route path="/problem" element={<ProblemPage />} />
         <Route path="/import" element={<ImportPage />}/>
+        <Route path="/report_page" element={<ReportPage />}/>
       </Routes>
     </Router>
   );

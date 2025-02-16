@@ -104,5 +104,5 @@ class AnswerLogs(Base):
     subcategory_id = Column(Integer, nullable=False)
     question_id = Column(Integer, nullable=False)
     is_correct = Column(Boolean, nullable=False)
-    
+    date = Column(Date, default=func.current_date())    
     
