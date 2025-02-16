@@ -6,12 +6,25 @@ const ReportPage = () => {
   return (
     <div>
         <div className={styles.selectionType}>
-            <div>今日のレポート</div>
-            <div>今週のレポート</div>
-            <div>二週間のレポート</div>
-            <div>今月のレポート</div>
+            <div>
+                <input type="checkbox" name="" id="" />
+                <span>今日のレポート</span>
+            </div>
+            <div>
+                <input type="checkbox" name="" id="" />
+                <span>今週のレポート</span>
+            </div>
+            <div>
+                <input type="checkbox" name="" id="" />
+                <span>二週間のレポート</span>
+            </div>
+            <div>
+                <input type="checkbox" name="" id="" />
+                <span>今月のレポート</span>
+            </div>
         </div>
-        <button>レポートを生成</button>
+
+        <button className={styles.createReportBtn}>レポートを生成</button>
 
         <div className={styles.reportBox}>レポートがここに表示される</div>
     </div>
