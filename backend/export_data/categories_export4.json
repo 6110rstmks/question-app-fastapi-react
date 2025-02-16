@@ -2148,7 +2148,7 @@
                                 "nasal"
                             ],
                             "memo": "ex)\nthe nasal cavity 鼻腔\nnasal congestion 鼻詰まり",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "He chose a reputable lawyer to handle his legal matters.",
@@ -2223,7 +2223,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "he workers dismantled the old bridge to make way for a new one.",
+                            "problem": "the workers dismantled the old bridge to make way for a new one.",
                             "answer": [
                                 "（作業員たちは新しい橋を建設するために、古い橋を解体した。）\n\n"
                             ],
@@ -2316,7 +2316,7 @@
                                 "もり"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "葉酸",
@@ -2509,7 +2509,7 @@
                                 "oxonium ion"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "A: When will we arrive?　B: Beats me.",
@@ -2547,6 +2547,14 @@
                             "problem": "The toll booth collects money for the road. ",
                             "answer": [
                                 "料金所は道路のための料金を集めます。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The company's debt has become a burden on its finances.",
+                            "answer": [
+                                "その会社の借金は財政に負担をかけている。\n"
                             ],
                             "memo": "",
                             "is_correct": false
