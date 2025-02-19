@@ -995,6 +995,17 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "EBSの種類4つ挙げて（SSDを二つ、HDDを二つ）",
+                            "answer": [
+                                "汎用SSD（gp3）\n",
+                                "プロビジョンドIOPS（io2）\n",
+                                "スループット最適化HDD（st1）\n",
+                                "コールドHDD（sc1）\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
