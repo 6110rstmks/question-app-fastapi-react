@@ -984,6 +984,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "EBS",
+                    "questions": [
+                        {
+                            "problem": "Amazon EBSでは自動的に暗号化されるがその際はなんというサービスが使用される？",
+                            "answer": [
+                                "AWS KMS"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -2579,6 +2592,22 @@
                             "problem": "gymnosperm",
                             "answer": [
                                 "裸子植物"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ozonolysis",
+                            "answer": [
+                                "オゾン酸化"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ozonolysis",
+                            "answer": [
+                                "オゾン酸化"
                             ],
                             "memo": "",
                             "is_correct": false
