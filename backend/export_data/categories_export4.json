@@ -2738,7 +2738,16 @@
                 },
                 {
                     "name": "display",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "薄膜トランジスタを使ったアクティブマトリックス方式の液晶ディスプレイ　(=LCD(英語:Liquid Crystal Display))をなんという？",
+                            "answer": [
+                                "TFT液晶"
+                            ],
+                            "memo": "galax A21 SC42aにも使用されている。",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "記憶装置",
