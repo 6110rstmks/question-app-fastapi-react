@@ -2125,7 +2125,7 @@
                                 "使役動詞"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "instantaneous",
@@ -2836,7 +2836,7 @@
                                 "SSD"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "SSDはHDDに比べて消費電力は多いか少ないか",
@@ -2963,6 +2963,14 @@
                             "problem": "プラスとマイナスが常に周期的に入れ替わり、それにともない電気の流れの方向も常に変わっていく、電気の流れの方式を何という",
                             "answer": [
                                 "交流"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ダイオードなどは，1つの向きにしか電流が流れないので，これに交流をかけると直流（ 脈流 みゃくりゅう ）が 得られる。 このような作用をなんというか",
+                            "answer": [
+                                "整流作用"
                             ],
                             "memo": "",
                             "is_correct": false
