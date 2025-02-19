@@ -1006,6 +1006,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "分散サービス妨害 (DDoS) に対する保護サービスを答えよ",
+                            "answer": [
+                                "Amazon Shield"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1027,6 +1035,27 @@
                                 "プロビジョンドIOPS（io2）\n",
                                 "スループット最適化HDD（st1）\n",
                                 "コールドHDD（sc1）\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "EBSの指標のIOPSについてせつめいしてください",
+                            "answer": [
+                                "IOPSの「PS」の部分は「Per Second(1秒あたりの)」という意味があるので、統合して考えるとIOPSとは「ストレージが1秒あたりに処理できるI/Oアクセスの数」ということになります。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Direct Connect",
+                    "questions": [
+                        {
+                            "problem": "AWSへの接続方法には2つ方法があり、インターネットを使用する方法としない方法（専用線接続）があるが、しない方法はどのようなサービスがあるか？",
+                            "answer": [
+                                "AWS direct connect"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1530,6 +1559,29 @@
                             "problem": "推移的ルーティングについて説明してください。",
                             "answer": [
                                 "直接せつぞくされていない二つのネットワーク間について、中間のネットワークを経由して通信すること"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "BGPとは一言でいうと",
+                            "answer": [
+                                "ルーティングプロトコル"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "ルーティングプロトコル",
+                    "questions": [
+                        {
+                            "problem": "代表的なものを3つ挙げて",
+                            "answer": [
+                                "RIP",
+                                "OSPF",
+                                "BGP"
                             ],
                             "memo": "",
                             "is_correct": false
