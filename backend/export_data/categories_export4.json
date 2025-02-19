@@ -1593,6 +1593,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "ルーティングプロトコルであるRIPの最大ポップ数はいくつか。",
+                            "answer": [
+                                "15\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -2883,6 +2891,14 @@
                             "problem": "Which is faster, SRAM? DRAM?",
                             "answer": [
                                 "SRAM(SRAM is fast, DRAM is slow)　\nSRAM->cache memory DRAM->main memory (Memorize ram as fast instead of non-volatile"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "電源を着るとデータが消失するのはRAM？ROM？",
+                            "answer": [
+                                "RAM"
                             ],
                             "memo": "",
                             "is_correct": false
