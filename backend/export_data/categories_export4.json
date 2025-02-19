@@ -3063,6 +3063,23 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "Which one is not suitable for the classical RISC pipeline between RISC AND CISC? And why?",
+                            "answer": [
+                                "CISC",
+                                "The length of instruction and execute time are variable."
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "単純な命令セットをもっているのはCISC？RISC",
+                            "answer": [
+                                "RISC"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
