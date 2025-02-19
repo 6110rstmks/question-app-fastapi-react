@@ -2933,6 +2933,43 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "CPU",
+                    "questions": [
+                        {
+                            "problem": "MIPS(million instructions per second)が高いほど、どうなるか？",
+                            "answer": [
+                                "コンピュータはより多くの命令を短時間で処理できることを意味します。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "クロック周波数の単位はなんですか？",
+                            "answer": [
+                                "Hz"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "CPUの性能を表す評価指標の一つで、コンピュータの内部にある発振器が１秒間に発生させる信号の回数のことをなんというか？",
+                            "answer": [
+                                "クロック周波数"
+                            ],
+                            "memo": "例えば１秒間に2回信号を発生させることを２Hzといいます。",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "クロック周波数が高いほど、CPUの性能は高性能？低い？",
+                            "answer": [
+                                "高性能"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -2971,6 +3008,14 @@
                             "problem": "ダイオードなどは，1つの向きにしか電流が流れないので，これに交流をかけると直流（ 脈流 みゃくりゅう ）が 得られる。 このような作用をなんというか",
                             "answer": [
                                 "整流作用"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "振動数f(HZ)は周期T(s)の（A）",
+                            "answer": [
+                                "逆数"
                             ],
                             "memo": "",
                             "is_correct": false
