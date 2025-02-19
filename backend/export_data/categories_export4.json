@@ -1578,6 +1578,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "DHCPは何を行う？",
+                            "answer": [
+                                "IPアドレスの設定を自動化するプロトコル"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
