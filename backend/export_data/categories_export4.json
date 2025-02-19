@@ -982,6 +982,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "シングルAZについて説明してください。",
+                            "answer": [
+                                "ひとつのAZにのみシステムを配置する方式"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
