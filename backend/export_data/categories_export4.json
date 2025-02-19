@@ -2764,6 +2764,33 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "physics",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "直流電流を交流電流に変換するに変更するものをなんという？",
+                            "answer": [
+                                "インバーター"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "電気の流れには二つの方式がある。挙げて",
+                            "answer": [
+                                "直流",
+                                "交流"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
