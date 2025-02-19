@@ -3080,6 +3080,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "複雑な処理を一度の命令で行えるのはCISC？RISC？",
+                            "answer": [
+                                "CISC"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "複雑な処理を一度の命令で行えるので、多様な作業を効率的にこなせるのはCISC？RISC？",
+                            "answer": [
+                                "CISC"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
