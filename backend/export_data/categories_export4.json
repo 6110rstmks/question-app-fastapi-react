@@ -1586,6 +1586,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "RARPの機能は？",
+                            "answer": [
+                                "MACアドレスからIPアドレスを求める"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
