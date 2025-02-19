@@ -3023,6 +3023,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "What is previous mainstream of SATA?",
+                            "answer": [
+                                "IDE"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "レーザー光をパルス状に照射し，その反射光を測定することによって，対象物の方向，距離及び形状を計測するセンサは何？",
+                            "answer": [
+                                "LiDAR　ライダー"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -3047,6 +3063,14 @@
                             "answer": [
                                 "高速化",
                                 "低電力消費"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "In what way does SoC contrast with traditional pc?",
+                            "answer": [
+                                "Traditional pc architecture separates components based on function and connects them through a central interfacing circuit board. Whereas a motherboard houses and connects detachable or replaceable components, SoCs integrate all of these components into a single integrated circuit"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -3093,6 +3117,27 @@
                             "problem": "複雑な処理を一度の命令で行えるので、多様な作業を効率的にこなせるのはCISC？RISC？",
                             "answer": [
                                 "CISC"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Which is RISC or CISC used in PCs and servers?",
+                            "answer": [
+                                "CISC"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "SIMD",
+                    "questions": [
+                        {
+                            "problem": "What is abbreviation for SIMD（シムディー）？",
+                            "answer": [
+                                "single input multiple datastream"
                             ],
                             "memo": "",
                             "is_correct": false
