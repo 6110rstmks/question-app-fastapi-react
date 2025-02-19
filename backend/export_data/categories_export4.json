@@ -2722,6 +2722,20 @@
                 {
                     "name": "display",
                     "questions": []
+                },
+                {
+                    "name": "記憶装置",
+                    "questions": [
+                        {
+                            "problem": "記憶装置の分類 2",
+                            "answer": [
+                                "主記憶装置Computer memory",
+                                "補助記憶装置"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         }
