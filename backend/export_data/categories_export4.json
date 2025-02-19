@@ -2759,6 +2759,14 @@
                             ],
                             "memo": "galax A21 SC42aにも使用されている。",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "LCD(liquid-crystal-display) do not emit light directory. How LCD emit light?",
+                            "answer": [
+                                "using a backlight"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
