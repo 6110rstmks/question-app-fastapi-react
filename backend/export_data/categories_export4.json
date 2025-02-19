@@ -1932,6 +1932,23 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "what's the number that the read/write unit is a block in raid?",
+                            "answer": [
+                                "4,5"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "What are the benefits of A mechanism called RAID that bundles multiple hard disks into one disk system?2",
+                            "answer": [
+                                "Reduce access time",
+                                "It becomes hard to break down."
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
