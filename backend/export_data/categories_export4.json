@@ -2686,6 +2686,28 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "hardware",
+            "subcategories": [
+                {
+                    "name": "storage",
+                    "questions": [
+                        {
+                            "problem": "衝撃に強いのはHDD?SSD?",
+                            "answer": [
+                                "SSD"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "display",
+                    "questions": []
+                }
+            ]
         }
     ]
 }
