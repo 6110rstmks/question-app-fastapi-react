@@ -2804,6 +2804,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "プロセッサ",
+                    "questions": [
+                        {
+                            "problem": "マルチコアのメリットは、（A）に強いことです。",
+                            "answer": [
+                                "並列処理"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
