@@ -1130,7 +1130,7 @@
                                 "左から右は真\n右から左は偽"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -2732,6 +2732,14 @@
                             "problem": "Floating-point arithmetic(number)",
                             "answer": [
                                 "浮動小数点"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "hyposulfite",
+                            "answer": [
+                                "次亜流酸塩"
                             ],
                             "memo": "",
                             "is_correct": false
