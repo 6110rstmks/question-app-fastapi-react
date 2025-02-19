@@ -3052,6 +3052,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "CISC RISC",
+                    "questions": [
+                        {
+                            "problem": "CISCとRISCがどっちがどっちかわからなくなったら、何で思い出す。",
+                            "answer": [
+                                "C がcomplex→複雑→多機能\nR がReduce→削減→余計なものを削減してシンプルにしてスピードを追求"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
