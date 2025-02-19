@@ -2716,6 +2716,23 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "SSDはHDDに比べて消費電力は多いか少ないか",
+                            "answer": [
+                                "すくない"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "主記憶装置への書き込み方法は２つある。答えて",
+                            "answer": [
+                                "ライトスルー方式",
+                                "ライトバック方式"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
