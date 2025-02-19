@@ -2984,6 +2984,15 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "CPUの主な演算装置は2つあります。それらを答えよ。",
+                            "answer": [
+                                "ALUは「Arithmetic Logic Unit」の略で、直訳すると「算術論理装置",
+                                "もうひとつの演算装置として、\n\n浮動小数点ユニット（FPU）"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -3007,6 +3016,20 @@
                             "problem": "registerのdranwbackは？",
                             "answer": [
                                 "たくさん記憶することができない"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "SoC",
+                    "questions": [
+                        {
+                            "problem": "SoCのメリットをあらわす2つのフレーズ2",
+                            "answer": [
+                                "高速化",
+                                "低電力消費"
                             ],
                             "memo": "",
                             "is_correct": false
