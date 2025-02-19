@@ -6,7 +6,7 @@ import Modal from 'react-modal'
 import EditQuestion from './QuestionEdit';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
-import { fetchQuestion, updateQuestionIsCorrect, deleteQuestion } from '../../api/QuestionAPI'
+import { fetchQuestion, updateQuestionIsCorrect, deleteQuestion, incrementAnswerCount } from '../../api/QuestionAPI'
 
 const QuestionPage: React.FC = () => {
     const location = useLocation()
@@ -27,6 +27,23 @@ const QuestionPage: React.FC = () => {
         }
         await deleteQuestion(questionId); // API コール
         navigate('/');
+    }
+    
+    const handleAnswerQuestion = () => {
+        incrementAnswerCount(question!.id); // API コール
+
+        // 表示するquestion.answer_countの数も更新
+        setQuestion((prev) => {
+            if (prev) {
+                return {
+                    ...prev,
+                    answer_count: prev.answer_count + 1,
+                };
+            }
+            return prev;
+        });
+
+        alert('回答数を更新しました');
     }
 
     const handleUpdateIsCorrect = async () => {
@@ -127,6 +144,7 @@ const QuestionPage: React.FC = () => {
                 <button onClick={handleDeleteQuestion} className={styles.delete}>
                     DELETE
                 </button>
+                <button onClick={handleAnswerQuestion}>この問題を回答した！</button>
                 <button onClick={() => setEditModalIsOpen(true)}>Edit</button>
                 <button onClick={() => setChangeSubcategoryModalIsOpen(true)}>Change subcategory or category</button>
             </div>

@@ -17,6 +17,7 @@ const SetProblem: React.FC = () => {
     const [showAll, setShowAll] = useState<boolean>(false)
     const navigate = useNavigate();
 
+    // カテゴリのチェックボックスにチェックを入れたら
     const handleCheckboxChange = async (categoryId: number) => {
 
         setShowAll(true)
