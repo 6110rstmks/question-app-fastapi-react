@@ -2864,12 +2864,21 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "主記憶装置への書き込み方法は２つある。答えて",
+                            "problem": "CPUがキャッシュメモリから主記憶装置への書き込み方法は２つある。答えて",
                             "answer": [
                                 "ライトスルー方式",
                                 "ライトバック方式"
                             ],
                             "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "キャッシュメモリは（A)と（B）の間に配置される。",
+                            "answer": [
+                                "CPU",
+                                "主記憶装置"
+                            ],
+                            "memo": "\n",
                             "is_correct": false
                         }
                     ]
@@ -3143,6 +3152,10 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "メモリインターリーブ",
+                    "questions": []
                 }
             ]
         },
