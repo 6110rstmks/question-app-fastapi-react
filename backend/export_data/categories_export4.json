@@ -2700,6 +2700,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "最大容量が多いのはHDD?SSD？",
+                            "answer": [
+                                "HDD"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
