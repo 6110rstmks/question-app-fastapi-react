@@ -2960,6 +2960,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "DRAMは何に使われているか？",
+                            "answer": [
+                                "主記憶装置"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "DRAMのリフレッシュ動作として、データを保持するために，一定時間ごとに何をする必要があるか？",
+                            "answer": [
+                                "アクセスする。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
