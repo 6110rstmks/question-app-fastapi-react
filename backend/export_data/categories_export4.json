@@ -2976,6 +2976,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "コンデンサに電気を流して記憶しており、定期的にリフレッシュ動作が必要なものはDRAM？SRAM?",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "SRAMは何回路を使用している？",
+                            "answer": [
+                                "フリップフロップ回路"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
