@@ -2033,9 +2033,9 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "~するのに適格とする",
+                            "problem": "After completing the training program, you will qualify to work as a certified instructor.",
                             "answer": [
-                                "qualify (object) to do "
+                                "（トレーニングプログラムを修了すると、公認インストラクターとして働く資格が得られます。）\n\n"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2621,7 +2621,7 @@
                             "answer": [
                                 "（汚染は地球の隅々にまで影響を及ぼす蔓延した問題である。）\n"
                             ],
-                            "memo": "",
+                            "memo": "pervasiveは広がっている、蔓延している。",
                             "is_correct": false
                         },
                         {
