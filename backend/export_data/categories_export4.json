@@ -2968,6 +2968,40 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "命令セットはどのようにたとえることができるか？",
+                            "answer": [
+                                "CPUの国際言語"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "熱や光をはじめとする自然界の情報を量としてとらえて電気信号に変換するものをなんという？",
+                            "answer": [
+                                "センサー"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "register",
+                    "questions": [
+                        {
+                            "problem": "registerのdranwbackは？",
+                            "answer": [
+                                "たくさん記憶することができない"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
