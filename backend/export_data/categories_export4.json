@@ -2783,6 +2783,27 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "RAM ROM",
+                    "questions": [
+                        {
+                            "problem": "What is SRAM is used for?",
+                            "answer": [
+                                "cache memory"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Which is faster, SRAM? DRAM?",
+                            "answer": [
+                                "SRAM(SRAM is fast, DRAM is slow)　\nSRAM->cache memory DRAM->main memory (Memorize ram as fast instead of non-volatile"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
