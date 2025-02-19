@@ -2976,6 +2976,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "CPUは大きく二つにわけられる。何となにか？",
+                            "answer": [
+                                "演算装置、制御装置"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
