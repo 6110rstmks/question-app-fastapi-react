@@ -2952,6 +2952,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "HDDが磁気ディスクにデータを保存しているのに対して、SSDはどのようにデータをほぞんしているか",
+                            "answer": [
+                                "フラッシュメモリにデータを保存"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
