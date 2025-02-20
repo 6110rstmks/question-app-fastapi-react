@@ -2784,6 +2784,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "真理値表",
+                            "answer": [
+                                "true table"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
