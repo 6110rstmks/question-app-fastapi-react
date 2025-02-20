@@ -2832,6 +2832,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "arsenal",
+                            "answer": [
+                                "武器庫"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "I wield a broom",
+                            "answer": [
+                                "ほうきを振り回す"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "私の唇がかさかさ",
+                            "answer": [
+                                "My lip is chapped\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
