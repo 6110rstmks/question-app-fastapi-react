@@ -320,7 +320,7 @@
                                 "クロスゾーン負荷分散"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Auto ScalingグループにALBのターゲットグループを構成して、EC2インスタンスを複数の（A）に分散させます。",
@@ -450,7 +450,7 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "AWSのRoute53で使用されるレコードを全て列挙してください。",
+                            "problem": "AWSのRoute53で使用されるレコードを5こ列挙してください。",
                             "answer": [
                                 "A（Address）レコード\nAAAA（IPv6 Address）レコード\nCNAME（Canonical Name）レコード\nAliasレコード（Route 53独自）"
                             ],
@@ -1196,7 +1196,7 @@
                     "name": "integral 計算",
                     "questions": [
                         {
-                            "problem": "根号（A）に外す。",
+                            "problem": "[integral計算脳死処理]根号をみたら（A）に外す。",
                             "answer": [
                                 "基本的"
                             ],
@@ -1854,7 +1854,7 @@
                                 "CURSOR\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 }
@@ -2646,7 +2646,7 @@
                                 "今朝の天気は霧がかかっている。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "an unsecured loan",
@@ -2759,7 +2759,7 @@
                                 "オゾン酸化"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ozonolysis",
