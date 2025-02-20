@@ -3252,6 +3252,27 @@
                 {
                     "name": "メモリインターリーブ",
                     "questions": []
+                },
+                {
+                    "name": "DMA",
+                    "questions": [
+                        {
+                            "problem": "DMA制御方式ではDMAと、よばれる装置がCPUを介さずになにをおこなうか？",
+                            "answer": [
+                                "Transfer data between memory and input /output(5大装置を想像してください"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "DMAは何の略か？",
+                            "answer": [
+                                "direct access memory"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
