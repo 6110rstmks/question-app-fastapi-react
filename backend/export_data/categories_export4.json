@@ -2816,6 +2816,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "he looks like a con man.",
+                            "answer": [
+                                "「彼は詐欺師のように見える。」\nconfidence manの略\n\n\n\n\n\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -3053,6 +3061,14 @@
                             "problem": "SRAMは何回路を使用している？",
                             "answer": [
                                 "フリップフロップ回路"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "What is the difference between mask ROM and PROM?",
+                            "answer": [
+                                "ユーザーによる消去書き込みができないのがmsdk ROMでユーザーによる消去書き込みができるのがPROM"
                             ],
                             "memo": "",
                             "is_correct": false
