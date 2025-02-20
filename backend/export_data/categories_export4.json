@@ -3271,6 +3271,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "DMA(direct memory access)ではCPUの代わりを何が行うか？",
+                            "answer": [
+                                "DMAコントローラ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
