@@ -2808,6 +2808,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "a movie starring robert redford\"Last night, I watched a movie starring Robert Redford,",
+                            "answer": [
+                                "ロバート・レッドフォード主演の映画を見た\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
