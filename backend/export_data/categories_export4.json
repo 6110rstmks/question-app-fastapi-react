@@ -3120,6 +3120,23 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "flip-flopとの関わりがあるのはSRAMかDRAMか？",
+                            "answer": [
+                                "SRAM"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "DRAMと結びつけるワード2",
+                            "answer": [
+                                "Memory refresh(because RAM is volatile memory that temporarily stores the files you are working on)",
+                                "高集積化"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -3239,6 +3256,14 @@
                                 "RFID"
                             ],
                             "memo": "電車に乗るときには「ピッ！」ってやるカードを実現するためのやつ",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "What is installed in smartphones such as iPhone and Android instead of CPU?",
+                            "answer": [
+                                "Soc (CPUとメモリ、マザーボードなどが高度に集積されたパーツを搭載しています。"
+                            ],
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
