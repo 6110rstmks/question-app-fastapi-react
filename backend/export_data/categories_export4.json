@@ -955,7 +955,7 @@
                                 "5"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1220,7 +1220,7 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "対数の真数が複雑→",
+                            "problem": "inegral計算において対数の真数が複雑な場合→",
                             "answer": [
                                 " 置換"
                             ],
@@ -1675,7 +1675,7 @@
                                 "畳み込みニューラルネットワーク"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -2839,7 +2839,7 @@
                                 "武器庫"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "I wield a broom",
