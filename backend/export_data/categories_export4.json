@@ -594,7 +594,7 @@
                                 "aurora"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "amazon auroraにはリードレプリカが存在するが、amazon RDSはリードレプリカの機能は持ち合わせているか",
@@ -1143,7 +1143,7 @@
                                 "正接の利用\n法線ベクトル利用"
                             ],
                             "memo": "https://examist.jp/mathematics/trigonometric/line-angle/\nhttps://math.nakaken88.com/textbook/standard-normal-vector-and-angle-between-lines/\n↑参考",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "(a, 0),(b, 0)を通るlineのequation",
@@ -1462,7 +1462,7 @@
                                 "RNAポリメラーゼ"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "原核生物の転写、翻訳では、転写と翻訳が同時に起きるか。もしくは転写が完了した後に翻訳が起きるか。どちらか。",
@@ -2206,7 +2206,7 @@
                                 "不法侵入"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "curation",
@@ -2278,7 +2278,7 @@
                                 "suspension"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "what is Hormone that promotes water reabsorption in the collecting duct of the kidney",
@@ -2286,7 +2286,7 @@
                                 "vasopressin"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "an association between two organisms in which one benefits and the other derives neither benefit nor harm.",
@@ -2358,7 +2358,7 @@
                                 "序数"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "what is Austria’s capita",
@@ -2727,7 +2727,7 @@
                                 "その会社の借金は財政に負担をかけている。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The burden of her speech was the importance of education in today's society.",
@@ -3199,7 +3199,7 @@
                                 ""
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "SRAMは何回路を使用している？",
@@ -3230,6 +3230,15 @@
                             "answer": [
                                 "Memory refresh(because RAM is volatile memory that temporarily stores the files you are working on)",
                                 "高集積化"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "マスクROMの特徴を二つ答えて",
+                            "answer": [
+                                "不可逆なデータ書き込み：（ROMチップが製造される際に、メーカーや開発者が固定したデータデータが焼き込まれるため、一度書き込まれたデータは変更できません。）",
+                                "安定性と信頼性：\nマスクROMは不変のデータを保持するため、コンピュータや電子機器の安定性と信頼性を高めることができます。固定されたデータが正しく動作することが保証されるため、システムの安全性を確保するのに有効です。"
                             ],
                             "memo": "",
                             "is_correct": false
