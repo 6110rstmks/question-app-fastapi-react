@@ -2896,6 +2896,46 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "liuetenants",
+                            "answer": [
+                                "中尉"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The cowboys roundup the cattle in the evening. ",
+                            "answer": [
+                                "カウボーイたちは夕方に牛を取り囲む。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "She studied intensely for her final exams.",
+                            "answer": [
+                                "彼女は期末試験のために強く勉強した。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The enemy was routed by the army. ",
+                            "answer": [
+                                "敵軍は軍に敗れた。\n"
+                            ],
+                            "memo": "routという単語は「敗北」や「逃げること」を意味します。",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "I'm making a revision to the plan",
+                            "answer": [
+                                "私は計画の改訂をしています。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
