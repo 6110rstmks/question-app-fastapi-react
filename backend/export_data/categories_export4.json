@@ -2984,6 +2984,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "私は英語が堪能です。 fluentを使用する。",
+                            "answer": [
+                                "I am fluent in English"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
