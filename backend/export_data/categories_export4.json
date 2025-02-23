@@ -2880,6 +2880,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "He was sentenced to two concurrent prison terms.",
+                            "answer": [
+                                "（彼は2つの刑を同時に執行される判決を受けた。）\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "He held two concurrent positions at different companies.",
+                            "answer": [
+                                "（彼は異なる会社で2つの役職を同時に務めていた。）\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
