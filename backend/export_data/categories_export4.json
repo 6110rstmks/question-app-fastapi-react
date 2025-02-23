@@ -2944,6 +2944,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "She tried to interject during the meeting. ",
+                            "answer": [
+                                "彼女は会議中に割り込もうとしました。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "In the project, each ally contributed their unique skills.",
+                            "answer": [
+                                "そのプロジェクトでは、各仲間がそれぞれの特技を提供しました。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
