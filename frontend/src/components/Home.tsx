@@ -4,7 +4,7 @@ import CategoryList from "./category/CategoryList"
 import Pagination from "./Pagination"
 import { Link } from "react-router-dom"
 import styles from "./Home.module.css"
-import Search from "./SearchWithCategoryBox"
+import Search from "./Search"
 
 const Home: React.FC = () => {
     const [page, setPage] = useState<number>(1);

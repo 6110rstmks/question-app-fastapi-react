@@ -88,9 +88,12 @@ async def update_correct_flg(
 # Questionを全て取得するエンドポイント
 @router.get("", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all_questions(
-    db: DbDependency
+    db: DbDependency,
+    searchProblemWord: str = None
     ):
-    return question_crud.find_all_questions(db)
+    print(2298791)
+    print(searchProblemWord)
+    return question_crud.find_all_questions(db, search_problem_word=searchProblemWord)
 
 # Question IDからQuestionを取得するエンドポイント
 @router.get("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
