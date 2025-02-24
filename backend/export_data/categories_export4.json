@@ -232,14 +232,6 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "global databaseはRDSの機能か。auroraの機能か",
-                            "answer": [
-                                "aurora"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
                             "problem": "Amazon AuroraのリージョンまたぎでDBを同期してくれる機能」をなんという？",
                             "answer": [
                                 "グローバルDB"
@@ -605,14 +597,6 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "global databaseはRDSの機能か。auroraの機能か",
-                            "answer": [
-                                "aurora"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
                             "problem": "RDSにおいてマルチAZとごっちゃになってしまう特性を持った機能は何か？",
                             "answer": [
                                 "リードレプリカ"
@@ -624,6 +608,14 @@
                             "problem": "AWS RDSにおいてマルチAZを配置する目的は何か。またその理由",
                             "answer": [
                                 "高可用性\n高可用性」は、システムの「稼働時間」に焦点を置いた言葉で、「長時間システムを利用できる状態」を意味する。\nもし、1つのAZのみにRDSインスタンスを配置した場合、地震等の災害の影響でAZに障害が発生すると、RDSインスタンスも影響を受ける可能性がある。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "RDSを使用する場合において、設定で必須した方がよいものは何か？また、理由は？",
+                            "answer": [
+                                "マルチAZ\n1つのAZのみにRDSインスタンスを配置した場合、地震等の災害の影響でAZに障害が発生すると、RDSインスタンスも影響を受ける可能性があるため"
                             ],
                             "memo": "",
                             "is_correct": false
