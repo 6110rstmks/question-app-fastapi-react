@@ -25,7 +25,7 @@
                         {
                             "problem": "1オクターブの音程を12等分した音律を何というか",
                             "answer": [
-                                "平均律"
+                                "12平均律"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -3623,6 +3623,32 @@
                             "problem": "振動数f(HZ)は周期T(s)の（A）",
                             "answer": [
                                 "逆数"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "software",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": []
+                },
+                {
+                    "name": "compile",
+                    "questions": [
+                        {
+                            "problem": "what is the flow of compile?",
+                            "answer": [
+                                "字句解析lexical analysis",
+                                "構文解析syntax analysis",
+                                "意味解析semantic analysis",
+                                "中間コードの生成",
+                                "コードの最適化"
                             ],
                             "memo": "",
                             "is_correct": false
