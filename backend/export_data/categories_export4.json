@@ -3651,6 +3651,32 @@
                                 "コードの最適化"
                             ],
                             "memo": "",
+                            "is_correct": true
+                        },
+                        {
+                            "problem": "Which is faster compiler or interpreter?",
+                            "answer": [
+                                "compiler"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "multimedia",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "光源からの反射や屈折，透過を計算し描画していく手法をなんと呼ぶ？",
+                            "answer": [
+                                "ray tracing"
+                            ],
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
