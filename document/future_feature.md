@@ -1,7 +1,7 @@
 # 将来実装予定の案
 
 当日・今週・今月に解いた問題をグラフとして表示させる。
-matplotlibをしようかな？
+matplotlib？
 
 回答ログはanswer_logs_today, answer_logs_this_week, answer_logs_this_monthテーブルに格納。
 

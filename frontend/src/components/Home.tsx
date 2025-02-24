@@ -4,7 +4,7 @@ import CategoryList from "./category/CategoryList"
 import Pagination from "./Pagination"
 import { Link } from "react-router-dom"
 import styles from "./Home.module.css"
-import Search from "./Search"
+import Search from "./SearchWithCategoryBox"
 
 const Home: React.FC = () => {
     const [page, setPage] = useState<number>(1);
@@ -18,6 +18,7 @@ const Home: React.FC = () => {
     return (
         <>
             <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
+            <Link to="/question_list">Question一覧検索ページ</Link>
             <h3>The total number of Questions：{questionCount}</h3>
             <h3>不正解のQuestion数：{uncorrectedquestionCount}</h3>
             <Pagination
