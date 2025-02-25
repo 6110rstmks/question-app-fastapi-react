@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Question } from "../../../types/Question";
 import { Category } from "../../../types/Category";
 import { Subcategory } from "../../../types/Subcategory";
-import { getCategoryByQuestionId } from "../../../api/QuestionAPI";
+import { fetchCategoryByQuestionId } from "../../../api/QuestionAPI";
 import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI";
 import styles from './ProblemNormal.module.css'
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
@@ -31,7 +31,7 @@ const ReviewProblem: React.FC<Props> = ({ problem, currentReviewProblemIndex2, p
     useEffect(() => {
         setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
 
-        getCategoryByQuestionId(problem.id).then((data) => {
+        fetchCategoryByQuestionId(problem.id).then((data) => {
             setCategory(data);
         })
         fetchSubcategoriesByQuestionId(problem.id).then((data) => {
