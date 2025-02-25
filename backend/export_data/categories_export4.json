@@ -437,7 +437,7 @@
                         {
                             "problem": "s3 glacier flexible retrievalとglacier instant retrievalのうち迅速にデータを取り出し可能なのはどちらか",
                             "answer": [
-                                "glacier flexible retrieval"
+                                "glacier instant retrieval"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1476,7 +1476,7 @@
                                 "イントロン"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "真核生物においてスプライシングはどこで行われるか？",
@@ -2076,7 +2076,7 @@
                                 "（トレーニングプログラムを修了すると、公認インストラクターとして働く資格が得られます。）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "What qualifies us to receive pension? ",
@@ -2212,7 +2212,7 @@
                                 "瞬間的な、即座の"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "My plan doesn't mesh with yours.\"",
@@ -2364,7 +2364,7 @@
                                 "（彼は法律問題を扱うために評判の良い弁護士を選んだ。）\n\nreputable:評判の良い"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "This flashlight's kaput. : ",
@@ -2484,7 +2484,7 @@
                                 "溶岩"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "tavern",
@@ -2741,7 +2741,7 @@
                                 "技術を恐れる人もいる。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The pandemic took a heavy toll on the economy",
@@ -3081,7 +3081,7 @@
                                 "TCP"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "IPアドレスはコンピュータに設定するのではなく、正確には（A）に設定する。",
@@ -3504,7 +3504,7 @@
                                 "CISC"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "複雑な処理を一度の命令で行えるので、多様な作業を効率的にこなせるのはCISC？RISC？",
