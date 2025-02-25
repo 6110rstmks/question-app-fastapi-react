@@ -18,18 +18,6 @@ const QuestionListPage = () => {
         const questions: Question[] = await response.json()
         setQuestions(questions)
     }
-
-    // useEffect(() => {
-    //     const fetchQuestions = async () => {
-    //         console.log(searchProblemWord)
-    //         if (searchProblemWord.trim() === "") return;
-    //         const response = await fetch(`http://localhost:8000/questions/?search=${searchProblemWord}`)
-    //         const questions: Question[] = await response.json()
-    //         setQuestions(questions)
-    //     }
-    //     fetchQuestions()
-    // }, [searchProblemWord])
-
     return (
         <div>
             <div className={styles.search_section}>
@@ -43,12 +31,18 @@ const QuestionListPage = () => {
                 <button onClick={fetchQuestions}>検索する</button>
             </div>
             <div>
-                {questions.map((question) => (
-                    <div key={question.id}>
-                        <div>{question.problem}</div>
-                        <div>{question.answer}</div>
-                    </div>
-                ))}
+                <div className={styles.question_box}>
+                    {questions.map((question) => (
+                        <div key={question.id}>
+                            <div>
+                                <div>問題：</div>{question.problem}
+                            </div>
+                            <div>
+                                <div>解答：</div>{question.answer}
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
 

@@ -7,7 +7,7 @@
     /* height: 402.5px; */
     margin-top: 50px;
     margin-left: 70px;
-  }
+}
   
   .categoryFiled {
     display: flex;
@@ -17,16 +17,16 @@
     margin-bottom: 1.0rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #15803d;
-  }
+}
   
-  .categoryName {
+.categoryName {
     font-size: 1.5rem;
     font-weight: bold;
     color: #15803d;
     cursor: pointer;
-  }
+}
   
-  .plusBtn {
+.plusBtn {
     cursor: pointer;
     width: 1.5rem;
     height: 1.5rem;
@@ -35,12 +35,11 @@
     /* justify-content: center; */
     transition: transform 0.2s;
     margin-left: auto; /* 右端に寄せる */
-
-  }
+}
   
-  .plusBtn:hover {
+.plusBtn:hover {
     transform: scale(1.1);
-  }
+}
   
   .subcategoryName {
     padding: 0.75rem 1rem;
@@ -54,7 +53,7 @@
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
 
-  }
+}
   
   .subcategoryName:hover {
     background-color: #f0fdf4;
