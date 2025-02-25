@@ -8,11 +8,11 @@ import { fetchSubcategoryQuestionsByQuestionId } from '../api/SubcategoryQuestio
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 
 interface ChangeCategorySubcategoryProps {
-  setModalIsOpen: (isOpen: boolean) => void;
-  setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithQuestionCount[]) => void;
-  question?: Question;
-  setQuestion: (question: Question) => void;
-  categoryId: number;
+    setModalIsOpen: (isOpen: boolean) => void;
+    setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithQuestionCount[]) => void;
+    question?: Question;
+    setQuestion: (question: Question) => void;
+    categoryId: number;
 }
 
 const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({setModalIsOpen, setSubcategoriesRelatedToQuestion, question, setQuestion, categoryId}) => {
@@ -89,7 +89,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
                 ))}
     
             </div>
-            <button onClick={handleChangeBelongingToSubcategory}>変更する</button>
+            <button onClick={handleChangeBelongingToSubcategory}>Change</button>
         </div>
     )
 }
