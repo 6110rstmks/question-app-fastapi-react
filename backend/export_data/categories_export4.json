@@ -227,6 +227,15 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "インターネットは何にアタッチするか？またNATゲートウェイは何にアタッチするか",
+                            "answer": [
+                                "インターネットゲートウェイ→VPC",
+                                "NATゲートウェイ→AZ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
