@@ -211,6 +211,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "インターネットゲートウェイについて説明してください。",
+                            "answer": [
+                                "VPCが外部のネットワークと接続するために必要となるAWSのコンポーネントです。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "プライベートサブネットの通信は、インターネットゲートウェイを通るか、通らないか",
+                            "answer": [
+                                "通らない"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -751,7 +767,7 @@
                                 "S3, dynamodb"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "インターフェース型のVPCエンドポイントは、(A)と呼ばれるサービスを使って、各サービスを接続させることができる。(A)は？",
@@ -1508,7 +1524,7 @@
                                 "同時に起きる"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1585,14 +1601,6 @@
                 {
                     "name": "m",
                     "questions": [
-                        {
-                            "problem": "インターネットゲートウェイについて説明してください。",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
                         {
                             "problem": "推移的ルーティングについて説明してください。",
                             "answer": [
@@ -2380,7 +2388,7 @@
                                 "嵐の後、多くの家が壊れていました。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "⁵√7　英語でどう表現",
@@ -2452,7 +2460,7 @@
                                 "彼のロンドン訛りには、時折ロシア語の発音が混じる。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "compriseは自動詞か他動詞か？",
@@ -2556,7 +2564,7 @@
                                 "（気を悪くしないでほしいんだけど、君のアイデアはもう少し改善が必要だと思うよ。）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "irritant",
@@ -3353,7 +3361,7 @@
                                 "高性能"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "命令セットはどのようにたとえることができるか？",
