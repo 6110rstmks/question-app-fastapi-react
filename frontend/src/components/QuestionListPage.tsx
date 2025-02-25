@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react"
 import styles from './QuestionListPage.module.css'
 import { Question } from '../types/Question'
-
+import { Subcategory } from '../types/Subcategory'
+import { handleNavigateToQuestionPage } from "../utils/navigate_function"
+import { useNavigate } from "react-router-dom"
 
 const QuestionListPage = () => {
 
     const [searchProblemWord, setSearchProblemWord] = useState<string>("")
     const [questions , setQuestions] = useState<Question[]>([])
+
+    const navigate = useNavigate();
+    
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchProblemWord(e.target.value)
@@ -18,6 +23,9 @@ const QuestionListPage = () => {
         const questions: Question[] = await response.json()
         setQuestions(questions)
     }
+
+
+
     return (
         <div>
             <div className={styles.search_section}>
@@ -31,9 +39,21 @@ const QuestionListPage = () => {
                 <button onClick={fetchQuestions}>検索する</button>
             </div>
             <div>
-                <div className={styles.question_box}>
+                <div >
+                    {/* <div>
+                        {subcategories.map((subcategory) => (         
+                            <div>
+                                <Link to={`/category/${subcategory.category_id}`}>{categoryName}</Link>
+                                <span> ＞ </span>
+                                <Link
+                                    to={`/subcategory/${subcategory.id}`}
+                                    state={{ id: category_id, name: categoryName }}
+                                >{subcategory.name}</Link>
+                            </div>
+                        ))  }
+                    </div> */}
                     {questions.map((question) => (
-                        <div key={question.id}>
+                        <div key={question.id} className={styles.question_box} onClick={() => handleNavigateToQuestionPage(navigate, question.id)}>
                             <div>
                                 <div>問題：</div>{question.problem}
                             </div>

@@ -157,11 +157,11 @@ const QuestionPage: React.FC = () => {
             </Modal>
             <Modal isOpen={changeSubcategoryModalIsOpen} contentLabel="Example Modal">
                 <ChangeCategorySubcategory
-                setModalIsOpen={setChangeSubcategoryModalIsOpen}
-                setSubcategoriesRelatedToQuestion={setSubcategories}
-                question={question}
-                setQuestion={setQuestion}
-                categoryId={category_id}
+                    setModalIsOpen={setChangeSubcategoryModalIsOpen}
+                    setSubcategoriesRelatedToQuestion={setSubcategories}
+                    question={question}
+                    setQuestion={setQuestion}
+                    categoryId={category_id}
                 />
             </Modal>
             <div>
