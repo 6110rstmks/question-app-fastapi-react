@@ -1,16 +1,5 @@
 import { Question } from '../types/Question';
 
-// Questionに紐づくCategoryを取得するAPI
-export const fetchCategoryByQuestionId = async (question_id: number) => {
-    const response = await fetch(`http://localhost:8000/questions/get_category/${question_id}`, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    })
-    return await response.json()
-}
-
 export const fetchQuestion = async (question_id: number) => {
     const url = `http://localhost:8000/questions/${question_id}`;
     const response = await fetch(url);

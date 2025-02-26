@@ -24,8 +24,6 @@ const QuestionListPage = () => {
         setQuestions(questions)
     }
 
-
-
     return (
         <div>
             <div className={styles.search_section}>

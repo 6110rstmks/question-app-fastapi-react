@@ -8,6 +8,17 @@ export const fetchCategories = async (skip: number, limit: number, searchCategor
     }
 };
 
+// Questionに紐づくCategoryを取得するAPI
+export const fetchCategoryByQuestionId = async (question_id: number) => {
+    const response = await fetch(`http://localhost:8000/questions/get_category/${question_id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json()
+}
+
 // questionを一つでも持つcategoryをすべて取得
 // 問題出題画面にて使用する。
 export const fetchAllCategoriesWithQuestions = async () => {

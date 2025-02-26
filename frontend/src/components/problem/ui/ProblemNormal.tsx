@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Question } from "../../../types/Question";
 import { Category } from "../../../types/Category";
 import { Subcategory } from "../../../types/Subcategory";
-import { fetchCategoryByQuestionId } from "../../../api/QuestionAPI";
+import { fetchCategoryByQuestionId } from "../../../api/CategoryAPI";
 import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI";
 import styles from './ProblemNormal.module.css'
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
