@@ -1094,6 +1094,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "ELB（ALB）とAPI gatewayをHTTPS末端にするというのはELBとAPI gatewayをSSLのフローでいうところの（WEBサーバ・WEBクライアント）にするということ。これのどっちか",
+                            "answer": [
+                                "WEBサーバ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -3121,6 +3129,14 @@
                             "problem": "IPアドレスはコンピュータに設定するのではなく、正確には（A）に設定する。",
                             "answer": [
                                 "NIC"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "IPSとはなにか（基本情報に出題された）",
+                            "answer": [
+                                "サーバやネットワークへの侵入を防ぐために不正な通信を検知して遮断する装置"
                             ],
                             "memo": "",
                             "is_correct": false
