@@ -1085,6 +1085,15 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "HTTPSの終端を扱うAWSのサービスは二つある。それらを答えよ。また、そもそもHTTPSの終端とはなにか？",
+                            "answer": [
+                                "ALB, API gateway",
+                                "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
