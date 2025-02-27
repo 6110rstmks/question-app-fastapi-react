@@ -3137,6 +3137,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "SSL証明書はどこが発行する？",
+                            "answer": [
+                                "CA（認証局）"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
