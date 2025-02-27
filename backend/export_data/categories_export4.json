@@ -3153,6 +3153,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "SSLの流れにおいて、クライアントからのSSLの要求に対して、（A）は証明書をクライアントに送付する。",
+                            "answer": [
+                                "WEBサーバ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
