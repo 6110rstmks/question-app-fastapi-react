@@ -1,38 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./CategoryCreate.module.css";
-
+import { createCategory } from "../../api/CategoryAPI";
 interface CategoryCreateProps {
     isAuth: boolean;
 }
 
-const CategoryCreate: React.FC<CategoryCreateProps> = ({ isAuth }) => {
+const CategoryCreate: React.FC<CategoryCreateProps> = ({isAuth }) => {
     const [categoryName, setCategoryName] = useState<string>("");
     const [errMessage, setErrorMessage] = useState<string>("");
     const navigate = useNavigate();
 
-    const createCategory = async () => {
-        try {
-            const response = await fetch('http://localhost:8000/categories', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name: categoryName }),
-            });
-
-            if (!response.ok) {
-                const data = await response.json();
-                setErrorMessage(data.detail)
-            } else {
-                navigate("/");
-            }
-
-        } catch (error) {
-            console.error(error);
-            // 必要に応じてエラーメッセージをユーザーに表示する
+    const addCategory = async () => {
+        const response = await createCategory(categoryName);
+        if (!response.ok) {
+            const data = await response.json();
+            setErrorMessage(data.detail);
+        } else {
+            navigate("/");
         }
-    };
+    }
 
     useEffect(() => {
         if (!isAuth) {
@@ -54,7 +40,7 @@ const CategoryCreate: React.FC<CategoryCreateProps> = ({ isAuth }) => {
                         autoFocus
                     />
                 </div>
-                <button className="categoryButton" onClick={createCategory}>
+                <button className="categoryButton" onClick={addCategory}>
                     Create
                 </button>
                 <div>{errMessage && <p>{errMessage}</p>}</div>

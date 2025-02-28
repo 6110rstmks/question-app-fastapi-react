@@ -46,3 +46,16 @@ export const fetchCategory = async (category_id: number) => {
         return await response.json();
     }
 }
+
+export const createCategory = async (categoryName: string) => {
+    const url = 'http://localhost:8000/categories'
+    const response = await fetch('http://localhost:8000/categories', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name: categoryName }),
+    });
+
+    return response
+}

@@ -26,12 +26,8 @@ const SubcategoryPage: React.FC = () => {
         isEditing,
         setIsEditing,
         handleKeyPress
-    } = useSubcategoryPage(subcategoryId, location.state)
-
-    // 回答の表示非表示ボタンの状態を管理
-
-
-
+    } = useSubcategoryPage(subcategoryId)
+    
     return (
         <div className={styles.subcategory_page}>
             <button 

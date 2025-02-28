@@ -6,9 +6,16 @@ import { Question } from '../../../types/Question'
 import { Category } from '../../../types/Category'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
 
+interface locationState {
+    categoryId: number;
+    categoryName: string;
+    subcategoryId: number;
+    subcategoryName: string;
+}
+
 export const useSubcategoryPage = (
     subcategoryId: number,
-    category: Category,
+    // category: Category,
 ) => {
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const [questions, setQuestions] = useState<Question[]>([]);
@@ -22,7 +29,10 @@ export const useSubcategoryPage = (
 
     // サブカテゴリ名の編集モードの状態を管理
     const [isEditing, setIsEditing] = useState<boolean>(false);
+    // 回答の表示非表示ボタンの状態を管理
     const [showAnswer, setShowAnswer] = useState(false); 
+
+    // リロードした際はここから取得する
 
     const [categoryInfo, setCategoryInfo] = useState(() => {
         const saved = localStorage.getItem('categoryInfo');
@@ -64,12 +74,11 @@ export const useSubcategoryPage = (
     
     useEffect(() => {
         // window.addEventListener('keydown', handleKeyDown);
-
         if (isFirstRender.current) {
             isFirstRender.current = false;
             return;
         }
-        console.log('こんにちは')
+        // console.log('こんにちは')
         window.addEventListener('keydown', handleKeyDown);
 
         return () => {
@@ -77,6 +86,7 @@ export const useSubcategoryPage = (
         };
     }, [handleKeyDown]);
 
+    // これはリロードした際に必要。
     useEffect(() => {
         console.log('いいい')
         console.log(location.state)
@@ -106,7 +116,8 @@ export const useSubcategoryPage = (
         //     localStorage.setItem('categoryInfo', JSON.stringify(category));
         // }
 
-    }, [subcategoryId]);
+    }, [subcategoryId])
+
     return {
         subcategoryName,
         setSubcategoryName,

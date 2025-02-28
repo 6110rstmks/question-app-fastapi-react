@@ -15,9 +15,27 @@ interface CategoryBoxProps {
     searchAnswerWord: string
 }
 
-const CategoryBox: React.FC<CategoryBoxProps> = ({ category, searchSubcategoryWord, searchQuestionWord, searchAnswerWord }) => {
+const CategoryBox: React.FC<CategoryBoxProps> = ({
+    category,
+    searchSubcategoryWord,
+    searchQuestionWord,
+    searchAnswerWord
+}) => {
     const [showForm, setShowForm] = useState<boolean>(false);
-    const { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, categoryBoxRef } = useCategoryBox(category.id, showForm, setShowForm, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
+    const { 
+        subcategories,
+        subcategoryName,
+        setSubcategoryName,
+        handleAddSubcategory,
+        categoryBoxRef
+    } = useCategoryBox(
+        category.id,
+        showForm,
+        setShowForm,
+        searchSubcategoryWord,
+        searchQuestionWord,
+        searchAnswerWord
+    );
     const [isPinned, setIsPinned] = useState(false);
 
     const navigate = useNavigate();

@@ -13,7 +13,19 @@ const Home: React.FC = () => {
     const [searchSubcategoryWord, setSearchSubcategoryWord] = useState<string>("");
     const [searchQuestionWord, setSearchQuestionWord] = useState<string>("");
     const [searchAnswerWord, setSearchAnswerWord] = useState<string>("");
-    const { categories, pageCount, questionCount, uncorrectedquestionCount } = useCategories(page, limit, searchCategoryWord, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
+    const { 
+        categories,
+        pageCount,
+        questionCount,
+        uncorrectedquestionCount
+    } = useCategories(
+        page,
+        limit,
+        searchCategoryWord,
+        searchSubcategoryWord,
+        searchQuestionWord,
+        searchAnswerWord
+    );
 
     return (
         <>
