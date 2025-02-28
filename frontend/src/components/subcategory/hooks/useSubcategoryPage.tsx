@@ -21,16 +21,16 @@ export const useSubcategoryPage = (
         return saved ? JSON.parse(saved) : {};
     })
 
-    const handleNavigateToQuestionPage = (question_id: number) => {
-        navigate(`/question/${question_id}`, { 
-            state: {
-                category_id: categoryInfo.id,
-                subcategory_id: subcategoryId,
-                categoryName: categoryInfo.name,
-                subcategoryName: subcategoryName,
-            } 
-        });
-    }
+    // const handleNavigateToQuestionPage = (question_id: number) => {
+    //     navigate(`/question/${question_id}`, { 
+    //         state: {
+    //             category_id: categoryInfo.id,
+    //             subcategory_id: subcategoryId,
+    //             categoryName: categoryInfo.name,
+    //             subcategoryName: subcategoryName,
+    //         } 
+    //     });
+    // }
 
     // const handleNavigateToCategoryPage = () => {
     //     handleNavigateToCategoryPage(navigate, category)
@@ -93,6 +93,7 @@ export const useSubcategoryPage = (
         }
 
     }, [subcategoryId]);
-    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleNavigateToQuestionPage, handleDeleteSubcategory, showAnswer, setShowAnswer };
+    // return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleNavigateToQuestionPage, handleDeleteSubcategory, showAnswer, setShowAnswer };
+    return { subcategoryName, setSubcategoryName, questions, setQuestions, categoryInfo, handleDeleteSubcategory, showAnswer, setShowAnswer };
 }
 

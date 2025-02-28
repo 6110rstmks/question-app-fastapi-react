@@ -5,7 +5,7 @@ import QuestionCreate from '../question/QuestionCreate';
 import styles from "./SubcategoryPage.module.css";
 import { updateSubcategoryName } from '../../api/SubcategoryAPI';
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
-import { handleNavigateToCategoryPage } from '../../utils/navigate_function';
+import { handleNavigateToCategoryPage, handleNavigateToQuestionPage } from '../../utils/navigate_function';
 
 
 const SubcategoryPage: React.FC = () => {
@@ -17,7 +17,6 @@ const SubcategoryPage: React.FC = () => {
         setSubcategoryName, 
         questions, setQuestions, 
         categoryInfo, 
-        handleNavigateToQuestionPage, 
         handleDeleteSubcategory,
         showAnswer,
         setShowAnswer
@@ -89,7 +88,7 @@ const SubcategoryPage: React.FC = () => {
                     <div 
                     className={`${styles.question_box} ${question.is_correct ? styles.correct : styles.incorrect}`} 
                     key={question.id}>
-                        <h3 className={styles.problem_text} onClick={() => handleNavigateToQuestionPage(question.id)}>
+                        <h3 className={styles.problem_text} onClick={() => handleNavigateToQuestionPage(navigate, question.id, categoryInfo)}>
                             {question.problem}
                         </h3>
                         {/* isOn が true の場合のみ answer を表示 */}
