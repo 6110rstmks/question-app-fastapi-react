@@ -10,7 +10,6 @@ interface QuestionCreateProps {
 }
 
 const QuestionCreate: React.FC<QuestionCreateProps> = ({categoryId, subcategoryId, setModalIsOpen, setQuestions}) => {
-
     const {
         problem,
         setProblem,
@@ -21,7 +20,12 @@ const QuestionCreate: React.FC<QuestionCreateProps> = ({categoryId, subcategoryI
         createQuestion,
         handleAnswerChange,
         addAnswerField,
-    } = useQuestionCreate(categoryId, subcategoryId, setQuestions, setModalIsOpen);
+    } = useQuestionCreate(
+        categoryId,
+        subcategoryId,
+        setQuestions,
+        setModalIsOpen
+    );
 
     return (
         <div className={styles.container}>
