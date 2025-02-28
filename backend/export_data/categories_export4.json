@@ -958,7 +958,7 @@
                                 "できる"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1534,7 +1534,7 @@
                                 "核"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "RNAは二本鎖である。マルカバツか。",
@@ -1819,7 +1819,7 @@
                                 "検索が速くなる"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1926,7 +1926,7 @@
                                 ""
                             ],
                             "memo": "内部結合\nマッチする行のみ取得するため、処理対象のデータ量が少ない",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "埋込みSQLにおいて，問合せによって得られた導出表を1行ずつ親プログラムに引き渡す操作がある。この操作と関係の深い字句はなにか？",
@@ -3762,6 +3762,54 @@
                             "problem": "光源からの反射や屈折，透過を計算し描画していく手法をなんと呼ぶ？",
                             "answer": [
                                 "ray tracing"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "projectmanagement",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": []
+                },
+                {
+                    "name": "EVM",
+                    "questions": [
+                        {
+                            "problem": "EVMにおいてPVとは",
+                            "answer": [
+                                "planed value\n計画上の出来高のことです。\nこれを基準に遅延（コストオーバー）などを判断します。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "EVMにおいてEVとは",
+                            "answer": [
+                                "EV（Earned Value）とは、実際に完成している実績値です。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "geography",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "熱帯雨林気候の土壌は?",
+                            "answer": [
+                                "ラトソル"
                             ],
                             "memo": "",
                             "is_correct": false
