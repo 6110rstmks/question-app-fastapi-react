@@ -903,9 +903,9 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "データの転送が主な用途なのはkinesis data stream? firehose?",
+                            "problem": "データの転送が主な用途なのはkinesis data stream? aws data firehose?",
                             "answer": [
-                                "Kinesis Data Firehose"
+                                "aws Data Firehose"
                             ],
                             "memo": "",
                             "is_correct": true
@@ -3764,7 +3764,7 @@
                                 "ray tracing"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 }
@@ -3810,6 +3810,14 @@
                             "problem": "熱帯雨林気候の土壌は?",
                             "answer": [
                                 "ラトソル"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "キャッサバは何の原料？",
+                            "answer": [
+                                "タピオカ\nちなみにキャッサバは焼畑農業の代表的な作物"
                             ],
                             "memo": "",
                             "is_correct": false
