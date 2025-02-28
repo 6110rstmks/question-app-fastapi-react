@@ -7,6 +7,7 @@ export interface Question {
     answer_count: number;
 }
 
-export interface QuestionWithCategoryId extends Question {
+export interface QuestionWithCategoryIdAndCategoryName extends Question {
     category_id: number;
+    category_name: string;
 }

@@ -1,6 +1,6 @@
 import time
 from fastapi import FastAPI, Request, status
-from routers import category_router, question_router, subcategory_router, problem_router, auth_router, subcategory_question_router
+from routers import category_router, question_router, subcategory_router, problem_router, auth_router, subcategory_question_router, category_question_router
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_pagination import Page, add_pagination, paginate
 from fastapi.exceptions import RequestValidationError
@@ -19,8 +19,6 @@ app.add_middleware(
 async def handler(request:Request, exc:RequestValidationError):
     return JSONResponse(content={}, status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
-
-
 # 例えば、リクエストの処理とレスポンスの生成にかかった秒数を含むカスタムヘッダー X-Process-Time を追加できます:
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):
@@ -35,5 +33,6 @@ app.include_router(category_router.router)
 app.include_router(subcategory_router.router)
 app.include_router(question_router.router)
 app.include_router(problem_router.router)
+app.include_router(category_question_router.router)
 app.include_router(subcategory_question_router.router)
 add_pagination(app)
