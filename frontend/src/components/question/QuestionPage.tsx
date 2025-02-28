@@ -13,14 +13,17 @@ const QuestionPage: React.FC = () => {
     const navigate = useNavigate()
     const { question_id } = useParams<{ question_id: string }>();
     const { category_id } = useParams<{ category_id: string }>();
+    const { subcategory_id } = useParams<{ subcategory_id: string }>();
     const questionId = Number(question_id)
     const categoryId = Number(category_id)
+    const subcategoryId = Number(subcategory_id)
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
     const [changeSubcategoryModalIsOpen, setChangeSubcategoryModalIsOpen] = useState<boolean>(false);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
     const { subcategories, setSubcategories, question, setQuestion, categoryInfo, setCategoryInfo } = useQuestionPage(questionId, location.state);
-    const { subcategory_id, subcategoryName, categoryName } = categoryInfo;
+    // const { subcategory_id, categoryName } = categoryInfo;
+    const { categoryName } = categoryInfo;
 
     const handleDeleteQuestion = async () => {
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:");

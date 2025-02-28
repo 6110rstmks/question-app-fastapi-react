@@ -10,9 +10,12 @@ import { handleNavigateToCategoryPage, handleNavigateToQuestionPage } from '../.
 
 const SubcategoryPage: React.FC = () => {
     const { subcategory_id } = useParams<{ subcategory_id: string }>();
+    const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
+    console.log('あああ')
+    console.log(subcategory_id)
+    console.log(subcategoryId)
 
     const location = useLocation()
-    const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
     const { subcategoryName, 
         setSubcategoryName, 
         questions, setQuestions, 

@@ -8,7 +8,7 @@ from schemas.category_question import CategoryQuestionResponse
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
-router = APIRouter(prefix="/category_question", tags=["CategoriesQuestions"])
+router = APIRouter(prefix="/categories_questions", tags=["CategoriesQuestions"])
 
 @router.get("/question_id/{question_id}", response_model=CategoryQuestionResponse, status_code=status.HTTP_200_OK)
 async def find_categoryquestion_by_question_id(

@@ -27,7 +27,7 @@ async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCr
 
 @router.get("", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_all(db: DbDependency):
-    return subcategory_crud.find_subcategories_in_category(db)
+    return subcategory_crud.find_subcategories_in_categorybox(db)
 
 @router.get("/question_id/{question_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_subcategories_by_question_id(

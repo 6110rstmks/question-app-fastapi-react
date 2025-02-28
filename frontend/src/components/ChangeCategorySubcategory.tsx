@@ -4,7 +4,7 @@ import { Subcategory } from '../types/Subcategory'
 import { useState } from 'react'
 import { fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
 import { SubcategoryWithQuestionCount } from '../types/Subcategory'
-import { fetchSubcategoryQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
+import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 
 interface ChangeCategorySubcategoryProps {
@@ -35,7 +35,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
             const data: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId);
             setSubcategories(data);
 
-            const data2 = await fetchSubcategoryQuestionsByQuestionId(question!.id);
+            const data2 = await fetchSubcategoriesQuestionsByQuestionId(question!.id);
         
             setSelectedSubcategoryIds(data2.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategory_id));
         })();
