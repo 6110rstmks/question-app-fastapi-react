@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
 import { fetchSubcategoriesByCategoryId } from "../../../api/SubcategoryAPI";
 import { fetchCategory } from "../../../api/CategoryAPI";
