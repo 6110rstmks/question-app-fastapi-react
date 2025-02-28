@@ -925,6 +925,16 @@
                             ],
                             "memo": "",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "kinesis data streamsからデータを取り出す方法として例を3つあげて",
+                            "answer": [
+                                "lambda",
+                                "amazon data firehose",
+                                "EMR"
+                            ],
+                            "memo": "\n",
+                            "is_correct": false
                         }
                     ]
                 },
