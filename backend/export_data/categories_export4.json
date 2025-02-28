@@ -919,7 +919,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "kinesis data firehoseにおいてデータ変換機能を有効化することで、データを取り込んだ時に（A)が呼び出され、その記述に沿って形式が変換されます。（A)は？",
+                            "problem": "Amazon data firehoseにおいてデータ変換機能を有効化することで、データを取り込んだ時に（A)が呼び出され、その記述に沿って形式が変換されます。（A)は？",
                             "answer": [
                                 "lambda関数"
                             ],
