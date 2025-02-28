@@ -1,30 +1,73 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Question } from '../../../types/Question'
 import { fetchQuestion } from '../../../api/QuestionAPI'
 import { fetchSubcategoriesByQuestionId } from '../../../api/SubcategoryAPI'
 import { Subcategory } from '../../../types/Subcategory'
+import { deleteQuestion, incrementAnswerCount } from '../../../api/QuestionAPI'
 
 export const useQuestionPage = (
-    question_id: number,
+    questionId: number,
     initialCategoryInfo?: { [key: string]: any }
 ) => {
     const [question, setQuestion] = useState<Question>();
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
+    const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
     const [categoryInfo, setCategoryInfo] = useState(() => {
         const saved = localStorage.getItem('categoryInfo');
         return saved ? JSON.parse(saved) : initialCategoryInfo || {};
     });
+    const navigate = useNavigate()
+    
+
+    const handleDeleteQuestion = async () => {
+        let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
+        if (confirmation !== '削除') {
+            return;
+        }
+        await deleteQuestion(questionId); // API コール
+        navigate('/');
+    }
+
+    const handleAnswerQuestion = () => {
+        incrementAnswerCount(question!.id); // API コール
+        // 表示するquestion.answer_countの数も更新
+        setQuestion((prev) => {
+            if (prev) {
+                return {
+                    ...prev,
+                    answer_count: prev.answer_count + 1,
+                };
+            }
+            return prev;
+        });
+
+        alert('回答数を更新しました');
+    }
+
+    const handleKeyDown = useCallback((event: KeyboardEvent) => {
+        if (event.ctrlKey && event.key.toLowerCase() === 'b') {
+            event.preventDefault();
+            setShowAnswer(prev => !prev);
+        }
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [handleKeyDown]);
 
     useEffect(() => {
         // 質問データを取得して設定
         (async () => {
-            const data: Question = await fetchQuestion(question_id);
+            const data: Question = await fetchQuestion(questionId);
             setQuestion(data);
 
             // 所属するサブカテゴリを変更する際に使用する。
-            const data2: Subcategory[] = await fetchSubcategoriesByQuestionId(question_id);
+            const data2: Subcategory[] = await fetchSubcategoriesByQuestionId(questionId);
             setSubcategories(data2);
         })();
 
@@ -35,13 +78,22 @@ export const useQuestionPage = (
             setCategoryInfo(initialCategoryInfo);
             localStorage.setItem('categoryInfo', JSON.stringify(initialCategoryInfo));
         }
-    }, [question_id, initialCategoryInfo]);
+    }, [questionId, initialCategoryInfo]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    return { subcategories, setSubcategories, question, setQuestion, categoryInfo, setCategoryInfo };
+    return { 
+        subcategories,
+        setSubcategories,
+        question,
+        setQuestion,
+        showAnswer,
+        setShowAnswer,
+        handleDeleteQuestion,
+        handleAnswerQuestion 
+    };
 }
 
 

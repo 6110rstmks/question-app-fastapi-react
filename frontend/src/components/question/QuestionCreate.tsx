@@ -3,17 +3,18 @@ import styles from "./QuestionCreate.module.css"
 import { fetchQuestionsBySubcategoryId } from '../../api/QuestionAPI'
 import { Question } from '../../types/Question'
 interface QuestionCreateProps {
-    category_id: number;
-    subcategory_id: number;
+    categoryId: number;
+    subcategoryId: number;
     setModalIsOpen: (isOpen: boolean) => void;
     setQuestions: (questions: Question[]) => void;
 }
 
-const QuestionCreate: React.FC<QuestionCreateProps> = ({category_id, subcategory_id, setModalIsOpen, setQuestions}) => {
+const QuestionCreate: React.FC<QuestionCreateProps> = ({categoryId, subcategoryId, setModalIsOpen, setQuestions}) => {
     const [problem, setProblem] = useState<string>('');
     const [answers, setAnswers] = useState<string[]>(['']);
     const [memo, setMemo] = useState<string>('');
 
+    // タッチパッド誤操作のブラウザバックを防ぐ
     const blockBrowserBack = useCallback(() => {
         window.history.go(1)
     }, [])
@@ -21,7 +22,6 @@ const QuestionCreate: React.FC<QuestionCreateProps> = ({category_id, subcategory
     useEffect(() => {
         // 直前の履歴に現在のページを追加
         window.history.pushState(null, '', window.location.href)
-
     
         // 直前の履歴と現在のページのループ
         window.addEventListener('popstate', blockBrowserBack)
@@ -63,15 +63,15 @@ const QuestionCreate: React.FC<QuestionCreateProps> = ({category_id, subcategory
                                     problem: problem,
                                     answer: answers,
                                     memo: memo,
-                                    category_id: category_id,
-                                    subcategory_id: subcategory_id 
+                                    category_id: categoryId,
+                                    subcategory_id: subcategoryId 
                                 }),
         });
 
         if (!response.ok) {
             throw new Error('Failed to create question');
         }
-        const data = await fetchQuestionsBySubcategoryId(subcategory_id)
+        const data = await fetchQuestionsBySubcategoryId(subcategoryId)
         setQuestions(data);
         setModalIsOpen(false);
     };

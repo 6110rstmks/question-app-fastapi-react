@@ -6,54 +6,30 @@ import Modal from 'react-modal'
 import EditQuestion from './QuestionEdit';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
-import { fetchQuestion, updateQuestionIsCorrect, deleteQuestion, incrementAnswerCount } from '../../api/QuestionAPI'
+import { fetchQuestion, updateQuestionIsCorrect } from '../../api/QuestionAPI'
 
 const QuestionPage: React.FC = () => {
     const location = useLocation()
     const navigate = useNavigate()
     const { questionId: questionIdStr } = useParams<{ questionId: string }>();
     const questionId = Number(questionIdStr)
-    
-    console.log(location.state)
-    console.log('坂本')
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
     const [changeSubcategoryModalIsOpen, setChangeSubcategoryModalIsOpen] = useState<boolean>(false);
-    const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
-    const { subcategories,
+    const { 
+        subcategories,
         setSubcategories,
         question,
         setQuestion,
-        categoryInfo, 
-        setCategoryInfo } = useQuestionPage(questionId, location.state);
+        showAnswer,
+        setShowAnswer,
+        handleDeleteQuestion,
+        handleAnswerQuestion
+    } = useQuestionPage(
+        questionId,
+        location.state
+    );
     const { categoryId, subcategoryId, categoryName, subcategoryName } = location.state;
-
-
-    const handleDeleteQuestion = async () => {
-        let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
-        if (confirmation !== '削除') {
-            return;
-        }
-        await deleteQuestion(questionId); // API コール
-        navigate('/');
-    }
-    
-    const handleAnswerQuestion = () => {
-        incrementAnswerCount(question!.id); // API コール
-
-        // 表示するquestion.answer_countの数も更新
-        setQuestion((prev) => {
-            if (prev) {
-                return {
-                    ...prev,
-                    answer_count: prev.answer_count + 1,
-                };
-            }
-            return prev;
-        });
-
-        alert('回答数を更新しました');
-    }
 
     const handleUpdateIsCorrect = async () => {
         await updateQuestionIsCorrect(question!); // API コール
@@ -64,37 +40,22 @@ const QuestionPage: React.FC = () => {
     // このQuestionPageに遷移した元のSubcategoryPageに戻る
     const handleNavigateToPreviousSubcategoryPage = () => {
         const category = { id: categoryId, name: categoryName };
-        // navigate(`/subcategory/${subcategory_id}`, {
         navigate(`/subcategory/${subcategoryId}`, {
             state: category
         });
     }
 
     // ページ遷移時にカテゴリ情報をローカルストレージに保存
-    useEffect(() => {
-      if (location.state) {
-            const { category_id, subcategory_id, subcategoryName, categoryName } = location.state;
-            const newCategoryInfo = { category_id, subcategory_id, subcategoryName, categoryName };
-            setCategoryInfo(newCategoryInfo);
-            localStorage.setItem('categoryInfo', JSON.stringify(newCategoryInfo));
-      }
-    }, [location.state]);
+    // useEffect(() => {
+    //   if (location.state) {
+    //         const { category_id, subcategory_id, subcategoryName, categoryName } = location.state;
+    //         const newCategoryInfo = { category_id, subcategory_id, subcategoryName, categoryName };
+    //         setCategoryInfo(newCategoryInfo);
+    //         localStorage.setItem('categoryInfo', JSON.stringify(newCategoryInfo));
+    //   }
+    // }, [location.state]);
 
-    const handleKeyDown = useCallback((event: KeyboardEvent) => {
 
-        if (event.ctrlKey && event.key.toLowerCase() === 'b') {
-            event.preventDefault();
-            setShowAnswer(prev => !prev);
-        }
-    }, []);
-
-    useEffect(() => {
-        console.log(location.state)
-        window.addEventListener('keydown', handleKeyDown);
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-    }, [handleKeyDown]);
 
   return (
       <>

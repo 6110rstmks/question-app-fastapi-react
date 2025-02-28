@@ -16,6 +16,7 @@ const QuestionEdit: React.FC<QuestionEditProps> = ({setModalIsOpen, question, se
     const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "")
     const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false)
 
+    // タッチパッド誤操作のブラウザバックを防ぐ
     const blockBrowserBack = useCallback(() => {
         window.history.go(1)
     }, [])

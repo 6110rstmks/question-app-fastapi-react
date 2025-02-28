@@ -12,13 +12,8 @@ const SubcategoryPage: React.FC = () => {
     // ダブルクリックでサブカテゴリ名の編集モードに切り替える
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
-    const { subcategory_id } = useParams<{ subcategory_id: string }>();
-    // const { subcategory_id } = useParams<{ subcategoryId: string }>();
-    const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
-    
-    console.log('あああ')
-    // console.log(subcategory_id)
-    // console.log(subcategoryId)
+    const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>();
+    const subcategoryId = Number(subcategoryIdStr)
 
     const location = useLocation()
     const { subcategoryName, 
@@ -74,8 +69,8 @@ const SubcategoryPage: React.FC = () => {
                 contentLabel="Example Modal"
             >
                 <QuestionCreate 
-                    category_id={categoryInfo.id} 
-                    subcategory_id={subcategoryId} 
+                    categoryId={categoryInfo.id} 
+                    subcategoryId={subcategoryId} 
                     setModalIsOpen={setModalIsOpen}
                     setQuestions={setQuestions}
                 />
