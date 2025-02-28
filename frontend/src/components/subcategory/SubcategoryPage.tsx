@@ -3,17 +3,22 @@ import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreate';
 import styles from "./SubcategoryPage.module.css";
-import { updateSubcategoryName } from '../../api/SubcategoryAPI';
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
 import { handleNavigateToCategoryPage, handleNavigateToQuestionPage } from '../../utils/navigate_function';
 
-
 const SubcategoryPage: React.FC = () => {
+    const navigate = useNavigate();
+
+    // ダブルクリックでサブカテゴリ名の編集モードに切り替える
+    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+
     const { subcategory_id } = useParams<{ subcategory_id: string }>();
+    // const { subcategory_id } = useParams<{ subcategoryId: string }>();
     const subcategoryId = subcategory_id ? parseInt(subcategory_id, 10) : 0;
+    
     console.log('あああ')
-    console.log(subcategory_id)
-    console.log(subcategoryId)
+    // console.log(subcategory_id)
+    // console.log(subcategoryId)
 
     const location = useLocation()
     const { subcategoryName, 
@@ -22,26 +27,15 @@ const SubcategoryPage: React.FC = () => {
         categoryInfo, 
         handleDeleteSubcategory,
         showAnswer,
-        setShowAnswer
+        setShowAnswer,
+        isEditing,
+        setIsEditing,
+        handleKeyPress
     } = useSubcategoryPage(subcategoryId, location.state)
-    
-    // サブカテゴリ名の編集モードの状態を管理
-    // ダブルクリックでサブカテゴリ名の編集モードに切り替える
-    const [isEditing, setIsEditing] = useState<boolean>(false);
-    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
     // 回答の表示非表示ボタンの状態を管理
 
-    // エンターキーで編集モードを終了し、サブカテゴリ名を更新
-    const handleKeyPress = async (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === 'Enter') {
-            setIsEditing(false);
-            await updateSubcategoryName(subcategoryId, subcategoryName);
-        }
-    };
-    
-    const navigate = useNavigate();
-    
+
 
     return (
         <div className={styles.subcategory_page}>
@@ -91,7 +85,14 @@ const SubcategoryPage: React.FC = () => {
                     <div 
                     className={`${styles.question_box} ${question.is_correct ? styles.correct : styles.incorrect}`} 
                     key={question.id}>
-                        <h3 className={styles.problem_text} onClick={() => handleNavigateToQuestionPage(navigate, question.id, categoryInfo.id, categoryInfo.name)}>
+                        <h3 className={styles.problem_text} 
+                            onClick={() => handleNavigateToQuestionPage(
+                                            navigate,
+                                            question.id,
+                                            categoryInfo.id,
+                                            categoryInfo.name,
+                                            subcategoryId,
+                                            subcategoryName)}>
                             {question.problem}
                         </h3>
                         {/* isOn が true の場合のみ answer を表示 */}

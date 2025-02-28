@@ -11,19 +11,23 @@ import { fetchQuestion, updateQuestionIsCorrect, deleteQuestion, incrementAnswer
 const QuestionPage: React.FC = () => {
     const location = useLocation()
     const navigate = useNavigate()
-    const { question_id } = useParams<{ question_id: string }>();
-    const { category_id } = useParams<{ category_id: string }>();
-    const { subcategory_id } = useParams<{ subcategory_id: string }>();
-    const questionId = Number(question_id)
-    const categoryId = Number(category_id)
-    const subcategoryId = Number(subcategory_id)
+    const { questionId: questionIdStr } = useParams<{ questionId: string }>();
+    const questionId = Number(questionIdStr)
+    
+    console.log(location.state)
+    console.log('坂本')
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
     const [changeSubcategoryModalIsOpen, setChangeSubcategoryModalIsOpen] = useState<boolean>(false);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
-    const { subcategories, setSubcategories, question, setQuestion, categoryInfo, setCategoryInfo } = useQuestionPage(questionId, location.state);
-    // const { subcategory_id, categoryName } = categoryInfo;
-    const { categoryName } = categoryInfo;
+    const { subcategories,
+        setSubcategories,
+        question,
+        setQuestion,
+        categoryInfo, 
+        setCategoryInfo } = useQuestionPage(questionId, location.state);
+    const { categoryId, subcategoryId, categoryName, subcategoryName } = location.state;
+
 
     const handleDeleteQuestion = async () => {
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
@@ -59,8 +63,9 @@ const QuestionPage: React.FC = () => {
 
     // このQuestionPageに遷移した元のSubcategoryPageに戻る
     const handleNavigateToPreviousSubcategoryPage = () => {
-        const category = { id: category_id, name: categoryName };
-        navigate(`/subcategory/${subcategory_id}`, {
+        const category = { id: categoryId, name: categoryName };
+        // navigate(`/subcategory/${subcategory_id}`, {
+        navigate(`/subcategory/${subcategoryId}`, {
             state: category
         });
     }
@@ -93,13 +98,14 @@ const QuestionPage: React.FC = () => {
 
   return (
       <>
-        {subcategories.map((subcategory) => (         
-            <div>
+        {subcategories.map((subcategory, index) => (         
+            <div key={index}>
                 <Link to={`/category/${subcategory.category_id}`}>{categoryName}</Link>
                 <span> ＞ </span>
                 <Link
                     to={`/subcategory/${subcategory.id}`}
-                    state={{ id: category_id, name: categoryName }}
+                    state={{ id: categoryId, name: categoryName }}
+                    // state={{ id: categoryd, name: categoryName }}
                 >{subcategory.name}</Link>
             </div>
         ))  }

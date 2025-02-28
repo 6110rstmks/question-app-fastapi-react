@@ -18,16 +18,17 @@ export const handleNavigateToCategoryPage = (navigate: NavigateFunction, categor
 
 export const handleNavigateToQuestionPage = (
     navigate: NavigateFunction,
-    question_id: number,
+    questionId: number,
     category_id: number,
     category_name?: string,
     subcategory_id?: number,
     subcategoryName?: string
 ) => {
-    navigate(`/question/${question_id}`, { 
+    // navigate(`/question/${question_id}`, { 
+    navigate(`/question/${questionId}`, { 
         state: {
-            category_id: category_id,
-            subcategory_id: subcategory_id,
+            categoryId: category_id,
+            subcategoryId: subcategory_id,
             categoryName: category_name,
             subcategoryName: subcategoryName,
         } 

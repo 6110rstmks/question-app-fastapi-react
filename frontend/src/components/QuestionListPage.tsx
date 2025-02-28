@@ -23,15 +23,12 @@ const QuestionListPage = () => {
         const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await fetchQuestionsBySearchProblemWord(searchProblemWord)
         for (let i = 0; i < questions_data.length; i++) {
             const category_id = await fetchCategoryQuestionByQuestionId(questions_data[i].id)
-            console.log(category_id)
-            console.log(98080)
             const category = await fetchCategory(category_id)
             const subcategory_id = (await fetchSubcategoriesQuestionsByQuestionId(questions_data[i].id))[0].subcategory_id
             questions_data[i].category_name = category.name
             questions_data[i].category_id = category_id
             questions_data[i].subcategory_id = subcategory_id
         }
-        console.log(questions_data[1])
         setQuestions(questions_data)
     }
 
