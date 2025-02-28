@@ -10,11 +10,12 @@ interface CategoryListProps {
     searchAnswerWord: string
 }
 
-const CategoryList: React.FC<CategoryListProps> = ({ categories, 
-                                                    searchSubcategoryWord,
-                                                    searchQuestionWord,
-                                                    searchAnswerWord 
-                                                }) => {
+const CategoryList: React.FC<CategoryListProps> = ({ 
+    categories, 
+    searchSubcategoryWord,
+    searchQuestionWord,
+    searchAnswerWord 
+}) => {
     return (
         <div className={styles.container}>
             <div className={styles.category_container}>

@@ -7,7 +7,6 @@ import { useCategoryBox } from "./hooks/useCategoryBox"
 import { handleNavigateToCategoryPage, handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
 import { TiPinOutline, TiPin } from "react-icons/ti";
 
-
 interface CategoryBoxProps {
     category: Category,
     searchSubcategoryWord: string,
@@ -22,6 +21,8 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     searchAnswerWord
 }) => {
     const [showForm, setShowForm] = useState<boolean>(false);
+    const [isPinned, setIsPinned] = useState(false);
+
     const { 
         subcategories,
         subcategoryName,
@@ -36,7 +37,6 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         searchQuestionWord,
         searchAnswerWord
     );
-    const [isPinned, setIsPinned] = useState(false);
 
     const navigate = useNavigate();
 

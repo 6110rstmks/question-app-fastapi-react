@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
-import { fetchSubcategoriesForHomePage } from "../../../api/SubcategoryAPI";
+import { fetchSubcategoriesForHomePage, createSubcategory } from "../../../api/SubcategoryAPI";
+
 
 export const useCategoryBox = (
     categoryId: number,
@@ -24,18 +25,7 @@ export const useCategoryBox = (
             return
         }
 
-        const response = await fetch('http://localhost:8000/subcategories/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            // ここは例外でjavascriptのコードだが、pythonコード側にデータを送るため命名方式はキャメルケースを使用する。
-            body: JSON.stringify({ name: subcategoryName, category_id: categoryId }),
-        });
-
-        if (!response.ok) {
-            throw new Error('Failed to create subcategory');
-        }
+        const response = await createSubcategory(subcategoryName, categoryId);
 
         const data = await response.json() as SubcategoryWithQuestionCount;
 

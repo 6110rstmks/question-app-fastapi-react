@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
-import { fetchSubcategoriesByCategoryId } from "../../../api/SubcategoryAPI";
+import { fetchSubcategoriesByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI";
 import { fetchCategory } from "../../../api/CategoryAPI";
 import { Category } from "../../../types/Category";
 
@@ -24,19 +24,7 @@ export const useCategoryPage = (categoryId: number) => {
             return
         }
 
-        const response = await fetch('http://localhost:8000/subcategories/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            // ここは例外でjavascriptのコードだが、pythonコード側にデータを送るため命名方式はキャメルケースを使用する。
-            body: JSON.stringify({ name: subcategoryName, category_id: categoryId }),
-        });
-
-        if (!response.ok) {
-            throw new Error('Failed to create subcategory');
-        }
-
+        const response = await createSubcategory(subcategoryName, categoryId);
         const data = await response.json() as SubcategoryWithQuestionCount;
 
         addSubcategory(data);
@@ -47,9 +35,6 @@ export const useCategoryPage = (categoryId: number) => {
         window.scrollTo(0, 0);
 
         (async () => {
-            // const subcategories = await fetchSubcategoriesByCategoryId(categoryId, searchWord);
-            // setSubcategories(subcategories);
-
             const category = await fetchCategory(categoryId);
             setCategory(category);
         })();
@@ -62,5 +47,13 @@ export const useCategoryPage = (categoryId: number) => {
         })();
     }, [searchWord]);
 
-    return { category, subcategories, subcategoryName, setSubcategoryName ,handleAddSubcategory, searchWord, handleSearch };
+    return { 
+        category,
+        subcategories,
+        subcategoryName,
+        setSubcategoryName,
+        handleAddSubcategory,
+        searchWord,
+        handleSearch
+    };
 };

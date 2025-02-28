@@ -17,7 +17,7 @@ const CategoryPage = () => {
         handleAddSubcategory,
         handleSearch
     } = useCategoryPage(categoryId)
-    
+
     const navigate = useNavigate()
 
     return (
@@ -32,7 +32,10 @@ const CategoryPage = () => {
                     onChange={(e) => setSubcategoryName(e.target.value)} 
                     />
                 </label>
-                <button className={styles.submitBtn} onClick={handleAddSubcategory}>Submit</button>
+                <button 
+                    className={styles.submitBtn}
+                    onClick={handleAddSubcategory}
+                >Submit</button>
             </div>
 
             <div className={styles.search_section}>
@@ -49,7 +52,9 @@ const CategoryPage = () => {
             </div>
             <div>        
                 {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
-                    <div className={styles.subcategory_name} key={subcategory.id} onClick={() => category && handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}>
+                    <div className={styles.subcategory_name} 
+                        key={subcategory.id} 
+                        onClick={() => category && handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}>
                         ・{subcategory.name}
                         <span>【{subcategory.question_count}】</span>
                     </div>

@@ -58,3 +58,16 @@ export const fetchSubcategory = async (subcategory_id: number) => {
         return response.json()
     }
 };
+
+export const createSubcategory = async (subcategoryName: string, categoryId: number) => {
+    const url = 'http://localhost:8000/subcategories/'
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name: subcategoryName, category_id: categoryId }),
+    });
+
+    return response
+}
