@@ -879,7 +879,7 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "シャドーとは？",
+                            "problem": "kinesis data streamsにおいてシャドーとは？",
                             "answer": [
                                 "流れてくる一連のデータレコードを保持します。データが乗っかるベルトコンベアのようなものとイメージいただけると良いです。1 つの Kinesis Data Streams の中には複数のシャードが存在します。シャードが増えれば増えるほど、一度に流せるデータの量が増えます。Kinesis Data Streams のスケーリングの単位でもあります。"
                             ],
