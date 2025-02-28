@@ -8,6 +8,14 @@ export const fetchQuestion = async (question_id: number) => {
     }
 }
 
+export const fetchQuestionsBySearchProblemWord = async (searchProblemWord: string) => {
+    const url = `http://localhost:8000/questions/?searchProblemWord=${searchProblemWord}`;
+    const response = await fetch(url)
+    if (response.ok) {
+        return await response.json();
+    }
+}
+
 // Questionのis_correctを更新するAPI
 export const updateQuestionIsCorrect = async (question: Question) => {
     const response = await fetch(`http://localhost:8000/questions/edit_flg/${question.id}`, {

@@ -30,11 +30,10 @@ async def change_belongs_to_subcategoryId(
 async def get_question_count(db: DbDependency):
     return question_crud.get_question_count(db)
 
-# 不正解のuestion数を取得するエンドポイント
+# 不正解のQuestion数を取得するエンドポイント
 @router.get("/uncorrected_count", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_uncorrected_count(db: DbDependency):
     return question_crud.get_question_uncorrected_count(db)
-
 
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
@@ -91,8 +90,6 @@ async def find_all_questions(
     db: DbDependency,
     searchProblemWord: str = None
     ):
-    print(2298791)
-    print(searchProblemWord)
     return question_crud.find_all_questions(db, search_problem_word=searchProblemWord)
 
 # Question IDからQuestionを取得するエンドポイント
@@ -110,14 +107,6 @@ async def find_category_by_question_id(db: DbDependency, question_id: int = Path
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
     return found_category
-
-# question_idからQuestionに紐づくSubcategoryを取得するエンドポイント
-# @router.get("/get_subcategory/{question_id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
-# async def find_subcategory_by_question_id(db: DbDependency, question_id: int = Path(gt=0)):
-#     found_subcategory = question_crud.find_subcategory_by_question_id(db, question_id)
-#     if not found_subcategory:
-#         raise HTTPException(status_code=404, detail="Subcategory not found")
-#     return found_subcategory
 
 # Category IDに紐づくQuestionsを取得するエンドポイント
 @router.get("/category_id/{category_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)

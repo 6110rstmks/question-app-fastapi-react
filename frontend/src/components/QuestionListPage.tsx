@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import styles from './QuestionListPage.module.css'
 import { Question } from '../types/Question'
-import { Subcategory } from '../types/Subcategory'
 import { handleNavigateToQuestionPage } from "../utils/navigate_function"
 import { useNavigate } from "react-router-dom"
+import { fetchQuestionsBySearchProblemWord } from "../api/QuestionAPI"
 
 const QuestionListPage = () => {
 
@@ -16,11 +16,10 @@ const QuestionListPage = () => {
         setSearchProblemWord(e.target.value)
     }
 
-    const fetchQuestions = async () => {
+    const handleSearchClick = async () => {
         if (searchProblemWord.trim() === "") return;
-        const response = await fetch(`http://localhost:8000/questions/?searchProblemWord=${searchProblemWord}`)
-        const questions: Question[] = await response.json()
-        setQuestions(questions)
+        const data: Question[] = await fetchQuestionsBySearchProblemWord(searchProblemWord)
+        setQuestions(data)
     }
 
     return (
@@ -33,7 +32,7 @@ const QuestionListPage = () => {
                     onChange={handleSearch}
                     />
                 </div>
-                <button onClick={fetchQuestions}>検索する</button>
+                <button onClick={() => handleSearchClick()}>検索する</button>
             </div>
             <div>
                 <div>
