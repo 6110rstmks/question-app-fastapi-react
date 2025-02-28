@@ -8,7 +8,7 @@ export interface Question {
 }
 
 export interface QuestionWithCategoryIdAndCategoryNameAndSubcategoryId extends Question {
-    category_id: number;
+    categoryId: number;
     category_name: string;
-    subcategory_id: number;
+    subcategoryId: number;
 }

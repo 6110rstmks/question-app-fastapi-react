@@ -26,8 +26,8 @@ const QuestionListPage = () => {
             const category = await fetchCategory(category_id)
             const subcategory_id = (await fetchSubcategoriesQuestionsByQuestionId(questions_data[i].id))[0].subcategory_id
             questions_data[i].category_name = category.name
-            questions_data[i].category_id = category_id
-            questions_data[i].subcategory_id = subcategory_id
+            questions_data[i].categoryId = category_id
+            questions_data[i].subcategoryId = subcategory_id
         }
         setQuestions(questions_data)
     }
@@ -55,7 +55,12 @@ const QuestionListPage = () => {
                     {questions.map((question) => (
                         <div key={question.id} 
                             className={styles.question_box} 
-                            onClick={() => handleNavigateToQuestionPage(navigate, question.id, question.category_id, question.category_name, question.subcategory_id)}>
+                            onClick={() => handleNavigateToQuestionPage(
+                                navigate,
+                                question.id,
+                                question.categoryId,
+                                question.category_name,
+                                question.subcategoryId)}>
                             <div>
                                 <div>問題：</div>{question.problem}
                             </div>

@@ -6,7 +6,6 @@ def find_all(db: Session):
     return db.query(SubcategoryQuestion).all()
 
 def find_subcategoriesquestions_by_question_id(db: Session, question_id: int):
-    print(333366666)
     query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query).scalars().all()
 

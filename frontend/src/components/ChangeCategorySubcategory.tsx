@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Question } from '../types/Question'
 import { Subcategory } from '../types/Subcategory'
-import { useState } from 'react'
-import { fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
 import { SubcategoryWithQuestionCount } from '../types/Subcategory'
-import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
+import { fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
+import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 
 interface ChangeCategorySubcategoryProps {
     setModalIsOpen: (isOpen: boolean) => void;
@@ -13,6 +12,11 @@ interface ChangeCategorySubcategoryProps {
     question?: Question;
     setQuestion: (question: Question) => void;
     categoryId: number;
+}
+
+interface OriginalData {
+    subcategory_id: number;
+    question_id: number;
 }
 
 const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({setModalIsOpen, setSubcategoriesRelatedToQuestion, question, setQuestion, categoryId}) => {
@@ -32,12 +36,21 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
 
     useEffect(() => {
         (async () => {
-            const data: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId);
-            setSubcategories(data);
+            const subcategories_data: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId);
+            setSubcategories(subcategories_data);
+
+            console.log(subcategories_data)
 
             const data2 = await fetchSubcategoriesQuestionsByQuestionId(question!.id);
+            console.log(data2)
+
+            const transformedData: SubcategoryQuestion[] = data2.map(({ subcategory_id, question_id }: OriginalData) => ({
+                subcategoryId: subcategory_id,
+                questionId: question_id
+            }));
         
-            setSelectedSubcategoryIds(data2.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategory_id));
+            setSelectedSubcategoryIds(transformedData.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategoryId));
+
         })();
       }, [categoryId]);
 

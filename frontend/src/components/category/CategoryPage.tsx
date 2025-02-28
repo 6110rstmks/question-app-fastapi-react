@@ -6,11 +6,19 @@ import { useCategoryPage } from "./hooks/useCategoryPage";
 import { handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
 
 const CategoryPage = () => {
-    const { category_id } = useParams<{ category_id: string }>();   
-    // category_idをstring型からnumber型に変換
-    const categoryId = category_id ? parseInt(category_id, 10) : 0;
-    const { category, subcategories, subcategoryName, setSubcategoryName, searchWord, handleAddSubcategory, handleSearch } = useCategoryPage(categoryId);
-    const navigate = useNavigate();
+    const { categoryId: categoryIdStr } = useParams<{ categoryId: string }>();   
+    const categoryId = Number(categoryIdStr)
+    const { 
+        category,
+        subcategories,
+        subcategoryName,
+        setSubcategoryName,
+        searchWord,
+        handleAddSubcategory,
+        handleSearch
+    } = useCategoryPage(categoryId)
+    
+    const navigate = useNavigate()
 
     return (
         <div>
