@@ -935,6 +935,14 @@
                             ],
                             "memo": "\n",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "Kinesis Data Streamsでは、プロバイダーから送信されたデータが利用可能（=コンシューマーが読取り可能）になる時間が（A）と非常に短いです。",
+                            "answer": [
+                                "1秒未満"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
