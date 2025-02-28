@@ -88,7 +88,7 @@ const SubcategoryPage: React.FC = () => {
                     <div 
                     className={`${styles.question_box} ${question.is_correct ? styles.correct : styles.incorrect}`} 
                     key={question.id}>
-                        <h3 className={styles.problem_text} onClick={() => handleNavigateToQuestionPage(navigate, question.id, categoryInfo)}>
+                        <h3 className={styles.problem_text} onClick={() => handleNavigateToQuestionPage(navigate, question.id, categoryInfo.id, categoryInfo.name)}>
                             {question.problem}
                         </h3>
                         {/* isOn が true の場合のみ answer を表示 */}

@@ -8,7 +8,7 @@ from schemas.subcategory_question import SubcategoryQuestionResponse
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
-router = APIRouter(prefix="/subcategory_questions", tags=["SubcategoryQuestions"])
+router = APIRouter(prefix="/subcategories_questions", tags=["SubcategoriesQuestions"])
 
 @router.get("/{question_id}", response_model=list[SubcategoryQuestionResponse], status_code=status.HTTP_200_OK)
 async def find_subcategoriesquestions_by_question_id(
