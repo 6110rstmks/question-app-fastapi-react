@@ -3731,6 +3731,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "力 x 距離",
+                            "answer": [
+                                "work"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -3841,6 +3849,36 @@
                             "is_correct": false
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "other",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "主張の型4",
+                            "answer": [
+                                "感情型",
+                                "共有型",
+                                "警報型",
+                                "要望型"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "bookkeeping",
+            "subcategories": [
+                {
+                    "name": "m ",
+                    "questions": []
                 }
             ]
         }
