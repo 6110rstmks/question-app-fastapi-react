@@ -36,17 +36,6 @@ export const useSubcategoryPage = (
             await updateSubcategoryName(subcategoryId, subcategoryName);
         }
     };
-        
-    // const handleNavigateToQuestionPage = (question_id: number) => {
-    //     navigate(`/question/${question_id}`, { 
-    //         state: {
-    //             category_id: categoryInfo.id,
-    //             subcategory_id: subcategoryId,
-    //             categoryName: categoryInfo.name,
-    //             subcategoryName: subcategoryName,
-    //         } 
-    //     });
-    // }
 
     //「削除」と入力してクリックすることで削除が実行される。
     const handleDeleteSubcategory = async () => {

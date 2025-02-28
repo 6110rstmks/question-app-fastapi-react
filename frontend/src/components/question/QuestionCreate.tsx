@@ -59,6 +59,7 @@ const QuestionCreate: React.FC<QuestionCreateProps> = ({categoryId, subcategoryI
             headers: {
                 'Content-Type': 'application/json',
             },
+            // ここは例外でjavascriptのコードだが、pythonコード側にデータを送るため命名方式はキャメルケースを使用する。
             body: JSON.stringify({ 
                                     problem: problem,
                                     answer: answers,

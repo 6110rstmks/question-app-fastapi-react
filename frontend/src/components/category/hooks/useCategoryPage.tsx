@@ -29,6 +29,7 @@ export const useCategoryPage = (categoryId: number) => {
             headers: {
                 'Content-Type': 'application/json',
             },
+            // ここは例外でjavascriptのコードだが、pythonコード側にデータを送るため命名方式はキャメルケースを使用する。
             body: JSON.stringify({ name: subcategoryName, category_id: categoryId }),
         });
 

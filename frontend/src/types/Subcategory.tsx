@@ -1,7 +1,7 @@
 export interface Subcategory {
     id: number;
     name: string;
-    category_id: number;
+    categoryId: number;
 }
 
 // CategoryBox, CategoryPageで使用する型

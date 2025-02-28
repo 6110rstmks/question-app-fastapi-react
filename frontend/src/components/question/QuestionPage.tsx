@@ -61,7 +61,7 @@ const QuestionPage: React.FC = () => {
       <>
         {subcategories.map((subcategory, index) => (         
             <div key={index}>
-                <Link to={`/category/${subcategory.category_id}`}>{categoryName}</Link>
+                <Link to={`/category/${subcategory.categoryId}`}>{categoryName}</Link>
                 <span> ＞ </span>
                 <Link
                     to={`/subcategory/${subcategory.id}`}

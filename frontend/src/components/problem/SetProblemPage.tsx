@@ -157,7 +157,7 @@ const SetProblem: React.FC = () => {
                                         </div>
                                         <div>
                                         {subcategories
-                                            .filter((subcategory) => subcategory.category_id === category.id)
+                                            .filter((subcategory) => subcategory.categoryId === category.id)
                                             .map((subcategory) => (
                                                 <div key={subcategory.id}>
                                                     <label>
