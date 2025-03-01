@@ -301,7 +301,7 @@
                                 "15"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "aurora serverlessはどのような特徴があるか",
@@ -755,7 +755,7 @@
                                 "15"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -4069,9 +4069,10 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "ユーラシア大陸や、北アメリカ大陸に着目したときに大陸の西側に対して大陸の東側は気温が高いか低いか。",
+                            "problem": "ユーラシア大陸や、北アメリカ大陸に着目したときに大陸の西側に対して大陸の東側は気温が高いか低いか。またその理由は？",
                             "answer": [
-                                "低い。"
+                                "低い。",
+                                "海流の影響\n\n大陸の西側: 暖流（例: 北大西洋海流、黒潮など）が流れ、沿岸部の気温が比較的温暖になる。\n大陸の東側: 寒流（例: カリフォルニア海流、親潮など）が流れ、気温が低くなりやすい。"
                             ],
                             "memo": "https://juken-geography.com/systematic/temperature/",
                             "is_correct": false
@@ -4120,6 +4121,16 @@
                             "problem": "日本語では残丘といい、周囲から取り残されてできた丘のような地形をなんという？",
                             "answer": [
                                 "モナドック"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "気温の年較差を考える時の3つのポイント",
+                            "answer": [
+                                "緯度",
+                                "隔海度",
+                                "大陸のどこか"
                             ],
                             "memo": "",
                             "is_correct": false
