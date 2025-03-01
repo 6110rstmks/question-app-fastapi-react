@@ -691,6 +691,14 @@
                             ],
                             "memo": "Use Multi-AZ deployments for High Availability/Failover and Read Replicas for read scalability.\nhttps://medium.com/awesome-cloud/aws-difference-between-multi-az-and-read-replicas-in-amazon-rds-60fe848ef53a",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "RDSにおいてマルチAZにはできなくて、read replicasにはできることを一つ挙げて。",
+                            "answer": [
+                                "リージョンを跨いでのレプリケーションを行うことができること。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
