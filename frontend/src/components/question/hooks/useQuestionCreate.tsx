@@ -13,7 +13,6 @@ export const useQuestionCreate = (
     const [problem, setProblem] = useState<string>('');
     const [memo, setMemo] = useState<string>('');
 
-
     const handleAnswerChange = (index: number, value: string) => {
         const newAnswers = [...answers];
         newAnswers[index] = value;
@@ -76,7 +75,7 @@ export const useQuestionCreate = (
             window.removeEventListener('popstate', blockBrowserBack)
         }
     }, [blockBrowserBack])
-    
+
     return {
         problem,
         setProblem,

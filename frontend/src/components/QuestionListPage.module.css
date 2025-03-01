@@ -8,3 +8,11 @@
     margin-top: 50px;
     margin-left: 70px;
 }
+
+.correct {
+    background-color: rgb(175, 234, 175);
+ }
+
+ .incorrect {
+    background-color: rgb(237, 129, 129);
+ }

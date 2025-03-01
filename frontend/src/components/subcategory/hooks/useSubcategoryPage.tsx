@@ -15,7 +15,6 @@ interface locationState {
 
 export const useSubcategoryPage = (
     subcategoryId: number,
-    // category: Category,
 ) => {
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const [questions, setQuestions] = useState<Question[]>([]);
@@ -78,7 +77,6 @@ export const useSubcategoryPage = (
             isFirstRender.current = false;
             return;
         }
-        // console.log('こんにちは')
         window.addEventListener('keydown', handleKeyDown);
 
         return () => {

@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { useQuestionListPage } from "../components/useQuestionListPage"
 
 const QuestionListPage = () => {
-
     const navigate = useNavigate();
-
     const { 
         questions,
         handleSearch,
@@ -26,10 +24,14 @@ const QuestionListPage = () => {
                 <button onClick={() => handleSearchClick()}>検索する</button>
             </div>
             <div>
+            <div>カテゴリを絞っての問題文の検索を行えるようにしたい</div>
                 <div>
                     {questions.map((question) => (
                         <div key={question.id} 
-                            className={styles.question_box} 
+                            className={`
+                                ${styles.question_box}
+                                ${question.is_correct ? styles.correct : styles.incorrect}
+                            `} 
                             onClick={() => handleNavigateToQuestionPage(
                                 navigate,
                                 question.id,

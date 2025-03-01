@@ -15,7 +15,6 @@ const SubcategoryPage: React.FC = () => {
     const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>();
     const subcategoryId = Number(subcategoryIdStr)
 
-    const location = useLocation()
     const { subcategoryName, 
         setSubcategoryName, 
         questions, setQuestions, 
@@ -27,7 +26,7 @@ const SubcategoryPage: React.FC = () => {
         setIsEditing,
         handleKeyPress
     } = useSubcategoryPage(subcategoryId)
-    
+
     return (
         <div className={styles.subcategory_page}>
             <button 
@@ -74,8 +73,11 @@ const SubcategoryPage: React.FC = () => {
             <div className={styles.question_container}>
                 {questions.map((question) => (
                     <div 
-                    className={`${styles.question_box} ${question.is_correct ? styles.correct : styles.incorrect}`} 
-                    key={question.id}>
+                        className={`
+                            ${styles.question_box} 
+                            ${question.is_correct ? styles.correct : styles.incorrect}
+                        `} 
+                        key={question.id}>
                         <h3 className={styles.problem_text} 
                             onClick={() => handleNavigateToQuestionPage(
                                             navigate,

@@ -66,15 +66,15 @@
 
  }
 
- .answer_text {
+.answer_text {
     color: black;
     font-size: 15px;
- }
+}
 
- .correct {
+.correct {
     background-color: rgb(175, 234, 175);
- }
+}
 
- .incorrect {
+.incorrect {
     background-color: rgb(237, 129, 129);
- }
+}
