@@ -206,6 +206,15 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
+                            "answer": [
+                                "データの削除の観点では、SQSではキューからデータを取り出した際に、処理が完了したデータは削除するのに対して、kinesisの方では一度取り出したデータを削除せず一定期間保持します。",
+                                "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
+                            ],
+                            "memo": "ああ",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -952,7 +961,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "受け取ったデータを受け取ってからすぐに送信先に保存するためのサービスはkinesis data stream？firehose?",
+                            "problem": "受け取ったデータを受け取ってからすぐに送信先に保存するためのサービスはkinesis data stream？amazon data firehose?",
                             "answer": [
                                 "firehose"
                             ],
@@ -968,7 +977,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "kinesis data firehose のデータの転送先を2つ答えよ",
+                            "problem": "amazon data firehose のデータの転送先を2つ答えよ",
                             "answer": [
                                 "s3, redshift"
                             ],
@@ -1232,6 +1241,19 @@
                             "problem": "AWS glue data catalogにおいて（A）により自動メタデータ登録が可能",
                             "answer": [
                                 "glueクローラ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Redshift",
+                    "questions": [
+                        {
+                            "problem": "redshift spectrumで（A）に対して直接データ解析が可能。",
+                            "answer": [
+                                "S3バケっット"
                             ],
                             "memo": "",
                             "is_correct": false
