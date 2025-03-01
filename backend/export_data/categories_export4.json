@@ -3991,6 +3991,16 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "気温の分布で大事なことは3つ。",
+                            "answer": [
+                                "緯度",
+                                "標高",
+                                "大陸の西岸か東岸か"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
