@@ -5,6 +5,7 @@ import { CategoryWithQuestionCount } from '../../types/Category'
 import { Subcategory } from '../../types/Subcategory';
 import { fetchAllCategoriesWithQuestions } from '../../api/CategoryAPI'
 import { fetchSubcategoriesByCategoryId } from '../../api/SubcategoryAPI'
+import { setProblem } from '../../api/ProblemAPI'
 
 const SetProblem: React.FC = () => {
     const [categories, setCategories] = useState<CategoryWithQuestionCount[]>([])
@@ -38,24 +39,13 @@ const SetProblem: React.FC = () => {
     };
 
     // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
-    const setProblems = async () => {
+    const handleSetProblem = async () => {
         if (selectedType === 'category' && selectedCategoryIds.length === 0) {
             alert('Please select at least one category');
             return;
         }
 
-        const response = await fetch('http://localhost:8000/problems/generate_problems', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ 
-                                    type: selectedType,
-                                    incorrected_only_flg: incorrectedOnlyFlgChecked,
-                                    problem_cnt: problemCnt,
-                                    category_ids: selectedCategoryIds
-                                }),
-        });
+        const response = await setProblem(selectedType, incorrectedOnlyFlgChecked, problemCnt, selectedCategoryIds)
 
         if (!response.ok) {
             const errorData = await response.json();
@@ -181,7 +171,7 @@ const SetProblem: React.FC = () => {
                     </div>
                 )}
 
-            <button className={styles.submitButton} onClick={setProblems}>Submit Questions</button>
+            <button className={styles.submitButton} onClick={handleSetProblem}>Submit Questions</button>
         </div>
     );
 }

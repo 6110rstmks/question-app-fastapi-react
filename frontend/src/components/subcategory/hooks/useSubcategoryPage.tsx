@@ -5,6 +5,7 @@ import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
 import { handleKeyDown } from '../../../utils/function';
+
 interface locationState {
     categoryId: number;
     categoryName: string;

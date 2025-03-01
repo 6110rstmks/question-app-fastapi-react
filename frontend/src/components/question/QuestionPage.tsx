@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
@@ -29,7 +29,7 @@ const QuestionPage: React.FC = () => {
         handleAnswerQuestion
     } = useQuestionPage(
         questionId,
-        location.state
+        // location.state
     );
 
     console.log('あおいう')
@@ -55,10 +55,8 @@ const QuestionPage: React.FC = () => {
     // ページ遷移時にカテゴリ情報をローカルストレージに保存
     // useEffect(() => {
     //   if (location.state) {
-    //         const { category_id, subcategory_id, subcategoryName, categoryName } = location.state;
-    //         const newCategoryInfo = { category_id, subcategory_id, subcategoryName, categoryName };
-    //         setCategoryInfo(newCategoryInfo);
-    //         localStorage.setItem('categoryInfo', JSON.stringify(newCategoryInfo));
+    //         const { categoryId, subcategoryId, categoryName, subcategoryName } = location.state;
+    //         localStorage.setItem('categorySubcategoryInfo', JSON.stringify(location.state));
     //   }
     // }, [location.state]);
 
@@ -137,7 +135,7 @@ const QuestionPage: React.FC = () => {
                     setModalIsOpen={setChangeSubcategoryModalIsOpen}
                     setSubcategoriesRelatedToQuestion={setSubcategories}
                     question={question}
-                    setQuestion={setQuestion}
+                    // setQuestion={setQuestion}
                     categoryId={categoryId}
                 />
             </Modal>

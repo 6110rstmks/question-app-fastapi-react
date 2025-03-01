@@ -10,7 +10,7 @@ interface ChangeCategorySubcategoryProps {
     setModalIsOpen: (isOpen: boolean) => void;
     setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithQuestionCount[]) => void;
     question?: Question;
-    setQuestion: (question: Question) => void;
+    // setQuestion: (question: Question) => void;
     categoryId: number;
 }
 
@@ -19,7 +19,13 @@ interface OriginalData {
     question_id: number;
 }
 
-const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({setModalIsOpen, setSubcategoriesRelatedToQuestion, question, setQuestion, categoryId}) => {
+const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
+    setModalIsOpen,
+    setSubcategoriesRelatedToQuestion,
+    question,
+    // setQuestion,
+    categoryId
+}) => {
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [selectedSubcategoryIds, setSelectedSubcategoryIds] = useState<number[]>([]);
 
@@ -33,6 +39,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
                 : prev.filter((id) => id !== subcategoryId) // チェックが外れた場合、IDを削除
         );
     };
+    
 
     useEffect(() => {
         (async () => {
@@ -102,7 +109,9 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({se
                 ))}
     
             </div>
-            <button onClick={handleChangeBelongingToSubcategory}>Change</button>
+            <button 
+                onClick={handleChangeBelongingToSubcategory}
+            >Change</button>
         </div>
     )
 }
