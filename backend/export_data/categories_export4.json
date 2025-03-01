@@ -1167,6 +1167,19 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "glue",
+                    "questions": [
+                        {
+                            "problem": "AWS glue data catalogにおいて（A）により自動メタデータ登録が可能",
+                            "answer": [
+                                "glueクローラ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -2977,7 +2990,7 @@
                                 "紙のバッグをくしゃくしゃにする"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "He was sentenced to two concurrent prison terms.",
@@ -3905,6 +3918,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "熱帯（A気候）のうち乾季なしの気候は何？",
+                            "answer": [
+                                "熱帯多雨林気候"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ラトソルの色は何色？",
+                            "answer": [
+                                "赤色"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -3939,6 +3968,10 @@
                     "questions": []
                 }
             ]
+        },
+        {
+            "name": "docker",
+            "subcategories": []
         }
     ]
 }
