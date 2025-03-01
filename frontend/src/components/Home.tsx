@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import { useCategories } from "../hooks/useCategories"
-import CategoryList from "./category/CategoryList"
+import { CategoryList } from "./category/CategoryList"
 import Pagination from "./Pagination"
 import { Link } from "react-router-dom"
 import styles from "./Home.module.css"
 import Search from "./Search"
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
     const [page, setPage] = useState<number>(1);
     const [limit] = useState<number>(6);
     const [searchCategoryWord, setSearchCategoryWord] = useState<string>("");
@@ -89,4 +89,3 @@ const Home: React.FC = () => {
         </>
     );
 };
-export default Home;

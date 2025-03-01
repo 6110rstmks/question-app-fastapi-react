@@ -20,7 +20,8 @@ matplotlib？
 
 ===============
 alertの部分を
-フラッシュ　みたいにして　1秒後に勝手に消える　ダイアログ形式にしたい
+https://zenn.dev/chot/articles/react-router7-flash-message
+フラッシュメッセージを実装したいreact
 
 ===========
 問題詳細ページ(problemPage.tsx)からProblemを解くことができるようにする。
@@ -106,5 +107,7 @@ SET pinned_order = NULL,
         SELECT COALESCE(MAX(display_order), 0) + 1 FROM category WHERE pinned_order IS NULL
     )
 WHERE id = ?;
+
+
 
 

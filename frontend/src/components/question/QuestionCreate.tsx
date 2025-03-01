@@ -9,7 +9,12 @@ interface QuestionCreateProps {
     setQuestions: (questions: Question[]) => void;
 }
 
-const QuestionCreate: React.FC<QuestionCreateProps> = ({categoryId, subcategoryId, setModalIsOpen, setQuestions}) => {
+const QuestionCreate: React.FC<QuestionCreateProps> = ({
+    categoryId,
+    subcategoryId,
+    setModalIsOpen,
+    setQuestions
+}) => {
     const {
         problem,
         setProblem,

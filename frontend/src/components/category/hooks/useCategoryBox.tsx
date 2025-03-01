@@ -3,6 +3,15 @@ import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
 import { fetchSubcategoriesForHomePage, createSubcategory } from "../../../api/SubcategoryAPI";
 
 
+interface useCategoryBoxProps {
+    categoryId: number;
+    showForm: boolean;
+    setShowForm: (showForm: boolean) => void;
+    searchSubcategoryWord: string;
+    searchQuestionWord: string;
+    searchAnswerWord: string;
+}
+
 export const useCategoryBox = (
     categoryId: number,
     showForm: boolean,

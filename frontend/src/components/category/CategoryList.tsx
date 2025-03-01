@@ -10,7 +10,7 @@ interface CategoryListProps {
     searchAnswerWord: string
 }
 
-const CategoryList: React.FC<CategoryListProps> = ({ 
+export const CategoryList: React.FC<CategoryListProps> = ({ 
     categories, 
     searchSubcategoryWord,
     searchQuestionWord,
@@ -33,4 +33,3 @@ const CategoryList: React.FC<CategoryListProps> = ({
     );
 };
 
-export default CategoryList;

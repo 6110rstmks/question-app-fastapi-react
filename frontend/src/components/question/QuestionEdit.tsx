@@ -10,7 +10,11 @@ interface QuestionEditProps {
     setQuestion: (question: Question) => void;
 }
 
-const QuestionEdit: React.FC<QuestionEditProps> = ({setModalIsOpen, question, setQuestion}) => {
+const QuestionEdit: React.FC<QuestionEditProps> = ({
+    setModalIsOpen,
+    question,
+    setQuestion
+}) => {
     const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "")
     const [inputAnswerValue, setInputAnswerValue] = useState<string[]>(question?.answer || [''])
     const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "")

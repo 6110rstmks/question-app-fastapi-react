@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
@@ -29,6 +29,8 @@ const QuestionPage: React.FC = () => {
         questionId,
         location.state
     );
+
+
     const { categoryId, subcategoryId, categoryName, subcategoryName } = location.state;
 
     const handleUpdateIsCorrect = async () => {
@@ -61,7 +63,7 @@ const QuestionPage: React.FC = () => {
       <>
         {subcategories.map((subcategory, index) => (         
             <div key={index}>
-                <Link to={`/category/${subcategory.categoryId}`}>{categoryName}</Link>
+                <Link to={`/category/${categoryId}`}>{categoryName}</Link>
                 <span> ＞ </span>
                 <Link
                     to={`/subcategory/${subcategory.id}`}
