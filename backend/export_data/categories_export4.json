@@ -2149,7 +2149,7 @@
                                 "ブロック"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "raid4では冗長ディスクの構成が固定に対して、raid5では冗長ディスクの構成が何か？",
@@ -2172,6 +2172,14 @@
                             "answer": [
                                 "Reduce access time",
                                 "It becomes hard to break down."
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "raid2,3の読み書き単位は？",
+                            "answer": [
+                                "ビット"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2360,7 +2368,7 @@
                                 "ハリエットは娘との距離をかつてないほど感じていた」。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "causative verb",
