@@ -198,6 +198,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "SQSとSNSを両方使う構成をなんという？",
+                            "answer": [
+                                "ファンアウトパターン（構成）"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
