@@ -4017,6 +4017,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "ユーラシア大陸や、北アメリカ大陸に着目したときに大陸の西側に対して大陸の東側は気温が高いか低いか。",
+                            "answer": [
+                                "低い。"
+                            ],
+                            "memo": "https://juken-geography.com/systematic/temperature/",
+                            "is_correct": false
                         }
                     ]
                 }
