@@ -246,9 +246,9 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "インターネットゲートウェイについて説明してください。",
+                            "problem": "aws のサービスであるインターネットゲートウェイについて、（A）が外部のネットワークと接続するために必要となるAWSのコンポーネントです。",
                             "answer": [
-                                "VPCが外部のネットワークと接続するために必要となるAWSのコンポーネントです。"
+                                "VPC"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1267,6 +1267,10 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "storage gateway",
+                    "questions": []
                 }
             ]
         },
