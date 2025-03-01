@@ -6,3 +6,23 @@ export const addSubcategory = (
 ) => {
     setSubcategories((prev) => [...prev, subcategory]);
 };
+
+// export const handleKeyDown = useCallback((
+//     event: KeyboardEvent,
+//     setShowAnswer: React.Dispatch<React.SetStateAction<boolean>>
+// ) => {
+//     if (event.ctrlKey && event.key.toLowerCase() === 'b') {
+//         event.preventDefault();
+//         setShowAnswer(prev => !prev);
+//     }
+// }, []);
+
+export const handleKeyDown = (
+    event: KeyboardEvent,
+    setShowAnswer: React.Dispatch<React.SetStateAction<boolean>>
+) => {
+    if (event.ctrlKey && event.key.toLowerCase() === 'b') {
+        event.preventDefault();
+        setShowAnswer(prev => !prev);
+    }
+};

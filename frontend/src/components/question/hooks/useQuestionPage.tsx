@@ -5,6 +5,8 @@ import { fetchQuestion } from '../../../api/QuestionAPI'
 import { fetchSubcategoriesByQuestionId } from '../../../api/SubcategoryAPI'
 import { Subcategory } from '../../../types/Subcategory'
 import { deleteQuestion, incrementAnswerCount } from '../../../api/QuestionAPI'
+import { handleKeyDown } from '../../../utils/function'
+import { on } from 'events'
 
 export const useQuestionPage = (
     questionId: number,
@@ -14,10 +16,11 @@ export const useQuestionPage = (
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
-    const [categoryInfo, setCategoryInfo] = useState(() => {
-        const saved = localStorage.getItem('categoryInfo');
-        return saved ? JSON.parse(saved) : initialCategoryInfo || {};
-    });
+    // const [categoryInfo, setCategoryInfo] = useState(() => {
+    //     const saved = localStorage.getItem('categoryInfo');
+    //     return saved ? JSON.parse(saved) : initialCategoryInfo || {};
+    // });
+
     const navigate = useNavigate()
     
 
@@ -46,17 +49,19 @@ export const useQuestionPage = (
         alert('回答数を更新しました');
     }
 
-    const handleKeyDown = useCallback((event: KeyboardEvent) => {
-        if (event.ctrlKey && event.key.toLowerCase() === 'b') {
-            event.preventDefault();
-            setShowAnswer(prev => !prev);
-        }
-    }, []);
+    // const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    //     if (event.ctrlKey && event.key.toLowerCase() === 'b') {
+    //         event.preventDefault();
+    //         setShowAnswer(prev => !prev);
+    //     }
+    // }, []);
 
     useEffect(() => {
-        window.addEventListener('keydown', handleKeyDown);
+        const onKeyDown = (event: KeyboardEvent) => handleKeyDown(event, setShowAnswer);
+
+        window.addEventListener('keydown', onKeyDown);
         return () => {
-            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('keydown', onKeyDown);
         };
     }, [handleKeyDown]);
 
@@ -71,14 +76,17 @@ export const useQuestionPage = (
             setSubcategories(data2);
         })();
 
+        // ↓これいらないかも
+
         // カテゴリ情報をローカルストレージに保存
         // ローカルストレージに保存する理由は、リロード時にカテゴリ情報が消えないようにするため
         // リロードした場合、QuestionPageからカテゴリ情報を取得できないため、カテゴリ情報はローカルストレージから取得する
-        if (initialCategoryInfo) {
-            setCategoryInfo(initialCategoryInfo);
-            localStorage.setItem('categoryInfo', JSON.stringify(initialCategoryInfo));
-        }
-    }, [questionId, initialCategoryInfo]);
+        // if (initialCategoryInfo) {
+        //     setCategoryInfo(initialCategoryInfo);
+        //     localStorage.setItem('categoryInfo', JSON.stringify(initialCategoryInfo));
+        // }
+    // }, [questionId, initialCategoryInfo]);
+    }, [questionId]);
 
     useEffect(() => {
         window.scrollTo(0, 0);

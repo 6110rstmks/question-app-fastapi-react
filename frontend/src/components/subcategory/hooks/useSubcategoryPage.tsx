@@ -1,10 +1,10 @@
-import { useEffect, useState, useCallback, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { fetchSubcategory } from '../../../api/SubcategoryAPI'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
-
+import { handleKeyDown } from '../../../utils/function';
 interface locationState {
     categoryId: number;
     categoryName: string;
@@ -67,24 +67,19 @@ export const useSubcategoryPage = (
         }
         navigate('/');
     }
-
-    const handleKeyDown = useCallback((event: KeyboardEvent) => {
-        if (event.ctrlKey && event.key.toLowerCase() === 'b') {
-            event.preventDefault();
-            setShowAnswer(prev => !prev);
-        }
-    }, []);
     
     useEffect(() => {
-        // window.addEventListener('keydown', handleKeyDown);
         if (isFirstRender.current) {
             isFirstRender.current = false;
             return;
         }
-        window.addEventListener('keydown', handleKeyDown);
+
+        const onKeyDown = (event: KeyboardEvent) => handleKeyDown(event, setShowAnswer);
+
+        window.addEventListener('keydown', onKeyDown);
 
         return () => {
-            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('keydown', onKeyDown);
         };
     }, [handleKeyDown]);
 

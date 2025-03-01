@@ -11,8 +11,10 @@ import { fetchQuestion, updateQuestionIsCorrect } from '../../api/QuestionAPI'
 const QuestionPage: React.FC = () => {
     const location = useLocation()
     const navigate = useNavigate()
+
     const { questionId: questionIdStr } = useParams<{ questionId: string }>();
     const questionId = Number(questionIdStr)
+
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
     const [changeSubcategoryModalIsOpen, setChangeSubcategoryModalIsOpen] = useState<boolean>(false);
 
@@ -30,7 +32,10 @@ const QuestionPage: React.FC = () => {
         location.state
     );
 
+    console.log('あおいう')
+    console.log(location.state)
 
+    // このsubcategoryIdは遷移元のsubcategoryIdに戻るためのもの。
     const { categoryId, subcategoryId, categoryName, subcategoryName } = location.state;
 
     const handleUpdateIsCorrect = async () => {
@@ -57,8 +62,6 @@ const QuestionPage: React.FC = () => {
     //   }
     // }, [location.state]);
 
-
-
   return (
       <>
         {subcategories.map((subcategory, index) => (         
@@ -68,7 +71,6 @@ const QuestionPage: React.FC = () => {
                 <Link
                     to={`/subcategory/${subcategory.id}`}
                     state={{ id: categoryId, name: categoryName }}
-                    // state={{ id: categoryd, name: categoryName }}
                 >{subcategory.name}</Link>
             </div>
         ))  }
