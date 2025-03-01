@@ -134,11 +134,11 @@
                     "name": "SQS",
                     "questions": [
                         {
-                            "problem": "なぜ可視性タイムアウトを行う必要があるのか。",
+                            "problem": "SQSにおいてなぜ可視性タイムアウトを行う必要があるのか。",
                             "answer": [
                                 "メッセージの重複処理を防ぐ"
                             ],
-                            "memo": "くぁ",
+                            "memo": "",
                             "is_correct": true
                         },
                         {
