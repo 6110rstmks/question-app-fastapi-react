@@ -89,7 +89,7 @@
                                 "データ量の急激な増加が問題視されている中、システムパフォーマンスが低下し、相対的に生産性が低下してしまっています。ストレージのIOPS数値が高いと、システムパフォーマンスを最大限に高め、生産性も向上できるのです。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -214,7 +214,7 @@
                                 "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
                             ],
                             "memo": "ああ",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -596,6 +596,14 @@
                             ],
                             "memo": "ECSの基本について",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "ECSはコンテナを動かす実行環境サービスではなく（A）である。",
+                            "answer": [
+                                "コンテナオーケストレーションサービスである。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -942,7 +950,7 @@
                                 "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
                             ],
                             "memo": "ああ",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "kinesis data streamsにおいてシャドーとは？",
@@ -1857,7 +1865,7 @@
                                 "一般物体認識"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "CNNは日本語でなんと呼ばれている？",
@@ -3542,7 +3550,7 @@
                                 "Hz"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "CPUの性能を表す評価指標の一つで、コンピュータの内部にある発振器が１秒間に発生させる信号の回数のことをなんというか？",
@@ -4092,6 +4100,14 @@
                             "problem": "パリ盆地のケスタでは、急斜面を利用して（A）栽培がされています。",
                             "answer": [
                                 "ぶどう"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "日本語では残丘といい、周囲から取り残されてできた丘のような地形をなんという？",
+                            "answer": [
+                                "モナドック"
                             ],
                             "memo": "",
                             "is_correct": false
