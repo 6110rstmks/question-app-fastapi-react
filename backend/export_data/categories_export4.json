@@ -682,6 +682,15 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "RDSにおいて、マルチAZとread replicasの目的をそれぞれ答えよ",
+                            "answer": [
+                                "マルチAZ→高可用性\n具体的には システムのダウンタイムを最小限に抑え、常に利用可能な状態を維持すること。\n\n",
+                                "read replicas→スケーラビリティ\nシステムの負荷が増えたときに適切にリソースを拡張し、パフォーマンスを維持すること。\nパフォーマンスの維持→これが重要"
+                            ],
+                            "memo": "Use Multi-AZ deployments for High Availability/Failover and Read Replicas for read scalability.\nhttps://medium.com/awesome-cloud/aws-difference-between-multi-az-and-read-replicas-in-amazon-rds-60fe848ef53a",
+                            "is_correct": false
                         }
                     ]
                 },
