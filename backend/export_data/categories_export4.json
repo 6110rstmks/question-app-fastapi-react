@@ -417,6 +417,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を（A）する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。",
+                            "answer": [
+                                "停止"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -928,7 +936,7 @@
                                 "EBS"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "awsの DLMを使用することでなにができる。",
@@ -1152,7 +1160,7 @@
                                 "ひとつのAZにのみシステムを配置する方式"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "シングルAZ、マルチAZ、シングルリージョン、マルチリージョン　←このなかに一つだけそんざいしないシステム構成がある。どれか",
@@ -2448,7 +2456,7 @@
                                 "kuiper belt"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "They turn up, more often than not, when we least expect them.",
@@ -3494,7 +3502,7 @@
                                 "フリップフロップ回路"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "What is the difference between mask ROM and PROM?",
@@ -3892,7 +3900,7 @@
                                 "compiler"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 }
@@ -4139,6 +4147,22 @@
                             "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
                             "answer": [
                                 "低緯度から高緯度"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "暖流の例として、ヨーロッパの西側を北上する（A）が挙げられます。",
+                            "answer": [
+                                "北大西洋海流"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "仏教には上座仏教と大乗仏教がある。戒律がしっかりしている仏教はどちらか。",
+                            "answer": [
+                                "上座仏教"
                             ],
                             "memo": "",
                             "is_correct": false
