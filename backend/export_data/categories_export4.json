@@ -699,6 +699,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "RDSのread replicasにデータの書き込みは可能か。不可能か。",
+                            "answer": [
+                                "不可能。データの書き込みはプライマリデータベースに行う必要がある。readという文字通り。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
