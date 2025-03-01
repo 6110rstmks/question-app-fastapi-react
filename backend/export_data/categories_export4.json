@@ -1464,7 +1464,7 @@
                     "name": "limit",
                     "questions": [
                         {
-                            "problem": "極限の値が与えられている数列の極限の解法",
+                            "problem": "極限の値が与えられている数列の極限の解法。n次式型の場合と一次方程式の場合を答えて",
                             "answer": [
                                 "n次式型　→　打ち消す\n1次方程式　→　まるごと置換"
                             ],
@@ -2504,7 +2504,7 @@
                                 "commensalism(biology)"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "I don't want to offend anybody.",
@@ -2864,7 +2864,7 @@
                                 "無担保ローン"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "異物　英語で　2通りの表現",
@@ -4131,6 +4131,14 @@
                                 "緯度",
                                 "隔海度",
                                 "大陸のどこか"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
+                            "answer": [
+                                "低緯度から高緯度"
                             ],
                             "memo": "",
                             "is_correct": false
