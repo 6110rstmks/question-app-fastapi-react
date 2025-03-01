@@ -10,7 +10,6 @@ interface ChangeCategorySubcategoryProps {
     setModalIsOpen: (isOpen: boolean) => void;
     setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithQuestionCount[]) => void;
     question?: Question;
-    // setQuestion: (question: Question) => void;
     categoryId: number;
 }
 
@@ -23,7 +22,6 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
     setModalIsOpen,
     setSubcategoriesRelatedToQuestion,
     question,
-    // setQuestion,
     categoryId
 }) => {
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
@@ -40,17 +38,11 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
         );
     };
     
-
     useEffect(() => {
         (async () => {
             const subcategories_data: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId);
-            setSubcategories(subcategories_data);
-
-            console.log(subcategories_data)
-
-            const data2 = await fetchSubcategoriesQuestionsByQuestionId(question!.id);
-            console.log(data2)
-
+            setSubcategories(subcategories_data)
+            const data2 = await fetchSubcategoriesQuestionsByQuestionId(question!.id)
             const transformedData: SubcategoryQuestion[] = data2.map(({ subcategory_id, question_id }: OriginalData) => ({
                 subcategoryId: subcategory_id,
                 questionId: question_id

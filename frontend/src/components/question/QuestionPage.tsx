@@ -3,7 +3,7 @@ import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
 import Modal from 'react-modal'
-import EditQuestion from './QuestionEdit';
+import QuestionEdit from './QuestionEdit';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
 import { fetchQuestion, updateQuestionIsCorrect } from '../../api/QuestionAPI'
@@ -123,19 +123,22 @@ const QuestionPage: React.FC = () => {
                 <button onClick={() => setEditModalIsOpen(true)}>Edit</button>
                 <button onClick={() => setChangeSubcategoryModalIsOpen(true)}>Change subcategory or category</button>
             </div>
-            <Modal isOpen={editModalIsOpen} contentLabel="Example Modal">
-                <EditQuestion
-                setModalIsOpen={setEditModalIsOpen}
-                question={question}
-                setQuestion={setQuestion}
+            <Modal 
+                isOpen={editModalIsOpen} 
+                contentLabel="Example Modal">
+                <QuestionEdit
+                    setModalIsOpen={setEditModalIsOpen}
+                    question={question}
+                    setQuestion={setQuestion}
                 />
             </Modal>
-            <Modal isOpen={changeSubcategoryModalIsOpen} contentLabel="Example Modal">
+            <Modal 
+                isOpen={changeSubcategoryModalIsOpen} 
+                contentLabel="Example Modal">
                 <ChangeCategorySubcategory
                     setModalIsOpen={setChangeSubcategoryModalIsOpen}
                     setSubcategoriesRelatedToQuestion={setSubcategories}
                     question={question}
-                    // setQuestion={setQuestion}
                     categoryId={categoryId}
                 />
             </Modal>

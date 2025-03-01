@@ -1,8 +1,7 @@
-import React from 'react'
 import styles from './QuestionEdit.module.css'
-import { useState, useEffect, useCallback, ChangeEvent } from 'react'
+import React,{ ChangeEvent } from 'react'
 import { Question } from '../../types/Question'
-import { fetchQuestion } from '../../api/QuestionAPI'
+import { useQuestionEdit } from './hooks/useQuestionEdit'
 
 interface QuestionEditProps {
     setModalIsOpen: (isOpen: boolean) => void;
@@ -13,99 +12,27 @@ interface QuestionEditProps {
 const QuestionEdit: React.FC<QuestionEditProps> = ({
     setModalIsOpen,
     question,
-    setQuestion
+    setQuestion,
 }) => {
-    const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "")
-    const [inputAnswerValue, setInputAnswerValue] = useState<string[]>(question?.answer || [''])
-    const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "")
-    const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false)
 
-    // タッチパッド誤操作のブラウザバックを防ぐ
-    const blockBrowserBack = useCallback(() => {
-        window.history.go(1)
-    }, [])
-    
-    useEffect(() => {
-        // 直前の履歴に現在のページを追加
-        window.history.pushState(null, '', window.location.href)
-    
-        // 直前の履歴と現在のページのループ
-        window.addEventListener('popstate', blockBrowserBack)
-    
-        // クリーンアップは忘れない
-        return () => {
-            window.removeEventListener('popstate', blockBrowserBack)
-        }
-    }, [blockBrowserBack])
-
-    const handleProblemChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setInputProblemValue(event.target.value);
-    };
-
-    // const handleAnswerChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
-    const handleAnswerChange = (index: number, value: string) => {
-        const updatedAnswers = [...inputAnswerValue];
-        updatedAnswers[index] = value;
-        setInputAnswerValue(updatedAnswers);
-    }
-
-    const handleIsCorrectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setIsCorrect(event.target.value === 'true');
-    }
-
-    const addAnswerInput = () => {
-        setInputAnswerValue([...inputAnswerValue, '']);
-    }
-
-    const removeAnswerInput = (indexToRemove: number) => {
-        setInputAnswerValue(inputAnswerValue.filter((_, index) => index !== indexToRemove));
-    }
-
-    const handleCloseModal = () => {
-        let confirmation = prompt("本当にCloseしますか？　「Y」と入力");
-        if (confirmation !== 'Y') {
-            return;
-        }
-        setModalIsOpen(false);
-    }
-
-    const updateQuestion = async () => {
-        const updatedQuestion = {
-            problem: inputProblemValue,
-            answer: inputAnswerValue,
-            memo: inputMemoValue,
-            is_correct: isCorrect
-        };
-
-        try {
-            const response = await fetch(`http://localhost:8000/questions/${question?.id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(updatedQuestion),
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to update the question.');
-            }
-            
-            const data = await fetchQuestion(question!.id);
-            setQuestion(data);
-            alert('質問が更新されました！');
-            setModalIsOpen(false);
-        } catch (error) {
-            console.error(error);
-            alert('質問の更新に失敗しました。');
-        }
-    };
-
-    useEffect(() => {
-        setInputProblemValue(question?.problem || "");
-        setInputAnswerValue(question?.answer || ['']);
-        setInputMemoValue(question?.memo || "");
-        setIsCorrect(question?.is_correct ?? false);
-    }, [question]);
+    const { 
+        inputProblemValue,
+        inputAnswerValue,
+        isCorrect,
+        inputMemoValue,
+        setInputMemoValue,
+        updateQuestion,
+        addAnswerInput,
+        removeAnswerInput,
+        handleProblemChange,
+        handleIsCorrectChange,
+        handleCloseModal,
+        handleAnswerChange
+    } = useQuestionEdit(
+        question, 
+        setQuestion, 
+        setModalIsOpen
+    )
 
     return (   
         <div className={styles.container}>
