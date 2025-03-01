@@ -276,7 +276,7 @@
                                 "15"
                             ],
                             "memo": "",
-                            "is_correct": true
+                            "is_correct": false
                         },
                         {
                             "problem": "aurora serverlessはどのような特徴があるか",
@@ -335,6 +335,14 @@
                             "problem": "スケジュールドリザーブドインスタンスは廃止になりました。その代用としてどのようなサービスで同じ要件を満たすか。",
                             "answer": [
                                 "オンデマンドインスタンスのキャパシティー予約"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ストレージに特化したインスタンスタイプは？",
+                            "answer": [
+                                "l3enインスタンスタイプ"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -704,6 +712,14 @@
                             "problem": "RDSのread replicasにデータの書き込みは可能か。不可能か。",
                             "answer": [
                                 "不可能。データの書き込みはプライマリデータベースに行う必要がある。readという文字通り。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "RDSではリードレプリカを最大5個まで作成できるが、Auroraではリードレプリカを何個作成できるか",
+                            "answer": [
+                                "15"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -3125,6 +3141,14 @@
                             "problem": "私は英語が堪能です。 fluentを使用する。",
                             "answer": [
                                 "I am fluent in English"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "He flushed the toilet.",
+                            "answer": [
+                                "トイレを流した"
                             ],
                             "memo": "",
                             "is_correct": false
