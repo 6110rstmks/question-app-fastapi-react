@@ -234,7 +234,7 @@
                             "answer": [
                                 "public subnet"
                             ],
-                            "memo": "aaa",
+                            "memo": "",
                             "is_correct": true
                         },
                         {
@@ -4054,6 +4054,46 @@
                                 "低い。"
                             ],
                             "memo": "https://juken-geography.com/systematic/temperature/",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "気温の較差とは",
+                            "answer": [
+                                "最大と最小の差のこと"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "準平原で見られる地形にはどのようなものがある？",
+                            "answer": [
+                                "モナドック"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "cuestaの代表例",
+                            "answer": [
+                                "パリ盆地"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "硬い地層と柔らかい地層が交互に堆積したものが、傾斜して侵食されてできる地形をなんという？",
+                            "answer": [
+                                "cuesta　ケスタ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "パリ盆地のケスタでは、急斜面を利用して（A）栽培がされています。",
+                            "answer": [
+                                "ぶどう"
+                            ],
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
