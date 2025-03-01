@@ -4001,6 +4001,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "気温の低減率とは",
+                            "answer": [
+                                "標高が上がるにつれて気温が低くなる割合のことを言います。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "標高が高く、気温が同じ緯度に比べてもかなり低いという地域の気候のことを何という？",
+                            "answer": [
+                                "高山気候"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
