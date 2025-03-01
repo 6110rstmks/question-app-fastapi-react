@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreate';
 import styles from "./SubcategoryPage.module.css";
@@ -8,8 +8,6 @@ import { handleNavigateToCategoryPage, handleNavigateToQuestionPage } from '../.
 
 const SubcategoryPage: React.FC = () => {
     const navigate = useNavigate();
-
-    // ダブルクリックでサブカテゴリ名の編集モードに切り替える
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
     const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>();
@@ -57,8 +55,12 @@ const SubcategoryPage: React.FC = () => {
                 )}                
                 <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>
-            <button>このサブカテゴリから問題を出題する。</button>
-            <button className={styles.create_question_btn} onClick={() => setModalIsOpen(true)}>Create Question</button>
+            <button className={styles.create_question_btn}>このサブカテゴリから問題を出題する。</button>
+            <button 
+                className={styles.create_question_btn}
+                onClick={() => setModalIsOpen(true)}>
+                    Create Question
+            </button>
             <Modal
                 isOpen={modalIsOpen}
                 contentLabel="Example Modal"

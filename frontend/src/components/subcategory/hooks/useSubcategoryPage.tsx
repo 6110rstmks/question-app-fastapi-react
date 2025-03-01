@@ -3,7 +3,6 @@ import { fetchSubcategory } from '../../../api/SubcategoryAPI'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
-import { Category } from '../../../types/Category'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
 
 interface locationState {
@@ -11,6 +10,12 @@ interface locationState {
     categoryName: string;
     subcategoryId: number;
     subcategoryName: string;
+}
+
+interface categoryInfo {
+    id: number;
+    name: string;
+    userId: number;
 }
 
 export const useSubcategoryPage = (
@@ -25,7 +30,6 @@ export const useSubcategoryPage = (
     // useEffectの初回実行を防ぐ。
     const isFirstRender = useRef(true);
 
-
     // サブカテゴリ名の編集モードの状態を管理
     const [isEditing, setIsEditing] = useState<boolean>(false);
     // 回答の表示非表示ボタンの状態を管理
@@ -33,9 +37,9 @@ export const useSubcategoryPage = (
 
     // リロードした際はここから取得する
 
-    const [categoryInfo, setCategoryInfo] = useState(() => {
+    const [categoryInfo, setCategoryInfo] = useState<categoryInfo>(() => {
         const saved = localStorage.getItem('categoryInfo');
-        return saved ? JSON.parse(saved) : {};
+        return saved ? JSON.parse(saved) : { id: 0, name: '', userId: 0 };
     })
 
     // エンターキーで編集モードを終了し、サブカテゴリ名を更新

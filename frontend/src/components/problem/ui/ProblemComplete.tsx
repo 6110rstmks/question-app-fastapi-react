@@ -6,7 +6,7 @@ interface Props {
     onReview: () => void;
 }
 
-const ProblemComplete: React.FC<Props> = ({ unsolvedCount, onReview }) => {
+export const ProblemComplete: React.FC<Props> = ({ unsolvedCount, onReview }) => {
     return (
         <div>
             <h1>Complete!</h1>
@@ -21,4 +21,3 @@ const ProblemComplete: React.FC<Props> = ({ unsolvedCount, onReview }) => {
     );
 };
 
-export default ProblemComplete;

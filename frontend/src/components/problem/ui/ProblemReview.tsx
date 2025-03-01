@@ -17,7 +17,7 @@ interface Props {
     onUnsolved: () => void;
 }
 
-const ReviewProblem: React.FC<Props> = ({ problem, currentReviewProblemIndex2, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
+export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIndex2, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
     const [category, setCategory] = useState<Category | null>(null);
     const [subcategory, setSubcategory] = useState<Subcategory | null>(null);
     const [localProblem, setLocalProblem] = useState<Question>(problem); // ローカル状態を追加
@@ -74,4 +74,3 @@ const ReviewProblem: React.FC<Props> = ({ problem, currentReviewProblemIndex2, p
     );
 };
 
-export default ReviewProblem;

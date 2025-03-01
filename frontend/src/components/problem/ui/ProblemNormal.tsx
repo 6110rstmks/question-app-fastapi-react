@@ -4,8 +4,8 @@ import { Category } from "../../../types/Category";
 import { Subcategory } from "../../../types/Subcategory";
 import { fetchCategoryByQuestionId } from "../../../api/CategoryAPI";
 import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI";
-import styles from './ProblemNormal.module.css'
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
+import styles from './ProblemNormal.module.css'
 
 interface Props {
     problem: Question
@@ -17,7 +17,15 @@ interface Props {
     onUnsolved: () => void
 }
 
-const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
+export const ProblemNormal: React.FC<Props> = ({
+    problem,
+    currentProblemIndex,
+    problemLength,
+    showAnswer,
+    onShowAnswer,
+    onSolved,
+    onUnsolved
+}) => {
     const [category, setCategory] = useState<Category | null>(null)
     const [subcategories, setSubcategories] = useState<Subcategory[]>([])
     const [localProblem, setLocalProblem] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
@@ -84,4 +92,3 @@ const ProblemNormal: React.FC<Props> = ({ problem, currentProblemIndex, problemL
     );
 };
 
-export default ProblemNormal;

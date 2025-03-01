@@ -1,10 +1,10 @@
 import React from "react"
 import { useLocation } from "react-router-dom"
 import { Question } from "../../types/Question"
-import useProblemPage from "./hooks/useProblemPage"
-import ProblemNormal from "./ui/ProblemNormal"
-import ProblemReview from "./ui/ProblemReview"
-import ProblemComplete from "./ui/ProblemComplete"
+import { useProblemPage } from "./hooks/useProblemPage"
+import { ProblemNormal } from "./ui/ProblemNormal"
+import { ProblemReview } from "./ui/ProblemReview"
+import { ProblemComplete } from "./ui/ProblemComplete"
 
 const ProblemPage: React.FC = () => {
     const location = useLocation()

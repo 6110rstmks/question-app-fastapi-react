@@ -5,7 +5,7 @@ import { SubcategoryWithQuestionCount } from '../../types/Subcategory';
 import { useCategoryPage } from "./hooks/useCategoryPage";
 import { handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
 
-const CategoryPage = () => {
+const CategoryPage: React.FC = () => {
     const { categoryId: categoryIdStr } = useParams<{ categoryId: string }>();   
     const categoryId = Number(categoryIdStr)
     const { 

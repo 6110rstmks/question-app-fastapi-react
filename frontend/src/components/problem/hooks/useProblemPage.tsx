@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Question } from "../../../types/Question";
 import { incrementAnswerCount } from "../../../api/QuestionAPI";
 
-const useProblemPage = (problemData: Question[]) => {
+export const useProblemPage = (problemData: Question[]) => {
     const [currentProblemIndex, setCurrentProblemIndex] = useState(0);
     const [reviewFlg, setReviewFlg] = useState(false);
     const [showAnswer, setShowAnswer] = useState(false);
@@ -91,5 +91,3 @@ const useProblemPage = (problemData: Question[]) => {
         handleNavigateToProblemReviewPage,
     };
 };
-
-export default useProblemPage;
