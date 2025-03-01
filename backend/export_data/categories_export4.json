@@ -190,6 +190,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "SNS トピックのメッセージ配信先サブスクリプションとして、SQS キューを指定することは可能か？",
+                            "answer": [
+                                "可能"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
