@@ -514,7 +514,7 @@
                                 "glacier instant retrieval"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Glacier ではデータをアップロードすると、そのデータをアーカイブ化して圧縮します。その上で、（A)というスペースにデータを保存します。（A)に入る単語は？",
@@ -1152,7 +1152,7 @@
                                 "リージョンの中にAZがある。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "シングルAZについて説明してください。",
@@ -1184,7 +1184,7 @@
                                 "Amazon Shield"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "HTTPSの終端を扱うAWSのサービスは二つある。それらを答えよ。また、そもそもHTTPSの終端とはなにか？",
@@ -1503,7 +1503,7 @@
                                 "becquerel"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1771,7 +1771,7 @@
                                 "直接せつぞくされていない二つのネットワーク間について、中間のネットワークを経由して通信すること"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "BGPとは一言でいうと",
@@ -2432,7 +2432,7 @@
                                 "整理、予約"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "proterisis",
@@ -3033,7 +3033,7 @@
                                 "ロバート・レッドフォード主演の映画を見た\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "he looks like a con man.",
@@ -3215,6 +3215,22 @@
                             "problem": "He flushed the toilet.",
                             "answer": [
                                 "トイレを流した"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The meeting has been tentatively scheduled for next Tuesday.",
+                            "answer": [
+                                "会議は一時的に来週の火曜日に予定されている。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "They hope d to conjure up the spirit of their dead friend",
+                            "answer": [
+                                "彼らは死んだ友人の魂を呼び起こすことを望んでいた。"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4006,7 +4022,7 @@
                                 "季節風"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "熱帯低気圧が接近すると、気圧が低下するため、海面が吸い上げられて何という現象が起きる？",
@@ -4048,7 +4064,7 @@
                                 "赤色"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "気温の分布で大事なことは3つ。",
@@ -4179,6 +4195,30 @@
                             "problem": "フィリピンがキリスト教を信仰している理由は？",
                             "answer": [
                                 "16世紀にスペインの植民地になったため。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "メサと同じ原理でできた地形で、メサよりも小規模な地形を何という？",
+                            "answer": [
+                                "ビュート"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "cuestaはどこでよく見られる？",
+                            "answer": [
+                                "構造平野"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "寒流では、暖流の逆で、水蒸気が発生せず降水量が（A）ということを覚えておく。",
+                            "answer": [
+                                "少ない"
                             ],
                             "memo": "",
                             "is_correct": false
