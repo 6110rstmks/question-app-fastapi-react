@@ -22,21 +22,19 @@ const SubcategoryPage: React.FC = () => {
         setShowAnswer,
         isEditing,
         setIsEditing,
-        handleKeyPress
+        handleKeyPress,
+        handleSetProblem
     } = useSubcategoryPage(subcategoryId)
 
     return (
         <div className={styles.subcategory_page}>
-            <button 
-                className={`${styles.toggleButton} ${showAnswer ? styles.on : styles.off}`} 
-                onClick={() => setShowAnswer((prev) => !prev)}
-            >
-                {showAnswer ? "答えを一括非表示" : "答えを一括表示"}
-            </button>
-            <div 
-                className={styles.subcategory_box}
-            >
-                <span onClick={() => handleNavigateToCategoryPage(navigate, categoryInfo)}>{categoryInfo.name}＞</span>
+
+            <div className={styles.subcategory_box}>
+                <div 
+                    onClick={() => handleNavigateToCategoryPage(navigate, categoryInfo)}
+                >
+                    {categoryInfo.name}＞
+                </div>
                 {isEditing ? (
                     <input
                         type="text"
@@ -47,19 +45,29 @@ const SubcategoryPage: React.FC = () => {
                         autoFocus
                     />
                 ) : (
-                    <h1 >
-                        <span
-                            onDoubleClick={() => setIsEditing(true)}
-                        >{subcategoryName}</span>
-                    </h1>
+                    <h1 onDoubleClick={() => setIsEditing(true)}>{subcategoryName}</h1>
                 )}                
                 <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>
-            <button className={styles.create_question_btn}>このサブカテゴリから問題を出題する。</button>
+            <button 
+                className={`${styles.create_question_btn} ${showAnswer ? styles.on : styles.off}`} 
+                onClick={() => setShowAnswer((prev) => !prev)}
+            >
+                {showAnswer ? "答えを一括非表示" : "答えを一括表示"}
+            </button>
+            <button 
+                className={styles.display_incorrected_question_btn}
+                onClick={handleSetProblem}>
+                このサブカテゴリから問題を出題する。
+            </button>
             <button 
                 className={styles.create_question_btn}
                 onClick={() => setModalIsOpen(true)}>
                     Create Question
+            </button>
+            <button 
+                className={styles.display_incorrected_question_btn}
+                >未正解の問題に絞って表示する
             </button>
             <Modal
                 isOpen={modalIsOpen}
@@ -104,10 +112,7 @@ const SubcategoryPage: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <button 
-                className={styles.display_incorrected_question_btn}
-                >未正解の問題に絞って表示する
-            </button>
+
         </div>
     );
 };

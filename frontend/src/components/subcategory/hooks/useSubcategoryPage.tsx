@@ -5,7 +5,7 @@ import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
 import { handleKeyDown } from '../../../utils/function';
-
+import { setProblem } from '../../../api/ProblemAPI';
 interface locationState {
     categoryId: number;
     categoryName: string;
@@ -50,6 +50,13 @@ export const useSubcategoryPage = (
             await updateSubcategoryName(subcategoryId, subcategoryName);
         }
     };
+
+    const handleSetProblem = async () => {
+        const response = await setProblem('category', true, 7, [categoryInfo.id]);
+        const problemData = await response.json();
+        console.log(problemData)
+        navigate('/problem', { state: problemData });
+    }
 
     //「削除」と入力してクリックすることで削除が実行される。
     const handleDeleteSubcategory = async () => {
@@ -127,7 +134,8 @@ export const useSubcategoryPage = (
         setShowAnswer,
         isEditing,
         setIsEditing,
-        handleKeyPress
+        handleKeyPress,
+        handleSetProblem
     };
 }
 
