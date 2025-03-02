@@ -4254,6 +4254,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "西ヨーロッパの国って高緯度にあるのにそこまで寒くない。それはなぜか",
+                            "answer": [
+                                "暖流がふくため"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ベンゲラ海流（寒流）の海岸にある砂漠は（海岸砂漠は）？",
+                            "answer": [
+                                "ナミブ砂漠"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "高気圧と低気圧があったときに風はどちらからどちらにふく？",
+                            "answer": [
+                                "高気圧から低気圧"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
