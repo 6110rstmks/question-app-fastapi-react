@@ -3937,6 +3937,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "2つの電荷にはたらく クーロン力F は、 距離の2乗に（A） し、 電気量の積に（B) するのですね。",
+                            "answer": [
+                                "A = 反比例\nB = 比例"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
