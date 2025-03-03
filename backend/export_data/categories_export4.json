@@ -4052,7 +4052,7 @@
                                 "タピオカ\nちなみにキャッサバは焼畑農業の代表的な作物"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "準平原はいつの時代の地層が隆起して長期間侵食されてできた地形か？",
@@ -4353,6 +4353,30 @@
                             "problem": "フランスでは食料自給率が（A）%を超える。",
                             "answer": [
                                 "100"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "地中海性気候はどのようなアルファベットで表す？",
+                            "answer": [
+                                "Cs"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "気候因子と気候要素の違いは？",
+                            "answer": [
+                                "気候因子は原因で気候要素は結果\nつまり因果\n\n緯度や高度、地形や海流などを気候因子という。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "特殊な名前が付けられている地域性の強いかぜのことを名のち雨？",
+                            "answer": [
+                                "局地風"
                             ],
                             "memo": "",
                             "is_correct": false
