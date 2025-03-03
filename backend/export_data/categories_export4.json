@@ -3234,6 +3234,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "I went to the party to mingle with some new people. ",
+                            "answer": [
+                                "私は新しい人と交流するためにそのパーティーに行きました。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -4275,6 +4283,14 @@
                             "problem": "高気圧と低気圧があったときに風はどちらからどちらにふく？",
                             "answer": [
                                 "高気圧から低気圧"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "赤道付近は太陽の光を直にあたるため、空気が温められて常に上昇気流が発生しています。",
+                            "answer": [
+                                ""
                             ],
                             "memo": "",
                             "is_correct": false
