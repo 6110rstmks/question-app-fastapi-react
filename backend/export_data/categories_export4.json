@@ -924,6 +924,14 @@
                             ],
                             "memo": "",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "S3 バケットで公開しているコンテンツを、CloudFront からのアクセスのみに制限するための機能を何という",
+                            "answer": [
+                                "Origin Access Identity (OAI)\nまたはOrigin Access Control (OAC)"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1817,13 +1825,21 @@
                                 "OSPF",
                                 "BGP"
                             ],
-                            "memo": "",
+                            "memo": "OSPFやBGPについてはふかぼらない。\nこれらはネトスペの範囲なので",
                             "is_correct": false
                         },
                         {
                             "problem": "ルーティングプロトコルであるRIPの最大ポップ数はいくつか。",
                             "answer": [
                                 "15\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "TCP/IPネットワークで用いられるプロトコルは、大きくわけて2つに分類できます。それらは？",
+                            "answer": [
+                                "IGP\nEGP"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -3486,7 +3502,7 @@
                                 "SRAM(SRAM is fast, DRAM is slow)　\nSRAM->cache memory DRAM->main memory (Memorize ram as fast instead of non-volatile"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "電源を着るとデータが消失するのはRAM？ROM？",
