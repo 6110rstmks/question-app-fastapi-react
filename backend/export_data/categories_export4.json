@@ -362,7 +362,7 @@
                                 "オンデマンドインスタンスのキャパシティー予約"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ストレージに特化したインスタンスタイプは？",
@@ -506,7 +506,7 @@
                                 "s3 intelligent-tiering\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "s3 glacier flexible retrievalとglacier instant retrievalのうち迅速にデータを取り出し可能なのはどちらか",
@@ -826,7 +826,7 @@
                         {
                             "problem": "インメモリデータベースとは？",
                             "answer": [
-                                "データの保存、処理をメモリ上で行うこと"
+                                "データの保存、処理をメモリ（主記憶装置）上で行うこと"
                             ],
                             "memo": "AWS RDSでは処理をメモリ、データはストレージに保存しているのに対して、\nelastic cacheではメモリで処理してデータもメモリに保存している。",
                             "is_correct": false
@@ -1377,7 +1377,7 @@
                                 "x/a + y/b = 1"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "(a, b)を中心とする円の(p, q)における接線の方程式",
@@ -2744,7 +2744,7 @@
                                 "コンテスト参加者、競技者"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "I hope you don’t take offense, but I think your idea needs some improvement.",
@@ -3153,7 +3153,7 @@
                                 "彼女は期末試験のために強く勉強した。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The enemy was routed by the army. ",
@@ -3904,6 +3904,22 @@
                             "problem": "力 x 距離",
                             "answer": [
                                 "work"
+                            ],
+                            "memo": "",
+                            "is_correct": true
+                        },
+                        {
+                            "problem": "振動数f(Hz)の逆数は？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "物体が電気を帯びることを何という？",
+                            "answer": [
+                                "帯電electrification"
                             ],
                             "memo": "",
                             "is_correct": false
