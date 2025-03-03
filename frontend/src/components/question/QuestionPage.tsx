@@ -3,7 +3,7 @@ import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
 import Modal from 'react-modal'
-import QuestionEdit from './QuestionEdit';
+import QuestionEditModal from './QuestionEditModal';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
 import { fetchQuestion, updateQuestionIsCorrect } from '../../api/QuestionAPI'
@@ -126,7 +126,7 @@ const QuestionPage: React.FC = () => {
             <Modal 
                 isOpen={editModalIsOpen} 
                 contentLabel="Example Modal">
-                <QuestionEdit
+                <QuestionEditModal
                     setModalIsOpen={setEditModalIsOpen}
                     question={question}
                     setQuestion={setQuestion}

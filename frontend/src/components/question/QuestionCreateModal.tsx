@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from 'react';
-import styles from "./QuestionCreate.module.css"
+import styles from "./QuestionCreateModal.module.css"
 import { Question } from '../../types/Question'
 import { useQuestionCreate } from './hooks/useQuestionCreate'
 interface QuestionCreateProps {
@@ -9,7 +9,7 @@ interface QuestionCreateProps {
     setQuestions: (questions: Question[]) => void;
 }
 
-const QuestionCreate: React.FC<QuestionCreateProps> = ({
+const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
     categoryId,
     subcategoryId,
     setModalIsOpen,
@@ -104,5 +104,5 @@ const QuestionCreate: React.FC<QuestionCreateProps> = ({
     );
 };
 
-export default QuestionCreate;
+export default QuestionCreateModal;
 

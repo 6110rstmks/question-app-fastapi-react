@@ -9,7 +9,7 @@ interface QuestionEditProps {
     setQuestion: (question: Question) => void;
 }
 
-const QuestionEdit: React.FC<QuestionEditProps> = ({
+const QuestionEditModal: React.FC<QuestionEditProps> = ({
     setModalIsOpen,
     question,
     setQuestion,
@@ -131,4 +131,4 @@ const QuestionEdit: React.FC<QuestionEditProps> = ({
     )
 }
 
-export default QuestionEdit
+export default QuestionEditModal

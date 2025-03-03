@@ -1,0 +1,68 @@
+/* カレンダー全体のスタイル */
+.calendar_container {
+    width: 320px;
+    margin: 40px auto;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* ヘッダー */
+  .calendar_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .calendar_title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* ナビゲーションボタン */
+  .nav_button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* 曜日 */
+  .calendar_weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  /* 日付のグリッド */
+  .calendar_grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+  
+  /* 日付セル */
+  .calendar_day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* 今月ではない日 */
+  .other_month {
+    color: #ccc;
+  }
+  
+  /* 今日の日付 */
+  .today {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  
