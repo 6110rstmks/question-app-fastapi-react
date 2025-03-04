@@ -1,14 +1,14 @@
 from typing import Annotated, Optional
-from fastapi import APIRouter, Path, Query, Depends, UploadFile
+from fastapi import APIRouter, Path, Query, Depends, UploadFile, HTTPException
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud as category_cruds
 from schemas.category import CategoryResponse, CategoryCreate, CategoryResponseWithQuestionCount
-from schemas import auth
+# from schemas import auth
 from database import get_db
 from fastapi import Query
 from config import PAGE_SIZE
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import FileResponse
 import os
 from git import Repo
 from src import data_io
@@ -33,6 +33,21 @@ async def find_all(
     answerWord: str = None
 ):
     return category_cruds.find_all(db, skip=skip, limit=limit, category_word=categoryWord, subcategory_word=subcategoryWord, question_word=questionWord, answer_word=answerWord)
+
+@router.get("/search", response_model=Optional[list[CategoryResponse]], status_code=status.HTTP_200_OK)
+async def find_category_by_name(
+    db: DbDependency,
+    categoryWord: str = None,
+):
+    return category_cruds.find_category_by_name(db, category_word=categoryWord)
+
+# question_idからQuestionに紐づくCategoryを取得するエンドポイント
+@router.get("/question_id/{question_id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
+async def find_category_by_question_id(db: DbDependency, question_id: int = Path(gt=0)):
+    found_category = category_cruds.find_category_by_question_id(db, question_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    return found_category
 
 # page_countのルーティング
 @router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)

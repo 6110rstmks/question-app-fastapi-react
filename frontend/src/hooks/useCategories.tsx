@@ -1,4 +1,3 @@
-// hooks/useCategories.ts
 import { useEffect, useState } from "react";
 import { Category } from "../types/Category";
 import { fetchCategories, fetchPageCount } from "../api/CategoryAPI";
@@ -19,7 +18,7 @@ export const useCategories = (
     // アプリの初期状態の場合はカテゴリがまだ作成されていないためpageCount,questionCountはnull
     const [pageCount, setPageCount] = useState<number | null>(null)
     const [questionCount, setQuestionCount] = useState<number | null>(null)
-    const [uncorrectedquestionCount, setUncorrectedquestionCount] = useState<number | null>(null)
+    const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null)
     
     const navigate = useNavigate()
 
@@ -37,7 +36,7 @@ export const useCategories = (
             setQuestionCount(questionCnt)
 
             const uncorrectedQuestionCnt = await fetchUncorrectedQuestionCount()
-            setUncorrectedquestionCount(uncorrectedQuestionCnt)
+            setUncorrectedQuestionCount(uncorrectedQuestionCnt)
 
         };
         loadPageCount();
@@ -60,5 +59,5 @@ export const useCategories = (
         loadCategories();
     }, [page, limit, searchCategoryWord, searchSubcategoryWord, searchQuestionWord, searchAnswerWord]);
 
-    return { categories, pageCount, questionCount, uncorrectedquestionCount }
+    return { categories, pageCount, questionCount, uncorrectedQuestionCount }
 };

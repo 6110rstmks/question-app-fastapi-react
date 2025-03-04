@@ -68,9 +68,16 @@ def find_category_by_id(db: Session, id: int):
     query = select(Category).where(Category.id == id)
     return db.execute(query).scalars().first()
 
-def find_category_by_name(db: Session, name: str):
-    query = select(Category).where(Category.name.like(f"%{name}%"))
+def find_category_by_name(db: Session, searchWord: str):
+    query = select(Category).where(Category.name.like(f"%{searchWord}%"))
     return db.execute(query).scalars().all()
+
+# これはどう考えても、category_crudに書くべきだと思う
+def find_category_by_question_id(db: Session, question_id: int):
+    query = select(CategoryQuestion).where(CategoryQuestion.question_id == question_id)
+    categoryquestion = db.execute(query).scalars().first()
+    query2 = select(Category).where(Category.id == categoryquestion.category_id) 
+    return db.execute(query2).scalars().first()
 
 # def create(db: Session, category_create: category.CategoryCreate, user_id: int):
 def create(db: Session, category_create: CategoryCreate):

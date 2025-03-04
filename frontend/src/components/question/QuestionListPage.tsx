@@ -16,9 +16,9 @@ const QuestionListPage = () => {
             <div className={styles.search_section}>
                 <div className={styles.search_container}>
                     <input
-                    type="text"
-                    className={styles.search_box}
-                    onChange={handleSearch}
+                        type="text"
+                        className={styles.search_box}
+                        onChange={handleSearch}
                     />
                 </div>
                 <button onClick={() => handleSearchClick()}>検索する</button>

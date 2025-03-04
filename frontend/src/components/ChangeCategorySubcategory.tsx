@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
+import { Category } from '../types/Category'
 import { Question } from '../types/Question'
 import { Subcategory } from '../types/Subcategory'
 import { SubcategoryWithQuestionCount } from '../types/Subcategory'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
+import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
 import { fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 import styles from './ChangeCategorySubcategoryModal.module.css'
+
+
 interface ChangeCategorySubcategoryProps {
     setModalIsOpen: (isOpen: boolean) => void;
     setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithQuestionCount[]) => void;
@@ -26,6 +30,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
 }) => {
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [selectedSubcategoryIds, setSelectedSubcategoryIds] = useState<number[]>([]);
+    const [ searchWord, setSearchWord ] = useState<string>("");
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value, checked } = event.target;
@@ -37,7 +42,16 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                 : prev.filter((id) => id !== subcategoryId) // チェックが外れた場合、IDを削除
         );
     };
-    
+
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchWord(e.target.value);
+    }
+
+    const handleSearchClick = async () => {
+        if (searchWord.trim() === "") return;
+        const categories_data: Category[] = await fetchCategoriesBySearchWord(searchWord)
+    }
+
     useEffect(() => {
         (async () => {
             const subcategories_data: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId);

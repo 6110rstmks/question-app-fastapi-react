@@ -1,13 +1,10 @@
 from typing import Annotated
-from fastapi import APIRouter, Path, Query, HTTPException, Depends, FastAPI, Request
+from fastapi import APIRouter, Path, HTTPException, Depends, FastAPI
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud, question_crud
 from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate, QuestionBelongsToSubcategoryIdUpdate
 from schemas.category import CategoryResponse
-from schemas.subcategory import SubcategoryResponse
-from schemas.subcategory_question import SubcategoryQuestionResponse
-# from schema.auth import DecodedToken
 from database import get_db
 from cruds import subcategory_crud as subcategory_cruds
 
@@ -100,13 +97,7 @@ async def find_question_by_id(db: DbDependency, id: int = Path(gt=0)):
         raise HTTPException(status_code=404, detail="Question not found")
     return found_question
 
-# question_idからQuestionに紐づくCategoryを取得するエンドポイント
-@router.get("/get_category/{question_id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
-async def find_category_by_question_id(db: DbDependency, question_id: int = Path(gt=0)):
-    found_category = question_crud.find_category_by_question_id(db, question_id)
-    if not found_category:
-        raise HTTPException(status_code=404, detail="Category not found")
-    return found_category
+
 
 # Category IDに紐づくQuestionsを取得するエンドポイント
 @router.get("/category_id/{category_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)

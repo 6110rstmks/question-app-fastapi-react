@@ -29,6 +29,7 @@ async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCr
 async def find_all(db: DbDependency):
     return subcategory_crud.find_subcategories_in_categorybox(db)
 
+# question_idからQuestionに紐づくSubcategoryを取得するエンドポイント
 @router.get("/question_id/{question_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_subcategories_by_question_id(
     db: DbDependency,

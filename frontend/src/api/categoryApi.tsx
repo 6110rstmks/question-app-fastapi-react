@@ -8,9 +8,19 @@ export const fetchCategories = async (skip: number, limit: number, searchCategor
     }
 };
 
+// ChangeCategorySubcategoryModalで使用するAPI
+export const fetchCategoriesBySearchWord = async (searchWord: string) => {
+    const url = `http://localhost:8000/categories/search?searchWord=${searchWord}`
+    const response = await fetch(url)
+    if (response.ok) {
+        return await response.json()
+    }
+}
+
 // Questionに紐づくCategoryを取得するAPI
+// 問題出題画面にて使用する。
 export const fetchCategoryByQuestionId = async (question_id: number) => {
-    const response = await fetch(`http://localhost:8000/questions/get_category/${question_id}`, {
+    const response = await fetch(`http://localhost:8000/categories/question_id/${question_id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -59,3 +69,4 @@ export const createCategory = async (categoryName: string) => {
 
     return response
 }
+

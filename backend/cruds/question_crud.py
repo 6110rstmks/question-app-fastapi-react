@@ -35,12 +35,6 @@ def find_question_by_id(db: Session, id: int):
     query = select(Question).where(Question.id == id)
     return db.execute(query).scalars().first()
 
-# これはどう考えても、category_crudに書くべきだと思う
-def find_category_by_question_id(db: Session, question_id: int):
-    query = select(CategoryQuestion).where(CategoryQuestion.question_id == question_id)
-    categoryquestion = db.execute(query).scalars().first()
-    query2 = select(Category).where(Category.id == categoryquestion.category_id) 
-    return db.execute(query2).scalars().first()
 
 # これはどう考えても、category_crudに書くべきだと思う
 def find_subcategory_by_question_id(db: Session, question_id: int):

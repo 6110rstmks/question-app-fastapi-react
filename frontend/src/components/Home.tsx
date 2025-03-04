@@ -17,7 +17,7 @@ export const Home: React.FC = () => {
         categories,
         pageCount,
         questionCount,
-        uncorrectedquestionCount
+        uncorrectedQuestionCount
     } = useCategories(
         page,
         limit,
@@ -32,7 +32,7 @@ export const Home: React.FC = () => {
             <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
             <Link to="/question_list">Question一覧検索ページ</Link>
             <h3>The total number of Questions：{questionCount}</h3>
-            <h3>不正解のQuestion数：{uncorrectedquestionCount}</h3>
+            <h3>不正解のQuestion数：{uncorrectedQuestionCount}</h3>
             <Pagination
                     currentPage={page}
                     totalPages={pageCount}
