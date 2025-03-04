@@ -30,7 +30,8 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
 }) => {
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [selectedSubcategoryIds, setSelectedSubcategoryIds] = useState<number[]>([]);
-    const [ searchWord, setSearchWord ] = useState<string>("");
+    const [searchWord, setSearchWord] = useState<string>("");
+    const [category, setCategory] = useState<Category>();
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value, checked } = event.target;
@@ -49,7 +50,9 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
 
     const handleSearchClick = async () => {
         if (searchWord.trim() === "") return;
-        const categories_data: Category[] = await fetchCategoriesBySearchWord(searchWord)
+        const categories_data: Category = await fetchCategoriesBySearchWord(searchWord)
+
+        setCategory(categories_data)
     }
 
     useEffect(() => {
@@ -104,11 +107,11 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                 {subcategories.map((subcategory) => (
                     <div key={subcategory.id}>
                         <input
-                        type="checkbox"
-                        name="subcategory"
-                        value={subcategory.id}
-                        checked={selectedSubcategoryIds.includes(subcategory.id)} // 初期チェック状態
-                        onChange={handleCheckboxChange}
+                            type="checkbox"
+                            name="subcategory"
+                            value={subcategory.id}
+                            checked={selectedSubcategoryIds.includes(subcategory.id)} // 初期チェック状態
+                            onChange={handleCheckboxChange}
                         />
                         {subcategory.name}
                     </div>
@@ -118,7 +121,14 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
 
             <div>
                 <label htmlFor="">カテゴリ名を検索する</label>
-                <input type="text" />
+                <input 
+                    type="text"
+                    onChange={handleSearch}
+                     />
+                <button onClick={handleSearchClick}>クリック</button>
+                <div>{category?.name}</div>
+                
+
             </div>
 
 

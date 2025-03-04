@@ -10,7 +10,7 @@ export const fetchCategories = async (skip: number, limit: number, searchCategor
 
 // ChangeCategorySubcategoryModalで使用するAPI
 export const fetchCategoriesBySearchWord = async (searchWord: string) => {
-    const url = `http://localhost:8000/categories/search?searchWord=${searchWord}`
+    const url = `http://localhost:8000/categories/search?search_word=${searchWord}`
     const response = await fetch(url)
     if (response.ok) {
         return await response.json()
