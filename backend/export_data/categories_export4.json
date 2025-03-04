@@ -1578,9 +1578,9 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "原口背唇部から（A）や（B）が分泌されて、これらがBMPに結合することで、BMPは受容体に結合できなくなる。",
+                            "problem": "原口背唇部から（A）や（B）が分泌されて、これらがBMPに結合することで、BMPは受容体に結合できなくなる。その結果原口背唇部に近い背側の外胚葉の細胞は表皮ではなく、（C）に分化する",
                             "answer": [
-                                "ノギン\nコーディン"
+                                "ノギン\nコーディン\n神経管"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1748,6 +1748,16 @@
                             "problem": "what is Telomere ",
                             "answer": [
                                 "a region of repetitive DNA sequences at the end of a chromosome"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "内外2枚の生体膜で囲まれた細胞小器官の例を3つあげよ",
+                            "answer": [
+                                "核",
+                                "葉緑体",
+                                "ミトコンドリア"
                             ],
                             "memo": "",
                             "is_correct": false
