@@ -1592,6 +1592,38 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "通常の体細胞分裂と比べて卵割に見られる特徴は？",
+                            "answer": [
+                                "同調分裂する"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "（A）が濃度勾配をを作り、動物極側（予定外胚葉側）に作用して中胚葉を誘導する",
+                            "answer": [
+                                "ノーダルタンパク質"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "中胚葉は（A）胚葉が（B）胚葉からの働きかけを受けることで生じる。",
+                            "answer": [
+                                "A = 外\nB = 内"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Spermの先体に含まれる細胞小器官organnelsのめいしょうは？",
+                            "answer": [
+                                "golgi body"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1619,6 +1651,15 @@
                             "problem": "苦味受容体を反応させる苦味物質の名称は？",
                             "answer": [
                                 "フェニルチオカルバミド"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "What organs destroy red blood cells?2",
+                            "answer": [
+                                "spleen",
+                                "liver"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1746,26 +1787,11 @@
                             ],
                             "memo": "",
                             "is_correct": true
-                        }
-                    ]
-                },
-                {
-                    "name": "細胞",
-                    "questions": [
-                        {
-                            "problem": "what is Telomere ",
-                            "answer": [
-                                "a region of repetitive DNA sequences at the end of a chromosome"
-                            ],
-                            "memo": "",
-                            "is_correct": false
                         },
                         {
-                            "problem": "内外2枚の生体膜で囲まれた細胞小器官の例を3つあげよ",
+                            "problem": "1塩基が欠失することにより、形質に影響が与えられるしくみを説明せよ",
                             "answer": [
-                                "核",
-                                "葉緑体",
-                                "ミトコンドリア"
+                                "欠失によりフレームシフトがおこり、アミノ酸配列が大きく変化するため（"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1808,6 +1834,37 @@
                             "problem": "空気を抜いた状態で光合成で発生するO2の由来を調べる実験は？結論：O2は水由来だと判明。",
                             "answer": [
                                 "ヒルの実験"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "cell biology",
+                    "questions": [
+                        {
+                            "problem": "what is Telomere ",
+                            "answer": [
+                                "a region of repetitive DNA sequences at the end of a chromosome"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "内外2枚の生体膜で囲まれた細胞小器官の例を3つあげよ",
+                            "answer": [
+                                "核",
+                                "葉緑体",
+                                "ミトコンドリア"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "生物の細胞間での情報伝達の仲介役は？",
+                            "answer": [
+                                "receptor"
                             ],
                             "memo": "",
                             "is_correct": false
