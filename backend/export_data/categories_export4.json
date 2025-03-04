@@ -251,7 +251,7 @@
                                 "VPC"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "プライベートサブネットの通信は、インターネットゲートウェイを通るか、通らないか",
@@ -2280,7 +2280,7 @@
                                 " 何が私達が年金をもらうのに適格としますか？"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "water authority",
@@ -3054,10 +3054,10 @@
                         {
                             "problem": "he looks like a con man.",
                             "answer": [
-                                "「彼は詐欺師のように見える。」\nconfidence manの略\n\n\n\n\n\n\n"
+                                "「彼は詐欺師のように見える。」\nconfidence manの略"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "I f you missed it o r need a refresher, be sure to read the first part of our series.",
