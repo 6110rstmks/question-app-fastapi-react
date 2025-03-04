@@ -1551,6 +1551,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "卵黄　＝　（A）を妨げる物質",
+                            "answer": [
+                                "卵割"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "カエルの前後軸の決定は　受精時に対して  ショウジョウバエの前後軸の決定は（A）である。",
+                            "answer": [
+                                "受精前"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1728,6 +1744,19 @@
                             "problem": "vasopressinの働きを答えよ",
                             "answer": [
                                 "腎臓の集合管での水分吸収を促進"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "metabolism 光合成",
+                    "questions": [
+                        {
+                            "problem": "各波長の光に対する光合成効率のグラフをなんという？",
+                            "answer": [
+                                "作用スペクトル"
                             ],
                             "memo": "",
                             "is_correct": false
