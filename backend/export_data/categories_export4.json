@@ -3907,6 +3907,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "重力に逆らって,外力が物体をもち上げる仕事をするとき,その仕事は重力による（A）になる",
+                            "answer": [
+                                "位置エネルギー"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -3942,6 +3950,14 @@
                             "problem": "2つの電荷にはたらく クーロン力F は、 距離の2乗に（A） し、 電気量の積に（B) するのですね。",
                             "answer": [
                                 "A = 反比例\nB = 比例"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "クーロンの法則の公式は何の公式に似ている？",
+                            "answer": [
+                                "万有引力"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4377,6 +4393,30 @@
                             "problem": "特殊な名前が付けられている地域性の強いかぜのことを名のち雨？",
                             "answer": [
                                 "局地風"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "He is an incorrigible liar.",
+                            "answer": [
+                                "彼は救い用のない嘘つきだ。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "だまされました。trickを使用する",
+                            "answer": [
+                                "I got tricked"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "You're running a marathon? give me a break",
+                            "answer": [
+                                "きみがまらそん？冗談だろw"
                             ],
                             "memo": "",
                             "is_correct": false
