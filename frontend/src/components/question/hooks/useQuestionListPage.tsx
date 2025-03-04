@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../types/Question';
-import { fetchQuestionsBySearchProblemWord } from '../api/QuestionAPI';
-import { fetchCategory } from '../api/CategoryAPI';
-import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI';
-import { fetchCategoryQuestionByQuestionId } from '../api/CategoryQuestionAPI';
+import { QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
+import { fetchQuestionsBySearchProblemWord } from '../../../api/QuestionAPI';
+import { fetchCategory } from '../../../api/CategoryAPI';
+import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI';
+import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI';
 
 
 export const useQuestionListPage = () => {

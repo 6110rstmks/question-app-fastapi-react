@@ -1,22 +1,38 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom';
-import { useNavigate } from "react-router-dom"
 import styles from './QuestionPage.module.css'
 import Modal from 'react-modal'
 import QuestionEditModal from './QuestionEditModal';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
-import { fetchQuestion, updateQuestionIsCorrect } from '../../api/QuestionAPI'
+
+interface QuestionPageNavigationParams {
+    categoryId: number,
+    subcategoryId: number,
+    categoryName: string,
+    subcategoryName: string
+}
 
 const QuestionPage: React.FC = () => {
     const location = useLocation()
-    const navigate = useNavigate()
-
     const { questionId: questionIdStr } = useParams<{ questionId: string }>();
     const questionId = Number(questionIdStr)
 
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
-    const [changeSubcategoryModalIsOpen, setChangeSubcategoryModalIsOpen] = useState<boolean>(false);
+    const [
+        changeSubcategoryModalIsOpen,
+        setChangeSubcategoryModalIsOpen
+    ] = useState<boolean>(false);
+
+    // location.stateがnullの場合にlocalStorageから取得
+    const state: QuestionPageNavigationParams = location.state || JSON.parse(localStorage.getItem('categorySubcategoryInfo') || '{}');
+
+    const { 
+        categoryId,
+        subcategoryId,
+        categoryName,
+        subcategoryName
+    } = state;
 
     const { 
         subcategories,
@@ -26,39 +42,22 @@ const QuestionPage: React.FC = () => {
         showAnswer,
         setShowAnswer,
         handleDeleteQuestion,
-        handleAnswerQuestion
+        handleAnswerQuestion,
+        handleUpdateIsCorrect,
+        handleNavigateToPreviousSubcategoryPage
     } = useQuestionPage(
+        categoryId,
+        subcategoryId,
         questionId,
-        // location.state
+        categoryName
     );
 
-    console.log('あおいう')
-    console.log(location.state)
-
-    // このsubcategoryIdは遷移元のsubcategoryIdに戻るためのもの。
-    const { categoryId, subcategoryId, categoryName, subcategoryName } = location.state;
-
-    const handleUpdateIsCorrect = async () => {
-        await updateQuestionIsCorrect(question!); // API コール
-        const data = await fetchQuestion(question!.id); // データをリフレッシュ
-        setQuestion(data)
-    }
-
-    // このQuestionPageに遷移した元のSubcategoryPageに戻る
-    const handleNavigateToPreviousSubcategoryPage = () => {
-        const category = { id: categoryId, name: categoryName };
-        navigate(`/subcategory/${subcategoryId}`, {
-            state: category
-        });
-    }
-
     // ページ遷移時にカテゴリ情報をローカルストレージに保存
-    // useEffect(() => {
-    //   if (location.state) {
-    //         const { categoryId, subcategoryId, categoryName, subcategoryName } = location.state;
-    //         localStorage.setItem('categorySubcategoryInfo', JSON.stringify(location.state));
-    //   }
-    // }, [location.state]);
+    useEffect(() => {
+      if (location.state) {
+            localStorage.setItem('categorySubcategoryInfo', JSON.stringify(location.state));
+      }
+    }, [location.state]);
 
   return (
       <>

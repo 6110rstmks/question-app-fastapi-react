@@ -5,7 +5,7 @@ import { SubcategoryWithQuestionCount } from '../types/Subcategory'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
-
+import styles from './ChangeCategorySubcategoryModal.module.css'
 interface ChangeCategorySubcategoryProps {
     setModalIsOpen: (isOpen: boolean) => void;
     setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithQuestionCount[]) => void;
@@ -84,7 +84,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
     }
 
     return (
-        <div>
+        <div className={styles.modalContainer}>
             <div>
                 {/* チェックボックスでサブカテゴリ一覧を表示する */}
                 {subcategories.map((subcategory) => (
@@ -99,11 +99,15 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                         {subcategory.name}
                     </div>
                 ))}
-    
+                <button onClick={handleChangeBelongingToSubcategory}>Change</button>
             </div>
-            <button 
-                onClick={handleChangeBelongingToSubcategory}
-            >Change</button>
+
+            <div>
+                <label htmlFor="">カテゴリ名を検索する</label>
+                <input type="text" />
+            </div>
+
+
         </div>
     )
 }

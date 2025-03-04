@@ -1,7 +1,7 @@
 import styles from './QuestionListPage.module.css'
-import { handleNavigateToQuestionPage } from "../utils/navigate_function"
+import { handleNavigateToQuestionPage } from "../../utils/navigate_function"
 import { useNavigate } from "react-router-dom"
-import { useQuestionListPage } from "../components/useQuestionListPage"
+import { useQuestionListPage } from "./hooks/useQuestionListPage"
 
 const QuestionListPage = () => {
     const navigate = useNavigate();

@@ -1,27 +1,23 @@
 import { useEffect, useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Question } from '../../../types/Question'
-import { fetchQuestion } from '../../../api/QuestionAPI'
 import { fetchSubcategoriesByQuestionId } from '../../../api/SubcategoryAPI'
 import { Subcategory } from '../../../types/Subcategory'
 import { deleteQuestion, incrementAnswerCount } from '../../../api/QuestionAPI'
 import { handleKeyDown } from '../../../utils/function'
+import { fetchQuestion, updateQuestionIsCorrect } from '../../../api/QuestionAPI'
 
 export const useQuestionPage = (
+    categoryId: number,
+    subcategoryId: number,
     questionId: number,
-    initialCategoryInfo?: { [key: string]: any }
+    categoryName: string
 ) => {
     const [question, setQuestion] = useState<Question>();
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
-
-    // const [categoryInfo, setCategoryInfo] = useState(() => {
-    //     const saved = localStorage.getItem('categoryInfo');
-    //     return saved ? JSON.parse(saved) : initialCategoryInfo || {};
-    // });
-
-    const navigate = useNavigate()
     
+    const navigate = useNavigate()
 
     const handleDeleteQuestion = async () => {
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
@@ -46,6 +42,20 @@ export const useQuestionPage = (
         });
 
         alert('回答数を更新しました');
+    }
+
+    const handleUpdateIsCorrect = async () => {
+        await updateQuestionIsCorrect(question!); // API コール
+        const data = await fetchQuestion(question!.id); // データをリフレッシュ
+        setQuestion(data)
+    }
+
+    // このQuestionPageに遷移した元のSubcategoryPageに戻る。
+    const handleNavigateToPreviousSubcategoryPage = () => {
+        const category = { id: categoryId, name: categoryName };
+        navigate(`/subcategory/${subcategoryId}`, {
+            state: category
+        });
     }
 
     // const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -99,7 +109,9 @@ export const useQuestionPage = (
         showAnswer,
         setShowAnswer,
         handleDeleteQuestion,
-        handleAnswerQuestion 
+        handleAnswerQuestion,
+        handleUpdateIsCorrect,
+        handleNavigateToPreviousSubcategoryPage
     };
 }
 
