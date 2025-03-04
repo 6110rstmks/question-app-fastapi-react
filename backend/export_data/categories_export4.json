@@ -1760,6 +1760,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "吸収スペクトルと作用スペクトルの横軸はともになにか？",
+                            "answer": [
+                                "光の波長(nm)"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "光合成で発生するO2の由来を調べる実験は？",
+                            "answer": [
+                                "ヒルの実験"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
