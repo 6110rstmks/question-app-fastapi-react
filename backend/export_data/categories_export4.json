@@ -1309,7 +1309,7 @@
                             "answer": [
                                 "二項定理"
                             ],
-                            "memo": "例をくれ",
+                            "memo": "https://examist.jp/mathematics/limit/nikouteiri-kyokugen/",
                             "is_correct": false
                         },
                         {
@@ -1640,7 +1640,7 @@
                                 "SNP"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "一塩基多型（SNP）について説明",
@@ -2797,7 +2797,7 @@
                         {
                             "problem": "\"the company has a proprietary right to the property”",
                             "answer": [
-                                "🔹 会社はその財産（資産）に対する所有権を持っている。\n"
+                                "会社はその財産（資産）に対する所有権を持っている。\n"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -3244,7 +3244,7 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "They hope d to conjure up the spirit of their dead friend",
+                            "problem": "They hoped to conjure up the spirit of their dead friend",
                             "answer": [
                                 "彼らは死んだ友人の魂を呼び起こすことを望んでいた。"
                             ],
@@ -4268,7 +4268,7 @@
                                 "低緯度から高緯度"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "暖流の例として、ヨーロッパの西側を北上する（A）が挙げられます。",
