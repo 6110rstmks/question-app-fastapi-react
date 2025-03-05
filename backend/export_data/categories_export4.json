@@ -3427,6 +3427,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "Please enumerate the items on the agenda for the meeting.",
+                            "answer": [
+                                "会議の議題の項目を列挙してください。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "She was hurt by the name-calling from her classmates.",
+                            "answer": [
+                                "彼女は同級生からの中傷で傷ついた。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "I need to fabricate a new costume for Halloween. ",
+                            "answer": [
+                                "ハロウィンのために新しい衣装を作り上げる必要がある。\n"
+                            ],
+                            "memo": "fabricateという単語は「作り出す」や「でっち上げる」を意味します。この言葉は主に物理的なものを作成する際や、真実でない情報を意図的に作り出す場合に使われます\nこの2つの意味は、文脈によって異なる印象を与えます",
+                            "is_correct": false
                         }
                     ]
                 }
