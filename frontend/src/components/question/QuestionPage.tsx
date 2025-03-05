@@ -137,6 +137,7 @@ const QuestionPage: React.FC = () => {
                 <ChangeCategorySubcategory
                     setModalIsOpen={setChangeSubcategoryModalIsOpen}
                     setSubcategoriesRelatedToQuestion={setSubcategories}
+                    categoryName={categoryName}
                     question={question}
                     categoryId={categoryId}
                 />

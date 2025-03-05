@@ -34,7 +34,7 @@ async def find_all(
 ):
     return category_cruds.find_all(db, skip=skip, limit=limit, category_word=categoryWord, subcategory_word=subcategoryWord, question_word=questionWord, answer_word=answerWord)
 
-@router.get("/search", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
+@router.get("/search", response_model=Optional[list[CategoryResponse]], status_code=status.HTTP_200_OK)
 async def find_category_by_name(
     db: DbDependency,
     search_word: str
