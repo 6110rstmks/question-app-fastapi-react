@@ -3451,6 +3451,14 @@
                             ],
                             "memo": "fabricateという単語は「作り出す」や「でっち上げる」を意味します。この言葉は主に物理的なものを作成する際や、真実でない情報を意図的に作り出す場合に使われます\nこの2つの意味は、文脈によって異なる印象を与えます",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "私の服に焼肉の匂いがつく。noun is the smell",
+                            "answer": [
+                                "the smell of grilled meat lingers on my clothes."
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
