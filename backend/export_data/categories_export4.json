@@ -3411,6 +3411,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "He wore a vest over his shirt.",
+                            "answer": [
+                                "彼はシャツの上にベストを着ていた。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The committee was vested with the authority to make final decisions on the project.",
+                            "answer": [
+                                "その委員会はプロジェクトに関する最終的な決定を下す権限を与えられた。\n(vest: 権限を与える)\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
