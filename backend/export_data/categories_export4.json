@@ -3475,6 +3475,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "The country's hegemony in the region was evident through its strong influence on neighboring nations.",
+                            "answer": [
+                                "その国の地域での覇権は、隣国に対する強い影響を通じて明らかでした。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "nothing is quite what you'd hope it would be",
+                            "answer": [
+                                "何もあなたが望んでいた通りにはならない。(期待通りのものは何もありません)"
+                            ],
+                            "memo": "\"quite\"（副詞）：「完全に」「まったく」\n\"what you'd hope it would be\"\n\"what\"（関係代名詞）：「～であるもの」\n\"you'd hope\" = \"you would hope\"（あなたが望む）\n\"it would be\"（それが～である）",
+                            "is_correct": false
                         }
                     ]
                 }
