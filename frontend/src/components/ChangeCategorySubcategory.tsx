@@ -4,7 +4,7 @@ import { Question } from '../types/Question'
 import { Subcategory, SubcategoryWithQuestionCount } from '../types/Subcategory'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
-import { fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
+import { fetchSubcategory, fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 import styles from './ChangeCategorySubcategoryModal.module.css'
 
@@ -33,7 +33,10 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
     const [searchWord, setSearchWord] = useState<string>("");
     const [categories, setCategories] = useState<Category[]>();
     const [searchFlg, setSearchFlg] = useState<boolean>(false);
-    const [mainCategory, setMainCategory] = useState<Category>();
+
+    // Questionが所属しているCategory
+    const [linkedCategory, setLinkedCategory] = useState<Category>();
+    const [linkedSubcategories, setLinkedSubcategories] = useState<Subcategory[]>()
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value, checked } = event.target;
@@ -54,23 +57,33 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
 
     // 検索結果で表示されたcategoryの一つをクリックした時の処理
     const handleCategoryNameClick = async (category: Category) => {
+        setSearchWord(category.name)
         const data = await fetchSubcategoriesByCategoryId(category.id);
         setSearchFlg(true);
-        setMainCategory(category);
+        setLinkedCategory(category);
         setSubcategories(data)
     }
 
 
     useEffect(() => {
         (async () => {
-            const subcategories_data: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId);
-            setSubcategories(subcategories_data)
+            const subcategoriesData: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId);
+            setSubcategories(subcategoriesData)
             const data2 = await fetchSubcategoriesQuestionsByQuestionId(question!.id)
             const transformedData: SubcategoryQuestion[] = data2.map(({ subcategory_id, question_id }: OriginalData) => ({
                 subcategoryId: subcategory_id,
                 questionId: question_id
             }));
-        
+
+            const linkedSubcategories = []
+
+            for (const subcategoryquestion of transformedData) {
+                console.log(`Subcategory ID: ${subcategoryquestion.subcategoryId}, Question ID: ${subcategoryquestion.questionId}`);
+            
+                const data3 = await fetchSubcategory(subcategoryquestion.subcategoryId);
+                linkedSubcategories.push(data3);
+            }
+            setLinkedSubcategories(linkedSubcategories)
             setSelectedSubcategoryIds(transformedData.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategoryId));
 
         })();
@@ -81,9 +94,13 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
             if (!searchWord.trim()) return; // 空の場合はfetchしない
             const categories_data: Category[] = await fetchCategoriesBySearchWord(searchWord)
 
-            // categoryNameをsearch結果に表示させないようにする。表示結果に表示されたらだぶっているため。
-            const filteredCategories = categories_data.filter(category => category.name !== categoryName);
-            setCategories(filteredCategories);
+            // 初回検索でcategoryNameが表示されている時、categoryNameをsearch結果に表示させないようにする。表示結果に表示されたらだぶっているため。
+            if (!searchFlg) {
+                const filteredCategories = categories_data.filter(category => category.name !== categoryName);
+                setCategories(filteredCategories);
+            } else {
+                setCategories(categories_data);
+            }
         }
         loadCategories();
     }, [searchWord]);
@@ -127,6 +144,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                 <input 
                     type="text"
                     onChange={handleSearch}
+                    value={searchWord}
                      />
                 {/* <button onClick={handleSearchClick}>クリック</button> */}
                 <div className={styles.category_display}>
@@ -139,11 +157,18 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                 </div>
 
                 <p>現在の所属カテゴリ、サブカテゴリ</p>
-                <div>{categoryName}<span>＞{}</span></div>
+
+                <div>{categoryName}
+                <span>＞
+                    {linkedSubcategories?.map((linkedSubcategory) => (
+                    <span key={linkedSubcategory.id}>{linkedSubcategory.name}</span>
+                    ))}
+                </span>
+                </div>
             </div>
             <div className={styles.subcategory_display}>
                 <div>                    
-                    {searchFlg ? mainCategory?.name : categoryName}
+                    {searchFlg ? linkedCategory?.name : categoryName}
                 </div>
                     {/* チェックボックスでサブカテゴリ一覧を表示する */}
                     <div className={styles.subcategory_list}>

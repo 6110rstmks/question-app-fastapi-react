@@ -7,7 +7,6 @@ from fastapi import HTTPException
 
 def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None, answer_word: str = None):
 
-    print(97297320)
     # カテゴリテーブルがそんざいするかどうかの確認。
     # テーブルの存在確認を行う理由はデフォルトでは。
     if not db.query(Category).first():
