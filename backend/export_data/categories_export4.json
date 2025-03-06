@@ -611,7 +611,7 @@
                                 "コンテナオーケストレーションサービスである。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -2785,7 +2785,7 @@
                                 "（作業員たちは新しい橋を建設するために、古い橋を解体した。）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "the time interval from the time of submission of a process to the time of the completion of the process",
@@ -2921,7 +2921,7 @@
                                 "電子透かし"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "She broke the company rules, and now she has to face the music.",
@@ -3490,6 +3490,14 @@
                                 "何もあなたが望んでいた通りにはならない。(期待通りのものは何もありません)"
                             ],
                             "memo": "\"quite\"（副詞）：「完全に」「まったく」\n\"what you'd hope it would be\"\n\"what\"（関係代名詞）：「～であるもの」\n\"you'd hope\" = \"you would hope\"（あなたが望む）\n\"it would be\"（それが～である）",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The savagery of the battlefield was unlike anything he had experienced before",
+                            "answer": [
+                                "戦場の野蛮さは彼がこれまで経験したことのないものであった。\n"
+                            ],
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
@@ -4136,7 +4144,7 @@
                         {
                             "problem": "振動数f(Hz)の逆数は？",
                             "answer": [
-                                ""
+                                "周期 T (秒) \n振動数が高いほど周期は短くなり、振動数が低いほど周期は長くなります。"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4318,7 +4326,7 @@
                                 "ラトソル"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "キャッサバは何の原料？",
