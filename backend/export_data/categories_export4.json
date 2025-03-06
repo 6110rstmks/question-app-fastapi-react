@@ -3459,6 +3459,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "彼はストレス発散のために走る。",
+                            "answer": [
+                                "He runs to relieve stress."
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "there is no antidote to this poison",
+                            "answer": [
+                                "この毒に解毒剤はない"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
