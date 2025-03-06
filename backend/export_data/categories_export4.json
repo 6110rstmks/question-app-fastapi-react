@@ -127,6 +127,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "ネットワークACLはステートレスですか？ステートフルですか？",
+                            "answer": [
+                                "ステートレス"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -173,15 +181,6 @@
                             ],
                             "memo": "",
                             "is_correct": true
-                        },
-                        {
-                            "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
-                            "answer": [
-                                "データの削除の観点では、SQSではキューからデータを取り出した際に、処理が完了したデータは削除するのに対して、kinesisの方では一度取り出したデータを削除せず一定期間保持します。",
-                                "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
-                            ],
-                            "memo": "ああ",
-                            "is_correct": false
                         },
                         {
                             "problem": "特定のAWSサービス(EC2, SNS)からのみSQSへのアクセスを許可してまたは特定のAWSサービスからのみSQSへのアクセスを禁止する（lambda）には何を設定する？",
@@ -2465,7 +2464,7 @@
                                 "atmospheric pressure"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "fray (noun)",
@@ -3496,6 +3495,14 @@
                             "problem": "The savagery of the battlefield was unlike anything he had experienced before",
                             "answer": [
                                 "戦場の野蛮さは彼がこれまで経験したことのないものであった。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The news of her sudden departure filled him with a sense of torture that he couldn't escape.",
+                            "answer": [
+                                "彼女の突然の逝去の知らせは、彼に逃れられない精神的な苦痛をもたらした。\n"
                             ],
                             "memo": "",
                             "is_correct": false
