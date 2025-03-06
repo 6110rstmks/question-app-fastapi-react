@@ -6,8 +6,7 @@ import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesByCategoryId } from '../../../api/SubcategoryAPI'
 import { setProblem } from '../../../api/ProblemAPI'
 
-export const useSetProblemPage = (
-) => {
+export const useSetProblemPage = () => {
     const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(false);
     const [subcategories, setSubcategories] = useState<Subcategory[]>([])
     const [selectedType, setSelectedType] = useState<string>('random')

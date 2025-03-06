@@ -3,7 +3,7 @@ import { useCategories } from "../hooks/useCategories"
 import { CategoryList } from "./category/CategoryList"
 import Pagination from "./Pagination"
 import { Link } from "react-router-dom"
-import styles from "./Home.module.css"
+import styles from "./HomePage.module.css"
 import Search from "./Search"
 
 export const Home: React.FC = () => {

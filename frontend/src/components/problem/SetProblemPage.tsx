@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './SetProblemPage.module.css';
 import { useSetProblemPage } from './hooks/useSetProblemPage';
 
-const SetProblem: React.FC = () => {
+const SetProblemPage: React.FC = () => {
     const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false)
 
     const {
@@ -137,4 +137,4 @@ const SetProblem: React.FC = () => {
     );
 }
 
-export default SetProblem
+export default SetProblemPage
