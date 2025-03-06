@@ -126,7 +126,7 @@
                                 "またがって、"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ネットワークACLはステートレスですか？ステートフルですか？",
@@ -1254,6 +1254,15 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "aws direct connectのメリットは？2つ",
+                            "answer": [
+                                "インターネット回線を使用せず、専用のプライベートなネットワークで接続するためセキュリティが高い",
+                                "専用線のため帯域幅が確保され、安定した通信速度で接続できます\n（インターネットが混み合っていても大丈夫）"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1961,6 +1970,22 @@
                             "problem": "RARPの機能は？",
                             "answer": [
                                 "MACアドレスからIPアドレスを求める"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "わかりそうでわからないのサイトでMPUは何と例えている？",
+                            "answer": [
+                                "通信世界における自動車の車高制限みたいなもの。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "MTU(Maximum Transmission Unit)とは",
+                            "answer": [
+                                "通信用に細切れにしたデータの大きさ制限で「これくらいの大きさの細切れデータなら通れるよ（送れるよ）」な最大値のこと"
                             ],
                             "memo": "",
                             "is_correct": false
