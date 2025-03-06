@@ -1,11 +1,11 @@
 import { useEffect, useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Category } from '../../../types/Category'
+import { Subcategory } from '../../../types/Subcategory'
 import { Question } from '../../../types/Question'
 import { fetchSubcategoriesByQuestionId } from '../../../api/SubcategoryAPI'
-import { Subcategory } from '../../../types/Subcategory'
-import { deleteQuestion, incrementAnswerCount } from '../../../api/QuestionAPI'
+import { deleteQuestion, incrementAnswerCount, fetchQuestion, updateQuestionIsCorrect } from '../../../api/QuestionAPI'
 import { handleKeyDown } from '../../../utils/function'
-import { fetchQuestion, updateQuestionIsCorrect } from '../../../api/QuestionAPI'
 
 export const useQuestionPage = (
     categoryId: number,
@@ -14,9 +14,10 @@ export const useQuestionPage = (
     categoryName: string
 ) => {
     const [question, setQuestion] = useState<Question>();
+    const [categories, setCategories] = useState<Category[]>();
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
-    
+
     const navigate = useNavigate()
 
     const handleDeleteQuestion = async () => {

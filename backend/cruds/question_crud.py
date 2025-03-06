@@ -7,11 +7,20 @@ from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 
 def find_all_questions(db: Session, search_problem_word: str = None):
+
+    print(777777)
     
-    print(search_problem_word)
-    
+    aaa = db.query(Question).filter(Question.problem.like(f"%{search_problem_word}%")).all()
+
+    print(777878)
+    for a in aaa:
+        print(a.problem)
+        print(a.id)
+
+        
     if search_problem_word:
         return db.query(Question).filter(Question.problem.like(f"%{search_problem_word}%")).all()
+
 
     return db.query(Question).all()
 

@@ -3,6 +3,25 @@
     
 }
 
+.subcategory_display {
+    background-color: green;
+}
+
 .category_display {
     background-color: #3081c8;
+}
+
+.category_individual {
+    background-color: #3081c8;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: dotted 1px #000;
+}
+
+.subcategory_list {
+    max-height: 700px; /* 任意の高さ */
+    overflow-y: auto; /* 縦スクロールを有効化 */
+    border: 1px solid #ccc; /* 視認しやすいように枠を追加 */
+    padding: 8px;
 }

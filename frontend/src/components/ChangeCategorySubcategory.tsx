@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Category } from '../types/Category'
 import { Question } from '../types/Question'
-import { Subcategory } from '../types/Subcategory'
-import { SubcategoryWithQuestionCount } from '../types/Subcategory'
+import { Subcategory, SubcategoryWithQuestionCount } from '../types/Subcategory'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
 import { fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
@@ -33,6 +32,8 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
     const [selectedSubcategoryIds, setSelectedSubcategoryIds] = useState<number[]>([]);
     const [searchWord, setSearchWord] = useState<string>("");
     const [categories, setCategories] = useState<Category[]>();
+    const [searchFlg, setSearchFlg] = useState<boolean>(false);
+    const [mainCategory, setMainCategory] = useState<Category>();
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value, checked } = event.target;
@@ -45,17 +46,18 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
         );
     };
 
+    // 検索ボックスでワードを入力している時の処理
     const handleSearch = async (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchWord(e.target.value);
     }
 
 
-
-    const handleCategoryNameClick = async (categoryId: number) => {
-        const data = await fetchSubcategoriesByCategoryId(categoryId);
-        console.log(data)
+    // 検索結果で表示されたcategoryの一つをクリックした時の処理
+    const handleCategoryNameClick = async (category: Category) => {
+        const data = await fetchSubcategoriesByCategoryId(category.id);
+        setSearchFlg(true);
+        setMainCategory(category);
         setSubcategories(data)
-
     }
 
 
@@ -78,6 +80,8 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
         const loadCategories = async () => {
             if (!searchWord.trim()) return; // 空の場合はfetchしない
             const categories_data: Category[] = await fetchCategoriesBySearchWord(searchWord)
+
+            // categoryNameをsearch結果に表示させないようにする。表示結果に表示されたらだぶっているため。
             const filteredCategories = categories_data.filter(category => category.name !== categoryName);
             setCategories(filteredCategories);
         }
@@ -90,6 +94,8 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
             alert('サブカテゴリを選択してください');
             return;
         }
+
+        console.log(selectedSubcategoryIds)
 
         const response = await fetch(`http://localhost:8000/questions/change_belongs_to_subcategoryId`, {
             method: 'PUT',
@@ -117,24 +123,6 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
     return (
         <div className={styles.modalContainer}>
             <div>
-                <div>{categoryName}</div>
-                {/* チェックボックスでサブカテゴリ一覧を表示する */}
-                {subcategories.map((subcategory) => (
-                    <div key={subcategory.id}>
-                        <input
-                            type="checkbox"
-                            name="subcategory"
-                            value={subcategory.id}
-                            checked={selectedSubcategoryIds.includes(subcategory.id)} // 初期チェック状態
-                            onChange={handleCheckboxChange}
-                        />
-                        {subcategory.name}
-                    </div>
-                ))}
-                <button onClick={handleChangeBelongingToSubcategory}>Change</button>
-            </div>
-
-            <div>
                 <label htmlFor="">カテゴリ名を検索する</label>
                 <input 
                     type="text"
@@ -142,20 +130,42 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                      />
                 {/* <button onClick={handleSearchClick}>クリック</button> */}
                 <div className={styles.category_display}>
-                    {/* {category?.name} */}
                     {categories?.map((category) => (
-                        <div key={category.id} onClick={() => handleCategoryNameClick(category.id)}>
-                            <div>{category.name}</div>
+                        <div key={category.id} onClick={() => handleCategoryNameClick(category)}>
+                            <div className={styles.category_individual}>{category.name}</div>
                             {/* <div onClick={() => handleCategoryNameClick(category.id)}>{category.name}</div> */}
                         </div>
                     ))}
                 </div>
-                
 
+                <p>現在の所属カテゴリ、サブカテゴリ</p>
+                <div>{categoryName}<span>＞{}</span></div>
             </div>
-
-
+            <div className={styles.subcategory_display}>
+                <div>                    
+                    {searchFlg ? mainCategory?.name : categoryName}
+                </div>
+                    {/* チェックボックスでサブカテゴリ一覧を表示する */}
+                    <div className={styles.subcategory_list}>
+                        {subcategories.map((subcategory) => (
+                            <div key={subcategory.id}>
+                                <input
+                                    type="checkbox"
+                                    name="subcategory"
+                                    value={subcategory.id}
+                                    checked={selectedSubcategoryIds.includes(subcategory.id)} // 初期チェック状態
+                                    onChange={handleCheckboxChange}
+                                />
+                                {subcategory.name}
+                            </div>
+                        ))}
+                    </div>
+                    <button onClick={handleChangeBelongingToSubcategory}>Change</button>
+            </div>
+                    
         </div>
+
+
     )
 }
 
