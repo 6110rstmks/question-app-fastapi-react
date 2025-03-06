@@ -1894,6 +1894,35 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "ecosystem",
+                    "questions": [
+                        {
+                            "problem": "生態系内のエネルギーはどのような形で移動するか？",
+                            "answer": [
+                                "有機物"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "生態系内の物質とエネルギーはそれぞれ循環するかどうか答えよ",
+                            "answer": [
+                                "エネルギー：循環しない\n物質：循環する。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "生態系内を有機物で移動したエネルギーは最終的にどのような形で生態系外へ放出されるか",
+                            "answer": [
+                                "熱エネルギー"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
