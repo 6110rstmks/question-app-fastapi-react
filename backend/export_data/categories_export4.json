@@ -1691,7 +1691,7 @@
                                 "基底膜basement membrane"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1813,6 +1813,14 @@
                             "problem": "vasopressinの働きを答えよ",
                             "answer": [
                                 "腎臓の集合管での水分吸収を促進"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "A class of steroid hormones that regulate salt and water balance are called mineralocorticoids.",
+                            "answer": [
+                                "鉱質コルチコイド"
                             ],
                             "memo": "",
                             "is_correct": false
