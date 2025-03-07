@@ -1,41 +1,41 @@
 import React from 'react'
-import { SubcategoryWithQuestionCount } from '../types/Subcategory'
+import { Subcategory, SubcategoryWithQuestionCount } from '../types/Subcategory'
 import { Question } from '../types/Question'
 
 import styles from './ChangeCategorySubcategoryModal.module.css'
 import useChangeCategorySubcategoryModal from './useChangeCategorySubcategoryModal'
 
 interface ChangeCategorySubcategoryProps {
-    setModalIsOpen: (isOpen: boolean) => void;
-    setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithQuestionCount[]) => void;
-    categoryName: string;
-    question?: Question;
     categoryId: number;
+    defaultCategoryName: string;
+    question?: Question;
+    setModalIsOpen: (isOpen: boolean) => void;
+    setSubcategoriesRelatedToQuestion: (subcategories: Subcategory[]) => void;
 }
 
 
 const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
+    categoryId,
+    defaultCategoryName,
+    question,
     setModalIsOpen,
     setSubcategoriesRelatedToQuestion,
-    categoryName,
-    question,
-    categoryId
 }) => {
     const {
         searchWord,
         searchFlg,
         categories,
-        linkedCategory,
+        displayedCategoryName,
         linkedSubcategories,
         subcategories,
         selectedSubcategoryIds,
         handleCheckboxChange,
-        handleCategoryNameClick,
+        handleClickCategoryName,
         handleSearch,
         handleChangeBelongingToSubcategory,
     } = useChangeCategorySubcategoryModal(
-        categoryName, 
         categoryId, 
+        defaultCategoryName, 
         question ?? { id: 0, problem: "", answer: [], memo: "", is_correct: false, answer_count: 0},  // デフォルト値を設定
         setModalIsOpen, 
         setSubcategoriesRelatedToQuestion
@@ -53,7 +53,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                 {/* <button onClick={handleSearchClick}>クリック</button> */}
                 <div className={styles.category_display}>
                     {categories?.map((category) => (
-                        <div key={category.id} onClick={() => handleCategoryNameClick(category)}>
+                        <div key={category.id} onClick={() => handleClickCategoryName(category)}>
                             <div className={styles.category_individual}>{category.name}</div>
                             {/* <div onClick={() => handleCategoryNameClick(category.id)}>{category.name}</div> */}
                         </div>
@@ -64,7 +64,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                 <div>
                     {linkedSubcategories?.map((linkedSubcategory) => (
                         <div key={linkedSubcategory.id}>
-                            {categoryName}
+                            {defaultCategoryName}
                             <span>＞</span>
                             <span>{linkedSubcategory.name}</span>
                         </div>
@@ -73,7 +73,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
             </div>
             <div className={styles.subcategory_display}>
                 <div>                    
-                    {searchFlg ? linkedCategory?.name : categoryName}
+                    {!searchFlg ? defaultCategoryName: displayedCategoryName}
                 </div>
                     {/* チェックボックスでサブカテゴリ一覧を表示する */}
                     <div className={styles.subcategory_list}>

@@ -72,7 +72,6 @@ def find_category_by_name(db: Session, search_word: str):
     query = select(Category).where(Category.name.ilike(f"%{search_word}%"))
     return db.execute(query).scalars().all()
 
-# これはどう考えても、category_crudに書くべきだと思う
 def find_category_by_question_id(db: Session, question_id: int):
     query = select(CategoryQuestion).where(CategoryQuestion.question_id == question_id)
     categoryquestion = db.execute(query).scalars().first()

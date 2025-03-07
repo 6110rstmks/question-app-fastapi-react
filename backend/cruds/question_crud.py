@@ -133,21 +133,27 @@ def get_question_uncorrected_count(db: Session):
 
 def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate):
 
+    print(changeSubcategoryUpdate.category_ids)
+
+    # ------------------------------------------------------------------------ #
+    # チェックボックスが外された場合のSubcategory削除処理
+    # ------------------------------------------------------------------------ #
+
     # チェックボックスが外された場合は、SubcategoryQuestionから削除する。
     query = db.query(SubcategoryQuestion).where(SubcategoryQuestion.question_id ==changeSubcategoryUpdate.question_id)
     results = db.execute(query).scalars().all()
-    current_subcategories = []
+    current_subcategory_ids = []
     for result in results:
-        current_subcategories.append(result.subcategory_id)
+        current_subcategory_ids.append(result.subcategory_id)
     
     # current_subcategorisとchangeSubcategoryUpdate.subcategory_idsの差分を取得
-    # これが削除対象
-    delete_subcategories = list(set(current_subcategories) - set(changeSubcategoryUpdate.subcategory_ids))
+    # delete_subcategory_idsが削除対象のSubcategory
+    delete_subcategory_ids = list(set(current_subcategory_ids) - set(changeSubcategoryUpdate.subcategory_ids))
     
-    for subcategory_id in delete_subcategories:
+    for delete_subcategory_id in delete_subcategory_ids:
         # 重複チェック
         existing_record = db.query(SubcategoryQuestion).filter_by(
-            subcategory_id=subcategory_id,
+            subcategory_id=delete_subcategory_id,
             question_id=changeSubcategoryUpdate.question_id
         ).first()
         
@@ -155,26 +161,74 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
         if existing_record:
             db.delete(existing_record)
             db.commit()
-    
-    # changeSubcategoryUpdate.subcategory_idsとcurrent_subcategoriesの差分を取得
-    # これが追加対象
-    add_subcategories = list(set(changeSubcategoryUpdate.subcategory_ids) - set(current_subcategories))
+
+    # ------------------------------------------------------------------------ #
+    # チェックボックスにチェックがついた場合のSubcategory追加処理
+    # ------------------------------------------------------------------------ #
     
     for subcategory_id in changeSubcategoryUpdate.subcategory_ids:
         # 重複チェック
-        existing_record = db.query(SubcategoryQuestion).filter_by(
+        existing_subcategory_question_record = db.query(SubcategoryQuestion).filter_by(
             subcategory_id=subcategory_id,
             question_id=changeSubcategoryUpdate.question_id
         ).first()
         
         # レコードが存在しない場合のみ挿入
-        if not existing_record:
+        if not existing_subcategory_question_record:
             new_subcategory_question = SubcategoryQuestion(
                 subcategory_id=subcategory_id, 
                 question_id=changeSubcategoryUpdate.question_id
             )
             db.add(new_subcategory_question)
             db.commit()
+            
+    # ------------------------------------------------------------------------ #
+    # チェックボックスが外された場合のCategory削除処理
+    # ------------------------------------------------------------------------ #
+    
+    query = db.query(CategoryQuestion).where(CategoryQuestion.question_id ==changeSubcategoryUpdate.question_id)
+    results = db.execute(query).scalars().all()
+    current_category_ids = []
+    for result in results:
+        current_category_ids.append(result.category_id)
+        
+    # current_categoriesとchangeSubcategoryUpdate.category_idsの差分を取得
+    # delete_category_idsが削除対象のCategory
+    delete_category_ids = list(set(current_category_ids) - set(changeSubcategoryUpdate.category_ids))
+    
+    for delete_category_id in delete_category_ids:
+        # 重複チェック
+        existing_category_question_record = db.query(CategoryQuestion).filter_by(
+            category_id=delete_category_id,
+            question_id=changeSubcategoryUpdate.question_id
+        ).first()
+        
+        # レコードが存在する場合のみ削除
+        if existing_category_question_record:
+            db.delete(existing_record)
+            db.commit()
+            
+    
+    # ------------------------------------------------------------------------ #
+    # チェックボックスにチェックがついた場合のCategory追加処理
+    # ------------------------------------------------------------------------ #
+
+    for category_id in changeSubcategoryUpdate.category_ids:
+        # 重複チェック
+        existing_category_question_record = db.query(CategoryQuestion).filter_by(
+            category_id=category_id,
+            question_id=changeSubcategoryUpdate.question_id
+        ).first()
+        
+        # レコードが存在しない場合のみ挿入
+        if not existing_category_question_record:
+            new_category_question = CategoryQuestion(
+                category_id=category_id, 
+                question_id=changeSubcategoryUpdate.question_id
+            )
+            db.add(new_category_question)
+            db.commit()
+
 
     return changeSubcategoryUpdate.subcategory_ids
 

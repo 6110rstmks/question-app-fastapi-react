@@ -14,7 +14,6 @@ export const useQuestionPage = (
     categoryName: string
 ) => {
     const [question, setQuestion] = useState<Question>();
-    const [categories, setCategories] = useState<Category[]>();
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
 

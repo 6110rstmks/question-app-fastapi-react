@@ -22,6 +22,7 @@ class QuestionIsCorrectUpdate(BaseModel):
     is_correct: bool = Field(default=False, example=False)
     
 class QuestionBelongsToSubcategoryIdUpdate(BaseModel):
+    category_ids: List[int] = Field(..., example=[1, 2, 3])
     subcategory_ids: List[int] = Field(..., example=[1, 2, 3])
     question_id: int = Field(gt=0, example=1)
     
