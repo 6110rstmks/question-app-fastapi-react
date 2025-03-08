@@ -35,8 +35,8 @@ const QuestionPage: React.FC = () => {
     } = state;
 
     const { 
-        subcategories,
-        setSubcategories,
+        subcategoriesWithCategoryName,
+        setSubcategoriesWithCategoryName,
         question,
         setQuestion,
         showAnswer,
@@ -61,14 +61,14 @@ const QuestionPage: React.FC = () => {
 
   return (
       <>
-        {subcategories.map((subcategory, index) => (         
+        {subcategoriesWithCategoryName.map((subcategoryWithCategoryName, index) => (         
             <div key={index}>
-                <Link to={`/category/${categoryId}`}>{categoryName}</Link>
+                <Link to={`/category/${categoryId}`}>{subcategoryWithCategoryName.category_name}</Link>
                 <span> ＞ </span>
                 <Link
-                    to={`/subcategory/${subcategory.id}`}
+                    to={`/subcategory/${subcategoryWithCategoryName.id}`}
                     state={{ id: categoryId, name: categoryName }}
-                >{subcategory.name}</Link>
+                >{subcategoryWithCategoryName.name}</Link>
             </div>
         ))  }
         <div className={styles.question_box}>
@@ -139,7 +139,7 @@ const QuestionPage: React.FC = () => {
                     defaultCategoryName={categoryName}
                     question={question}
                     setModalIsOpen={setChangeSubcategoryModalIsOpen}
-                    setSubcategoriesRelatedToQuestion={setSubcategories}
+                    setSubcategoriesRelatedToQuestion={setSubcategoriesWithCategoryName}
                 />
             </Modal>
             <div>

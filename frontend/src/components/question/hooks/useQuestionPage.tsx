@@ -1,11 +1,11 @@
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Category } from '../../../types/Category'
-import { Subcategory } from '../../../types/Subcategory'
+import { SubcategoryWithCategoryName } from '../../../types/Subcategory'
 import { Question } from '../../../types/Question'
-import { fetchSubcategoriesByQuestionId } from '../../../api/SubcategoryAPI'
+import { fetchSubcategoriesWithCategoryNameByQuestionId } from '../../../api/SubcategoryAPI'
 import { deleteQuestion, incrementAnswerCount, fetchQuestion, updateQuestionIsCorrect } from '../../../api/QuestionAPI'
 import { handleKeyDown } from '../../../utils/function'
+import { set } from 'date-fns'
 
 export const useQuestionPage = (
     categoryId: number,
@@ -14,7 +14,7 @@ export const useQuestionPage = (
     categoryName: string
 ) => {
     const [question, setQuestion] = useState<Question>();
-    const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
+    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([]);
     const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
     const navigate = useNavigate()
@@ -81,8 +81,10 @@ export const useQuestionPage = (
             setQuestion(data);
 
             // 所属するサブカテゴリを変更する際に使用する。
-            const data2: Subcategory[] = await fetchSubcategoriesByQuestionId(questionId);
-            setSubcategories(data2);
+            // const data2: Subcategory[] = await fetchSubcategoriesByQuestionId(questionId);
+            const data2: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByQuestionId(questionId);
+            console.log(data2)
+            setSubcategoriesWithCategoryName(data2);
         })();
 
         // ↓これいらないかも
@@ -102,8 +104,8 @@ export const useQuestionPage = (
     }, []);
 
     return { 
-        subcategories,
-        setSubcategories,
+        subcategoriesWithCategoryName,
+        setSubcategoriesWithCategoryName,
         question,
         setQuestion,
         showAnswer,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Subcategory } from '../types/Subcategory'
+import { Subcategory, SubcategoryWithCategoryName } from '../types/Subcategory'
 import { Question } from '../types/Question'
 
 import styles from './ChangeCategorySubcategoryModal.module.css'
@@ -10,7 +10,7 @@ interface ChangeCategorySubcategoryProps {
     defaultCategoryName: string;
     question?: Question;
     setModalIsOpen: (isOpen: boolean) => void;
-    setSubcategoriesRelatedToQuestion: (subcategories: Subcategory[]) => void;
+    setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithCategoryName[]) => void;
 }
 
 

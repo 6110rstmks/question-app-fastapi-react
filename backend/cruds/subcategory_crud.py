@@ -70,6 +70,10 @@ def find_subcategories_with_category_name_by_category_id(db: Session, category_i
 
     return db.execute(query1).fetchall()
 
+def find_subcategories_with_category_name_by_question_id(db: Session, question_id: int):
+    query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(SubcategoryQuestion, Subcategory.id == SubcategoryQuestion.subcategory_id).join(Category, Subcategory.category_id == Category.id).where(SubcategoryQuestion.question_id == question_id)
+    return db.execute(query1).fetchall()
+
 def find_subcategory_by_name(db: Session, name: str):
     return db.query(Subcategory).filter(Subcategory.name.like(f"%{name}%")).all()
 

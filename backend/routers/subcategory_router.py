@@ -38,7 +38,7 @@ async def find_subcategories_by_question_id(
     return subcategory_crud.find_subcategories_by_question_id(db, question_id)
 
 @router.get("/WithCategoryName/category_id/{category_id}", response_model=list[SubcategoryWithCategoryNameResponse], status_code=status.HTTP_200_OK)
-async def find_subcategories_with_category_name_by_question_id(
+async def find_subcategories_with_category_name_by_category_id(
     db: DbDependency,
     category_id: int = Path(gt=0)
 ):
@@ -50,6 +50,13 @@ async def find_subcategories_with_category_name_by_id(
     subcategory_id: int = Path(gt=0)
 ):
     return subcategory_crud.find_subcategories_with_category_name_by_id(db, subcategory_id)
+
+@router.get("/WithCategoryName/question_id/{question_id}", response_model=list[SubcategoryWithCategoryNameResponse], status_code=status.HTTP_200_OK)
+async def find_subcategories_with_category_name_by_question_id(
+    db: DbDependency,
+    question_id: int = Path(gt=0)
+):
+    return subcategory_crud.find_subcategories_with_category_name_by_question_id(db, question_id)
 
 
 @router.get("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)

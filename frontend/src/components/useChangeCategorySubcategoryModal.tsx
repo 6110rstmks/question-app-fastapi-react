@@ -4,7 +4,7 @@ import { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
 import { Question } from '../types/Question'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
-import { fetchSubcategory, fetchSubcategoriesByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
+import { fetchSubcategoriesByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 
 interface OriginalData {
@@ -22,7 +22,7 @@ export const useCategoryPage = (
     defaultCategoryName: string,
     question: Question, 
     setModalIsOpen: (isOpen: boolean) => void,
-    setSubcategoriesRelatedToQuestion: (subcategories: Subcategory[]) => void
+    setSubcategoriesRelatedToQuestion: (subcategories: SubcategoryWithCategoryName[]) => void
 ) => {
 
 
@@ -124,11 +124,9 @@ export const useCategoryPage = (
 
             for (const subcategoryquestion of transformedSubcategoryQuestionData) {            
                 const subcategoriesData = await fetchSubcategoryWithCategoryNameById(subcategoryquestion.subcategoryId);
-                console.log(subcategoriesData)
-                console.log(8398080)
                 linkedSubcategories.push(subcategoriesData);
             }
-            
+
             const updatedSubcategories = linkedSubcategories.map(subcategory => ({
                 ...subcategory, // 既存のキーと値を保持
                 categoryId: subcategory.category_id, // category_id を categoryId に変更

@@ -11,5 +11,6 @@ export interface SubcategoryWithQuestionCount extends Subcategory {
 }
 
 export interface SubcategoryWithCategoryName extends Subcategory {
-    categoryName: string;
+    // categoryName: string;
+    category_name: string;
 }
