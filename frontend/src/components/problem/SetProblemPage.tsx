@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import useSetProblemPage from './hooks/useSetProblemPage';
 import styles from './SetProblemPage.module.css';
-import { useSetProblemPage } from './hooks/useSetProblemPage';
 
 const SetProblemPage: React.FC = () => {
     const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false)
@@ -24,6 +24,8 @@ const SetProblemPage: React.FC = () => {
         <div>
             <button>カレンダーを表示</button>
             <div className={styles.problemSelector}>
+            
+                <p>The total number of Questions：509</p>
                 <h2>問題選択</h2>
                 <div className={styles.problemCount}>
                     <span>Number of Questions to Answer：{problemCnt}</span>
