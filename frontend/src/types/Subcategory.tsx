@@ -6,7 +6,8 @@ export interface Subcategory {
 
 // CategoryBox, CategoryPageで使用する型
 export interface SubcategoryWithQuestionCount extends Subcategory {
-    questionCount: number;
+    // questionCount: number;
+    question_count: number;
 }
 
 export interface SubcategoryWithCategoryName extends Subcategory {

@@ -64,7 +64,7 @@ async def find_subcategory_by_id(
     return found_subcategory
 
 @router.get("/category_id/{category_id}", response_model=list[SubcategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
-async def find_subcategories_in_category(
+async def find_subcategories_with_question_count_in_category(
     db: DbDependency, 
     category_id: int = Path(gt=0),
     limit: Optional[int] = None,

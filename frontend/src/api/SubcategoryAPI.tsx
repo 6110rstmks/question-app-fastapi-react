@@ -14,7 +14,7 @@ export const fetchSubcategoriesForHomePage = async (category_id: number,
     throw new Error("Failed to fetch subcategories");
 }
 
-export const fetchSubcategoriesByCategoryId = async (category_id: number, searchSubcategoryWord?: string) => {
+export const fetchSubcategoriesWithQuestionCountByCategoryId = async (category_id: number, searchSubcategoryWord?: string) => {
     let url = `http://localhost:8000/subcategories/category_id/${category_id}`;
     
     if (searchSubcategoryWord) {

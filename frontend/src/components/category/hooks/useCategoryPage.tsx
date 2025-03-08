@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
-import { fetchSubcategoriesByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI";
+import { fetchSubcategoriesWithQuestionCountByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI";
 import { fetchCategory } from "../../../api/CategoryAPI";
 import { Category } from "../../../types/Category";
 
@@ -42,7 +42,23 @@ export const useCategoryPage = (categoryId: number) => {
 
     useEffect(() => {
         (async () => {
-            const subcategories = await fetchSubcategoriesByCategoryId(categoryId, searchWord);
+            const subcategories: SubcategoryWithQuestionCount[] = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId, searchWord);
+            console.log(subcategories)
+
+            // const updatedSubcategories = subcategories.map(subcategory => {
+            //     const updatedSubcategory = {
+            //         ...subcategory, // 既存の値を保持
+            //         categoryId: subcategory.categoryId, // category_id を categoryId に変更
+            //         questionCount: subcategory.questionCount // question_count を questionCount に変更
+            //     };
+            //     // 元の category_id と question_count を削除
+            //     delete updatedSubcategory.category_id;
+            //     delete updatedSubcategory.question_count;
+            //     return updatedSubcategory;
+            // });
+
+            // console.log(updatedSubcategories)
+            
             setSubcategories(subcategories);
         })();
     }, [searchWord]);

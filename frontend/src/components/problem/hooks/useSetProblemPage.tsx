@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Subcategory } from '../../../types/Subcategory';
 import { CategoryWithQuestionCount } from '../../../types/Category'
 import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'
-import { fetchSubcategoriesByCategoryId } from '../../../api/SubcategoryAPI'
+import { fetchSubcategoriesWithQuestionCountByCategoryId } from '../../../api/SubcategoryAPI'
 import { setProblem } from '../../../api/ProblemAPI'
 
 export const useSetProblemPage = () => {
@@ -22,7 +22,7 @@ export const useSetProblemPage = () => {
         setShowAll(true)
 
         // カテゴリに紐づくサブカテゴリを取得する
-        const subcategories = await fetchSubcategoriesByCategoryId(categoryId);
+        const subcategories = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId);
         setSubcategories(subcategories);
 
         setSelectedCategoryIds((prevSelected) => {
