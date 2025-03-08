@@ -65,7 +65,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                     {linkedSubcategories?.map((linkedSubcategory) => (
                         <div key={linkedSubcategory.id}>
                             {/* {defaultCategoryName} */}
-                            {linkedSubcategory.categoryName}
+                            {linkedSubcategory.category_name}
                             <span>＞</span>
                             <span>{linkedSubcategory.name}</span>
                         </div>
