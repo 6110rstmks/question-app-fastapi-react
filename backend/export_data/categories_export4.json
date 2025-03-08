@@ -1645,7 +1645,25 @@
                 },
                 {
                     "name": "taxnomy",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "旧口動物のうち脱皮をする脱皮動物を二つ答えよ",
+                            "answer": [
+                                "節足動物",
+                                "線形動物"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Do fungus have cell wall？",
+                            "answer": [
+                                "Yes"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 },
                 {
                     "name": "physiology 体液濃度調節",
