@@ -44,6 +44,14 @@ async def find_subcategories_with_category_name_by_question_id(
 ):
     return subcategory_crud.find_subcategories_with_category_name_by_category_id(db, category_id)
 
+@router.get("/WithCategoryName/id/{subcategory_id}", response_model=SubcategoryWithCategoryNameResponse, status_code=status.HTTP_200_OK)
+async def find_subcategories_with_category_name_by_id(
+    db: DbDependency,
+    subcategory_id: int = Path(gt=0)
+):
+    return subcategory_crud.find_subcategories_with_category_name_by_id(db, subcategory_id)
+
+
 @router.get("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def find_subcategory_by_id(
     db: DbDependency, 

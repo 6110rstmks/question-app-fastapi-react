@@ -4,7 +4,7 @@ import { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
 import { Question } from '../types/Question'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
-import { fetchSubcategory, fetchSubcategoriesByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId } from '../api/SubcategoryAPI'
+import { fetchSubcategory, fetchSubcategoriesByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 
 interface OriginalData {
@@ -77,8 +77,16 @@ export const useCategoryPage = (
 
         setLinkedSubcategories((prev) =>
             checked
-                ? [...(prev || []), parsedValue] // prevがundefinedの場合、空の配列にしてから新しい配列を作成
-                : (prev || []).filter((subcategory) => subcategory.id !== subcategoryId) // prevがundefinedの場合、空の配列にしてfilterを実行
+                ? [
+                    ...(prev || []), 
+                    {
+                        ...parsedValue, // 既存の値をそのままコピー
+                        categoryId: parsedValue.category_id, // category_id を categoryId に変更
+                        categoryName: parsedValue.category_name, // category_name を categoryName に変更
+                        // category_id と category_name は削除または更新
+                    }
+                ]
+                : (prev || []).filter((subcategory) => subcategory.id !== subcategoryId) // チェックが外れた場合
         );
     }
 
@@ -115,10 +123,24 @@ export const useCategoryPage = (
             const linkedSubcategories = []
 
             for (const subcategoryquestion of transformedSubcategoryQuestionData) {            
-                const subcategoriesData = await fetchSubcategory(subcategoryquestion.subcategoryId);
+                const subcategoriesData = await fetchSubcategoryWithCategoryNameById(subcategoryquestion.subcategoryId);
+                console.log(subcategoriesData)
+                console.log(8398080)
                 linkedSubcategories.push(subcategoriesData);
             }
-            setLinkedSubcategories(linkedSubcategories)
+            
+            const updatedSubcategories = linkedSubcategories.map(subcategory => ({
+                ...subcategory, // 既存のキーと値を保持
+                categoryId: subcategory.category_id, // category_id を categoryId に変更
+                categoryName: subcategory.category_name, // category_name を categoryName に変更
+                // 元の category_id と category_name を削除
+                // 必要なら、元のキーを削除することもできます。
+                // 例: delete subcategory.category_id;
+            }));
+            
+            // 必要に応じて、更新した配列を状態にセット
+            setLinkedSubcategories(updatedSubcategories);
+
             setSelectedSubcategoryIds(transformedSubcategoryQuestionData.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategoryId));
 
         })();

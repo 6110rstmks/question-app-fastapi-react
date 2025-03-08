@@ -205,7 +205,7 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
         
         # レコードが存在する場合のみ削除
         if existing_category_question_record:
-            db.delete(existing_record)
+            db.delete(existing_category_question_record)
             db.commit()
             
     
