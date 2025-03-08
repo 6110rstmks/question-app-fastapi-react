@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Category } from '../types/Category'
-import { Subcategory  } from '../types/Subcategory'
+import { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
 import { Question } from '../types/Question'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
-import { CategoryQuestion } from '../types/CategoryQuestion'
 import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
-import { fetchSubcategory, fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
+import { fetchSubcategory, fetchSubcategoriesByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
-import { fetchCategoryQuestionByQuestionId } from '../api/CategoryQuestionAPI'
 
 interface OriginalData {
     subcategory_id: number;
@@ -38,7 +36,10 @@ export const useCategoryPage = (
     // trueであれば検索結果でクリックしたCategoryNameが表示される。
     const [searchFlg, setSearchFlg] = useState<boolean>(false);
 
-    const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
+    // 初期はQuestionに紐づくCategoryに所属しているSubcategoriesを表示
+    // また検索結果（CategoryName）をクリックした場合、そのCategoryに所属しているSubcategoriesに表示が変わる。
+    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<Subcategory[]>([]);
+
     const [categories, setCategories] = useState<Category[]>();
 
 
@@ -46,14 +47,19 @@ export const useCategoryPage = (
     const [displayedCategoryName, setDisplayedCategoryName] = useState<string>("");
 
     // 初期でチェックされているSubcategoryと追加でチェックされたSubcateogryの情報
-    const [linkedSubcategories, setLinkedSubcategories] = useState<Subcategory[]>()
+    const [linkedSubcategories, setLinkedSubcategories] = useState<SubcategoryWithCategoryName[]>()
 
     const handleCheckboxChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+        
         const { value, checked } = event.target;
-        const subcategoryId = parseInt(value, 10);
+        const parsedValue = JSON.parse(value);
+        console.log(parsedValue); 
+        console.log(parsedValue.categoryName); 
 
-        const subcategoryData = await fetchSubcategory(subcategoryId)
-        const categoryId = parseInt(subcategoryData.category_id, 10)
+        const subcategoryId = parseInt(parsedValue.id, 10);
+
+        // const subcategoryData = await fetchSubcategory(subcategoryId)
+        const categoryId = parseInt(parsedValue.category_id, 10)
 
 
         setSelectedCategoryIds((prev) => 
@@ -68,6 +74,12 @@ export const useCategoryPage = (
                 ? [...prev, subcategoryId] // チェックされた場合、IDを追加
                 : prev.filter((id) => id !== subcategoryId) // チェックが外れた場合、IDを削除
         )
+
+        setLinkedSubcategories((prev) =>
+            checked
+                ? [...(prev || []), parsedValue] // prevがundefinedの場合、空の配列にしてから新しい配列を作成
+                : (prev || []).filter((subcategory) => subcategory.id !== subcategoryId) // prevがundefinedの場合、空の配列にしてfilterを実行
+        );
     }
 
     // 検索ボックスでワードを入力している時の処理
@@ -79,17 +91,19 @@ export const useCategoryPage = (
     // 検索結果で表示されたcategoryの一つをクリックした時の処理
     const handleClickCategoryName = async (category: Category) => {
         setSearchWord(category.name)
-        const data = await fetchSubcategoriesByCategoryId(category.id);
+        const data: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(category.id);
+        console.log(data)
         setSearchFlg(true);
         setDisplayedCategoryName(category.name);
-        setSubcategories(data)
+        setSubcategoriesWithCategoryName(data)
     }
 
 
     useEffect(() => {
         (async () => {
-            const subcategoriesData: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId);
-            setSubcategories(subcategoriesData)
+            const subcategoriesData: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(categoryId);
+            console.log(subcategoriesData)
+            setSubcategoriesWithCategoryName(subcategoriesData)
 
             const subcategoriesquestionsData = await fetchSubcategoriesQuestionsByQuestionId(question!.id)
             const transformedSubcategoryQuestionData: SubcategoryQuestion[] = subcategoriesquestionsData.map(({ subcategory_id, question_id }: OriginalData) => ({
@@ -97,11 +111,6 @@ export const useCategoryPage = (
                 questionId: question_id
             }));
 
-            const categoriesQuestionsData = await fetchCategoryQuestionByQuestionId(question!.id)
-            const transformedCategoryQuestionData: CategoryQuestion[] = categoriesQuestionsData.map(({ category_id, question_id }: OriginalData2) => ({
-                categoryId: category_id,
-                questionId: question_id
-            }));
 
             const linkedSubcategories = []
 
@@ -168,7 +177,7 @@ export const useCategoryPage = (
         categories,
         displayedCategoryName,
         linkedSubcategories,
-        subcategories,
+        subcategoriesWithCategoryName,
         selectedSubcategoryIds,
         handleCheckboxChange,
         handleClickCategoryName,

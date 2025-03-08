@@ -79,7 +79,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
                             className={styles.subcategoryName}
                             onClick={() => handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}
                         >
-                            {subcategory.name} ({subcategory.question_count || 0})
+                            {subcategory.name} ({subcategory.questionCount || 0})
                         </div>
                         <div className={styles.dottedBorder}></div>
                     </div>

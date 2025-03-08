@@ -3,7 +3,7 @@ from fastapi import APIRouter, Path, Query, HTTPException, Depends
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import auth_crud as auth_cruds
-from schemas.subcategory import SubcategoryResponse, SubcategoryUpdate, SubcategoryCreate, SubcategoryResponseWithQuestionCount
+from schemas.subcategory import SubcategoryResponse, SubcategoryUpdate, SubcategoryCreate, SubcategoryResponseWithQuestionCount, SubcategoryWithCategoryNameResponse
 from schemas.auth import DecodedToken
 from database import get_db
 from cruds import category_crud, subcategory_crud
@@ -36,6 +36,13 @@ async def find_subcategories_by_question_id(
     question_id: int = Path(gt=0)
 ):
     return subcategory_crud.find_subcategories_by_question_id(db, question_id)
+
+@router.get("/WithCategoryName/category_id/{category_id}", response_model=list[SubcategoryWithCategoryNameResponse], status_code=status.HTTP_200_OK)
+async def find_subcategories_with_category_name_by_question_id(
+    db: DbDependency,
+    category_id: int = Path(gt=0)
+):
+    return subcategory_crud.find_subcategories_with_category_name_by_category_id(db, category_id)
 
 @router.get("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def find_subcategory_by_id(

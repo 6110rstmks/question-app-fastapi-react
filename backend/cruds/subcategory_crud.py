@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func
 from schemas.subcategory import SubcategoryCreate, SubcategoryUpdate
-from models2 import Subcategory, SubcategoryQuestion, Question
+from models2 import Subcategory, SubcategoryQuestion, Question, Category
 from . import question_crud as question_cruds
 from fastapi import HTTPException
 
@@ -60,6 +60,15 @@ def find_subcategories_by_question_id(db: Session, question_id: int):
     query2 = select(Subcategory).where(Subcategory.id.in_(subcategory_ids))
         
     return db.execute(query2).scalars().all()
+
+def find_subcategories_with_category_name_by_category_id(db: Session, category_id: int):
+
+    query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(Category, Subcategory.category_id == Category.id).where(Subcategory.category_id == category_id)
+    aaa = db.execute(query1).fetchall()
+    for a in aaa:
+        print(a._asdict())  # 辞書形
+
+    return db.execute(query1).fetchall()
 
 def find_subcategory_by_name(db: Session, name: str):
     return db.query(Subcategory).filter(Subcategory.name.like(f"%{name}%")).all()

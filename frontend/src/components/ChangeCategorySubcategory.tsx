@@ -1,5 +1,5 @@
 import React from 'react'
-import { Subcategory, SubcategoryWithQuestionCount } from '../types/Subcategory'
+import { Subcategory } from '../types/Subcategory'
 import { Question } from '../types/Question'
 
 import styles from './ChangeCategorySubcategoryModal.module.css'
@@ -27,7 +27,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
         categories,
         displayedCategoryName,
         linkedSubcategories,
-        subcategories,
+        subcategoriesWithCategoryName,
         selectedSubcategoryIds,
         handleCheckboxChange,
         handleClickCategoryName,
@@ -43,28 +43,29 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
 
     return (
         <div className={styles.modalContainer}>
-            <div>
-                <label htmlFor="">カテゴリ名を検索する</label>
-                <input 
-                    type="text"
-                    onChange={handleSearch}
-                    value={searchWord}
-                     />
-                {/* <button onClick={handleSearchClick}>クリック</button> */}
-                <div className={styles.category_display}>
-                    {categories?.map((category) => (
-                        <div key={category.id} onClick={() => handleClickCategoryName(category)}>
-                            <div className={styles.category_individual}>{category.name}</div>
-                            {/* <div onClick={() => handleCategoryNameClick(category.id)}>{category.name}</div> */}
-                        </div>
-                    ))}
+            <div className={styles.left_container}>
+                <div className={styles.search_container}>
+                    <label htmlFor="">カテゴリ名を検索する</label>
+                    <input 
+                        type="text"
+                        onChange={handleSearch}
+                        value={searchWord}
+                        />
+                    <div className={styles.category_display}>
+                        {categories?.map((category) => (
+                            <div key={category.id} onClick={() => handleClickCategoryName(category)}>
+                                <div className={styles.category_individual}>{category.name}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <p>現在の所属カテゴリ、サブカテゴリ</p>
                 <div>
                     {linkedSubcategories?.map((linkedSubcategory) => (
                         <div key={linkedSubcategory.id}>
-                            {defaultCategoryName}
+                            {/* {defaultCategoryName} */}
+                            {linkedSubcategory.categoryName}
                             <span>＞</span>
                             <span>{linkedSubcategory.name}</span>
                         </div>
@@ -77,16 +78,16 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                 </div>
                     {/* チェックボックスでサブカテゴリ一覧を表示する */}
                     <div className={styles.subcategory_list}>
-                        {subcategories.map((subcategory) => (
-                            <div key={subcategory.id}>
+                        {subcategoriesWithCategoryName.map((subcategoryWithCategoryName) => (
+                            <div key={subcategoryWithCategoryName.id}>
                                 <input
                                     type="checkbox"
                                     name="subcategory"
-                                    value={subcategory.id}
-                                    checked={selectedSubcategoryIds.includes(subcategory.id)} // 初期チェック状態
+                                    value={JSON.stringify(subcategoryWithCategoryName)} 
+                                    checked={selectedSubcategoryIds.includes(subcategoryWithCategoryName.id)} // 初期チェック状態
                                     onChange={handleCheckboxChange}
                                 />
-                                {subcategory.name}
+                                {subcategoryWithCategoryName.name}
                             </div>
                         ))}
                     </div>

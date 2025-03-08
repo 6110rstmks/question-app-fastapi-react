@@ -20,7 +20,6 @@ export const fetchSubcategoriesByCategoryId = async (category_id: number, search
     if (searchSubcategoryWord) {
         url += `?searchSubcategoryWord=${searchSubcategoryWord}`;
     }
-
     const response = await fetch(url);
 
     if (response.ok) {
@@ -70,4 +69,12 @@ export const createSubcategory = async (subcategoryName: string, categoryId: num
     });
 
     return response
+}
+
+export const fetchSubcategoriesWithCategoryNameByCategoryId = async (category_id: number) => {
+    const response = await fetch(`http://localhost:8000/subcategories/WithCategoryName/category_id/${category_id}`);
+    if (response.ok) {
+        return response.json();
+    }
+    throw new Error("Failed to fetch subcategories");
 }
