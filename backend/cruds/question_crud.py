@@ -146,7 +146,7 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
     for result in results:
         current_subcategory_ids.append(result.subcategory_id)
     
-    # current_subcategorisとchangeSubcategoryUpdate.subcategory_idsの差分を取得
+    # current_subcategoriesとchangeSubcategoryUpdate.subcategory_idsの差分を取得
     # delete_subcategory_idsが削除対象のSubcategory
     delete_subcategory_ids = list(set(current_subcategory_ids) - set(changeSubcategoryUpdate.subcategory_ids))
     
