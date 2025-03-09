@@ -93,7 +93,7 @@ export const fetchCategory = async (category_id: number): Promise<Category> => {
     return await response.json();
 }
 
-export const createCategory = async (categoryName: string): Promise<Response> => {
+export const createCategory = async (categoryName: string): Promise<void> => {
     const url = 'http://localhost:8000/categories'
     const response = await fetch('http://localhost:8000/categories', {
         method: 'POST',
@@ -102,7 +102,5 @@ export const createCategory = async (categoryName: string): Promise<Response> =>
         },
         body: JSON.stringify({ name: categoryName }),
     });
-
-    return response
 }
 

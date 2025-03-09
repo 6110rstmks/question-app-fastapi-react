@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
-import { fetchQuestionsBySearchProblemWord } from '../../../api/QuestionAPI';
+import { fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdBySearchProblemWord } from '../../../api/QuestionAPI';
 import { fetchCategory } from '../../../api/CategoryAPI';
 import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI';
 import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI';
@@ -16,7 +16,7 @@ export const useQuestionListPage = () => {
 
     const handleSearchClick = async () => {
         if (searchProblemWord.trim() === "") return;
-        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await fetchQuestionsBySearchProblemWord(searchProblemWord)
+        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdBySearchProblemWord(searchProblemWord)
         for (let i = 0; i < questions_data.length; i++) {
             const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
             const category = await fetchCategory(category_id)
