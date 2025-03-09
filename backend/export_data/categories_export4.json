@@ -1941,6 +1941,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "大脳の外側である大脳皮質は灰白質？白質？",
+                            "answer": [
+                                "灰白質"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ニューロンの軸索は（A）という薄い膜構造に包まれている",
+                            "answer": [
+                                "神経索"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "中枢神経系に向けて情報を伝える神経を何という？",
+                            "answer": [
+                                "求心性神経"
+                            ],
+                            "memo": "https://www.youtube.com/watch?v=7dbv7EwJW2s\n13:07",
+                            "is_correct": false
                         }
                     ]
                 },
