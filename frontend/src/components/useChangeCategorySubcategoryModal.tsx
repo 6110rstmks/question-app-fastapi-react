@@ -38,7 +38,7 @@ export const useCategoryPage = (
 
     // 初期はQuestionに紐づくCategoryに所属しているSubcategoriesを表示
     // また検索結果（CategoryName）をクリックした場合、そのCategoryに所属しているSubcategoriesに表示が変わる。
-    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<Subcategory[]>([]);
+    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([]);
 
     const [categories, setCategories] = useState<Category[]>();
 

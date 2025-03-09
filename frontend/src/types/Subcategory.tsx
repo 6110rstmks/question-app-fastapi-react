@@ -10,7 +10,10 @@ export interface SubcategoryWithQuestionCount extends Subcategory {
     question_count: number;
 }
 
-export interface SubcategoryWithCategoryName extends Subcategory {
-    // categoryName: string;
+// export interface SubcategoryWithCategoryName extends Subcategory {
+export interface SubcategoryWithCategoryName {
+    id: number;
+    name: string;
+    category_id: number;
     category_name: string;
 }

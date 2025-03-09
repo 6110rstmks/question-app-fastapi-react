@@ -125,3 +125,6 @@ setproblempage.tsxに今日解いた問題数を表示させる。
 サブカてごりのしたにさらにもうひとつカテゴリが欲しい。
 名前は　tag
 でsubcategory_tagみたいなテーブルを作る。
+
+<!--  -->
+problemnormal.page.tsxからquestion editをできるようにする。

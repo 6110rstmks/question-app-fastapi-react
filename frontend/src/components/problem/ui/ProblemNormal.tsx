@@ -38,6 +38,7 @@ export const ProblemNormal: React.FC<Props> = ({
         setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
 
         fetchSubcategoriesWithCategoryNameByQuestionId(problem.id).then((data) => {
+            console.log(data)
             setSubcategoriesWithCategoryName(data);
         })
     }, [problem])
@@ -50,7 +51,7 @@ export const ProblemNormal: React.FC<Props> = ({
                     {subcategoriesWithCategoryName.map((subcategoryWithCategoryName, index) => (         
                         <div key={index} className={styles.breadcrumbPath}>
                             <Link 
-                                to={`/category/${subcategoryWithCategoryName.categoryId}`}
+                                to={`/category/${subcategoryWithCategoryName.category_id}`}
                                 className={styles.breadcrumbLink}
                             >
                                 {subcategoryWithCategoryName.category_name}
@@ -59,7 +60,7 @@ export const ProblemNormal: React.FC<Props> = ({
                             <Link
                                 to={`/subcategory/${subcategoryWithCategoryName.id}`}
                                 state={{ 
-                                    id: subcategoryWithCategoryName.categoryId, 
+                                    id: subcategoryWithCategoryName.category_id, 
                                     name: subcategoryWithCategoryName.category_name 
                                 }}
                                 className={styles.breadcrumbLink}

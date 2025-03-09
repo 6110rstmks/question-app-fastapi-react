@@ -46,7 +46,7 @@ export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIn
                     {subcategoriesWithCategoryName.map((subcategoryWithCategoryName, index) => (         
                         <div key={index} className={styles.breadcrumbPath}>
                             <Link 
-                                to={`/category/${subcategoryWithCategoryName.categoryId}`}
+                                to={`/category/${subcategoryWithCategoryName.category_id}`}
                                 className={styles.breadcrumbLink}
                             >
                                 {subcategoryWithCategoryName.category_name}
@@ -55,7 +55,7 @@ export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIn
                             <Link
                                 to={`/subcategory/${subcategoryWithCategoryName.id}`}
                                 state={{ 
-                                    id: subcategoryWithCategoryName.categoryId, 
+                                    id: subcategoryWithCategoryName.category_id, 
                                     name: subcategoryWithCategoryName.category_name 
                                 }}
                                 className={styles.breadcrumbLink}
