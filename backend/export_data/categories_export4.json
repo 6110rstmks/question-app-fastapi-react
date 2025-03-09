@@ -1916,10 +1916,28 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "大脳は二つに分けれる。なにとなに",
+                            "problem": "大脳の外側である大脳皮質は二つに分けれる。なにとなに",
                             "answer": [
                                 "新皮質",
                                 "辺縁皮質"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ヒトの反射中枢は（A）（B）（C）が代表的である。",
+                            "answer": [
+                                "脊髄",
+                                "延髄",
+                                "中脳"
+                            ],
+                            "memo": "https://www.youtube.com/watch?v=vvlCYyJmvdM\n参考\n16:30",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "平衡保持の中枢であるのは何脳？",
+                            "answer": [
+                                "小脳"
                             ],
                             "memo": "",
                             "is_correct": false
