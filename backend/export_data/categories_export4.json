@@ -1528,6 +1528,14 @@
                             ],
                             "memo": "内容的にはchemistryかな？",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "HCLOはなんの化学式",
+                            "answer": [
+                                "次亜塩素酸"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1789,6 +1797,16 @@
                                 "子実体"
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "What animals have echolocation?3",
+                            "answer": [
+                                "bat",
+                                "Dolphin",
+                                "whale"
+                            ],
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
@@ -2093,6 +2111,14 @@
                             "problem": "椎茸の旨味の成分は？",
                             "answer": [
                                 "Guanylic acid"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "nucleotideはヌクレオシドが何結合で連結しているか？",
+                            "answer": [
+                                "Phosphodiester bond\nホスホジエスチル結合"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4826,7 +4852,7 @@
                                 "16世紀にスペインの植民地になったため。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "メサと同じ原理でできた地形で、メサよりも小規模な地形を何という？",
@@ -4952,6 +4978,14 @@
                             "problem": "以下高潮の説明。熱帯低気圧が接近すると、気圧が低下するため、海面が（A）",
                             "answer": [
                                 "吸い上げられる"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "隔海度とは？",
+                            "answer": [
+                                "海からどれだけ離れているかの度合いです"
                             ],
                             "memo": "",
                             "is_correct": false
