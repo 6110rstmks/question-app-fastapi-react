@@ -3004,7 +3004,7 @@
                             "answer": [
                                 "自分は何もせずに文句だけは言うのは、彼の専売特許です。\n"
                             ],
-                            "memo": "",
+                            "memo": "stock in trade も同様に「在庫品、手持ち商品、流通在庫」\n\nを意味します。このほかに stock in trade には「おはこ、\n\n常用手段、固有の技能、十八番」などの意味があります。",
                             "is_correct": false
                         },
                         {
@@ -3764,6 +3764,22 @@
                             "problem": "You're running a marathon? give me a break",
                             "answer": [
                                 "きみがまらそん？冗談だろw"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "hypoの反対語は？",
+                            "answer": [
+                                "hyper"
+                            ],
+                            "memo": "hypoglycemia\nHyperglycemia",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "He wields a sword with great skill.",
+                            "answer": [
+                                "彼は剣を見事に操る。\n"
                             ],
                             "memo": "",
                             "is_correct": false
