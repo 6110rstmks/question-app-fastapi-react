@@ -38,7 +38,6 @@ export const ProblemNormal: React.FC<Props> = ({
         setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
 
         fetchSubcategoriesWithCategoryNameByQuestionId(problem.id).then((data) => {
-            // setSubcategories(data);
             setSubcategoriesWithCategoryName(data);
         })
     }, [problem])

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
 import { Question } from "../../../types/Question";
-import { Category } from "../../../types/Category";
-import { Subcategory } from "../../../types/Subcategory";
-import { fetchCategoryByQuestionId } from "../../../api/CategoryAPI";
-import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI";
+import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
 import styles from './ProblemNormal.module.css'
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
 
@@ -18,8 +17,8 @@ interface Props {
 }
 
 export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIndex2, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
-    const [category, setCategory] = useState<Category | null>(null);
-    const [subcategory, setSubcategory] = useState<Subcategory | null>(null);
+    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
+    
     const [localProblem, setLocalProblem] = useState<Question>(problem); // ローカル状態を追加
 
     const handleUpdateIsCorrect = async () => {
@@ -31,44 +30,114 @@ export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIn
     useEffect(() => {
         setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
 
-        fetchCategoryByQuestionId(problem.id).then((data) => {
-            setCategory(data);
-        })
-        fetchSubcategoriesByQuestionId(problem.id).then((data) => {
-            setSubcategory(data);
+        // fetchCategoryByQuestionId(problem.id).then((data) => {
+        //     setCategory(data);
+        // })
+
+        fetchSubcategoriesWithCategoryNameByQuestionId(problem.id).then((data) => {
+            setSubcategoriesWithCategoryName(data);
         })
     }, [problem])
     return (
-        <div>
-            <div>{category?.name}＞{subcategory?.name}</div>
-            <div>{currentReviewProblemIndex2 + 1} / {problemLength}</div>
-            <h1>再出題: </h1>
-            <div className={styles.question_problem}>問題：{localProblem.problem}</div>
-            <div className={styles.question_is_flg}>
-                <div
-                    className={`${styles.question_is_flg_value} ${
-                        localProblem.is_correct ? styles.correct : styles.incorrect
-                    }`}
-                    onClick={handleUpdateIsCorrect}
-                >
-                    {localProblem.is_correct ? '正解' : '不正解'}
+        <div className={styles.problemContainer}>
+            <div className={styles.header}>
+                <div className={styles.pagination}>{currentReviewProblemIndex2 + 1} / {problemLength}</div>
+                <div className={styles.breadcrumbs}>
+                    {subcategoriesWithCategoryName.map((subcategoryWithCategoryName, index) => (         
+                        <div key={index} className={styles.breadcrumbPath}>
+                            <Link 
+                                to={`/category/${subcategoryWithCategoryName.categoryId}`}
+                                className={styles.breadcrumbLink}
+                            >
+                                {subcategoryWithCategoryName.category_name}
+                            </Link>
+                            <span className={styles.breadcrumbSeparator}> ＞ </span>
+                            <Link
+                                to={`/subcategory/${subcategoryWithCategoryName.id}`}
+                                state={{ 
+                                    id: subcategoryWithCategoryName.categoryId, 
+                                    name: subcategoryWithCategoryName.category_name 
+                                }}
+                                className={styles.breadcrumbLink}
+                            >
+                                {subcategoryWithCategoryName.name}
+                            </Link>
+                        </div>
+                    ))}
                 </div>
-            </div>   
-            <button onClick={onShowAnswer}>答えを表示する</button>
-            {showAnswer && (
-                <div>
-                {localProblem.answer.length > 0 ? (
-                    localProblem.answer.map((ans, index) => (
-                        <p key={index}>{ans}</p>
-                    ))
+            </div>
+
+
+            <h1 className={styles.title}>再出題: </h1>
+            <div className={styles.questionCard}>
+                <div className={styles.questionHeader}>
+                    <div className={styles.questionLabel}>問題：</div>
+                    <div className={styles.correctnessToggle}>
+                        <button
+                            className={`${styles.statusButton} ${
+                                localProblem.is_correct ? styles.correctButton : styles.incorrectButton
+                            }`}
+                            onClick={handleUpdateIsCorrect}
+                        >
+                            {localProblem.is_correct ? '正解' : '不正解'}
+                        </button>
+                    </div>
+                </div>
+                
+                <div className={styles.questionContent}>
+                    {localProblem.problem}
+                </div>
+
+                {!showAnswer ? (
+                    <button 
+                        className={styles.showAnswerButton} 
+                        onClick={onShowAnswer}
+                    >
+                        答えを表示する
+                    </button>
                 ) : (
-                    <p>解答はまだ作成されていません</p>
+                    <div className={styles.answerSection}>
+                        <h3 className={styles.answerHeading}>答え</h3>
+                        <div className={styles.answerContent}>
+                            {localProblem.answer.length > 0 ? (
+                                localProblem?.answer.map((answer, index) => (
+                                    <div key={index} className={styles.answerItem}>
+                                        {answer.split('\n').map((line, i) => (
+                                            <React.Fragment key={i}>
+                                                {line}
+                                                <br />
+                                            </React.Fragment>
+                                        ))}
+                                    </div>
+                                ))
+                            ) : (
+                                <p className={styles.emptyAnswer}>解答はまだ作成されていません</p>
+                            )}
+                        </div>
+                        
+                        {localProblem.memo && (
+                            <div className={styles.memoSection}>
+                                <h3 className={styles.memoHeading}>メモ</h3>
+                                <div className={styles.memoContent}>{localProblem.memo}</div>
+                            </div>
+                        )}
+                    </div>
                 )}
-                </div>
-            )}
-            <div>
-                <button onClick={onSolved}>解けた</button>
-                <button onClick={onUnsolved}>解けなかった</button>
+            </div>
+
+            <div className={styles.actionButtons}>
+                <button 
+                    className={`${styles.actionButton} ${styles.solvedButton}`} 
+                    onClick={onSolved}
+                >
+                    解けた
+                </button>
+                <button 
+                    className={`${styles.actionButton} ${styles.unsolvedButton}`} 
+                    onClick={onUnsolved}
+                >
+                    解けなかった
+                </button>
             </div>
         </div>
     );
