@@ -4,7 +4,7 @@ import { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
 import { Question } from '../types/Question'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
-import { fetchSubcategoriesByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
+import { fetchSubcategoriesWithCategoryNameByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 
 interface OriginalData {
@@ -54,7 +54,6 @@ export const useCategoryPage = (
         const { value, checked } = event.target;
         const parsedValue = JSON.parse(value);
         console.log(parsedValue); 
-        console.log(parsedValue.categoryName); 
 
         const subcategoryId = parseInt(parsedValue.id, 10);
 
@@ -160,7 +159,7 @@ export const useCategoryPage = (
         loadCategories();
     }, [searchWord]);
 
-    // 変更を確定するボタンをクリックした時の処理
+    // カテゴリ・サブカテゴリの変更を確定するボタンをクリックした時の処理
     const handleChangeBelongingToSubcategory = async () => {
         // チェックボックスが全て外れている場合、警告
         if (selectedSubcategoryIds.length === 0) {
@@ -188,7 +187,8 @@ export const useCategoryPage = (
         alert('所属するサブカテゴリが変更されました。')
         setModalIsOpen(false);
         
-        const data = await fetchSubcategoriesByQuestionId(question!.id);
+        const data = await fetchSubcategoriesWithCategoryNameByQuestionId(question!.id);
+        console.log(data)
         setSubcategoriesRelatedToQuestion(data);
     }
     return { 
