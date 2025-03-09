@@ -388,7 +388,7 @@
                         {
                             "problem": "NLBはOSI参照モデルの第何層で動作するか？",
                             "answer": [
-                                "4層"
+                                "4層（トランスポート層）"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2119,6 +2119,14 @@
                             "problem": "nucleotideはヌクレオシドが何結合で連結しているか？",
                             "answer": [
                                 "Phosphodiester bond\nホスホジエスチル結合"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "what is Cinnamon efficacy?",
+                            "answer": [
+                                "Cinnamon may help lower blood sugar levels by increasing insulin sensitivity."
                             ],
                             "memo": "",
                             "is_correct": false
