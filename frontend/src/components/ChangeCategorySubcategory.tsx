@@ -50,6 +50,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                         type="text"
                         onChange={handleSearch}
                         value={searchWord}
+                        autoFocus
                         />
                     <div className={styles.category_display}>
                         {categories?.map((category) => (
