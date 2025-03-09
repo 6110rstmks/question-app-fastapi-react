@@ -439,7 +439,7 @@
                     "name": "ルートテーブル",
                     "questions": [
                         {
-                            "problem": "どういう役割を持っているか",
+                            "problem": "ルートテーブルはどういう役割を持っているか",
                             "answer": [
                                 "VPC内でネットワークトラフィックがどこに向かうか決めるもの"
                             ],
@@ -754,7 +754,7 @@
                                 "不可能。データの書き込みはプライマリデータベースに行う必要がある。readという文字通り。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "RDSではリードレプリカを最大5個まで作成できるが、Auroraではリードレプリカを何個作成できるか",
@@ -973,7 +973,7 @@
                                 "流れてくる一連のデータレコードを保持します。データが乗っかるベルトコンベアのようなものとイメージいただけると良いです。1 つの Kinesis Data Streams の中には複数のシャードが存在します。シャードが増えれば増えるほど、一度に流せるデータの量が増えます。Kinesis Data Streams のスケーリングの単位でもあります。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Zero administration = 管理不要はamazon data firehose かkinesis data streamsのどちらか",
@@ -1640,6 +1640,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "胞胚から切り出した予定外胚葉と予定内胚葉を合わせて培養することで予定（A）胚葉が神経管に分化する。",
+                            "answer": [
+                                "外"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1780,7 +1788,7 @@
                             "answer": [
                                 "子実体"
                             ],
-                            "memo": "",
+                            "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png",
                             "is_correct": false
                         }
                     ]
@@ -3775,7 +3783,8 @@
                         {
                             "problem": "WAFで防御できる攻撃の種類を二つ挙げて",
                             "answer": [
-                                "SQL injection, XSS"
+                                "SQL injection",
+                                "XSS"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4919,6 +4928,14 @@
                             "problem": "You're running a marathon? give me a break",
                             "answer": [
                                 "きみがまらそん？冗談だろw"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "以下高潮の説明。熱帯低気圧が接近すると、気圧が低下するため、海面が（A）",
+                            "answer": [
+                                "吸い上げられる"
                             ],
                             "memo": "",
                             "is_correct": false
