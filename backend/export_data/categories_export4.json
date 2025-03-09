@@ -3220,7 +3220,7 @@
                             "answer": [
                                 "次亜塩素酸"
                             ],
-                            "memo": "",
+                            "memo": "hypoという単語は「低い」や「不足している」を意味します。\n具体的には、\"hypoglycemia\"（低血糖）や\"hypothermia\"（低体温）などの単語で見ることができます。\n\n反対語はhyper",
                             "is_correct": false
                         },
                         {
@@ -3363,7 +3363,7 @@
                         {
                             "problem": "social capital",
                             "answer": [
-                                ""
+                                "社会関係資本"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -3740,6 +3740,30 @@
                             "problem": "The news of her sudden departure filled him with a sense of torture that he couldn't escape.",
                             "answer": [
                                 "彼女の突然の逝去の知らせは、彼に逃れられない精神的な苦痛をもたらした。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "He is an incorrigible liar.",
+                            "answer": [
+                                "彼は救い用のない嘘つきだ。"
+                            ],
+                            "memo": "",
+                            "is_correct": true
+                        },
+                        {
+                            "problem": "だまされました。trickを使用する",
+                            "answer": [
+                                "I got tricked"
+                            ],
+                            "memo": "",
+                            "is_correct": true
+                        },
+                        {
+                            "problem": "You're running a marathon? give me a break",
+                            "answer": [
+                                "きみがまらそん？冗談だろw"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4904,30 +4928,6 @@
                             "problem": "特殊な名前が付けられている地域性の強いかぜのことを名のち雨？",
                             "answer": [
                                 "局地風"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "He is an incorrigible liar.",
-                            "answer": [
-                                "彼は救い用のない嘘つきだ。"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "だまされました。trickを使用する",
-                            "answer": [
-                                "I got tricked"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "You're running a marathon? give me a break",
-                            "answer": [
-                                "きみがまらそん？冗談だろw"
                             ],
                             "memo": "",
                             "is_correct": false
