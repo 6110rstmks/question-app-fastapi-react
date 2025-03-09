@@ -38,7 +38,7 @@ export const Home: React.FC = () => {
                     totalPages={pageCount}
                     onPageChange={(newPage) => setPage(newPage)}
             />
-            <div className={styles.containerA}>
+            <div className={styles.searchContainer}>
                 <Search 
                     type="category"
                     searchCategoryWord={searchCategoryWord}
