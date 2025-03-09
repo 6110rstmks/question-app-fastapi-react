@@ -1973,6 +1973,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "ニューロンの軸索の膜電位の測定において膜の内外における電位差を何という",
+                            "answer": [
+                                "静止電位"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "静止電位は膜外を0mVとしたとき約何mV？",
+                            "answer": [
+                                "-70"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
