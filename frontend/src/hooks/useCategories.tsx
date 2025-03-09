@@ -45,14 +45,14 @@ export const useCategories = (
     useEffect(() => {
         const loadCategories = async () => {
             const skip = (page - 1) * limit;
-            const categories: Category[] = await fetchCategories(
-                                                    skip,
-                                                    limit,
-                                                    searchCategoryWord,
-                                                    searchSubcategoryWord,
-                                                    searchQuestionWord,
-                                                    searchAnswerWord
-                                                )
+            const categories: Category[] = await fetchCategories({
+                skip,
+                limit,
+                searchCategoryWord,
+                searchSubcategoryWord,
+                searchQuestionWord,
+                searchAnswerWord
+            });
             setCategories(categories)
 
         };

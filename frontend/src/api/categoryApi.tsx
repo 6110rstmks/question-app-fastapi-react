@@ -1,4 +1,4 @@
-import { Category } from '../types/Category';
+import { Category, CategoryWithQuestionCount } from '../types/Category';
 
 interface FetchCategoriesParams {
     skip: number;
@@ -58,7 +58,7 @@ export const fetchCategoryByQuestionId = async (question_id: number): Promise<Ca
 
 // questionを一つでも持つcategoryをすべて取得
 // 問題出題画面にて使用する。
-export const fetchAllCategoriesWithQuestions = async (): Promise<Category[]> => {
+export const fetchAllCategoriesWithQuestions = async (): Promise<CategoryWithQuestionCount[]> => {
     const url = 'http://localhost:8000/categories/all_categories_with_questions'
     const response = await fetch(url, {
         method: 'GET',
@@ -93,7 +93,7 @@ export const fetchCategory = async (category_id: number): Promise<Category> => {
     return await response.json();
 }
 
-export const createCategory = async (categoryName: string): Promise<void> => {
+export const createCategory = async (categoryName: string): Promise<Response> => {
     const url = 'http://localhost:8000/categories'
     const response = await fetch('http://localhost:8000/categories', {
         method: 'POST',
@@ -102,5 +102,7 @@ export const createCategory = async (categoryName: string): Promise<void> => {
         },
         body: JSON.stringify({ name: categoryName }),
     });
+
+    return response
 }
 
