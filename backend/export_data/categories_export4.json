@@ -1989,6 +1989,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "ニューロンは一定以上の強さの刺激を受けるとその部位で瞬間的に細胞内外の電位がどうなるか？",
+                            "answer": [
+                                "逆転する（外側がminus 内側がplus）"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
