@@ -1997,6 +1997,15 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "活動電位が生じる時、ニューロンが刺激を受けると（A）が開きNa+を細胞内に流入させることで内側をplusにする。その後遅れて（B）が開いてK+が細胞外に流入して、minusに戻る",
+                            "answer": [
+                                "電位依存性ナトリウムチャネル",
+                                "電位依存性カリウムチャネル"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2226,6 +2235,19 @@
                             "problem": "what is Cinnamon efficacy?",
                             "answer": [
                                 "Cinnamon may help lower blood sugar levels by increasing insulin sensitivity."
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "plant hormone",
+                    "questions": [
+                        {
+                            "problem": "光受容体であるクリプトクロムは何色の光を受容する？",
+                            "answer": [
+                                "blue"
                             ],
                             "memo": "",
                             "is_correct": false
