@@ -45,10 +45,14 @@ export const deleteQuestion = async (question_id: number): Promise<void> => {
 };
 
 export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {
-    const response = await fetch(`http://localhost:8000/questions/subcategory_id/${subcategory_id}`);
-    if (response.ok) {
-        return await response.json();
-    }
+    const url = `http://localhost:8000/questions/subcategory_id/${subcategory_id}`
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json();
 };
 
 // すべてのQuestionの数を取得するAPI
