@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
 import { Question } from "../../../types/Question";
-import { Category } from "../../../types/Category";
-import { Subcategory } from "../../../types/Subcategory";
-import { fetchCategoryByQuestionId } from "../../../api/CategoryAPI";
-import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI";
+import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
 import styles from './ProblemNormal.module.css'
 
@@ -26,8 +25,7 @@ export const ProblemNormal: React.FC<Props> = ({
     onSolved,
     onUnsolved
 }) => {
-    const [category, setCategory] = useState<Category | null>(null)
-    const [subcategories, setSubcategories] = useState<Subcategory[]>([])
+    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
     const [localProblem, setLocalProblem] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
 
     const handleUpdateIsCorrect = async () => {
@@ -39,21 +37,27 @@ export const ProblemNormal: React.FC<Props> = ({
     useEffect(() => {
         setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
 
-        fetchCategoryByQuestionId(problem.id).then((data) => {
-            setCategory(data);
-        })
-
-        fetchSubcategoriesByQuestionId(problem.id).then((data) => {
-            setSubcategories(data);
+        fetchSubcategoriesWithCategoryNameByQuestionId(problem.id).then((data) => {
+            // setSubcategories(data);
+            setSubcategoriesWithCategoryName(data);
         })
     }, [problem])
 
     return (
         <div>
             <div>{currentProblemIndex + 1} / {problemLength}</div>
-            {subcategories.map((subcategory) => (
-                <div>{category?.name}＞{subcategory?.name}</div>
-            ))}
+            <div>
+                {subcategoriesWithCategoryName.map((subcategoryWithCategoryName, index) => (         
+                    <div key={index}>
+                        <Link to={`/category/${subcategoryWithCategoryName.categoryId}`}>{subcategoryWithCategoryName.category_name}</Link>
+                        <span> ＞ </span>
+                        <Link
+                            to={`/subcategory/${subcategoryWithCategoryName.id}`}
+                            state={{ id: subcategoryWithCategoryName.categoryId, name: subcategoryWithCategoryName.category_name }}
+                        >{subcategoryWithCategoryName.name}</Link>
+                    </div>
+                ))}
+            </div>
             <div className={styles.question_problem}>問題：{localProblem.problem}</div>
             <div className={styles.question_is_flg}>
                 <div
@@ -68,20 +72,23 @@ export const ProblemNormal: React.FC<Props> = ({
             <button onClick={onShowAnswer}>答えを表示する</button>
             {showAnswer && (
                 <div>
-                    {localProblem.answer.length > 0 ? (
-                        localProblem?.answer.map((answer, index) => (
-                            <div key={index}>
-                                {answer.split('\n').map((line, i) => (
-                                <React.Fragment key={i}>
-                                    {line}
-                                    <br />
-                                </React.Fragment>
-                                ))}
-                            </div>
-                        ))
-                    ) : (
-                        <p>解答はまだ作成されていません</p>
-                    )}
+                    <div>
+                        {localProblem.answer.length > 0 ? (
+                            localProblem?.answer.map((answer, index) => (
+                                <div key={index}>
+                                    {answer.split('\n').map((line, i) => (
+                                    <React.Fragment key={i}>
+                                        {line}
+                                        <br />
+                                    </React.Fragment>
+                                    ))}
+                                </div>
+                            ))
+                        ) : (
+                            <p>解答はまだ作成されていません</p>
+                        )}
+                    </div>
+                    <div>{localProblem.memo}</div>
                 </div>
             )}
             <div>

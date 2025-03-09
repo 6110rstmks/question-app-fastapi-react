@@ -70,7 +70,7 @@ const QuestionPage: React.FC = () => {
                     state={{ id: categoryId, name: categoryName }}
                 >{subcategoryWithCategoryName.name}</Link>
             </div>
-        ))  }
+        ))}
         <div className={styles.question_box}>
                 <div className={styles.question_header}>
                     <div className={styles.question_problem}>問題：{question?.problem}</div>

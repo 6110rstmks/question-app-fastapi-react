@@ -5,7 +5,6 @@ import { Question } from '../../../types/Question'
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from '../../../api/SubcategoryAPI'
 import { deleteQuestion, incrementAnswerCount, fetchQuestion, updateQuestionIsCorrect } from '../../../api/QuestionAPI'
 import { handleKeyDown } from '../../../utils/function'
-import { set } from 'date-fns'
 
 export const useQuestionPage = (
     categoryId: number,
