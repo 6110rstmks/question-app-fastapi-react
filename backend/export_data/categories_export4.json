@@ -28,7 +28,7 @@
                                 "12平均律"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 }
@@ -257,7 +257,7 @@
                             "answer": [
                                 "通らない"
                             ],
-                            "memo": "",
+                            "memo": "IGWは基本的に パブリックサブネット専用。",
                             "is_correct": false
                         },
                         {
@@ -1462,7 +1462,7 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "分母が因数分解の形　→",
+                            "problem": "inegral計算において分母が因数分解の形　→",
                             "answer": [
                                 "部分因数分解\n\n"
                             ],
@@ -1647,7 +1647,7 @@
                                 "golgi body"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "胞胚から切り出した予定外胚葉と予定内胚葉を合わせて培養することで予定（A）胚葉が神経管に分化する。",
@@ -3680,7 +3680,7 @@
                                 "私は新しい人と交流するためにそのパーティーに行きました。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "He wore a vest over his shirt.",
@@ -4069,7 +4069,7 @@
                             "answer": [
                                 "RAM"
                             ],
-                            "memo": "",
+                            "memo": "語呂合わせ\nRAM\n→ Running Away Memory（走り去るメモリ）\n→ 電源を切るとサッと消えてしまう！\nROM\n→ Remains On Memory（残るメモリ）\n→ 電源を切っても内容はそのまま！",
                             "is_correct": false
                         },
                         {
@@ -4434,7 +4434,7 @@
                                 "交流"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ダイオードなどは，1つの向きにしか電流が流れないので，これに交流をかけると直流（ 脈流 みゃくりゅう ）が 得られる。 このような作用をなんというか",
@@ -4669,7 +4669,7 @@
                                 "すくない"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "trade windはどちらから西から東or 東から西どちらにふくか？おぼえかたは？",
@@ -4994,6 +4994,15 @@
                             "problem": "隔海度とは？",
                             "answer": [
                                 "海からどれだけ離れているかの度合いです"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "地形に関して、形に由来した名称と成因に由来した名称がある。それぞれの例を二つ答えよ",
+                            "answer": [
+                                "形に由来→楯状地、卓状地\n",
+                                "成因に由来→準平原、構造平野"
                             ],
                             "memo": "",
                             "is_correct": false
