@@ -1318,7 +1318,7 @@
                                 "二項定理"
                             ],
                             "memo": "https://examist.jp/mathematics/limit/nikouteiri-kyokugen/",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "瞬間部分積分が有効なパターン２",
@@ -1988,7 +1988,7 @@
                                 "-70"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ニューロンは一定以上の強さの刺激を受けるとその部位で瞬間的に細胞内外の電位がどうなるか？",
@@ -4032,6 +4032,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": " He values his friendship.",
+                            "answer": [
+                                "彼は彼の友情を大切にする"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "locust",
+                            "answer": [
+                                "イナゴ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -4547,14 +4563,6 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "複雑な処理を一度の命令で行えるのはCISC？RISC？",
-                            "answer": [
-                                "CISC"
-                            ],
-                            "memo": "",
-                            "is_correct": true
-                        },
-                        {
                             "problem": "複雑な処理を一度の命令で行えるので、多様な作業を効率的にこなせるのはCISC？RISC？",
                             "answer": [
                                 "CISC"
@@ -4908,7 +4916,7 @@
                                 "高潮"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "3種類の恒常風を答えて",
