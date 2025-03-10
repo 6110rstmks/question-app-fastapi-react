@@ -4048,6 +4048,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "He felt a pang of guilt after lying to his friend.",
+                            "answer": [
+                                "友人に嘘をついた後、彼は罪悪感に苛まれた。\npang:心の苦痛"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "She felt a pang of pain in her stomach after eating that spicy food.",
+                            "answer": [
+                                "辛い食べ物を食べた後、彼女はお腹に鋭い痛みを感じた。\npang: 突然の鋭い痛み"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
