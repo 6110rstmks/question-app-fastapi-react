@@ -4008,6 +4008,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "The sponge is porous and absorbs water quickly",
+                            "answer": [
+                                "そのスポンジは多孔性があり、水を速く吸います。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "His eyes were strangely compelling",
+                            "answer": [
+                                "彼の目は奇妙なほど人を引きつけた"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Her story was so compelling that I couldn't stop listening to her.",
+                            "answer": [
+                                "彼女の話は非常に魅力的で、私は彼女の話を聞くのをやめられなかった。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
