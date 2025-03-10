@@ -1939,7 +1939,7 @@
                             "answer": [
                                 "小脳"
                             ],
-                            "memo": "",
+                            "memo": "小脳はフラミンゴのイメージ\nただよびの講師が言っていた",
                             "is_correct": false
                         },
                         {
@@ -2012,6 +2012,14 @@
                             "answer": [
                                 "体性神経系",
                                 "自律神経系"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "活動電位が軸索の末端に到達すると、末端部にある（A)が軸索の膜に融合する。",
+                            "answer": [
+                                "シナプス小胞"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2351,6 +2359,28 @@
                             "problem": "ハーディワインベルグを英語で",
                             "answer": [
                                 "Hardy–Weinberg"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "physiology 腎臓",
+                    "questions": [
+                        {
+                            "problem": "腎小体はなにとなにに分けれる？",
+                            "answer": [
+                                "糸球体",
+                                "ボーマンのう"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "腎臓一個あたり、このネフロンは （A）個あります。",
+                            "answer": [
+                                "100万個"
                             ],
                             "memo": "",
                             "is_correct": false
