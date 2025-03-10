@@ -2006,6 +2006,15 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "末梢神経系は二たつに分類される。なにとなに",
+                            "answer": [
+                                "体性神経系",
+                                "自律神経系"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2297,6 +2306,30 @@
                             "problem": "イネではジベレリンは（A）で合成される",
                             "answer": [
                                 "胚"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "イネにおいてジベレリンは何に働きかけるか",
+                            "answer": [
+                                "粉粉層"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "光の照射によって発芽が促進される種子を何という",
+                            "answer": [
+                                "光発芽種子"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "フィとクロムのPf型？Pfr型がジベレリンの合成を誘導し発芽を促す",
+                            "answer": [
+                                "Pfr"
                             ],
                             "memo": "",
                             "is_correct": false
