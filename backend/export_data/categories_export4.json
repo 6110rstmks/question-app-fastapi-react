@@ -1701,7 +1701,7 @@
                                 "subphylum"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "二胚葉動物はなにか？",
@@ -2238,6 +2238,31 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "現代では否認されているtheory of evolution",
+                            "answer": [
+                                "発生反復説",
+                                "Lamarckism"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "What Causes Mass Extinction in the Cretaceous?",
+                            "answer": [
+                                "Meteorite impact"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "stressは自分を強くすると考えている人の脳から分泌されるストレスホルモンは？",
+                            "answer": [
+                                "Dehydroepiandrosterone\nデヒドロエピアンドロステロン"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2248,6 +2273,51 @@
                             "problem": "光受容体であるクリプトクロムは何色の光を受容する？",
                             "answer": [
                                 "blue"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "種子の発芽を抑制する植物ホルモンは？",
+                            "answer": [
+                                "アブシシン酸"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "What cells do not have centrosomes?\"",
+                            "answer": [
+                                "plant cell"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "イネではジベレリンは（A）で合成される",
+                            "answer": [
+                                "胚"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "english",
+                    "questions": [
+                        {
+                            "problem": "密着結合を英語で？",
+                            "answer": [
+                                "tight junction\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ハーディワインベルグを英語で",
+                            "answer": [
+                                "Hardy–Weinberg"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4563,7 +4633,7 @@
                                 "整流作用"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "振動数f(HZ)は周期T(s)の（A）",
@@ -4891,7 +4961,7 @@
                                 "最大と最小の差のこと"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "準平原で見られる地形にはどのようなものがある？",
