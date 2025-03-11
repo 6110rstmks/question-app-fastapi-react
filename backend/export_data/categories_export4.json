@@ -2410,6 +2410,39 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "茎と根のオーキシンに対する感受性について、茎の方が根よりオーキシンに対する感受性が（A）い。",
+                            "answer": [
+                                "低い"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "オーキシンの極性移動にはオーキシンを排出する（A）とオーキシンを取り込む（B）の膜タンパク質が働いている。",
+                            "answer": [
+                                "PINタンパク質",
+                                "AUXタンパク質"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "植物の気孔は光合成に必要な（A）を取り込むために行う。",
+                            "answer": [
+                                "二酸化炭素"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "（A）状態になると葉内ではアブシシン酸の濃度が高まり、気孔を閉じて水分の損失を抑えようとする。",
+                            "answer": [
+                                "乾燥"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2487,6 +2520,19 @@
                             "problem": "様々な種類のリンパ球はすべて（A）に由来する",
                             "answer": [
                                 "骨髄"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "physiology muscle",
+                    "questions": [
+                        {
+                            "problem": "筋肉の明帯は（A）フィラメントからなる部分",
+                            "answer": [
+                                "アクチン"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -5127,7 +5173,7 @@
                                 "あたたまりやすくさめやすい"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "熱帯（A気候）のうち乾季なしの気候は何？",
@@ -5194,7 +5240,7 @@
                                 "モナドック"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "cuestaの代表例",
@@ -5218,7 +5264,7 @@
                                 "ぶどう"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "日本語では残丘といい、周囲から取り残されてできた丘のような地形をなんという？",
@@ -5252,7 +5298,7 @@
                                 "北大西洋海流"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "仏教には上座仏教と大乗仏教がある。戒律がしっかりしている仏教はどちらか。",
@@ -5340,7 +5386,7 @@
                                 "暖流がふくため"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ベンゲラ海流（寒流）の海岸にある砂漠は（海岸砂漠は）？",
@@ -5356,7 +5402,7 @@
                                 "高気圧から低気圧"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "赤道付近は太陽の光を直にあたるため、空気が温められて常に上昇気流が発生しています。",
@@ -5421,6 +5467,14 @@
                                 "成因に由来→準平原、構造平野"
                             ],
                             "memo": "構造平野と卓状地の違い、準平原と楯状地の違いというのは、かなりあいまいです",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "植物の内皮細胞のなかには（A）と呼ばれる重力を感知する構造体が存在する。",
+                            "answer": [
+                                "アミロプラスト"
+                            ],
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
