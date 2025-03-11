@@ -20,7 +20,7 @@
                                 "音と音の距離"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "1オクターブの音程を12等分した音律を何というか",
@@ -1253,7 +1253,7 @@
                                 "AWS direct connect"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "aws direct connectのメリットは？2つ",
@@ -1615,7 +1615,7 @@
                                 "輸卵管"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "通常の体細胞分裂と比べて卵割に見られる特徴は？",
@@ -1653,6 +1653,22 @@
                             "problem": "胞胚から切り出した予定外胚葉と予定内胚葉を合わせて培養することで予定（A）胚葉が神経管に分化する。",
                             "answer": [
                                 "外"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "一つの卵原細胞は体細胞分裂と減数分裂を経て最終的に一つの卵と（A)つの極体を生じる",
+                            "answer": [
+                                "3"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "卵形成に関して卵原細胞から最後の卵までの細胞のDNA量の変化をグラフで描いて",
+                            "answer": [
+                                "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1808,6 +1824,22 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "刺胞動物の例1",
+                            "answer": [
+                                "クラゲ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ウニは何動物",
+                            "answer": [
+                                "棘皮動物"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -1852,10 +1884,11 @@
                         {
                             "problem": "コルチ器を構成するものが二つある。答えよ",
                             "answer": [
-                                "おおい膜、聴細胞"
+                                "おおい膜、",
+                                "聴細胞"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "聴細胞は何の振動により興奮させられるか。",
@@ -2341,6 +2374,24 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "（A）が作用することでセルロース繊維間の多糖の切断が促され植物細胞の細胞壁が緩むのでその分だけ植物細胞内に水が入ってきて吸水でき細胞が成長する。",
+                            "answer": [
+                                "オーキシン"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "植物の細胞成長には（A）成長と（B）成長がある。どちらの成長を示すかは細胞壁においてセルロース繊維がどの方向に（C）するかによって決まる。",
+                            "answer": [
+                                "伸長成長",
+                                "肥大成長",
+                                "配列"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2381,6 +2432,43 @@
                             "problem": "腎臓一個あたり、このネフロンは （A）個あります。",
                             "answer": [
                                 "100万個"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "腎臓においてナトリウムイオンはどこで再吸収されるか",
+                            "answer": [
+                                "腎細菅"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "physiology immunology",
+                    "questions": [
+                        {
+                            "problem": "抗体の絵を描いてください。頭の中に　H鎖L鎖　定常部　可変部なども描いて",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "抗体のタンパク質を何という？",
+                            "answer": [
+                                "免疫グロブリン"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "様々な種類のリンパ球はすべて（A）に由来する",
+                            "answer": [
+                                "骨髄"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2941,7 +3029,7 @@
                                 "霊能力者"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "After completing the training program, you will qualify to work as a certified instructor.",
@@ -4314,6 +4402,14 @@
                             "problem": "HDDが磁気ディスクにデータを保存しているのに対して、SSDはどのようにデータをほぞんしているか",
                             "answer": [
                                 "フラッシュメモリにデータを保存"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "先に（A）を書き込み、主記憶は後でまとめて書き変えるという方式をライトバック方式と呼ぶ。",
+                            "answer": [
+                                "キャッシュメモリ"
                             ],
                             "memo": "",
                             "is_correct": false
