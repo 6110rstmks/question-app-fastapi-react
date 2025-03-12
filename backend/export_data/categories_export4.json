@@ -2056,6 +2056,23 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "大脳は多数の神経細胞の（A）が集まった白質と、（B）の集まった灰白質からなる。",
+                            "answer": [
+                                "神経繊維",
+                                "細胞体"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "大脳の（A）皮質には本能行動に関する中枢がある。",
+                            "answer": [
+                                "辺縁"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
