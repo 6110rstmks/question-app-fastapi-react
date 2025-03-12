@@ -423,7 +423,7 @@
                                 "停止"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ELBのconnection drainingについて説明してください。",
@@ -1831,7 +1831,7 @@
                                 "クラゲ"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ウニは何動物",
@@ -2029,7 +2029,7 @@
                                 "逆転する（外側がminus 内側がplus）"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "活動電位が生じる時、ニューロンが刺激を受けると（A）が開きNa+を細胞内に流入させることで内側をplusにする。その後遅れて（B）が開いてK+が細胞外に流入して、minusに戻る",
@@ -2070,6 +2070,14 @@
                             "problem": "大脳の（A）皮質には本能行動に関する中枢がある。",
                             "answer": [
                                 "辺縁"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "シナプスでは神経伝達物質による（一方向 ／ 両方向）性の伝達が生じる",
+                            "answer": [
+                                "一方向"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2494,7 +2502,7 @@
                                 "ボーマンのう"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "腎臓一個あたり、このネフロンは （A）個あります。",
@@ -3174,7 +3182,7 @@
                                 "ボコボコにする"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The grassroots support for the candidate was evident in the large turnout at the rally.",
@@ -3230,7 +3238,7 @@
                                 "感染の危険はありません"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Harriet felt more estranged from her daughter than ever”",
@@ -3751,7 +3759,7 @@
                                 "会議には時間通りに到着することが必須です。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "オキソニウムイオン",
@@ -4271,7 +4279,7 @@
                                 "彼は彼の友情を大切にする"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "locust",
@@ -4293,6 +4301,22 @@
                             "problem": "She felt a pang of pain in her stomach after eating that spicy food.",
                             "answer": [
                                 "辛い食べ物を食べた後、彼女はお腹に鋭い痛みを感じた。\npang: 突然の鋭い痛み"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "detective story",
+                            "answer": [
+                                "探偵小説"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The company has a subsidiary in Japan",
+                            "answer": [
+                                "子会社を持っています。"
                             ],
                             "memo": "",
                             "is_correct": false
