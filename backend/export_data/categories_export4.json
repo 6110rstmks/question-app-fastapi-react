@@ -2292,6 +2292,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "DNAの塩基配列を調べる手法を何という？",
+                            "answer": [
+                                "サンガー法"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "染色体が見えないのはいつの時期か？",
+                            "answer": [
+                                "間期"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "染色体上における遺伝子の占める位置を何という？",
+                            "answer": [
+                                "遺伝子座"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -4510,6 +4534,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "Traveling while you’re young is the way to go.",
+                            "answer": [
+                                "若いときに旅行をするのがベストだね。）"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "In psychology, the subconscious  is the part of the mind that is not currently of focal awareness.",
+                            "answer": [
+                                "心理学において、「潜在意識（subconscious）」とは、現在意識の焦点に入っていない心の一部を指します。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "We are learning how to do multiplication.",
+                            "answer": [
+                                "私たちは掛け算のやり方を学んでいます"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 }
@@ -5712,6 +5760,14 @@
                             "problem": "春先に地中海からイタリア南部に向けて吹いてくる高温多湿な風は？",
                             "answer": [
                                 "シロッコ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ディナルアルプス山脈の場所はどこ？",
+                            "answer": [
+                                ""
                             ],
                             "memo": "",
                             "is_correct": false
