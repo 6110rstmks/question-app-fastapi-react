@@ -492,14 +492,6 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "S3 glacierの種類を3つ述べてください",
-                            "answer": [
-                                "glacier deep archive, glacier instant retrieval, glacier flexible retriebal"
-                            ],
-                            "memo": "",
-                            "is_correct": true
-                        },
-                        {
                             "problem": "glacierについて、なぜデータの長期保存に向いているのか",
                             "answer": [
                                 "s3のストレージクラスの中では最もコストが安いから"
@@ -530,6 +522,14 @@
                             ],
                             "memo": "",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "Amazon S3のバケット作成時にデフォルトで暗号化されるかいなか",
+                            "answer": [
+                                "される"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -791,7 +791,7 @@
                                 "s3のストレージクラスの中では最もコストが安いから"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "glacierの取り出し方法にはどのようなものがあるか。3つこたえて、",
@@ -807,7 +807,7 @@
                                 "YES"
                             ],
                             "memo": "",
-                            "is_correct": true
+                            "is_correct": false
                         },
                         {
                             "problem": "ミリ秒単位で瞬時にデータが取得可能なglacierの種類は何か？",
@@ -815,7 +815,15 @@
                                 "glacier instant retrieval"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
+                        },
+                        {
+                            "problem": "S3 glacierの種類を3つ述べてください",
+                            "answer": [
+                                "glacier deep archive, glacier instant retrieval, glacier flexible retriebal"
+                            ],
+                            "memo": "",
+                            "is_correct": true
                         }
                     ]
                 },
@@ -2010,10 +2018,10 @@
                         {
                             "problem": "ニューロンの軸索の膜電位の測定において膜の内外における電位差を何という",
                             "answer": [
-                                "静止電位"
+                                "静止電位\nresting membrane potential(resting potential.)"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "静止電位は膜外を0mVとしたとき約何mV？",
