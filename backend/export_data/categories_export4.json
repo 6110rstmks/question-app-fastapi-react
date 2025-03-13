@@ -2220,6 +2220,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "遺伝子組み変えにおいて、遺伝子を切断する酵素を何という？",
+                            "answer": [
+                                "制限酵素"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ベクターの例は？",
+                            "answer": [
+                                "プラスミド"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "トランスジェニック生物を作り出す方法として（A）という植物細胞に感染する細菌をもちいて遺伝子組み換え植物を作り出す。",
+                            "answer": [
+                                "アグロバクテリウム"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
