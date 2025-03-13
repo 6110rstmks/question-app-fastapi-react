@@ -158,13 +158,13 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "用語であるプロデューサ、メッセージ、コンシューマについて頭でアウトプットしてください。",
+                            "problem": "SQSについて用語であるプロデューサ、メッセージ、コンシューマについて頭でアウトプットしてください。",
                             "answer": [
                                 "プロデューサ：メッセージを送るアプリ\n",
                                 "コンシューマ：メッセージを受け取るアプリ"
                             ],
                             "memo": "おいう",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "sqsのデッドレターキューについて説明",
@@ -892,9 +892,9 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "VPCエンドポイントの説明について（A)にあてはまるものを答えて。VPCとその他のAWSサービスを（A)を経由せずに接続できるサービス。",
+                            "problem": "VPCエンドポイントの説明について。VPCとその他のAWSサービスを（A)接続できるサービス。",
                             "answer": [
-                                "インターネット"
+                                "インターネットを経由せずに"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1559,6 +1559,19 @@
                             "is_correct": true
                         }
                     ]
+                },
+                {
+                    "name": "organic chemistry",
+                    "questions": [
+                        {
+                            "problem": "fat hydrogenation",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "脂肪の水素添加という意味です。日本語ではよく「脂肪の水素化」や「油脂の硬化」と訳されます。\n\n簡単に説明すると…\n植物油や動物脂肪に水素（H₂）を添加して、化学的に安定させたり、固体化したりするプロセスのこ",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -2174,6 +2187,39 @@
                             ],
                             "memo": "",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "転写を促進・抑制するタンパク質を何という",
+                            "answer": [
+                                "調節タンパク質"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "調節タンパク質によって遺伝子の発現調節を受けるタンパク質の遺伝子を何という？また調節タンパク質の遺伝子を何という？",
+                            "answer": [
+                                "構造遺伝子",
+                                "調節遺伝子"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "調節タンパク質のうち、転写を抑制するものを何という？",
+                            "answer": [
+                                "リプレッサー"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "大腸菌においてラクトースがない場合、オペロン付近にある（A）と呼ばれる転写調節領域にリプレッセーが結合して、RNAポリメラーゼがプロモーターへ結合するのを妨げることで、転写は抑制される。",
+                            "answer": [
+                                "オペレーター"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -4327,7 +4373,7 @@
                                 "子会社を持っています。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The artist's latest work contrasts sharply with his earlier pieces.",
