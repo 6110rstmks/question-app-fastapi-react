@@ -183,12 +183,12 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "特定のAWSサービス(EC2, SNS)からのみSQSへのアクセスを許可してまたは特定のAWSサービスからのみSQSへのアクセスを禁止する（lambda）には何を設定する？",
+                            "problem": "特定のAWSサービス(EC2, SNS)からのみSQSへのアクセスを許可してまたは特定のAWSサービス（lambda）からのみSQSへのアクセスを禁止するには何を設定する？",
                             "answer": [
                                 "SQSアクセスポリシー"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "SNS トピックのメッセージ配信先サブスクリプションとして、SQS キューを指定することは可能か？",
@@ -2398,7 +2398,7 @@
                                 "光発芽種子"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "フィとクロムのPf型？Pfr型がジベレリンの合成を誘導し発芽を促す",
@@ -3102,7 +3102,7 @@
                                 "Can I have a bite?"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Deutsch 読み方",
@@ -4127,7 +4127,7 @@
                                 "彼はシャツの上にベストを着ていた。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The committee was vested with the authority to make final decisions on the project.",
@@ -5256,7 +5256,7 @@
                                 "標高が上がるにつれて気温が低くなる割合のことを言います。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "標高が高く、気温が同じ緯度に比べてもかなり低いという地域の気候のことを何という？",
