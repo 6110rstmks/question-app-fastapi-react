@@ -258,7 +258,7 @@
                                 "通らない"
                             ],
                             "memo": "IGWは基本的に パブリックサブネット専用。",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "インターネットは何にアタッチするか？またNATゲートウェイは何にアタッチするか",
@@ -1951,7 +1951,7 @@
                                 "違う。\n正解は「個々のニューロンにおける興奮の頻度」"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "受容器で受け取った刺激情報を処理したり、効果器に指令を出している神経系を（A）という。",
@@ -2244,6 +2244,46 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "大腸菌においてラクトースだけが存在する場合は、リプレッサーが（A）することによって、RNAポリメラーゼが機能し、転写が始まる。",
+                            "answer": [
+                                "結合部位から離れる"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "真核生物において、RNAポリメラーゼがプロモーターが結合するには（A）が必要",
+                            "answer": [
+                                "基本転写因子"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "遺伝子の範囲の単語、SNPの読み方",
+                            "answer": [
+                                "すにっぷ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "プラスミドのような目的とする遺伝子の運び手のことを何という",
+                            "answer": [
+                                "ベクター"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "外部から遺伝子を導入し、導入前になかった形質が現れること",
+                            "answer": [
+                                "形質転換"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2436,7 +2476,7 @@
                                 "アブシシン酸"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "What cells do not have centrosomes?\"",
@@ -3236,7 +3276,7 @@
                                 "　銀行はたくさんの新規ローンを自由に行う"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "大気圧",
@@ -4157,7 +4197,7 @@
                                 "I am fluent in English"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "He flushed the toilet.",
@@ -4221,7 +4261,7 @@
                                 "彼女は同級生からの中傷で傷ついた。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "I need to fabricate a new costume for Halloween. ",
@@ -4253,7 +4293,7 @@
                                 "この毒に解毒剤はない"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The country's hegemony in the region was evident through its strong influence on neighboring nations.",
@@ -4958,7 +4998,7 @@
                                 "CISC"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Which is RISC or CISC used in PCs and servers?",
@@ -5585,7 +5625,7 @@
                                 "気候因子は原因で気候要素は結果\nつまり因果\n\n緯度や高度、地形や海流などを気候因子という。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "特殊な名前が付けられている地域性の強いかぜのことを名のち雨？",
