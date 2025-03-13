@@ -13,6 +13,7 @@ interface SearchProps {
     setSearchAnswerWord: (word: string) => void;
     page: number;
     setPage: (page: number) => void;
+    autoFocus?: boolean
 }
 
 const Search: React.FC<SearchProps> = ({
@@ -26,6 +27,7 @@ const Search: React.FC<SearchProps> = ({
     setSearchQuestionWord,
     setSearchAnswerWord,
     setPage,
+    autoFocus
 }) => {
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (type === 'category') {
@@ -57,27 +59,28 @@ const Search: React.FC<SearchProps> = ({
         <div className={styles.search_section}>
           <div className={styles.search_container}>
             <input
-              type="text"
-              className={styles.search_box}
-              value={
-                type === 'category'
-                    ? searchCategoryWord
+                type="text"
+                className={styles.search_box}
+                value={
+                    type === 'category'
+                        ? searchCategoryWord
+                        : type === 'subcategory'
+                        ? searchSubcategoryWord
+                        : type === 'question'
+                        ? searchQuestionWord
+                        : searchAnswerWord
+                }
+                onChange={handleSearch}
+                placeholder={`${
+                    type === 'category'
+                    ? 'カテゴリ'
                     : type === 'subcategory'
-                    ? searchSubcategoryWord
+                    ? 'サブカテゴリ'
                     : type === 'question'
-                    ? searchQuestionWord
-                    : searchAnswerWord
-              }
-              onChange={handleSearch}
-              placeholder={`${
-                type === 'category'
-                  ? 'カテゴリ'
-                  : type === 'subcategory'
-                  ? 'サブカテゴリ'
-                  : type === 'question'
-                  ? '質問'
-                  : '解答'
-              }検索`}
+                    ? '質問'
+                    : '解答'
+                }検索`}
+                autoFocus={autoFocus}
             />
           </div>
         </div>

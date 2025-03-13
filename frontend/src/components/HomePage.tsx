@@ -48,6 +48,7 @@ export const Home: React.FC = () => {
                     setSearchAnswerWord={setSearchAnswerWord}
                     page={page} 
                     setPage={setPage} 
+                    autoFocus={true}
                 />
                 <Search 
                     type="subcategory"
