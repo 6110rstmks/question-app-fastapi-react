@@ -2284,6 +2284,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "電気移動法で利用するDNAの性質として、DNAは（A）に帯電している。",
+                            "answer": [
+                                "負"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2331,6 +2339,14 @@
                             "problem": "空気を抜いた状態で光合成で発生するO2の由来を調べる実験は？結論：O2は水由来だと判明。",
                             "answer": [
                                 "ヒルの実験"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "脂肪酸からアセチルCoAを作る反応",
+                            "answer": [
+                                "β酸化"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4349,7 +4365,7 @@
                                 "きみがまらそん？冗談だろw"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "hypoの反対語は？",
@@ -4467,6 +4483,22 @@
                             "problem": "She only had a handful of candies to share with her friends.",
                             "answer": [
                                 "彼女は友達と分けるためにキャンディーをほんの少ししか持っていなかった。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "The scientist carefully poured the liquid into the vial for testing",
+                            "answer": [
+                                "科学者は注意深く液体を試験用の小瓶に注ぎました。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "Many people were saddened by the demise of the beloved actor",
+                            "answer": [
+                                "The company's demise was caused by poor management decisions. \n"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -5184,7 +5216,7 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "重力と静電気力が対応することで丸暗記をする必要がなくなるが、質量に対応するものはなにか？また、重力加速度に対応するものはなにか？",
+                            "problem": "重力と静電気力が対応することで公式の丸暗記をする必要がなくなるが、質量に対応するものはなにか？また、重力加速度に対応するものはなにか？",
                             "answer": [
                                 "質量→電荷",
                                 "重力加速度→静電場"
