@@ -16,6 +16,7 @@ export const useQuestionListPage = () => {
     }
 
     const handleAnswerSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(1)
         setSearchAnswerWord(e.target.value)
     }
 
@@ -34,9 +35,8 @@ export const useQuestionListPage = () => {
     }
 
     const handleAnswerSearchClick = async () => {
-        if (searchProblemWord.trim() === "") return;
+        if (searchAnswerWord.trim() === "") return;
         const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord(searchAnswerWord)
-
         setQuestions(questions_data)
     }
     
