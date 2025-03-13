@@ -18,6 +18,8 @@ matplotlib？
 
 翌日の12:00に全件削除するcronを走らせる。
 
+→実装優先度低い
+
 ===============
 alertの部分を
 https://zenn.dev/chot/articles/react-router7-flash-message
