@@ -11,8 +11,19 @@ export const fetchQuestion = async (question_id: number): Promise<Question> => {
     return await response.json();
 }
 
-export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdBySearchProblemWord = async (searchProblemWord: string): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
+export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord = async (searchProblemWord: string): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
     const url = `http://localhost:8000/questions/?searchProblemWord=${searchProblemWord}`;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json();
+}
+
+export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord = async (searchAnswerWord: string): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
+    const url = `http://localhost:8000/questions/?searchAnswerWord=${searchAnswerWord}`;
     const response = await fetch(url, {
         method: 'GET',
         headers: {

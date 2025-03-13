@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
-import { fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdBySearchProblemWord } from '../../../api/QuestionAPI';
+import { fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord, fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord } from '../../../api/QuestionAPI';
 import { fetchCategory } from '../../../api/CategoryAPI';
 import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI';
 import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI';
@@ -8,15 +8,20 @@ import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestion
 
 export const useQuestionListPage = () => {
     const [searchProblemWord, setSearchProblemWord] = useState<string>("")
+    const [searchAnswerWord, setSearchAnswerWord] = useState<string>("")
     const [questions , setQuestions] = useState<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]>([])
 
-    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleProblemSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchProblemWord(e.target.value)
     }
 
-    const handleSearchClick = async () => {
+    const handleAnswerSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchAnswerWord(e.target.value)
+    }
+
+    const handleProblemSearchClick = async () => {
         if (searchProblemWord.trim() === "") return;
-        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdBySearchProblemWord(searchProblemWord)
+        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord(searchProblemWord)
         for (let i = 0; i < questions_data.length; i++) {
             const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
             const category = await fetchCategory(category_id)
@@ -27,10 +32,19 @@ export const useQuestionListPage = () => {
         }
         setQuestions(questions_data)
     }
+
+    const handleAnswerSearchClick = async () => {
+        if (searchProblemWord.trim() === "") return;
+        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord(searchAnswerWord)
+
+        setQuestions(questions_data)
+    }
     
     return {
         questions,
-        handleSearch,
-        handleSearchClick 
+        handleProblemSearch,
+        handleAnswerSearch,
+        handleProblemSearchClick,
+        handleAnswerSearchClick
     }
 }

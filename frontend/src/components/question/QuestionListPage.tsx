@@ -7,21 +7,33 @@ const QuestionListPage = () => {
     const navigate = useNavigate();
     const { 
         questions,
-        handleSearch,
-        handleSearchClick
+        handleProblemSearch,
+        handleAnswerSearch,
+        handleProblemSearchClick,
+        handleAnswerSearchClick
     } = useQuestionListPage()
 
     return (
         <div>
             <div className={styles.search_section}>
-                <div className={styles.search_container}>
+                <div className={styles.search_problem_container}>
+                    <label htmlFor="">問題文：</label>
                     <input
                         type="text"
                         className={styles.search_box}
-                        onChange={handleSearch}
+                        onChange={handleProblemSearch}
                     />
+                    <button onClick={() => handleProblemSearchClick()}>検索する</button>
                 </div>
-                <button onClick={() => handleSearchClick()}>検索する</button>
+                <div className={styles.search_answer_container}>
+                    <label htmlFor="">解答の文字列で検索：</label>
+                    <input
+                        type="text"
+                        className={styles.search_box}
+                        onChange={handleAnswerSearch}
+                    />
+                    <button onClick={() => handleAnswerSearchClick()}>検索する</button>
+                </div>
             </div>
             <div>
             <div>カテゴリを絞っての問題文の検索を行えるようにしたい</div>

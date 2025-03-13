@@ -6,21 +6,21 @@ from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 
-def find_all_questions(db: Session, search_problem_word: str = None):
-
-    print(777777)
-    
-    aaa = db.query(Question).filter(Question.problem.like(f"%{search_problem_word}%")).all()
-
-    print(777878)
-    for a in aaa:
-        print(a.problem)
-        print(a.id)
-
+def find_all_questions(
+    db: Session,
+    search_problem_word: str = None,
+    search_answer_word: str = None
+):
         
     if search_problem_word:
         return db.query(Question).filter(Question.problem.like(f"%{search_problem_word}%")).all()
 
+    if search_answer_word:
+        
+        query = select(Question).where(
+            func.array_to_string(Question.answer, ',').ilike(f"%{search_answer_word}%")
+        )
+        return db.execute(query).scalars().all()
 
     return db.query(Question).all()
 
