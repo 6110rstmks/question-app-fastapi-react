@@ -1975,7 +1975,7 @@
                                 "脳　脊髄"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "大脳の外側である大脳皮質は二つに分けれる。なにとなに",
@@ -2346,6 +2346,14 @@
                             "answer": [
                                 "第一文列",
                                 "第二分裂"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "一個の一次精母細胞から（A）個の精子が生じる",
+                            "answer": [
+                                "4"
                             ],
                             "memo": "",
                             "is_correct": false
