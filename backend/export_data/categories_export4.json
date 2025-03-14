@@ -59,7 +59,7 @@
                                 "アプリケーションをデプロイする際、例えばオンプレミスな物理サーバ上で動作するアプリケーションの場合、メンテナンス日を設けて一時的にサービス停止させたりしてサーバ上で動作するアプリケーションを入れ替えたりすることが多いかと思います。",
                                 "ブルーグリーンデプロイメントはアプリケーションをデプロイする際のデプロイ方式の１つでAWS等のクラウドサービスでアプリケーションをデプロイする場合、クラウドのメリットの１つとなるサービス作成・廃棄することが簡単にできることを活かして、もう１セットのサービスを用意して、テストしてから切り替えることで安全に、ダウンタイムもほぼ無いリリースができる技術となります。"
                             ],
-                            "memo": "aaaaaaa",
+                            "memo": "",
                             "is_correct": false
                         }
                     ]
@@ -102,7 +102,7 @@
                                 "ネットワークACLはステートレスです。この場合のステートレスとは、出の通信と入りの通信（戻ってくる通信）は別々に評価されます。つまり、出の通信は許可するが、戻ってくる入りの通信は拒否するということが可能になります。\n\nセキュリティグループはステートフルです。出の通信が許可されていれば、入りの通信（戻ってくる通信）は自動的に許可されます。"
                             ],
                             "memo": "いい",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "VPC間で接続する方法は二つを答えて",
@@ -134,7 +134,7 @@
                                 "ステートレス"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -242,7 +242,7 @@
                                 "パブリック"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "aws のサービスであるインターネットゲートウェイについて、（A）が外部のネットワークと接続するために必要となるAWSのコンポーネントです。",
@@ -316,7 +316,7 @@
                                 "まる"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Amazon AuroraのリージョンまたぎでDBを同期してくれる機能」をなんという？",
@@ -602,7 +602,7 @@
                                 "クラスタ　→ 一番外の大枠"
                             ],
                             "memo": "ECSの基本について",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ECSはコンテナを動かす実行環境サービスではなく（A）である。",
@@ -729,7 +729,7 @@
                                 "マルチAZ\n1つのAZのみにRDSインスタンスを配置した場合、地震等の災害の影響でAZに障害が発生すると、RDSインスタンスも影響を受ける可能性があるため"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "RDSにおいて、マルチAZとread replicasの目的をそれぞれ答えよ",
@@ -1191,7 +1191,7 @@
                                 "マルチAZではリージョン全体の障害には対応できないから\n東京リージョンだとあくまで東京近郊あたりに限られそうですから、関東全域で大きなダメージを追うような大規模災害時の対策としては心もとない"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "分散サービス妨害 (DDoS) に対する保護サービスを答えよ",
@@ -1868,7 +1868,7 @@
                                 "棘皮動物"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -2356,7 +2356,7 @@
                                 "4"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "卵細胞の極体が生じるのは動物極側か、植物極側か。",
@@ -2408,43 +2408,6 @@
                             "problem": "A class of steroid hormones that regulate salt and water balance are called mineralocorticoids.",
                             "answer": [
                                 "鉱質コルチコイド"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        }
-                    ]
-                },
-                {
-                    "name": "metabolism 光合成",
-                    "questions": [
-                        {
-                            "problem": "各波長の光に対する光合成効率のグラフをなんという？",
-                            "answer": [
-                                "作用スペクトル"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "吸収スペクトルと作用スペクトルの横軸はともになにか？",
-                            "answer": [
-                                "光の波長(nm)"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "空気を抜いた状態で光合成で発生するO2の由来を調べる実験は？結論：O2は水由来だと判明。",
-                            "answer": [
-                                "ヒルの実験"
-                            ],
-                            "memo": "",
-                            "is_correct": false
-                        },
-                        {
-                            "problem": "脂肪酸からアセチルCoAを作る反応",
-                            "answer": [
-                                "β酸化"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2590,7 +2553,7 @@
                                 "blue"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "種子の発芽を抑制する植物ホルモンは？",
@@ -2674,7 +2637,7 @@
                                 "C=極性移動"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "茎と根のオーキシンに対する感受性について、茎の方が根よりオーキシンに対する感受性が（A）い。",
@@ -2699,7 +2662,7 @@
                                 "二酸化炭素"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "（A）状態になると葉内ではアブシシン酸の濃度が高まり、気孔を閉じて水分の損失を抑えようとする。",
@@ -2803,6 +2766,104 @@
                             "is_correct": false
                         }
                     ]
+                },
+                {
+                    "name": "metabolism catabolism",
+                    "questions": []
+                },
+                {
+                    "name": "metabolism anabolism 光合成",
+                    "questions": [
+                        {
+                            "problem": "各波長の光に対する光合成効率のグラフをなんという？",
+                            "answer": [
+                                "作用スペクトル"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "吸収スペクトルと作用スペクトルの横軸はともになにか？",
+                            "answer": [
+                                "光の波長(nm)"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "空気を抜いた状態で光合成で発生するO2の由来を調べる実験は？結論：O2は水由来だと判明。",
+                            "answer": [
+                                "ヒルの実験"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "脂肪酸からアセチルCoAを作る反応",
+                            "answer": [
+                                "β酸化"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "光合成での反応は大きく二つに分けることができる。①（A）での反応。②（B）での反応",
+                            "answer": [
+                                "チラコイド",
+                                "ストロマ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "光合成色素は、太陽や電球などの光を吸収すると、活性化状態になります。 光合成色素が光を吸収する反応を、（A）といいます。",
+                            "answer": [
+                                "光化学反応"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "光合成色素には、クロロフィルa、クロロフィルb、カロテン、キサントフィルなどの種類がありました。 これらは別々の物質ですが、活性化されると、すべて（A）となります。",
+                            "answer": [
+                                "活性化クロロフィルa"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "C4回路を夜間、C3回路を昼間に行う植物を何という？",
+                            "answer": [
+                                "CAM植物"
+                            ],
+                            "memo": "\n",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "カルビン・ベンソン回路の1番目の反応では、（A）が生成されます。",
+                            "answer": [
+                                "PGA"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "植物中のRuBisCOは、C3回路の1番目の反応で、空気中からCO2を取り込む働きする。 しかし、RuBisCOは、強光下では（A）",
+                            "answer": [
+                                "二酸化炭素ではなく、酸素を取り込んでしまう"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "C3植物は、強い光の中では枯れてしまう。この理由についてRubiscoという単語を用いて説明",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
@@ -2889,7 +2950,7 @@
                                 "MACアドレスからIPアドレスを求める"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "わかりそうでわからないのサイトでMPUは何と例えている？",
@@ -2903,6 +2964,14 @@
                             "problem": "MTU(Maximum Transmission Unit)とは",
                             "answer": [
                                 "通信用に細切れにしたデータの大きさ制限で「これくらいの大きさの細切れデータなら通れるよ（送れるよ）」な最大値のこと"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "どうしてRARPプロトコルが必要なのか",
+                            "answer": [
+                                "機器は電源を入れた時、自分のMACアドレスは知っている。\nでもネットワークで通信するためには、IPアドレスが必要。"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2931,7 +3000,7 @@
                             "is_correct": false
                         },
                         {
-                            "problem": "TCP/IPネットワークで用いられるプロトコルは、大きくわけて2つに分類できます。それらは？",
+                            "problem": "TCP/IPネットワークで用いられるルーティングプロトコルは、大きくわけて2つに分類できます。それらは？",
                             "answer": [
                                 "IGP\nEGP"
                             ],
@@ -3694,7 +3763,7 @@
                                 "vienna"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "He was huffing and puffing after carrying all those heavy boxes upstairs.",
@@ -4311,7 +4380,7 @@
                                 "極秘"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "私は英語が堪能です。 fluentを使用する。",
@@ -4535,7 +4604,7 @@
                                 "友人に嘘をついた後、彼は罪悪感に苛まれた。\npang:心の苦痛"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "She felt a pang of pain in her stomach after eating that spicy food.",
@@ -4639,12 +4708,28 @@
                                 "私たちは掛け算のやり方を学んでいます"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "After much thought, she decided to egress from the committee.",
                             "answer": [
                                 "彼女はよく考えた後、委員会を離れることに決めました。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "dicotyledon",
+                            "answer": [
+                                "双子葉植物"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ammunition",
+                            "answer": [
+                                "弾丸"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -5858,6 +5943,38 @@
                             "problem": "ディナルアルプス山脈の場所はどこ？",
                             "answer": [
                                 ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "チベット高原はどの場所にある。想像する",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "イヌイットは（A）と呼ばれる住居で生活。",
+                            "answer": [
+                                "イグルー"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "アウトストラーダ・デル・ソーレとは？",
+                            "answer": [
+                                "イタリア最長の高速道路"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "tradewindのふくむきの覚え方",
+                            "answer": [
+                                "trade -> touzai\n\n両方tから始まる"
                             ],
                             "memo": "",
                             "is_correct": false
