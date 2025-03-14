@@ -399,7 +399,7 @@
                                 "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を停止する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ELBにおいて複数のアベイラビリティーゾーンに設置された複数のEC2インスタンスに着信要求を均等に分散する機能をなんというか？",
@@ -4390,7 +4390,7 @@
                                 "何もあなたが望んでいた通りにはならない。(期待通りのものは何もありません)"
                             ],
                             "memo": "\"quite\"（副詞）：「完全に」「まったく」\n\"what you'd hope it would be\"\n\"what\"（関係代名詞）：「～であるもの」\n\"you'd hope\" = \"you would hope\"（あなたが望む）\n\"it would be\"（それが～である）",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The savagery of the battlefield was unlike anything he had experienced before",
@@ -4596,6 +4596,14 @@
                             "problem": "We are learning how to do multiplication.",
                             "answer": [
                                 "私たちは掛け算のやり方を学んでいます"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "After much thought, she decided to egress from the committee.",
+                            "answer": [
+                                "彼女はよく考えた後、委員会を離れることに決めました。\n"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -5843,7 +5851,16 @@
             "subcategories": [
                 {
                     "name": "m ",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "減価償却",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
                 }
             ]
         },
