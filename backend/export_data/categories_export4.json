@@ -1544,6 +1544,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "markovnikov’s rule",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2313,6 +2321,31 @@
                             "problem": "染色体上における遺伝子の占める位置を何という？",
                             "answer": [
                                 "遺伝子座"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "減数分裂において、相同染色体同士の接着を何という",
+                            "answer": [
+                                "対合"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "相同染色体が対合してできたものを何という？",
+                            "answer": [
+                                "ニカ染色体"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "減数分裂の過程を二つの名前に分けることができる。それぞれ答えよ",
+                            "answer": [
+                                "第一文列",
+                                "第二分裂"
                             ],
                             "memo": "",
                             "is_correct": false
