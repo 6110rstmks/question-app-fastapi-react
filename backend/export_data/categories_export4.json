@@ -1869,6 +1869,16 @@
                             ],
                             "memo": "",
                             "is_correct": true
+                        },
+                        {
+                            "problem": "体腔3種類",
+                            "answer": [
+                                "偽体腔",
+                                "真体腔",
+                                "無体腔"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2336,7 +2346,7 @@
                         {
                             "problem": "相同染色体が対合してできたものを何という？",
                             "answer": [
-                                "ニカ染色体"
+                                "ニ価染色体Bivalent"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2671,6 +2681,14 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "静止中心quiescent centeの働き",
+                            "answer": [
+                                "コルメラ始原細胞の分化を抑制し、根端分裂組織を維持する"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2761,6 +2779,39 @@
                             "problem": "筋肉の明帯は（A）フィラメントからなる部分",
                             "answer": [
                                 "アクチン"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "筋肉の収縮時に明帯、暗帯、サルコメアのうち、長さが変わらないものはどれか。",
+                            "answer": [
+                                "暗帯"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "骨格筋、心筋、平滑筋のうち核が多核のものはどれか？",
+                            "answer": [
+                                "骨格筋"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "興奮がニューロンの軸索末端まで伝導してくると、（）が放出され、（）は筋繊維の受容体に結合して、興奮の伝達が起こる。",
+                            "answer": [
+                                "アセチルコリン"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ATPは筋肉中に貯蔵できる量が限られているため、貯蔵を超えて合成された分は（A）や（B）という形態で蓄えられる",
+                            "answer": [
+                                "クレアチンリン酸",
+                                "グリコーゲン"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2859,6 +2910,19 @@
                             "problem": "C3植物は、強い光の中では枯れてしまう。この理由についてRubiscoという単語を用いて説明",
                             "answer": [
                                 ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "metabolism",
+                    "questions": [
+                        {
+                            "problem": "respirationの酸化的リン酸化は有機物の酸化を駆動としてADPにリン酸をつけているのに対して、光リン酸化では（A）を駆動力としてADPにリン酸をつけている。",
+                            "answer": [
+                                "光"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4620,7 +4684,7 @@
                                 "探偵小説"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The company has a subsidiary in Japan",
@@ -4730,6 +4794,46 @@
                             "problem": "ammunition",
                             "answer": [
                                 "弾丸"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "myriapoda",
+                            "answer": [
+                                "多足動物\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "echinoderm",
+                            "answer": [
+                                "棘皮動物"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "loss aversion",
+                            "answer": [
+                                "損失回避"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "My company needs to comply with the newly-enacted environmental laws.",
+                            "answer": [
+                                "「私の会社は、新たに制定された環境法に従う必要がある。」\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "skeletal muscle",
+                            "answer": [
+                                "骨格筋"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -5872,7 +5976,7 @@
                                 "100"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "地中海性気候はどのようなアルファベットで表す？",
