@@ -12,6 +12,7 @@ from fastapi.responses import FileResponse
 import os
 from git import Repo
 from src import data_io
+import zipfile
 
 
 DbDependency = Annotated[Session, Depends(get_db)]
@@ -82,25 +83,85 @@ async def find_category_by_id(
 async def create(db: DbDependency, category_create: CategoryCreate):
     return category_cruds.create(db, category_create)
 
-@router.get("/export", response_class=FileResponse)
-async def get_exported_json(db: DbDependency):
+# @router.get("/export", response_class=FileResponse)
+# async def get_exported_json(db: DbDependency):
     
-    EXPORT_DIR = "export_data" 
-    FILE_NAME = "categories_export4.json"
+#     EXPORT_DIR = "export_data" 
+#     FILE_NAME = "categories_export4.json"
 
-    # ディレクトリが存在しない場合は作成
-    os.makedirs(EXPORT_DIR, exist_ok=True)
-    FILE_PATH = os.path.join(EXPORT_DIR, FILE_NAME)
+#     # ディレクトリが存在しない場合は作成
+#     os.makedirs(EXPORT_DIR, exist_ok=True)
+#     FILE_PATH = os.path.join(EXPORT_DIR, FILE_NAME)
     
+#     EXPORT_DIR = os.path.abspath("export_data")
+#     data_io.export_to_json(db, FILE_PATH)
+#     git_push_json_file()
+#     # Check if the file exists
+#     if not os.path.exists(FILE_PATH):
+#         return {"error": "File not found"}
+    
+#     # Return the file as a response
+#     return FileResponse(FILE_PATH, media_type="application/json", filename="categories_export4.json")
+
+# @router.get("/export", response_class=FileResponse)
+# async def get_exported_json(db: DbDependency):
+#     EXPORT_DIR = os.path.abspath("export_data")  # ← ディレクトリパスを作る
+#     FILE_NAME = "categories.csv"
+
+#     # ディレクトリを作成
+#     os.makedirs(EXPORT_DIR, exist_ok=True)
+#     # ファイル出力処理
+#     # export_models_to_csv には「ディレクトリパス」を渡すべき！
+#     data_io.export_models_to_csv(db, EXPORT_DIR)
+
+#     # 作成された CSV ファイルのフルパス
+#     FILE_PATH = os.path.join(EXPORT_DIR, FILE_NAME)
+#     print(FILE_PATH)
+
+#     # Check if the file exists
+#     if not os.path.exists(FILE_PATH):
+#         return {"error": "File not found"}
+
+#     # Return the file as a response
+#     return FileResponse(
+#         FILE_PATH,
+#         media_type="text/csv",
+#         filename="categories.csv"
+#     )
+
+@router.get("/export", response_class=FileResponse)
+async def get_exported_zip(db: DbDependency):
     EXPORT_DIR = os.path.abspath("export_data")
-    data_io.export_to_json(db, FILE_PATH)
-    git_push_json_file()
-    # Check if the file exists
-    if not os.path.exists(FILE_PATH):
-        return {"error": "File not found"}
-    
-    # Return the file as a response
-    return FileResponse(FILE_PATH, media_type="application/json", filename="categories_export4.json")
+    ZIP_FILE_NAME = "backup_self_made_app.zip"
+    ZIP_FILE_PATH = os.path.join(EXPORT_DIR, ZIP_FILE_NAME)
+
+    # 出力ディレクトリ作成
+    os.makedirs(EXPORT_DIR, exist_ok=True)
+
+    # CSVファイル出力（categories.csv と subcategories.csv）
+    data_io.export_models_to_csv(db, EXPORT_DIR)
+
+    # ZIPファイル作成
+    with zipfile.ZipFile(ZIP_FILE_PATH, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        categories_csv = os.path.join(EXPORT_DIR, 'categories.csv')
+        subcategories_csv = os.path.join(EXPORT_DIR, 'subcategories.csv')
+
+        # ファイルが存在するかチェック（念のため）
+        if os.path.exists(categories_csv):
+            zipf.write(categories_csv, arcname='categories.csv')
+        if os.path.exists(subcategories_csv):
+            zipf.write(subcategories_csv, arcname='subcategories.csv')
+
+    # ZIPファイルが無い場合はエラー
+    if not os.path.isfile(ZIP_FILE_PATH):
+        return {"error": f"ZIP file not found at {ZIP_FILE_PATH}"}
+
+    # ZIPファイルを返す
+    return FileResponse(
+        ZIP_FILE_PATH,
+        media_type="application/zip",
+        filename=ZIP_FILE_NAME
+    )
 
 #    # ZIPファイルのパス
 #     zip_path = "files.zip"
