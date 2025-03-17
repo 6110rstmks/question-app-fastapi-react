@@ -1676,7 +1676,7 @@
                                 "同調分裂する"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "（A）が濃度勾配をを作り、動物極側（予定外胚葉側）に作用して中胚葉を誘導する",
@@ -2440,6 +2440,30 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "ヒトの場合、相同染色体は何組存在している？",
+                            "answer": [
+                                "23"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ヒトの場合染色体構成はどのように表現できる？",
+                            "answer": [
+                                "2n = 46"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "二価染色体を合成する染色体の間で交さが起こり、染色体の一部が交換されることを何という？",
+                            "answer": [
+                                "乗り換え"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2729,6 +2753,23 @@
                             ],
                             "memo": "",
                             "is_correct": false
+                        },
+                        {
+                            "problem": "落葉と落果を促進する植物ホルモンは？",
+                            "answer": [
+                                "エチレン"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "落葉と落果を抑制する植物ホルモンは？",
+                            "answer": [
+                                "オーキシン",
+                                "ブラシノステロイド"
+                            ],
+                            "memo": "",
+                            "is_correct": false
                         }
                     ]
                 },
@@ -2963,6 +3004,20 @@
                             "problem": "respirationの酸化的リン酸化は有機物の酸化を駆動としてADPにリン酸をつけているのに対して、光リン酸化では（A）を駆動力としてADPにリン酸をつけている。",
                             "answer": [
                                 "光"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        }
+                    ]
+                },
+                {
+                    "name": "physiology 動物の行動",
+                    "questions": [
+                        {
+                            "problem": "動物の行動は二種類に分別できる。なにとなに？",
+                            "answer": [
+                                "生得的行動\n",
+                                "習得的行動"
                             ],
                             "memo": "",
                             "is_correct": false
