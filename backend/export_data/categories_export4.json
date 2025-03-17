@@ -865,7 +865,7 @@
                                 "ゲートウェイ型とインターフェース型"
                             ],
                             "memo": "",
-                            "is_correct": true
+                            "is_correct": false
                         },
                         {
                             "problem": "vpcエンドポイントのゲートウェイ型では二つのサービスのみが対応している。それらを答えよ",
@@ -881,7 +881,7 @@
                                 "PrivateLink"
                             ],
                             "memo": "",
-                            "is_correct": true
+                            "is_correct": false
                         },
                         {
                             "problem": "vpcエンドポイントのゲートウェイ型を使用したいケースを一つ答えよ",
@@ -889,7 +889,7 @@
                                 "アプリケーション(EC2)がVPC内にデプロイされており、Amazon S3に頻繁にデータをアップロードまたはダウンロードする。"
                             ],
                             "memo": "",
-                            "is_correct": true
+                            "is_correct": false
                         },
                         {
                             "problem": "VPCエンドポイントの説明について。VPCとその他のAWSサービスを（A)接続できるサービス。",
@@ -936,6 +936,14 @@
                             "problem": "S3 バケットで公開しているコンテンツを、CloudFront からのアクセスのみに制限するための機能を何という",
                             "answer": [
                                 "Origin Access Identity (OAI)\nまたはOrigin Access Control (OAC)"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "cloudfrontディストリビュションへのアクセス情報（アクセス元IP,リクエストURL、日時）を最低一年以上保存するためのサービス機能はなにか？",
+                            "answer": [
+                                "cloudfrontアクセスログ"
                             ],
                             "memo": "",
                             "is_correct": false
