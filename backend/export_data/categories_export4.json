@@ -1635,12 +1635,12 @@
                                 "卵割cleavage"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
-                            "problem": "カエルの前後軸の決定は　受精時に対して  ショウジョウバエの前後軸の決定は（A）である。",
+                            "problem": "カエルの前後軸の決定とショウジョウバエの前後軸の決定はそれぞれいつか。",
                             "answer": [
-                                "受精前"
+                                "カエルの前後軸の決定→ 受精時\nショウジョウバエの前後軸の決定→受精前"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -1722,6 +1722,22 @@
                             "problem": "卵形成に関して卵原細胞から最後の卵までの細胞のDNA量の変化をグラフで描いて",
                             "answer": [
                                 "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "ノギンやコーディンはどこから分泌されるのか？",
+                            "answer": [
+                                "原口背唇"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "卵割を英語で",
+                            "answer": [
+                                "cleavage\n/ˈkliːvɪdʒ/"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2354,7 +2370,7 @@
                         {
                             "problem": "染色体上における遺伝子の占める位置を何という？",
                             "answer": [
-                                "遺伝子座"
+                                "遺伝子座Locus"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -5381,7 +5397,7 @@
                                 "RISC"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "複雑な処理を一度の命令で行えるので、多様な作業を効率的にこなせるのはCISC？RISC？",
@@ -5548,7 +5564,7 @@
                                 "6R"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "2つの電荷にはたらく クーロン力F は、 距離の2乗に（A） し、 電気量の積に（B) するのですね。",
