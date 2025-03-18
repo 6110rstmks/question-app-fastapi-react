@@ -1865,7 +1865,8 @@
                         {
                             "problem": "原生動物の例2",
                             "answer": [
-                                "ゾウリムシ　アメーバ"
+                                "ゾウリムシ　",
+                                "アメーバ"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2004,6 +2005,15 @@
                             "problem": "酸素解離度曲線を英語で答えよ",
                             "answer": [
                                 "oxygen-hemoglobin dissociation curve"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "酸素解離度曲線の横軸と縦軸について答えて、",
+                            "answer": [
+                                "横軸→酸素濃度",
+                                "縦軸→酸素ヘモグロビンの割合"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4477,7 +4487,7 @@
                                 "中尉"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The cowboys roundup the cattle in the evening. ",
@@ -4733,7 +4743,7 @@
                                 "彼は剣を見事に操る。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "The sponge is porous and absorbs water quickly",
@@ -6121,7 +6131,7 @@
                                 "吸い上げられる"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "隔海度とは？",
