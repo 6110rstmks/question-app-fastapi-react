@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
 
     const handleJsonExport = async () => {    
         try {
-            const response = await fetch("http://localhost:8000/categories/export", {
+            const response = await fetch("http://localhost:8000/categories/export/json", {
                 method: "GET",
             });
     
@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
             // ファイル名を設定（バックエンド側で指定した名前と一致させる）
             // link.download = "categories.csv";
             // link.download = "backup_self_made_app.zip";
-            link.download = "backup_self_made_app.zip";
+            link.download = "categories_export4.json";
 
     
             // ダウンロードをトリガー
@@ -51,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
 
     const handleCSVExport = async () => {    
         try {
-            const response = await fetch("http://localhost:8000/categories/export", {
+            const response = await fetch("http://localhost:8000/categories/export/csv", {
                 method: "GET",
             });
     
@@ -108,9 +108,11 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
                         Data Import
                         <div className={styles.tooltip}>システム特有のjsonファイルをインポートすることでデータの引き継ぎができます。</div>
                     </Link>
-                    <div className={styles.clickable} onClick={handleJsonExport}>
+                    <div className={styles.clickable} >
                         Data Export to Local & Github
-                        <div className={styles.tooltip}>githubにデータを保管します。</div>
+                        <div className={styles.tooltip} onClick={handleJsonExport}>JSONでexport</div>
+                        <div className={styles.tooltip2} onClick={handleCSVExport}>CSVでexport</div>
+
                     </div>
                     <Link to="/report_page">回答レポートを表示</Link>
                 </>

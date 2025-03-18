@@ -1,3 +1,5 @@
+import csv
+import os
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from models2 import Category, CategoryQuestion, Subcategory, Question, SubcategoryQuestion
@@ -5,8 +7,6 @@ import json
 from fastapi import HTTPException, UploadFile
 from cruds import category_crud as category_cruds
 
-import csv
-import os
 
 # 詳細はdocument/data_import_export.mdを参照
 def export_to_json(db: Session, file_path: str):
@@ -44,7 +44,7 @@ def export_to_json(db: Session, file_path: str):
     with open(file_path, "w", encoding="utf-8") as jsonfile:
         json.dump(data, jsonfile, indent=4, ensure_ascii=False)
 
-def export_models_to_csv(db: Session, output_dir: str):
+def export_data_to_csv(db: Session, output_dir: str):
     """
     各モデルを別々のCSVファイルにエクスポートする関数
     1. categories.csv - カテゴリ情報
@@ -90,53 +90,53 @@ def export_models_to_csv(db: Session, output_dir: str):
     
     print(f"Subcategories exported to {subcategories_path}")
     
-    # # 3. 質問をエクスポート
-    # questions_path = os.path.join(output_dir, 'questions.csv')
-    # with open(questions_path, 'w', newline='', encoding='utf-8') as csvfile:
-    #     csv_writer = csv.writer(csvfile)
-    #     csv_writer.writerow(['id', 'problem', 'answer', 'memo', 'is_correct', 
-    #                         'answer_count', 'last_answered_date'])
+    # 3. 質問をエクスポート
+    questions_path = os.path.join(output_dir, 'questions.csv')
+    with open(questions_path, 'w', newline='', encoding='utf-8') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(['id', 'problem', 'answer', 'memo', 'is_correct', 
+                            'answer_count', 'last_answered_date'])
         
-    #     questions = db.query(Question).all()
-    #     for question in questions:
-    #         # ARRAY型のanswerをCSV用に文字列に変換
-    #         answer_str = ';'.join(question.answer) if question.answer else ''
+        questions = db.query(Question).all()
+        for question in questions:
+            # ARRAY型のanswerをCSV用に文字列に変換
+            answer_str = ';'.join(question.answer) if question.answer else ''
             
-    #         csv_writer.writerow([
-    #             question.id,
-    #             question.problem,
-    #             answer_str,
-    #             question.memo or '',
-    #             question.is_correct,
-    #             question.answer_count,
-    #             question.last_answered_date.isoformat() if question.last_answered_date else ''
-    #         ])
+            csv_writer.writerow([
+                question.id,
+                question.problem,
+                answer_str,
+                question.memo or '',
+                question.is_correct,
+                question.answer_count,
+                question.last_answered_date.isoformat() if question.last_answered_date else ''
+            ])
     
-    # print(f"Questions exported to {questions_path}")
+    print(f"Questions exported to {questions_path}")
     
-    # # 4. カテゴリ・質問の関連をエクスポート
-    # category_question_path = os.path.join(output_dir, 'category_question.csv')
-    # with open(category_question_path, 'w', newline='', encoding='utf-8') as csvfile:
-    #     csv_writer = csv.writer(csvfile)
-    #     csv_writer.writerow(['category_id', 'question_id'])
+    # 4. カテゴリ・質問の関連をエクスポート
+    category_question_path = os.path.join(output_dir, 'categories_questions.csv')
+    with open(category_question_path, 'w', newline='', encoding='utf-8') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(['category_id', 'question_id'])
         
-    #     category_questions = db.query(CategoryQuestion).all()
-    #     for cq in category_questions:
-    #         csv_writer.writerow([cq.category_id, cq.question_id])
+        category_questions = db.query(CategoryQuestion).all()
+        for cq in category_questions:
+            csv_writer.writerow([cq.category_id, cq.question_id])
     
-    # print(f"CategoryQuestion relationships exported to {category_question_path}")
+    print(f"CategoryQuestion relationships exported to {category_question_path}")
     
-    # # 5. サブカテゴリ・質問の関連をエクスポート
-    # subcategory_question_path = os.path.join(output_dir, 'subcategory_question.csv')
-    # with open(subcategory_question_path, 'w', newline='', encoding='utf-8') as csvfile:
-    #     csv_writer = csv.writer(csvfile)
-    #     csv_writer.writerow(['subcategory_id', 'question_id'])
+    # 5. サブカテゴリ・質問の関連をエクスポート
+    subcategory_question_path = os.path.join(output_dir, 'subcategories_questions.csv')
+    with open(subcategory_question_path, 'w', newline='', encoding='utf-8') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(['subcategory_id', 'question_id'])
         
-    #     subcategory_questions = db.query(SubcategoryQuestion).all()
-    #     for sq in subcategory_questions:
-    #         csv_writer.writerow([sq.subcategory_id, sq.question_id])
+        subcategory_questions = db.query(SubcategoryQuestion).all()
+        for sq in subcategory_questions:
+            csv_writer.writerow([sq.subcategory_id, sq.question_id])
     
-    # print(f"SubcategoryQuestion relationships exported to {subcategory_question_path}")
+    print(f"SubcategoryQuestion relationships exported to {subcategory_question_path}")
     
     print(f"All data exported to {output_dir}")
     

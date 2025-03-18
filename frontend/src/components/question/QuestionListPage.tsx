@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './QuestionListPage.module.css'
 import { handleNavigateToQuestionPage } from "../../utils/navigate_function"
 import { useNavigate } from "react-router-dom"
@@ -54,7 +55,17 @@ const QuestionListPage = () => {
                                 <div>問題：</div>{question.problem}
                             </div>
                             <div>
-                                <div>解答：</div>{question.answer}
+                                <div>解答：</div>
+                                {question?.answer.map((answer, index) => (
+                                    <div key={index}>
+                                        {answer.split('\n').map((line, i) => (
+                                        <React.Fragment key={i}>
+                                            {line}
+                                            <br />
+                                        </React.Fragment>
+                                        ))}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}
