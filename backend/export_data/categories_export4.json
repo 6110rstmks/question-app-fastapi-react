@@ -657,7 +657,8 @@
                         {
                             "problem": "transit gatewayには二つの部品がある。なにとなにか。",
                             "answer": [
-                                "transit gateway アタッチメントとtransit gatewayルートテーブル"
+                                "transit gateway アタッチメント",
+                                "transit gatewayルートテーブル"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -802,7 +803,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "glaicertはデフォルトで保存データを暗号化しているサービスか？",
+                            "problem": "glaicerはデフォルトで保存データを暗号化しているサービスか？",
                             "answer": [
                                 "YES"
                             ],
@@ -1601,7 +1602,7 @@
                                 ""
                             ],
                             "memo": "脂肪の水素添加という意味です。日本語ではよく「脂肪の水素化」や「油脂の硬化」と訳されます。\n\n簡単に説明すると…\n植物油や動物脂肪に水素（H₂）を添加して、化学的に安定させたり、固体化したりするプロセスのこ",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 }
@@ -2196,7 +2197,7 @@
                                 "×\nスプライシングは真核生物のみで行われる。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "スプライシングにおいて除去される配列の名称をなんという？",
@@ -2857,7 +2858,7 @@
                                 "免疫グロブリン"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "様々な種類のリンパ球はすべて（A）に由来する",
@@ -3036,7 +3037,7 @@
                                 "習得的行動"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 }
@@ -4098,7 +4099,7 @@
                                 "刺激物"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Digital watermarking",
@@ -4202,7 +4203,7 @@
                                 "緊急脱出口のegressががれきで塞がれていた。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "We need to egress the building quickly in case of an emergency.",
@@ -4907,7 +4908,7 @@
                                 "弾丸"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "myriapoda",
@@ -5792,7 +5793,7 @@
                                 "Precambrian"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ラトソルの栄養は多いか少ないか？",
@@ -5941,7 +5942,7 @@
                                 "モナドック"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "気温の年較差を考える時の3つのポイント",
