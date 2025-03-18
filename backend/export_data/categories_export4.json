@@ -107,7 +107,8 @@
                         {
                             "problem": "VPC間で接続する方法は二つを答えて",
                             "answer": [
-                                "VPC ピアリング接続、transit gateway"
+                                "VPC ピアリング接続",
+                                "transit gateway"
                             ],
                             "memo": "",
                             "is_correct": true
@@ -261,7 +262,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "インターネットは何にアタッチするか？またNATゲートウェイは何にアタッチするか",
+                            "problem": "インターネットゲートウェイは何にアタッチするか？またNATゲートウェイは何にアタッチするか",
                             "answer": [
                                 "インターネットゲートウェイ→VPC",
                                 "NATゲートウェイ→AZ"
@@ -808,7 +809,7 @@
                                 "YES"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ミリ秒単位で瞬時にデータが取得可能なglacierの種類は何か？",
@@ -1717,7 +1718,7 @@
                                 "3"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "卵形成に関して卵原細胞から最後の卵までの細胞のDNA量の変化をグラフで描いて",
@@ -1940,7 +1941,7 @@
                                 "収縮胞によって体内にはいってくる水分を常に放出"
                             ],
                             "memo": "aa",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -1994,7 +1995,7 @@
                         {
                             "problem": "酸素解離度曲線が左にシフトすると酸素と結合しやすくなるか。結合しにくくなるか。ネットで曲線を検索して図を見て答えて",
                             "answer": [
-                                "結合しやすくなる。\n理由は、酸素濃度が同じであるのに対して、HbO2の割合が増えるから。"
+                                "結合しやすくなる。\n理由は、ある定数の酸素濃度を確認した際に、酸素濃度が同じであるのに対して、HbO2の割合が増えるから。"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -2077,7 +2078,7 @@
                                 "神経索"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "中枢神経系に向けて情報を伝える神経を何という？",
@@ -2569,7 +2570,7 @@
                                 "熱エネルギー"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -2777,7 +2778,7 @@
                                 "エチレン"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "落葉と落果を抑制する植物ホルモンは？",
@@ -3819,7 +3820,7 @@
                                 "たいてい彼らは来ないと思っているときに来る"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "reindeer",
@@ -4348,7 +4349,7 @@
                                 "浮動小数点"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "hyposulfite",
@@ -4740,7 +4741,7 @@
                                 "そのスポンジは多孔性があり、水を速く吸います。\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "His eyes were strangely compelling",
@@ -5851,7 +5852,7 @@
                                 "熱帯多雨林気候"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "ラトソルの色は何色？",
@@ -6161,7 +6162,7 @@
                                 ""
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "チベット高原はどの場所にある。想像する",
