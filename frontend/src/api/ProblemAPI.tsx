@@ -1,4 +1,4 @@
-export const setProblem = async (
+export const fetchProblem = async (
     selectedType: string,
     incorrectedOnlyFlgChecked: boolean,
     problemCnt: number,

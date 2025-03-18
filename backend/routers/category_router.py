@@ -11,7 +11,7 @@ from config import PAGE_SIZE
 from fastapi.responses import FileResponse
 import os
 from git import Repo
-from src import data_io
+from src import data_io_json
 import zipfile
 
 
@@ -94,7 +94,7 @@ async def get_exported_json(db: DbDependency):
     FILE_PATH = os.path.join(EXPORT_DIR, FILE_NAME)
     
     EXPORT_DIR = os.path.abspath("export_data")
-    data_io.export_to_json(db, FILE_PATH)
+    data_io_json.export_to_json(db, FILE_PATH)
     git_push_json_file()
     # Check if the file exists
     if not os.path.exists(FILE_PATH):
@@ -139,7 +139,7 @@ async def get_exported_zip(db: DbDependency):
     os.makedirs(EXPORT_DIR, exist_ok=True)
 
     # CSVファイル出力（categories.csv と subcategories.csv）
-    data_io.export_data_to_csv(db, EXPORT_DIR)
+    data_io_json.export_data_to_csv(db, EXPORT_DIR)
 
     # ZIPファイル作成
     with zipfile.ZipFile(ZIP_FILE_PATH, 'w', zipfile.ZIP_DEFLATED) as zipf:
@@ -190,7 +190,7 @@ async def upload_json(
     file: UploadFile,
     db: Session = Depends(get_db),
 ):
-    return await data_io.import_json_file(db, file)
+    return await data_io_json.import_json_file(db, file)
 
 def git_push_json_file():
     EXPORT_DIR = os.path.abspath("export_data")

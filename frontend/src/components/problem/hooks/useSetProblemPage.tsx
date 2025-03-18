@@ -4,7 +4,7 @@ import { Subcategory } from '../../../types/Subcategory';
 import { CategoryWithQuestionCount } from '../../../types/Category'
 import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesWithQuestionCountByCategoryId } from '../../../api/SubcategoryAPI'
-import { setProblem } from '../../../api/ProblemAPI'
+import { fetchProblem } from '../../../api/ProblemAPI'
 
 const useSetProblemPage = () => {
     const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(false);
@@ -43,7 +43,7 @@ const useSetProblemPage = () => {
             return;
         }
 
-        const response = await setProblem(selectedType, incorrectedOnlyFlgChecked, problemCnt, selectedCategoryIds)
+        const response = await fetchProblem(selectedType, incorrectedOnlyFlgChecked, problemCnt, selectedCategoryIds)
 
         if (!response.ok) {
             const errorData = await response.json();

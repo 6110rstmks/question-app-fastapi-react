@@ -130,3 +130,8 @@ setproblempage.tsxに今日解いた問題数を表示させる。
 
 <!--  -->
 problemnormal.page.tsxからquestion editをできるようにする。
+
+<!--  -->
+もんだいタイプをつける。
+穴ぬけ問題→ lv1
+自分で文章で答える→lv2

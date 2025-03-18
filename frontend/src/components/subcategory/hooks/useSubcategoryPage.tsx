@@ -5,7 +5,7 @@ import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
 import { handleKeyDown } from '../../../utils/function';
-import { setProblem } from '../../../api/ProblemAPI';
+import { fetchProblem } from '../../../api/ProblemAPI';
 interface locationState {
     categoryId: number;
     categoryName: string;
@@ -52,7 +52,8 @@ export const useSubcategoryPage = (
     };
 
     const handleSetProblem = async () => {
-        const response = await setProblem('category', true, 7, [categoryInfo.id]);
+        // const response = await fetchProblem('category', true, 7, [categoryInfo.id]);
+        const response = await fetchProblem('subcategory', true, 7, [subcategoryId]);
         const problemData = await response.json();
         console.log(problemData)
         navigate('/problem', { state: problemData });
@@ -93,8 +94,6 @@ export const useSubcategoryPage = (
 
     // これはリロードした際に必要。
     useEffect(() => {
-        console.log('いいい')
-        console.log(location.state)
         if (location.state) {
             setCategoryInfo(location.state);
             localStorage.setItem('categoryInfo', JSON.stringify(location.state));
