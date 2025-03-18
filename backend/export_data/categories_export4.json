@@ -365,7 +365,7 @@
                             "is_correct": true
                         },
                         {
-                            "problem": "ストレージに特化したインスタンスタイプは？",
+                            "problem": "ストレージに特化したEC2インスタンスタイプは？",
                             "answer": [
                                 "l3enインスタンスタイプ"
                             ],
@@ -1514,7 +1514,7 @@
                                 "x = kとなる確率P(x=k)とする"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -4783,7 +4783,7 @@
                                 "イナゴ"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "He felt a pang of guilt after lying to his friend.",
@@ -5893,7 +5893,7 @@
                         {
                             "problem": "標高が高く、気温が同じ緯度に比べてもかなり低いという地域の気候のことを何という？",
                             "answer": [
-                                "高山気候"
+                                "高山気候Alpine climate"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -6217,7 +6217,48 @@
                         {
                             "problem": "ピレネー山脈どこにある？",
                             "answer": [
+                                "https://lh4.googleusercontent.com/proxy/yPIv85nrUDnRTj-zKOyiJAz8V6SNVD69aoHlnMeFt2uDRQqf2l6lZ4Ea8D6I8EHnURueVM063PCRbpAozE7HN8QjYDweOSmnLSxur29cRwo_GA"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "高山気候はケッペンの気候区分であるかいなか。",
+                            "answer": [
+                                "ではない。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "チベット高山はどこにあるか",
+                            "answer": [
                                 ""
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "リャマやアルパカなどから手に入れた毛皮で、防寒用の（A）と呼ばれる衣服などを作ります。",
+                            "answer": [
+                                "ポンチョ"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
+                            "answer": [
+                                "常春"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "山脈は二種類に分類できる。答えて",
+                            "answer": [
+                                "新期造山帯",
+                                "古期造山帯"
                             ],
                             "memo": "",
                             "is_correct": false
