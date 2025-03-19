@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
+import { Category } from "../../../types/Category";
 import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
 import styles from './ProblemNormal.module.css'
+import { handleNavigateToQuestionPage } from "../../../utils/navigate_function";
+import { useNavigate } from "react-router-dom"
+import { fetchCategoryQuestionByQuestionId } from "../../../api/CategoryQuestionAPI"
+import { fetchCategory } from "../../../api/CategoryAPI"
 
 interface Props {
     problem: Question
@@ -27,6 +32,7 @@ export const ProblemNormal: React.FC<Props> = ({
 }) => {
     const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
     const [localProblem, setLocalProblem] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
+    const [category, setCategory] = useState<Category>()
 
     const handleUpdateIsCorrect = async () => {
         await updateQuestionIsCorrect(localProblem!); // API コール
@@ -34,13 +40,26 @@ export const ProblemNormal: React.FC<Props> = ({
         setLocalProblem(updatedProblem); // 最新のデータをローカルに反映
     }
 
+    const navigate = useNavigate();
     useEffect(() => {
         setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
 
-        fetchSubcategoriesWithCategoryNameByQuestionId(problem.id).then((data) => {
-            console.log(data)
+        (async () => {
+            const data_category_question = await fetchCategoryQuestionByQuestionId(problem.id)
+
+            const data_category = await fetchCategory(data_category_question.category_id)
+            setCategory(data_category)
+
+
+
+            const data = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
             setSubcategoriesWithCategoryName(data);
-        })
+
+            
+    
+        })();
+
+
     }, [problem])
 
     return (
@@ -87,7 +106,13 @@ export const ProblemNormal: React.FC<Props> = ({
                     </div>
                 </div>
                 
-                <div className={styles.questionContent}>
+                <div className={styles.questionContent} 
+                    onClick={() => handleNavigateToQuestionPage(
+                        navigate, 
+                        localProblem.id, 
+                        category!.id, 
+                        category!.name, 
+                        subcategoriesWithCategoryName[0].id)}>
                     {localProblem.problem}
                 </div>
 

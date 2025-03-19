@@ -1,4 +1,6 @@
 import { SubcategoryWithQuestionCount } from "../types/Subcategory";
+import { Question } from "../types/Question";
+import { updateQuestionIsCorrect, fetchQuestion } from "../api/QuestionAPI";
 
 export const addSubcategory = (
     setSubcategories: React.Dispatch<React.SetStateAction<SubcategoryWithQuestionCount[]>>,
@@ -26,3 +28,12 @@ export const handleKeyDown = (
         setShowAnswer(prev => !prev);
     }
 };
+
+export const handleUpdateIsCorrect = async (
+    question: Question,
+    setQuestion: React.Dispatch<React.SetStateAction<Question | null>>
+) => {
+    await updateQuestionIsCorrect(question!); // API コール
+    const data = await fetchQuestion(question!.id); // データをリフレッシュ
+    setQuestion(data)
+}

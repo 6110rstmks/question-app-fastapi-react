@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.pool import StaticPool
 from sqlalchemy.orm import Session, sessionmaker
 from backend.models2 import Base, Item
-from schemass import DecodedToken
+from schemas import DecodedToken
 from main import app
 from database import get_db
 from backend.cruds.auth_crud import get_current_user
