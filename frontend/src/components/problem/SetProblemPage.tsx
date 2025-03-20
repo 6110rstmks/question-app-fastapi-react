@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import useSetProblemPage from './hooks/useSetProblemPage';
 import styles from './SetProblemPage.module.css';
+import Calendar from '../Calendar';
 
 const SetProblemPage: React.FC = () => {
     const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false)
+    const [isDisplayCalendar, setIsDisplayCalendar] = useState<boolean>(false)
+
+    const toggleCalendar = () => {
+        setIsDisplayCalendar(prev => !prev);
+    }
 
     const {
         categories,
@@ -22,7 +28,21 @@ const SetProblemPage: React.FC = () => {
 
     return (
         <div>
-            <button>カレンダーを表示</button>
+            <button onClick={toggleCalendar}>カレンダーを表示</button>
+
+            {/* Calendar Modal */}
+            {isDisplayCalendar && (
+                <div className={styles.modalOverlay}>
+                    <div className={styles.modalContent}>
+                        <button className={styles.closeButton} onClick={toggleCalendar}>
+                            ✕
+                        </button>
+                        <Calendar />
+                    </div>
+                </div>
+            )}
+
+
             <div className={styles.problemSelector}>
             
                 <p>The total number of Questions：509</p>

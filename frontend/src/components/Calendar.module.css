@@ -1,6 +1,7 @@
 /* カレンダー全体のスタイル */
 .calendar_container {
-    width: 320px;
+    width: 860px;
+    height: 779px;
     margin: 40px auto;
     padding: 16px;
     background-color: white;
@@ -42,7 +43,7 @@
   .calendar_grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
+    gap: 77px;
   }
   
   /* 日付セル */
@@ -65,4 +66,6 @@
     font-weight: bold;
     border-radius: 50%;
   }
+
+
   

@@ -1,6 +1,13 @@
 import csv
 import os
 from sqlalchemy.orm import Session
+import json
+import zipfile
+import tempfile
+from fastapi import UploadFile, HTTPException
+from models2 import Category, Subcategory, Question, CategoryQuestion, SubcategoryQuestion
+from cruds import category_crud as category_cruds
+
 
 
 def export_data_to_csv(db: Session, output_dir: str):
@@ -125,6 +132,7 @@ async def import_zip_file(db: Session, file: UploadFile):
         # ファイルパス
         categories_csv_path = os.path.join(tmp_dir, "categories.csv")
         subcategories_csv_path = os.path.join(tmp_dir, "subcategories.csv")
+        questions_csv_path = os.path.join(tmp_dir, "questions.csv")
 
         # ファイル存在チェック
         if not os.path.exists(categories_csv_path) or not os.path.exists(subcategories_csv_path):
