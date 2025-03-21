@@ -27,14 +27,9 @@ const Calendar: React.FC = () => {
 
     const handleSetProblemByDay = async (day: string) => {
         console.log(day)
-        const response = await fetchProblemByDay(day)
-
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message || 'Failed to create problems');
-        }
-        const problemData = await response.json();
-        navigate('/problem', { state: problemData });
+        const data = await fetchProblemByDay(day)
+        // const problemData = await response.json();
+        navigate('/problem', { state: data });
     }
 
 

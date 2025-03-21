@@ -32,7 +32,9 @@ export const fetchCategories = async ({
 };
 
 // ChangeCategorySubcategoryModalで使用するAPI
-export const fetchCategoriesBySearchWord = async (searchWord: string): Promise<Category[]> => {
+export const fetchCategoriesBySearchWord = async (
+    searchWord: string
+): Promise<Category[]> => {
     const url = `http://localhost:8000/categories/search?search_word=${searchWord}`
     const response = await fetch(url, {
         method: 'GET',

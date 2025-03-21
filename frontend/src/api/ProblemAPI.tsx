@@ -17,7 +17,6 @@ export const fetchProblem = async (
             category_ids: selectedCategoryIds
         }),
     });
-
     return response
 }
 
@@ -30,10 +29,12 @@ export const fetchProblemByDay = async (
         headers: {
             'Content-Type': 'application/json',
         }
-        // body: JSON.stringify({ 
-        //     day: day
-        // }),
     })
 
-    return response
+    if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to create problems');
+    }
+
+    return response.json()
 }
