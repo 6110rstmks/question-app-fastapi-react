@@ -55,6 +55,20 @@ const SetProblemPage: React.FC = () => {
                     </div>
                 </div>
 
+                <div> 
+                    <label className={styles.checkboxLabel}>
+                        <input
+                            type="checkbox"
+                            checked={incorrectedOnlyFlgChecked}
+                            onChange={(e) => {
+                                setIncorrectedOnlyFlgChecked(e.target.checked)
+                                setToggleQuestionCnt((prev) => !prev)
+                            }}
+                        />
+                        <span>Include Only Incorrectly Answered Questions</span>
+                    </label>
+                </div>
+
                 <div className={styles.radioGroup}>
                     <label>
                     <input
@@ -78,17 +92,7 @@ const SetProblemPage: React.FC = () => {
                     <span>Select by Category</span>
                     </label>
                 </div>
-                <label className={styles.checkboxLabel}>
-                    <input
-                        type="checkbox"
-                        checked={incorrectedOnlyFlgChecked}
-                        onChange={(e) => {
-                            setIncorrectedOnlyFlgChecked(e.target.checked)
-                            setToggleQuestionCnt((prev) => !prev)
-                        }}
-                    />
-                    <span>Include Only Incorrectly Answered Questions</span>
-                </label>
+
 
 
                     {selectedType === 'category' && (

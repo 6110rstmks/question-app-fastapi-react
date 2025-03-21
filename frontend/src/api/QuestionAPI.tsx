@@ -100,20 +100,6 @@ export const incrementAnswerCount = async (question_id: number): Promise<void> =
     });
 }
 
-// export const fetchQuestionCountsByLastAnsweredDate = async (days_array: string[]): Promise<Record<string, number>[]> => {
-//     const url = 'http://localhost:8000/questions/count/by_last_answered_date';
-//     const response = await fetch(url, {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({
-//             days_array: days_array
-//         })
-//     })
-//     return await response.json();
-// }
-
 export const fetchQuestionCountsByLastAnsweredDate = async (
     days_array: string[]
 ): Promise<Record<string, number>> => {

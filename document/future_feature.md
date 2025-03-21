@@ -8,7 +8,6 @@ matplotlib？
 この1週間で解いた問題のカテゴリの種類みたいな棒グラフを作成
 この半月で解いた問題のカテゴリの種類みたいな棒グラフを作成
 
-
 ↓
 
 これによってなにがしたいかというと、
@@ -56,7 +55,6 @@ categoryboxで表示するcategoryの順番を変更できるようにする、
 CREATE TABLE category (
     id INT PRIMARY KEY AUTO_INCREMENT,      -- カテゴリID
     name VARCHAR(255) NOT NULL,            -- カテゴリ名
-    description TEXT,                      -- カテゴリ説明
     pinned_order INT DEFAULT NULL,         -- ピン留めカテゴリの順序（NULLの場合は通常カテゴリ）
     <!-- display_order INT DEFAULT NULL         -- 通常カテゴリの表示順序（NULLはピン留めカテゴリが先） -->
 );
@@ -67,6 +65,7 @@ pinned_order:
 ピン留めカテゴリの表示順序を管理するカラム。
 値が小さいほど上位に表示される。
 ピン留めされていないカテゴリはNULLとなる。
+
 display_order:
 
 通常カテゴリの表示順序を管理するカラム。
@@ -74,9 +73,7 @@ display_order:
 表示の順序
 カテゴリの一覧を取得する際、以下の順序でソートします。
 
-sql
-コピーする
-編集する
+
 SELECT *
 FROM category
 ORDER BY 
@@ -116,11 +113,8 @@ data exportで画像を保存しておくことができず、s3はお金がか�
 
 githubに画像をかくのうしておいて、そのurlから引っ張ってくる？
 
+インターネットのurlをはってそのurlから画像データをfetchする
 
-<!--  -->
-
-setproblempage.tsxに今日解いた問題数を表示させる。
-またそのうち、
 
 
 <!--  -->
