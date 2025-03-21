@@ -567,7 +567,7 @@
                                 "指定したエンドポイント（IPアドレスやドメイン名）に対して定期的にリクエストを送り、その応答を監視することで、エンドポイントの可用性や健全性を確認する機能です。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -715,7 +715,7 @@
                                 "リードレプリカ"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "AWS RDSにおいてマルチAZを配置する目的は何か。またその理由",
@@ -883,7 +883,7 @@
                                 "PrivateLink"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "vpcエンドポイントのゲートウェイ型を使用したいケースを一つ答えよ",
@@ -969,7 +969,7 @@
                                 "Amazon EBSのボリュームのスナップショット作成"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -2414,7 +2414,7 @@
                         {
                             "problem": "減数分裂の過程を二つの名前に分けることができる。それぞれ答えよ",
                             "answer": [
-                                "第一文列",
+                                "第一分裂",
                                 "第二分裂"
                             ],
                             "memo": "",
@@ -2572,7 +2572,7 @@
                                 "エネルギー：循環しない\n物質：循環する。"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "生態系内を有機物で移動したエネルギーは最終的にどのような形で生態系外へ放出されるか",
@@ -4943,7 +4943,7 @@
                                 "損失回避"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "My company needs to comply with the newly-enacted environmental laws.",
@@ -5593,7 +5593,7 @@
                                 "逆数"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "力 x 距離",
@@ -5615,6 +5615,14 @@
                             "problem": "重力に逆らって,外力が物体をもち上げる仕事をするとき,その仕事は重力による（A）になる",
                             "answer": [
                                 "位置エネルギー"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "振動数f(HZ)の逆数は？",
+                            "answer": [
+                                "周期"
                             ],
                             "memo": "",
                             "is_correct": false
