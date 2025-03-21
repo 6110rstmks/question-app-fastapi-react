@@ -35,13 +35,14 @@ def export_to_json(db: Session, file_path: str):
                     "problem": question.problem,
                     "answer": question.answer,
                     "memo": question.memo,
-                    "is_correct": question.is_correct
+                    "is_correct": question.is_correct,
+                    "last_answered_date": question.last_answered_date
                 })
             category_data["subcategories"].append(subcategory_data)
         data["category"].append(category_data)  # データを"category"キーに追加
     
     with open(file_path, "w", encoding="utf-8") as jsonfile:
-        json.dump(data, jsonfile, indent=4, ensure_ascii=False)
+        json.dump(data, jsonfile, indent=4, ensure_ascii=False, default=str)
         
 async def import_json_file(db: Session, file: UploadFile):
     # Check file type
