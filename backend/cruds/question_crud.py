@@ -122,6 +122,26 @@ def get_question_count(db: Session):
     
     return int(count)
 
+def get_question_count_by_last_answered_date(db: Session, days_array: list[str]):
+
+
+        
+    return_days_count_array = {}
+    
+    for a in days_array:
+        print(a)
+        
+        count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    where(Question.last_answered_date == a)
+                )
+        
+        return_days_count_array[a] = int(count)
+        
+
+    return return_days_count_array
+
 def get_question_uncorrected_count(db: Session):
     count = db.scalar(
                     select(func.count()).

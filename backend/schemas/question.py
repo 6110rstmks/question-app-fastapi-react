@@ -36,6 +36,8 @@ class QuestionResponse(BaseModel):
     last_answered_date: datetime = Field(default_factory=datetime.today)
     model_config = ConfigDict(from_attributes=True)
     
+class QuestionGetCountByLastAnsweredDate(BaseModel):
+    days_array: List[str] = Field(..., example=["2021-01-01", "2021-01-02"])    
 
     
     

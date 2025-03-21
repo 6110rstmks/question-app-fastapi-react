@@ -1,10 +1,9 @@
-from typing import Annotated
+from typing import Annotated, Dict, List
 from fastapi import APIRouter, Path, HTTPException, Depends, FastAPI
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud, question_crud
-from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate, QuestionBelongsToSubcategoryIdUpdate
-from schemas.category import CategoryResponse
+from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate, QuestionBelongsToSubcategoryIdUpdate, QuestionGetCountByLastAnsweredDate
 from database import get_db
 from cruds import subcategory_crud as subcategory_cruds
 
@@ -26,6 +25,13 @@ async def change_belongs_to_subcategoryId(
 @router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_count(db: DbDependency):
     return question_crud.get_question_count(db)
+
+@router.post("/count/by_last_answered_date", response_model=Dict[str, int], status_code=status.HTTP_200_OK)
+async def get_question_count_by_last_answered_date(
+    db: DbDependency,
+    question_get_count_by_answered_date: QuestionGetCountByLastAnsweredDate
+):
+    return question_crud.get_question_count_by_last_answered_date(db, question_get_count_by_answered_date.days_array)
 
 # 不正解のQuestion数を取得するエンドポイント
 @router.get("/uncorrected_count", response_model=int, status_code=status.HTTP_200_OK)
@@ -108,6 +114,8 @@ async def find_all_questions_in_category(db: DbDependency, category_id: int = Pa
 @router.get("/subcategory_id/{subcategory_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all_questions_in_subcategory(db: DbDependency, subcategory_id: int = Path(gt=0)):
     return question_crud.find_all_questions_in_subcategory(db, subcategory_id)
+
+
 
 
 # Questionを削除するエンドポイント
