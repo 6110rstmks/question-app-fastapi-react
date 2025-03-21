@@ -43,14 +43,9 @@ const useSetProblemPage = () => {
             return;
         }
 
-        const response = await fetchProblem(selectedType, incorrectedOnlyFlgChecked, problemCnt, selectedCategoryIds)
+        const data = await fetchProblem(selectedType, incorrectedOnlyFlgChecked, problemCnt, selectedCategoryIds)
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message || 'Failed to create problems');
-        }
-        const problemData = await response.json();
-        navigate('/problem', { state: problemData });
+        navigate('/problem', { state: data });
     }
 
 

@@ -16,8 +16,14 @@ export const fetchProblem = async (
             problem_cnt: problemCnt,
             category_ids: selectedCategoryIds
         }),
-    });
-    return response
+    })
+
+    if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to create problems');
+    }
+
+    return response.json()
 }
 
 export const fetchProblemByDay = async (
