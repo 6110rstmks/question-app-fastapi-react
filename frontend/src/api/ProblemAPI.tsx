@@ -20,3 +20,20 @@ export const fetchProblem = async (
 
     return response
 }
+
+export const fetchProblemByDay = async (
+    day: string
+) => {
+    const url = `http://localhost:8000/problems/day/${day}`
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+            day: day
+        }),
+    })
+
+    return response
+}

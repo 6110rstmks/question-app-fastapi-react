@@ -22,15 +22,29 @@ const Calendar: React.FC = () => {
     const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
 
     useEffect(() => {
+        // console.log("currentDate:", currentDate);
+        // console.log(days)
 
         const days_array = days.map(day => format(day, "yyyy-MM-dd"));
+        for (let day of days) {
+            // console.log(day);
+            console.log(format(day, "yyyy-MM-dd"));
+        }
+        // console.log(days_array);
+
         // days_arrayをAPIに送信して、それに紐づくQuestionを取得する
         const fetchCounts = async () => {
             const data: Record<string, number> = await fetchQuestionCountsByLastAnsweredDate(days_array);
             setQuestionCounts(data);
             console.log(data)
+            console.log(1111321)
+
         };
+    
         fetchCounts();
+
+
+
     }
     , []);
 
@@ -49,6 +63,18 @@ const Calendar: React.FC = () => {
             <div key={day} className={styles.weekday}>{day}</div>
             ))}
         </div>
+
+        {/* 日付 */}
+        {/* <div className={styles.calendar_grid}>
+            {days.map(day => (
+            <div
+                key={day.toString()}
+                className={`calendar_day ${format(day, "MM") !== format(currentDate, "MM") ? "other_month" : ""} ${format(day, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd") ? "today" : ""}`}
+            >
+                {format(day, "d")}
+            </div>
+            ))}
+        </div> */}
 
         {/* 日付 */}
             <div className={styles.calendar_grid}>

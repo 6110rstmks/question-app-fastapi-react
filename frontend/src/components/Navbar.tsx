@@ -103,7 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
                         <FontAwesomeIcon icon={faArrowRightToBracket} />
                         SignOut
                     </Link>
-                    <Link to="/setquestion" className={styles.clickable}>Set Problem</Link>
+                    <Link to="/set_question" className={styles.clickable}>Set Problem</Link>
                     <Link to="/import" className={styles.clickable}>
                         Data Import
                         <div className={styles.tooltip}>システム特有のjsonファイルをインポートすることでデータの引き継ぎができます。</div>

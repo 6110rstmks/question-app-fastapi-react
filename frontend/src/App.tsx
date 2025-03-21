@@ -32,7 +32,7 @@ const App: React.FC = () => {
         <Route path="/createcategory" element={<CategoryCreate isAuth={isAuth} />} />
 
         {/* 問題出題画面 */}
-        <Route path="/setquestion" element={<SetProblem />} />
+        <Route path="/set_question" element={<SetProblem />} />
         {/* <Route path="/createquestion" element={<CreateQuestion category_id={}/>} /> */}
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth} />} />

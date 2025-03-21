@@ -205,7 +205,7 @@ def git_push_json_file():
     # if repo.is_dirty(untracked_files=True):
     #     repo.git.stash('push', '-m', 'Save current changes before branch switch')
     
-    if 'bsackup/json' not in repo.branches:
+    if 'backup/json' not in repo.branches:
         repo.git.checkout('HEAD', b='bsackup/json')  # Create and switch to the new branch
     # else:
     #     repo.git.checkout('backup/json')  #
