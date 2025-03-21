@@ -530,7 +530,7 @@
                                 "される"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         }
                     ]
                 },
@@ -670,7 +670,7 @@
                                 "二つ"
                             ],
                             "memo": "参考\nhttps://www.youtube.com/watch?v=YrlxdSPCINA",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "VPCピアリングとtransit gatewayは似たような機能だが、ネットワークが複雑な場合はどちらを使う？",
@@ -1214,10 +1214,11 @@
                         {
                             "problem": "HTTPSの終端を扱うAWSのサービスは二つある。それらを答えよ。また、そもそもHTTPSの終端とはなにか？",
                             "answer": [
-                                "ALB, API gateway",
-                                "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。"
+                                "ALB,",
+                                "",
+                                " API gateway"
                             ],
-                            "memo": "",
+                            "memo": "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。",
                             "is_correct": false
                         },
                         {
@@ -1734,7 +1735,7 @@
                                 "原口背唇"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "卵割を英語で",
@@ -1772,7 +1773,7 @@
                                 "Yes"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "What is the chlorophyll that Euglena has?",
@@ -2137,7 +2138,7 @@
                                 "電位依存性カリウムチャネル"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "末梢神経系は二たつに分類される。なにとなに",
@@ -2289,7 +2290,7 @@
                                 "リプレッサー"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "大腸菌においてラクトースがない場合、オペロン付近にある（A）と呼ばれる転写調節領域にリプレッセーが結合して、RNAポリメラーゼがプロモーターへ結合するのを妨げることで、転写は抑制される。",
@@ -2377,7 +2378,7 @@
                                 "サンガー法"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "染色体が見えないのはいつの時期か？",
@@ -2393,7 +2394,7 @@
                                 "遺伝子座Locus"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "減数分裂において、相同染色体同士の接着を何という",
@@ -2409,7 +2410,7 @@
                                 "ニ価染色体Bivalent"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "減数分裂の過程を二つの名前に分けることができる。それぞれ答えよ",
@@ -3401,7 +3402,8 @@
                         {
                             "problem": "windows functionの例を二つあげて",
                             "answer": [
-                                "row_number, ranm"
+                                "row_number",
+                                "rank"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -4479,7 +4481,7 @@
                                 "（彼は異なる会社で2つの役職を同時に務めていた。）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "liuetenants",
@@ -5107,7 +5109,7 @@
                                 "すくない"
                             ],
                             "memo": "",
-                            "is_correct": false
+                            "is_correct": true
                         },
                         {
                             "problem": "CPUがキャッシュメモリから主記憶装置への書き込み方法は２つある。答えて",
@@ -5531,7 +5533,7 @@
                         {
                             "problem": "DMAは何の略か？",
                             "answer": [
-                                "direct access memory"
+                                "direct  memory　access"
                             ],
                             "memo": "",
                             "is_correct": false
@@ -5776,6 +5778,14 @@
                             "problem": "EVMにおいてEVとは",
                             "answer": [
                                 "EV（Earned Value）とは、実際に完成している実績値です。"
+                            ],
+                            "memo": "",
+                            "is_correct": false
+                        },
+                        {
+                            "problem": "project management用語のEVMは何の略",
+                            "answer": [
+                                "earned value management"
                             ],
                             "memo": "",
                             "is_correct": false
