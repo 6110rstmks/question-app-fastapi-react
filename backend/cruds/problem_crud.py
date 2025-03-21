@@ -36,7 +36,8 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
         return '不明なものが入力されました。'
     return db.execute(query2).scalars().all()
 
-def generate_problems_by_day(db: Session, problem_fetch_by_date: ProblemFetchByDate):
-    query = select(Question).where(Question.last_answered_date == problem_fetch_by_date.date).order_by(func.random())
+# def generate_problems_by_day(db: Session, problem_fetch_by_date: ProblemFetchByDate):
+def generate_problems_by_day(db: Session, day: str):
+    query = select(Question).where(Question.last_answered_date == day).where(Question.is_correct == false())
     return db.execute(query).scalars().all()
     

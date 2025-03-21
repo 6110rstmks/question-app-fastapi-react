@@ -14,7 +14,6 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
     
     query_stmt = select(Category)
     
-    print(222)
     
     # Category欄で検索した場合
     if category_word:
@@ -27,7 +26,6 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
         category_ids = db.execute(query2).scalars().all()
         query_stmt = query_stmt.where(Category.id.in_(category_ids))
 
-    print(221827)
     
     # Question欄で検索した場合
     # そのQuestionを持つSubcategoryを取得するしてCategoriesで返す。

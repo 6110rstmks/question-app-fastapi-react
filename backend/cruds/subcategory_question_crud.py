@@ -10,7 +10,6 @@ def find_subcategoriesquestions_by_question_id(db: Session, question_id: int):
     return db.execute(query).scalars().all()
 
 def find_subcategoryquestion_by_question_id(db: Session, id: int):
-    print(7777777666666)
     query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == id)
     return db.execute(query).scalars().first()
 

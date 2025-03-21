@@ -25,12 +25,13 @@ async def type_exception_handler(request: Request, exc: TypeException):
     )
     
 # 出題する問題群を生成する。
-@router.post("/", response_model=list[QuestionResponse], status_code=status.HTTP_201_CREATED)
+@router.post("/", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def generate_problems(db: DbDependency, problem_create: ProblemFetch):
     if problem_create.type != "category" and problem_create.type != "random":
         raise TypeException(problem_create.type)
     return problem_crud.generate_problems(db, problem_create)
 
-@router.post("/day/{day}", response_model=list[QuestionResponse], status_code=status.HTTP_201_CREATED)
-async def generate_problems_by_day(db: DbDependency, day: int):
+# @router.post("/day", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
+@router.get("/day/{day}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
+async def generate_problems_by_day(db: DbDependency, day: str):
     return problem_crud.generate_problems_by_day(db, day)

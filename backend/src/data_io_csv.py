@@ -71,8 +71,6 @@ def export_data_to_csv(db: Session, output_dir: str):
             # answer を JSON 文字列に変換（リストの場合）
             answer_str = json.dumps(question.answer, ensure_ascii=False) if question.answer else '[]'
 
-            print(answer_str)
-            print('-----------------')
             
             csv_writer.writerow([
                 question.id,

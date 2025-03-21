@@ -52,6 +52,9 @@ const useSetProblemPage = () => {
         const problemData = await response.json();
         navigate('/problem', { state: problemData });
     }
+
+
+
     
     useEffect(() => {
         (async () => {

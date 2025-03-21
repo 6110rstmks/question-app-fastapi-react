@@ -71,25 +71,25 @@ const SetProblemPage: React.FC = () => {
 
                 <div className={styles.radioGroup}>
                     <label>
-                    <input
-                        type="radio"
-                        name="type"
-                        value="random"
-                        checked={selectedType === 'random'}
-                        onChange={(e) => setSelectedType(e.target.value)}
-                    />
-                    <span>Random Selection</span>
+                        <input
+                            type="radio"
+                            name="type"
+                            value="random"
+                            checked={selectedType === 'random'}
+                            onChange={(e) => setSelectedType(e.target.value)}
+                        />
+                        <span>Random Selection</span>
                     </label>
                     
                     <label>
-                    <input
-                        type="radio"
-                        name="type"
-                        value="category"
-                        checked={selectedType === 'category'}
-                        onChange={(e) => setSelectedType(e.target.value)}
-                    />
-                    <span>Select by Category</span>
+                        <input
+                            type="radio"
+                            name="type"
+                            value="category"
+                            checked={selectedType === 'category'}
+                            onChange={(e) => setSelectedType(e.target.value)}
+                        />
+                        <span>Select by Category</span>
                     </label>
                 </div>
 

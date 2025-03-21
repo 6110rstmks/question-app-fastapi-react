@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, subMonths, eachDayOfInterval } from "date-fns";
 import styles from "./Calendar.module.css";
 import { fetchQuestionCountsByLastAnsweredDate } from "../api/QuestionAPI";
+import { fetchProblemByDay } from "../api/ProblemAPI";
+import { useNavigate } from 'react-router-dom';
 
 const Calendar: React.FC = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -18,33 +20,32 @@ const Calendar: React.FC = () => {
 
     const days = eachDayOfInterval({ start: startDate, end: endDate });
 
+    const navigate = useNavigate();
+
     const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
     const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
 
-    useEffect(() => {
-        // console.log("currentDate:", currentDate);
-        // console.log(days)
+    const handleSetProblemByDay = async (day: string) => {
+        console.log(day)
+        const response = await fetchProblemByDay(day)
 
-        const days_array = days.map(day => format(day, "yyyy-MM-dd"));
-        for (let day of days) {
-            // console.log(day);
-            console.log(format(day, "yyyy-MM-dd"));
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Failed to create problems');
         }
-        // console.log(days_array);
+        const problemData = await response.json();
+        navigate('/problem', { state: problemData });
+    }
 
+
+    useEffect(() => {
+        const days_array = days.map(day => format(day, "yyyy-MM-dd"));
         // days_arrayをAPIに送信して、それに紐づくQuestionを取得する
         const fetchCounts = async () => {
             const data: Record<string, number> = await fetchQuestionCountsByLastAnsweredDate(days_array);
             setQuestionCounts(data);
-            console.log(data)
-            console.log(1111321)
-
         };
-    
         fetchCounts();
-
-
-
     }
     , []);
 
@@ -80,19 +81,14 @@ const Calendar: React.FC = () => {
             <div className={styles.calendar_grid}>
                 {days.map(day => {
                     const dateStr = format(day, "yyyy-MM-dd");
-                    console.log(dateStr)
                     const questionCount = questionCounts[dateStr];
-                    console.log(questionCount)
-                    // return (
-                    //     <div>aaa</div>
-                    // )
-
                     return (
                         <div
                             key={dateStr}
                             className={`${styles.calendar_day} 
                                         ${format(day, "MM") !== format(currentDate, "MM") ? styles.other_month : ""}
                                         ${dateStr === format(new Date(), "yyyy-MM-dd") ? styles.today : ""}`}
+                            onClick={() => handleSetProblemByDay(dateStr)}
                         >
                             <div>{format(day, "d")}</div>
                             {questionCount > 0 && <div className={styles.question_count}>{questionCount}件</div>}

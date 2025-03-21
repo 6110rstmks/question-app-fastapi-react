@@ -49,17 +49,9 @@ export const ProblemNormal: React.FC<Props> = ({
 
             const data_category = await fetchCategory(data_category_question.category_id)
             setCategory(data_category)
-
-
-
             const data = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
-            setSubcategoriesWithCategoryName(data);
-
-            
-    
+            setSubcategoriesWithCategoryName(data);       
         })();
-
-
     }, [problem])
 
     return (

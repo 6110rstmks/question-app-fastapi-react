@@ -4,7 +4,7 @@ export const fetchProblem = async (
     problemCnt: number,
     selectedCategoryIds: number[]
 ) => {
-    const url = 'http://localhost:8000/problems/generate_problems'
+    const url = 'http://localhost:8000/problems/'
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -26,13 +26,13 @@ export const fetchProblemByDay = async (
 ) => {
     const url = `http://localhost:8000/problems/day/${day}`
     const response = await fetch(url, {
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-            day: day
-        }),
+        }
+        // body: JSON.stringify({ 
+        //     day: day
+        // }),
     })
 
     return response

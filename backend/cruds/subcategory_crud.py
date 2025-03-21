@@ -64,9 +64,6 @@ def find_subcategories_by_question_id(db: Session, question_id: int):
 def find_subcategories_with_category_name_by_category_id(db: Session, category_id: int):
 
     query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(Category, Subcategory.category_id == Category.id).where(Subcategory.category_id == category_id)
-    aaa = db.execute(query1).fetchall()
-    for a in aaa:
-        print(a._asdict())  # 辞書形
 
     return db.execute(query1).fetchall()
 

@@ -43,7 +43,10 @@
   .calendar_grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 77px;
+    gap: 44px;
+    /* padding: 22px; */
+    cursor: pointer;
+
   }
   
   /* 日付セル */

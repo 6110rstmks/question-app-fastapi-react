@@ -32,6 +32,9 @@ export const useProblemPage = (problemData: Question[]) => {
         setUnsolvedProblems(unsolvedProblems.filter((problem) => problem.id !== unsolvedProblems[currentReviewProblemIndex].id));
         setCurrentReviewProblemIndex2((prev) => prev + 1);
         setShowAnswer(false);
+
+        incrementAnswerCount(problemData[currentProblemIndex].id);
+
     };
 
     // 再度出題した用の関数
