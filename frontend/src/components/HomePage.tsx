@@ -60,7 +60,7 @@ export const Home: React.FC = () => {
                 />
                 <Link to="/question_list" className={styles.moreBtn}>Question一覧検索ページ</Link>
 
-                {/* <Search 
+                <Search 
                     type="question"
                     searchQuestionWord={searchQuestionWord}
                     setSearchCategoryWord={setSearchCategoryWord}
@@ -79,7 +79,7 @@ export const Home: React.FC = () => {
                     setSearchAnswerWord={setSearchAnswerWord}
                     page={page} 
                     setPage={setPage} 
-                /> */}
+                /> 
             </div>
             <CategoryList categories={categories} searchSubcategoryWord={searchSubcategoryWord} searchQuestionWord={searchQuestionWord} searchAnswerWord={searchAnswerWord}/>
             <Pagination

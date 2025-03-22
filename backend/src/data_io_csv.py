@@ -37,7 +37,6 @@ def export_data_to_csv(db: Session, output_dir: str):
                 category.user_id
             ])
     
-    print(f"Categories exported to {categories_path}")
     
     # 2. サブカテゴリをエクスポート
     subcategories_path = os.path.join(output_dir, 'subcategories.csv')
@@ -54,7 +53,6 @@ def export_data_to_csv(db: Session, output_dir: str):
                 subcategory.updated_at.isoformat() if subcategory.updated_at else ''
             ])
     
-    print(f"Subcategories exported to {subcategories_path}")
     
     # 3. 質問をエクスポート
     questions_path = os.path.join(output_dir, 'questions.csv')
@@ -82,7 +80,6 @@ def export_data_to_csv(db: Session, output_dir: str):
                 question.last_answered_date.isoformat() if question.last_answered_date else ''
             ])
     
-    print(f"Questions exported to {questions_path}")
     
     # 4. カテゴリ・質問の関連をエクスポート
     category_question_path = os.path.join(output_dir, 'categories_questions.csv')
@@ -94,7 +91,6 @@ def export_data_to_csv(db: Session, output_dir: str):
         for cq in category_questions:
             csv_writer.writerow([cq.category_id, cq.question_id])
     
-    print(f"CategoryQuestion relationships exported to {category_question_path}")
     
     # 5. サブカテゴリ・質問の関連をエクスポート
     subcategory_question_path = os.path.join(output_dir, 'subcategories_questions.csv')
@@ -106,9 +102,6 @@ def export_data_to_csv(db: Session, output_dir: str):
         for sq in subcategory_questions:
             csv_writer.writerow([sq.subcategory_id, sq.question_id])
     
-    print(f"SubcategoryQuestion relationships exported to {subcategory_question_path}")
-    
-    print(f"All data exported to {output_dir}")
     
 async def import_zip_file(db: Session, file: UploadFile):
     # ファイルタイプチェック（任意、拡張子やMIMEタイプ）

@@ -126,9 +126,7 @@ def get_question_count_by_last_answered_date(db: Session, days_array: list[str])
         
     return_days_count_array = {}
     
-    for a in days_array:
-        print(a)
-        
+    for a in days_array:        
         count = db.scalar(
                     select(func.count()).
                     select_from(Question).

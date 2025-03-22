@@ -4,22 +4,22 @@ import { fetchSubcategoriesForHomePage, createSubcategory } from "../../../api/S
 
 
 interface useCategoryBoxProps {
-    categoryId: number;
-    showForm: boolean;
-    setShowForm: (showForm: boolean) => void;
-    searchSubcategoryWord: string;
-    searchQuestionWord: string;
-    searchAnswerWord: string;
-}
-
-export const useCategoryBox = (
     categoryId: number,
     showForm: boolean,
     setShowForm: (showForm: boolean) => void,
     searchSubcategoryWord: string,
     searchQuestionWord: string,
-    searchAnswerWord: string
-) => {
+    searchAnswerWord: string,
+}
+
+export const useCategoryBox = ({
+    categoryId,
+    showForm,
+    setShowForm,
+    searchSubcategoryWord,
+    searchQuestionWord,
+    searchAnswerWord
+}: useCategoryBoxProps) => {
     const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([]);
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const categoryBoxRef = useRef<HTMLDivElement | null>(null);
@@ -67,5 +67,12 @@ export const useCategoryBox = (
         })();
     }, [searchSubcategoryWord, searchQuestionWord, searchAnswerWord]);
 
-    return { subcategories, subcategoryName, setSubcategoryName, handleAddSubcategory, adjustHeight, categoryBoxRef };
+    return { 
+        subcategories, 
+        subcategoryName, 
+        setSubcategoryName, 
+        handleAddSubcategory,
+        adjustHeight, 
+        categoryBoxRef 
+    };
 };

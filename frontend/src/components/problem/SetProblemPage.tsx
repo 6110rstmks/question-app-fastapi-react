@@ -13,6 +13,7 @@ const SetProblemPage: React.FC = () => {
 
     const {
         categories,
+        questionCount,
         showAll,
         selectedType,
         setSelectedType,
@@ -45,7 +46,7 @@ const SetProblemPage: React.FC = () => {
 
             <div className={styles.problemSelector}>
             
-                <p>The total number of Questions：509</p>
+                <p>The total number of Questions：<span>{questionCount}</span></p>
                 <h2>問題選択</h2>
                 <div className={styles.problemCount}>
                     <span>Number of Questions to Answer：{problemCnt}</span>

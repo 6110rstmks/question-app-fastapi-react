@@ -4,6 +4,7 @@ import { Subcategory } from '../../../types/Subcategory';
 import { CategoryWithQuestionCount } from '../../../types/Category'
 import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesWithQuestionCountByCategoryId } from '../../../api/SubcategoryAPI'
+import { fetchQuestionCount } from '../../../api/QuestionAPI'
 import { fetchProblem } from '../../../api/ProblemAPI'
 
 const useSetProblemPage = () => {
@@ -14,6 +15,8 @@ const useSetProblemPage = () => {
     const [categories, setCategories] = useState<CategoryWithQuestionCount[]>([])
     const [problemCnt, setProblemCnt] = useState<number>(5)
     const [showAll, setShowAll] = useState<boolean>(false)
+    const [questionCount, setQuestionCount] = useState<number | null>(null)
+
     const navigate = useNavigate();
 
     // カテゴリのチェックボックスにチェックを入れたら
@@ -48,18 +51,19 @@ const useSetProblemPage = () => {
         navigate('/problem', { state: data });
     }
 
-
-
-    
     useEffect(() => {
         (async () => {
             const response = await fetchAllCategoriesWithQuestions();
             setCategories(response);
+
+            const questionCnt = await fetchQuestionCount()
+            setQuestionCount(questionCnt)
         })()
     }, [])
 
     return {
         categories,
+        questionCount,
         showAll,
         selectedType,
         setSelectedType,

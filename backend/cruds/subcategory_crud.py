@@ -6,7 +6,14 @@ from . import question_crud as question_cruds
 from fastapi import HTTPException
 
 # カテゴリbox内で表示するサブカテゴリを取得
-def find_subcategories_in_categorybox(db: Session, category_id: int, limit: int, searchSubcategoryWord: str, searchQuestionWord: str, searchAnswerWord: str):
+def find_subcategories_in_categorybox(
+    db: Session, 
+    category_id: int, 
+    limit: int, 
+    searchSubcategoryWord: str, 
+    searchQuestionWord: str, 
+    searchAnswerWord: str
+):
     if searchSubcategoryWord:
         query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.name.istartswith(f"%{searchSubcategoryWord}%"))
 
@@ -38,8 +45,10 @@ def find_subcategories_in_categorybox(db: Session, category_id: int, limit: int,
         subcategory.question_count = len(subcategory.questions)
     
     if limit is None:  # limitが指定されていない場合
+        print('konnnitiha')
         return result
-    
+    print('konnnitiha2')
+    print(limit)
     # 6件(limit)まで表示
     return result[0: 0 + limit]
 

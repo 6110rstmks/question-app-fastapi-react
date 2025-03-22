@@ -29,14 +29,14 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         setSubcategoryName,
         handleAddSubcategory,
         categoryBoxRef
-    } = useCategoryBox(
-        category.id,
+    } = useCategoryBox({
+        categoryId: category.id,
         showForm,
         setShowForm,
         searchSubcategoryWord,
         searchQuestionWord,
         searchAnswerWord
-    );
+    });
 
     const navigate = useNavigate();
 
