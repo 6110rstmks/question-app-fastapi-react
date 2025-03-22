@@ -5578,6 +5578,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "緊急事態を装って組織内部の人間からパスワードや機密情報を入手する不正な行為は，なんという攻撃に分類されるか",
+                            "answer": [
+                                "ソーシャルエンジニアリング"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
