@@ -470,15 +470,6 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-13"
-                        },
-                        {
-                            "problem": "ELBのconnection drainingについて説明してください。",
-                            "answer": [
-                                "登録解除された、もしくは異常のあるターゲットに対するリクエストを切断するまでの待機時間を設定する機能です\nデフォルトでは300秒になっています。\n\n"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-04"
                         }
                     ]
                 },
@@ -927,8 +918,8 @@
                                 "データの保存、処理をメモリ（主記憶装置）上で行うこと"
                             ],
                             "memo": "AWS RDSでは処理をメモリ、データはストレージに保存しているのに対して、\nelastic cacheではメモリで処理してデータもメモリに保存している。",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-03"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "elasticacheの種類2つ",
@@ -1153,7 +1144,7 @@
                             ],
                             "memo": "\n",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "Kinesis Data Streamsでは、プロバイダーから送信されたデータが利用可能（=コンシューマーが読取り可能）になる時間が（A）と非常に短いです。",
@@ -1236,7 +1227,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -1598,7 +1589,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "斜軸回転体の初手　",
@@ -1685,7 +1676,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 }
@@ -1947,7 +1938,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "Do fungus have cell wall？",
@@ -2169,8 +2160,8 @@
                                 "liver"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -2208,7 +2199,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "酸素解離度曲線を英語で答えよ",
@@ -2391,7 +2382,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-12"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "大脳の（A）皮質には本能行動に関する中枢がある。",
@@ -2815,8 +2806,8 @@
                                 "receptor"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "What is protein relevant to tight junction?",
@@ -3409,7 +3400,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 }
@@ -3481,7 +3472,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-12"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "MTU(Maximum Transmission Unit)とは",
@@ -3507,7 +3498,7 @@
                     "name": "ルーティングプロトコル",
                     "questions": [
                         {
-                            "problem": "代表的なものを3つ挙げて",
+                            "problem": "ルーティングプロトコルの代表的なものを3つ挙げて",
                             "answer": [
                                 "RIP",
                                 "OSPF",
@@ -3515,7 +3506,7 @@
                             ],
                             "memo": "OSPFやBGPについてはふかぼらない。\nこれらはネトスペの範囲なので",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-03"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "ルーティングプロトコルであるRIPの最大ポップ数はいくつか。",
@@ -3690,13 +3681,14 @@
                             "last_answered_date": "2025-02-12"
                         },
                         {
-                            "problem": "インデックスを作成すると検索が早くなる代わりに何が遅くなる？",
+                            "problem": "インデックスを作成すると検索が早くなる代わりに何が遅くなる？2つ。またその理由は？",
                             "answer": [
-                                "insert update"
+                                "insert ",
+                                "update, delete"
                             ],
-                            "memo": "\n",
+                            "memo": "\nざっくりいうと、\n**「検索は速くなるけど、書き込み処理は重くなる",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -3920,7 +3912,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "raid2,3の読み書き単位は？",
@@ -4595,8 +4587,8 @@
                                 "会社はその財産（資産）に対する所有権を持っている。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "She hails from a small town in Italy.",
@@ -4840,7 +4832,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "真理値表",
@@ -4911,8 +4903,8 @@
                                 "ほうきを振り回す"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-03"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "私の唇がかさかさ",
@@ -5083,7 +5075,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "The meeting has been tentatively scheduled for next Tuesday.",
@@ -5882,7 +5874,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-12"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -6061,8 +6053,8 @@
                                 "C がcomplex→複雑→多機能\nR がReduce→削減→余計なものを削減してシンプルにしてスピードを追求"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-12"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "Which one is not suitable for the classical RISC pipeline between RISC AND CISC? And why?",
@@ -6222,8 +6214,8 @@
                                 "周期 T (秒) \n振動数が高いほど周期は短くなり、振動数が低いほど周期は長くなります。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-06"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "重力に逆らって,外力が物体をもち上げる仕事をするとき,その仕事は重力による（A）になる",
@@ -6685,7 +6677,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-03"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "寒流では、暖流の逆で、水蒸気が発生せず降水量が（A）ということを覚えておく。",
@@ -6694,7 +6686,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-03"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "寒流では降水量が少ないというのがポイントだったが、寒流付近では一年中降水量が少なく砂漠になってしまいます。その結果できた砂漠を何という？",
@@ -6783,8 +6775,8 @@
                                 "Cs"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-03"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "気候因子と気候要素の違いは？",
