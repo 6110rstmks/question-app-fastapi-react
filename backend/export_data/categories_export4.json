@@ -5569,6 +5569,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-02-12"
+                        },
+                        {
+                            "problem": "主にマルウェア感染によって作られた「ボットネット」に命令を送り、制御する遠隔攻撃用のサーバーをなんという？",
+                            "answer": [
+                                "C&Cサーバ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
