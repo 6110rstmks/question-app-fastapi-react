@@ -217,7 +217,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "SQSとSNSを両方使う構成をなんという？",
@@ -226,7 +226,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
@@ -341,7 +341,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "auroraはdefaultでマルチAZに対応している。まるかばつか",
@@ -479,11 +479,11 @@
                         {
                             "problem": "ルートテーブルはどういう役割を持っているか",
                             "answer": [
-                                "VPC内でネットワークトラフィックがどこに向かうか決めるもの"
+                                "VPC内でネットワークトラフィックがどこに向かうか決めるもの\n"
                             ],
-                            "memo": "",
+                            "memo": "ネットワークトラフィックというワードで説明できるようになりたいですね。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "ルートテーブルの「送信先」には何を指定すればよいか",
@@ -501,7 +501,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "インターネットゲートウェイをルートテーブルに設定するとどうなるか",
@@ -642,7 +642,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-15"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -713,7 +713,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-13"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "transit gatewayには二つの部品がある。なにとなにか。",
@@ -974,11 +974,11 @@
                         {
                             "problem": "vpcエンドポイントのゲートウェイ型を使用したいケースを一つ答えよ",
                             "answer": [
-                                "アプリケーション(EC2)がVPC内にデプロイされており、Amazon S3に頻繁にデータをアップロードまたはダウンロードする。"
+                                "アプリケーション(EC2)がVPC内にデプロイされており、Amazon S3に頻繁にデータをアップロードまたはS3からダウンロードする。\n頻繁にというワードが重要"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-17"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "VPCエンドポイントの説明について。VPCとその他のAWSサービスを（A)接続できるサービス。",
@@ -1309,7 +1309,7 @@
                                 "シングルリージョン"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-22"
                         },
                         {
@@ -1356,7 +1356,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-15"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "スループットとは。時間あたりの（A）",
@@ -1365,7 +1365,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-15"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -1451,8 +1451,8 @@
                                 "S3バケっット"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -1787,7 +1787,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "卵黄egg yolk　＝　（A）を妨げる物質",
@@ -1815,7 +1815,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "原口背唇部から（A）や（B）が分泌されて、これらがBMPに結合することで、BMPは受容体に結合できなくなる。その結果原口背唇部に近い背側の外胚葉の細胞は表皮ではなく、（C）に分化する",
@@ -1850,8 +1850,8 @@
                                 "ノーダルタンパク質"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "中胚葉は（A）胚葉が（B）胚葉からの働きかけを受けることで生じる。",
@@ -2094,7 +2094,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "刺胞動物の例1",
@@ -2787,7 +2787,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "内外2枚の生体膜で囲まれた細胞小器官の例を3つあげよ",
@@ -2798,7 +2798,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "生物の細胞間での情報伝達の仲介役は？",
@@ -2816,7 +2816,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -3515,7 +3515,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "TCP/IPネットワークで用いられるルーティングプロトコルは、大きくわけて2つに分類できます。それらは？",
@@ -3524,7 +3524,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 }
@@ -3632,8 +3632,8 @@
                                 "ビューとして定義しておけば、ユーザーはビューにアクセスするだけで自動的に作成済みのクエリが実行されるため、開発効率を大幅に削減することが可能となります。\n\n→つまり結合したテーブルを保存できるということ→同じSQLの繰り返しを防げる"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -3726,6 +3726,15 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-02-12"
+                        },
+                        {
+                            "problem": "ACID特性のうち、原子性について説明してください。",
+                            "answer": [
+                                "トランザクション内の処理がすべて実行されるか、または全く実行されないことを保証する特性。トランザクションはコミットまたはロールバックのいずれかで終了することで確保する"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -3875,7 +3884,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "raid2,3の読み書き単位がビットに対して、raid4,5の読み書き単位は何か？",
@@ -4200,8 +4209,8 @@
                                 "タンパク質分解"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "Argon",
@@ -4840,8 +4849,8 @@
                                 "true table"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-02-20"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "I am dispose to go out for a walk.",
@@ -4850,7 +4859,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-03"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "I laid aside my idea and asked her advice.",
@@ -4976,7 +4985,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "She studied intensely for her final exams.",
@@ -5093,7 +5102,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-04"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "I went to the party to mingle with some new people. ",
@@ -5128,8 +5137,8 @@
                                 "会議の議題の項目を列挙してください。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-05"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "She was hurt by the name-calling from her classmates.",
@@ -5147,7 +5156,7 @@
                             ],
                             "memo": "fabricateという単語は「作り出す」や「でっち上げる」を意味します。この言葉は主に物理的なものを作成する際や、真実でない情報を意図的に作り出す場合に使われます\nこの2つの意味は、文脈によって異なる印象を与えます",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-06"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "私の服に焼肉の匂いがつく。noun is the smell",
@@ -5517,6 +5526,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "They conjured to undermine their rivals’ success.",
+                            "answer": [
+                                "彼らはライバルの成功を妨害するために陰謀をめぐらせた。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 }
@@ -5758,6 +5776,24 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-19"
+                        },
+                        {
+                            "problem": "自発光型で，発光ダイオードの一種に分類される表示装置はなにか",
+                            "answer": [
+                                "有機ELディスプレイ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "液晶ディスプレイなどの表示装置において，傾いた直線の境界を滑らかに表示する手法はどれか。",
+                            "answer": [
+                                "アンチエイリアシング"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -5993,7 +6029,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-15"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "PWM（パルス幅変調）について自由にアウトプット",
@@ -6593,8 +6629,8 @@
                                 "パリ盆地"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "硬い地層と柔らかい地層が交互に堆積したものが、傾斜して侵食されてできる地形をなんという？",
@@ -6603,7 +6639,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "パリ盆地のケスタでは、急斜面を利用して（A）栽培がされています。",
