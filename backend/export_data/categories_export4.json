@@ -5772,6 +5772,24 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-11"
+                        },
+                        {
+                            "problem": "オブジェクトストレージの代表格とも入れる有名なサービスは？",
+                            "answer": [
+                                "Amazon S3"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "ページング方式の仮想記憶において，ページ置換えの発生頻度が高くなり，システムの処理能力が急激に低下することがある。このような現象を何と呼ぶか。",
+                            "answer": [
+                                "スラッシング"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -6406,7 +6424,17 @@
             "subcategories": [
                 {
                     "name": "m",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "コンピュータがプログラムを主記憶装置（メモリ）に読み込んで、実行する際の記憶領域の割り当てと解放を管理する機能のことを何という？",
+                            "answer": [
+                                "実記憶管理"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        }
+                    ]
                 },
                 {
                     "name": "compile",
