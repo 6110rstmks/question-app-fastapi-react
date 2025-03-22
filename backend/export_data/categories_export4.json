@@ -1221,7 +1221,7 @@
                                 "AD connector"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-22"
                         }
                     ]
@@ -1249,8 +1249,8 @@
                                 "変更"
                             ],
                             "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-02-13"
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -1342,8 +1342,7 @@
                         {
                             "problem": "HTTPSの終端を扱うAWSのサービスは二つある。それらを答えよ。また、そもそもHTTPSの終端とはなにか？",
                             "answer": [
-                                "ALB,",
-                                "",
+                                "ALB",
                                 " API gateway"
                             ],
                             "memo": "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。",
@@ -3570,7 +3569,7 @@
                             ],
                             "memo": "aa",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-04"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "CNNの主要な層のうち、プーリング層について説明してください。",
@@ -3711,7 +3710,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "ロールバックのイメージが「巻き戻し」に対して、ロールフォワードのイメージは何か？",
@@ -3747,8 +3746,8 @@
                                 "歯抜けのデータを探すことができる。"
                             ],
                             "memo": "https://qiita.com/ryosuketter/items/8d41db1148ee8be6ddc3\n",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -5641,8 +5640,8 @@
                                 "SSD"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-01"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "最大容量が多いのはHDD?SSD？",
@@ -5650,8 +5649,8 @@
                                 "HDD"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-02-19"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "軽量なのはHDD?SSD？",
@@ -6159,7 +6158,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-20"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 }
