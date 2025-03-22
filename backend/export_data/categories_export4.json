@@ -409,7 +409,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -723,7 +723,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "VPCの接続元とVPCの接続先の二つあるとき、Transit gatewayアタッチメントはいくつ作成するか",
@@ -947,7 +947,8 @@
                         {
                             "problem": "vpcエンドポイントには型が二つある。それらを答えよ",
                             "answer": [
-                                "ゲートウェイ型とインターフェース型"
+                                "ゲートウェイ型",
+                                "インターフェース型"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -2094,7 +2095,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "刺胞動物の例1",
@@ -2316,7 +2317,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ニューロンの軸索の膜電位の測定において膜の内外における電位差を何という",
@@ -2382,7 +2383,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "大脳の（A）皮質には本能行動に関する中枢がある。",
@@ -2400,7 +2401,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -2668,7 +2669,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "一個の一次精母細胞から（A）個の精子が生じる",
@@ -2750,7 +2751,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -2773,7 +2774,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -3113,7 +3114,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -3490,7 +3491,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -4678,7 +4679,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-15"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "The weather this morning is foggy. ",
@@ -4705,8 +4706,8 @@
                                 "foreign object"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "It is imperative that you arrive on time for the meeting",
@@ -4841,7 +4842,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "真理値表",
@@ -5003,7 +5004,7 @@
                             ],
                             "memo": "routという単語は「敗北」や「逃げること」を意味します。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "I'm making a revision to the plan",
@@ -5156,7 +5157,7 @@
                             ],
                             "memo": "fabricateという単語は「作り出す」や「でっち上げる」を意味します。この言葉は主に物理的なものを作成する際や、真実でない情報を意図的に作り出す場合に使われます\nこの2つの意味は、文脈によって異なる印象を与えます",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "私の服に焼肉の匂いがつく。noun is the smell",
@@ -5165,7 +5166,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-06"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "彼はストレス発散のために走る。",
@@ -5173,8 +5174,8 @@
                                 "He runs to relieve stress."
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-06"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "there is no antidote to this poison",
@@ -5219,7 +5220,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-06"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "He is an incorrigible liar.",
@@ -5506,8 +5507,8 @@
                                 "骨格筋"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "The magician conjured a rabbit out of thin air.",
@@ -5516,7 +5517,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "The magician conjured a rabbit out of thin air.",
@@ -5525,7 +5526,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "They conjured to undermine their rivals’ success.",
@@ -5641,7 +5642,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "SSLの流れにおいて、クライアントからのSSLの要求に対して、（A）は証明書をクライアントに送付する。",
@@ -5765,8 +5766,8 @@
                                 "TFT液晶"
                             ],
                             "memo": "galax A21 SC42aにも使用されている。",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "LCD(liquid-crystal-display) do not emit light directory. How LCD emit light?",
@@ -5774,8 +5775,8 @@
                                 "using a backlight"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "自発光型で，発光ダイオードの一種に分類される表示装置はなにか",
@@ -5960,7 +5961,7 @@
                             ],
                             "memo": "例えば１秒間に2回信号を発生させることを２Hzといいます。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "クロック周波数が高いほど、CPUの性能は高性能？低い？",
@@ -5978,7 +5979,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "CPUは大きく二つにわけられる。何となにか？",
@@ -5998,6 +5999,25 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-02-20"
+                        },
+                        {
+                            "problem": "システムにすぐに対処しなくてはならない問題などが生じたときに、実行中のプログラムの処理を強制的に停止し、優先的に事象の解決を図ることを可能にする仕組みは？",
+                            "answer": [
+                                "割り込み"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "「割り込み」は二つに分類できる",
+                            "answer": [
+                                "内部割り込み",
+                                "外部割り込み"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 },
@@ -6011,7 +6031,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-06"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "What is previous mainstream of SATA?",
@@ -6602,8 +6622,8 @@
                                 "海流の影響\n\n大陸の西側: 暖流（例: 北大西洋海流、黒潮など）が流れ、沿岸部の気温が比較的温暖になる。\n大陸の東側: 寒流（例: カリフォルニア海流、親潮など）が流れ、気温が低くなりやすい。"
                             ],
                             "memo": "https://juken-geography.com/systematic/temperature/",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "気温の較差とは",
@@ -6740,7 +6760,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "寒流では降水量が少ないというのがポイントだったが、寒流付近では一年中降水量が少なく砂漠になってしまいます。その結果できた砂漠を何という？",
@@ -6749,7 +6769,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "ペルー海流（寒流）が原因の砂漠は？",
@@ -6876,7 +6896,7 @@
                             ],
                             "memo": "構造平野と卓状地の違い、準平原と楯状地の違いというのは、かなりあいまいです",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-19"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "植物の内皮細胞のなかには（A）と呼ばれる重力を感知する構造体が存在する。",
@@ -6939,7 +6959,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "熱帯とは、最寒月平均気温、 最も寒い月の平均気温が（A）度以上という場所",
@@ -7025,7 +7045,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 }
