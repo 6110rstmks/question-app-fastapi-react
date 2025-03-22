@@ -7,7 +7,6 @@ def find_all(db: Session):
 
 def find_categoryquestion_by_question_id(db: Session, id: int):
     query = select(CategoryQuestion).where(CategoryQuestion.question_id == id)
-    print(db.execute(query).scalars().first())
     return db.execute(query).scalars().first()
 
 def delete(db: Session, question_id: int):

@@ -1,6 +1,4 @@
 from __future__ import annotations
-from typing import List
-
 from sqlalchemy import ForeignKey
 from sqlalchemy import Integer
 from sqlalchemy.orm import mapped_column
@@ -56,7 +54,8 @@ class Question(Base):
     memo = Column(String)
     is_correct = Column(Boolean, nullable=False, default=False)
     answer_count = Column(Integer, nullable=False, default=0)
-    last_answered_date = Column(Date, default=func.current_date(), onupdate=func.current_date())
+    # last_answered_date = Column(Date, default=func.current_date(), onupdate=func.current_date())
+    last_answered_date = Column(Date, default=func.current_date())
     
     subcategories = relationship("SubcategoryQuestion", back_populates="question")
     categories = relationship("CategoryQuestion", back_populates="question")

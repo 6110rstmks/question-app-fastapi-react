@@ -54,7 +54,6 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
 
     # 結果を取得してスキップとリミットを適用
     result = db.execute(query_stmt).scalars().all()
-    print(221212)
     return result[skip: skip + limit]
 
 def find_pagination(db: Session):
@@ -66,7 +65,6 @@ def find_category_by_id(db: Session, id: int):
     return db.execute(query).scalars().first()
 
 def find_category_by_name(db: Session, search_word: str):
-    print(search_word)
     query = select(Category).where(Category.name.ilike(f"%{search_word}%"))
     return db.execute(query).scalars().all()
 

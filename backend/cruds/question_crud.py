@@ -1,18 +1,24 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select, update, func
+from sqlalchemy import select, update, func, text
 from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
-from models2 import Category, Subcategory, Question, SubcategoryQuestion, CategoryQuestion
+from models2 import Subcategory, Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
+from datetime import date
+
 
 def find_all_questions(
     db: Session,
     search_problem_word: str = None,
     search_answer_word: str = None
 ):
+    
+    print(112233222)
         
     if search_problem_word:
+        print(db.query(Question).filter(Question.problem.like(f"%{search_problem_word}%")).all())
+        print(77777777)
         return db.query(Question).filter(Question.problem.like(f"%{search_problem_word}%")).all()
 
     if search_answer_word:
@@ -126,15 +132,15 @@ def get_question_count_by_last_answered_date(db: Session, days_array: list[str])
         
     return_days_count_array = {}
     
-    for a in days_array:        
+    for day in days_array:        
         count = db.scalar(
                     select(func.count()).
                     select_from(Question).
-                    where(Question.last_answered_date == a).
+                    where(Question.last_answered_date == day).
                     where(Question.is_correct == False)
                 )
         
-        return_days_count_array[a] = int(count)
+        return_days_count_array[day] = int(count)
         
 
     return return_days_count_array
@@ -149,8 +155,6 @@ def get_question_uncorrected_count(db: Session):
     return int(count)
 
 def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate):
-
-    print(changeSubcategoryUpdate.category_ids)
 
     # ------------------------------------------------------------------------ #
     # チェックボックスが外された場合のSubcategory削除処理
@@ -249,12 +253,35 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
 
     return changeSubcategoryUpdate.subcategory_ids
 
-def increment_answer_count(db: Session, question_id: int):
-    stmt = (
-        update(Question).
-        where(Question.id == question_id).
-        values(answer_count=Question.answer_count + 1)
-    )
+def increment_answer_count(
+    db: Session, 
+    question_id: int
+):
+    query1 = select(Question).where(Question.id == question_id)
+    question = db.execute(query1).scalars().first()
+    # last_answered_dateが現在日付の場合は、
+    # answer_countに現在日付の翌日をセットする。
+    if question.last_answered_date == date.today():
+        stmt = (
+            update(Question).
+            where(Question.id == question_id).
+            values(
+                last_answered_date=func.current_date() + text("INTERVAL '1 day'"),
+                answer_count=Question.answer_count + 1
+            )
+        )
+
+    else:
+        # last_answered_dateが現在日づげでない場合はlast_answered_dateを現在日付に更新。
+        # answer_countをインクリメント更新
+        stmt = (
+            update(Question).
+            where(Question.id == question_id).
+            values(
+                last_answered_date=func.current_date(),
+                answer_count=Question.answer_count + 1
+            )
+        )
     db.execute(stmt)
     db.commit()
     return find_question_by_id(db, question_id)

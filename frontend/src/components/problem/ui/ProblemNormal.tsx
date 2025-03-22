@@ -85,7 +85,7 @@ export const ProblemNormal: React.FC<Props> = ({
 
             <div className={styles.questionCard}>
                 <div className={styles.questionHeader}>
-                    <div className={styles.questionLabel}>問題：</div>
+                    <div className={styles.questionLabel}>問題</div>
                     <div className={styles.correctnessToggle}>
                         <button
                             className={`${styles.statusButton} ${

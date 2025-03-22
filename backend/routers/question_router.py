@@ -26,6 +26,7 @@ async def change_belongs_to_subcategoryId(
 async def get_question_count(db: DbDependency):
     return question_crud.get_question_count(db)
 
+# 最終回答日時ごとのQuestion数を取得するエンドポイント
 @router.post("/count/by_last_answered_date", response_model=Dict[str, int], status_code=status.HTTP_200_OK)
 async def get_question_count_by_last_answered_date(
     db: DbDependency,
@@ -94,6 +95,9 @@ async def find_all_questions(
     searchProblemWord: str = None,
     searchAnswerWord: str = None
 ):
+    print(28220909)
+    print(question_crud.find_all_questions(db, search_problem_word=searchProblemWord, search_answer_word=searchAnswerWord))
+    print(111166666)
     return question_crud.find_all_questions(db, search_problem_word=searchProblemWord, search_answer_word=searchAnswerWord)
 
 # Question IDからQuestionを取得するエンドポイント

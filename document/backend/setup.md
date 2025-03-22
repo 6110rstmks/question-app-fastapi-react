@@ -13,8 +13,6 @@ localhost:8000/docs
 [step3]
 alembic revision --autogenerate -m "alter questions column"
 
-[step4]
-alembic revision --autogenerate -m "Add foreign key"
 
 [step5]
 alembic upgrade head

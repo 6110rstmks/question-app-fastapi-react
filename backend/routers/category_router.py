@@ -116,7 +116,6 @@ async def get_exported_json(db: DbDependency):
 
 #     # 作成された CSV ファイルのフルパス
 #     FILE_PATH = os.path.join(EXPORT_DIR, FILE_NAME)
-#     print(FILE_PATH)
 
 #     # Check if the file exists
 #     if not os.path.exists(FILE_PATH):

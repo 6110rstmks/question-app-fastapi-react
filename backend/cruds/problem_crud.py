@@ -38,6 +38,6 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
 
 # def generate_problems_by_day(db: Session, problem_fetch_by_date: ProblemFetchByDate):
 def generate_problems_by_day(db: Session, day: str):
-    query = select(Question).where(Question.last_answered_date == day).where(Question.is_correct == false())
+    query = select(Question).where(Question.last_answered_date == day).where(Question.is_correct == false()).order_by(func.random())
     return db.execute(query).scalars().all()
     
