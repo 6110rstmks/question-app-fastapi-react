@@ -32,6 +32,7 @@ const SubcategoryPage: React.FC = () => {
             <div className={styles.subcategory_box}>
                 <div 
                     onClick={() => handleNavigateToCategoryPage(navigate, categoryInfo)}
+                    className={styles.category_name}
                 >
                     {categoryInfo.name}＞
                 </div>
@@ -45,7 +46,10 @@ const SubcategoryPage: React.FC = () => {
                         autoFocus
                     />
                 ) : (
-                    <h1 onDoubleClick={() => setIsEditing(true)}>{subcategoryName}</h1>
+                    <h1 
+                        onDoubleClick={() => setIsEditing(true)}
+                        className={styles.subcategory_name}
+                    >{subcategoryName}</h1>
                 )}                
                 <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>

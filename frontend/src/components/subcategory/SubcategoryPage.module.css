@@ -78,3 +78,11 @@
 .incorrect {
     background-color: rgb(237, 129, 129);
 }
+
+.category_name {
+    cursor: pointer;
+}
+
+.subcategory_name {
+    cursor: pointer;
+}
