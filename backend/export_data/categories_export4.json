@@ -951,8 +951,8 @@
                                 "インターフェース型"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-17"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "vpcエンドポイントのゲートウェイ型では二つのサービスのみが対応している。それらを答えよ",
@@ -1005,8 +1005,8 @@
                                 "インターフェース型"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-17"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -1806,7 +1806,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-17"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "触覚部分が足になった突然変異体を何という？また、腹部に翅が出現した突然変異体を何という？",
@@ -1825,7 +1825,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-06"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "卵と精子は、（A）の途中で出会って受精をします。",
@@ -1861,7 +1861,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "Spermの先体に含まれる細胞小器官organnelsのめいしょうは？",
@@ -1925,6 +1925,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-18"
+                        },
+                        {
+                            "problem": "カエルにおいて、背腹軸の決定は、中胚葉誘導につながるか？◯か✖︎か",
+                            "answer": [
+                                "◯"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -2034,7 +2043,8 @@
                         {
                             "problem": "動物の血管系の分類2",
                             "answer": [
-                                "閉鎖血管系と開放血管系"
+                                "閉鎖血管系",
+                                "開放血管系"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -2650,7 +2660,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "相同染色体が対合してできたものを何という？",
@@ -2991,7 +3001,7 @@
                         {
                             "problem": "（A）が作用することでセルロース繊維間の多糖の切断が促され植物細胞の細胞壁が緩むのでその分だけ植物細胞内に水が入ってきて吸水でき細胞が成長する。",
                             "answer": [
-                                "オーキシン"
+                                "オーキシンauxin"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3029,7 +3039,7 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "茎と根のオーキシンに対する感受性について、茎の方が根よりオーキシンに対する感受性が（A）い。",
+                            "problem": "茎と根のオーキシンに対する感受性について、茎の方が根よりオーキシンに対する感受性が（A）い。またこれの覚え方は？",
                             "answer": [
                                 "低い"
                             ],
@@ -3175,10 +3185,10 @@
                         {
                             "problem": "様々な種類のリンパ球はすべて（A）に由来する",
                             "answer": [
-                                "骨髄"
+                                "骨髄bone marrow"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-14"
                         }
                     ]
@@ -3192,8 +3202,8 @@
                                 "アクチン"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-11"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "筋肉の収縮時に明帯、暗帯、サルコメアのうち、長さが変わらないものはどれか。",
@@ -3214,7 +3224,7 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "興奮がニューロンの軸索末端まで伝導してくると、（）が放出され、（）は筋繊維の受容体に結合して、興奮の伝達が起こる。",
+                            "problem": "興奮がニューロンの軸索末端まで伝導してくると、（A）が放出され、（A）は筋繊維の受容体に結合して、興奮の伝達が起こる。",
                             "answer": [
                                 "アセチルコリン"
                             ],
@@ -3230,7 +3240,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -3303,7 +3313,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "C4回路を夜間、C3回路を昼間に行う植物を何という？",
@@ -5192,8 +5202,8 @@
                                 "その国の地域での覇権は、隣国に対する強い影響を通じて明らかでした。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-06"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "nothing is quite what you'd hope it would be",
@@ -5211,7 +5221,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-06"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "The news of her sudden departure filled him with a sense of torture that he couldn't escape.",
@@ -5327,8 +5337,8 @@
                                 "辛い食べ物を食べた後、彼女はお腹に鋭い痛みを感じた。\npang: 突然の鋭い痛み"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "detective story",
@@ -5554,7 +5564,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-17"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -6914,7 +6924,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "以下高潮の説明。熱帯低気圧が接近すると、気圧が低下するため、海面が（A）",
@@ -7110,7 +7120,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 }
