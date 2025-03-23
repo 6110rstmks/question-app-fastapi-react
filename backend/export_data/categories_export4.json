@@ -226,7 +226,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
@@ -408,8 +408,8 @@
                                 "l3enインスタンスタイプ"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -1042,7 +1042,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -1328,8 +1328,8 @@
                                 "Amazon Shield"
                             ],
                             "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-03-02"
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "HTTPSの終端を扱うAWSのサービスは二つある。それらを答えよ。また、そもそもHTTPSの終端とはなにか？",
@@ -1354,15 +1354,6 @@
                             "problem": "あなたの会社ではAWSアカウントを「本番（Production）」と「開発（Dev）」で分けている。 開発環境から「本番環境のS3バケット」にログをバックアップしたい。AWSにおいてこの要件を満たすには何を使えば良いか。",
                             "answer": [
                                 "sts assume role"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
-                        },
-                        {
-                            "problem": "スループットとは。時間あたりの（A）",
-                            "answer": [
-                                "処理能力"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -1503,7 +1494,7 @@
                             ],
                             "memo": "https://examist.jp/mathematics/integration-expression/sekibunzenkasiki/",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -2038,7 +2029,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "子のう菌の子のう胞子は1つの二核性細胞から幾つ形成されるか？",
@@ -2616,16 +2607,16 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "大腸菌においてラクトースだけが存在する場合は、リプレッサーが（A）することによって、RNAポリメラーゼが機能し、転写が始まる。",
+                            "problem": "大腸菌においてラクトースだけが存在する場合は、リプレッサーが（A）ことによって、RNAポリメラーゼがプロモーターに結合できるようになり、転写が始まる。",
                             "answer": [
-                                "結合部位から離れる"
+                                "結合部位（オペレーター）から離れる"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "真核生物において、RNAポリメラーゼがプロモーターが結合するには（A）が必要",
@@ -2669,8 +2660,8 @@
                                 "minus"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "DNAの塩基配列を調べる手法を何という？",
@@ -2700,7 +2691,7 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "減数分裂において、相同染色体同士の接着を何という",
+                            "problem": "減数分裂meiosisにおいて、相同染色体同士の接着を何という",
                             "answer": [
                                 "対合"
                             ],
@@ -2771,7 +2762,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ヒトの場合、相同染色体は何組存在している？",
@@ -2948,7 +2939,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "現代では否認されているtheory of evolution",
@@ -3073,7 +3064,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "auxinの働き。（A）を緩め吸水することで細胞を大きくする（成長させる）",
@@ -3132,7 +3123,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "静止中心quiescent centeの働き",
@@ -3542,8 +3533,8 @@
                                 "スタティックルーティング"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-02-20"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "DHCPは何を行う？",
@@ -3579,10 +3570,10 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
-                            "problem": "どうしてRARPプロトコルが必要なのか",
+                            "problem": "Why is the RARP protocol necessary？",
                             "answer": [
                                 "機器は電源を入れた時、自分のMACアドレスは知っている。\nでもネットワークで通信するためには、IPアドレスが必要。"
                             ],
@@ -3824,6 +3815,15 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-02-12"
+                        },
+                        {
+                            "problem": "スループットとは。時間あたりの（A）",
+                            "answer": [
+                                "処理能力"
+                            ],
+                            "memo": "",
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "ACID特性のうち、原子性について説明してください。",
@@ -4155,7 +4155,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "beat the hell out of him",
@@ -4676,8 +4676,8 @@
                                 "（このプロジェクトを予定より早く終わらせるために、余力をすべて使うよ。）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "sepal",
@@ -5128,7 +5128,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "In the project, each ally contributed their unique skills.",
@@ -5263,7 +5263,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "彼はストレス発散のために走る。",
@@ -5747,8 +5747,8 @@
                                 "CA（認証局）"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "SSLの暗号化の流れの中で、クライアント側で（公開鍵・秘密鍵）を使って共通鍵を暗号かする。またサーバ側で（公開鍵・秘密鍵）を使って共通鍵を復号化する。",
