@@ -15,6 +15,8 @@ import SetProblem from './components/problem/SetProblemPage'
 import CategoryPage from './components/category/CategoryPage'
 import ReportPage from './components/ReportPage'
 import QuestionListPage from './components/question/QuestionListPage'
+import 'katex/dist/katex.min.css';
+
 
 const App: React.FC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"));

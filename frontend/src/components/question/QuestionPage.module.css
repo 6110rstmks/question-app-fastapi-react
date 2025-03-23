@@ -9,27 +9,27 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .question_header {
+  .questionHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 16px;
   }
   
-  .question_problem {
+  .questionProblem {
     font-size: 18px;
     font-weight: bold;
     color: #333;
   }
   
-  .question_is_flg {
+  .questionIsFlg {
     display: flex;
     align-items: center;
     font-size: 14px;
     color: #666;
   }
   
-  .question_is_flg_value {
+  .questionIsFlgValue {
     background-color: #ccc;
     padding: 4px 8px;
     border-radius: 4px;
@@ -39,15 +39,15 @@
     font-weight: bold;
   }
   
-  .question_is_flg_value.correct {
+  .questionIsFlgValue.correct {
     background-color: #4caf50;
   }
   
-  .question_is_flg_value.incorrect {
+  .questionIsFlgValue.incorrect {
     background-color: #f44336;
   }
   
-  .question_answer {
+  .questionAnswer {
     font-weight: bold;
     margin-bottom: 8px;
     color: #333;
@@ -58,13 +58,13 @@
     margin-bottom: 4px;
   }
   
-  .question_actions {
+  .questionActions {
     display: flex;
     justify-content: flex-end;
     margin-top: 16px;
   }
   
-  .question_actions button {
+  .questionActions button {
     background-color: #2196f3;
     color: #fff;
     border: none;
@@ -75,23 +75,23 @@
     margin-left: 8px;
   }
   
-  .question_actions button:hover {
+  .questionActions button:hover {
     background-color: #1976d2;
   }
   
-  .question_actions button.delete {
+  .questionActions button.delete {
     background-color: #f44336;
   }
   
-  .question_actions button.delete:hover {
+  .questionActions button.delete:hover {
     background-color: #c62828;
   }
 
-  .answer_container {
+  .answerContainer {
     position: relative;
   }
   
-  .answer_toggle {
+  .answerToggle {
     background-color: #ccc;
     padding: 4px 8px;
     border-radius: 4px;
@@ -101,17 +101,17 @@
     margin-bottom: 8px;
   }
   
-  .answer_toggle.show {
+  .answerToggle.show {
     background-color: #2196f3;
     color: #fff;
   }
   
-  .answer_text {
+  .answerText {
     display: none;
     color: #666;
     margin-bottom: 4px;
   }
   
-  .answer_text.show {
+  .answerText.show {
     display: block;
   }

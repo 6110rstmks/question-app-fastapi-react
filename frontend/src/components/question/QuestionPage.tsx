@@ -5,6 +5,9 @@ import Modal from 'react-modal'
 import QuestionEditModal from './QuestionEditModal';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
+// import { BlockMath } from 'react-katex'
+import { BlockMath } from 'react-katex'
+
 
 interface QuestionPageNavigationParams {
     categoryId: number,
@@ -26,6 +29,9 @@ const QuestionPage: React.FC = () => {
 
     // location.stateがnullの場合にlocalStorageから取得
     const state: QuestionPageNavigationParams = location.state || JSON.parse(localStorage.getItem('categorySubcategoryInfo') || '{}');
+
+    const isLatex = (text: string) => text.includes('\\')
+
 
     const { 
         categoryId,
@@ -73,11 +79,18 @@ const QuestionPage: React.FC = () => {
             </div>
         ))}
         <div className={styles.question_box}>
-                <div className={styles.question_header}>
-                    <div className={styles.question_problem}>問題：{question?.problem}</div>
-                    <div className={styles.question_is_flg}>
+                <div className={styles.questionHeader}>
+                    <div className={styles.question_problem}>
+                        問題：
+                        {question?.problem && question.problem.includes('\\') ? (
+                            <BlockMath math={question.problem} />
+                        ) : (
+                            <span>{question?.problem}</span>
+                        )}
+                    </div>
+                    <div className={styles.questionIsFlg}>
                         <div
-                            className={`${styles.question_is_flg_value} ${
+                            className={`${styles.questionIsFlgValue} ${
                             question?.is_correct ? styles.correct : styles.incorrect
                             }`}
                             onClick={handleUpdateIsCorrect}
@@ -87,9 +100,9 @@ const QuestionPage: React.FC = () => {
                     </div>
                 </div>
             <div>
-            <div className={styles.answer_container}>
+            <div className={styles.answerContainer}>
                 <div
-                    className={`${styles.answer_toggle} ${
+                    className={`${styles.answerToggle} ${
                         showAnswer ? styles.show : ''
                     }`}
                     onClick={() => setShowAnswer(!showAnswer)}
@@ -97,25 +110,33 @@ const QuestionPage: React.FC = () => {
                     {showAnswer ? '答えを隠す' : '答えを表示する'}
                 </div>
                 <div
-                    className={`${styles.answer_text} ${
+                    className={`${styles.answerText} ${
                         showAnswer ? styles.show : ''
                     }`}
                 >
-                    {question?.answer.map((answer, index) => (
-                        <div key={index}>
-                            {answer.split('\n').map((line, i) => (
-                            <React.Fragment key={i}>
-                                {line}
-                                <br />
-                            </React.Fragment>
-                            ))}
-                        </div>
+                {
+                question?.answer.map((answer, index) => (
+                    <div key={index}>
+                    {answer.split('\n').map((line, i) => (
+                        <React.Fragment key={i}>
+                        {isLatex(line) ? (
+                            <BlockMath math={line} />
+                        ) : (
+                            <>
+                            {line}
+                            <br />
+                            </>
+                        )}
+                        </React.Fragment>
                     ))}
+                    </div>
+                ))
+                }
                 </div>
             </div>
             </div>
             <button onClick={handleNavigateToPreviousSubcategoryPage}>Back to サブカテゴリ内のQuestion一覧</button>
-            <div className={styles.question_actions}>
+            <div className={styles.questionActions}>
                 <button onClick={handleDeleteQuestion} className={styles.delete}>
                     DELETE
                 </button>
