@@ -26,11 +26,11 @@ const QuestionListPage = () => {
                     />
                     <button onClick={() => handleProblemSearchClick()}>検索する</button>
                 </div>
-                <div className={styles.search_answer_container}>
+                <div className={styles.searchAnswerContainer}>
                     <label htmlFor="">解答の文字列で検索：</label>
                     <input
                         type="text"
-                        className={styles.search_box}
+                        className={styles.searchBox}
                         onChange={handleAnswerSearch}
                     />
                     <button onClick={() => handleAnswerSearchClick()}>検索する</button>
@@ -42,7 +42,7 @@ const QuestionListPage = () => {
                     {questions.map((question) => (
                         <div key={question.id} 
                             className={`
-                                ${styles.question_box}
+                                ${styles.questionBox}
                                 ${question.is_correct ? styles.correct : styles.incorrect}
                             `} 
                             onClick={() => handleNavigateToQuestionPage(

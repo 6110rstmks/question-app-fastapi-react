@@ -54,7 +54,6 @@ class Question(Base):
     memo = Column(String)
     is_correct = Column(Boolean, nullable=False, default=False)
     answer_count = Column(Integer, nullable=False, default=0)
-    # last_answered_date = Column(Date, default=func.current_date(), onupdate=func.current_date())
     last_answered_date = Column(Date, default=func.current_date())
     
     subcategories = relationship("SubcategoryQuestion", back_populates="question")
