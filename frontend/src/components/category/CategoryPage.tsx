@@ -56,7 +56,6 @@ const CategoryPage: React.FC = () => {
                         key={subcategory.id} 
                         onClick={() => category && handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}>
                         ・{subcategory.name}
-                        {/* <span>【{subcategory.questionCount}】</span> */}
                         <span>【{subcategory.question_count}】</span>
                     </div>
                     

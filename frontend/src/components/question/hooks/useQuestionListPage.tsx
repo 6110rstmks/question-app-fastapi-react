@@ -5,7 +5,6 @@ import { fetchCategory } from '../../../api/CategoryAPI';
 import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI';
 import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI';
 
-
 export const useQuestionListPage = () => {
     const [searchProblemWord, setSearchProblemWord] = useState<string>("")
     const [searchAnswerWord, setSearchAnswerWord] = useState<string>("")
@@ -16,7 +15,6 @@ export const useQuestionListPage = () => {
     }
 
     const handleAnswerSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(1)
         setSearchAnswerWord(e.target.value)
     }
 
