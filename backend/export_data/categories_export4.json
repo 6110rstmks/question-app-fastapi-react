@@ -1144,8 +1144,8 @@
                                 "EMR"
                             ],
                             "memo": "\n",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "Kinesis Data Streamsでは、プロバイダーから送信されたデータが利用可能（=コンシューマーが読取り可能）になる時間が（A）と非常に短いです。",
@@ -1732,7 +1732,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "尿素の酸素原子を硫黄原子で置換した構造の化合物を何という？",
@@ -2594,7 +2594,7 @@
                         {
                             "problem": "遺伝子組み変えにおいて、遺伝子を切断する酵素を何という？",
                             "answer": [
-                                "制限酵素"
+                                "制限酵素Restriction enzyme"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -2661,7 +2661,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "電気移動法Electrophoresisで利用するDNAの性質として、DNAは（A）に帯電している。",
@@ -2757,9 +2757,9 @@
                         {
                             "problem": "ウニの発生においてプルテウス幼生とプリズム幼生ではどちらが先か",
                             "answer": [
-                                "プリズム幼生"
+                                "プリズム幼生\n"
                             ],
-                            "memo": "",
+                            "memo": "英語で検索をかけてもヒットしないなあ",
                             "is_correct": false,
                             "last_answered_date": "2025-03-14"
                         },
@@ -2818,7 +2818,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -3076,9 +3076,9 @@
                             "last_answered_date": "2025-03-18"
                         },
                         {
-                            "problem": "オーキシンの働き。（A）を緩め吸水することで細胞を大きくする（成長させる）",
+                            "problem": "auxinの働き。（A）を緩め吸水することで細胞を大きくする（成長させる）",
                             "answer": [
-                                "細胞壁"
+                                "cell wall"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3125,7 +3125,7 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "（A）状態になると葉内では（B）とう植物ホルモンの濃度が高まり、気孔を閉じて水分の損失を抑えようとする。",
+                            "problem": "（A）状態になると葉内では（B）という植物ホルモンの濃度が高まり、気孔を閉じて水分の損失を抑えようとする。",
                             "answer": [
                                 "乾燥",
                                 "Abscisic acidアブシシン酸"
@@ -3292,7 +3292,7 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "骨格筋skeletal muscle、心筋、平滑筋のうち核が多核のものはどれか？",
+                            "problem": "骨格筋skeletal muscle、心筋、平滑筋smooth muscleのうち核が多核のものはどれか？",
                             "answer": [
                                 "骨格筋skeletal muscle"
                             ],
@@ -3387,7 +3387,7 @@
                         {
                             "problem": "光合成色素は、太陽や電球などの光を吸収すると、活性化状態になります。 光合成色素が光を吸収する反応を、（A）といいます。",
                             "answer": [
-                                "光化学反応"
+                                "光化学反応photochemical reaction"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -5038,7 +5038,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "he crumpled up the paper bag.",
@@ -5128,7 +5128,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "In the project, each ally contributed their unique skills.",
@@ -5478,8 +5478,8 @@
                                 "彼女は友達と分けるためにキャンディーをほんの少ししか持っていなかった。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "The scientist carefully poured the liquid into the vial for testing",
@@ -5493,7 +5493,7 @@
                         {
                             "problem": "Many people were saddened by the demise of the beloved actor",
                             "answer": [
-                                "The company's demise was caused by poor management decisions. \n"
+                                "多くの人々が愛された俳優の死を悲しんだ\n"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -5725,7 +5725,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -5974,7 +5974,7 @@
                             ],
                             "memo": "語呂合わせ\nRAM\n→ Running Away Memory（走り去るメモリ）\n→ 電源を切るとサッと消えてしまう！\nROM\n→ Remains On Memory（残るメモリ）\n→ 電源を切っても内容はそのまま！",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "DRAMは何に使われているか？",
@@ -6062,7 +6062,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -6090,11 +6090,11 @@
                         {
                             "problem": "CPUの性能を表す評価指標の一つで、コンピュータの内部にある発振器が１秒間に発生させる信号の回数のことをなんというか？",
                             "answer": [
-                                "クロック周波数"
+                                "クロック周波数clock rate"
                             ],
                             "memo": "例えば１秒間に2回信号を発生させることを２Hzといいます。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "クロック周波数が高いほど、CPUの性能は高性能？低い？",
@@ -6247,7 +6247,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -6348,7 +6348,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "プログラム格納方式はDMA方式に比べてどのような欠点があるか？",
@@ -6631,7 +6631,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "EVMにおいてEVとは",
@@ -6649,7 +6649,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 }
@@ -6704,7 +6704,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "季節によって風向きが変わる風のことを何という？",
@@ -6835,7 +6835,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "パリ盆地のケスタでは、急斜面を利用して（A）栽培がされています。",
