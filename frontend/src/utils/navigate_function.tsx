@@ -24,7 +24,6 @@ export const handleNavigateToQuestionPage = (
     subcategory_id?: number,
     subcategoryName?: string
 ) => {
-    // navigate(`/question/${question_id}`, { 
     navigate(`/question/${questionId}`, { 
         state: {
             categoryId: category_id,

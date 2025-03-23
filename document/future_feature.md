@@ -132,3 +132,4 @@ problemnormal.page.tsxからquestion editをできるようにする。
 →無闇にデータ量増やすだけな気がするので没案。
 
 <!--  -->
+htmlCSSのクラスの命名規則を統一

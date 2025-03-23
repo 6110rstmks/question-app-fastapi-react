@@ -52,7 +52,8 @@ const QuestionListPage = () => {
                                 question.category_name,
                                 question.subcategoryId)}>
                             <div>
-                                <div>問題：</div>{question.problem}
+                                <div>問題：</div>
+                                {question.problem}
                             </div>
                             <div>
                                 <div>解答：</div>
