@@ -91,6 +91,7 @@ async def import_json_file(db: Session, file: UploadFile):
                 answer = question_data.get("answer", [])
                 memo = question_data.get("memo")
                 is_correct = question_data.get("is_correct", False)
+                last_answered_date = question_data.get("last_answered_date")
 
                 if not problem:
                     raise HTTPException(status_code=400, detail="Question problem is required.")
@@ -101,6 +102,7 @@ async def import_json_file(db: Session, file: UploadFile):
                     answer=answer,
                     memo=memo,
                     is_correct=is_correct,
+                    last_answered_date=last_answered_date,
                 )
                 db.add(question)
 
