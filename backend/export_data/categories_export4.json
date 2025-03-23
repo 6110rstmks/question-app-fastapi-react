@@ -65,7 +65,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -2775,7 +2775,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ウニの発生においてプルテウス幼生とプリズム幼生ではどちらが先か",
@@ -3321,7 +3321,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "興奮がニューロンの軸索末端まで伝導してくると、（A）が放出され、（A）は筋繊維の受容体に結合して、興奮の伝達が起こる。",
@@ -3329,8 +3329,8 @@
                                 "Acetylcholine"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ATPは筋肉中に貯蔵できる量が限られているため、貯蔵を超えて合成された分は（A）や（B）という形態で蓄えられる",
@@ -3391,7 +3391,7 @@
                         {
                             "problem": "脂肪酸からアセチルCoAを作る反応",
                             "answer": [
-                                "β酸化"
+                                "β酸化Beta oxidation "
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3414,7 +3414,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "光合成色素には、クロロフィルa、クロロフィルb、カロテン、キサントフィルなどの種類がありました。 これらは別々の物質ですが、活性化されると、すべて（A）となります。",
@@ -6625,6 +6625,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "必要なページが主記憶装置上にないときに発生する割り込みのことを何という？",
+                            "answer": [
+                                "ページフォールと"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -7161,7 +7170,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "イヌイットは（A）と呼ばれる住居で生活。",
@@ -7252,7 +7261,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 }
