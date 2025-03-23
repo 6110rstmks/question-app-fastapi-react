@@ -2871,6 +2871,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "リーディング鎖に対してラギング鎖はは不連続に生じる短い断片である（A）によって、構成される。",
+                            "answer": [
+                                "岡崎フラグメント"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -4125,8 +4134,8 @@
                                 "cavity"
                             ],
                             "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-02-12"
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "一口ちょうだい",
@@ -4359,8 +4368,8 @@
                                 "不法侵入"
                             ],
                             "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-02-23"
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "curation",
@@ -4647,8 +4656,8 @@
                                 "勇敢な騎士"
                             ],
                             "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-02-15"
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "minion",
@@ -4674,8 +4683,8 @@
                                 "もり"
                             ],
                             "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-02-16"
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "葉酸",
@@ -5753,6 +5762,15 @@
                             "problem": "She learned to upholster furniture from her grandfather",
                             "answer": [
                                 "彼女は祖父から家具を張り替えることを学んだ。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "ecological system",
+                            "answer": [
+                                "食物連鎖"
                             ],
                             "memo": "",
                             "is_correct": false,
