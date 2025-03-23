@@ -1,11 +1,11 @@
-.subcategory_box {
+.subcategoryBox {
     width: 26%;
     display: flex;
     justify-content: space-between;
 
 }
 
-.delete_btn {
+.deleteBtn {
     width: 88px;
     height: 88px;
     word-wrap: break-word;
@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 
-.create_question_btn {
+.createQuestionBtn {
     width: 88px;
     height: 88px;
     word-wrap: break-word;
@@ -25,12 +25,12 @@
 
 }
 
-.question_container {
+.questionContainer {
     display: flex;
     flex-wrap: wrap; /* 折返し指定 */
 }
 
-.question_box {
+.questionBox {
     padding-top: 15px;
     padding-left: 33px;
     padding-right: 33px;
@@ -48,7 +48,7 @@
     word-break: break-all;
 }
 
- .display_incorrected_question_btn {
+ .displayIncorrectedQuestionBtn {
     width: 122px;
     height: 88px;
     word-wrap: break-word;
@@ -58,7 +58,7 @@
     cursor: pointer;
  }
 
- .problem_text {
+ .problemText {
     cursor: pointer;
     text-decoration: underline;
     font-size: 16.6px;
@@ -66,7 +66,7 @@
 
  }
 
-.answer_text {
+.answerText {
     color: black;
     font-size: 15px;
 }
@@ -79,10 +79,10 @@
     background-color: rgb(237, 129, 129);
 }
 
-.category_name {
+.categoryName {
     cursor: pointer;
 }
 
-.subcategory_name {
+.subcategoryName {
     cursor: pointer;
 }

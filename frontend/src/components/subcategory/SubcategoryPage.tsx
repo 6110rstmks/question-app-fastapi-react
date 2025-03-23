@@ -27,12 +27,12 @@ const SubcategoryPage: React.FC = () => {
     } = useSubcategoryPage(subcategoryId)
 
     return (
-        <div className={styles.subcategory_page}>
+        <div className={styles.subcategoryPage}>
 
-            <div className={styles.subcategory_box}>
+            <div className={styles.subcategoryBox}>
                 <div 
                     onClick={() => handleNavigateToCategoryPage(navigate, categoryInfo)}
-                    className={styles.category_name}
+                    className={styles.categoryName}
                 >
                     {categoryInfo.name}＞
                 </div>
@@ -48,29 +48,29 @@ const SubcategoryPage: React.FC = () => {
                 ) : (
                     <h1 
                         onDoubleClick={() => setIsEditing(true)}
-                        className={styles.subcategory_name}
+                        className={styles.subcategoryName}
                     >{subcategoryName}</h1>
                 )}                
-                <button className={styles.delete_btn} onClick={handleDeleteSubcategory}>Delete</button>
+                <button className={styles.deleteBtn} onClick={handleDeleteSubcategory}>Delete</button>
             </div>
             <button 
-                className={`${styles.create_question_btn} ${showAnswer ? styles.on : styles.off}`} 
+                className={`${styles.createQuestionBtn} ${showAnswer ? styles.on : styles.off}`} 
                 onClick={() => setShowAnswer((prev) => !prev)}
             >
                 {showAnswer ? "答えを一括非表示" : "答えを一括表示"}
             </button>
             <button 
-                className={styles.display_incorrected_question_btn}
+                className={styles.displayIncorrectedQuestionBtn}
                 onClick={handleSetProblem}>
                 このサブカテゴリから問題を出題する。
             </button>
             <button 
-                className={styles.create_question_btn}
+                className={styles.createQuestionBtn}
                 onClick={() => setModalIsOpen(true)}>
                     Create Question
             </button>
             <button 
-                className={styles.display_incorrected_question_btn}
+                className={styles.displayIncorrectedQuestionBtn}
                 >未正解の問題に絞って表示する
             </button>
             <Modal
@@ -84,15 +84,15 @@ const SubcategoryPage: React.FC = () => {
                     setQuestions={setQuestions}
                 />
             </Modal>
-            <div className={styles.question_container}>
+            <div className={styles.questionContainer}>
                 {questions.map((question) => (
                     <div 
                         className={`
-                            ${styles.question_box} 
+                            ${styles.questionBox} 
                             ${question.is_correct ? styles.correct : styles.incorrect}
                         `} 
                         key={question.id}>
-                        <h3 className={styles.problem_text} 
+                        <h3 className={styles.problemText} 
                             onClick={() => handleNavigateToQuestionPage(
                                             navigate,
                                             question.id,
