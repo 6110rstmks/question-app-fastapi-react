@@ -3041,9 +3041,10 @@
                         {
                             "problem": "茎と根のオーキシンに対する感受性について、茎の方が根よりオーキシンに対する感受性が（A）い。またこれの覚え方は？",
                             "answer": [
-                                "低い"
+                                "低い",
+                                "茎はしっかりしていて鈍感（感受性が低い）\n根は繊細で敏感（感受性が高い）"
                             ],
-                            "memo": "",
+                            "memo": "根の方がオーキシンに対する感受性が高い。",
                             "is_correct": false,
                             "last_answered_date": "2025-03-11"
                         },
@@ -3102,6 +3103,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-18"
+                        },
+                        {
+                            "problem": "植物の内皮細胞のなかには（A）と呼ばれる重力を感知する構造体が存在する。",
+                            "answer": [
+                                "アミロプラストAmyloplast"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-11"
                         }
                     ]
                 },
@@ -6953,15 +6963,6 @@
                             "memo": "構造平野と卓状地の違い、準平原と楯状地の違いというのは、かなりあいまいです",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
-                        },
-                        {
-                            "problem": "植物の内皮細胞のなかには（A）と呼ばれる重力を感知する構造体が存在する。",
-                            "answer": [
-                                "アミロプラストAmyloplast"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-11"
                         },
                         {
                             "problem": "春先に地中海からイタリア南部に向けて吹いてくる高温多湿な風は？",
