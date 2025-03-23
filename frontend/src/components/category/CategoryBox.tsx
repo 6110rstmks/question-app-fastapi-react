@@ -84,12 +84,11 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
                         </div>
                         <div className={styles.dottedBorder}></div>
                     </div>
-                    
                 ))}
             </div>
  
             {/* 6件以上サブカテゴリが存在する場合は、「もっとみる」ボタンを表示させる */}
-            {subcategories.length >= 6 && (
+            {subcategories.length >= 4 && (
                 <button 
                 onClick={() => handleNavigateToCategoryPage(navigate, category)} 
                 className={styles.moreBtn}>See More</button>

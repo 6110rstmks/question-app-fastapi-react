@@ -1,17 +1,15 @@
 // ホーム画面の初期状態にて、サブカテゴリー一覧を取得するためのAPI
 // 問題文検索を行った際も、以下のAPIでカテゴリー一覧を取得する
-// export const fetchSubcategoriesForHomePage = async (category_id: number, searchSubcategoryWord: string) => {
 export const fetchSubcategoriesForHomePage = async (category_id: number,
                                                     searchSubcategoryWord?: string,
                                                     searchQuestionWord?: string,
                                                     searchAnswerWord?: string
                                                 ) => {
-    const url = `http://localhost:8000/subcategories/category_id/${category_id}?limit=6&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}&searchAnswerWord=${searchAnswerWord}`;
+    const url = `http://localhost:8000/subcategories/category_id/${category_id}?limit=4&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}&searchAnswerWord=${searchAnswerWord}`;
     const response = await fetch(url);
     if (response.ok) {
         return response.json();
     }
-    throw new Error("Failed to fetch subcategories");
 }
 
 export const fetchSubcategoriesWithQuestionCountByCategoryId = async (category_id: number, searchSubcategoryWord?: string) => {
@@ -76,7 +74,6 @@ export const fetchSubcategoriesWithCategoryNameByCategoryId = async (category_id
     if (response.ok) {
         return response.json();
     }
-    throw new Error("Failed to fetch subcategories");
 }
 
 export const fetchSubcategoriesWithCategoryNameByQuestionId = async (question_id: number) => {
@@ -84,7 +81,6 @@ export const fetchSubcategoriesWithCategoryNameByQuestionId = async (question_id
     if (response.ok) {
         return response.json();
     }
-    throw new Error("Failed to fetch subcategories");
 }
 
 export const fetchSubcategoryWithCategoryNameById = async (subcategory_id: number) => {
@@ -92,5 +88,4 @@ export const fetchSubcategoryWithCategoryNameById = async (subcategory_id: numbe
     if (response.ok) {
         return response.json();
     }
-    throw new Error("Failed to fetch subcategory");
 }
