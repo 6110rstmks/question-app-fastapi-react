@@ -1358,6 +1358,25 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "ある会社で本社の所在委に最も近いリージョンのS3バケットでトレーニング資料を管理しており、複数の国や地域にある支社の業務端末からトレーニング資料の追加、更新を実施します。支社の社員からアップロードに時間がかかるとクレームがきています。アーキテクチャの修正は行わずS3での資料管理の高速化を実現したい。実現案を2つあげて",
+                            "answer": [
+                                "各支社の所在地に近いリージョンにマルチリージョンアクセスポイントを設定する。",
+                                "S3 transfer accelerationを有効か"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "RDSのコスと状況を把握したいので、コストレポートを作成したい。どのサービスを使えば良い？",
+                            "answer": [
+                                "Cost explorer"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -1430,7 +1449,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -1480,7 +1499,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
@@ -1613,7 +1632,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "斜軸回転体の初手　",
@@ -2088,8 +2107,8 @@
                                 "開放血管系"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "血管系をもたない動物は？",
@@ -2101,14 +2120,14 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "原生動物の例2",
+                            "problem": "原生動物の例3",
                             "answer": [
                                 "ゾウリムシ　",
                                 "アメーバ",
                                 "ミドリムシ"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-18"
                         },
                         {
@@ -2126,8 +2145,8 @@
                                 "三ドメイン説"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "担子菌の生活環　子実体⇒担子胞子⇒菌糸⇒二核性細胞⇒（A）",
@@ -2176,7 +2195,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "子実体fruiting bodyはどの核相に分類されるか",
@@ -2443,7 +2462,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "活動電位が軸索の末端に到達すると、末端部にある（A)が軸索の膜に融合する。",
@@ -2812,7 +2831,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "二価染色体を合成する染色体の間で交さが起こり、染色体の一部が交換されることを何という？",
@@ -2981,7 +3000,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "What Causes Mass Extinction in the Cretaceous?",
@@ -3164,7 +3183,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "落葉と落果を促進する植物ホルモンは？",
@@ -3352,7 +3371,7 @@
                             "answer": [
                                 "生じる"
                             ],
-                            "memo": "反対に、カルビンベンソン回路において、水素を与えて還元するにはATPを与えてあげてPGAからGAPを生成するときと同じ。\n\n上記と一緒に覚えてあげると理解が深まる。",
+                            "memo": "反対に、カルビンベンソン回路において、水素を与えて還元するにはATPを与えてあげてPGAからGAPを生成するときと同じ。\n\n上記と一緒に覚えてあげると理解が深まる。\n\nまた、酸化的リン酸化は酸化するのを駆動力として、ADPにリン酸をくっつけてATPを生成する（ADP->ATP）",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
                         }
@@ -3395,7 +3414,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "光合成での反応は大きく二つに分けることができる。①（A）での反応。②（B）での反応",
@@ -3456,6 +3475,15 @@
                             "problem": "C3植物は、強い光の中では枯れてしまう。この理由についてRubiscoという単語を用いて説明",
                             "answer": [
                                 ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "beta oxidationでは脂肪酸から何を生成する？",
+                            "answer": [
+                                "アセチルCoa"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3681,7 +3709,7 @@
                             ],
                             "memo": "aa",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "CNNの主要な層のうち、プーリング層について説明してください。",
@@ -5259,7 +5287,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "Please enumerate the items on the agenda for the meeting.",
@@ -5529,7 +5557,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "maslow’s hierarchy of needs",
@@ -5538,7 +5566,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "Traveling while you’re young is the way to go.",
@@ -5610,7 +5638,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "loss aversion",
@@ -5628,7 +5656,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "skeletal muscle",
@@ -6651,6 +6679,15 @@
                             ],
                             "memo": "",
                             "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "仮想記憶方式におけるデマンドページング方式の利点は？",
+                            "answer": [
+                                "実際にアクセスが行われたときだげ主記憶にロードするので無駄なページをロードしなくて済む"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
                             "last_answered_date": "2025-03-23"
                         }
                     ]
@@ -6679,6 +6716,47 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-02"
+                        }
+                    ]
+                },
+                {
+                    "name": "スケジューリング方式",
+                    "questions": [
+                        {
+                            "problem": "コンピュータが処理する作業の最小単位のことを何という？",
+                            "answer": [
+                                "タスク"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "タスクを処理するのはコンピュータのどの部分か？",
+                            "answer": [
+                                "CPU"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "タスクの切り替えをプログラム自身に任せる方式を何という？",
+                            "answer": [
+                                "ノンプリエンプティブ方式"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "実行可能なタスクに対してプロセッサの使用権限を割り当てることを何という",
+                            "answer": [
+                                "タスクのディスパッチ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 }
@@ -6729,7 +6807,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "project management用語のEVMは何の略",
@@ -6860,7 +6938,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "気温の低減率とは",
@@ -7206,7 +7284,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "tradewindのふくむきの覚え方",
@@ -7242,7 +7320,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "チベット高山はどこにあるか",
@@ -7276,6 +7354,15 @@
                             "answer": [
                                 "新期造山帯",
                                 "古期造山帯"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "黒海どこ",
+                            "answer": [
+                                "ウクライナの近く"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -7320,7 +7407,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
