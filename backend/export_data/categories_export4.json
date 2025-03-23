@@ -409,7 +409,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -460,7 +460,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を（A）する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。",
@@ -1033,7 +1033,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "cloudfrontディストリビュションへのアクセス情報（アクセス元IP,リクエストURL、日時）を最低一年以上保存するためのサービス機能はなにか？",
@@ -1439,7 +1439,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -1818,7 +1818,7 @@
                             "last_answered_date": "2025-03-24"
                         },
                         {
-                            "problem": "触覚部分が足になった突然変異体を何という？また、腹部に翅が出現した突然変異体を何という？",
+                            "problem": "触覚部分が足になった突然変異体mutantを何という？また、腹部に翅が出現した突然変異体を何という？",
                             "answer": [
                                 "アンテナぺディア突然変異体\n",
                                 "バイソラックス突然変異体"
@@ -2113,7 +2113,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "What animals have echolocation?3",
@@ -2156,7 +2156,7 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "子実体はどの核相に分類されるか",
+                            "problem": "子実体fruiting bodyはどの核相に分類されるか",
                             "answer": [
                                 "二核相（n + n）"
                             ],
@@ -2206,6 +2206,15 @@
                             "problem": "閉鎖血管系では、動脈から出た血液が毛細血管を経て静脈に戻るのに対して、開放血管系では動脈から出た血液が（A）を経て静脈に戻る。",
                             "answer": [
                                 "組織間"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "ペースメーカーは心臓の何処にある？",
+                            "answer": [
+                                "右心房"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -2337,7 +2346,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ニューロンの軸索は（A）という薄い膜構造に包まれている",
@@ -2376,7 +2385,7 @@
                             "last_answered_date": "2025-03-13"
                         },
                         {
-                            "problem": "静止電位は膜外を0mVとしたとき約何mV？",
+                            "problem": "静止電位Resting potentialは膜外を0mVとしたとき約何mV？",
                             "answer": [
                                 "-70"
                             ],
@@ -2562,7 +2571,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "調節タンパク質のうち、転写を抑制するものを何という？",
@@ -2643,7 +2652,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "外部から遺伝子を導入し、導入前になかった形質が現れること",
@@ -2655,9 +2664,9 @@
                             "last_answered_date": "2025-03-13"
                         },
                         {
-                            "problem": "電気移動法で利用するDNAの性質として、DNAは（A）に帯電している。",
+                            "problem": "電気移動法Electrophoresisで利用するDNAの性質として、DNAは（A）に帯電している。",
                             "answer": [
-                                "負"
+                                "minus"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -2967,7 +2976,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "生物学におけるcytoの意味",
@@ -3314,7 +3323,17 @@
                 },
                 {
                     "name": "metabolism catabolism",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "グルコースを脱水素による酸化でピルビン酸を生成するときにATPは生じるか、生じないか。",
+                            "answer": [
+                                "生じる"
+                            ],
+                            "memo": "反対に、カルビンベンソン回路において、水素を与えて還元するにはATPを与えてあげてPGAからGAPを生成するときと同じ。\n\n上記と一緒に覚えてあげると理解が深まる。",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        }
+                    ]
                 },
                 {
                     "name": "metabolism anabolism 光合成",
@@ -4469,7 +4488,7 @@
                             ],
                             "memo": "stock in trade も同様に「在庫品、手持ち商品、流通在庫」\n\nを意味します。このほかに stock in trade には「おはこ、\n\n常用手段、固有の技能、十八番」などの意味があります。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "He fought bravely against his foe in the final battle.",
@@ -5432,8 +5451,8 @@
                                 "そのアーティストの最新作は、彼の以前の作品とは大きく異なります。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "Through introspection, you can gain a deeper understanding of yourself.",
@@ -5729,7 +5748,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "SSLの暗号化の流れの中で、クライアント側で（公開鍵・秘密鍵）を使って共通鍵を暗号かする。またサーバ側で（公開鍵・秘密鍵）を使って共通鍵を復号化する。",
@@ -6154,7 +6173,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "レーザー光をパルス状に照射し，その反射光を測定することによって，対象物の方向，距離及び形状を計測するセンサは何？",
@@ -6172,7 +6191,7 @@
                             ],
                             "memo": "基本情報の免除試験に出題された。\n\n物理の変調　AM変調やFM変調を理解しないといけない気がするな＝\n基本情報の問題を解くだけであれば、そこまでの理解は必要ないが。\n\ngoogle docsなどにまとめて理解しないとなー\nhttps://webpia.jp/am-fm/\n↑わかりやすそうな記事",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "電波の送受信により非接触でICタグのデータを読み書きする自動認識技術を何という？",
@@ -6219,7 +6238,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "In what way does SoC contrast with traditional pc?",
@@ -6422,7 +6441,7 @@
                             ],
                             "memo": "\n「単位○○」は、ある単位系で１になる量のこと。\n\nＳＩ単位系で、「単位時間」なら、１秒のこと。「単位長さ」なら１ｍのこと。「単位電荷」は１Ｃのこと。\n単位系が違えば、「単位○○」の量は違ってくる",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ダイオードなどは，1つの向きにしか電流が流れないので，これに交流をかけると直流（ 脈流 みゃくりゅう ）が 得られる。 このような作用をなんというか",
@@ -6513,6 +6532,16 @@
                                 "力のつりあいで式をたてる"
                             ],
                             "memo": "足して、物体が加速しているときは運動方程式を使って式を立てる",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "落物運動においては、二つのパターンがある。",
+                            "answer": [
+                                "鉛直投げ上げ",
+                                "自由落下"
+                            ],
+                            "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
                         }
