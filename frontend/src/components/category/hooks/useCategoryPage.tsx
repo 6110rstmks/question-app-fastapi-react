@@ -43,23 +43,7 @@ export const useCategoryPage = (categoryId: number) => {
     useEffect(() => {
         (async () => {
             const subcategories: SubcategoryWithQuestionCount[] = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId, searchWord);
-            console.log(subcategories)
-
-            // const updatedSubcategories = subcategories.map(subcategory => {
-            //     const updatedSubcategory = {
-            //         ...subcategory, // 既存の値を保持
-            //         categoryId: subcategory.categoryId, // category_id を categoryId に変更
-            //         questionCount: subcategory.questionCount // question_count を questionCount に変更
-            //     };
-            //     // 元の category_id と question_count を削除
-            //     delete updatedSubcategory.category_id;
-            //     delete updatedSubcategory.question_count;
-            //     return updatedSubcategory;
-            // });
-
-            // console.log(updatedSubcategories)
-            
-            setSubcategories(subcategories);
+            setSubcategories(subcategories)
         })();
     }, [searchWord]);
 

@@ -82,7 +82,6 @@ export const useQuestionPage = (
             // 所属するサブカテゴリを変更する際に使用する。
             // const data2: Subcategory[] = await fetchSubcategoriesByQuestionId(questionId);
             const data2: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByQuestionId(questionId);
-            console.log(data2)
             setSubcategoriesWithCategoryName(data2);
         })();
 
