@@ -220,13 +220,13 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "SQSとSNSを両方使う構成をなんという？",
+                            "problem": "What do you call an architecture that uses both SQS and SNS?",
                             "answer": [
-                                "ファンアウトパターン（構成）"
+                                "fan-out pattern（構成）"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
@@ -791,7 +791,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "RDSを使用する場合において、設定で必須した方がよいものは何か？また、理由は？",
@@ -1348,7 +1348,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "あなたの会社ではAWSアカウントを「本番（Production）」と「開発（Dev）」で分けている。 開発環境から「本番環境のS3バケット」にログをバックアップしたい。AWSにおいてこの要件を満たすには何を使えば良いか。",
@@ -2047,7 +2047,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "What is the cell wall of fungus made of?",
@@ -2066,7 +2066,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "血管系をもたない動物は？",
@@ -2081,6 +2081,7 @@
                             "problem": "原生動物の例2",
                             "answer": [
                                 "ゾウリムシ　",
+                                "アメーバ",
                                 "アメーバ"
                             ],
                             "memo": "",
@@ -2094,7 +2095,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ウーズは、生物を3種類に分類しました。 細菌ドメイン、古細菌ドメイン、真核生物ドメインです。 このような分類のしかたを、（A）といいます。",
@@ -2312,7 +2313,7 @@
                             "last_answered_date": "2025-03-13"
                         },
                         {
-                            "problem": "大脳の外側である大脳皮質は灰白質？白質？",
+                            "problem": "cerebrumの外側である大脳皮質は灰白質？白質？",
                             "answer": [
                                 "灰白質"
                             ],
@@ -2584,7 +2585,7 @@
                         {
                             "problem": "トランスジェニック生物を作り出す方法として（A）という植物細胞に感染する細菌をもちいて遺伝子組み換え植物を作り出す。",
                             "answer": [
-                                "アグロバクテリウム"
+                                "Agrobacteriumアグロバクテリウム"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -2618,7 +2619,7 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "プラスミドのような目的とする遺伝子の運び手のことを何という",
+                            "problem": "plasmidのような目的とする遺伝子の運び手のことを何という",
                             "answer": [
                                 "ベクター"
                             ],
@@ -2780,6 +2781,17 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "核相には三種類ある。述べて",
+                            "answer": [
+                                "単相",
+                                "複相",
+                                "二核相"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -2900,7 +2912,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "what is Cinnamon efficacy?",
@@ -3153,7 +3165,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ハーディワインベルグを英語で",
@@ -3253,9 +3265,9 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "骨格筋、心筋、平滑筋のうち核が多核のものはどれか？",
+                            "problem": "骨格筋skeletal muscle、心筋、平滑筋のうち核が多核のものはどれか？",
                             "answer": [
-                                "骨格筋"
+                                "骨格筋skeletal muscle"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3915,7 +3927,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "raid2とraid0の違いは？",
@@ -4466,7 +4478,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "His London accent is very slightly nuanced by an occasional Russian pronunciation.",
@@ -5105,8 +5117,8 @@
                                 "she is terrified by spiders."
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "clandestine",
@@ -5411,8 +5423,8 @@
                                 "内省を通じて、自分自身をより深く理解することができます。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-13"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "The statue was erected as a tribute to the fallen heroes of the war.",
