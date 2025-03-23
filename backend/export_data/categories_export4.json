@@ -13,7 +13,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "音程とは一言で表すと何？",
@@ -353,7 +353,7 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "Amazon AuroraのリージョンまたぎでDBを同期してくれる機能」をなんという？",
+                            "problem": "Amazon AuroraのリージョンまたぎでDBを同期してくれる機能をなんという？",
                             "answer": [
                                 "グローバルDB"
                             ],
@@ -433,7 +433,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "ELBのconnection drainingについて説明してください",
@@ -722,8 +722,8 @@
                                 "transit gatewayルートテーブル"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "VPCの接続元とVPCの接続先の二つあるとき、Transit gatewayアタッチメントはいくつ作成するか",
@@ -1861,7 +1861,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "Spermの先体に含まれる細胞小器官organnelsのめいしょうは？",
@@ -1878,8 +1878,8 @@
                                 "外"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "一つの卵原細胞は体細胞分裂と減数分裂を経て最終的に一つの卵と（A)つの極体を生じる",
@@ -1933,7 +1933,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -2037,8 +2037,8 @@
                                 "chitin"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "動物の血管系の分類2",
@@ -2057,7 +2057,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "原生動物の例2",
@@ -2282,7 +2282,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=vvlCYyJmvdM\n参考\n16:30",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "平衡保持の中枢であるのは何脳？",
@@ -2434,7 +2434,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -2873,7 +2873,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "nucleotideはヌクレオシドが何結合で連結しているか？",
@@ -2954,31 +2954,31 @@
                             "last_answered_date": "2025-03-13"
                         },
                         {
-                            "problem": "What cells do not have centrosomes?\"",
+                            "problem": "What cells do not have centrosomes?",
                             "answer": [
                                 "plant cell"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-09"
                         },
                         {
-                            "problem": "イネではジベレリンは（A）で合成される",
+                            "problem": "イネにおいてジベレリンは（A）で合成される",
                             "answer": [
-                                "胚"
+                                "embryo"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "イネにおいて gibberellinは何に働きかけるか",
+                            "problem": "イネriceにおいて gibberellinは何に働きかけるか",
                             "answer": [
-                                "粉粉層"
+                                "粉粉層aleurone laye"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "光の照射によって発芽が促進される種子を何という",
@@ -2996,7 +2996,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "（A）が作用することでセルロース繊維間の多糖の切断が促され植物細胞の細胞壁が緩むのでその分だけ植物細胞内に水が入ってきて吸水でき細胞が成長する。",
@@ -3168,7 +3168,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "腎臓においてナトリウムイオンはどこで再吸収されるか",
@@ -3191,7 +3191,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4mH6KHLcluseYgW3yQNQDQR5Xon5KB26vaA&s",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "抗体のタンパク質を何という？",
@@ -3521,7 +3521,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -4601,7 +4601,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "I’ll use all my extra power to finish this project ahead of schedule.",
@@ -5082,7 +5082,7 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "彼女は雲が怖い",
+                            "problem": "彼女は蜘蛛が怖い",
                             "answer": [
                                 "she is terrified by spiders."
                             ],
@@ -5321,8 +5321,8 @@
                                 "彼女の話は非常に魅力的で、私は彼女の話を聞くのをやめられなかった。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": " He values his friendship.",
@@ -5556,7 +5556,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "They conjured to undermine their rivals’ success.",
@@ -5631,7 +5631,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "3ウェイハンドシェイクと紐づくプロトコルは？",
@@ -5907,7 +5907,7 @@
                             ],
                             "memo": "語呂合わせ\nRAM\n→ Running Away Memory（走り去るメモリ）\n→ 電源を切るとサッと消えてしまう！\nROM\n→ Remains On Memory（残るメモリ）\n→ 電源を切っても内容はそのまま！",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "DRAMは何に使われているか？",
@@ -6073,12 +6073,12 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "「割り込み」は二つに分類できる",
                             "answer": [
-                                "内部割り込み",
+                                "内部割り込みinterrupt",
                                 "外部割り込み"
                             ],
                             "memo": "",
@@ -6322,40 +6322,13 @@
                             "last_answered_date": "2025-03-09"
                         },
                         {
-                            "problem": "ダイオードなどは，1つの向きにしか電流が流れないので，これに交流をかけると直流（ 脈流 みゃくりゅう ）が 得られる。 このような作用をなんというか",
-                            "answer": [
-                                "整流作用"
-                            ],
-                            "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-03-09"
-                        },
-                        {
-                            "problem": "振動数f(HZ)は周期T(s)の（A）",
-                            "answer": [
-                                "逆数"
-                            ],
-                            "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-03-21"
-                        },
-                        {
-                            "problem": "力 x 距離",
+                            "problem": "力 x 距離 = ?",
                             "answer": [
                                 "work"
                             ],
                             "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-03-03"
-                        },
-                        {
-                            "problem": "振動数f(Hz)の逆数は？",
-                            "answer": [
-                                "周期 T (秒) \n振動数が高いほど周期は短くなり、振動数が低いほど周期は長くなります。"
-                            ],
-                            "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "重力に逆らって,外力が物体をもち上げる仕事をするとき,その仕事は重力による（A）になる",
@@ -6364,7 +6337,16 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "「仕事」の量記号には何を使う？",
+                            "answer": [
+                                "W"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -6424,7 +6406,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "重力と静電気力が対応することで公式の丸暗記をする必要がなくなるが、質量に対応するものはなにか？また、重力加速度に対応するものはなにか？",
@@ -6444,6 +6426,38 @@
                             "memo": "\n「単位○○」は、ある単位系で１になる量のこと。\n\nＳＩ単位系で、「単位時間」なら、１秒のこと。「単位長さ」なら１ｍのこと。「単位電荷」は１Ｃのこと。\n単位系が違えば、「単位○○」の量は違ってくる",
                             "is_correct": false,
                             "last_answered_date": "2025-03-09"
+                        },
+                        {
+                            "problem": "ダイオードなどは，1つの向きにしか電流が流れないので，これに交流をかけると直流（ 脈流 みゃくりゅう ）が 得られる。 このような作用をなんというか",
+                            "answer": [
+                                "整流作用"
+                            ],
+                            "memo": "",
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-09"
+                        }
+                    ]
+                },
+                {
+                    "name": "wave",
+                    "questions": [
+                        {
+                            "problem": "振動数f(HZ)は周期T(s)の（A）",
+                            "answer": [
+                                "逆数"
+                            ],
+                            "memo": "",
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-21"
+                        },
+                        {
+                            "problem": "振動数f(Hz)の逆数は？",
+                            "answer": [
+                                "周期 T (秒) \n振動数が高いほど周期は短くなり、振動数が低いほど周期は長くなります。"
+                            ],
+                            "memo": "",
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-22"
                         }
                     ]
                 }
@@ -6836,7 +6850,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "寒流では降水量が少ないというのがポイントだったが、寒流付近では一年中降水量が少なく砂漠になってしまいます。その結果できた砂漠を何という？",
@@ -6854,7 +6868,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "亜寒帯のタイガに多く分布している土壌はなにか？",
@@ -6890,7 +6904,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "高気圧と低気圧があったときに風はどちらからどちらにふく？",
