@@ -2467,7 +2467,7 @@
                         {
                             "problem": "活動電位が軸索の末端に到達すると、末端部にある（A)が軸索の膜に融合する。",
                             "answer": [
-                                "シナプス小胞"
+                                "シナプス小胞Synaptic vesicle"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -2803,7 +2803,7 @@
                             ],
                             "memo": "英語で検索をかけてもヒットしないなあ",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "プリズム幼生期において、原腸は外胚葉と接触して（A）になる部分が決まり、一次間充織から（B）が生じる",
@@ -2861,6 +2861,16 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "ヌクレオチド鎖のリン酸側の末端は（A）末端で、一方糖側の末端は（B）末端と呼ばれる。",
+                            "answer": [
+                                "5",
+                                "3"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -3424,7 +3434,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "光合成色素は、太陽や電球などの光を吸収すると、活性化状態になります。 光合成色素が光を吸収する反応を、（A）といいます。",
@@ -3501,7 +3511,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -5079,8 +5089,8 @@
                                 "My lip is chapped\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "Microsoft wants to take the pain out of designing web pages.",
@@ -5548,7 +5558,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "Many people were saddened by the demise of the beloved actor",
@@ -5574,7 +5584,7 @@
                                 "若いときに旅行をするのがベストだね。）"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-18"
                         },
                         {
@@ -5611,7 +5621,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "ammunition",
@@ -6657,7 +6667,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
@@ -6945,7 +6955,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "季節風が起きる要因として覚えるフレーズとして「陸地は（A）しやすく、（B）しやすい」",
@@ -7166,7 +7176,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "亜寒帯のタイガに多く分布している土壌はなにか？",
@@ -7202,7 +7212,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "高気圧と低気圧があったときに風はどちらからどちらにふく？",
@@ -7320,7 +7330,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "アウトストラーダ・デル・ソーレとは？",
@@ -7388,7 +7398,7 @@
                         {
                             "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
                             "answer": [
-                                "常春"
+                                "常春とこはる"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -7408,6 +7418,26 @@
                             "problem": "黒海どこ",
                             "answer": [
                                 "ウクライナの近く"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "ナミブ砂漠はどこにありますか？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "ベルギーはどの3つの国に囲まれているか？",
+                            "answer": [
+                                "オランド",
+                                "ドイツ",
+                                "フランス"
                             ],
                             "memo": "",
                             "is_correct": false,
