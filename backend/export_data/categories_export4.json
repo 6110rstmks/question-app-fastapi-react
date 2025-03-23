@@ -4213,8 +4213,8 @@
                                 "この方針は顧客を保護するのに役立つ。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-02-12"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "turnip",
@@ -5670,6 +5670,15 @@
                             "problem": "Fill me in",
                             "answer": [
                                 "出来事の状況や経緯について、いろいろ聞かせてほしい時に使える一言"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "I think I'll be working at the Chicago office for the time being.",
+                            "answer": [
+                                "当面の間はシカゴ支店で勤務すると思うよ。"
                             ],
                             "memo": "",
                             "is_correct": false,
