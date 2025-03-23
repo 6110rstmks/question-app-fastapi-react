@@ -6605,6 +6605,26 @@
                             "memo": "https://www.youtube.com/watch?v=iaps64fvVWc\n02:58",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "仮想記憶方式において、二つの方式がある。のべよ",
+                            "answer": [
+                                "セグメンテーション方式",
+                                "ページング方式"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "ページング方式において、補助記憶装置から主記憶装置にページを移すことを（A）といい、主記憶装置から補助記憶装置にページを移すことを（B）という。",
+                            "answer": [
+                                "ページイン",
+                                "ページアウト"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
