@@ -42,6 +42,9 @@ handleDeleteCategory
 - idからモデル全体（Category,Subcategory,Question）を取得するAPIを叩く関数<br>
 fetchCategory, fetchSubcategory
 
+## HTMLのクラス名の命名規則
+
+ローワーキャメルケースで統一
 
 
 

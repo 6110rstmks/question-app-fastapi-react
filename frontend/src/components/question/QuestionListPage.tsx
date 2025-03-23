@@ -16,8 +16,8 @@ const QuestionListPage = () => {
 
     return (
         <div>
-            <div className={styles.search_section}>
-                <div className={styles.search_problem_container}>
+            <div className={styles.searchSection}>
+                <div className={styles.searchProblemContainer}>
                     <label htmlFor="">問題文：</label>
                     <input
                         type="text"

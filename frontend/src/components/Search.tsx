@@ -56,11 +56,11 @@ const Search: React.FC<SearchProps> = ({
     };
 
     return (
-        <div className={styles.search_section}>
-          <div className={styles.search_container}>
+        <div className={styles.searchSection}>
+          <div className={styles.searchContainer}>
             <input
                 type="text"
-                className={styles.search_box}
+                className={styles.searchBox}
                 value={
                     type === 'category'
                         ? searchCategoryWord

@@ -1,16 +1,16 @@
-.search_section {
+.searchSection {
     display: flex;
     justify-content: center;
 
 }
 
-.search_container {
+.searchContainer {
     /* margin: 20px; */
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.search_box {
+.searchBox {
     padding: 12px 20px;
     width: 300px;
     border: 2px solid #4CAF50;
@@ -21,11 +21,11 @@
 
 }
 
-.search_box:focus {
+.searchBox:focus {
     border-color: #45a049;
     box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
 }
 
-.search_box::placeholder {
+.searchBox::placeholder {
     color: #999;
 }
