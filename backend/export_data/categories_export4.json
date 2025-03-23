@@ -2154,6 +2154,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-14"
+                        },
+                        {
+                            "problem": "子実体はどの核相に分類されるか",
+                            "answer": [
+                                "二核相（n + n）"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -2192,6 +2201,15 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "閉鎖血管系では、動脈から出た血液が毛細血管を経て静脈に戻るのに対して、開放血管系では動脈から出た血液が（A）を経て静脈に戻る。",
+                            "answer": [
+                                "組織間"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
