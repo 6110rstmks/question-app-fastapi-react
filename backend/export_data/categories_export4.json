@@ -359,7 +359,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-08"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "global databaseはRDSの機能か。auroraの機能か",
@@ -979,7 +979,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "VPCエンドポイントの説明について。VPCとその他のAWSサービスを（A)接続できるサービス。",
@@ -1625,13 +1625,13 @@
                             "last_answered_date": "2025-02-13"
                         },
                         {
-                            "problem": "logxがはいった積分に1/xがある→",
+                            "problem": "積分計算においてlogxがはいった積分に1/xがある→",
                             "answer": [
-                                "　→  微分系の接触を疑う。"
+                                "微分系の接触を疑う。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "inegral計算において対数の真数が複雑な場合→",
@@ -2002,7 +2002,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-08"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "子のう菌類の例を二つあげて",
@@ -2252,7 +2252,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-09"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "脊椎動物の中枢神経系は（A）（B）からなる",
@@ -2978,7 +2978,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "光の照射によって発芽が促進される種子を何という",
@@ -2996,7 +2996,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "（A）が作用することでセルロース繊維間の多糖の切断が促され植物細胞の細胞壁が緩むのでその分だけ植物細胞内に水が入ってきて吸水でき細胞が成長する。",
@@ -3112,7 +3112,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "PINタンパク質 AUXタンパク質は植物の何という働きに関与している？",
@@ -3168,7 +3168,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "腎臓においてナトリウムイオンはどこで再吸収されるか",
@@ -3246,7 +3246,7 @@
                         {
                             "problem": "興奮がニューロンの軸索末端まで伝導してくると、（A）が放出され、（A）は筋繊維の受容体に結合して、興奮の伝達が起こる。",
                             "answer": [
-                                "アセチルコリン"
+                                "Acetylcholine"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3287,7 +3287,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-08"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "空気を抜いた状態で光合成で発生するO2の由来を調べる実験は？結論：O2は水由来だと判明。",
@@ -3794,7 +3794,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "window functionは3つに分類できる。こたえよ",
@@ -4890,7 +4890,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "I laid aside my idea and asked her advice.",
@@ -4971,7 +4971,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-08"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "he crumpled up the paper bag.",
@@ -5313,7 +5313,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "Her story was so compelling that I couldn't stop listening to her.",
@@ -6300,57 +6300,6 @@
             "name": "physics",
             "subcategories": [
                 {
-                    "name": "m",
-                    "questions": [
-                        {
-                            "problem": "直流電流を交流電流に変換するに変更するものをなんという？",
-                            "answer": [
-                                "インバーター"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-02-19"
-                        },
-                        {
-                            "problem": "電気の流れには二つの方式がある。挙げて",
-                            "answer": [
-                                "直流",
-                                "交流"
-                            ],
-                            "memo": "",
-                            "is_correct": true,
-                            "last_answered_date": "2025-03-09"
-                        },
-                        {
-                            "problem": "力 x 距離 = ?",
-                            "answer": [
-                                "work"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
-                        },
-                        {
-                            "problem": "重力に逆らって,外力が物体をもち上げる仕事をするとき,その仕事は重力による（A）になる",
-                            "answer": [
-                                "位置エネルギー"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
-                        },
-                        {
-                            "problem": "「仕事」の量記号には何を使う？",
-                            "answer": [
-                                "W"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
-                        }
-                    ]
-                },
-                {
                     "name": "電磁気学",
                     "questions": [
                         {
@@ -6435,6 +6384,16 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-09"
+                        },
+                        {
+                            "problem": "電気の流れには二つの方式がある。挙げて",
+                            "answer": [
+                                "直流direct current",
+                                "交流"
+                            ],
+                            "memo": "",
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-09"
                         }
                     ]
                 },
@@ -6458,6 +6417,47 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-22"
+                        }
+                    ]
+                },
+                {
+                    "name": "mechanism",
+                    "questions": [
+                        {
+                            "problem": "直流電流direct currentを交流電流alternating currentに変換するに変更するものをなんという？",
+                            "answer": [
+                                "インバーターinverter"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-02-19"
+                        },
+                        {
+                            "problem": "力 x 距離 = ?",
+                            "answer": [
+                                "work"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "重力に逆らって,外力が物体をもち上げる仕事をするとき,その仕事は重力による（A）になる",
+                            "answer": [
+                                "位置エネルギー"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "「仕事」の量記号には何を使う？",
+                            "answer": [
+                                "W"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
@@ -7040,7 +7040,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "熱帯とは、最寒月平均気温、 最も寒い月の平均気温が（A）度以上という場所",
