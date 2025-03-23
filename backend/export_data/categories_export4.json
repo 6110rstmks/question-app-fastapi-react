@@ -216,8 +216,8 @@
                                 "可能"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "What do you call an architecture that uses both SQS and SNS?",
@@ -642,7 +642,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -1357,7 +1357,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "ある会社で本社の所在委に最も近いリージョンのS3バケットでトレーニング資料を管理しており、複数の国や地域にある支社の業務端末からトレーニング資料の追加、更新を実施します。支社の社員からアップロードに時間がかかるとクレームがきています。アーキテクチャの修正は行わずS3での資料管理の高速化を実現したい。実現案を2つあげて",
@@ -1728,7 +1728,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
@@ -2175,7 +2175,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "刺胞動物の例1",
@@ -2189,7 +2189,7 @@
                         {
                             "problem": "ウニは何動物",
                             "answer": [
-                                "棘皮動物"
+                                "棘皮動物Echinoderm"
                             ],
                             "memo": "",
                             "is_correct": true,
@@ -3223,10 +3223,10 @@
                             "last_answered_date": "2025-03-18"
                         },
                         {
-                            "problem": "落葉と落果を抑制する植物ホルモンは？2",
+                            "problem": "落葉と落果を抑制するplant hormoneは？2",
                             "answer": [
                                 "auxin",
-                                "ブラシノステロイド"
+                                "Brassinosteroid"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3701,7 +3701,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
@@ -4107,7 +4107,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "raid2,3の読み書き単位は？",
@@ -4449,8 +4449,8 @@
                                 "#the past is of no consequence\""
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "停止　（stop以外で）",
@@ -4651,9 +4651,9 @@
                             "last_answered_date": "2025-02-25"
                         },
                         {
-                            "problem": "tavern",
+                            "problem": "tavern　アクセントも",
                             "answer": [
-                                "居酒屋"
+                                "居酒屋/ˈtævən/"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -4982,7 +4982,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "gymnosperm",
@@ -5171,7 +5171,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "She studied intensely for her final exams.",
@@ -5206,8 +5206,8 @@
                                 "私たちは全会一致の投票を実現したい。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "She tried to interject during the meeting. ",
@@ -6072,9 +6072,9 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "液晶ディスプレイなどの表示装置において，傾いた直線の境界を滑らかに表示する手法はどれか。",
+                            "problem": "液晶ディスプレイなどの表示装置において，傾いた直線の境界を滑らかに表示する手法を何という？",
                             "answer": [
-                                "アンチエイリアシング"
+                                "Anti-aliasing"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -6185,7 +6185,7 @@
                             "problem": "DRAMと結びつけるワード2",
                             "answer": [
                                 "Memory refresh(because RAM is volatile memory that temporarily stores the files you are working on)",
-                                "高集積化"
+                                "高集積化（1つのDRAMチップ（メモリ素子）により多くの記憶容量（ビット）を詰め込む技術\n）"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -6262,8 +6262,8 @@
                                 "CPUの国際言語"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "CPUは大きく二つにわけられる。何となにか？",
@@ -6484,7 +6484,7 @@
                             "last_answered_date": "2025-02-22"
                         },
                         {
-                            "problem": "DMAは何の略か？",
+                            "problem": "hardwareにおいてDMAは何の略か？",
                             "answer": [
                                 "direct  memory　access"
                             ],
@@ -6564,7 +6564,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "静電場において単位電荷を想定したときに受ける力のことを何という？",
@@ -7155,7 +7155,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
@@ -7217,8 +7217,8 @@
                                 "構造平野"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "寒流では、暖流の逆で、水蒸気が発生せず降水量が（A）ということを覚えておく。",
@@ -7516,6 +7516,51 @@
                             "problem": "作物が栽培できなくなる限界を何という？",
                             "answer": [
                                 "栽培限界"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "ローヌ川河口近くにあるフランス有数の湾岸都市で、造船、鉄鋼、食品機械工業が盛んな都市はどこか",
+                            "answer": [
+                                "フォス"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "オランダ南西部にあるヨーロッパ有数の貿易港をもち、造船業のほかに石油精製、化学などが発達する都市は？",
+                            "answer": [
+                                "ロッテルダム"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "オランダの首都は？",
+                            "answer": [
+                                "アステルダム"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "オランダの首都アステルダムはなにの加工で有名？",
+                            "answer": [
+                                "ダイアモンド"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "スペインの首都は？",
+                            "answer": [
+                                "マドリード"
                             ],
                             "memo": "",
                             "is_correct": false,
