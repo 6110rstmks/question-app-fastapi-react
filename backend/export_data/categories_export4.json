@@ -1733,6 +1733,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-14"
+                        },
+                        {
+                            "problem": "尿素の酸素原子を硫黄原子で置換した構造の化合物を何という？",
+                            "answer": [
+                                "チオカルばみどthiocarbamide"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -1834,7 +1843,7 @@
                             ],
                             "memo": "",
                             "is_correct": true,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "通常の体細胞分裂と比べて卵割に見られる特徴は？",
@@ -1900,11 +1909,11 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "ノギンやコーディンはどこから分泌されるのか？",
+                            "problem": "ノギンNogginやコーディンChordinはどこから分泌されるのか？",
                             "answer": [
                                 "原口背唇"
                             ],
-                            "memo": "",
+                            "memo": "https://en.wikipedia.org/wiki/Spemann%E2%80%93Mangold_organizer\n",
                             "is_correct": true,
                             "last_answered_date": "2025-03-22"
                         },
@@ -2167,11 +2176,11 @@
                         {
                             "problem": "苦味受容体を反応させる苦味物質の名称は？",
                             "answer": [
-                                "フェニルチオカルバミド"
+                                "フェニルチオカルバミドPhenylthiocarbamide\n"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-12"
+                            "last_answered_date": "2025-03-23"
                         },
                         {
                             "problem": "What organs destroy red blood cells?2",
