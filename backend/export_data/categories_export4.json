@@ -1564,6 +1564,15 @@
                             "memo": "https://hiraocafe.com/note/vector-area.html",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "空間ベクトルの共面条件（4点O、A、B、Cが同一空間にあるための条件）を書いて",
+                            "answer": [
+                                "\\vec{OP} = s\\vec{OA} + t\\vec{OB} + u\\vec{OC} (s + t + u = 1)"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -6626,6 +6635,16 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "振動数fの定義は？また周期の定義は",
+                            "answer": [
+                                "一秒間に何回振動数するか",
+                                "1回振動するのにかかる時間"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 },
@@ -6686,6 +6705,29 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "物体を回転させる力を何という？",
+                            "answer": [
+                                "力のモーメント"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        }
+                    ]
+                },
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "電子工学において複数の信号の関係や振る舞いを時間軸に表した図をなんという？",
+                            "answer": [
+                                "タイミングチャート"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
                         }
                     ]
                 }
@@ -6749,6 +6791,15 @@
                             "problem": "仮想記憶方式におけるデマンドページング方式の利点は？",
                             "answer": [
                                 "実際にアクセスが行われたときだげ主記憶にロードするので無駄なページをロードしなくて済む"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "メモリ管理の可変区画方式では、空き領域により小さいデータを読み込むので、領域の確保と解放を繰り返していくと、細かい領域がたくさん発生することがあります。この領域を何という？",
+                            "answer": [
+                                "フラグメンテーション"
                             ],
                             "memo": "",
                             "is_correct": false,
