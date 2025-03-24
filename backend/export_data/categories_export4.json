@@ -604,12 +604,12 @@
                             "last_answered_date": "2025-02-22"
                         },
                         {
-                            "problem": "AWSのRoute53で使用されるレコードを5こ列挙してください。",
+                            "problem": "AWSのRoute53で使用されるレコードを4こ列挙してください。",
                             "answer": [
                                 "A（Address）レコード\nAAAA（IPv6 Address）レコード\nCNAME（Canonical Name）レコード\nAliasレコード（Route 53独自）"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-22"
                         },
                         {
@@ -617,8 +617,8 @@
                             "answer": [
                                 "指定したエンドポイント（IPアドレスやドメイン名）に対して定期的にリクエストを送り、その応答を監視することで、エンドポイントの可用性や健全性を確認する機能です。"
                             ],
-                            "memo": "",
-                            "is_correct": true,
+                            "memo": "ALBのconnection drainingと間違えそう",
+                            "is_correct": false,
                             "last_answered_date": "2025-03-21"
                         },
                         {
@@ -1154,7 +1154,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -1848,7 +1848,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "卵黄egg yolk　＝　（A）を妨げる物質",
@@ -1951,7 +1951,7 @@
                             "last_answered_date": "2025-03-18"
                         },
                         {
-                            "problem": "卵形成に関して卵原細胞から最後の卵までの細胞のDNA量の変化をグラフで描いて",
+                            "problem": "卵形成に関して卵原細胞から最後の卵までの細胞のDNA量の変化をグラフで描いて。横軸は間期、第一分裂、第二分裂の順番",
                             "answer": [
                                 "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png"
                             ],
@@ -2306,8 +2306,8 @@
                                 "結合しやすくなる。\n理由は、ある定数の酸素濃度を確認した際に、酸素濃度が同じであるのに対して、HbO2の割合が増えるから。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "酸素解離度曲線を英語で答えよ",
@@ -2480,7 +2480,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "大脳は多数の神経細胞の（A）が集まった白質と、（B）の集まった灰白質からなる。",
@@ -2527,7 +2527,7 @@
                         {
                             "problem": "一塩基多型（SNP）について説明",
                             "answer": [
-                                "DNAの塩基配列に1つの塩基が変化した遺伝的変異"
+                                "DNAの塩基配列に1つの塩基が変化した遺伝的変異\ngoは遺伝的変異"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -2699,10 +2699,10 @@
                         {
                             "problem": "plasmidのような目的とする遺伝子の運び手のことを何という",
                             "answer": [
-                                "ベクター"
+                                "vector(biology)"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -2794,7 +2794,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "動物の初期発生において、卵割（細胞分裂の一種）ではG1,G2期をしばしば欠くため（A）という特徴がある",
@@ -2854,10 +2854,10 @@
                         {
                             "problem": "染色体の交さが起こっている部分を何という",
                             "answer": [
-                                "キアズマ"
+                                "Chiasma\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-23"
                         },
                         {
@@ -2889,6 +2889,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "体細胞分裂の目的は？",
+                            "answer": [
+                                "同じ性質の細胞を作ること"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -3229,8 +3238,8 @@
                                 "Brassinosteroid"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "植物の内皮細胞のなかには（A）と呼ばれる重力を感知する構造体が存在する。",
@@ -3497,7 +3506,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "C3植物は、強い光の中では枯れてしまう。この理由についてRubiscoという単語を用いて説明",
@@ -4536,7 +4545,7 @@
                         {
                             "problem": "⁵√7　英語でどう表現",
                             "answer": [
-                                "the fifth root of seven"
+                                "the fifth root of seven　（左から順番に読んでいけば良い）"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -4657,7 +4666,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "valiant knight",
@@ -5143,8 +5152,8 @@
                                 "（彼は2つの刑を同時に執行される判決を受けた。）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "He held two concurrent positions at different companies.",
@@ -5612,7 +5621,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "We are learning how to do multiplication.",
@@ -5720,7 +5729,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "Fill me in",
@@ -5784,6 +5793,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "vesicle　意味　アクセント",
+                            "answer": [
+                                "小法　/ˈvɛsɪkəl/"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
@@ -6077,8 +6095,8 @@
                                 "Anti-aliasing"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -6333,7 +6351,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "PWM（パルス幅変調）について自由にアウトプット",
@@ -6350,8 +6368,8 @@
                                 "RFID"
                             ],
                             "memo": "電車に乗るときには「ピッ！」ってやるカードを実現するためのやつ",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "What is installed in smartphones such as iPhone and Android instead of CPU?",
@@ -6489,8 +6507,8 @@
                                 "direct  memory　access"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "DMA(direct memory access)ではCPUの代わりを何が行うか？",
@@ -6794,7 +6812,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "メモリ管理の可変区画方式では、空き領域により小さいデータを読み込むので、領域の確保と解放を繰り返していくと、細かい領域がたくさん発生することがあります。この領域を何という？",
