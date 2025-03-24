@@ -341,7 +341,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "auroraはdefaultでマルチAZに対応している。まるかばつか",
@@ -810,7 +810,7 @@
                             ],
                             "memo": "Use Multi-AZ deployments for High Availability/Failover and Read Replicas for read scalability.\nhttps://medium.com/awesome-cloud/aws-difference-between-multi-az-and-read-replicas-in-amazon-rds-60fe848ef53a",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "RDSにおいてマルチAZにはできなくて、read replicasにはできることを一つ挙げて。",
@@ -1242,7 +1242,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -2026,7 +2026,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "Do fungus have cell wall？",
@@ -2473,10 +2473,10 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "末梢神経系は二たつに分類される。なにとなに",
+                            "problem": "末梢神経系peripheral nervous systemは二たつに分類される。なにとなに",
                             "answer": [
-                                "体性神経系",
-                                "自律神経系"
+                                "体性神経系Somatic nervous system ",
+                                "自律神経系Autonomic nervous system"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -2943,7 +2943,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "内外2枚の生体膜で囲まれた細胞小器官の例を3つあげよ",
@@ -3055,7 +3055,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "stressは自分を強くすると考えている人の脳から分泌されるストレスホルモンは？",
@@ -4158,7 +4158,7 @@
                         {
                             "problem": "虫歯",
                             "answer": [
-                                "cavity"
+                                "cavity　kævəti/"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -4621,7 +4621,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "His London accent is very slightly nuanced by an occasional Russian pronunciation.",
@@ -4864,7 +4864,7 @@
                             ],
                             "memo": "pervasiveは広がっている、蔓延している。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "The egress in the emergency exit was blocked by debris",
@@ -5296,8 +5296,8 @@
                                 "会議は一時的に来週の火曜日に予定されている。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "They hoped to conjure up the spirit of their dead friend",
@@ -6908,6 +6908,26 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "タスクの状態遷移の状態は3つある。答えて",
+                            "answer": [
+                                "実行状態",
+                                "実行可能状態",
+                                "待ち状態"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "タスクの遷移状態において、実行状態から実行可能状態に遷移することを何という？",
+                            "answer": [
+                                "プリエンプティブ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
@@ -7462,7 +7482,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "高山気候はケッペンの気候区分であるかいなか。",
@@ -7489,7 +7509,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
@@ -7498,7 +7518,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "山脈は二種類に分類できる。答えて",
@@ -7633,6 +7653,33 @@
                             "problem": "減価償却",
                             "answer": [
                                 ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "Balance sheetの右側は総資本と呼ばれ、何を意味するか。",
+                            "answer": [
+                                "どこかから借りてきたお金を意味する"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "BSの左側を何という？",
+                            "answer": [
+                                "資産"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "ROEの公式",
+                            "answer": [
+                                "\\frac{当期純利益}{自己資本} \\times 100"
                             ],
                             "memo": "",
                             "is_correct": false,
