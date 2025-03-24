@@ -1573,6 +1573,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "空間ベクトルの共線条件（3点A、B、Pが一直線上あるための条件）を書いて",
+                            "answer": [
+                                "    \\textcolor{blue}{\\text{平面}} \\quad \n    \\overrightarrow{AP} = k \\overrightarrow{AB} \\text{ となる実数 } k \\text{ がある}  \\iff \\overrightarrow{OP} = s \\overrightarrow{OA} + t \\overrightarrow{OB} \\quad (s + t = 1) \\\\\n    \\textcolor{blue}{\\text{空間}} \\quad \n    \\overrightarrow{AP} = k \\overrightarrow{AB} \\text{ となる実数 } k \\text{ がある} 　\\iff \\overrightarrow{OP} = s \\overrightarrow{OA} + t \\overrightarrow{OB} \\quad (s + t = 1)\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
