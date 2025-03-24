@@ -2184,7 +2184,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "刺胞動物の例1",
@@ -2519,7 +2519,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "シナプスでは神経伝達物質による（一方向 ／ 両方向）性の伝達が生じる",
@@ -3175,9 +3175,9 @@
                             "last_answered_date": "2025-03-24"
                         },
                         {
-                            "problem": "auxinの働き。（A）を緩め吸水することで細胞を大きくする（成長させる）",
+                            "problem": "auxinの働き。（A）て吸水することで細胞を大きくする（成長させる）",
                             "answer": [
-                                "cell wall"
+                                "cell wallを緩め"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3600,7 +3600,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 }
@@ -3934,7 +3934,7 @@
                             ],
                             "memo": "https://itmanabi.com/rollback-rollforward/",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-12"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -5894,7 +5894,7 @@
                         {
                             "problem": "緊急事態を装って組織内部の人間からパスワードや機密情報を入手する不正な行為は，なんという攻撃に分類されるか",
                             "answer": [
-                                "ソーシャルエンジニアリング"
+                                "Social engineering"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -6263,7 +6263,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -6858,7 +6858,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "メモリ管理の可変区画方式では、空き領域により小さいデータを読み込むので、領域の確保と解放を繰り返していくと、細かい領域がたくさん発生することがあります。この領域を何という？",
@@ -7269,24 +7269,6 @@
                             "last_answered_date": "2025-03-11"
                         },
                         {
-                            "problem": "仏教には上座仏教と大乗仏教がある。戒律がしっかりしている仏教はどちらか。",
-                            "answer": [
-                                "上座仏教"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
-                        },
-                        {
-                            "problem": "大乗仏教を信仰している東南アジアの国は？",
-                            "answer": [
-                                "ベトナム"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
-                        },
-                        {
                             "problem": "フィリピンがキリスト教を信仰している理由は？",
                             "answer": [
                                 "16世紀にスペインの植民地になったため。"
@@ -7565,7 +7547,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "山脈は二種類に分類できる。答えて",
@@ -7593,7 +7575,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "ベルギーはどの3つの国に囲まれているか？",
@@ -7695,12 +7677,49 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "ヨーロッパにおける米の生産国といえば？",
+                            "answer": [
+                                "イタリア"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "南西風はどちらからどちらにふくものをよぶか？",
+                            "answer": [
+                                "南西から北東"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
                 {
                     "name": "religion",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "仏教には上座仏教と大乗仏教がある。戒律がしっかりしている仏教はどちらか。",
+                            "answer": [
+                                "上座仏教"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "大乗仏教を信仰している東南アジアの国は？",
+                            "answer": [
+                                "ベトナム"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        }
+                    ]
                 }
             ]
         },
@@ -7757,7 +7776,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "ROEの公式",
