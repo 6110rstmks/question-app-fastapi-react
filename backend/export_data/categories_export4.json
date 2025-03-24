@@ -1389,8 +1389,8 @@
                                 "AWS KMS"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-02-19"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "EBSの種類4つ挙げて（SSDを二つ、HDDを二つ）",
@@ -2096,7 +2096,7 @@
                             "answer": [
                                 "4"
                             ],
-                            "memo": "",
+                            "memo": "子のう菌の子のう胞子は1つの二核性細胞から8つ形成される",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
                         },
@@ -2551,7 +2551,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -2614,7 +2614,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "Seedless watermelonは何倍体？",
@@ -3574,6 +3574,33 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-18"
+                        }
+                    ]
+                },
+                {
+                    "name": "植生",
+                    "questions": [
+                        {
+                            "problem": "照葉樹林を4つのべて",
+                            "answer": [
+                                "クスノキ",
+                                "タブノキ",
+                                "シイ",
+                                "カシ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "光合成曲線の縦軸と横軸は？",
+                            "answer": [
+                                "縦軸→二酸化炭素の吸収量\n",
+                                "横軸→光の強さ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
@@ -5253,7 +5280,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "彼女は蜘蛛が怖い",
@@ -5774,8 +5801,8 @@
                                 "darts"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "The new car's exterior is sleek and modern",
@@ -5898,7 +5925,7 @@
                             "last_answered_date": "2025-02-20"
                         },
                         {
-                            "problem": "IPSとはなにか（基本情報に出題された）",
+                            "problem": "securityにおいてIPSとはなにか（基本情報に出題された）",
                             "answer": [
                                 "サーバやネットワークへの侵入を防ぐために不正な通信を検知して遮断する装置"
                             ],
@@ -6925,6 +6952,15 @@
                             "problem": "タスクの遷移状態において、実行状態から実行可能状態に遷移することを何という？",
                             "answer": [
                                 "プリエンプティブ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "入出力動作(I/O)の完了を待っている状態。は「実行状態」「実行可能状態」「待ち状態」のうちどれか",
+                            "answer": [
+                                "待ち状態"
                             ],
                             "memo": "",
                             "is_correct": false,
