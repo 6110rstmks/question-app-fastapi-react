@@ -14,10 +14,12 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
     
     query_stmt = select(Category)
     
-    
     # Category欄で検索した場合
     if category_word:
-        query_stmt = query_stmt.where(Category.name.istartswith(f"%{category_word}%"))
+        query_stmt = (
+            query_stmt
+            .where(Category.name.istartswith(f"%{category_word}%"))
+        )
 
     # Subcategory欄で検索した場合
     # 検索した名前のサブカテゴリを持つCategoriesを返す。
@@ -37,9 +39,11 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
         question_ids = db.execute(query2).scalars().all()
         
         
-        query3 = select(CategoryQuestion.category_id).where(CategoryQuestion.question_id.in_(question_ids))
+        query3 = (
+            select(CategoryQuestion.category_id)
+            .where(CategoryQuestion.question_id.in_(question_ids))
+        )
         category_ids = db.execute(query3).scalars().all()
-        
         
         query_stmt = query_stmt.where(Category.id.in_(category_ids))  
     
@@ -104,7 +108,7 @@ def get_page_count(db: Session):
     return count_page
 
 # Questionを一つでも持つCategoryをすべて取得する。
-# Problem生成画面にて、Categoryを選択する際に使用する。
+# SetProblem画面にて、Categoryを選択する際に使用する。
 def find_all_categories_with_questions(db: Session):
     query1 = select(CategoryQuestion.category_id).distinct()
     category_ids = db.execute(query1).scalars().all()

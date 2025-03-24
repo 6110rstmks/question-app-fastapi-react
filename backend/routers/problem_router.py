@@ -27,7 +27,7 @@ async def type_exception_handler(request: Request, exc: TypeException):
 # 出題する問題群を生成する。
 @router.post("/", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def generate_problems(db: DbDependency, problem_create: ProblemFetch):
-    if problem_create.type != "category" and problem_create.type != "random":
+    if problem_create.type not in {"category", "random", "subcategory"}:
         raise TypeException(problem_create.type)
     return problem_crud.generate_problems(db, problem_create)
 

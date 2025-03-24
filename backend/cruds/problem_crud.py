@@ -29,9 +29,22 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
         query2 = select(Question).where(Question.id.in_(question_ids)).where(Question.is_correct == false()).order_by(func.random()).limit(problem_fetch.problem_cnt)
     
     elif problem_fetch.type == "subcategory" and problem_fetch.incorrected_only_flg == True:
-        query1 = select(SubcategoryQuestion.question_id).where(SubcategoryQuestion.subcategory_id.in_(problem_fetch.subcategory_ids))
+        print('banaa')
+        query1 = (
+            select(SubcategoryQuestion.question_id)
+            .where(SubcategoryQuestion.subcategory_id.in_(problem_fetch.subcategory_ids))
+        )
+        print('apple')
         question_ids = db.execute(query1).scalars().all()
-        query2 = select(Question).where(Question.id.in_(question_ids)).where(Question.is_correct == false()).order_by(func.random()).limit(problem_fetch.problem_cnt)
+        # query2 = select(Question).where(Question.id.in_(question_ids)).where(Question.is_correct == false()).order_by(func.random()).limit(problem_fetch.problem_cnt)
+        query2 = (
+            select(Question)
+            .where(Question.id.in_(question_ids))
+            .where(Question.is_correct == false())
+            .order_by(func.random())
+            .limit(problem_fetch.problem_cnt)
+        )
+        print(query2)
     else:
         return '不明なものが入力されました。'
     return db.execute(query2).scalars().all()

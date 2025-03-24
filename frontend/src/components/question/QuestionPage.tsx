@@ -82,11 +82,13 @@ const QuestionPage: React.FC = () => {
                 <div className={styles.questionHeader}>
                     <div className={styles.question_problem}>
                         問題：
-                        {question?.problem && question.problem.includes('\\') ? (
-                            <BlockMath math={question.problem} />
-                        ) : (
-                            <span>{question?.problem}</span>
-                        )}
+                        <div>
+                            {question?.problem && question.problem.includes('\\') ? (
+                                <BlockMath math={question.problem} />
+                            ) : (
+                                <span>{question?.problem}</span>
+                            )}
+                        </div>
                     </div>
                     <div className={styles.questionIsFlg}>
                         <div

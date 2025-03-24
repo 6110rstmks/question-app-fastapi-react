@@ -2,7 +2,8 @@ export const fetchProblem = async (
     selectedType: string,
     incorrectedOnlyFlgChecked: boolean,
     problemCnt: number,
-    selectedCategoryIds: number[]
+    selectedCategoryIds: number[],
+    selectedSubcategoryIds: number[]
 ) => {
     const url = 'http://localhost:8000/problems/'
     const response = await fetch(url, {
@@ -14,7 +15,8 @@ export const fetchProblem = async (
             type: selectedType,
             incorrected_only_flg: incorrectedOnlyFlgChecked,
             problem_cnt: problemCnt,
-            category_ids: selectedCategoryIds
+            category_ids: selectedCategoryIds,
+            subcategory_ids: selectedSubcategoryIds
         }),
     })
 
