@@ -2845,12 +2845,12 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "ヒトの場合、相同染色体は何組存在している？",
+                            "problem": "ヒトの場合、相同染色体Homologous chromosomeは何組存在している？",
                             "answer": [
                                 "23"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-23"
                         },
                         {
@@ -5839,6 +5839,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "Somatic cells are all of the cells in the body except for those involved with reproduction",
+                            "answer": [
+                                "体細胞は、繁殖に関与しない細胞を除いて、体内のすべての細胞です。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 }
@@ -6423,12 +6432,12 @@
                     "name": "register",
                     "questions": [
                         {
-                            "problem": "registerのdranwbackは？",
+                            "problem": "hardwareにおいてregisterのdranwbackは？",
                             "answer": [
                                 "たくさん記憶することができない"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-02-20"
                         }
                     ]
@@ -7513,9 +7522,10 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "ピレネー山脈どこにある？",
+                            "problem": "ピレネー山脈どこにある？どことどこの国の堺にある？",
                             "answer": [
-                                "https://lh4.googleusercontent.com/proxy/yPIv85nrUDnRTj-zKOyiJAz8V6SNVD69aoHlnMeFt2uDRQqf2l6lZ4Ea8D6I8EHnURueVM063PCRbpAozE7HN8QjYDweOSmnLSxur29cRwo_GA"
+                                "https://lh4.googleusercontent.com/proxy/yPIv85nrUDnRTj-zKOyiJAz8V6SNVD69aoHlnMeFt2uDRQqf2l6lZ4Ea8D6I8EHnURueVM063PCRbpAozE7HN8QjYDweOSmnLSxur29cRwo_GA",
+                                "フランス、スペイン"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -7570,7 +7580,7 @@
                         {
                             "problem": "黒海どこ",
                             "answer": [
-                                "ウクライナの下、ロシアの左"
+                                "ウクライナの下、ロシアの左、トルコの上、ブルガリアの左"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -7645,6 +7655,42 @@
                             "problem": "スペインの首都は？",
                             "answer": [
                                 "マドリード"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "ポー川はどこの国で流れている？",
+                            "answer": [
+                                "イタリア"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "カルスト地形はどのようにして形成されますか？",
+                            "answer": [
+                                "石灰岩が溶けること"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "国内でカルスト地形が見られる場所",
+                            "answer": [
+                                "山口県の秋吉台"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "海外で見られるカルスト地形としてどこがある？",
+                            "answer": [
+                                "スロベニアのカルスト"
                             ],
                             "memo": "",
                             "is_correct": false,
