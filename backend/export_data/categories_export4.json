@@ -2223,6 +2223,17 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "開放血管系の動物を3種類のべて",
+                            "answer": [
+                                "節足動物",
+                                "原索動物のホヤ（ナメクジウオは閉鎖血管系）",
+                                "軟体動物の貝類（イカ、タコは閉鎖血管系）"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -3587,17 +3598,7 @@
                 },
                 {
                     "name": "investment",
-                    "questions": [
-                        {
-                            "problem": "ROAとROEの違いを説明してください。",
-                            "answer": [
-                                "ROE（％）=当期純利益÷純資産（総資産－負債）×100\nROA 当期純利益 ÷ 総資産 × 100"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-22"
-                        }
-                    ]
+                    "questions": []
                 }
             ]
         },
@@ -5684,7 +5685,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "loss aversion",
@@ -7279,10 +7280,10 @@
                         {
                             "problem": "寒流では降水量が少ないというのがポイントだったが、寒流付近では一年中降水量が少なく砂漠になってしまいます。その結果できた砂漠を何という？",
                             "answer": [
-                                "海岸砂漠"
+                                "海岸砂漠coastal desert"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-22"
                         },
                         {
@@ -7680,6 +7681,15 @@
                             "problem": "ROEの公式",
                             "answer": [
                                 "\\frac{当期純利益}{自己資本} \\times 100"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "ROEの計算式の覚え方",
+                            "answer": [
+                                "return of end\n当期純利益は損益計算書の最後の項目"
                             ],
                             "memo": "",
                             "is_correct": false,
