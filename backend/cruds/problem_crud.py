@@ -3,6 +3,7 @@ from schemas.problem import ProblemFetch, ProblemFetchByDate
 from sqlalchemy import select, func
 from models2 import Question, CategoryQuestion, SubcategoryQuestion
 from sqlalchemy.sql.expression import false
+from fastapi import HTTPException
 
 # 問題を出題する
 def generate_problems(db: Session, problem_fetch: ProblemFetch):
@@ -47,6 +48,12 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
         print(query2)
     else:
         return '不明なものが入力されました。'
+    
+    print(db.execute(query2).scalars().all())
+    
+    if db.execute(query2).scalars().all() == []:
+        # return '出題可能な問題がありません。'
+        raise HTTPException(status_code=400, detail="Category already exists.")
     return db.execute(query2).scalars().all()
 
 # def generate_problems_by_day(db: Session, problem_fetch_by_date: ProblemFetchByDate):

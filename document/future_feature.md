@@ -137,4 +137,16 @@ problemnormal.page.tsxからquestion editをできるようにする。
 ->無闇にデータ量増やすだけな気がするので没案。
 
 <!--  -->
+questionid 440,441のcategoryid復旧
 
+同カテゴリ内においてサブカテゴリを変更した際に
+カテゴリid の紐付けがとけてしまう問題が発生している。
+
+
+<!--  -->
+削除したはずが、削除できておらず、溜まっているcategory_question, subcategory_questionはないか確認する。
+
+
+<!--  -->
+また、question_idが存在するはずなのにcategory_idやsubcategory_idがないものを検索して
+洗い出すジョブを作る。

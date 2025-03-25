@@ -5,7 +5,6 @@ import Modal from 'react-modal'
 import QuestionEditModal from './QuestionEditModal';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
-// import { BlockMath } from 'react-katex'
 import { BlockMath } from 'react-katex'
 
 
@@ -79,6 +78,7 @@ const QuestionPage: React.FC = () => {
             </div>
         ))}
         <div className={styles.question_box}>
+            <h1>{question?.id}</h1>
                 <div className={styles.questionHeader}>
                     <div className={styles.question_problem}>
                         問題：

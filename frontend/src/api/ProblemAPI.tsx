@@ -2,8 +2,8 @@ export const fetchProblem = async (
     selectedType: string,
     incorrectedOnlyFlgChecked: boolean,
     problemCnt: number,
-    selectedCategoryIds: number[],
-    selectedSubcategoryIds: number[]
+    selectedCategoryIds?: number[],
+    selectedSubcategoryIds?: number[]
 ) => {
     const url = 'http://localhost:8000/problems/'
     const response = await fetch(url, {
@@ -20,10 +20,14 @@ export const fetchProblem = async (
         }),
     })
 
-    if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to create problems');
-    }
+    // if (!response.ok) {
+    //     const errorData = await response.json();
+    //     throw new Error(errorData.message || 'Failed to create problems');
+    // }
+
+    console.log(8889799)
+    console.log(response.ok)
+
 
     return response.json()
 }

@@ -31,6 +31,8 @@ export const Home: React.FC = () => {
         <>
             <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
             <h3>The total number of Questions：{questionCount}</h3>
+            <h3>The total number of uncorrected Questions：{uncorrectedQuestionCount}</h3>
+            <h3>正解した問題の数{(questionCount?? 0)  - (uncorrectedQuestionCount?? 0)}</h3>
             <Pagination
                     currentPage={page}
                     totalPages={pageCount}

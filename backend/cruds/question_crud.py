@@ -13,12 +13,7 @@ def find_all_questions(
     search_problem_word: str = None,
     search_answer_word: str = None
 ):
-    
-    print(112233222)
-        
     if search_problem_word:
-        print(db.query(Question).filter(Question.problem.like(f"%{search_problem_word}%")).all())
-        print(77777777)
         return db.query(Question).filter(Question.problem.like(f"%{search_problem_word}%")).all()
 
     if search_answer_word:
@@ -182,6 +177,16 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
         if existing_record:
             db.delete(existing_record)
             db.commit()
+        
+    query_a = db.query(SubcategoryQuestion).where(SubcategoryQuestion.question_id ==changeSubcategoryUpdate.question_id)
+    results_a = db.execute(query_a).scalars().all()
+    print(results_a)
+    print(8888)
+    
+    for aaaa in results_a:
+        print(aaaa.subcategory_id)
+        print(aaaa.question_id)
+        print('unoyana')
 
     # ------------------------------------------------------------------------ #
     # チェックボックスにチェックがついた場合のSubcategory追加処理
@@ -203,6 +208,16 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
             db.add(new_subcategory_question)
             db.commit()
             
+    query_b = db.query(SubcategoryQuestion).where(SubcategoryQuestion.question_id ==changeSubcategoryUpdate.question_id)
+    results_b = db.execute(query_b).scalars().all()
+    print(results_b)
+    print(8888)
+    
+    for aaaa in results_b:
+        print(aaaa.subcategory_id)
+        print(aaaa.question_id)
+        print('euednd')
+            
     # ------------------------------------------------------------------------ #
     # チェックボックスが外された場合のCategory削除処理
     # ------------------------------------------------------------------------ #
@@ -216,6 +231,9 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
     # current_categoriesとchangeSubcategoryUpdate.category_idsの差分を取得
     # delete_category_idsが削除対象のCategory
     delete_category_ids = list(set(current_category_ids) - set(changeSubcategoryUpdate.category_ids))
+
+    print('rrrrttt')
+    print(delete_category_ids)
     
     for delete_category_id in delete_category_ids:
         # 重複チェック
@@ -228,6 +246,13 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
         if existing_category_question_record:
             db.delete(existing_category_question_record)
             db.commit()
+            
+    results33 = db.execute(query).scalars().all()
+    print(results33)
+    for eee in results33:
+        print(eee.category_id)
+        print(eee.question_id)
+        print('naaadousie')
             
     
     # ------------------------------------------------------------------------ #
