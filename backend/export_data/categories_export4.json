@@ -56,18 +56,7 @@
                 },
                 {
                     "name": "codepipeline",
-                    "questions": [
-                        {
-                            "problem": "green-blue 環境について説明してください",
-                            "answer": [
-                                "アプリケーションをデプロイする際、例えばオンプレミスな物理サーバ上で動作するアプリケーションの場合、メンテナンス日を設けて一時的にサービス停止させたりしてサーバ上で動作するアプリケーションを入れ替えたりすることが多いかと思います。",
-                                "ブルーグリーンデプロイメントはアプリケーションをデプロイする際のデプロイ方式の１つでAWS等のクラウドサービスでアプリケーションをデプロイする場合、クラウドのメリットの１つとなるサービス作成・廃棄することが簡単にできることを活かして、もう１セットのサービスを用意して、テストしてから切り替えることで安全に、ダウンタイムもほぼ無いリリースができる技術となります。"
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
-                        }
-                    ]
+                    "questions": []
                 },
                 {
                     "name": "storage",
@@ -432,8 +421,8 @@
                                 "4層（トランスポート層）"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "ELBのconnection drainingについて説明してください",
@@ -459,8 +448,8 @@
                                 "AZ\nリージョンではない"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を（A）する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。",
@@ -619,7 +608,7 @@
                             ],
                             "memo": "ALBのconnection drainingと間違えそう",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-21"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -791,7 +780,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "RDSを使用する場合において、設定で必須した方がよいものは何か？また、理由は？",
@@ -1032,8 +1021,8 @@
                                 "Origin Access Identity (OAI)\nまたはOrigin Access Control (OAC)"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "cloudfrontディストリビュションへのアクセス情報（アクセス元IP,リクエストURL、日時）を最低一年以上保存するためのサービス機能はなにか？",
@@ -1489,8 +1478,8 @@
                                 "無料"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "レポート通知と異常検知を行うのはAWS Shield Standardか？Advancedか？",
@@ -1658,8 +1647,8 @@
                                 "斜めの変数で体積を設定"
                             ],
                             "memo": "https://hiraocafe.com/note/shajikukihon.html",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -1750,15 +1739,6 @@
                     "name": "m",
                     "questions": [
                         {
-                            "problem": "MOS Metal-Oxide-Semiconductor 記憶素子",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "かなり古い用語",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
-                        },
-                        {
                             "problem": "What is the SI derived unit of radioactivity",
                             "answer": [
                                 "becquerel"
@@ -1774,7 +1754,7 @@
                             ],
                             "memo": "内容的にはchemistryかな？",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "HCLOはなんの化学式",
@@ -1791,8 +1771,8 @@
                                 ""
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "尿素の酸素原子を硫黄原子で置換した構造の化合物を何という？",
@@ -1874,7 +1854,7 @@
                                 "カエルの前後軸の決定→ 受精時\nショウジョウバエの前後軸の決定→受精前"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -1885,7 +1865,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "原口背唇部から（A）や（B）が分泌されて、これらがBMPに結合することで、BMPは受容体に結合できなくなる。その結果原口背唇部に近い背側の外胚葉の細胞は表皮ではなく、（C）に分化する",
@@ -1984,16 +1964,16 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "初期発生に関与する遺伝子のうち、卵形成の過程でそのmRNAに蓄積して受精直後から機能する遺伝子を何という？",
                             "answer": [
-                                "母性効果遺伝子"
+                                "母性効果遺伝子Maternal effect genes"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "カエルにおいて、背腹軸の決定は、中胚葉誘導につながるか？◯か✖︎か",
@@ -2052,8 +2032,8 @@
                                 "chlorophyll a"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "亜門を英語で",
@@ -2214,8 +2194,8 @@
                                 "無体腔"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "子実体fruiting bodyはどの核相に分類されるか",
@@ -2276,8 +2256,9 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "閉鎖血管系では、動脈から出た血液が毛細血管を経て静脈に戻るのに対して、開放血管系では動脈から出た血液が（A）を経て静脈に戻る。",
+                            "problem": "閉鎖血管系では、動脈から出た血液が（A）を経て静脈に戻るのに対して、開放血管系では動脈から出た血液が（B）を経て静脈に戻る。",
                             "answer": [
+                                "毛細血管\n",
                                 "組織間"
                             ],
                             "memo": "",
@@ -2493,7 +2474,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "活動電位が軸索の末端に到達すると、末端部にある（A)が軸索の膜に融合する。",
@@ -2530,7 +2511,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -2791,13 +2772,13 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "減数分裂の過程を二つの名前に分けることができる。それぞれ答えよ",
+                            "problem": "Meiosisの過程を二つの名前に分けることができる。それぞれ答えよ",
                             "answer": [
                                 "第一分裂",
                                 "第二分裂"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-23"
                         },
                         {
@@ -3087,6 +3068,16 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "（A）は大気中の窒素分子から無機窒素化合物を作ることができる。この現象を（B）と呼ぶ。",
+                            "answer": [
+                                "根粒菌",
+                                "窒素固定"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -3121,7 +3112,7 @@
                             "last_answered_date": "2025-03-09"
                         },
                         {
-                            "problem": "イネにおいてジベレリンは（A）で合成される",
+                            "problem": "イネにおいてgibberellinは（A）で合成される",
                             "answer": [
                                 "embryo"
                             ],
@@ -3269,8 +3260,8 @@
                                 "Amyloplast"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "PINタンパク質 AUXタンパク質は植物の何という働きに関与している？",
@@ -3445,8 +3436,8 @@
                                 "作用スペクトルAction spectrum"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "吸収スペクトルと作用スペクトルの横軸はともになにか？",
@@ -3519,7 +3510,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "植物中のRuBisCOは、C3回路の1番目の反応で、空気中からCO2を取り込む働きする。 しかし、RuBisCOは、強光下では（A）",
@@ -3533,11 +3524,11 @@
                         {
                             "problem": "C3植物は、強い光の中では枯れてしまう。この理由についてRubiscoという単語を用いて説明",
                             "answer": [
-                                ""
+                                "RuBisCOは、強光下では二酸化炭素ではなく、酸素を取り込んでしまう。\n強光下では、植物の光合成が中断され、植物内の有機物は分解されてしまいます。"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "beta oxidationでは脂肪酸から何を生成する？",
@@ -3559,8 +3550,8 @@
                                 "光"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -3592,13 +3583,32 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "光合成曲線の縦軸と横軸は？",
                             "answer": [
                                 "縦軸→二酸化炭素の吸収量\n",
                                 "横軸→光の強さ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "生産構造図 は二つに分類される。それぞれ答えて",
+                            "answer": [
+                                "広葉型",
+                                "イネか型"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "植生の中で最も占有面積が大きく、植生の相観を決定する種を何というか？",
+                            "answer": [
+                                "優占種"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3715,7 +3725,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -3996,8 +4006,8 @@
                                 "rank"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "window functionは3つに分類できる。こたえよ",
@@ -4145,7 +4155,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-20"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "What are the benefits of A mechanism called RAID that bundles multiple hard disks into one disk system?2",
@@ -4812,8 +4822,8 @@
                                 "（彼女は会社のルールを破ったので、今その責任を取らなければならない。）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "I’ll use all my extra power to finish this project ahead of schedule.",
@@ -5048,7 +5058,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-16"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "ozonolysis",
@@ -5101,8 +5111,8 @@
                                 "散歩をしたい気分だ"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "I laid aside my idea and asked her advice.",
@@ -5398,8 +5408,8 @@
                                 "ハロウィンのために新しい衣装を作り上げる必要がある。\n"
                             ],
                             "memo": "fabricateという単語は「作り出す」や「でっち上げる」を意味します。この言葉は主に物理的なものを作成する際や、真実でない情報を意図的に作り出す場合に使われます\nこの2つの意味は、文脈によって異なる印象を与えます",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "私の服に焼肉の匂いがつく。noun is the smell",
@@ -5641,8 +5651,8 @@
                                 "多くの人々が愛された俳優の死を悲しんだ\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "maslow’s hierarchy of needs",
@@ -5686,8 +5696,8 @@
                                 "彼女はよく考えた後、委員会を離れることに決めました。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "dicotyledon",
@@ -5713,7 +5723,7 @@
                                 "多足動物\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -5740,8 +5750,8 @@
                                 "「私の会社は、新たに制定された環境法に従う必要がある。」\n\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "skeletal muscle",
@@ -5795,7 +5805,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "to ask that a task be done",
@@ -5840,7 +5850,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "vesicle　意味　アクセント",
@@ -5868,6 +5878,33 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "She asked that the project be completed on time.",
+                            "answer": [
+                                "彼女はそのプロジェクトが時間通りに完了するよう頼んだ"
+                            ],
+                            "memo": "ask that S + V (原形)\n\"ask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "I ask that he go to the meeting.",
+                            "answer": [
+                                "私は彼に会議に行くよう頼む\nこの場合、「he goes」とはせず、「he go」となります。"
+                            ],
+                            "memo": "\nask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "I ask that he go to the meeting.",
+                            "answer": [
+                                "私は彼に会議に行くよう頼む\nこの場合、「he goes」とはせず、「he go」となります。"
+                            ],
+                            "memo": "\nask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 }
@@ -5960,7 +5997,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -6117,7 +6154,7 @@
                         {
                             "problem": "ページング方式の仮想記憶において，ページ置換えの発生頻度が高くなり，システムの処理能力が急激に低下することがある。このような現象を何と呼ぶか。",
                             "answer": [
-                                "スラッシング"
+                                "スラッシングThrashing"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -6177,7 +6214,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -6366,7 +6403,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-20"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "システムにすぐに対処しなくてはならない問題などが生じたときに、実行中のプログラムの処理を強制的に停止し、優先的に事象の解決を図ることを可能にする仕組みは？",
@@ -6482,7 +6519,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -6610,8 +6647,8 @@
                                 "交流Alternating current"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "物体が電気を帯びることを何という？",
@@ -6887,7 +6924,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "ページング方式において、ページインは（A）から（B）にページを移すことをいう。",
@@ -6947,7 +6984,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "タスクの切り替えをプログラム自身に任せる方式を何という？",
@@ -7141,7 +7178,7 @@
                         {
                             "problem": "3種類の恒常風を答えて",
                             "answer": [
-                                "貿易風",
+                                "貿易風Trade winds",
                                 "極東風",
                                 "偏西風"
                             ],
@@ -7550,7 +7587,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "リャマやアルパカなどから手に入れた毛皮で、防寒用の（A）と呼ばれる衣服などを作ります。",
@@ -7583,7 +7620,7 @@
                         {
                             "problem": "黒海どこ",
                             "answer": [
-                                "ウクライナの下、ロシアの左、トルコの上、ブルガリアの左"
+                                "ウクライナの下、ロシアの左、トルコの上、ブルガリアの右"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -7607,7 +7644,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "作物が栽培できなくなる限界を何という？",
@@ -7789,6 +7826,25 @@
                             "answer": [
                                 "北回帰線",
                                 "南回帰線"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "地球は少し傾いているので、常に赤道が地球の真ん中にあるわけではありません。 夏至の時期には（A）、冬至の時期には（B）がそれぞれ地球の真ん中に位置します。",
+                            "answer": [
+                                "北回帰線",
+                                "南回帰線"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "南アメリカの西岸に位置しており、赤道を通る国は？",
+                            "answer": [
+                                "エクアドル"
                             ],
                             "memo": "",
                             "is_correct": false,
