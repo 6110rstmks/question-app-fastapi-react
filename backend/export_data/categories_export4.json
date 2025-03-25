@@ -2086,7 +2086,7 @@
                             "answer": [
                                 "8"
                             ],
-                            "memo": "",
+                            "memo": "担子菌の担子胞子は1つの二核性細胞から4つ形成される",
                             "is_correct": false,
                             "last_answered_date": "2025-03-23"
                         },
@@ -3609,6 +3609,34 @@
                             "problem": "植生の中で最も占有面積が大きく、植生の相観を決定する種を何というか？",
                             "answer": [
                                 "優占種"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "陽樹と陰樹が混合する高木の森林の名称は？",
+                            "answer": [
+                                "混交林"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "極相林は陰樹と陽樹のどちらで構成されているか？",
+                            "answer": [
+                                "陰樹"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "先駆植物の草本の例と木本の例をそれぞれ答えよ",
+                            "answer": [
+                                "ススキ",
+                                "ヤシャブシ"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -6993,7 +7021,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "実行可能なタスクに対してプロセッサの使用権限を割り当てることを何という",
@@ -7845,6 +7873,34 @@
                             "problem": "南アメリカの西岸に位置しており、赤道を通る国は？",
                             "answer": [
                                 "エクアドル"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "気候、農業、工業といずれも南北が対照的で、南北間の経済格差が大きいため南部からの出稼ぎも多い。この特徴はどこの国か？",
+                            "answer": [
+                                "イタリア"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "イギリスは国全体でどの気候区分に属するか？",
+                            "answer": [
+                                "西岸海洋性気候"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "西岸海洋性気候は二つの要因に注意する？それはなにとなにか",
+                            "answer": [
+                                "暖流",
+                                "偏西風"
                             ],
                             "memo": "",
                             "is_correct": false,
