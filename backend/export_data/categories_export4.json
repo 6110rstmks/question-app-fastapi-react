@@ -341,7 +341,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "auroraはdefaultでマルチAZに対応している。まるかばつか",
@@ -987,8 +987,8 @@
                                 "インターネットを経由せずに"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "VPCエンドポイントのゲートウェイ型のコストは無料？有料？",
@@ -2168,9 +2168,10 @@
                             "last_answered_date": "2025-03-24"
                         },
                         {
-                            "problem": "担子菌の生活環　子実体⇒担子胞子⇒菌糸⇒二核性細胞⇒（A）",
+                            "problem": "担子菌の生活環　子実体⇒担子胞子⇒菌糸⇒（A）⇒（B）",
                             "answer": [
-                                "子実体"
+                                "二核性細胞",
+                                "子実体fruiting body"
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png",
                             "is_correct": false,
@@ -2262,7 +2263,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "What organs destroy red blood cells?2",
@@ -3445,7 +3446,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "吸収スペクトルと作用スペクトルの横軸はともになにか？",
@@ -3545,7 +3546,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         }
                     ]
                 },
@@ -4595,8 +4596,8 @@
                                 "the fifth root of seven　（左から順番に読んでいけば良い）"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "first, second , third , forth, fifthなどをなんとよぶ？",
@@ -5766,8 +5767,8 @@
                                 "その魔法使いは、空中からウサギを呼び出した。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "They conjured to undermine their rivals’ success.",
@@ -5821,7 +5822,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "She learned to upholster furniture from her grandfather",
@@ -6606,7 +6607,7 @@
                         {
                             "problem": "プラスとマイナスが常に周期的に入れ替わり、それにともない電気の流れの方向も常に変わっていく、電気の流れの方式を何という",
                             "answer": [
-                                "交流"
+                                "交流Alternating current"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -6849,7 +6850,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "ページング方式において、補助記憶装置から主記憶装置にページを移すことを（A）といい、主記憶装置から補助記憶装置にページを移すことを（B）という。",
@@ -7478,13 +7479,13 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "イヌイットは（A）と呼ばれる住居で生活。",
+                            "problem": "イヌイットInuitは（A）と呼ばれる住居で生活。",
                             "answer": [
-                                "イグルー"
+                                "イグルーIgloo"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "アウトストラーダ・デル・ソーレとは？",
@@ -7511,7 +7512,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-24"
                         },
                         {
                             "problem": "ピレネー山脈どこにある？どことどこの国の堺にある？",
@@ -7759,6 +7760,15 @@
                             "problem": "海岸付近の陸地が沈降したり、海面が上昇したりすることで、海水が陸地に入り込んでできた地形を何という？",
                             "answer": [
                                 "沈水海岸"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "氷河による侵食でできたU字谷に海水が入り込んでできた入江を何とう？ちなみに沈水海岸のひとつ",
+                            "answer": [
+                                "フィヨルド"
                             ],
                             "memo": "",
                             "is_correct": false,
