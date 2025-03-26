@@ -150,3 +150,6 @@ questionid 440,441のcategoryid復旧
 <!--  -->
 また、question_idが存在するはずなのにcategory_idやsubcategory_idがないものを検索して
 洗い出すジョブを作る。
+
+backend>jobs>insert_nonexistent_category_question_record.py
+backend>jobs>check_nonexistent_category_question_record.py
