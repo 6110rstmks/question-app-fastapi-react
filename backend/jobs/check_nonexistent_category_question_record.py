@@ -1,6 +1,8 @@
-import argparse
+# python -m jobs.check_nonexistent_category_question_record
+# で実行する
+
 from sqlalchemy.orm import Session
-from models2 import CategoryQuestion, SubcategoryQuestion, Question
+from models2 import CategoryQuestion, SubcategoryQuestion, Question, Subcategory
 from sqlalchemy import select, exists
 from typing import Annotated
 from fastapi import Depends
@@ -45,27 +47,56 @@ def find_missing_category_questions(db: Session):
         if not result.scalars().all():
             not_existing_ids.append(question_id)
     
-    print(f"categoryquestionの存在しないレコードはquestion_idsの{not_existing_ids}になります。") 
         
     return not_existing_ids
 
-def insert_missing_category_questions(db: Session):
+def insert_missing_category_questions(db: Session, missing_records_question_ids):
     
+    query3 = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id.in_(missing_records_question_ids))
+    subcategories_questions = db.execute(query3).scalars().all()
     
+    for subcategory_question in subcategories_questions:
+        query4 = select(Subcategory).where(Subcategory.id == subcategory_question.subcategory_id)
+        subcategory = db.execute(query4).scalars().first()
+        print(f"subcategory: {subcategory.category_id}")
 
+        subcategory_question.category_id = subcategory.category_id
+
+    print(subcategories_questions)
+
+    for bbb in subcategories_questions:
+        print(bbb.category_id)
+        print(bbb.question_id)
+        print(bbb.subcategory_id)
+        
+    new_category_questions = [
+        CategoryQuestion(
+            category_id=subcategory_question.category_id,
+            question_id=subcategory_question.question_id
+        )
+        for subcategory_question in subcategories_questions
+    ]
     
+    db.add_all(new_category_questions)
+    db.commit()
+        
+    return subcategories_questions
 
 def main():
     # データベースセッションを手動で作成
     with SessionLocal() as db:
         missing_records_question_ids = find_missing_category_questions(db)
-        aaa = insert_missing_category_questions(db, missing_records_question_ids)
 
-        if missing_records:
-            for record in missing_records:
-                print(f"Missing CategoryQuestion record with question_id: {record.question_id}")
+        if not missing_records_question_ids:
+            print("categoryquestionの存在しないレコードはありません。")
+            return
+        
         else:
-            print("No missing records found.")
+            print(f"categoryquestionの存在しないレコードはquestion_idsの{not_existing_ids}になります。") 
+        
+        subcategories_questions = insert_missing_category_questions(db, missing_records_question_ids)
+
+
 
 if __name__ == "__main__":
     main()

@@ -119,18 +119,18 @@ const QuestionPage: React.FC = () => {
                 {
                 question?.answer.map((answer, index) => (
                     <div key={index}>
-                    {answer.split('\n').map((line, i) => (
-                        <React.Fragment key={i}>
-                        {isLatex(line) ? (
-                            <BlockMath math={line} />
-                        ) : (
-                            <>
-                            {line}
-                            <br />
-                            </>
-                        )}
-                        </React.Fragment>
-                    ))}
+                        {answer.split('\n').map((line, i) => (
+                            <React.Fragment key={i}>
+                            {isLatex(line) ? (
+                                <BlockMath math={line} />
+                            ) : (
+                                <>
+                                {line}
+                                <br />
+                                </>
+                            )}
+                            </React.Fragment>
+                        ))}
                     </div>
                 ))
                 }

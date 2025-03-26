@@ -10,6 +10,7 @@ import { handleNavigateToQuestionPage } from "../../../utils/navigate_function";
 import { useNavigate } from "react-router-dom"
 import { fetchCategoryQuestionByQuestionId } from "../../../api/CategoryQuestionAPI"
 import { fetchCategory } from "../../../api/CategoryAPI"
+import { BlockMath } from "react-katex";
 
 interface Props {
     problem: Question
@@ -33,6 +34,8 @@ export const ProblemNormal: React.FC<Props> = ({
     const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
     const [localProblem, setLocalProblem] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
     const [category, setCategory] = useState<Category>()
+
+    const isLatex = (text: string) => text.includes('\\')
 
     const handleUpdateIsCorrect = async () => {
         await updateQuestionIsCorrect(localProblem!); // API コール
@@ -121,11 +124,17 @@ export const ProblemNormal: React.FC<Props> = ({
                         <div className={styles.answerContent}>
                             {localProblem.answer.length > 0 ? (
                                 localProblem?.answer.map((answer, index) => (
-                                    <div key={index} className={styles.answerItem}>
+                                    <div key={index}>
                                         {answer.split('\n').map((line, i) => (
                                             <React.Fragment key={i}>
+                                            {isLatex(line) ? (
+                                                <BlockMath math={line} />
+                                            ) : (
+                                                <>
                                                 {line}
                                                 <br />
+                                                </>
+                                            )}
                                             </React.Fragment>
                                         ))}
                                     </div>
