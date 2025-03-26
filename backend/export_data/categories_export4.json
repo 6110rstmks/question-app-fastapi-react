@@ -471,8 +471,8 @@
                                 "VPC内でネットワークトラフィックがどこに向かうか決めるもの\n"
                             ],
                             "memo": "ネットワークトラフィックというワードで説明できるようになりたいですね。",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "ルートテーブルの「送信先」には何を指定すればよいか",
@@ -1312,13 +1312,13 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "分散サービス妨害 (DDoS) に対する保護サービスを答えよ",
+                            "problem": "分散サービス妨害 (DDoS) に対する保護を行うAWSサービスを答えよ",
                             "answer": [
                                 "Amazon Shield"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "HTTPSの終端を扱うAWSのサービスは二つある。それらを答えよ。また、そもそもHTTPSの終端とはなにか？",
@@ -1346,7 +1346,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "ある会社で本社の所在委に最も近いリージョンのS3バケットでトレーニング資料を管理しており、複数の国や地域にある支社の業務端末からトレーニング資料の追加、更新を実施します。支社の社員からアップロードに時間がかかるとクレームがきています。アーキテクチャの修正は行わずS3での資料管理の高速化を実現したい。実現案を2つあげて",
@@ -1423,8 +1423,8 @@
                                 "専用線のため帯域幅が確保され、安定した通信速度で接続できます\n（インターネットが混み合っていても大丈夫）"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 },
@@ -1534,7 +1534,7 @@
                             ],
                             "memo": "https://examist.jp/mathematics/integration-expression/sekibunzenkasiki/",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 },
@@ -1570,7 +1570,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 },
@@ -1909,8 +1909,8 @@
                                 "A = 外\nB = 内"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "Spermの先体に含まれる細胞小器官organnelsのめいしょうは？",
@@ -1990,8 +1990,8 @@
                                 "受容体に結合"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 },
@@ -2006,7 +2006,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "Do fungus have cell wall？",
@@ -2024,7 +2024,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "What chlorophyll did plants get the fastest in their evolution?",
@@ -2079,16 +2079,16 @@
                             ],
                             "memo": "子のう菌の子のう胞子は1つの二核性細胞から8つ形成される",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "子のう菌の子のう胞子は1つの二核性細胞から幾つ形成されるか？",
                             "answer": [
                                 "8"
                             ],
-                            "memo": "担子菌の担子胞子は1つの二核性細胞から4つ形成される",
+                            "memo": "担子菌の担子胞子は1つの二核性細胞から4つ形成される\n\n覚え方は子のう→4のう\n\nかとおもいきや、それの反対",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "What is the cell wall of fungus made of?",
@@ -2155,7 +2155,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "What animals have echolocation?3",
@@ -2203,8 +2203,8 @@
                                 "二核相（n + n）"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "開放血管系の動物を3種類のべて",
@@ -2262,8 +2262,8 @@
                                 "組織間"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "ペースメーカーは心臓の何処にある？",
@@ -2370,8 +2370,8 @@
                                 "辺縁皮質"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "ヒトの反射中枢は（A）（B）（C）が代表的である。",
@@ -2596,8 +2596,8 @@
                                 "欠失によりフレームシフトがおこり、アミノ酸配列が大きく変化するため（"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "Seedless watermelonは何倍体？",
@@ -2643,7 +2643,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "遺伝子組み変えにおいて、遺伝子を切断する酵素を何という？",
@@ -2652,7 +2652,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "ベクターの例は？",
@@ -2669,8 +2669,8 @@
                                 "Agrobacteriumアグロバクテリウム"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "大腸菌においてラクトースだけが存在する場合は、リプレッサーが（A）ことによって、RNAポリメラーゼがプロモーターに結合できるようになり、転写が始まる。",
@@ -2679,7 +2679,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "真核生物において、RNAポリメラーゼがプロモーターが結合するには（A）が必要",
@@ -2759,8 +2759,8 @@
                                 "対合"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "相同染色体が対合してできたものを何という？",
@@ -2796,8 +2796,8 @@
                                 "動物極"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "動物の初期発生において、卵割（細胞分裂の一種）ではG1,G2期をしばしば欠くため（A）という特徴がある",
@@ -2805,8 +2805,8 @@
                                 "細胞周期が短い"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "ウニの発生においてプルテウス幼生とプリズム幼生ではどちらが先か",
@@ -2825,7 +2825,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "ヒトの場合、相同染色体Homologous chromosomeは何組存在している？",
@@ -2966,7 +2966,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -3048,8 +3048,8 @@
                                 "Meteorite impact"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "stressは自分を強くすると考えている人の脳から分泌されるストレスホルモンは？",
@@ -3118,7 +3118,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "イネriceにおいて gibberellinは何に働きかけるか",
@@ -3126,8 +3126,8 @@
                                 "粉粉層aleurone laye"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "光の照射によって発芽が促進される種子を何という",
@@ -3194,8 +3194,8 @@
                                 "茎はしっかりしていて鈍感（感受性が低い）\n根は繊細で敏感（感受性が高い）"
                             ],
                             "memo": "根の方がオーキシンに対する感受性が高い。",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "オーキシンの極性移動にはオーキシンを排出する（A）とオーキシンを取り込む（B）の膜タンパク質が働いている。",
@@ -3292,8 +3292,8 @@
                                 "Hardy–Weinberg"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         }
                     ]
                 },
@@ -3445,8 +3445,8 @@
                                 "光の波長(nm)"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "空気を抜いた状態で光合成で発生するO2の由来を調べる実験は？結論：O2は水由来だと判明。",
@@ -3483,7 +3483,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "光合成色素には、クロロフィルa、クロロフィルb、カロテン、キサントフィルなどの種類がありました。 これらは別々の物質ですが、活性化されると、すべて（A）となります。",
@@ -3603,7 +3603,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "植生の中で最も占有面積が大きく、植生の相観を決定する種を何というか？",
@@ -3621,7 +3621,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "極相林は陰樹と陽樹のどちらで構成されているか？",
@@ -3786,8 +3786,8 @@
                                 "IGP\nEGP"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 }
@@ -3996,8 +3996,8 @@
                                 "トランザクション内の処理がすべて実行されるか、または全く実行されないことを保証する特性。トランザクションはコミットまたはロールバックのいずれかで終了することで確保する"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "スループットとは。時間あたりの（A）",
@@ -4119,8 +4119,8 @@
                                 "ストライピング"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "raid0の目的は？",
@@ -4238,8 +4238,8 @@
                                 "cavity　kævəti/"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "一口ちょうだい",
@@ -4671,7 +4671,7 @@
                             ],
                             "memo": "stock in trade も同様に「在庫品、手持ち商品、流通在庫」\n\nを意味します。このほかに stock in trade には「おはこ、\n\n常用手段、固有の技能、十八番」などの意味があります。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "He fought bravely against his foe in the final battle.",
@@ -4760,8 +4760,8 @@
                                 "勇敢な騎士"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "minion",
@@ -5077,7 +5077,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "gymnosperm",
@@ -5104,7 +5104,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "Floating-point arithmetic(number)",
@@ -5220,8 +5220,8 @@
                                 "優れたメンターは、新しいスキルを習得する際の苦労を軽減してくれます。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "he crumpled up the paper bag.",
@@ -5310,8 +5310,8 @@
                                 "彼女は会議中に割り込もうとしました。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "In the project, each ally contributed their unique skills.",
@@ -5383,7 +5383,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "I went to the party to mingle with some new people. ",
@@ -5409,8 +5409,8 @@
                                 "その委員会はプロジェクトに関する最終的な決定を下す権限を与えられた。\n(vest: 権限を与える)\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "Please enumerate the items on the agenda for the meeting.",
@@ -5446,7 +5446,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "彼はストレス発散のために走る。",
@@ -5490,8 +5490,8 @@
                                 "戦場の野蛮さは彼がこれまで経験したことのないものであった。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "The news of her sudden departure filled him with a sense of torture that he couldn't escape.",
@@ -5563,7 +5563,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "Her story was so compelling that I couldn't stop listening to her.",
@@ -5760,8 +5760,8 @@
                                 "棘皮動物"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "loss aversion",
@@ -5841,8 +5841,8 @@
                                 "その作業を行うよう依頼する"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "遊びのダーツの綴は？",
@@ -5859,8 +5859,8 @@
                                 "新しい車の外観はスリムで現代的です。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "She learned to upholster furniture from her grandfather",
@@ -5878,7 +5878,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "vesicle　意味　アクセント",
@@ -5887,7 +5887,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "Somatic cells are all of the cells in the body except for those involved with reproduction",
@@ -5914,7 +5914,7 @@
                             ],
                             "memo": "ask that S + V (原形)\n\"ask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "I ask that he go to the meeting.",
@@ -5932,7 +5932,7 @@
                             ],
                             "memo": "\nask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 }
@@ -5950,8 +5950,8 @@
                                 "ユーザ名、パスワード、メールアドレスなどをまとめて管理するサービスのこと"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 },
@@ -5973,8 +5973,8 @@
                                 "C&Cサーバ"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "緊急事態を装って組織内部の人間からパスワードや機密情報を入手する不正な行為は，なんという攻撃に分類されるか",
@@ -6176,8 +6176,8 @@
                                 "Amazon S3"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "ページング方式の仮想記憶において，ページ置換えの発生頻度が高くなり，システムの処理能力が急激に低下することがある。このような現象を何と呼ぶか。",
@@ -6463,8 +6463,8 @@
                                 "センサー"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "What is previous mainstream of SATA?",
@@ -6510,6 +6510,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-02-21"
+                        },
+                        {
+                            "problem": "エネルギーハーベスティングとは？",
+                            "answer": [
+                                "周りの環境からの微弱なエネルギーを収穫(harvest)して電力に変換する技術の総称です。エネルギーハーベスティングを利用した技術としては以下の事例が挙げられます。\nヒトやモノが移動する際の圧力を利用した電力床"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 },
@@ -6712,8 +6721,8 @@
                                 "万有引力"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "静電場において単位電荷を想定したときに受ける力のことを何という？",
@@ -6807,7 +6816,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-19"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "力 x 距離 = ?",
@@ -6853,7 +6862,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "物体を回転させる力を何という？",
@@ -7002,8 +7011,8 @@
                                 "タスク"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "タスクを処理するのはコンピュータのどの部分か？",
@@ -7029,8 +7038,8 @@
                                 "タスクのディスパッチ"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "CPUを使用できる時間を定め、その時間内に処理が終わらない場合は、次のタスクにCPUの使用権限を与える方式を何という？",
@@ -7039,7 +7048,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "タスクの状態遷移の状態は3つある。答えて",
@@ -7068,7 +7077,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 }
@@ -7183,7 +7192,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "季節によって風向きが変わる風のことを何という？",
@@ -7496,7 +7505,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "以下高潮の説明。熱帯低気圧が接近すると、気圧が低下するため、海面が（A）",
@@ -7578,15 +7587,16 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
-                            "problem": "熱帯とは、最寒月平均気温、 最も寒い月の平均気温が（A）度以上という場所",
+                            "problem": "熱帯とは、最寒月平均気温、 （A）が（B）度以上という場所",
                             "answer": [
+                                "最も寒い月の平均気温",
                                 "18"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -7642,8 +7652,8 @@
                                 "古期造山帯"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "黒海どこ",
@@ -7661,7 +7671,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-25"
                         },
                         {
                             "problem": "ベルギーはどの3つの国に囲まれているか？",
@@ -7708,7 +7718,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "オランダの首都アステルダムはなにの加工で有名？",
@@ -7779,8 +7789,8 @@
                                 "南西から北東"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "赤道付近に形成される、南北の貿易風が集まり大気が上昇している場所を何という？",
@@ -7876,7 +7886,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "気候、農業、工業といずれも南北が対照的で、南北間の経済格差が大きいため南部からの出稼ぎも多い。この特徴はどこの国か？",
@@ -7885,7 +7895,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "イギリスは国全体でどの気候区分に属するか？",
@@ -7894,13 +7904,41 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "西岸海洋性気候は二つの要因に注意する？それはなにとなにか",
                             "answer": [
                                 "暖流",
                                 "偏西風"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-26"
+                        },
+                        {
+                            "problem": "西岸海洋性気候(Cfb)の定義に降水 1年中湿潤 (fの要素)があるがそれはどうしてか",
+                            "answer": [
+                                "偏西風によって海の水蒸気が陸地まで運ばれてくるから。偏西風というのは恒常風なので季節を問わず吹いてくるためどの季節でも雨がしっかり降る"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "南半球の西岸海洋性気候の国はなにがあるか",
+                            "answer": [
+                                "オーストラリアの南東端、ニュージーランド"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "海洋性気候は隔海度が（A）で、気温の年較差が（B）。",
+                            "answer": [
+                                "小さい",
+                                "小さい"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -7958,7 +7996,17 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-26"
+                        },
+                        {
+                            "problem": "テニスの試合方式には二種類ある。なにとなにか",
+                            "answer": [
+                                "トーナメント方式",
+                                "ラウンドロビン方式"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 }
@@ -7986,7 +8034,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-26"
                         },
                         {
                             "problem": "BSの左側を何という？",
