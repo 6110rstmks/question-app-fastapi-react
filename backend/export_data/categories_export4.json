@@ -3283,8 +3283,8 @@
                                 "tight junction\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "ハーディワインベルグを英語で",
@@ -6972,6 +6972,24 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "が誤操作をしたとしても事故につながらない、または誤操作自体が起きないようにすることで、安全を守ることができる設計を何という？",
+                            "answer": [
+                                "フールプルーフ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-26"
+                        },
+                        {
+                            "problem": "PC環境を仮想化してサーバ上に置くことで，社外から端末の種類を選ばず自分のデスクトップPC環境として利用できるシステムを何という？",
+                            "answer": [
+                                "VDI"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-26"
                         }
                     ]
                 },
@@ -7191,7 +7209,7 @@
                                 "from East to WEST"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-26"
                         },
                         {
@@ -7220,8 +7238,8 @@
                                 "偏西風"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "季節風が起きる要因として覚えるフレーズとして「陸地は（A）しやすく、（B）しやすい」",
@@ -7276,8 +7294,8 @@
                                 "高山気候Alpine climate"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "ユーラシア大陸や、北アメリカ大陸に着目したときに大陸の西側に対して大陸の東側は気温が高いか低いか。またその理由は？",
@@ -7352,7 +7370,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
@@ -7405,7 +7423,7 @@
                                 "少ない"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -7424,7 +7442,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "亜寒帯のタイガに多く分布している土壌はなにか？",
@@ -7460,7 +7478,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "高気圧と低気圧があったときに風はどちらからどちらにふく？",
@@ -7541,7 +7559,7 @@
                                 "シロッコ"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-23"
                         },
                         {
@@ -7586,7 +7604,7 @@
                                 "trade -> touzai\n\n両方tから始まる"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-26"
                         },
                         {
@@ -7625,7 +7643,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "リャマやアルパカなどから手に入れた毛皮で、防寒用の（A）と呼ばれる衣服などを作ります。",
@@ -7667,7 +7685,7 @@
                         {
                             "problem": "ナミブ砂漠はどこにありますか？",
                             "answer": [
-                                "南アメリカの西岸のほうかな"
+                                "南アフリカ"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -7718,7 +7736,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "オランダの首都アステルダムはなにの加工で有名？",
@@ -7754,7 +7772,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "国内でカルスト地形が見られる場所",
@@ -7772,7 +7790,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "ヨーロッパにおける米の生産国といえば？",
@@ -7877,7 +7895,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "南アメリカの西岸に位置しており、赤道を通る国は？",
@@ -7914,7 +7932,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "西岸海洋性気候(Cfb)の定義に降水 1年中湿潤 (fの要素)があるがそれはどうしてか",
@@ -7943,6 +7961,114 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "アタカマ砂漠の場所",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "ロッキー山脈の場所は？またロッキー山脈は新期造山帯、古期造山帯？",
+                            "answer": [
+                                "新期造山帯"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "アンデス山脈はどこか？また、アンデス山脈は新期造山帯？古期造山帯？",
+                            "answer": [
+                                "新規造山帯"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "https://gakusyu.live/wp-content/uploads/2024/11/image-2048x1421.png アメリカのこの画像の春小麦の場所をイメージして。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "カナダの人口最大都市は？",
+                            "answer": [
+                                "トロント"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "カナダにおいてフランス系住民が多い州はどこ？",
+                            "answer": [
+                                "ケベック州"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "西アジアにはどのような国があるか？",
+                            "answer": [
+                                "イラン、トルコ、サウジアラビア"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "太平洋を取り囲むように連なって造山帯を何造山帯というか。",
+                            "answer": [
+                                "環太平洋造山帯"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "アペニン山脈はどこにある？",
+                            "answer": [
+                                "イタリア半島を縦断"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "ザグロス山脈はどこにある？",
+                            "answer": [
+                                "イラン"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "トルコの上には何がある？",
+                            "answer": [
+                                "黒海"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "トルクメニスタンに住む人は？",
+                            "answer": [
+                                "トルクメン人"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -8003,6 +8129,15 @@
                             "answer": [
                                 "トーナメント方式",
                                 "ラウンドロビン方式"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-26"
+                        },
+                        {
+                            "problem": "コードの値からデータの対象物が連想できるものはどれか。",
+                            "answer": [
+                                "ニモニックコード"
                             ],
                             "memo": "",
                             "is_correct": false,
