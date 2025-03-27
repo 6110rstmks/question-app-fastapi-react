@@ -329,8 +329,8 @@
                                 "webアプリケーションのニーズに応じて、自動的に起動、シャットダウン、および自動でDBインスタンスをきどうする"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "auroraはdefaultでマルチAZに対応している。まるかばつか",
@@ -807,8 +807,8 @@
                                 "リージョンを跨いでのレプリケーションを行うことができること。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "RDSのread replicasにデータの書き込みは可能か。不可能か。",
@@ -1230,8 +1230,8 @@
                                 "変更"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -1346,7 +1346,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "ある会社で本社の所在委に最も近いリージョンのS3バケットでトレーニング資料を管理しており、複数の国や地域にある支社の業務端末からトレーニング資料の追加、更新を実施します。支社の社員からアップロードに時間がかかるとクレームがきています。アーキテクチャの修正は行わずS3での資料管理の高速化を実現したい。実現案を2つあげて",
@@ -1487,8 +1487,8 @@
                                 "Advanced"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 }
@@ -1753,8 +1753,8 @@
                                 "DNAは極性の高いリン酸基をもっているため"
                             ],
                             "memo": "内容的にはchemistryかな？",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "HCLOはなんの化学式",
@@ -1946,7 +1946,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "ノギンNogginやコーディンChordinはどこから分泌されるのか？",
@@ -1972,8 +1972,8 @@
                                 "母性効果遺伝子Maternal effect genes"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "カエルにおいて、背腹軸の決定は、中胚葉誘導につながるか？◯か✖︎か",
@@ -2348,10 +2348,10 @@
                         {
                             "problem": "受容器で受け取った刺激情報を処理したり、効果器に指令を出している神経系を（A）という。",
                             "answer": [
-                                "中枢神経系"
+                                "中枢神経系Central nervous system"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-23"
                         },
                         {
@@ -2510,8 +2510,8 @@
                                 "一方向"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -2643,7 +2643,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "遺伝子組み変えにおいて、遺伝子を切断する酵素を何という？",
@@ -3325,8 +3325,8 @@
                                 "腎細菅"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -3583,7 +3583,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "光合成曲線の縦軸と横軸は？",
@@ -3620,8 +3620,8 @@
                                 "混交林"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "極相林は陰樹と陽樹のどちらで構成されているか？",
@@ -4940,8 +4940,8 @@
                                 "（汚染は地球の隅々にまで影響を及ぼす蔓延した問題である。）\n"
                             ],
                             "memo": "pervasiveは広がっている、蔓延している。",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "The egress in the emergency exit was blocked by debris",
@@ -5652,8 +5652,8 @@
                                 "その像は戦争で亡くなった英雄たちへのトリビュートとして建立された。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "She only had a handful of candies to share with her friends.",
@@ -6024,8 +6024,8 @@
                                 "サーバやネットワークへの侵入を防ぐために不正な通信を検知して遮断する装置"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -6038,8 +6038,8 @@
                                 "通信内容を暗号化する仕組み"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "SSL証明書はどこが発行する？",
@@ -6186,7 +6186,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -6393,8 +6393,8 @@
                                 "クロック周波数clock rate"
                             ],
                             "memo": "例えば１秒間に2回信号を発生させることを２Hzといいます。",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "クロック周波数が高いほど、CPUの性能は高性能？低い？",
@@ -6491,7 +6491,7 @@
                             ],
                             "memo": "基本情報の免除試験に出題された。\n\n物理の変調　AM変調やFM変調を理解しないといけない気がするな＝\n基本情報の問題を解くだけであれば、そこまでの理解は必要ないが。\n\ngoogle docsなどにまとめて理解しないとなー\nhttps://webpia.jp/am-fm/\n↑わかりやすそうな記事",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "電波の送受信により非接触でICタグのデータを読み書きする自動認識技術を何という？",
@@ -6942,8 +6942,8 @@
                                 "ページフォールと"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "仮想記憶方式におけるデマンドページング方式の利点は？",
@@ -6961,7 +6961,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "ページング方式において、ページインは（A）から（B）にページを移すことをいう。",
@@ -7046,7 +7046,7 @@
                             "answer": [
                                 "ノンプリエンプティブ方式"
                             ],
-                            "memo": "",
+                            "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": false,
                             "last_answered_date": "2025-03-25"
                         },
@@ -7094,6 +7094,15 @@
                                 "待ち状態"
                             ],
                             "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "ノンプリエンプティブ方式だけのスケジューリング方式はなにか？",
+                            "answer": [
+                                "到着順"
+                            ],
+                            "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": false,
                             "last_answered_date": "2025-03-27"
                         }
@@ -7276,8 +7285,8 @@
                                 "大陸の西岸か東岸か"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "気温の低減率とは",
@@ -7680,7 +7689,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "ナミブ砂漠はどこにありますか？",
@@ -7904,7 +7913,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "気候、農業、工業といずれも南北が対照的で、南北間の経済格差が大きいため南部からの出稼ぎも多い。この特徴はどこの国か？",
@@ -7941,7 +7950,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "南半球の西岸海洋性気候の国はなにがあるか",
@@ -8196,7 +8205,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 }
