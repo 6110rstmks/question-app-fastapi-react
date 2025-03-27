@@ -11,6 +11,8 @@ import { useNavigate } from "react-router-dom"
 import { fetchCategoryQuestionByQuestionId } from "../../../api/CategoryQuestionAPI"
 import { fetchCategory } from "../../../api/CategoryAPI"
 import { BlockMath } from "react-katex";
+import Modal from 'react-modal'
+import QuestionEditModal from "../../question/QuestionEditModal";
 
 interface Props {
     problem: Question
@@ -34,6 +36,7 @@ export const ProblemNormal: React.FC<Props> = ({
     const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
     const [localProblem, setLocalProblem] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
     const [category, setCategory] = useState<Category>()
+    const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false)
 
     const isLatex = (text: string) => text.includes('\\')
 
@@ -90,6 +93,10 @@ export const ProblemNormal: React.FC<Props> = ({
                 <div className={styles.questionHeader}>
                     <div className={styles.questionLabel}>問題</div>
                     <div className={styles.correctnessToggle}>
+                        <button 
+                            className={styles.editButton}
+                            onClick={() => setEditModalIsOpen(true)}
+                            >Edit</button>
                         <button
                             className={`${styles.statusButton} ${
                                 localProblem.is_correct ? styles.correctButton : styles.incorrectButton
@@ -100,6 +107,16 @@ export const ProblemNormal: React.FC<Props> = ({
                         </button>
                     </div>
                 </div>
+
+                <Modal 
+                    isOpen={editModalIsOpen} 
+                    contentLabel="Example Modal">
+                    <QuestionEditModal
+                        setModalIsOpen={setEditModalIsOpen}
+                        question={localProblem}
+                        setQuestion={setLocalProblem}
+                    />
+                </Modal>
                 
                 <div className={styles.questionContent} 
                     onClick={() => handleNavigateToQuestionPage(

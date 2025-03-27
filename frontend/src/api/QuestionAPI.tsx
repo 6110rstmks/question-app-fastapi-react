@@ -79,7 +79,7 @@ export const fetchQuestionCount = async (): Promise<number> => {
 };
 
 export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
-    const url = 'http://localhost:8000/questions/uncorrected_count';
+    const url = 'http://localhost:8000/questions/count/uncorrected';
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -89,15 +89,15 @@ export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
     return await response.json();
 };
 
-// Questionのanswer_cntをインクリメントするAPI
-export const incrementAnswerCount = async (question_id: number): Promise<void> => {
-    const url = `http://localhost:8000/questions/increment_answer_count/${question_id}`;
+export const fetchUncorrectedQuestionCountBySubcategoryId = async (subcategory_id: number): Promise<number> => {
+    const url = `http://localhost:8000/questions/count/uncorrected/subcategory_id/${subcategory_id}`;
     const response = await fetch(url, {
-        method: 'PUT',
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
-    });
+    })
+    return await response.json();
 }
 
 export const fetchQuestionCountsByLastAnsweredDate = async (
@@ -123,3 +123,15 @@ export const fetchQuestionCountsByLastAnsweredDate = async (
     
     return data;
 };
+
+// Questionのanswer_cntをインクリメントするAPI
+export const incrementAnswerCount = async (question_id: number): Promise<void> => {
+    const url = `http://localhost:8000/questions/increment_answer_count/${question_id}`;
+    const response = await fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+}
+

@@ -149,6 +149,27 @@ def get_question_uncorrected_count(db: Session):
     
     return int(count)
 
+def get_question_uncorrected_count_in_subcategory(db: Session, subcategory_id: int):
+
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(SubcategoryQuestion).
+                    where(Question.is_correct == False).
+                    where(SubcategoryQuestion.subcategory_id == subcategory_id)
+                )
+    return int(count)
+
+def get_question_count_in_subcategory(db: Session, subcategory_id: int):
+
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(SubcategoryQuestion).
+                    where(SubcategoryQuestion.subcategory_id == subcategory_id)
+                )
+    return int(count)
+
 def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate):
 
     # ------------------------------------------------------------------------ #

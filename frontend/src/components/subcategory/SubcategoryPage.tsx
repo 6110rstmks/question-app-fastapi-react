@@ -22,13 +22,13 @@ const SubcategoryPage: React.FC = () => {
         setShowAnswer,
         isEditing,
         setIsEditing,
+        uncorrectedQuestionCnt,
         handleKeyPress,
         handleSetProblem
     } = useSubcategoryPage(subcategoryId)
 
     return (
         <div className={styles.subcategoryPage}>
-
             <div className={styles.subcategoryBox}>
                 <div 
                     onClick={() => handleNavigateToCategoryPage(navigate, categoryInfo)}
@@ -73,6 +73,7 @@ const SubcategoryPage: React.FC = () => {
                 className={styles.displayIncorrectedQuestionBtn}
                 >未正解の問題に絞って表示する
             </button>
+            <h2>未正当の問題の数：{uncorrectedQuestionCnt}</h2>
             <Modal
                 isOpen={modalIsOpen}
                 contentLabel="Example Modal"

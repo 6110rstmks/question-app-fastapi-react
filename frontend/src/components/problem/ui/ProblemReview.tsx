@@ -5,6 +5,7 @@ import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
 import styles from './ProblemNormal.module.css'
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
+import { BlockMath } from "react-katex";
 
 interface Props {
     problem: Question;
@@ -17,6 +18,9 @@ interface Props {
 }
 
 export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIndex2, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
+
+    const isLatex = (text: string) => text.includes('\\')
+
     const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
     
     const [localProblem, setLocalProblem] = useState<Question>(problem); // ローカル状態を追加
@@ -100,18 +104,24 @@ export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIn
                         <h3 className={styles.answerHeading}>答え</h3>
                         <div className={styles.answerContent}>
                             {localProblem.answer.length > 0 ? (
-                                localProblem?.answer.map((answer, index) => (
-                                    <div key={index} className={styles.answerItem}>
-                                        {answer.split('\n').map((line, i) => (
-                                            <React.Fragment key={i}>
-                                                {line}
-                                                <br />
-                                            </React.Fragment>
-                                        ))}
-                                    </div>
-                                ))
-                            ) : (
-                                <p className={styles.emptyAnswer}>解答はまだ作成されていません</p>
+                                    localProblem?.answer.map((answer, index) => (
+                                        <div key={index}>
+                                            {answer.split('\n').map((line, i) => (
+                                                <React.Fragment key={i}>
+                                                {isLatex(line) ? (
+                                                    <BlockMath math={line} />
+                                                ) : (
+                                                    <>
+                                                    {line}
+                                                    <br />
+                                                    </>
+                                                )}
+                                                </React.Fragment>
+                                            ))}
+                                        </div>
+                                    ))
+                                ) : (
+                                    <p className={styles.emptyAnswer}>解答はまだ作成されていません</p>
                             )}
                         </div>
                         

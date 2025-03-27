@@ -76,6 +76,19 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
+
+}
+
+.editButton {
+  background-color: #3273dc;
+  color: white;
+  padding: 7px 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  margin-right: 19px;
+  cursor: pointer;
+
 }
 
 .statusButton:hover {

@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { fetchSubcategory } from '../../../api/SubcategoryAPI'
 import { useLocation, useNavigate } from 'react-router-dom';
-import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
+import { fetchQuestionsBySubcategoryId, fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
 import { handleKeyDown } from '../../../utils/function';
@@ -24,6 +24,7 @@ export const useSubcategoryPage = (
 ) => {
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const [questions, setQuestions] = useState<Question[]>([]);
+    const [uncorrectedQuestionCnt, setUncorrectedQuestionCnt] = useState<number | null>(null);
     const location = useLocation()
     const navigate = useNavigate();
 
@@ -62,6 +63,12 @@ export const useSubcategoryPage = (
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
 
         if (confirmation !== '削除') {
+            return;
+        }
+
+        let confirmation2 = prompt("本当に削除しますか？削除する場合は「本当に削除」と入力してください:");
+
+        if (confirmation2 !== '本当に削除') {
             return;
         }
 
@@ -108,6 +115,9 @@ export const useSubcategoryPage = (
 
             const subcategory_data = await fetchSubcategory(subcategoryId);
             setSubcategoryName(subcategory_data.name)
+
+            const uncorrectedQuestionCnt = await fetchUncorrectedQuestionCountBySubcategoryId(subcategoryId);
+            setUncorrectedQuestionCnt(uncorrectedQuestionCnt);
         })();
 
         // これなくてもいい気がする。
@@ -130,6 +140,7 @@ export const useSubcategoryPage = (
         setShowAnswer,
         isEditing,
         setIsEditing,
+        uncorrectedQuestionCnt,
         handleKeyPress,
         handleSetProblem
     };

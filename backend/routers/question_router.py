@@ -35,9 +35,18 @@ async def get_question_count_by_last_answered_date(
     return question_crud.get_question_count_by_last_answered_date(db, question_get_count_by_answered_date.days_array)
 
 # 不正解のQuestion数を取得するエンドポイント
-@router.get("/uncorrected_count", response_model=int, status_code=status.HTTP_200_OK)
+@router.get("/count/uncorrected", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_uncorrected_count(db: DbDependency):
     return question_crud.get_question_uncorrected_count(db)
+
+
+# Subcategoryに紐づくQuestion数を取得するエンドポイント
+@router.get("/count/uncorrected/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count_in_subcategory(
+    db: DbDependency, 
+    subcategory_id: int = Path(gt=0)
+):
+    return question_crud.get_question_uncorrected_count_in_subcategory(db, subcategory_id)
 
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
@@ -118,9 +127,6 @@ async def find_all_questions_in_category(db: DbDependency, category_id: int = Pa
 @router.get("/subcategory_id/{subcategory_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all_questions_in_subcategory(db: DbDependency, subcategory_id: int = Path(gt=0)):
     return question_crud.find_all_questions_in_subcategory(db, subcategory_id)
-
-
-
 
 # Questionを削除するエンドポイント
 @router.delete("/{question_id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)

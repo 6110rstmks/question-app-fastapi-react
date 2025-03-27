@@ -14,6 +14,9 @@
 |---------------|--------------|----------|-------------|------------------------------------------------|
 | id            | Integer       | No       |             | 主キー                                          |
 
+
+
+
 ## SubcategoryQuestion Table
 
 | Column Name     | Data Type | Constraints                  | Description |
