@@ -214,8 +214,8 @@
                                 "fan-out pattern（構成）"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "SQSとKinesis Data Streamsの違いをデータ削除の観点と拡張性の観点から述べてください？両方ともコンシューマーとプロデューサがあるが、",
@@ -779,8 +779,8 @@
                                 "高可用性\n高可用性」は、システムの「稼働時間」に焦点を置いた言葉で、「長時間システムを利用できる状態」を意味する。\nもし、1つのAZのみにRDSインスタンスを配置した場合、地震等の災害の影響でAZに障害が発生すると、RDSインスタンスも影響を受ける可能性がある。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "RDSを使用する場合において、設定で必須した方がよいものは何か？また、理由は？",
@@ -925,8 +925,8 @@
                                 "memcached"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-02-12"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -1166,7 +1166,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-13"
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -1359,13 +1359,13 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "RDSのコスと状況を把握したいので、コストレポートを作成したい。どのサービスを使えば良い？",
+                            "problem": "RDSのコスト状況を把握したいので、コストレポートを作成したい。どのサービスを使えば良い？",
                             "answer": [
                                 "Cost explorer"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
@@ -1469,8 +1469,8 @@
                                 "3,4"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "AWS Shield Standardは無料か？",
@@ -1507,7 +1507,7 @@
                             ],
                             "memo": "https://examist.jp/wp-content/uploads/mathematics/derivation-application/totusei-sessen-futousiki-20170318@2x.png",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "はさみうちのげんりをするときにたまーに一緒に使う定理",
@@ -1552,7 +1552,7 @@
                             ],
                             "memo": "https://hiraocafe.com/note/vector-area.html",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "空間ベクトルの共面条件（4点O、A、B、Cが同一空間にあるための条件）を書いて ",
@@ -1688,8 +1688,8 @@
                                 " 置換"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "inegral計算において分母が因数分解の形　→",
@@ -1713,6 +1713,15 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-19"
+                        },
+                        {
+                            "problem": "確率での複合命題の解法　",
+                            "answer": [
+                                "余事象　とって　ド・モルガン"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -1864,7 +1873,7 @@
                                 "バイソラックス突然変異体"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-25"
                         },
                         {
@@ -1964,7 +1973,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "初期発生に関与する遺伝子のうち、卵形成の過程でそのmRNAに蓄積して受精直後から機能する遺伝子を何という？",
@@ -2023,8 +2032,8 @@
                                 "a & b"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "What chlorophyll did plants get the fastest in their evolution?",
@@ -2078,8 +2087,8 @@
                                 "4"
                             ],
                             "memo": "子のう菌の子のう胞子は1つの二核性細胞から8つ形成される",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "子のう菌の子のう胞子は1つの二核性細胞から幾つ形成されるか？",
@@ -2116,7 +2125,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "原生動物の例3",
@@ -2165,8 +2174,8 @@
                                 "whale"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "刺胞動物の例1",
@@ -2473,8 +2482,8 @@
                                 "自律神経系Autonomic nervous system"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "活動電位が軸索の末端に到達すると、末端部にある（A)が軸索の膜に融合する。",
@@ -2493,7 +2502,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "大脳の（A）皮質には本能行動に関する中枢がある。",
@@ -2891,7 +2900,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "体細胞分裂の目的は？",
@@ -3076,8 +3085,8 @@
                                 "窒素固定"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -3266,10 +3275,10 @@
                         {
                             "problem": "PINタンパク質 AUXタンパク質は植物の何という働きに関与している？",
                             "answer": [
-                                "植物の極性移動"
+                                "植物の極性移動（Polar auxin transport）"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         }
                     ]
@@ -3463,8 +3472,8 @@
                                 "β酸化Beta oxidation "
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "光合成での反応は大きく二つに分けることができる。①（A）での反応。②（B）での反応",
@@ -3528,7 +3537,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "beta oxidationでは脂肪酸から何を生成する？",
@@ -3611,8 +3620,8 @@
                                 "優占種"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "陽樹と陰樹が混合する高木の森林の名称は？",
@@ -3626,10 +3635,10 @@
                         {
                             "problem": "極相林は陰樹と陽樹のどちらで構成されているか？",
                             "answer": [
-                                "陰樹"
+                                "陰樹Shade tree"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-25"
                         },
                         {
@@ -3816,15 +3825,6 @@
                 {
                     "name": "CNN",
                     "questions": [
-                        {
-                            "problem": "CNNについて説明してください。",
-                            "answer": [
-                                "CNNとは、「Convolutional Neural Network」を略した言葉であり、日本語では「畳み込みニューラルネットワーク」とも呼ばれています。いくつもの深い層を持ったニューラルネットワークであり、主に画像認識の分野において価値を生んでいるネットワークです。"
-                            ],
-                            "memo": "aa",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
-                        },
                         {
                             "problem": "CNNの主要な層のうち、プーリング層について説明してください。",
                             "answer": [
@@ -4137,8 +4137,8 @@
                                 "2本の"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "raid2とraid0の違いは？",
@@ -4697,8 +4697,8 @@
                                 "turnaround time"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "His London accent is very slightly nuanced by an occasional Russian pronunciation.",
@@ -6241,8 +6241,8 @@
                                 "補助記憶装置"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -6485,15 +6485,6 @@
                             "last_answered_date": "2025-03-24"
                         },
                         {
-                            "problem": "PWM（パルス幅変調）について自由にアウトプット",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "基本情報の免除試験に出題された。\n\n物理の変調　AM変調やFM変調を理解しないといけない気がするな＝\n基本情報の問題を解くだけであれば、そこまでの理解は必要ないが。\n\ngoogle docsなどにまとめて理解しないとなー\nhttps://webpia.jp/am-fm/\n↑わかりやすそうな記事",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-27"
-                        },
-                        {
                             "problem": "電波の送受信により非接触でICタグのデータを読み書きする自動認識技術を何という？",
                             "answer": [
                                 "RFID"
@@ -6656,8 +6647,8 @@
                                 "DMAコントローラ"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "プログラム格納方式はDMA方式に比べてどのような欠点があるか？",
@@ -6666,7 +6657,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 }
@@ -6801,8 +6792,8 @@
                                 "1回振動するのにかかる時間"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-27"
                         }
                     ]
                 },
@@ -6885,7 +6876,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 }
@@ -6904,7 +6895,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "仮想記憶において、（A）と呼ばれる装置が仮想記憶と主記憶装置または補助記憶装置との対応付けを行なっている。この仕組みを（B）と呼ぶ。",
@@ -6933,8 +6924,8 @@
                                 "ページアウト"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "必要なページが主記憶装置上にないときに発生する割り込みのことを何という？",
@@ -6971,7 +6962,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "が誤操作をしたとしても事故につながらない、または誤操作自体が起きないようにすることで、安全を守ることができる設計を何という？",
@@ -7587,7 +7578,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "イヌイットInuitは（A）と呼ばれる住居で生活。",
@@ -7661,7 +7652,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
@@ -7670,7 +7661,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "山脈は二種類に分類できる。答えて",
@@ -7807,7 +7798,7 @@
                                 "イタリア"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -7826,7 +7817,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "アドリア海はどこにある？どの国に面している？",
@@ -7884,7 +7875,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "回帰線のうち、北側にある線を（A）、南側にある線を（B）という。",
@@ -7974,7 +7965,7 @@
                         {
                             "problem": "アタカマ砂漠の場所",
                             "answer": [
-                                ""
+                                "南アメリカの西岸"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -8014,7 +8005,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "カナダにおいてフランス系住民が多い州はどこ？",
@@ -8071,9 +8062,55 @@
                             "last_answered_date": "2025-03-27"
                         },
                         {
-                            "problem": "トルクメニスタンに住む人は？",
+                            "problem": "トルクメニスタンに住む人は？?",
                             "answer": [
                                 "トルクメン人"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "ヴォルタ川はどこにありますか？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "ナイル川の中流に建設された多目的ダムは何？",
+                            "answer": [
+                                "アスワンハイダム"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "チェニジアの首都は？",
+                            "answer": [
+                                "チュニス"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "チュニスのケッペンの気候区分は？またその理由は",
+                            "answer": [
+                                "Cs",
+                                "地中海に面しているため"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "西岸海洋性気候は記号でどのように表す？",
+                            "answer": [
+                                "Cfb"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -8090,8 +8127,8 @@
                                 "上座仏教"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "大乗仏教を信仰している東南アジアの国は？",
