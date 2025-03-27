@@ -1356,7 +1356,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "RDSのコスト状況を把握したいので、コストレポートを作成したい。どのサービスを使えば良い？",
@@ -2391,7 +2391,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=vvlCYyJmvdM\n参考\n16:30",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "平衡保持の中枢であるのは何脳？",
@@ -2408,8 +2408,8 @@
                                 "灰白質"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "ニューロンの軸索は（A）という薄い膜構造に包まれている",
@@ -3547,6 +3547,24 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "CAM植物で気孔を開くのはいつか",
+                            "answer": [
+                                "夜"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "CAM植物は空気中のCO2を取り込んでどのような物質で蓄積するか答えよ",
+                            "answer": [
+                                "りんご酸"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
@@ -5824,7 +5842,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "I think I'll be working at the Chicago office for the time being.",
@@ -6338,7 +6356,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "マスクROMの特徴を二つ答えて",
@@ -7136,8 +7154,8 @@
                                 "planed value\n計画上の出来高のことです。\nこれを基準に遅延（コストオーバー）などを判断します。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "EVMにおいてEVとは",
