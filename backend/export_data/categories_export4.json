@@ -77,7 +77,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-12"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "IOPS数値が高いと何がいいのか？ ",
@@ -608,7 +608,7 @@
                             ],
                             "memo": "ALBのconnection drainingと間違えそう",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -1400,7 +1400,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-12"
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
@@ -1552,7 +1552,7 @@
                             ],
                             "memo": "https://hiraocafe.com/note/vector-area.html",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "空間ベクトルの共面条件（4点O、A、B、Cが同一空間にあるための条件）を書いて ",
@@ -1699,6 +1699,15 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "積分計算において三角関数は（A）に強い",
+                            "answer": [
+                                "二乗"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
@@ -1736,6 +1745,21 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
+                        }
+                    ]
+                },
+                {
+                    "name": "matrix",
+                    "questions": [
+                        {
+                            "problem": "ケーリーハミルトンCayley–Hamilton theoremなにができる？2",
+                            "answer": [
+                                "1.次数を下げる\n",
+                                "2.n乗計算をする。"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 }
@@ -3491,8 +3515,8 @@
                                 "光化学反応photochemical reaction"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "光合成色素には、クロロフィルa、クロロフィルb、カロテン、キサントフィルなどの種類がありました。 これらは別々の物質ですが、活性化されると、すべて（A）となります。",
@@ -3561,6 +3585,15 @@
                             "problem": "CAM植物は空気中のCO2を取り込んでどのような物質で蓄積するか答えよ",
                             "answer": [
                                 "りんご酸"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "Rubiscoの正式名称は？",
+                            "answer": [
+                                "リブロースビスリン酸カルボキシラーゼ・オキシゲナーゼ"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -3687,6 +3720,24 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-02-12"
+                        },
+                        {
+                            "problem": "帰属計算ぶんもふくめて金銭で換算したGDPをなんとよぶ？",
+                            "answer": [
+                                "名目GDP"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "経済を大きくふたつの市場の観点に分けたものが？",
+                            "answer": [
+                                "財市場と貨幣市場"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
@@ -4165,7 +4216,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-12"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "細分化したデータを複数の磁気ディスクに巡回的に並列入出力することによって，転送速度の向上を図っている。これはraid?の説明？",
@@ -4752,7 +4803,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-14"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "lava",
@@ -5833,7 +5884,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "Fill me in",
@@ -7085,8 +7136,8 @@
                                 "待ち状態"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "タスクの遷移状態において、実行状態から実行可能状態に遷移することを何という？",
@@ -8059,7 +8110,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "ザグロス山脈はどこにある？",
