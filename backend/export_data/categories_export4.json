@@ -799,7 +799,7 @@
                             ],
                             "memo": "Use Multi-AZ deployments for High Availability/Failover and Read Replicas for read scalability.\nhttps://medium.com/awesome-cloud/aws-difference-between-multi-az-and-read-replicas-in-amazon-rds-60fe848ef53a",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "RDSにおいてマルチAZにはできなくて、read replicasにはできることを一つ挙げて。",
@@ -1328,7 +1328,7 @@
                             ],
                             "memo": "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "ELB（ALB）とAPI gatewayをHTTPS末端にするというのはELBとAPI gatewayをSSLのフローでいうところの（WEBサーバ・WEBクライアント）にするということ。これのどっちか",
@@ -1512,7 +1512,7 @@
                         {
                             "problem": "はさみうちのげんりをするときにたまーに一緒に使う定理",
                             "answer": [
-                                "二項定理"
+                                "二項定理Binomial theorem"
                             ],
                             "memo": "https://examist.jp/mathematics/limit/nikouteiri-kyokugen/",
                             "is_correct": true,
@@ -1571,6 +1571,16 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-26"
+                        },
+                        {
+                            "problem": "recurrence relation （n次式型）の解法",
+                            "answer": [
+                                "階差をとる",
+                                "むりやり等比数列の形にする"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
@@ -1639,7 +1649,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "斜軸回転体の初手　",
@@ -1814,7 +1824,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
@@ -2084,7 +2094,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "子のう菌類を英語で何という？",
@@ -2120,8 +2130,8 @@
                                 "8"
                             ],
                             "memo": "担子菌の担子胞子は1つの二核性細胞から4つ形成される\n\n覚え方は子のう→4のう\n\nかとおもいきや、それの反対",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "What is the cell wall of fungus made of?",
@@ -2305,7 +2315,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
@@ -2904,8 +2914,8 @@
                                 "二核相"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "ヌクレオチド鎖のリン酸側の末端は（A）末端で、一方糖側の末端は（B）末端と呼ばれる。",
@@ -3256,8 +3266,8 @@
                                 "Abscisic acidアブシシン酸"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "静止中心quiescent centeの働き",
@@ -3266,7 +3276,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "落葉と落果を促進する植物ホルモンは？",
@@ -3533,7 +3543,7 @@
                                 "CAM植物"
                             ],
                             "memo": "\n",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-23"
                         },
                         {
@@ -3569,7 +3579,7 @@
                                 "アセチルCoa"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -3653,7 +3663,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "生産構造図 は二つに分類される。それぞれ答えて",
@@ -4821,7 +4831,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "valiant knight",
@@ -5388,8 +5398,8 @@
                                 "そのプロジェクトでは、各仲間がそれぞれの特技を提供しました。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "The campfire blazed brightly as we sang songs around it.",
@@ -6287,7 +6297,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "液晶ディスプレイなどの表示装置において，傾いた直線の境界を滑らかに表示する手法を何という？",
@@ -6342,8 +6352,8 @@
                                 "RAM"
                             ],
                             "memo": "語呂合わせ\nRAM\n→ Running Away Memory（走り去るメモリ）\n→ 電源を切るとサッと消えてしまう！\nROM\n→ Remains On Memory（残るメモリ）\n→ 電源を切っても内容はそのまま！",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "DRAMは何に使われているか？",
@@ -6884,8 +6894,8 @@
                                 "work"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "重力に逆らって,外力が物体をもち上げる仕事をするとき,その仕事は重力による（A）になる",
@@ -6984,7 +6994,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "ページング方式において、補助記憶装置から主記憶装置にページを移すことを（A）といい、主記憶装置から補助記憶装置にページを移すことを（B）という。",
@@ -7620,7 +7630,7 @@
                             ],
                             "memo": "構造平野と卓状地の違い、準平原と楯状地の違いというのは、かなりあいまいです",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "春先に地中海からイタリア南部に向けて吹いてくる高温多湿な風は？",
@@ -7703,7 +7713,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "チベット高山はどこにあるか",
@@ -7777,8 +7787,8 @@
                                 "栽培限界"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "ローヌ川河口近くにあるフランス有数の湾岸都市で、造船、鉄鋼、食品機械工業が盛んな都市はどこか",
@@ -7787,7 +7797,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "オランダ南西部にあるヨーロッパ有数の貿易港をもち、造船業のほかに石油精製、化学などが発達する都市は？",
@@ -7796,7 +7806,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -8047,7 +8057,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "アンデス山脈はどこか？また、アンデス山脈は新期造山帯？古期造山帯？",
@@ -8073,7 +8083,7 @@
                                 "トロント"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-28"
                         },
                         {
@@ -8184,6 +8194,62 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "トルコの首都",
+                            "answer": [
+                                "アンカラ"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "ボルドーのイメージは？",
+                            "answer": [
+                                "ワイン"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "サンアンドレアス断層はどこにある？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "北アメリカでは西経（）度を境に、西側が（）、東側が（）",
+                            "answer": [
+                                "100",
+                                "乾燥",
+                                "湿潤"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "亜寒帯（D）の定義で最暖月平均気温 10℃以上なのはなぜか？",
+                            "answer": [
+                                "最暖月平均気温 10℃以上 → 樹木がギリギリ生育できるから\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "ケッペンの気候区分、Df, Dwの違いは",
+                            "answer": [
+                                "Df：年間を通して湿潤\nDw：冬に雨が少ない"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
