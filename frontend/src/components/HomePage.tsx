@@ -32,12 +32,7 @@ export const Home: React.FC = () => {
             <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
             <h3>The total number of Questions：{questionCount}</h3>
             <h3>The total number of uncorrected Questions：{uncorrectedQuestionCount}</h3>
-            <h3>正解した問題の数{(questionCount?? 0)  - (uncorrectedQuestionCount?? 0)}</h3>
-            <Pagination
-                    currentPage={page}
-                    totalPages={pageCount}
-                    onPageChange={(newPage) => setPage(newPage)}
-            />
+            <h3>The total number of corrected Questions：{(questionCount?? 0)  - (uncorrectedQuestionCount?? 0)}</h3>
             <div className={styles.searchContainer}>
                 <Search 
                     type="category"
@@ -83,6 +78,11 @@ export const Home: React.FC = () => {
                     setPage={setPage} 
                 /> 
             </div>
+            <Pagination
+                    currentPage={page}
+                    totalPages={pageCount}
+                    onPageChange={(newPage) => setPage(newPage)}
+            />
             <CategoryList categories={categories} searchSubcategoryWord={searchSubcategoryWord} searchQuestionWord={searchQuestionWord} searchAnswerWord={searchAnswerWord}/>
             <Pagination
                 currentPage={page}

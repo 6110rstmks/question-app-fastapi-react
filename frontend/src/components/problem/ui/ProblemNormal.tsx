@@ -6,7 +6,6 @@ import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
 import styles from './ProblemNormal.module.css'
-import { handleNavigateToQuestionPage } from "../../../utils/navigate_function";
 import { useNavigate } from "react-router-dom"
 import { fetchCategoryQuestionByQuestionId } from "../../../api/CategoryQuestionAPI"
 import { fetchCategory } from "../../../api/CategoryAPI"
@@ -118,13 +117,7 @@ export const ProblemNormal: React.FC<Props> = ({
                     />
                 </Modal>
                 
-                <div className={styles.questionContent} 
-                    onClick={() => handleNavigateToQuestionPage(
-                        navigate, 
-                        localProblem.id, 
-                        category!.id, 
-                        category!.name, 
-                        subcategoriesWithCategoryName[0].id)}>
+                <div className={styles.questionContent}>
                     {localProblem.problem}
                 </div>
 

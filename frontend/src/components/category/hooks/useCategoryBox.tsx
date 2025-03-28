@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
 import { fetchSubcategoriesForHomePage, createSubcategory } from "../../../api/SubcategoryAPI";
 
-
 interface useCategoryBoxProps {
     categoryId: number,
     showForm: boolean,
@@ -20,12 +19,12 @@ export const useCategoryBox = ({
     searchQuestionWord,
     searchAnswerWord
 }: useCategoryBoxProps) => {
-    const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([]);
+    const [subcategoriesWithQuestionCount, setSubcategoriesWithQuestionCount] = useState<SubcategoryWithQuestionCount[]>([]);
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const categoryBoxRef = useRef<HTMLDivElement | null>(null);
 
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
-        setSubcategories((prev) => [...prev, subcategory]);
+        setSubcategoriesWithQuestionCount((prev) => [...prev, subcategory]);
     };
 
     const handleAddSubcategory = async () => {
@@ -38,7 +37,7 @@ export const useCategoryBox = ({
 
         const data = await response.json() as SubcategoryWithQuestionCount;
 
-        if (subcategories.length < 6) {
+        if (subcategoriesWithQuestionCount.length < 6) {
             addSubcategory(data);
         }
         setSubcategoryName("");
@@ -63,12 +62,12 @@ export const useCategoryBox = ({
 
         (async () => {
             const subcategories = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
-            setSubcategories(subcategories);
+            setSubcategoriesWithQuestionCount(subcategories);
         })();
     }, [searchSubcategoryWord, searchQuestionWord, searchAnswerWord]);
 
     return { 
-        subcategories, 
+        subcategoriesWithQuestionCount, 
         subcategoryName, 
         setSubcategoryName, 
         handleAddSubcategory,

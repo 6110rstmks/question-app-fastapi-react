@@ -24,7 +24,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     const [isPinned, setIsPinned] = useState(false);
 
     const { 
-        subcategories,
+        subcategoriesWithQuestionCount,
         subcategoryName,
         setSubcategoryName,
         handleAddSubcategory,
@@ -51,7 +51,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
                     onClick={() => handleNavigateToCategoryPage(navigate, category)}
                     >{category.name}
                 </div>
-                <span>［{subcategories.length}］</span>
+                <span>［{subcategoriesWithQuestionCount.length}］</span>
                 <div className={styles.plusBtn} 
                     onClick={() => setShowForm(!showForm)}>➕
                 </div>
@@ -73,7 +73,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
                 )}
             </div>
             <div>
-                {subcategories.map((subcategory: SubcategoryWithQuestionCount, index) => (
+                {subcategoriesWithQuestionCount.map((subcategory: SubcategoryWithQuestionCount, index) => (
                     <div key={index}>
                         <div
                             className={styles.subcategoryName}
@@ -88,7 +88,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
             </div>
  
             {/* 6件以上サブカテゴリが存在する場合は、「もっとみる」ボタンを表示させる */}
-            {subcategories.length >= 4 && (
+            {subcategoriesWithQuestionCount.length >= 4 && (
                 <button 
                 onClick={() => handleNavigateToCategoryPage(navigate, category)} 
                 className={styles.moreBtn}>See More</button>
