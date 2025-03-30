@@ -1634,6 +1634,15 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-02-20"
+                        },
+                        {
+                            "problem": "ユークリッド距離について説明",
+                            "answer": [
+                                "二点間の距離公式にピタゴラスの定理を利用した距離"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-31"
                         }
                     ]
                 },
