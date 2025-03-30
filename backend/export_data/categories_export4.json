@@ -5728,7 +5728,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "He is an incorrigible liar.",
@@ -6132,8 +6132,8 @@
                                 "I flushed the toilet."
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "She asked that the project be completed on time.",
@@ -8435,6 +8435,83 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-29"
+                        },
+                        {
+                            "problem": "オビ川はどこ",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "ウラル山脈のすぐ東側を流れ、北極海に注ぎ込む川です。\n\n",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
+                        },
+                        {
+                            "problem": "沖積平野は3つに分類できる。答えて",
+                            "answer": [
+                                "扇状地",
+                                "氾濫原",
+                                "三角州"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
+                        },
+                        {
+                            "problem": "扇状地の一番上から順番に 扇頂→扇央→扇端 という名前がついています。扇頂の方が粒が（大きく・小さく）、扇端にいくほど粒が（大きく・小さく）なっていきます。",
+                            "answer": [
+                                "大きく",
+                                "小さく"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
+                        },
+                        {
+                            "problem": "ステップ気候はアルファベットでどのようにあらわす？",
+                            "answer": [
+                                "BS\nsはstepのs"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
+                        },
+                        {
+                            "problem": "アメリカのステップ気候は（A）、（B）に分布！",
+                            "answer": [
+                                "北緯40°以南",
+                                "西経100°以西"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
+                        },
+                        {
+                            "problem": "ステップ気候の土壌2",
+                            "answer": [
+                                "黒土",
+                                "栗色土"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
+                        },
+                        {
+                            "problem": "ステップ気候は、砂漠気候を（A）分布している",
+                            "answer": [
+                                "帯状に取り囲むように"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
+                        },
+                        {
+                            "problem": "カザフステップはどこ？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "まさにステップ気候という名前の由来はここから取られているのです。",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
                         }
                     ]
                 },
@@ -8457,7 +8534,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "テスト用",
@@ -8466,7 +8543,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-30"
                         }
                     ]
                 }
@@ -8519,15 +8596,6 @@
                 {
                     "name": "m ",
                     "questions": [
-                        {
-                            "problem": "減価償却",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
-                        },
                         {
                             "problem": "Balance sheetの右側は総資本と呼ばれ、何を意味するか。",
                             "answer": [
