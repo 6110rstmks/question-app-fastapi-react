@@ -179,7 +179,7 @@
                             ],
                             "memo": "参考サイト\nhttps://qiita.com/memomaruRey/items/af1cfa19a20071b48ffe",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-12"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "標準キューとFIFOキューのうち、配信順序をベストエフォートではなく、必ず保証したい場合は、どちらを使用するか？",
@@ -1142,8 +1142,8 @@
                                 "1秒未満"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 },
@@ -1345,8 +1345,8 @@
                                 "sts assume role"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "ある会社で本社の所在委に最も近いリージョンのS3バケットでトレーニング資料を管理しており、複数の国や地域にある支社の業務端末からトレーニング資料の追加、更新を実施します。支社の社員からアップロードに時間がかかるとクレームがきています。アーキテクチャの修正は行わずS3での資料管理の高速化を実現したい。実現案を2つあげて",
@@ -1507,7 +1507,7 @@
                             ],
                             "memo": "https://examist.jp/wp-content/uploads/mathematics/derivation-application/totusei-sessen-futousiki-20170318@2x.png",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "はさみうちのげんりをするときにたまーに一緒に使う定理",
@@ -1534,13 +1534,52 @@
                             ],
                             "memo": "https://examist.jp/mathematics/integration-expression/sekibunzenkasiki/",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 },
                 {
                     "name": "complex number",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "3次方程式の複素数解",
+                            "answer": [
+                                "3次方程式の実数解を少なくとも１つ持つ",
+                                "実数係数mが(m>=2)次方程式の場合は、x= α x = β(αの共役な複素数)解をもつ　→Relationship between solution and coefficient"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "4次方程式の複素数解の武器",
+                            "answer": [
+                                "\n解と係数の関係\n\n実数係数m次方程式はx = αが解ならx = αも解"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "2次方程式の複素数解の武器",
+                            "answer": [
+                                "解の公式、判別式、Relationship between solution and coefficient、を出す",
+                                "実数解と虚数解で場合分けする。判別式Dの値）　→実数の場合は一般的な二次方程式と変わらない。　虚数会の場合、　α+β = -b/a αβ = |α|^2 c/a"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "条件文の変形）AとBが直角　",
+                            "answer": [
+                                "<=> β = kiα"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        }
+                    ]
                 },
                 {
                     "name": "vector",
@@ -1570,7 +1609,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "recurrence relation （n次式型）の解法",
@@ -1659,6 +1698,15 @@
                             "memo": "https://hiraocafe.com/note/shajikukihon.html",
                             "is_correct": true,
                             "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "斜軸回転体（傘型積分）の解法の流れ",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://hiraocafe.com/note/shajikukasagata.html\nより早く解けるのだそう",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
                         }
                     ]
                 },
@@ -1880,7 +1928,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "卵黄egg yolk　＝　（A）を妨げる物質",
@@ -2042,14 +2090,14 @@
                     "name": "taxnomy",
                     "questions": [
                         {
-                            "problem": "旧口動物のうち脱皮をする脱皮動物を二つ答えよ",
+                            "problem": "旧口動物のうち脱皮動物を二つ答えよ",
                             "answer": [
                                 "節足動物",
                                 "線形動物"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "Do fungus have cell wall？",
@@ -2198,7 +2246,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "What animals have echolocation?3",
@@ -2258,7 +2306,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 },
@@ -2286,7 +2334,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "What organs destroy red blood cells?2",
@@ -2525,8 +2573,8 @@
                                 "シナプス小胞Synaptic vesicle"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "大脳は多数の神経細胞の（A）が集まった白質と、（B）の集まった灰白質からなる。",
@@ -2667,8 +2715,8 @@
                                 "調節遺伝子"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "調節タンパク質のうち、転写を抑制するものを何という？",
@@ -2722,7 +2770,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "真核生物において、RNAポリメラーゼがプロモーターが結合するには（A）が必要",
@@ -2731,7 +2779,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "遺伝子の範囲の単語、SNPの読み方",
@@ -2944,6 +2992,17 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "メンデルの法則を3つ",
+                            "answer": [
+                                "優性の法則",
+                                "分離の法則",
+                                "独立の法則"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
                         }
                     ]
                 },
@@ -2957,7 +3016,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-19"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "What is a class of steroid hormones that regulates salt and water balance?",
@@ -3160,8 +3219,8 @@
                                 "embryo"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "イネriceにおいて gibberellinは何に働きかけるか",
@@ -3187,8 +3246,8 @@
                                 "Pfr"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "（A）が作用することでセルロース繊維間の多糖の切断が促され植物細胞の細胞壁が緩むのでその分だけ植物細胞内に水が入ってきて吸水でき細胞が成長する。",
@@ -3247,8 +3306,8 @@
                                 "AUXタンパク質"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "植物の気孔は光合成に必要な（A）を取り込むために行う。",
@@ -3383,7 +3442,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4mH6KHLcluseYgW3yQNQDQR5Xon5KB26vaA&s",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "抗体のタンパク質を何という？",
@@ -3498,7 +3557,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "脂肪酸からアセチルCoAを作る反応",
@@ -3562,7 +3621,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "C3植物は、強い光の中では枯れてしまう。この理由についてRubiscoという単語を用いて説明",
@@ -3608,6 +3667,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "ルビスコのワードを分解するとどのような意味をとれる？",
+                            "answer": [
+                                "Rubis:RuBP\nC: カルボキシラーぜ\nO: オキシラーぜ\nカルボキシラーぜ→CO2をくっつける。\nオキシゲラーぜ→酸素をつける\n\n\nに酸化炭素をつけるときと、酸素をつけるときの二パターンある。"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-30"
                         }
                     ]
                 },
@@ -3652,8 +3720,8 @@
                                 "カシ"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "光合成曲線の縦軸と横軸は？",
@@ -3672,8 +3740,8 @@
                                 "イネか型"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "植生の中で最も占有面積が大きく、植生の相観を決定する種を何というか？",
@@ -3710,7 +3778,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 }
@@ -3748,6 +3816,87 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "需要曲線の絵を描いて、用語などを書き込んでください。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "供給曲線はなぜ右肩あがりなのか。説明して",
+                            "answer": [
+                                "売りたい人は価格が高いほど増えていくから"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "1996年以降の金融政策の手段になっている、債券の売買などを通して通貨量の調整を図る方法を何というか。",
+                            "answer": [
+                                "公開市場操作\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "景気が過熱している場合、一般的に買いオペか売りオペどちらを実施するのが効果的であるか。",
+                            "answer": [
+                                "売りオペ\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "会社設立時の出資者が有限責任社員と無限責任社員である会社は，（A）会社という",
+                            "answer": [
+                                "合資"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "物価の下落と経済活動の縮小が相互に作用して、景気悪化が進むことを何というか。",
+                            "answer": [
+                                "デフレスパイラル"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
+                        },
+                        {
+                            "problem": "景気循環がもつ４つの局面を順番に答えなさい。順番が合っていればどこから始めても良い。",
+                            "answer": [
+                                "回復→好況→後退→不況\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
+                        },
+                        {
+                            "problem": "在庫投資が原因で起こる、周期約４年の景気循環を、発見者にちなんで何の波と呼ぶか。",
+                            "answer": [
+                                "キチンの波\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
+                        },
+                        {
+                            "problem": "株式会社の出資者は、資本家であるが経営には参加していないことも多い。この状況を何というか。（高校政経）",
+                            "answer": [
+                                "所有と経営の分離\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 },
@@ -3911,7 +4060,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "CNNが価値を発揮している分野は何か？",
@@ -4208,7 +4357,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-02-12"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "RAID1は、同じデータを（A）ハードディスクに書き込みすることで耐障害性を高めた構成です。",
@@ -4253,7 +4402,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "what's the number that the read/write unit is a block in raid?",
@@ -4749,8 +4898,8 @@
                                 "自分は何もせずに文句だけは言うのは、彼の専売特許です。\n"
                             ],
                             "memo": "stock in trade も同様に「在庫品、手持ち商品、流通在庫」\n\nを意味します。このほかに stock in trade には「おはこ、\n\n常用手段、固有の技能、十八番」などの意味があります。",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "He fought bravely against his foe in the final battle.",
@@ -5092,8 +5241,8 @@
                                 "（いつ着くの？）\n（さっぱりわからないよ。）"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-02-15"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "they should stop that absurd fighting.",
@@ -5156,7 +5305,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "gymnosperm",
@@ -5182,8 +5331,8 @@
                                 "オゾン酸化"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "Floating-point arithmetic(number)",
@@ -5443,8 +5592,8 @@
                                 "トイレを流した"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "The meeting has been tentatively scheduled for next Tuesday.",
@@ -5524,8 +5673,8 @@
                                 "the smell of grilled meat lingers on my clothes."
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "彼はストレス発散のために走る。",
@@ -5641,8 +5790,8 @@
                                 "彼の目は奇妙なほど人を引きつけた"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "Her story was so compelling that I couldn't stop listening to her.",
@@ -5785,8 +5934,8 @@
                                 "心理学において、「潜在意識（subconscious）」とは、現在意識の焦点に入っていない心の一部を指します。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "We are learning how to do multiplication.",
@@ -5957,7 +6106,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "vesicle　意味　アクセント",
@@ -5966,7 +6115,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "Somatic cells are all of the cells in the body except for those involved with reproduction",
@@ -5974,8 +6123,8 @@
                                 "体細胞は、繁殖に関与しない細胞を除いて、体内のすべての細胞です。\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "私はトイレを流した 英語にして",
@@ -5993,7 +6142,7 @@
                             ],
                             "memo": "ask that S + V (原形)\n\"ask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "I ask that he go to the meeting.",
@@ -6011,7 +6160,7 @@
                             ],
                             "memo": "\nask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 }
@@ -6219,8 +6368,8 @@
                                 "ライトスルー方式"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-02-20"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "先にキャッシュメモリを書き込み、主記憶は後でまとめて書き変えるという方式はライトスルー方式？ライトバック方式？",
@@ -6427,7 +6576,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-30"
                         }
                     ]
                 },
@@ -6518,8 +6667,8 @@
                                 "割り込み"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "「割り込み」は二つに分類できる",
@@ -6588,7 +6737,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 },
@@ -6886,7 +7035,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "力 x 距離 = ?",
@@ -7031,7 +7180,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "ページング方式において、ページインは（A）から（B）にページを移すことをいう。",
@@ -7040,8 +7189,8 @@
                                 "主記憶装置"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "が誤操作をしたとしても事故につながらない、または誤操作自体が起きないようにすることで、安全を守ることができる設計を何という？",
@@ -7050,7 +7199,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "PC環境を仮想化してサーバ上に置くことで，社外から端末の種類を選ばず自分のデスクトップPC環境として利用できるシステムを何という？",
@@ -7059,7 +7208,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 },
@@ -7136,7 +7285,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "タスクの状態遷移の状態は3つある。答えて",
@@ -7174,7 +7323,7 @@
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 }
@@ -7704,7 +7853,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "高山気候はケッペンの気候区分であるかいなか。",
@@ -7730,8 +7879,8 @@
                                 "ポンチョ"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
@@ -7779,7 +7928,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "作物が栽培できなくなる限界を何という？",
@@ -7811,20 +7960,20 @@
                         {
                             "problem": "オランダの首都は？",
                             "answer": [
-                                "アステルダム"
+                                "アムステルダム"
                             ],
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-27"
                         },
                         {
-                            "problem": "オランダの首都アステルダムはなにの加工で有名？",
+                            "problem": "オランダの首都アムステルダムムAmsterdamはなにの加工で有名？",
                             "answer": [
                                 "ダイアモンド"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "スペインの首都は？",
@@ -7833,7 +7982,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "ポー川はどこの国で流れている？",
@@ -7860,7 +8009,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "海外で見られるカルスト地形としてどこがある？",
@@ -7868,8 +8017,8 @@
                                 "スロベニアのカルスト"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "ヨーロッパにおける米の生産国といえば？",
@@ -7945,7 +8094,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "氷河による侵食でできたU字谷に海水が入り込んでできた入江を何とう？ちなみに沈水海岸のひとつ",
@@ -7982,8 +8131,8 @@
                                 "エクアドル"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "気候、農業、工業といずれも南北が対照的で、南北間の経済格差が大きいため南部からの出稼ぎも多い。この特徴はどこの国か？",
@@ -7991,8 +8140,8 @@
                                 "イタリア"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "イギリスは国全体でどの気候区分に属するか？",
@@ -8001,7 +8150,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "西岸海洋性気候は二つの要因に注意する？それはなにとなにか",
@@ -8039,7 +8188,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "アタカマ砂漠の場所",
@@ -8069,7 +8218,7 @@
                             "last_answered_date": "2025-03-27"
                         },
                         {
-                            "problem": "https://gakusyu.live/wp-content/uploads/2024/11/image-2048x1421.png アメリカのこの画像の春小麦の場所をイメージして。",
+                            "problem": "https://gakusyu.live/wp-content/uploads/2024/11/image-2048x1421.png アメリカのこの画像の春小麦,放牧の場所をイメージして。",
                             "answer": [
                                 ""
                             ],
@@ -8089,11 +8238,11 @@
                         {
                             "problem": "カナダにおいてフランス系住民が多い州はどこ？",
                             "answer": [
-                                "ケベック州"
+                                "Québec City\n"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": true,
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "西アジアにはどのような国があるか？",
@@ -8120,7 +8269,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "ザグロス山脈はどこにある？",
@@ -8138,7 +8287,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "トルクメニスタンに住む人は？?",
@@ -8177,7 +8326,7 @@
                             "last_answered_date": "2025-03-27"
                         },
                         {
-                            "problem": "チュニスのケッペンの気候区分は？またその理由は",
+                            "problem": "チュニス（チュニジアの首都）のケッペンの気候区分は？またその理由は",
                             "answer": [
                                 "Cs",
                                 "地中海に面しているため"
@@ -8193,7 +8342,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "last_answered_date": "2025-03-30"
                         },
                         {
                             "problem": "トルコの首都",
@@ -8240,7 +8389,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "ケッペンの気候区分、Df, Dwの違いは",
@@ -8250,6 +8399,42 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "ケッペンの気候区分の小文字のアルファベットは（A）に関係する",
+                            "answer": [
+                                "降水量"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
+                        },
+                        {
+                            "problem": "ケッペンの気候区分において乾燥帯はアルファベットの何で表す。",
+                            "answer": [
+                                "B"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "ベトナムの場所は？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
+                        },
+                        {
+                            "problem": "イランはどこにある？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 },
@@ -8350,7 +8535,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "BSの左側を何という？",
@@ -8368,7 +8553,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-03-29"
                         },
                         {
                             "problem": "ROEの計算式の覚え方",
@@ -8378,6 +8563,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "設備投資などの費用を一定期間に配分する会計処理のことを何という？",
+                            "answer": [
+                                "減価償却"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
                         }
                     ]
                 }
@@ -8386,6 +8580,43 @@
         {
             "name": "docker",
             "subcategories": []
+        },
+        {
+            "name": "政経",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "国の予算案を作成するのはどこか。",
+                            "answer": [
+                                "内閣"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
+                        },
+                        {
+                            "problem": "所得税は所得が多くなればなるほど税率が高くなる。この制度を何というか。",
+                            "answer": [
+                                "累進課税制度\n"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
+                        },
+                        {
+                            "problem": "財投債の発行などにより調達した資金で、長期・低利の融資や投資を行うものを何というか。",
+                            "answer": [
+                                "財政投融資"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-29"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
