@@ -1882,6 +1882,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "元素記号のSeは？",
+                            "answer": [
+                                "セレン"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-01"
                         }
                     ]
                 },
@@ -2376,6 +2385,16 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "体脂肪には二種類ある。答えて",
+                            "answer": [
+                                "皮下脂肪",
+                                "内臓脂肪"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-03-31"
                         }
                     ]
                 },
@@ -3531,13 +3550,13 @@
                     "name": "metabolism catabolism",
                     "questions": [
                         {
-                            "problem": "グルコースを脱水素による酸化でピルビン酸を生成するときにATPは生じるか、生じないか。",
+                            "problem": "グルコースから脱水素による酸化でピルビン酸を生成するときにATPは生じるか、生じないか。",
                             "answer": [
                                 "生じる"
                             ],
-                            "memo": "反対に、カルビンベンソン回路において、水素を与えて還元するにはATPを与えてあげてPGAからGAPを生成するときと同じ。\n\n上記と一緒に覚えてあげると理解が深まる。\n\nまた、酸化的リン酸化は酸化するのを駆動力として、ADPにリン酸をくっつけてATPを生成する（ADP->ATP）",
+                            "memo": "反対に、カルビンベンソン回路において、水素を与えて還元する（酸化の反対）にはATPを与えてあげてPGAからGAPを生成する。\n\n上記と一緒に覚えてあげると理解が深まる。\n\nまた、酸化的リン酸化は酸化するのを駆動力として、ADPにリン酸をくっつけてATPを生成する（ADP->ATP）\n\nつまり\n酸化（脱水素）する時→ATPをつける\n",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-01"
                         }
                     ]
                 },
@@ -7332,7 +7351,7 @@
                         {
                             "problem": "タスクの遷移状態において、実行状態から実行可能状態に遷移することを何という？",
                             "answer": [
-                                "プリエンプティブ"
+                                "プリエンプティブ\n実行中のタスクに割り当てられているCPUを奪うことです。奪われたタスクは動作を一時中断し、実行可能状態になります"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -7998,13 +8017,13 @@
                             "last_answered_date": "2025-03-27"
                         },
                         {
-                            "problem": "オランダの首都アムステルダムムAmsterdamはなにの加工で有名？",
+                            "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
                             "answer": [
                                 "ダイアモンド"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-29"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "スペインの首都は？",
@@ -8661,7 +8680,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-04-01"
                         }
                     ]
                 }
