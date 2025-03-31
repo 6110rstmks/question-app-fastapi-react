@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router"
 import styles from "./CategoryBox.module.css"
 import { Category } from "../../types/Category"
 import { SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
 import { handleNavigateToCategoryPage, handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
-import { TiPinOutline, TiPin } from "react-icons/ti";
+// import { TiPinOutline, TiPin } from "react-icons/ti";
 
 interface CategoryBoxProps {
     category: Category,
@@ -44,7 +44,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         <div className={styles.categoryBox} key={category.id} ref={categoryBoxRef}>
             <div className={styles.categoryFiled}>
                 <div onClick={() => setIsPinned(!isPinned)}>
-                    {isPinned ? <TiPin /> : <TiPinOutline />}
+                    {/* {isPinned ? <TiPin /> : <TiPinOutline />} */}
                 </div>
                 <div 
                     className={styles.categoryName}

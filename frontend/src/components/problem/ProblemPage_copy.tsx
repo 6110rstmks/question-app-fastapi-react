@@ -1,5 +1,5 @@
-import { useParams, Link, useLocation } from 'react-router-dom';
-import React, { useState, ChangeEvent, useEffect } from 'react';
+import { useLocation } from 'react-router';
+import React, { useState } from 'react';
 import { Question } from '../../types/Question';
 
 import "./ProblemPage.module.css"

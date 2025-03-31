@@ -1,7 +1,7 @@
 import React, { useState, FormEvent, ChangeEvent, useEffect } from "react";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router";
 
 interface LoginProps {
     setIsAuth: (isAuth: boolean) => void;

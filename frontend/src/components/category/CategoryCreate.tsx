@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { createCategory } from "../../api/CategoryAPI";
 interface CategoryCreateProps {
     isAuth: boolean;

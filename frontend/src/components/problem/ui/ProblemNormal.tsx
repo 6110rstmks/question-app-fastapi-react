@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
 import { Category } from "../../../types/Category";
 import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
 import styles from './ProblemNormal.module.css'
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router"
 import { fetchCategoryQuestionByQuestionId } from "../../../api/CategoryQuestionAPI"
 import { fetchCategory } from "../../../api/CategoryAPI"
 import { BlockMath } from "react-katex";

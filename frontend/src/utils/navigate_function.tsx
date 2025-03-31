@@ -1,4 +1,4 @@
-import { NavigateFunction } from "react-router-dom"
+import { NavigateFunction } from "react-router"
 import { Category } from "../types/Category"
 
 interface categoryInfo {

@@ -1,5 +1,5 @@
 import React from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router"
 import { Question } from "../../types/Question"
 import { useProblemPage } from "./hooks/useProblemPage"
 import { ProblemNormal } from "./ui/ProblemNormal"
