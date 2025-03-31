@@ -2804,9 +2804,9 @@
                             "last_answered_date": "2025-03-29"
                         },
                         {
-                            "problem": "真核生物において、RNAポリメラーゼがプロモーターが結合するには（A）が必要",
+                            "problem": "真核生物Eukaryoteの細胞において、RNAポリメラーゼがプロモーターが結合するには（A）が必要",
                             "answer": [
-                                "基本転写因子"
+                                "基本転写因子General transcription factor"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -4384,7 +4384,7 @@
                         {
                             "problem": "raid0の目的は？",
                             "answer": [
-                                "パフォーマンスを向上させる。\n具体的にはデータを複数のディスクに分散して書き込む（ストライピング）ことで、読み書き速度が単一のディスクよりも大幅に向上します。"
+                                "パフォーマンスを向上させる（もっと具体的に言えた方がいいな。読み書き速度が上昇する。）。\n具体的にはデータを複数のディスクに分散して書き込む（ストライピング）ことで、読み書き速度が単一のディスクよりも大幅に向上します。"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -8777,6 +8777,25 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-29"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "React",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "SSR（server side rendering）の反対は？",
+                            "answer": [
+                                "CSR"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-01"
                         }
                     ]
                 }
