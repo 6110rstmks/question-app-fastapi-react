@@ -1933,11 +1933,11 @@
                         {
                             "problem": "モルフォゲンとは",
                             "answer": [
-                                "モルフォゲン（英語：morphogen）は発生、変態、再生の際に局在する発生源から濃度勾配を持って発せられ、形態形成を支配する物質である"
+                                "モルフォゲン（英語：morphogen）は発生、変態、再生の際に局在する発生源から濃度勾配を持って発せられ、形態形成を支配する（つかさどる）物質である"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "モルフォゲン（英語：morphogen）は発生、変態、再生の際に局在する発生源から（A）を持って発せられ、（B）を支配する物質である",
@@ -1985,8 +1985,8 @@
                                 "神経管"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "卵と精子は、（A）の途中で出会って受精をします。",
@@ -2810,7 +2810,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-30"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "遺伝子の範囲の単語、SNPの読み方",
@@ -6596,8 +6596,8 @@
                                 "高集積化（1つのDRAMチップ（メモリ素子）により多くの記憶容量（ビット）を詰め込む技術\n）"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "マスクROMの特徴を二つ答えて",
@@ -7164,7 +7164,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=iaps64fvVWc\n02:58",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "仮想記憶方式において、二つの方式がある。のべよ",
@@ -7242,14 +7242,14 @@
                             "last_answered_date": "2025-03-29"
                         },
                         {
-                            "problem": "読込み対象と読込むタイミングを決定するアルゴリズムは二種類ある。答えて",
+                            "problem": "softwareのページングにおいて読込み対象と読込むタイミングを決定するアルゴリズムは二種類ある。答えて",
                             "answer": [
                                 "デマンドページング方式",
                                 "プリページング方式"
                             ],
                             "memo": "ページングはプログラムやデータを分割して記憶領域を管理し、コンピュータの仮想記憶を実現するための方式です。ページングでは、仮想記憶(補助記憶装置)と実記憶(主記憶)間のデータの受け渡しをページという固定長の単位で行いますが、このページのやり取りは「ページフォールトが発生したときに主記憶のどのページを置換えるか」および「どのページをどのタイミングで主記憶に読み込むか」という二つのアルゴリズムに基づいて管理が行われます。\n前者の置換え対象を決定する方法としては、LRU(Least Recently Used)やFIFO(First In First Out)があり、後者の読込み対象と読込むタイミングを決定するアルゴリズムとしては、この設問で問われている「デマンドページング方式」や「プリページング方式」があります。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "デマンドページング方式は読込み対象と読込むタイミングを決定するアルゴリズムであるが、どのタイミングで読み込みを行うか。",
@@ -8028,11 +8028,11 @@
                         {
                             "problem": "スペインの首都は？",
                             "answer": [
-                                "マドリード"
+                                "マドリードMadrid"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-30"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "ポー川はどこの国で流れている？",
@@ -8041,7 +8041,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "カルスト地形はどのようにして形成されますか？",
@@ -8219,7 +8219,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "南半球の西岸海洋性気候の国はなにがあるか",
@@ -8413,9 +8413,9 @@
                             "last_answered_date": "2025-03-28"
                         },
                         {
-                            "problem": "サンアンドレアス断層はどこにある？",
+                            "problem": "サンアンドレアス断層San Andreas Faultはどこにある？",
                             "answer": [
-                                ""
+                                "アメリカ"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -8514,7 +8514,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-30"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "ステップ気候はアルファベットでどのようにあらわす？",
@@ -8533,7 +8533,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "ステップ気候の土壌2",
@@ -8580,7 +8580,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=2Y0WK4WihMM\nの2分",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "ミシシッピ川の場所は？",
@@ -8598,7 +8598,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "エジプトの場所はどこ？",
@@ -8607,7 +8607,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-01"
                         }
                     ]
                 },
