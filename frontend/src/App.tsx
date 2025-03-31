@@ -15,6 +15,7 @@ import SetProblem from './components/problem/SetProblemPage'
 import CategoryPage from './components/category/CategoryPage'
 import ReportPage from './components/ReportPage'
 import QuestionListPage from './components/question/QuestionListPage'
+import NoMatchPage from './components/NoMatchPage'
 import 'katex/dist/katex.min.css';
 
 
@@ -46,6 +47,7 @@ const App: React.FC = () => {
         <Route path="/import" element={<ImportPage />}/>
         <Route path="/report_page" element={<ReportPage />}/>
         <Route path="/question_list" element={<QuestionListPage />}/>
+        <Route path="*" element={<NoMatchPage />} />
       </Routes>
     </Router>
   );
