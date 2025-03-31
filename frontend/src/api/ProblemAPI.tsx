@@ -20,16 +20,8 @@ export const fetchProblem = async (
         }),
     })
 
-    // if (!response.ok) {
-    //     const errorData = await response.json();
-    //     throw new Error(errorData.message || 'Failed to create problems');
-    // }
-
-    console.log(8889799)
-    console.log(response.ok)
-
-
-    return response.json()
+    // return response.json()
+    return response
 }
 
 export const fetchProblemByDay = async (

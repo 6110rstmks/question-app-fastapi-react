@@ -137,7 +137,7 @@ const QuestionPage: React.FC = () => {
                 </div>
             </div>
             </div>
-            <button onClick={handleNavigateToPreviousSubcategoryPage}>Back to サブカテゴリ内のQuestion一覧</button>
+            {/* <button onClick={handleNavigateToPreviousSubcategoryPage}>Back to サブカテゴリ内のQuestion一覧</button> */}
             <div className={styles.questionActions}>
                 <button onClick={handleDeleteQuestion} className={styles.delete}>
                     DELETE

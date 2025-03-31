@@ -53,7 +53,15 @@ export const useSubcategoryPage = (
     };
 
     const handleSetProblem = async () => {
-        const problemData = await fetchProblem('subcategory', true, 7, [], [subcategoryId]);
+        const response = await fetchProblem('subcategory', true, 7, [], [subcategoryId]);
+        console.log(response)
+        // console.log(problemData.detail)
+        if (!response.ok) {
+            alert('出題する問題がありません。');
+            return 
+        }
+
+        const problemData = await response.json();
         navigate('/problem', { state: problemData });
     }
 

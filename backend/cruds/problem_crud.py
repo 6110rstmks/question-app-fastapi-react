@@ -53,7 +53,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
     
     if db.execute(query2).scalars().all() == []:
         # return '出題可能な問題がありません。'
-        raise HTTPException(status_code=400, detail="Category already exists.")
+        raise HTTPException(status_code=400, detail="出題する問題がありませんでした。")
     return db.execute(query2).scalars().all()
 
 # def generate_problems_by_day(db: Session, problem_fetch_by_date: ProblemFetchByDate):
