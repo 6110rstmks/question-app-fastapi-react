@@ -2656,7 +2656,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -3427,6 +3427,15 @@
                             "memo": "",
                             "is_correct": true,
                             "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "細胞周期を英語で？",
+                            "answer": [
+                                "cell cycle"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-01"
                         }
                     ]
                 },
@@ -3602,11 +3611,11 @@
                         {
                             "problem": "光合成での反応は大きく二つに分けることができる。①（A）での反応。②（B）での反応",
                             "answer": [
-                                "チラコイド",
+                                "チラコイドThylakoid",
                                 "ストロマ"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -7829,7 +7838,7 @@
                             ],
                             "memo": "構造平野と卓状地の違い、準平原と楯状地の違いというのは、かなりあいまいです",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "春先に地中海からイタリア南部に向けて吹いてくる高温多湿な風は？",
@@ -8104,7 +8113,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-01"
                         },
                         {
                             "problem": "秋から冬にかけてディナルアルプス山脈からアドリア海に向けて吹いてくる風を何という？",
@@ -8478,9 +8487,10 @@
                             "last_answered_date": "2025-03-29"
                         },
                         {
-                            "problem": "イランはどこにある？",
+                            "problem": "イランはどこにある？ イランの右には何の国がある？",
                             "answer": [
-                                ""
+                                "カザフスタン",
+                                "アフガニスタン"
                             ],
                             "memo": "",
                             "is_correct": false,
