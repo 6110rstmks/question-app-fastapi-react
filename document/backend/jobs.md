@@ -13,6 +13,6 @@
 
 
 backend>jobs>insert_nonexistent_category_question_record.py
-backend>jobs>check_nonexistent_category_question_record.py
+$ python3 -m jobs.check_nonexistent_category_question_record
 
 

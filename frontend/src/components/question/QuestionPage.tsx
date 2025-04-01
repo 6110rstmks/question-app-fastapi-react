@@ -59,7 +59,6 @@ const QuestionPage: React.FC = () => {
 
     // ページ遷移時にカテゴリ情報をローカルストレージに保存
     useEffect(() => {
-        console.log(location.state)
       if (location.state) {
             localStorage.setItem('categorySubcategoryInfo', JSON.stringify(location.state));
       }

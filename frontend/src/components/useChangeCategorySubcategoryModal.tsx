@@ -42,7 +42,6 @@ export const useCategoryPage = (
 
     const [categories, setCategories] = useState<Category[]>();
 
-
     // searchFlgがtrueの時に表示されるCategoryName
     const [displayedCategoryName, setDisplayedCategoryName] = useState<string>("");
 
@@ -53,19 +52,37 @@ export const useCategoryPage = (
         
         const { value, checked } = event.target;
         const parsedValue = JSON.parse(value);
-        console.log(parsedValue); 
+        // console.log(parsedValue); 
 
         const subcategoryId = parseInt(parsedValue.id, 10);
 
         // const subcategoryData = await fetchSubcategory(subcategoryId)
         const categoryId = parseInt(parsedValue.category_id, 10)
 
+        if (checked) {
+            console.log(111)
+            setSelectedCategoryIds((prev) => {
+                const updated = [...prev, categoryId]
+                console.log("更新直後１のselectedCategoryIds:", updated);
+                return updated
+            });
 
-        setSelectedCategoryIds((prev) => 
-            checked
-                ? [...prev, categoryId] // チェックされた場合、新しい配列を返す
-                : prev.filter((id) => id !== categoryId) // チェックが外れた場合、新しい配列を返す
-        )
+        } else if (!checked) {
+            console.log(333)
+
+            // チェックが外れた場合でかつすでに同じカテゴリのサブカテゴリにチェックが入っている場合、何もしない
+            setSelectedCategoryIds((prev) => {
+                const index = prev.indexOf(categoryId);
+                if (index === -1) return prev; // もしcategoryIdがなければそのまま返す
+            
+                const updated = [...prev];
+                updated.splice(index, 1); // 最初に見つかったcategoryIdのみ削除
+            
+                console.log("更新直後３のselectedCategoryIds:", updated);
+                return updated;
+            });
+
+        }
 
 
         setSelectedSubcategoryIds((prev) =>
@@ -90,6 +107,7 @@ export const useCategoryPage = (
     }
 
     // 検索ボックスでワードを入力している時の処理
+    // 部分検索で一致したCategoryNameを表示する。
     const handleSearch = async (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchWord(e.target.value);
     }
@@ -99,7 +117,7 @@ export const useCategoryPage = (
     const handleClickCategoryName = async (category: Category) => {
         setSearchWord(category.name)
         const data: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(category.id);
-        console.log(data)
+        // console.log(data)
         setSearchFlg(true);
         setDisplayedCategoryName(category.name);
         setSubcategoriesWithCategoryName(data)
@@ -109,7 +127,6 @@ export const useCategoryPage = (
     useEffect(() => {
         (async () => {
             const subcategoriesData: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(categoryId);
-            console.log(subcategoriesData)
             setSubcategoriesWithCategoryName(subcategoriesData)
 
             const subcategoriesquestionsData = await fetchSubcategoriesQuestionsByQuestionId(question!.id)

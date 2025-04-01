@@ -58,16 +58,9 @@ def insert_missing_category_questions(db: Session, missing_records_question_ids)
     for subcategory_question in subcategories_questions:
         query4 = select(Subcategory).where(Subcategory.id == subcategory_question.subcategory_id)
         subcategory = db.execute(query4).scalars().first()
-        print(f"subcategory: {subcategory.category_id}")
 
         subcategory_question.category_id = subcategory.category_id
 
-    print(subcategories_questions)
-
-    for bbb in subcategories_questions:
-        print(bbb.category_id)
-        print(bbb.question_id)
-        print(bbb.subcategory_id)
         
     new_category_questions = [
         CategoryQuestion(
@@ -92,10 +85,8 @@ def main():
             return
         
         else:
-            print(f"categoryquestionの存在しないレコードはquestion_idsの{not_existing_ids}になります。") 
+            print(f"categoryquestionの存在しないレコードはquestion_idsの{missing_records_question_ids}になります。") 
         
-        subcategories_questions = insert_missing_category_questions(db, missing_records_question_ids)
-
 
 
 if __name__ == "__main__":

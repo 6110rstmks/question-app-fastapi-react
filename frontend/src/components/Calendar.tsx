@@ -8,11 +8,7 @@ import { useNavigate } from 'react-router';
 const Calendar: React.FC = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
 
-    // const [questionCounts, setQuestionCounts] = useState<Record<string, number>[]>([]);
-    // const [questionCounts, setQuestionCounts] = useState<Record<string, number>>({});
     const [questionCounts, setQuestionCounts] = useState<Record<string, number>>({});
-
-
     const startMonth = startOfMonth(currentDate);
     const endMonth = endOfMonth(currentDate);
     const startDate = startOfWeek(startMonth);
@@ -42,7 +38,7 @@ const Calendar: React.FC = () => {
         };
         fetchCounts();
     }
-    , []);
+    , [currentDate]);
 
     return (
         <div className={styles.calendar_container}>

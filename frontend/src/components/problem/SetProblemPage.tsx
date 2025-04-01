@@ -43,7 +43,6 @@ const SetProblemPage: React.FC = () => {
                 </div>
             )}
 
-
             <div className={styles.problemSelector}>
             
                 <p>The total number of Questions：<span>{questionCount}</span></p>

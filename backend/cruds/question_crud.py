@@ -280,6 +280,9 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
     # チェックボックスにチェックがついた場合のCategory追加処理
     # ------------------------------------------------------------------------ #
 
+    print('いかがそれです。')
+    print(changeSubcategoryUpdate.category_ids)
+
     for category_id in changeSubcategoryUpdate.category_ids:
         # 重複チェック
         existing_category_question_record = db.query(CategoryQuestion).filter_by(
@@ -289,6 +292,7 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
         
         # レコードが存在しない場合のみ挿入
         if not existing_category_question_record:
+            print('ここに入った')
             new_category_question = CategoryQuestion(
                 category_id=category_id, 
                 question_id=changeSubcategoryUpdate.question_id
