@@ -7,12 +7,15 @@ def find_all(db: Session):
 
 def find_categoryquestion_by_question_id(db: Session, id: int):
     query = select(CategoryQuestion).where(CategoryQuestion.question_id == id)
-    return db.execute(query).scalars().first()
+    # return db.execute(query).scalars().first()
+    return db.execute(query).scalars().all()
 
 def delete(db: Session, question_id: int):
-    categoryquestion = find_categoryquestion_by_question_id(db, question_id)
-    if categoryquestion is None:
+    categoriesquestions = find_categoryquestion_by_question_id(db, question_id)
+    if categoriesquestions is None:
         return None
-    db.delete(categoryquestion)
+    
+    for categoryquestion in categoriesquestions:
+        db.delete(categoryquestion)
     db.commit()
     return categoryquestion
