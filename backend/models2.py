@@ -62,10 +62,10 @@ class Question(Base):
 class SubcategoryQuestion(Base):
     __tablename__ = "subcategory_question"
     subcategory_id = Column(
-        Integer, ForeignKey("subcategories.id"), primary_key=True
+        Integer, ForeignKey("subcategories.id", ondelete="CASCADE"), primary_key=True
     )
     question_id = Column(
-        Integer, ForeignKey("questions.id"), primary_key=True
+        Integer, ForeignKey("questions.id", ondelete="CASCADE"), primary_key=True
     )
     subcategory = relationship("Subcategory", back_populates="questions")
     question = relationship("Question", back_populates="subcategories")
@@ -73,10 +73,10 @@ class SubcategoryQuestion(Base):
 class CategoryQuestion(Base):
     __tablename__ = "category_question"
     category_id = Column(
-        Integer, ForeignKey("categories.id"), primary_key=True
+        Integer, ForeignKey("categories.id", ondelete="CASCADE"), primary_key=True
     )
     question_id = Column(
-        Integer, ForeignKey("questions.id"), primary_key=True
+        Integer, ForeignKey("questions.id", ondelete="CASCADE"), primary_key=True
     )
     category = relationship("Category", back_populates="questions")
     question = relationship("Question", back_populates="categories")
