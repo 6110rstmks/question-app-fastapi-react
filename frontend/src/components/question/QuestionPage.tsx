@@ -77,7 +77,7 @@ const QuestionPage: React.FC = () => {
             </div>
         ))}
         <div className={styles.question_box}>
-            <h1>{question?.id}</h1>
+            <h3>id:{question?.id}</h3>
                 <div className={styles.questionHeader}>
                     <div className={styles.question_problem}>
                         問題：
