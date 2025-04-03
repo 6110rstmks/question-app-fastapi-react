@@ -285,7 +285,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 },
@@ -347,8 +347,8 @@
                                 "グローバルDB"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "global databaseはRDSの機能か。auroraの機能か",
@@ -799,7 +799,7 @@
                             ],
                             "memo": "Use Multi-AZ deployments for High Availability/Failover and Read Replicas for read scalability.\nhttps://medium.com/awesome-cloud/aws-difference-between-multi-az-and-read-replicas-in-amazon-rds-60fe848ef53a",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "RDSにおいてマルチAZにはできなくて、read replicasにはできることを一つ挙げて。",
@@ -1273,7 +1273,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-04-01"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "AWSにおいて、リージョンの中にAZ（アベイラビリティゾーン）があるか、AZ（アベイラビリティゾーン）の中にリージョンがあるかどっちか？",
@@ -1552,9 +1552,10 @@
                             "last_answered_date": "2025-03-28"
                         },
                         {
-                            "problem": "4次方程式の複素数解の武器",
+                            "problem": "4次方程式の複素数解の武器2",
                             "answer": [
-                                "\n解と係数の関係\n\n実数係数m次方程式はx = αが解ならx = αも解"
+                                "\n解と係数の関係\n\n",
+                                "実数係数m次方程式はx = αが解ならx = αも解"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -1571,13 +1572,13 @@
                             "last_answered_date": "2025-03-28"
                         },
                         {
-                            "problem": "条件文の変形）AとBが直角　",
+                            "problem": "複素数単元における条件文の変形→AとBが直角　",
                             "answer": [
                                 "<=> β = kiα"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-02"
                         }
                     ]
                 },
@@ -1617,9 +1618,9 @@
                                 "階差をとる",
                                 "むりやり等比数列の形にする"
                             ],
-                            "memo": "",
+                            "memo": "https://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-02"
                         }
                     ]
                 },
@@ -1691,13 +1692,13 @@
                     "name": "integral",
                     "questions": [
                         {
-                            "problem": "■area(integral) 解法",
+                            "problem": "■area(integral) 解法1",
                             "answer": [
                                 "直線や扇形を含む図形 -> パズルする"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "斜軸回転体の初手　",
@@ -1773,8 +1774,8 @@
                                 "二乗"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-02"
                         }
                     ]
                 },
@@ -2094,7 +2095,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "ノギンやコーディンがBMPに結合することで、BMPは（A）できなくなる",
@@ -2394,7 +2395,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 },
@@ -3021,8 +3022,8 @@
                                 "同じ性質の細胞を作ること"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "メンデルの法則を3つ",
@@ -3691,13 +3692,13 @@
                             "last_answered_date": "2025-03-24"
                         },
                         {
-                            "problem": "CAM植物で気孔を開くのはいつか",
+                            "problem": "CAM植物で気孔を開くのは昼か夜どちらか",
                             "answer": [
                                 "夜"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "CAM植物は空気中のCO2を取り込んでどのような物質で蓄積するか答えよ",
@@ -3706,7 +3707,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "Rubiscoの正式名称は？",
@@ -4029,8 +4030,8 @@
                                 "通信用に細切れにしたデータの大きさ制限で「これくらいの大きさの細切れデータなら通れるよ（送れるよ）」な最大値のこと"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "Why is the RARP protocol necessary？",
@@ -4038,8 +4039,8 @@
                                 "機器は電源を入れた時、自分のMACアドレスは知っている。\nでもネットワークで通信するためには、IPアドレスが必要。"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-02"
                         }
                     ]
                 },
@@ -4251,7 +4252,7 @@
                             ],
                             "memo": "https://itmanabi.com/rollback-rollforward/",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 },
@@ -4451,7 +4452,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-29"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "what's the number that the read/write unit is a block in raid?",
@@ -5333,7 +5334,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-04-01"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "The toll booth collects money for the road. ",
@@ -6026,7 +6027,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "ammunition",
@@ -6107,7 +6108,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "Fill me in",
@@ -6290,7 +6291,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "3ウェイハンドシェイクと紐づくプロトコルは？",
@@ -6722,7 +6723,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "CPUの主な演算装置は2つあります。それらを答えよ。",
@@ -7173,11 +7174,11 @@
                         {
                             "problem": "電子工学において複数の信号の関係や振る舞いを時間軸に表した図をなんという？",
                             "answer": [
-                                "タイミングチャート"
+                                "タイミングチャートDigital timing diagram"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-02"
                         }
                     ]
                 }
@@ -7216,7 +7217,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "ページング方式において、補助記憶装置から主記憶装置にページを移すことを（A）といい、主記憶装置から補助記憶装置にページを移すことを（B）という。",
@@ -7294,13 +7295,13 @@
                             "last_answered_date": "2025-04-01"
                         },
                         {
-                            "problem": "デマンドページング方式は読込み対象と読込むタイミングを決定するアルゴリズムであるが、どのタイミングで読み込みを行うか。",
+                            "problem": "デマンドページング方式はページの読込み対象と読込むタイミングを決定するアルゴリズムであるが、どのタイミングで読み込みを行うか。",
                             "answer": [
                                 "ページフォールトが発生した時"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 },
@@ -7907,7 +7908,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "tradewindのふくむきの覚え方",
@@ -8029,7 +8030,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-27"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
@@ -8130,7 +8131,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "サンゴの発達具合によって、（A）・（B）・（C）と呼び名が変わっていくのです",
@@ -8159,7 +8160,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "回帰線のうち、北側にある線を（A）、南側にある線を（B）という。",
@@ -8324,8 +8325,8 @@
                                 "トルクメン人"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "ナイル川の中流に建設された多目的ダムは何？",
@@ -8438,7 +8439,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-30"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "扇状地の一番上から順番に 扇頂→扇央→扇端 という名前がついています。扇頂の方が粒が（大きく・小さく）、扇端にいくほど粒が（大きく・小さく）なっていきます。",
@@ -8448,7 +8449,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-04-01"
+                            "last_answered_date": "2025-04-02"
                         },
                         {
                             "problem": "ステップ気候はアルファベットでどのようにあらわす？",
@@ -8457,7 +8458,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "アメリカのステップ気候は（A）、（B）に分布！",
@@ -8508,15 +8509,6 @@
                             "last_answered_date": "2025-04-01"
                         },
                         {
-                            "problem": "コンゴ川どこにある？",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-04-01"
-                        },
-                        {
                             "problem": "サンゴは浅い海にすんでいる？深い海にすんでいる？",
                             "answer": [
                                 "浅い海"
@@ -8542,6 +8534,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-04-01"
+                        },
+                        {
+                            "problem": "オランダの国の面積は大きい？小さい？",
+                            "answer": [
+                                "小さい（九州と同じくらい）"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 },
@@ -8583,11 +8584,11 @@
                         {
                             "problem": "ミシシッピ川の場所は？",
                             "answer": [
-                                ""
+                                "アメリカ"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "エジプトの場所はどこ？",
@@ -8608,10 +8609,11 @@
                             "last_answered_date": "2025-03-25"
                         },
                         {
-                            "problem": "イランはどこにある？ イランの右には何の国がある？",
+                            "problem": "イランはどこにある？ イランの右には何の国がある？左側には何の国がある？",
                             "answer": [
                                 "カザフスタン",
-                                "アフガニスタン"
+                                "アフガニスタン",
+                                "左→イラク"
                             ],
                             "memo": "",
                             "is_correct": false,
@@ -8624,7 +8626,7 @@
                             ],
                             "memo": "ウラル山脈のすぐ東側を流れ、北極海に注ぎ込む川です。\n\n",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-31"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "ヴォルタ川はどこにありますか？",
@@ -8633,7 +8635,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "アンデス山脈はどこか？また、アンデス山脈は新期造山帯？古期造山帯？",
@@ -8734,6 +8736,15 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-04-02"
+                        },
+                        {
+                            "problem": "コンゴ川どこにある？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-01"
                         }
                     ]
                 }
@@ -8807,7 +8818,7 @@
                             "last_answered_date": "2025-03-29"
                         },
                         {
-                            "problem": "BSの左側を何という？",
+                            "problem": "BS（balance sheet）の左側を何という？",
                             "answer": [
                                 "資産"
                             ],
