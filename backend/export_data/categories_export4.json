@@ -3146,7 +3146,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "nucleotideはヌクレオシドが何結合で連結しているか？",
@@ -3726,6 +3726,35 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-03-30"
+                        },
+                        {
+                            "problem": "C4植物における光合成は二種類の細胞で行われる。答えて",
+                            "answer": [
+                                "葉肉細胞",
+                                "維管束鞘細胞"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "C4植物の光合成における葉肉細胞の働き。CO2をC3化合物と反応させ、（A）に変換してCO2を濃縮させる。",
+                            "answer": [
+                                "C4植物（オキサロ酢酸\n）"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "C4植物の例は？",
+                            "answer": [
+                                "サトウキビ",
+                                "とうもろこし"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 },
@@ -6226,6 +6255,33 @@
                             "memo": "\nask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
                             "is_correct": false,
                             "last_answered_date": "2025-03-29"
+                        },
+                        {
+                            "problem": "しかめつらをする",
+                            "answer": [
+                                "I make a grimance"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "家に帰ったら、昼飯を作る。",
+                            "answer": [
+                                "when I get home, I'll make lunch."
+                            ],
+                            "memo": "特に、「家に帰ったら」の部分は未来のことなので、英語では 「when + 現在形」 で表し、その結果として「昼飯を作る」には 「will」 を使って未来を表します。",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "南極",
+                            "answer": [
+                                "antarctic"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 }
@@ -6359,7 +6415,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "SSLの流れにおいて、クライアントからのSSLの要求に対して、（A）は証明書をクライアントに送付する。",
@@ -6839,8 +6895,8 @@
                                 "低電力消費"
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "In what way does SoC contrast with traditional pc?",
@@ -7126,7 +7182,7 @@
                                 "位置エネルギー"
                             ],
                             "memo": "",
-                            "is_correct": false,
+                            "is_correct": true,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -7245,7 +7301,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "メモリ管理の可変区画方式では、空き領域により小さいデータを読み込むので、領域の確保と解放を繰り返していくと、細かい領域がたくさん発生することがあります。この領域を何という？",
@@ -8030,7 +8086,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
@@ -8235,7 +8291,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "海洋性気候は隔海度が（A）で、気温の年較差が（B）。",
@@ -8410,7 +8466,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "ケッペンの気候区分の小文字のアルファベットは（A）に関係する",
@@ -8449,7 +8505,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "ステップ気候はアルファベットでどのようにあらわす？",
@@ -8543,6 +8599,36 @@
                             "memo": "",
                             "is_correct": false,
                             "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "砂漠の中で水が手に入る箇所は3種類",
+                            "answer": [
+                                "オアシス",
+                                "山地から引いた地下水路",
+                                "外来河川"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "砂嘴が伸びて対岸にくっついた地形は？またそれによって囲まれた湖を何という",
+                            "answer": [
+                                "砂州",
+                                "ラグーン"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "砂嘴が伸びていって陸地とつながった島をなんという",
+                            "answer": [
+                                "陸繋島"
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 },
@@ -8596,8 +8682,8 @@
                                 ""
                             ],
                             "memo": "",
-                            "is_correct": false,
-                            "last_answered_date": "2025-04-01"
+                            "is_correct": true,
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "ナミブ砂漠はどこにありますか？",
@@ -8617,7 +8703,7 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-29"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -8671,16 +8757,16 @@
                             ],
                             "memo": "まさにステップ気候という名前の由来はここから取られているのです。",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-30"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "サンアンドレアス断層San Andreas Faultはどこにある？",
                             "answer": [
-                                "アメリカ"
+                                "アメリカの西側"
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "中央アジアのカザフスタンの場所は？",
@@ -8744,7 +8830,16 @@
                             ],
                             "memo": "",
                             "is_correct": false,
-                            "last_answered_date": "2025-04-01"
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "ドナウ川はどこ",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": false,
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 }
