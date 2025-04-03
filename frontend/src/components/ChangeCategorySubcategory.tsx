@@ -5,6 +5,12 @@ import { Question } from '../types/Question'
 import styles from './ChangeCategorySubcategoryModal.module.css'
 import useChangeCategorySubcategoryModal from './useChangeCategorySubcategoryModal'
 
+enum SolutionStatus {
+    NOT_SOLVED = 0,
+    TEMPORARY_SOLVED = 1,
+    PERMANENT_SOLVED = 2,
+}
+
 interface ChangeCategorySubcategoryProps {
     categoryId: number;
     defaultCategoryName: string;
@@ -21,6 +27,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
     setModalIsOpen,
     setSubcategoriesRelatedToQuestion,
 }) => {
+
     const {
         searchWord,
         searchFlg,
@@ -36,7 +43,14 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
     } = useChangeCategorySubcategoryModal(
         categoryId, 
         defaultCategoryName, 
-        question ?? { id: 0, problem: "", answer: [], memo: "", is_correct: false, answer_count: 0},  // デフォルト値を設定
+        question ?? { 
+            id: 0, 
+            problem: "", 
+            answer: [], 
+            memo: "", 
+            is_correct: SolutionStatus.NOT_SOLVED,  // 修正：`false`ではなく`SolutionStatus.NOT_SOLVED`に変更
+            answer_count: 0 
+        },  
         setModalIsOpen, 
         setSubcategoriesRelatedToQuestion
     );

@@ -9,6 +9,12 @@ interface QuestionEditProps {
     setQuestion: (question: Question) => void;
 }
 
+enum SolutionStatus {
+    NOT_SOLVED = 0,
+    TEMPORARY_SOLVED = 1,
+    PERMANENT_SOLVED = 2,
+}
+
 const QuestionEditModal: React.FC<QuestionEditProps> = ({
     setModalIsOpen,
     question,
@@ -88,22 +94,32 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                         <label className={styles.radioLabel}>
                             <input
                                 type="radio"
-                                value="true"
-                                checked={isCorrect === true}
+                                value={SolutionStatus.PERMANENT_SOLVED.toString()}  // ここを修正
+                                checked={isCorrect === SolutionStatus.PERMANENT_SOLVED}  // 修正
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />
-                            Correct
+                            正解
                         </label>
                         <label className={styles.radioLabel}>
                             <input
                                 type="radio"
-                                value="false"
-                                checked={isCorrect === false}
+                                value={SolutionStatus.TEMPORARY_SOLVED.toString()}  // ここを修正
+                                checked={isCorrect === SolutionStatus.TEMPORARY_SOLVED}  // 修正
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />
-                            Incorrect
+                            一時的に正解
+                        </label>
+                        <label className={styles.radioLabel}>
+                            <input
+                                type="radio"
+                                value={SolutionStatus.NOT_SOLVED.toString()}  // ここを修正
+                                checked={isCorrect === SolutionStatus.NOT_SOLVED}  // 修正
+                                onChange={handleIsCorrectChange}
+                                className={styles.radio}
+                            />
+                            不正解
                         </label>
                     </div>
                 </div>

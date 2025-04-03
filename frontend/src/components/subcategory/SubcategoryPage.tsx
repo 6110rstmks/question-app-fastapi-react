@@ -92,6 +92,12 @@ const SubcategoryPage: React.FC = () => {
                             ${styles.questionBox} 
                             ${question.is_correct ? styles.correct : styles.incorrect}
                         `} 
+                        // className={`
+                        //     ${styles.questionBox} 
+                        //     ${question.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correct : 
+                        //       question.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.temporary : 
+                        //       styles.incorrect}
+                        // `}
                         key={question.id}>
                         <h3 className={styles.problemText} 
                             onClick={() => handleNavigateToQuestionPage(

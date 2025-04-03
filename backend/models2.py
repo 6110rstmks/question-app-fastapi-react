@@ -5,13 +5,17 @@ from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column
-from sqlalchemy import String
+from sqlalchemy import String, Enum
 from sqlalchemy import DateTime
 from sqlalchemy import Boolean
 from sqlalchemy import ARRAY
 from sqlalchemy import Date
 from datetime import datetime
 from sqlalchemy.sql import func
+import enum
+from schemas.question import SolutionStatus
+
+
 
 class Base(DeclarativeBase):
     pass
@@ -43,7 +47,6 @@ class Subcategory(Base):
     # ↓なぜsubcategoriesと複数形なのか
     category = relationship("Category", back_populates="subcategories")
     questions = relationship("SubcategoryQuestion", back_populates="subcategory")
-
     
 class Question(Base):
     __tablename__ = "questions"
@@ -52,7 +55,9 @@ class Question(Base):
     problem = Column(String, nullable=False)
     answer = Column(ARRAY(String), nullable=False)
     memo = Column(String)
-    is_correct = Column(Boolean, nullable=False, default=False)
+    # is_correct = Column(Boolean, nullable=False, default=False)
+    # is_correct = Column(Enum(SolutionStatus), nullable=False)
+    is_correct = Column(Enum(SolutionStatus), nullable=False, default=SolutionStatus.NOT_SOLVED)
     answer_count = Column(Integer, nullable=False, default=0)
     last_answered_date = Column(Date, default=func.current_date())
     
@@ -70,7 +75,8 @@ class SubcategoryQuestion(Base):
     subcategory = relationship("Subcategory", back_populates="questions")
     question = relationship("Question", back_populates="subcategories")
     
-class CategoryQuestion(Base):
+class CategoryQuestion(Base): 
+        
     __tablename__ = "category_question"
     category_id = Column(
         Integer, ForeignKey("categories.id", ondelete="CASCADE"), primary_key=True

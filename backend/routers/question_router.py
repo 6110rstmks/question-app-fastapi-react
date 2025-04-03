@@ -128,6 +128,8 @@ async def find_all_questions_in_category(db: DbDependency, category_id: int = Pa
 async def find_all_questions_in_subcategory(db: DbDependency, subcategory_id: int = Path(gt=0)):
     return question_crud.find_all_questions_in_subcategory(db, subcategory_id)
 
+
+
 # Questionを削除するエンドポイント
 @router.delete("/{question_id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def delete(

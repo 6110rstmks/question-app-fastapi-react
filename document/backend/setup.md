@@ -64,3 +64,9 @@ insert into
 
 
 $ GRANT USAGE, SELECT, UPDATE ON SEQUENCE questions_id_seq TO sorasakamoto;
+
+
+============
+solutionstatus(enum)の型を確認する方法
+
+ \dT+ solutionstatus

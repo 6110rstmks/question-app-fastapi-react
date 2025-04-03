@@ -6,7 +6,6 @@ import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
 import styles from './ProblemNormal.module.css'
-import { useNavigate } from "react-router"
 import { fetchCategoryQuestionByQuestionId } from "../../../api/CategoryQuestionAPI"
 import { fetchCategory } from "../../../api/CategoryAPI"
 import { BlockMath } from "react-katex";
@@ -45,7 +44,6 @@ export const ProblemNormal: React.FC<Props> = ({
         setLocalProblem(updatedProblem); // 最新のデータをローカルに反映
     }
 
-    const navigate = useNavigate();
     useEffect(() => {
         setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
 
@@ -54,8 +52,8 @@ export const ProblemNormal: React.FC<Props> = ({
 
             const data_category = await fetchCategory(data_category_question.category_id)
             setCategory(data_category)
-            const data = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
-            setSubcategoriesWithCategoryName(data);       
+            const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
+            setSubcategoriesWithCategoryName(data_subcategories_with_category_name);       
         })();
     }, [problem])
 
@@ -157,7 +155,15 @@ export const ProblemNormal: React.FC<Props> = ({
                         {localProblem.memo && (
                             <div className={styles.memoSection}>
                                 <h3 className={styles.memoHeading}>メモ</h3>
-                                <div className={styles.memoContent}>{localProblem.memo}</div>
+                                <div className={styles.memoContent}>
+                                    {/* {localProblem.memo} */}
+                                    {localProblem.memo.split('\n').map((line, index) => (
+                                        <React.Fragment key={index}>
+                                        {line}
+                                        <br />
+                                        </React.Fragment>
+                                    ))}
+                                </div>
                             </div>
                         )}
                     </div>

@@ -4,6 +4,8 @@ from schemas.category import CategoryCreate
 from models2 import Category, CategoryQuestion, Subcategory, SubcategoryQuestion, Question
 from config import PAGE_SIZE
 from fastapi import HTTPException
+import enum
+from enum import Enum
 
 def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None, answer_word: str = None):
 
@@ -126,3 +128,30 @@ def find_all_categories_with_questions(db: Session):
                 category.incorrected_answered_question_count += 1
                     
     return result
+
+
+class SolutionStatus(str, Enum):
+    NOT_SOLVED = "NOT_SOLVED"
+    TEMPORARY_SOLVED = "TEMPORARY_SOLVED"
+    PERMANENT_SOLVED = "PERMANENT_SOLVED"
+
+# def find_all_categories_with_questions(db: Session):
+#     query1 = select(CategoryQuestion.category_id).distinct()
+#     category_ids = db.execute(query1).scalars().all()
+    
+#     query2 = select(Category).where(Category.id.in_(category_ids))
+#     result = db.execute(query2).scalars().all()
+
+#     for category in result:
+#         # 全問題数をカウント
+#         category.question_count = len(category.questions)
+
+#         # 未正解の問題数を初期化
+#         category.incorrected_answered_question_count = 0
+        
+#         # 各質問に対して、未正解のものをカウント
+#         for categoryquestion in category.questions:
+#             if categoryquestion.question.is_correct == SolutionStatus.NOT_SOLVED:
+#                 category.incorrected_answered_question_count += 1
+                    
+#     return result

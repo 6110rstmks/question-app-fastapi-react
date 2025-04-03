@@ -7,6 +7,11 @@ import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
 import { BlockMath } from 'react-katex'
 
+enum SolutionStatus {
+    NOT_SOLVED = 0,
+    TEMPORARY_SOLVED = 1,
+    PERMANENT_SOLVED = 2,
+}
 
 interface QuestionPageNavigationParams {
     categoryId: number,
@@ -96,7 +101,10 @@ const QuestionPage: React.FC = () => {
                             }`}
                             onClick={handleUpdateIsCorrect}
                         >
-                        {question?.is_correct ? '正解' : '不正解'}
+                        {/* {question?.is_correct ? '正解' : '不正解'} */}
+                        {question?.is_correct === SolutionStatus.NOT_SOLVED ? '不正解' :
+                            question?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? '一時的に正解' :
+                        '正解'}
                         </div>
                     </div>
                 </div>

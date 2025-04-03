@@ -2,6 +2,12 @@ import { useCallback, useEffect, useState } from 'react'
 import { Question } from '../../../types/Question'
 import { fetchQuestion } from '../../../api/QuestionAPI'
 
+enum SolutionStatus {
+    NOT_SOLVED = 0,
+    TEMPORARY_SOLVED = 1,
+    PERMANENT_SOLVED = 2,
+}
+
 export const useQuestionEdit = (
     question: Question | undefined,
     setQuestion: (question: Question) => void,
@@ -9,7 +15,8 @@ export const useQuestionEdit = (
 ) => {
     const [inputAnswerValue, setInputAnswerValue] = useState<string[]>(question?.answer || [''])
     const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "")
-    const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false)
+    // const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false)
+    const [isCorrect, setIsCorrect] = useState<SolutionStatus>(question?.is_correct || SolutionStatus.NOT_SOLVED);
     const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "")
 
     // タッチパッド誤操作のブラウザバックを防ぐ
@@ -40,8 +47,14 @@ export const useQuestionEdit = (
         setInputAnswerValue(updatedAnswers);
     }
 
+    // const handleIsCorrectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    //     setIsCorrect(event.target.value === 'true');
+    // }
+
     const handleIsCorrectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setIsCorrect(event.target.value === 'true');
+        setIsCorrect(event.target.value === SolutionStatus.PERMANENT_SOLVED.toString() ? SolutionStatus.PERMANENT_SOLVED : 
+                     event.target.value === SolutionStatus.TEMPORARY_SOLVED.toString() ? SolutionStatus.TEMPORARY_SOLVED : 
+                     SolutionStatus.NOT_SOLVED);
     }
 
     const addAnswerInput = () => {
@@ -95,7 +108,7 @@ export const useQuestionEdit = (
         setInputProblemValue(question?.problem || "");
         setInputAnswerValue(question?.answer || ['']);
         setInputMemoValue(question?.memo || "");
-        setIsCorrect(question?.is_correct ?? false);
+        setIsCorrect(question?.is_correct ?? SolutionStatus.NOT_SOLVED);  // SolutionStatus を使ってデフォルトを設定
     }, [question]);
 
     return {
