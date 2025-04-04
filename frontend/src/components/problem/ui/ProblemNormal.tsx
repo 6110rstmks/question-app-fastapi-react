@@ -22,6 +22,12 @@ interface Props {
     onUnsolved: () => void
 }
 
+enum SolutionStatus {
+    NOT_SOLVED = 0,
+    TEMPORARY_SOLVED = 1,
+    PERMANENT_SOLVED = 2,
+}
+
 export const ProblemNormal: React.FC<Props> = ({
     problem,
     currentProblemIndex,
@@ -96,7 +102,9 @@ export const ProblemNormal: React.FC<Props> = ({
                             >Edit</button>
                         <button
                             className={`${styles.statusButton} ${
-                                localProblem.is_correct ? styles.correctButton : styles.incorrectButton
+                                localProblem?.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correctButton : 
+                                localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.incorrectButton : 
+                                styles.incorrect
                             }`}
                             onClick={handleUpdateIsCorrect}
                         >

@@ -50,19 +50,12 @@ export const useQuestionPage = (
     }
 
     // このQuestionPageに遷移した元のSubcategoryPageに戻る。
-    const handleNavigateToPreviousSubcategoryPage = () => {
-        const category = { id: categoryId, name: categoryName };
-        navigate(`/subcategory/${subcategoryId}`, {
-            state: category
-        });
-    }
-
-    // const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    //     if (event.ctrlKey && event.key.toLowerCase() === 'b') {
-    //         event.preventDefault();
-    //         setShowAnswer(prev => !prev);
-    //     }
-    // }, []);
+    // const handleNavigateToPreviousSubcategoryPage = () => {
+    //     const category = { id: categoryId, name: categoryName };
+    //     navigate(`/subcategory/${subcategoryId}`, {
+    //         state: category
+    //     });
+    // }
 
     useEffect(() => {
         const onKeyDown = (event: KeyboardEvent) => handleKeyDown(event, setShowAnswer);
@@ -80,21 +73,11 @@ export const useQuestionPage = (
             setQuestion(data);
 
             // 所属するサブカテゴリを変更する際に使用する。
-            // const data2: Subcategory[] = await fetchSubcategoriesByQuestionId(questionId);
             const data2: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByQuestionId(questionId);
             setSubcategoriesWithCategoryName(data2);
         })();
 
-        // ↓これいらないかも
 
-        // カテゴリ情報をローカルストレージに保存
-        // ローカルストレージに保存する理由は、リロード時にカテゴリ情報が消えないようにするため
-        // リロードした場合、QuestionPageからカテゴリ情報を取得できないため、カテゴリ情報はローカルストレージから取得する
-        // if (initialCategoryInfo) {
-        //     setCategoryInfo(initialCategoryInfo);
-        //     localStorage.setItem('categoryInfo', JSON.stringify(initialCategoryInfo));
-        // }
-    // }, [questionId, initialCategoryInfo]);
     }, [questionId]);
 
     useEffect(() => {
@@ -111,7 +94,7 @@ export const useQuestionPage = (
         handleDeleteQuestion,
         handleAnswerQuestion,
         handleUpdateIsCorrect,
-        handleNavigateToPreviousSubcategoryPage
+        // handleNavigateToPreviousSubcategoryPage
     };
 }
 

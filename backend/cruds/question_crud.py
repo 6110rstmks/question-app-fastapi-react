@@ -105,6 +105,9 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     if question is None:
         return None
     
+    print(question_is_correct_update.is_correct)
+    print('iiiioo')
+    
     stmt = (
         update(Question).
         where(Question.id == id).

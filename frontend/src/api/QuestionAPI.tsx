@@ -1,5 +1,11 @@
 import { Question, QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../types/Question';
 
+enum SolutionStatus {
+    NOT_SOLVED = 0,
+    TEMPORARY_SOLVED = 1,
+    PERMANENT_SOLVED = 2,
+}
+
 export const fetchQuestion = async (question_id: number): Promise<Question> => {
     const url = `http://localhost:8000/questions/${question_id}`;
     const response = await fetch(url, {
@@ -36,14 +42,21 @@ export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswer
 // Questionのis_correctを更新するAPI
 export const updateQuestionIsCorrect = async (question: Question): Promise<void> => {
     const url = `http://localhost:8000/questions/edit_flg/${question.id}`;
+
+    // is_correctを順番にサイクルさせるロジック
+    const updatedStatus = 
+        question.is_correct === SolutionStatus.NOT_SOLVED ? SolutionStatus.TEMPORARY_SOLVED :
+        question.is_correct === SolutionStatus.TEMPORARY_SOLVED ? SolutionStatus.PERMANENT_SOLVED :
+        SolutionStatus.NOT_SOLVED;
+
     const response = await fetch(url, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-                                is_correct: !question?.is_correct 
-                            }),
+            is_correct: updatedStatus
+        }),
     });
 }
 

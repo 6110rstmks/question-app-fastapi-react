@@ -26,6 +26,7 @@ const QuestionPage: React.FC = () => {
     const questionId = Number(questionIdStr)
 
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
+
     const [
         changeSubcategoryModalIsOpen,
         setChangeSubcategoryModalIsOpen
@@ -54,7 +55,7 @@ const QuestionPage: React.FC = () => {
         handleDeleteQuestion,
         handleAnswerQuestion,
         handleUpdateIsCorrect,
-        handleNavigateToPreviousSubcategoryPage
+        // handleNavigateToPreviousSubcategoryPage
     } = useQuestionPage(
         categoryId,
         subcategoryId,
@@ -97,14 +98,15 @@ const QuestionPage: React.FC = () => {
                     <div className={styles.questionIsFlg}>
                         <div
                             className={`${styles.questionIsFlgValue} ${
-                            question?.is_correct ? styles.correct : styles.incorrect
+                                question?.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correct : 
+                                question?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.temporary : 
+                                styles.incorrect
                             }`}
                             onClick={handleUpdateIsCorrect}
                         >
-                        {/* {question?.is_correct ? '正解' : '不正解'} */}
-                        {question?.is_correct === SolutionStatus.NOT_SOLVED ? '不正解' :
+                            {question?.is_correct === SolutionStatus.NOT_SOLVED ? '不正解' :
                             question?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? '一時的に正解' :
-                        '正解'}
+                            '正解'}
                         </div>
                     </div>
                 </div>

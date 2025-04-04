@@ -6,11 +6,15 @@ from datetime import datetime
 from enum import Enum
 
 
-class SolutionStatus(Enum):
-    NOT_SOLVED = "NOT_SOLVED"
-    TEMPORARY_SOLVED = "TEMPORARY_SOLVED"
-    PERMANENT_SOLVED = "PERMANENT_SOLVED" 
+# class SolutionStatus(Enum):
+#     NOT_SOLVED = "NOT_SOLVED"
+#     TEMPORARY_SOLVED = "TEMPORARY_SOLVED"
+#     PERMANENT_SOLVED = "PERMANENT_SOLVED" 
     
+class SolutionStatus(int, Enum):  # ← intに変更
+    NOT_SOLVED = 0
+    TEMPORARY_SOLVED = 1
+    PERMANENT_SOLVED = 2
 class QuestionCreate(BaseModel):
     problem: str = Field(min_length=2, max_length=999, examples=["列志向データベースの強みを説明せよ"])
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
