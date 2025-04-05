@@ -77,7 +77,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "IOPS数値が高いと何がいいのか？ ",
@@ -609,7 +609,7 @@
                             ],
                             "memo": "ALBのconnection drainingと間違えそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -1293,7 +1293,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "AWSにおいて、リージョンの中にAZ（アベイラビリティゾーン）があるか、AZ（アベイラビリティゾーン）の中にリージョンがあるかどっちか？",
@@ -1420,7 +1420,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -1591,7 +1591,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "複素数単元における条件文の変形→AとBが直角　",
@@ -1867,8 +1867,8 @@
                                 "2.n乗計算をする。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 }
@@ -1923,7 +1923,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "元素記号のSeは？",
@@ -2109,7 +2109,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "初期発生に関与する遺伝子のうち、卵形成の過程でそのmRNAに蓄積して受精直後から機能する遺伝子を何という？",
@@ -3757,7 +3757,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "C4植物における光合成は二種類の細胞で行われる。答えて",
@@ -3964,7 +3964,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "1996年以降の金融政策の手段になっている、債券の売買などを通して通貨量の調整を図る方法を何というか。",
@@ -3991,7 +3991,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "物価の下落と経済活動の縮小が相互に作用して、景気悪化が進むことを何というか。",
@@ -4526,7 +4526,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "細分化したデータを複数の磁気ディスクに巡回的に並列入出力することによって，転送速度の向上を図っている。これはraid?の説明？",
@@ -4591,6 +4591,24 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "raid2の目的",
+                            "answer": [
+                                "エラー検出と訂正"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "パリティとは？（IT用語）",
+                            "answer": [
+                                "送られてきたデータがおかしくないか確認する方法（データの整合性）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -5570,7 +5588,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "arsenal",
@@ -6218,7 +6236,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "I think I'll be working at the Chicago office for the time being.",
@@ -6565,11 +6583,11 @@
                         {
                             "problem": "CPUがキャッシュメモリから主記憶装置への書き込み方法は２つある。答えて",
                             "answer": [
-                                "ライトスルー方式",
-                                "ライトバック方式"
+                                "write through方式",
+                                "write back方式"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 2,
                             "last_answered_date": "2025-04-02"
                         },
                         {
@@ -6666,7 +6684,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "液晶ディスプレイなどの表示装置において，傾いた直線の境界を滑らかに表示する手法を何という？",
@@ -7903,15 +7921,6 @@
                             "last_answered_date": "2025-03-27"
                         },
                         {
-                            "problem": "亜寒帯のタイガに多く分布している土壌はなにか？",
-                            "answer": [
-                                "podzol"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-22"
-                        },
-                        {
                             "problem": "土壌のpodzolは農業に向かない。なぜか",
                             "answer": [
                                 "強酸性のため。"
@@ -8056,15 +8065,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
-                        },
-                        {
-                            "problem": "高山気候はケッペンの気候区分であるかいなか。",
-                            "answer": [
-                                "ではない。"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "リャマやアルパカなどから手に入れた毛皮で、防寒用の（A）と呼ばれる衣服などを作ります。",
@@ -8281,16 +8281,6 @@
                             "last_answered_date": "2025-04-03"
                         },
                         {
-                            "problem": "西岸海洋性気候は二つの要因に注意する？それはなにとなにか",
-                            "answer": [
-                                "暖流",
-                                "偏西風"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
-                        },
-                        {
                             "problem": "海洋性気候は隔海度が（A）で、気温の年較差が（B）。",
                             "answer": [
                                 "小さい",
@@ -8303,29 +8293,21 @@
                         {
                             "problem": "ロッキー山脈の場所は？またロッキー山脈は新期造山帯、古期造山帯？",
                             "answer": [
+                                "カナダ、アメリカにまたがっている",
                                 "新期造山帯"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "https://gakusyu.live/wp-content/uploads/2024/11/image-2048x1421.png アメリカのこの画像の春小麦,放牧の場所をイメージして。",
+                            "problem": "https://gakusyu.live/wp-content/uploads/2024/11/image-2048x1421.png アメリカのこの画像の春小麦,放牧、酪農の場所をイメージして。",
                             "answer": [
                                 ""
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-03"
-                        },
-                        {
-                            "problem": "カナダの人口最大都市は？",
-                            "answer": [
-                                "トロント"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "カナダにおいてフランス系住民が多い州はどこ？",
@@ -8346,33 +8328,6 @@
                             "last_answered_date": "2025-04-03"
                         },
                         {
-                            "problem": "ザグロス山脈はどこにある？",
-                            "answer": [
-                                "イラン"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
-                        },
-                        {
-                            "problem": "トルコの上には何がある？",
-                            "answer": [
-                                "黒海"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
-                        },
-                        {
-                            "problem": "トルクメニスタンに住む人は？?",
-                            "answer": [
-                                "トルクメン人"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-04-03"
-                        },
-                        {
                             "problem": "ナイル川の中流に建設された多目的ダムは何？",
                             "answer": [
                                 "アスワンハイダム"
@@ -8380,15 +8335,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
-                        },
-                        {
-                            "problem": "ボルドー（フランス）のイメージは？",
-                            "answer": [
-                                "ワイン"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "北アメリカでは西経（A）度を境に、西側が（B）、東側が（C）",
@@ -8399,17 +8345,7 @@
                             ],
                             "memo": "なのでステップ気候の境界線が西軽100",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
-                        },
-                        {
-                            "problem": "亜寒帯（D）の定義で最暖月平均気温 （A）℃以上なのはなぜか？",
-                            "answer": [
-                                "10",
-                                "最暖月平均気温 10℃以上 → 樹木がギリギリ生育できるから\n"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "沖積平野は3つに分類できる。答えて",
@@ -8420,7 +8356,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "扇状地の一番上から順番に 扇頂→扇央→扇端 という名前がついています。扇頂の方が粒が（大きく・小さく）、扇端にいくほど粒が（大きく・小さく）なっていきます。",
@@ -8429,8 +8365,8 @@
                                 "小さく"
                             ],
                             "memo": "川の流れが山から出て平地に出ると急にゆるやかになり、運んできた大きな石や砂利が最初に落ち（扇頂にたまる）、その後により細かい砂や泥が流れていって遠くの方（扇端）にたまるからです。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "アメリカのステップ気候は（A）、（B）に分布！",
@@ -8488,7 +8424,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "砂嘴が伸びて対岸にくっついた地形は？またそれによって囲まれた湖を何という",
@@ -8506,7 +8442,7 @@
                                 "陸繋島"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-04"
                         },
                         {
@@ -8517,6 +8453,33 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "マドリードはケッペンの気候区分に基づくと何気候に属するか？",
+                            "answer": [
+                                "地中海性気候"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "湿潤地域から乾燥地域に流れる河川を何という？",
+                            "answer": [
+                                "外来河川"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "アメリカの乾燥地帯で行われている農業の方法を何という？",
+                            "answer": [
+                                "センターピボット"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -8538,7 +8501,7 @@
                                 "ベトナム"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 2,
                             "last_answered_date": "2025-04-04"
                         },
                         {
@@ -8558,6 +8521,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-09"
+                        },
+                        {
+                            "problem": "ウズベキスタンの主な宗教は？",
+                            "answer": [
+                                "イスラム教"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -8603,13 +8575,13 @@
                         {
                             "problem": "イランはどこにある？ イランの右には何の国がある？左側には何の国がある？",
                             "answer": [
-                                "カザフスタン",
-                                "アフガニスタン",
+                                "右→カザフスタン",
+                                "右→アフガニスタン",
                                 "左→イラク"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -8618,12 +8590,12 @@
                             ],
                             "memo": "ウラル山脈のすぐ東側を流れ、北極海に注ぎ込む川です。\n\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ヴォルタ川はどこにありますか？",
                             "answer": [
-                                ""
+                                "アフリカ大陸の東側"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8646,7 +8618,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ベトナムの場所は？",
@@ -8655,7 +8627,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "カザフステップはどこ？",
@@ -8676,13 +8648,15 @@
                             "last_answered_date": "2025-04-03"
                         },
                         {
-                            "problem": "中央アジアのカザフスタンの場所は？",
+                            "problem": "中央アジアのカザフスタンの場所は？上と右と下には何がある？",
                             "answer": [
-                                ""
+                                "上→ロシア",
+                                "右→中国",
+                                "下→ウズベキスタン"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "アドリア海はどこにある？どの国に面している？",
@@ -8755,7 +8729,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ピレネー山脈どこにある？どことどこの国の堺にある？",
@@ -8776,12 +8750,40 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "トルコの下には何があるか",
                             "answer": [
                                 "地中海、しりあ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "ウズベキスタンの場所は？上と下には何がある？",
+                            "answer": [
+                                "上→カザフスタン",
+                                "下→トルクメニスタン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "トルコの上には何がある？",
+                            "answer": [
+                                "黒海"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "ザグロス山脈はどこにある？",
+                            "answer": [
+                                "イラン"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8953,8 +8955,8 @@
                                 "タイガ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "亜寒帯冬季少雨気候(Dw)の定義",
@@ -8975,6 +8977,44 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "西岸海洋性気候は二つの要因に注意する？それはなにとなにか",
+                            "answer": [
+                                "暖流",
+                                "偏西風"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "ツンドラ気候(ET)の定義",
+                            "answer": [
+                                "最暖月平均気温 0〜10℃"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "亜寒帯のタイガに多く分布している土壌はなにか？",
+                            "answer": [
+                                "podzol"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "亜寒帯（D）の定義で最暖月平均気温 （A）℃以上なのはなぜか？",
+                            "answer": [
+                                "10",
+                                "最暖月平均気温 10℃以上 → 樹木がギリギリ生育できるから\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
                         }
                     ]
                 },
@@ -8988,7 +9028,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "チェニジアの首都は？",
@@ -9005,7 +9045,7 @@
                                 "マドリードMadrid"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         },
                         {
@@ -9015,16 +9055,34 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "ツンドラ気候(ET)の定義",
+                            "problem": "カナダの人口最大都市は？",
                             "answer": [
-                                "最暖月平均気温 0〜10℃"
+                                "トロント"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "トルクメニスタンに住む人は？?",
+                            "answer": [
+                                "トルクメン人"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "ボルドー（フランス）のイメージは？",
+                            "answer": [
+                                "ワイン"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-03"
                         }
                     ]
                 }
@@ -9127,11 +9185,11 @@
                         {
                             "problem": "設備投資などの費用を一定期間に配分する会計処理のことを何という？",
                             "answer": [
-                                "減価償却"
+                                "減価償却Depreciation "
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 }
@@ -9153,8 +9211,8 @@
                                 "内閣"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "所得税は所得が多くなればなるほど税率が高くなる。この制度を何というか。",
