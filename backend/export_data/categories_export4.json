@@ -626,7 +626,7 @@
                                 "Aレコード"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         },
                         {
@@ -1348,7 +1348,7 @@
                             ],
                             "memo": "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "ELB（ALB）とAPI gatewayをHTTPS末端にするというのはELBとAPI gatewayをSSLのフローでいうところの（WEBサーバ・WEBクライアント）にするということ。これのどっちか",
@@ -1376,7 +1376,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "RDSのコスト状況を把握したいので、コストレポートを作成したい。どのサービスを使えば良い？",
@@ -1385,7 +1385,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -1527,7 +1527,7 @@
                             ],
                             "memo": "https://examist.jp/wp-content/uploads/mathematics/derivation-application/totusei-sessen-futousiki-20170318@2x.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "はさみうちのげんりをするときにたまーに一緒に使う定理",
@@ -1553,8 +1553,8 @@
                                 "In+2から部分積分法で進める"
                             ],
                             "memo": "https://examist.jp/mathematics/integration-expression/sekibunzenkasiki/",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -1579,12 +1579,14 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "2次方程式の複素数解の武器",
+                            "problem": "2次方程式の複素数解の武器4",
                             "answer": [
-                                "解の公式、判別式、Relationship between solution and coefficient、を出す",
+                                "解の公式",
+                                "判別式",
+                                "Relationship between solution and coefficient",
                                 "実数解と虚数解で場合分けする。判別式Dの値）　→実数の場合は一般的な二次方程式と変わらない。　虚数会の場合、　α+β = -b/a αβ = |α|^2 c/a"
                             ],
                             "memo": "",
@@ -2411,11 +2413,11 @@
                         {
                             "problem": "ペースメーカーは心臓の何処にある？",
                             "answer": [
-                                "右心房"
+                                "右心房  right atrium"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "体脂肪には二種類ある。答えて",
@@ -2534,8 +2536,8 @@
                                 "中脳midbrain"
                             ],
                             "memo": "https://www.youtube.com/watch?v=vvlCYyJmvdM\n参考\n16:30",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "平衡保持の中枢であるのは何脳？",
@@ -2686,8 +2688,8 @@
                                 "DNAの塩基配列に1つの塩基が変化した遺伝的変異\ngoは遺伝的変異"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -2977,8 +2979,8 @@
                                 "骨片"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ヒトの場合、相同染色体Homologous chromosomeは何組存在している？",
@@ -3397,7 +3399,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "落葉と落果を促進する植物ホルモンは？",
@@ -3522,7 +3524,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4mH6KHLcluseYgW3yQNQDQR5Xon5KB26vaA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "抗体のタンパク質を何という？",
@@ -3745,8 +3747,8 @@
                                 "リブロースビスリン酸カルボキシラーゼ・オキシゲナーゼ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ルビスコのワードを分解するとどのような意味をとれる？",
@@ -3839,8 +3841,8 @@
                                 "横軸→光の強さ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "生産構造図 は二つに分類される。それぞれ答えて",
@@ -3944,7 +3946,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "需要曲線・供給曲線の絵を描いて、用語などを書き込んでください。",
@@ -3971,16 +3973,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "景気が過熱している場合、一般的に買いオペか売りオペどちらを実施するのが効果的であるか。",
+                            "problem": "景気が過熱している場合、一般的に買いオペか売りオペどちらを実施するのが効果的であるか。またその理由を答えて",
                             "answer": [
                                 "売りオペ\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "会社設立時の出資者が有限責任社員と無限責任社員である会社は，（A）会社という",
@@ -3998,7 +4000,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "景気循環がもつ４つの局面を順番に答えなさい。順番が合っていればどこから始めても良い。",
@@ -4007,7 +4009,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "在庫投資が原因で起こる、周期約４年の景気循環を、発見者にちなんで何の波と呼ぶか。",
@@ -4045,7 +4047,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -4505,7 +4507,7 @@
                                 "パフォーマンスを向上させる（もっと具体的に言えた方がいいな。読み書き速度が上昇する。）。\n具体的にはデータを複数のディスクに分散して書き込む（ストライピング）ことで、読み書き速度が単一のディスクよりも大幅に向上します。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         },
                         {
@@ -4550,7 +4552,7 @@
                                 "分散"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 2,
                             "last_answered_date": "2025-04-02"
                         },
                         {
@@ -5125,8 +5127,8 @@
                                 "（原材料の調達は、生産効率を維持するために不可欠である。）\n\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "lava",
@@ -5144,7 +5146,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "valiant knight",
@@ -6323,8 +6325,8 @@
                                 "私は彼に会議に行くよう頼む\nこの場合、「he goes」とはせず、「he go」となります。"
                             ],
                             "memo": "\nask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "しかめつらをする",
@@ -7103,7 +7105,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-05"
                         }
                     ]
                 }
@@ -7252,7 +7254,7 @@
                                 "インバーターinverter"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         },
                         {
@@ -7498,9 +7500,9 @@
                             "last_answered_date": "2025-04-01"
                         },
                         {
-                            "problem": "タスクの切り替えをプログラム自身に任せる方式を何という？",
+                            "problem": "タスクの切り替えをプログラム自身に任せる方式を何という？またその覚え方",
                             "answer": [
-                                "ノンプリエンプティブ方式"
+                                "ノンプリエンプティブ方式（協調的マルチタスク）"
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": 0,
@@ -7856,15 +7858,6 @@
                             "last_answered_date": "2025-04-04"
                         },
                         {
-                            "problem": "フィリピンがキリスト教を信仰している理由は？",
-                            "answer": [
-                                "16世紀にスペインの植民地になったため。"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-09"
-                        },
-                        {
                             "problem": "メサと同じ原理でできた地形で、メサよりも小規模な地形を何という？",
                             "answer": [
                                 "ビュート"
@@ -7960,7 +7953,7 @@
                                 "100"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 2,
                             "last_answered_date": "2025-04-03"
                         },
                         {
@@ -8117,7 +8110,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -8125,7 +8118,7 @@
                                 "アムステルダム"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         },
                         {
@@ -8349,7 +8342,7 @@
                                 "環太平洋造山帯"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         },
                         {
@@ -8427,7 +8420,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "扇状地の一番上から順番に 扇頂→扇央→扇端 という名前がついています。扇頂の方が粒が（大きく・小さく）、扇端にいくほど粒が（大きく・小さく）なっていきます。",
@@ -8435,9 +8428,9 @@
                                 "大きく",
                                 "小さく"
                             ],
-                            "memo": "",
+                            "memo": "川の流れが山から出て平地に出ると急にゆるやかになり、運んできた大きな石や砂利が最初に落ち（扇頂にたまる）、その後により細かい砂や泥が流れていって遠くの方（扇端）にたまるからです。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "アメリカのステップ気候は（A）、（B）に分布！",
@@ -8517,15 +8510,6 @@
                             "last_answered_date": "2025-04-04"
                         },
                         {
-                            "problem": "AfとAwの中間気候は？また中間の理由は？",
-                            "answer": [
-                                "Am"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
-                        },
-                        {
                             "problem": "一日中太陽が出てこない現象を何という？",
                             "answer": [
                                 "極夜"
@@ -8563,8 +8547,17 @@
                                 "大乗仏教"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "フィリピンがキリスト教を信仰している理由は？",
+                            "answer": [
+                                "16世紀にスペインの植民地になったため。"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-09"
                         }
                     ]
                 },
@@ -8694,7 +8687,7 @@
                         {
                             "problem": "アドリア海はどこにある？どの国に面している？",
                             "answer": [
-                                "イタリア、クロアチア"
+                                "イタリア、クロアチア、モンテネグロ、アルバニア"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8728,7 +8721,7 @@
                             "last_answered_date": "2025-04-02"
                         },
                         {
-                            "problem": "エジプトの左としたはなんですか",
+                            "problem": "エジプトの左と下はなんですか",
                             "answer": [
                                 "左→リビア",
                                 "下→スーダン"
@@ -8786,15 +8779,6 @@
                             "last_answered_date": "2025-04-03"
                         },
                         {
-                            "problem": "西アジアにはどのような国があるか？",
-                            "answer": [
-                                "イラン、トルコ、サウジアラビア"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
-                        },
-                        {
                             "problem": "トルコの下には何があるか",
                             "answer": [
                                 "地中海、しりあ"
@@ -8809,6 +8793,34 @@
                     "name": "系統地理",
                     "questions": [
                         {
+                            "problem": "砂漠気候(BW)の条件：降水量：概ね年降水量（A）未満",
+                            "answer": [
+                                "250mm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "ステップ気候の土壌2",
+                            "answer": [
+                                "黒土",
+                                "栗色土"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "ケッペンの気候区分において乾燥帯はアルファベットの何で表す。",
+                            "answer": [
+                                "B"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
                             "problem": "地中海性気候はどのようなアルファベットで表す？",
                             "answer": [
                                 "Cs"
@@ -8818,13 +8830,40 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "西岸海洋性気候(Cfb)の定義に降水 1年中湿潤 (fの要素)があるがそれはどうしてか",
+                            "problem": "ケッペンの気候区分の小文字のアルファベットは（A）に関係する",
                             "answer": [
-                                "偏西風によって海の水蒸気が陸地まで運ばれてくるから。偏西風というのは恒常風なので季節を問わず吹いてくるためどの季節でも雨がしっかり降る"
+                                "降水量"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "西岸海洋性気候は記号でどのように表す？",
+                            "answer": [
+                                "Cfb"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "ステップ気候は、砂漠気候を（A）分布している",
+                            "answer": [
+                                "帯状に取り囲むように"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "マジで雨が降らない砂漠気候ですが、ごくまれに短期の豪雨がくることがあります。  そんな豪雨のときは、普段は涸れていて水が流れていない川に水が流れます。  この川のことをなんという？",
+                            "answer": [
+                                "ワジ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "南半球の西岸海洋性気候の国はなにがあるか",
@@ -8846,88 +8885,6 @@
                             "last_answered_date": "2025-04-03"
                         },
                         {
-                            "problem": "西岸海洋性気候は記号でどのように表す？",
-                            "answer": [
-                                "Cfb"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
-                        },
-                        {
-                            "problem": "ケッペンの気候区分、Df, Dwの違いは",
-                            "answer": [
-                                "Df：年間を通して湿潤\nDw：冬に雨が少ない"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
-                        },
-                        {
-                            "problem": "ケッペンの気候区分の小文字のアルファベットは（A）に関係する",
-                            "answer": [
-                                "降水量"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-04-04"
-                        },
-                        {
-                            "problem": "ケッペンの気候区分において乾燥帯はアルファベットの何で表す。",
-                            "answer": [
-                                "B"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
-                        },
-                        {
-                            "problem": "ステップ気候はアルファベットでどのようにあらわす？",
-                            "answer": [
-                                "BS\nsはstepのs"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
-                        },
-                        {
-                            "problem": "ステップ気候の土壌2",
-                            "answer": [
-                                "黒土",
-                                "栗色土"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
-                        },
-                        {
-                            "problem": "ステップ気候は、砂漠気候を（A）分布している",
-                            "answer": [
-                                "帯状に取り囲むように"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
-                        },
-                        {
-                            "problem": "砂漠気候(BW)の条件：降水量：概ね年降水量（A）未満",
-                            "answer": [
-                                "250mm"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
-                        },
-                        {
-                            "problem": "マジで雨が降らない砂漠気候ですが、ごくまれに短期の豪雨がくることがあります。  そんな豪雨のときは、普段は涸れていて水が流れていない川に水が流れます。  この川のことをなんという？",
-                            "answer": [
-                                "ワジ"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
-                        },
-                        {
                             "problem": "温暖湿潤気候はアルファベットで表すと",
                             "answer": [
                                 "Cfa"
@@ -8943,7 +8900,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "氷雪気候をアルファベットで表すと",
@@ -8951,6 +8908,33 @@
                                 "EF"
                             ],
                             "memo": " F は「Frost(極寒)」の F です。",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "ステップ気候はアルファベットでどのようにあらわす？",
+                            "answer": [
+                                "BS\nsはstepのs"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-05"
+                        },
+                        {
+                            "problem": "西岸海洋性気候(Cfb)の定義に降水 1年中湿潤 (fの要素)があるがそれはどうしてか",
+                            "answer": [
+                                "偏西風によって海の水蒸気が陸地まで運ばれてくるから。偏西風というのは恒常風なので季節を問わず吹いてくるためどの季節でも雨がしっかり降る"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "ケッペンの気候区分、Df, Dwの違いは",
+                            "answer": [
+                                "Df：年間を通して湿潤\nDw：冬に雨が少ない"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-03"
                         },
@@ -8982,6 +8966,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "AfとAwの中間気候は？また中間の理由は？",
+                            "answer": [
+                                "Am"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
                         }
                     ]
                 },
@@ -8989,9 +8982,18 @@
                     "name": "地誌",
                     "questions": [
                         {
-                            "problem": "ローヌ川河口近くにあるフランス有数の湾岸都市で、造船、鉄鋼、食品機械工業が盛んな都市はどこか",
+                            "problem": "トルコの首都",
                             "answer": [
-                                "フォス"
+                                "アンカラ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-03-28"
+                        },
+                        {
+                            "problem": "チェニジアの首都は？",
+                            "answer": [
+                                "チュニス"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9007,22 +9009,13 @@
                             "last_answered_date": "2025-04-03"
                         },
                         {
-                            "problem": "チェニジアの首都は？",
+                            "problem": "ローヌ川河口近くにあるフランス有数の湾岸都市で、造船、鉄鋼、食品機械工業が盛んな都市はどこか",
                             "answer": [
-                                "チュニス"
+                                "フォス"
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
-                        },
-                        {
-                            "problem": "トルコの首都",
-                            "answer": [
-                                "アンカラ"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
                         },
                         {
                             "problem": "ツンドラ気候(ET)の定義",
@@ -9044,16 +9037,16 @@
                     "name": "m",
                     "questions": [
                         {
-                            "problem": "主張の型4",
+                            "problem": "主張の型4    ",
                             "answer": [
                                 "感情型",
                                 "共有型",
                                 "警報型",
                                 "要望型"
                             ],
-                            "memo": "",
+                            "memo": "覚え方：　かきけよ",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "テニスの試合方式には二種類ある。なにとなにか",
