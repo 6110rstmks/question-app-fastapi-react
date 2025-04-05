@@ -1826,8 +1826,8 @@
                                 "余事象　とって　ド・モルガン"
                             ],
                             "memo": "例）\nサイコロを4回投げて、出る目の最小値が1,最大値が6の確率は？\n\n数学モンスター　北大",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "じゃんけんの確率問題　2パターン",
@@ -3949,7 +3949,7 @@
                         {
                             "problem": "需要曲線・供給曲線の絵を描いて、用語などを書き込んでください。",
                             "answer": [
-                                ""
+                                "https://chu.benesse.co.jp/qat/img/3519s_s.jpg"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -4024,7 +4024,7 @@
                                 "所有と経営の分離\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-04"
                         },
                         {
@@ -4036,6 +4036,16 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "需要曲線・供給曲線の縦軸と横軸は？",
+                            "answer": [
+                                "縦軸→価格",
+                                "横軸→数量"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-05"
                         }
                     ]
                 },
