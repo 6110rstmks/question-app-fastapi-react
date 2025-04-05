@@ -25,7 +25,7 @@
                             "last_answered_date": "2025-03-11"
                         },
                         {
-                            "problem": "1オクターブの音程を12等分した音律を何というか",
+                            "problem": "1オクターブoctaveの音程を12等分した音律を何というか",
                             "answer": [
                                 "12平均律"
                             ],
@@ -49,7 +49,7 @@
                                 "ECS on EC2"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 2,
                             "last_answered_date": "2025-03-02"
                         }
                     ]
@@ -284,7 +284,7 @@
                                 "NATゲートウェイ→AZ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         }
                     ]
@@ -590,8 +590,8 @@
                                 "CNAMEレコード名でアクセスしたらAレコード名を返す。\nでも通信するためにはIPアドレスが欲しいので、Aレコードが返されたらそのAレコード名を使用して名前解決をしてIPアドレスを受け取る必要がある。\n\n対して、Aliasレコードでは、クライアントとRoute53の通信は１回で済むのでCNAMEを使うよりも通信の速度が上がる"
                             ],
                             "memo": "https://www.youtube.com/watch?v=Ly_7Z5BPcOc\n\n上記の動画の3分から視聴してください。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "AWSのRoute53で使用されるレコードを4こ列挙してください。",
@@ -930,13 +930,14 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "elasticacheの種類2つ",
+                            "problem": "aws elasticacheの種類2つ",
                             "answer": [
-                                "memcached\nredis"
+                                "memcached\n",
+                                "redis"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "memcachedとredisのうちマルチスレッドはどちらか？",
@@ -1578,7 +1579,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "2次方程式の複素数解の武器",
@@ -1596,17 +1597,17 @@
                                 "<=> β = kiα"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-04"
                         },
                         {
                             "problem": "|w - 3| = 2r |w - 1| において点Wが描く軌跡は",
                             "answer": [
                                 ""
                             ],
-                            "memo": "",
+                            "memo": "2020大阪？",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-05"
                         }
                     ]
                 },
@@ -1744,7 +1745,7 @@
                             ],
                             "memo": "https://hiraocafe.com/note/shajikukasagata.html\nより早く解けるのだそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-04-04"
                         }
                     ]
                 },
@@ -1824,7 +1825,7 @@
                             "answer": [
                                 "余事象　とって　ド・モルガン"
                             ],
-                            "memo": "",
+                            "memo": "例）\nサイコロを4回投げて、出る目の最小値が1,最大値が6の確率は？\n\n数学モンスター　北大",
                             "is_correct": 0,
                             "last_answered_date": "2025-03-27"
                         },
@@ -1976,7 +1977,7 @@
                                 "形態形成"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         },
                         {
@@ -2183,8 +2184,8 @@
                                 "subphylum"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-09"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
                         },
                         {
                             "problem": "二胚葉動物はなにか？",
@@ -2966,7 +2967,7 @@
                                 "プリズム幼生\n"
                             ],
                             "memo": "英語で検索をかけてもヒットしないなあ",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-02"
                         },
                         {
@@ -3042,8 +3043,8 @@
                                 "岡崎フラグメント"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-04"
                         },
                         {
                             "problem": "体細胞分裂の目的は？",
@@ -3100,7 +3101,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-04"
                         },
                         {
                             "problem": "内外2枚の生体膜で囲まれた細胞小器官の例を3つあげよ",
@@ -3589,7 +3590,7 @@
                                 "グリコーゲン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-02"
                         }
                     ]
@@ -3726,8 +3727,8 @@
                                 "夜"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "CAM植物は空気中のCO2を取り込んでどのような物質で蓄積するか答えよ",
@@ -3736,7 +3737,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "Rubiscoの正式名称は？",
@@ -3946,7 +3947,7 @@
                             "last_answered_date": "2025-03-28"
                         },
                         {
-                            "problem": "需要曲線の絵を描いて、用語などを書き込んでください。",
+                            "problem": "需要曲線・供給曲線の絵を描いて、用語などを書き込んでください。",
                             "answer": [
                                 ""
                             ],
@@ -4021,6 +4022,16 @@
                             "problem": "株式会社の出資者は、資本家であるが経営には参加していないことも多い。この状況を何というか。（高校政経）",
                             "answer": [
                                 "所有と経営の分離\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "「買いオペ」とは、日銀が市場から債券（国債）や手形を買うことです。これにより、市場の通貨流通量を（増やし・減らし）、物価の下落を抑えて金利を引き下げる効果があるため（インフレ・デフレ）傾向の時に行われます。",
+                            "answer": [
+                                "増やし",
+                                "デフレ"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -5288,13 +5299,13 @@
                             "last_answered_date": "2025-03-13"
                         },
                         {
-                            "problem": "30分以内に確認して",
+                            "problem": "30分以内に確認して　英語で",
                             "answer": [
                                 "check within 30m"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "there you have it.",
@@ -6413,8 +6424,8 @@
                                 "XSS"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "3ウェイハンドシェイクと紐づくプロトコルは？",
@@ -6933,7 +6944,7 @@
                                 "周りの環境からの微弱なエネルギーを収穫(harvest)して電力に変換する技術の総称です。エネルギーハーベスティングを利用した技術としては以下の事例が挙げられます。\nヒトやモノが移動する際の圧力を利用した電力床"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 2,
                             "last_answered_date": "2025-04-04"
                         }
                     ]
@@ -7037,7 +7048,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-05"
                         }
                     ]
                 },
@@ -7278,7 +7289,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "物体を回転させる力を何という？",
@@ -7521,7 +7532,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "入出力動作(I/O)の完了を待っている状態。は「実行状態」「実行可能状態」「待ち状態」のうちどれか",
@@ -7812,7 +7823,7 @@
                                 "隔海度",
                                 "大陸のどこか"
                             ],
-                            "memo": "",
+                            "memo": "あれとごっちゃにならないように！",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-03"
                         },
@@ -8462,7 +8473,7 @@
                                 "小さい（九州と同じくらい）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-04"
                         },
                         {
@@ -8618,6 +8629,7 @@
                         {
                             "problem": "アンデス山脈はどこか？また、アンデス山脈は新期造山帯？古期造山帯？",
                             "answer": [
+                                "南アフリカ",
                                 "新規造山帯"
                             ],
                             "memo": "",
@@ -8713,7 +8725,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-05"
                         },
                         {
                             "problem": "コンゴ川どこにある？",
@@ -9040,8 +9052,8 @@
                                 "ラウンドロビン方式"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-04"
                         },
                         {
                             "problem": "コードの値からデータの対象物が連想できるものはどれか。",
