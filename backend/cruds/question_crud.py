@@ -304,7 +304,7 @@ def increment_answer_count(
     query1 = select(Question).where(Question.id == question_id)
     question = db.execute(query1).scalars().first()
     # last_answered_dateが現在日付の場合は、
-    # answer_countに現在日付の翌日をセットする。
+    # last_answered_dateに現在日付の翌日をセットする。
     if question.last_answered_date == date.today():
         stmt = (
             update(Question).

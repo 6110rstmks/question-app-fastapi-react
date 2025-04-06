@@ -4,14 +4,13 @@ from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud as category_cruds
 from schemas.category import CategoryResponse, CategoryCreate, CategoryResponseWithQuestionCount
-# from schemas import auth
 from database import get_db
 from fastapi import Query
 from config import PAGE_SIZE
 from fastapi.responses import FileResponse
 import os
 from git import Repo
-from src import data_io_json
+from src import data_io_json, data_io_csv
 import zipfile
 
 
@@ -138,7 +137,7 @@ async def get_exported_zip(db: DbDependency):
     os.makedirs(EXPORT_DIR, exist_ok=True)
 
     # CSVファイル出力（categories.csv と subcategories.csv）
-    data_io_json.export_data_to_csv(db, EXPORT_DIR)
+    data_io_csv.export_data_to_csv(db, EXPORT_DIR)
 
     # ZIPファイル作成
     with zipfile.ZipFile(ZIP_FILE_PATH, 'w', zipfile.ZIP_DEFLATED) as zipf:

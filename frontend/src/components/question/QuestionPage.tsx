@@ -13,6 +13,33 @@ enum SolutionStatus {
     PERMANENT_SOLVED = 2,
 }
 
+const renderMemoWithLinks = (memo: string) => {
+    console.log(memo)
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+  
+    // memo内の各行に対してリンクを処理
+    return memo.split('\n').map((line, index) => {
+      // URLを検出して<a>タグに変換
+      const parts = line.split(urlRegex);
+      return (
+        <React.Fragment key={index}>
+          {parts.map((part, i) => {
+            // URLなら<a>タグをレンダリング、それ以外はそのまま表示
+            if (urlRegex.test(part)) {
+              return (
+                <a key={i} href={part} target="_blank" rel="noopener noreferrer">
+                  {part}
+                </a>
+              );
+            }
+            return part;
+          })}
+          <br />
+        </React.Fragment>
+      );
+    });
+  };
+
 interface QuestionPageNavigationParams {
     categoryId: number,
     subcategoryId: number,
@@ -27,14 +54,20 @@ const QuestionPage: React.FC = () => {
 
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
 
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+
+
     const [
         changeSubcategoryModalIsOpen,
         setChangeSubcategoryModalIsOpen
     ] = useState<boolean>(false);
 
     // location.stateがnullの場合にlocalStorageから取得
-    const state: QuestionPageNavigationParams = location.state || JSON.parse(localStorage.getItem('categorySubcategoryInfo') || '{}');
-
+    const storedCategoryInfo = localStorage.getItem('categorySubcategoryInfo');
+    const parsedCategoryInfo = storedCategoryInfo ? JSON.parse(storedCategoryInfo) : {};
+    const state: QuestionPageNavigationParams = location.state || parsedCategoryInfo;
+    
     const isLatex = (text: string) => text.includes('\\')
 
 
@@ -55,7 +88,6 @@ const QuestionPage: React.FC = () => {
         handleDeleteQuestion,
         handleAnswerQuestion,
         handleUpdateIsCorrect,
-        // handleNavigateToPreviousSubcategoryPage
     } = useQuestionPage(
         categoryId,
         subcategoryId,
@@ -144,7 +176,6 @@ const QuestionPage: React.FC = () => {
                 </div>
             </div>
             </div>
-            {/* <button onClick={handleNavigateToPreviousSubcategoryPage}>Back to サブカテゴリ内のQuestion一覧</button> */}
             <div className={styles.questionActions}>
                 <button onClick={handleDeleteQuestion} className={styles.delete}>
                     DELETE
@@ -173,7 +204,7 @@ const QuestionPage: React.FC = () => {
                     setSubcategoriesRelatedToQuestion={setSubcategoriesWithCategoryName}
                 />
             </Modal>
-            <div>
+            {/* <div>
                 {question?.memo && (
                     <div className={styles.memo}>
                         <h3>メモ</h3>
@@ -185,6 +216,17 @@ const QuestionPage: React.FC = () => {
                             </React.Fragment>
                         ))}
                         </p>
+                    </div>
+                )}
+            </div> */}
+
+            <div>
+                {question?.memo && (
+                    <div className={styles.memo}>
+                    <h3>メモ</h3>
+                    <p>
+                        {renderMemoWithLinks(question.memo)}
+                    </p>
                     </div>
                 )}
             </div>

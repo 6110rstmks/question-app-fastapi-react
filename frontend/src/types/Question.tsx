@@ -10,12 +10,9 @@ export interface Question {
     problem: string;
     answer: string[];
     memo: string;
-    // is_correct: boolean;
     is_correct: SolutionStatus;
     answer_count: number;
 }
-
-
 
 export interface QuestionWithCategoryIdAndCategoryNameAndSubcategoryId extends Question {
     categoryId: number;
