@@ -1252,6 +1252,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "DynamoDBテーブルに対する変更（項目の追加、更新、削除）をリアルタイムでキャプチャしてストリームに記録する機能を何という？",
+                            "answer": [
+                                "dynamodbストリーム"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
                         }
                     ]
                 },
@@ -1787,6 +1796,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "3分の公式を使う場面は？",
+                            "answer": [
+                                "二次関数とそれに接する接線、それと直線に囲まれた面積を求めるとき。"
+                            ],
+                            "memo": "https://manabitimes.jp/math/796",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "1/12公式(二次関数版)の公式を答えよ",
+                            "answer": [
+                                "\\frac{|\\mathit{a}|}{12} |\\beta - \\alpha|^3\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -1995,7 +2022,7 @@
                             ],
                             "memo": "https://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -2392,7 +2419,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "原生動物の例3",
@@ -4188,7 +4215,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "景気を測る指数は何？",
@@ -7009,8 +7036,8 @@
                                 "コンピュータはより多くの命令を短時間で処理できることを意味します。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "クロック周波数の単位はなんですか？",
@@ -8871,7 +8898,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "エジプトの左と下はなんですか",
@@ -9513,7 +9540,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ストレージアカウントとストレージ\"サービスのわかりやすい例え",
