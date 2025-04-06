@@ -10,8 +10,9 @@ import Modal from 'react-modal'
 import QuestionEditModal from "../../question/QuestionEditModal";
 
 interface Props {
+    reviewFlg: boolean
     problem: Question
-    currentReviewProblemIndex2: number
+    currentProblemIndex: number
     problemLength: number
     showAnswer: boolean
     onShowAnswer: () => void
@@ -24,21 +25,21 @@ enum SolutionStatus {
     TEMPORARY_SOLVED = 1,
     PERMANENT_SOLVED = 2,
 }
-export const ProblemReview: React.FC<Props> = ({ 
+
+export const ProblemNormal: React.FC<Props> = ({
+    reviewFlg,
     problem,
-    currentReviewProblemIndex2,
+    currentProblemIndex,
     problemLength,
     showAnswer,
     onShowAnswer,
     onSolved,
     onUnsolved
 }) => {
-
     const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
-    const [localProblem, setLocalProblem] = useState<Question>(problem); // ローカル状態を追加
+    const [localProblem, setLocalProblem] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false)
     const isLatex = (text: string) => text.includes('\\')
-
 
     const handleUpdateIsCorrect = async () => {
         await updateQuestionIsCorrect(localProblem!); // API コール
@@ -59,7 +60,7 @@ export const ProblemReview: React.FC<Props> = ({
     return (
         <div className={styles.problemContainer}>
             <div className={styles.header}>
-                <div className={styles.pagination}>{currentReviewProblemIndex2 + 1} / {problemLength}</div>
+                <div className={styles.pagination}>{currentProblemIndex + 1} / {problemLength}</div>
                 <div className={styles.breadcrumbs}>
                     {subcategoriesWithCategoryName.map((subcategoryWithCategoryName, index) => (         
                         <div key={index} className={styles.breadcrumbPath}>
@@ -85,8 +86,9 @@ export const ProblemReview: React.FC<Props> = ({
                 </div>
             </div>
 
-
-            <h1 className={styles.title}>再出題: </h1>
+            {reviewFlg && (
+                <h1 className={styles.title}>再出題: </h1>
+            )}
             <div className={styles.questionCard}>
                 <div className={styles.questionHeader}>
                     <div className={styles.questionLabel}>問題：</div>
@@ -119,7 +121,7 @@ export const ProblemReview: React.FC<Props> = ({
                         setQuestion={setLocalProblem}
                     />
                 </Modal>
-
+                
                 <div className={styles.questionContent}>
                     {localProblem.problem}
                 </div>
@@ -134,33 +136,41 @@ export const ProblemReview: React.FC<Props> = ({
                 ) : (
                     <div className={styles.answerSection}>
                         <h3 className={styles.answerHeading}>答え</h3>
-                        <div className={styles.answerContent}>
+                        {/* <div className={styles.answerContent}> */}
+                        <div className={styles.answerTextBox}>
                             {localProblem.answer.length > 0 ? (
-                                    localProblem?.answer.map((answer, index) => (
-                                        <div key={index}>
-                                            {answer.split('\n').map((line, i) => (
-                                                <React.Fragment key={i}>
-                                                {isLatex(line) ? (
-                                                    <BlockMath math={line} />
-                                                ) : (
-                                                    <>
-                                                    {line}
-                                                    <br />
-                                                    </>
-                                                )}
-                                                </React.Fragment>
-                                            ))}
-                                        </div>
-                                    ))
-                                ) : (
-                                    <p className={styles.emptyAnswer}>解答はまだ作成されていません</p>
+                                localProblem?.answer.map((answer, index) => (
+                                    <div key={index} className={styles.answerItem}>
+                                        {answer.split('\n').map((line, i) => (
+                                            <React.Fragment key={i}>
+                                            {isLatex(line) ? (
+                                                <BlockMath math={line} />
+                                            ) : (
+                                                <>
+                                                {line}
+                                                <br />
+                                                </>
+                                            )}
+                                            </React.Fragment>
+                                        ))}
+                                    </div>
+                                ))
+                            ) : (
+                                <p className={styles.emptyAnswer}>解答はまだ作成されていません</p>
                             )}
                         </div>
                         
                         {localProblem.memo && (
                             <div className={styles.memoSection}>
                                 <h3 className={styles.memoHeading}>メモ</h3>
-                                <div className={styles.memoContent}>{localProblem.memo}</div>
+                                <div className={styles.memoContent}>
+                                    {localProblem.memo.split('\n').map((line, index) => (
+                                        <React.Fragment key={index}>
+                                        {line}
+                                        <br />
+                                        </React.Fragment>
+                                    ))}
+                                </div>
                             </div>
                         )}
                     </div>

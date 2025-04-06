@@ -7,6 +7,8 @@ export const useProblemPage = (problemData: Question[]) => {
     const [reviewFlg, setReviewFlg] = useState(false);
     const [showAnswer, setShowAnswer] = useState(false);
     const [unsolvedProblems, setUnsolvedProblems] = useState<Question[]>([]);
+
+    // currentReviewProblemIndexとcurrentReviewProblemIndex2の違いは？
     const [currentReviewProblemIndex, setCurrentReviewProblemIndex] = useState(0);
     const [currentReviewProblemIndex2, setCurrentReviewProblemIndex2] = useState(0);
     const [totalReviewProblemIndex, setTotalReviewProblemIndex] = useState(0);
@@ -44,7 +46,7 @@ export const useProblemPage = (problemData: Question[]) => {
         setShowAnswer(false);
     };
 
-    // 「解けなかった問題を再度復習する」ボタンを押すと問題のレビューモードに移行する。
+    // ProblemCompleteにおいて「解けなかった問題を再度復習する」ボタンを押すと問題のレビューモードに移行する。
     const handleNavigateToProblemReviewPage = () => {
         setReviewFlg(true);
         setCurrentProblemIndex(0);
