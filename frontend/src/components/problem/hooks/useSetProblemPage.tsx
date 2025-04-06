@@ -23,7 +23,6 @@ const useSetProblemPage = () => {
     const handleCheckboxChange = async (categoryId: number) => {
 
         setShowAll(true)
-
         // カテゴリに紐づくサブカテゴリを取得する
         const subcategories = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId);
         setSubcategories(subcategories);
