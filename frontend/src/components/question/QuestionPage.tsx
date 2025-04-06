@@ -82,7 +82,7 @@ const QuestionPage: React.FC = () => {
                 >{subcategoryWithCategoryName.name}</Link>
             </div>
         ))}
-        <div className={styles.question_box}>
+        <div className={styles.questionBox}>
             <h3>id:{question?.id}</h3>
                 <div className={styles.questionHeader}>
                     <div className={styles.question_problem}>
@@ -121,28 +121,26 @@ const QuestionPage: React.FC = () => {
                     {showAnswer ? '答えを隠す' : '答えを表示する'}
                 </div>
                 <div
-                    className={`${styles.answerText} ${
+                    className={`${styles.answerTextBox} ${
                         showAnswer ? styles.show : ''
                     }`}
                 >
-                {
-                question?.answer.map((answer, index) => (
-                    <div key={index}>
-                        {answer.split('\n').map((line, i) => (
-                            <React.Fragment key={i}>
-                            {isLatex(line) ? (
-                                <BlockMath math={line} />
-                            ) : (
-                                <>
-                                {line}
-                                <br />
-                                </>
-                            )}
-                            </React.Fragment>
-                        ))}
-                    </div>
-                ))
-                }
+                    {question?.answer.map((answer, index) => (
+                        <div key={index} className={styles.answerText}>
+                            {answer.split('\n').map((line, i) => (
+                                <React.Fragment key={i}>
+                                {isLatex(line) ? (
+                                    <BlockMath math={line} />
+                                ) : (
+                                    <>
+                                    {line}
+                                    <br />
+                                    </>
+                                )}
+                                </React.Fragment>
+                            ))}
+                        </div>
+                    ))}
                 </div>
             </div>
             </div>

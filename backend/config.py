@@ -1,7 +1,8 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from functools import lru_cache
 
-PAGE_SIZE = 6
+# 画面に表示するカテゴリの数
+PAGE_SIZE = 3
 
 class Settings(BaseSettings):
     secret_key: str

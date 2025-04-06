@@ -30,6 +30,7 @@ export const useCategories = (
         }
         const loadPageCount = async () => {
             const count = await fetchPageCount();
+            console.log(count)
             setPageCount(count);
             
             const questionCnt = await fetchQuestionCount()

@@ -13,6 +13,12 @@ const SubcategoryPage: React.FC = () => {
     const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>();
     const subcategoryId = Number(subcategoryIdStr)
 
+    enum SolutionStatus {
+        NOT_SOLVED = 0,
+        TEMPORARY_SOLVED = 1,
+        PERMANENT_SOLVED = 2,
+    }
+
     const { subcategoryName, 
         setSubcategoryName, 
         questions, setQuestions, 
@@ -89,15 +95,11 @@ const SubcategoryPage: React.FC = () => {
                 {questions.map((question) => (
                     <div 
                         className={`
-                            ${styles.questionBox} 
-                            ${question.is_correct ? styles.correct : styles.incorrect}
-                        `} 
-                        // className={`
-                        //     ${styles.questionBox} 
-                        //     ${question.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correct : 
-                        //       question.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.temporary : 
-                        //       styles.incorrect}
-                        // `}
+                            ${styles.questionBox} ${
+                                question?.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correct : 
+                                question?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.temporary : 
+                                styles.incorrect
+                            }`} 
                         key={question.id}>
                         <h3 className={styles.problemText} 
                             onClick={() => handleNavigateToQuestionPage(
@@ -109,7 +111,7 @@ const SubcategoryPage: React.FC = () => {
                                             subcategoryName)}>
                             {question.problem}
                         </h3>
-                        {/* isOn が true の場合のみ answer を表示 */}
+                        
                         {showAnswer && question.answer.map((answer, index) => (
                             <div key={index}>
                                 {answer.split('\n').map((line, i) => (

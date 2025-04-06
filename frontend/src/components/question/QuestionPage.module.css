@@ -1,117 +1,129 @@
-/* QuestionPage.module.css */
+.questionBox {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-.question_box {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .questionHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-  
-  .questionProblem {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .questionIsFlg {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .questionIsFlgValue {
-    background-color: #ccc;
-    padding: 4px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 8px;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .questionIsFlgValue.correct {
-    background-color: #4caf50;
-  }
-  
-  .questionIsFlgValue.incorrect {
-    background-color: #f44336;
-  }
-  
-  .questionAnswer {
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
-  }
-  
-  .answer {
-    color: #666;
-    margin-bottom: 4px;
-  }
-  
-  .questionActions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 16px;
-  }
-  
-  .questionActions button {
-    background-color: #2196f3;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-left: 8px;
-  }
-  
-  .questionActions button:hover {
-    background-color: #1976d2;
-  }
-  
-  .questionActions button.delete {
-    background-color: #f44336;
-  }
-  
-  .questionActions button.delete:hover {
-    background-color: #c62828;
-  }
+.questionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
 
-  .answerContainer {
-    position: relative;
-  }
-  
-  .answerToggle {
-    background-color: #ccc;
-    padding: 4px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #333;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  
-  .answerToggle.show {
-    background-color: #2196f3;
-    color: #fff;
-  }
-  
-  .answerText {
-    display: none;
-    color: #666;
-    margin-bottom: 4px;
-  }
-  
-  .answerText.show {
-    display: block;
-  }
+.questionProblem {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.questionIsFlg {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.questionIsFlgValue {
+  background-color: #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.correct {
+  background-color: var(--color-correct);
+}
+
+.incorrect {
+  background-color: var(--color-incorrect);
+}
+
+.temporary {
+  background-color: var(--color-temporary);
+}
+
+
+
+.questionAnswer {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.answer {
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.questionActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.questionActions button {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.questionActions button:hover {
+  background-color: #1976d2;
+}
+
+.questionActions button.delete {
+  background-color: #f44336;
+}
+
+.questionActions button.delete:hover {
+  background-color: #c62828;
+}
+
+.answerContainer {
+  position: relative;
+}
+
+.answerToggle {
+  background-color: #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.answerToggle.show {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.answerTextBox {
+  display: none;
+  color: #666;
+  margin-bottom: 4px;
+
+}
+
+
+.answerTextBox.show {
+  display: block;
+}
+
+.answerText {
+  word-break: break-all;
+  white-space: pre-wrap;
+}

@@ -99,23 +99,18 @@
   transform: translateY(1px);
 }
 
-.correctButton {
-  background-color: #48c774;
-  color: white;
+.correct {
+  background-color: var(--color-correct);
 }
 
-.correctButton:hover {
-  background-color: #3cbb67;
+.incorrect {
+  background-color: var(--color-incorrect);
 }
 
-.incorrectButton {
-  background-color: #f14668;
-  color: white;
+.temporary {
+  background-color: var(--color-temporary);
 }
 
-.incorrectButton:hover {
-  background-color: #e73c5f;
-}
 
 .questionContent {
   font-size: 16px;

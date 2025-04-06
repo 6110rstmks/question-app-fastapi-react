@@ -1,0 +1,5 @@
+:root {
+    --color-correct: rgb(175, 234, 175);
+    --color-incorrect: #f14668;
+    --color-temporary: #5e5e05;
+  }

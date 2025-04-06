@@ -102,13 +102,15 @@ export const ProblemNormal: React.FC<Props> = ({
                             >Edit</button>
                         <button
                             className={`${styles.statusButton} ${
-                                localProblem?.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correctButton : 
-                                localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.incorrectButton : 
+                                localProblem?.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correct : 
+                                localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.temporary : 
                                 styles.incorrect
                             }`}
                             onClick={handleUpdateIsCorrect}
                         >
-                            {localProblem.is_correct ? '正解' : '不正解'}
+                            {localProblem?.is_correct === SolutionStatus.NOT_SOLVED ? '不正解' :
+                            localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? '一時的に正解' :
+                            '正解'}
                         </button>
                     </div>
                 </div>
@@ -164,7 +166,6 @@ export const ProblemNormal: React.FC<Props> = ({
                             <div className={styles.memoSection}>
                                 <h3 className={styles.memoHeading}>メモ</h3>
                                 <div className={styles.memoContent}>
-                                    {/* {localProblem.memo} */}
                                     {localProblem.memo.split('\n').map((line, index) => (
                                         <React.Fragment key={index}>
                                         {line}
@@ -180,7 +181,10 @@ export const ProblemNormal: React.FC<Props> = ({
 
             <div className={styles.actionButtons}>
                 <button 
-                    className={`${styles.actionButton} ${styles.solvedButton}`} 
+                    className={`
+                        ${styles.actionButton} 
+                        ${styles.solvedButton}
+                    `} 
                     onClick={onSolved}
                 >
                     解けた

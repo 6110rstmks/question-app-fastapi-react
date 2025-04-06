@@ -8,7 +8,7 @@ import Search from "./Search"
 
 export const Home: React.FC = () => {
     const [page, setPage] = useState<number>(1);
-    const [limit] = useState<number>(6);
+    const [limit] = useState<number>(3);
     const [searchCategoryWord, setSearchCategoryWord] = useState<string>("");
     const [searchSubcategoryWord, setSearchSubcategoryWord] = useState<string>("");
     const [searchQuestionWord, setSearchQuestionWord] = useState<string>("");
@@ -84,11 +84,11 @@ export const Home: React.FC = () => {
                     onPageChange={(newPage) => setPage(newPage)}
             />
             <CategoryList categories={categories} searchSubcategoryWord={searchSubcategoryWord} searchQuestionWord={searchQuestionWord} searchAnswerWord={searchAnswerWord}/>
-            <Pagination
+            {/* <Pagination
                 currentPage={page}
                 totalPages={pageCount}
                 onPageChange={(newPage) => setPage(newPage)}
-            />
+            /> */}
         </>
     );
 };
