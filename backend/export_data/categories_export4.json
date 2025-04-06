@@ -1703,6 +1703,90 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "7^3 (third power of seven)",
+                            "answer": [
+                                "343"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "x^4 + x^2 + 1は相反方程式？",
+                            "answer": [
+                                "Yes!(係数が1.0.1.0.1)だから"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "整式の剰余の解法",
+                            "answer": [
+                                "方針1　割り算",
+                                "方針2 商とあまりの関係式",
+                                "方針3 binomial theorem",
+                                "方針4 differecial"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "1の3乗根でつかう方程式",
+                            "answer": [
+                                "w^2 + w + 1 = 0"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "logarithmをみたときにまずやること",
+                            "answer": [
+                                "真数条件と底の条件を考える"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "指数関数の逆関数は？",
+                            "answer": [
+                                "対数関数"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "量化するとおこること",
+                            "answer": [
+                                "条件が命題になる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "等面四面体の解法",
+                            "answer": [
+                                "直方体にうめこむ"
+                            ],
+                            "memo": "https://examist.jp/mathematics/trigonometric-ratio/toumensimentai/\n京大1999",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "3分の公式",
+                            "answer": [
+                                "\\frac{|a|}{3} (k - \\alpha)^3\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -1914,6 +1998,10 @@
                             "last_answered_date": "2025-04-02"
                         }
                     ]
+                },
+                {
+                    "name": "inverse function",
+                    "questions": []
                 }
             ]
         },
@@ -4670,7 +4758,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -6433,7 +6521,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "The turnout for the concert was incredible",
@@ -6457,6 +6545,15 @@
                             "problem": "He was staring out the window.",
                             "answer": [
                                 " stare + out の形\n「外をぼんやり見つめる」という意味で使われます。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "I think nothing but business.",
+                            "answer": [
+                                "仕事のことばかり考えている。"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9073,10 +9170,10 @@
                             "problem": "西岸海洋性気候は二つの要因に注意する？それはなにとなにか",
                             "answer": [
                                 "暖流",
-                                "偏西風"
+                                "偏西風Westerlies"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         },
                         {
