@@ -2,8 +2,8 @@ import React from "react"
 import { useLocation } from "react-router"
 import { Question } from "../../types/Question"
 import { useProblemPage } from "./hooks/useProblemPage"
-import { ProblemNormal } from "./ui/ProblemNormal"
-import { ProblemReview } from "./ui/ProblemReview"
+import { ProblemNormal } from "./ui/ProblemNormalPage"
+import { ProblemReview } from "./ui/ProblemReviewPage"
 import { ProblemComplete } from "./ui/ProblemComplete"
 
 const ProblemPage: React.FC = () => {
@@ -37,7 +37,7 @@ const ProblemPage: React.FC = () => {
 
     return (
         <div>
-            {reviewFlg ? (
+            {/* {reviewFlg ? (
                 <ProblemReview
                     problem={unsolvedProblems[currentReviewProblemIndex]}
                     currentReviewProblemIndex2={currentReviewProblemIndex2}
@@ -57,7 +57,17 @@ const ProblemPage: React.FC = () => {
                     onSolved={handleAnswerSolved}
                     onUnsolved={handleAnswerUnsolved}
                 />
-            )}
+            )} */}
+                <ProblemNormal
+                    reviewFlg={reviewFlg}
+                    problem={reviewFlg ? unsolvedProblems[currentReviewProblemIndex] : problemData[currentProblemIndex]}
+                    currentProblemIndex={reviewFlg ?  currentReviewProblemIndex2: currentProblemIndex}
+                    problemLength={reviewFlg ? totalReviewProblemIndex : problemData.length}
+                    showAnswer={showAnswer}
+                    onShowAnswer={() => setShowAnswer(true)}
+                    onSolved={reviewFlg ? handleAnswerSolvedReview : handleAnswerSolved}
+                    onUnsolved={reviewFlg ? handleAnswerUnsolvedReview : handleAnswerUnsolved}
+                />
         </div>
     );
 };
