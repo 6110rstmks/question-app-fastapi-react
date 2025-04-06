@@ -635,8 +635,8 @@
                                 "IPアドレス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -1186,7 +1186,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -1665,6 +1665,44 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "triangle similarity criteriaを答えて",
+                            "answer": [
+                                "AA(angle-angle): Two pairs of corresponding angles are equal.",
+                                "SSS: Three pairs of corresponding sides are proportional.",
+                                "SAS: Two pairs of corresponding sides are proportional and the corresponding angles between them are equal."
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "二重絶対値は内と外、どっちから外す？",
+                            "answer": [
+                                "内"
+                            ],
+                            "memo": "問題例くれ",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "Heron’s formulaいつつかう？",
+                            "answer": [
+                                "triangleのすべての辺がinteger"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "ヘロンの公式を答えよ",
+                            "answer": [
+                                " \\text{3辺の長さが a, b, c  の三角形の面積Sは}、 s = \\frac{a + b + c}{2}  と置くと、\n  S = \\sqrt{s(s - a)(s - b)(s - c)}"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -2096,7 +2134,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ノギンNogginやコーディンChordinはどこから分泌されるのか？",
@@ -3954,9 +3992,10 @@
                             "last_answered_date": "2025-04-01"
                         },
                         {
-                            "problem": "経済を大きくふたつの市場の観点に分けたものが？",
+                            "problem": "経済を大きくふたつの市場の観点に分けたものをそれぞれ答えて",
                             "answer": [
-                                "財市場と貨幣市場"
+                                "財市場",
+                                "貨幣市場"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -4051,7 +4090,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "需要曲線・供給曲線の縦軸と横軸は？",
@@ -4062,6 +4101,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "景気を測る指数は何？",
+                            "answer": [
+                                "景気動向指数"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -6859,7 +6907,7 @@
                     "name": "CPU",
                     "questions": [
                         {
-                            "problem": "MIPS(million instructions per second)が高いほど、どうなるか？",
+                            "problem": "MIPS(million instructions per second)が高いほど、どうなるか？ヒント：MIPSの単語の意味を考えたらわかりますよ。",
                             "answer": [
                                 "コンピュータはより多くの命令を短時間で処理できることを意味します。"
                             ],
@@ -6906,7 +6954,8 @@
                         {
                             "problem": "CPUは大きく二つにわけられる。何となにか？",
                             "answer": [
-                                "演算装置、制御装置"
+                                "演算装置",
+                                "制御装置"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8653,9 +8702,10 @@
                             "last_answered_date": "2025-04-07"
                         },
                         {
-                            "problem": "ベトナムの場所は？",
+                            "problem": "ベトナムの場所は？左には何がある？",
                             "answer": [
-                                ""
+                                "ラオス",
+                                "カンボジア"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9065,7 +9115,7 @@
                         {
                             "problem": "トルコの首都",
                             "answer": [
-                                "アンカラ"
+                                "アンカラAnkara"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9124,6 +9174,33 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "アラブ首長国連邦をアルファベット三文字で何という？",
+                            "answer": [
+                                "UAE"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "西アジアにおいて、北回帰線のやや南にある都市は？",
+                            "answer": [
+                                "メッカ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "メッカはどこの国の州都ですか？",
+                            "answer": [
+                                "サウジアラビア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 }
@@ -9212,7 +9289,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ROEの計算式の覚え方",
