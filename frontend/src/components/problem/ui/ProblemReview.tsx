@@ -3,27 +3,42 @@ import { Link } from 'react-router';
 import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
 import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
-import styles from './ProblemNormal.module.css'
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
+import styles from './ProblemNormal.module.css'
 import { BlockMath } from "react-katex";
+import Modal from 'react-modal'
+import QuestionEditModal from "../../question/QuestionEditModal";
 
 interface Props {
-    problem: Question;
-    currentReviewProblemIndex2: number;
-    problemLength: number;
-    showAnswer: boolean;
-    onShowAnswer: () => void;
-    onSolved: () => void;
-    onUnsolved: () => void;
+    problem: Question
+    currentReviewProblemIndex2: number
+    problemLength: number
+    showAnswer: boolean
+    onShowAnswer: () => void
+    onSolved: () => void
+    onUnsolved: () => void
 }
 
-export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIndex2, problemLength, showAnswer, onShowAnswer, onSolved, onUnsolved }) => {
-
-    const isLatex = (text: string) => text.includes('\\')
+enum SolutionStatus {
+    NOT_SOLVED = 0,
+    TEMPORARY_SOLVED = 1,
+    PERMANENT_SOLVED = 2,
+}
+export const ProblemReview: React.FC<Props> = ({ 
+    problem,
+    currentReviewProblemIndex2,
+    problemLength,
+    showAnswer,
+    onShowAnswer,
+    onSolved,
+    onUnsolved
+}) => {
 
     const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
-    
     const [localProblem, setLocalProblem] = useState<Question>(problem); // ローカル状態を追加
+    const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false)
+    const isLatex = (text: string) => text.includes('\\')
+
 
     const handleUpdateIsCorrect = async () => {
         await updateQuestionIsCorrect(localProblem!); // API コール
@@ -34,14 +49,13 @@ export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIn
     useEffect(() => {
         setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
 
-        // fetchCategoryByQuestionId(problem.id).then((data) => {
-        //     setCategory(data);
-        // })
+        (async () => {
 
-        fetchSubcategoriesWithCategoryNameByQuestionId(problem.id).then((data) => {
-            setSubcategoriesWithCategoryName(data);
-        })
+            const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
+            setSubcategoriesWithCategoryName(data_subcategories_with_category_name);       
+        })();
     }, [problem])
+
     return (
         <div className={styles.problemContainer}>
             <div className={styles.header}>
@@ -77,17 +91,35 @@ export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIn
                 <div className={styles.questionHeader}>
                     <div className={styles.questionLabel}>問題：</div>
                     <div className={styles.correctnessToggle}>
+                        <button 
+                            className={styles.editButton}
+                            onClick={() => setEditModalIsOpen(true)}
+                            >Edit</button>
                         <button
                             className={`${styles.statusButton} ${
-                                localProblem.is_correct ? styles.correctButton : styles.incorrectButton
+                                localProblem?.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correct : 
+                                localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.temporary : 
+                                styles.incorrect
                             }`}
                             onClick={handleUpdateIsCorrect}
                         >
-                            {localProblem.is_correct ? '正解' : '不正解'}
+                            {localProblem?.is_correct === SolutionStatus.NOT_SOLVED ? '不正解' :
+                            localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? '一時的に正解' :
+                            '正解'}
                         </button>
                     </div>
                 </div>
-                
+
+                <Modal 
+                    isOpen={editModalIsOpen} 
+                    contentLabel="Example Modal">
+                    <QuestionEditModal
+                        setModalIsOpen={setEditModalIsOpen}
+                        question={localProblem}
+                        setQuestion={setLocalProblem}
+                    />
+                </Modal>
+
                 <div className={styles.questionContent}>
                     {localProblem.problem}
                 </div>
@@ -137,7 +169,10 @@ export const ProblemReview: React.FC<Props> = ({ problem, currentReviewProblemIn
 
             <div className={styles.actionButtons}>
                 <button 
-                    className={`${styles.actionButton} ${styles.solvedButton}`} 
+                    className={`
+                        ${styles.actionButton} 
+                        ${styles.solvedButton}
+                    `} 
                     onClick={onSolved}
                 >
                     解けた

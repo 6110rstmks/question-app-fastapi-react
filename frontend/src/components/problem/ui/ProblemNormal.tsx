@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router';
 import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
-import { Category } from "../../../types/Category";
 import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
 import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
 import styles from './ProblemNormal.module.css'
-import { fetchCategoryQuestionByQuestionId } from "../../../api/CategoryQuestionAPI"
-import { fetchCategory } from "../../../api/CategoryAPI"
 import { BlockMath } from "react-katex";
 import Modal from 'react-modal'
 import QuestionEditModal from "../../question/QuestionEditModal";
@@ -39,9 +36,7 @@ export const ProblemNormal: React.FC<Props> = ({
 }) => {
     const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
     const [localProblem, setLocalProblem] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
-    const [category, setCategory] = useState<Category>()
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false)
-
     const isLatex = (text: string) => text.includes('\\')
 
     const handleUpdateIsCorrect = async () => {
@@ -54,10 +49,7 @@ export const ProblemNormal: React.FC<Props> = ({
         setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
 
         (async () => {
-            const data_category_question = await fetchCategoryQuestionByQuestionId(problem.id)
 
-            const data_category = await fetchCategory(data_category_question.category_id)
-            setCategory(data_category)
             const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
             setSubcategoriesWithCategoryName(data_subcategories_with_category_name);       
         })();
@@ -94,7 +86,7 @@ export const ProblemNormal: React.FC<Props> = ({
 
             <div className={styles.questionCard}>
                 <div className={styles.questionHeader}>
-                    <div className={styles.questionLabel}>問題</div>
+                    <div className={styles.questionLabel}>問題：</div>
                     <div className={styles.correctnessToggle}>
                         <button 
                             className={styles.editButton}
@@ -139,10 +131,11 @@ export const ProblemNormal: React.FC<Props> = ({
                 ) : (
                     <div className={styles.answerSection}>
                         <h3 className={styles.answerHeading}>答え</h3>
-                        <div className={styles.answerContent}>
+                        {/* <div className={styles.answerContent}> */}
+                        <div className={styles.answerTextBox}>
                             {localProblem.answer.length > 0 ? (
                                 localProblem?.answer.map((answer, index) => (
-                                    <div key={index}>
+                                    <div key={index} className={styles.answerItem}>
                                         {answer.split('\n').map((line, i) => (
                                             <React.Fragment key={i}>
                                             {isLatex(line) ? (
