@@ -618,7 +618,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "AWSにおいて、CNAMEレコードでアクセスしたら何レコードを返すか",
@@ -1259,8 +1259,8 @@
                                 "dynamodbストリーム"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 },
@@ -3897,7 +3897,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "beta oxidationでは脂肪酸から何を生成する？",
@@ -4547,8 +4547,8 @@
                                 "先へ進める"
                             ],
                             "memo": "https://itmanabi.com/rollback-rollforward/",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-07"
                         }
                     ]
                 },
@@ -8159,7 +8159,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "高気圧と低気圧があったときに風はどちらからどちらにふく？",
@@ -8415,7 +8415,7 @@
                                 "高"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-03"
                         },
                         {
@@ -8427,7 +8427,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "海岸付近の陸地が沈降したり、海面が上昇したりすることで、海水が陸地に入り込んでできた地形を何という？",
@@ -8435,8 +8435,8 @@
                                 "沈水海岸"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "氷河による侵食でできたU字谷に海水が入り込んでできた入江を何という？ちなみに沈水海岸のひとつ",
@@ -8590,7 +8590,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "河川流量は（A）と（B）に注目",
@@ -8648,7 +8648,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "砂嘴が伸びていって陸地とつながった島をなんという",
@@ -8675,7 +8675,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "湿潤地域から乾燥地域に流れる河川を何という？",
@@ -8746,6 +8746,25 @@
                             "problem": "貿易依存度とは、（A）に対する輸出額・輸入額の割合です。",
                             "answer": [
                                 "国内総生産（GDP）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "貿易依存度が大きいことは何を表すか",
+                            "answer": [
+                                "総輸出総額に対して、GDPの値が小さい→総人口が少ない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "堆積土は二種類に分類できる",
+                            "answer": [
+                                "成帯土壌",
+                                "間帯土壌"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8945,7 +8964,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "チベット高原はどの場所にある。想像する",
@@ -9099,8 +9118,8 @@
                                 "B"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "地中海性気候はどのようなアルファベットで表す？",
@@ -9173,7 +9192,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "温帯 (B) の定義",
