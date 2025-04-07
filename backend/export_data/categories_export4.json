@@ -77,7 +77,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "IOPS数値が高いと何がいいのか？ ",
@@ -937,7 +937,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "memcachedとredisのうちマルチスレッドはどちらか？",
@@ -1429,7 +1429,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -1614,9 +1614,9 @@
                         {
                             "problem": "|w - 3| = 2r |w - 1| において点Wが描く軌跡は",
                             "answer": [
-                                ""
+                                "アポロニウスの円\n\nまずr = 1/2 or ≠ 1/2 によって場合分け\n点ωは 2 点 1，3 を 1:2𝑟 に内分・外分する点を直径の両端とする円を描く。"
                             ],
-                            "memo": "2020大阪？",
+                            "memo": "2022大阪 NO.1",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-05"
                         }
@@ -1632,7 +1632,7 @@
                             ],
                             "memo": "https://hiraocafe.com/note/vector-area.html",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "空間ベクトルの共面条件（4点O、A、B、Cが同一空間にあるための条件）を書いて ",
@@ -1651,6 +1651,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "vec a とvector bがlinear independence <=>",
+                            "answer": [
+                                "\n\\vec{a} \\neq 0\n\n\\vec{b} \\neq 0\n\n\n\\vec{a} \\nparallel \\vec{b}\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
                         }
                     ]
                 },
@@ -1672,8 +1681,8 @@
                                 "二点間の距離公式にピタゴラスの定理を利用した距離"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "triangle similarity criteriaを答えて",
@@ -1702,7 +1711,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "ヘロンの公式を答えよ",
@@ -1711,7 +1720,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "7^3 (third power of seven)",
@@ -1789,13 +1798,13 @@
                             "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "3分の公式",
+                            "problem": "3分の公式 直線はx = β 接点はx= α",
                             "answer": [
-                                "\\frac{|a|}{3} (k - \\alpha)^3\n"
+                                "\\frac{|a|}{3} (\\beta - \\alpha)^3\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "3分の公式を使う場面は？",
@@ -1804,7 +1813,7 @@
                             ],
                             "memo": "https://manabitimes.jp/math/796",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "1/12公式(二次関数版)の公式を答えよ",
@@ -2008,6 +2017,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "逆行列が存在する条件",
+                            "answer": [
+                                "det(A)=ad−bc　　\ndet(A) \\neq 0"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -2018,9 +2036,9 @@
                             "problem": "recurrence relation （n次式型）の解法",
                             "answer": [
                                 "階差をとる",
-                                "むりやり等比数列の形にする"
+                                "係数比較してむりやり等比数列の形にする"
                             ],
-                            "memo": "https://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
+                            "memo": "\\[\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\\]\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-06"
                         }
@@ -2458,7 +2476,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "What animals have echolocation?3",
@@ -2546,7 +2564,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "What organs destroy red blood cells?2",
@@ -3233,7 +3251,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         }
                     ]
                 },
@@ -3247,7 +3265,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "What is a class of steroid hormones that regulates salt and water balance?",
@@ -3869,8 +3887,8 @@
                                 "二酸化炭素ではなく、酸素を取り込んでしまう"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "C3植物は、強い光の中では枯れてしまう。この理由についてRubiscoという単語を用いて説明",
@@ -4076,7 +4094,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 }
@@ -4215,7 +4233,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "景気を測る指数は何？",
@@ -4776,7 +4794,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "パリティとは？（IT用語）",
@@ -6319,11 +6337,11 @@
                         {
                             "problem": "dicotyledon",
                             "answer": [
-                                "双子葉植物"
+                                "双子葉植物　だいからりどぅん"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "ammunition",
@@ -6539,7 +6557,7 @@
                             ],
                             "memo": "特に、「家に帰ったら」の部分は未来のことなので、英語では 「when + 現在形」 で表し、その結果として「昼飯を作る」には 「will」 を使って未来を表します。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "南極",
@@ -6584,7 +6602,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         }
                     ]
                 }
@@ -6686,7 +6704,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -7093,7 +7111,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "システムにすぐに対処しなくてはならない問題などが生じたときに、実行中のプログラムの処理を強制的に停止し、優先的に事象の解決を図ることを可能にする仕組みは？",
@@ -7274,7 +7292,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -7292,7 +7310,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "hardwareにおいてDMAは何の略か？",
@@ -7319,7 +7337,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 }
@@ -7758,7 +7776,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "入出力動作(I/O)の完了を待っている状態。は「実行状態」「実行可能状態」「待ち状態」のうちどれか",
@@ -8223,7 +8241,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "イヌイットInuitは（A）と呼ばれる住居で生活。",
@@ -8387,7 +8405,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "気圧帯は、赤道から30度ごとに 低→（）→（）→（）　と繰り返される",
@@ -8427,7 +8445,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "回帰線のうち、北側にある線を（A）、南側にある線を（B）という。",
@@ -8530,7 +8548,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "北アメリカでは西経（A）度を境に、西側が（B）、東側が（C）",
@@ -8644,7 +8662,7 @@
                         {
                             "problem": "一日中太陽が出てこない現象を何という？",
                             "answer": [
-                                "極夜"
+                                "極夜polar night"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8684,7 +8702,54 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "発展途上国の一次産品と、先進国の工業製品の貿易形態を何という？",
+                            "answer": [
+                                "垂直貿易"
+                            ],
+                            "memo": "https://livedoor.blogimg.jp/keppentyan/imgs/4/e/4ee04263-s.png",
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "発展途上国の中でも、（アフリカ）のサハラ以南にある 最貧国とアジアの新興国・産油国などの格差を何という？",
+                            "answer": [
+                                "南南問題"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "沈水海岸の例3",
+                            "answer": [
+                                "フィヨルド",
+                                "リアス式海岸",
+                                "エスチュありー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "保護貿易の反対派？",
+                            "answer": [
+                                "自由貿易"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "貿易依存度とは、（A）に対する輸出額・輸入額の割合です。",
+                            "answer": [
+                                "国内総生産（GDP）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
                         }
                     ]
                 },
@@ -8795,7 +8860,7 @@
                             ],
                             "memo": "ウラル山脈のすぐ東側を流れ、北極海に注ぎ込む川です。\n\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ヴォルタ川はどこにありますか？",
@@ -8814,7 +8879,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "アペニン山脈はどこにある？",
@@ -8851,7 +8916,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "中央アジアのカザフスタンの場所は？上と右と下には何がある？",
@@ -9016,7 +9081,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ステップ気候の土壌2",
@@ -9026,7 +9091,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ケッペンの気候区分において乾燥帯はアルファベットの何で表す。",
@@ -9062,7 +9127,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "ステップ気候は、砂漠気候を（A）分布している",
@@ -9070,8 +9135,8 @@
                                 "帯状に取り囲むように"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "マジで雨が降らない砂漠気候ですが、ごくまれに短期の豪雨がくることがあります。  そんな豪雨のときは、普段は涸れていて水が流れていない川に水が流れます。  この川のことをなんという？",
@@ -9099,7 +9164,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "温暖湿潤気候はアルファベットで表すと",
@@ -9210,7 +9275,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "亜寒帯のタイガに多く分布している土壌はなにか？",
@@ -9230,6 +9295,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "熱帯モンスーン気候のいろいろなおぼえかたとしてコツはなに？",
+                            "answer": [
+                                "熱帯多雨林気候と特徴はほぼ同じで違うところをおぼえていく"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "熱帯モンスーン気候に乾季はある？ない？",
+                            "answer": [
+                                "乾季はある"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-06"
                         }
                     ]
                 },
@@ -9306,7 +9389,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "西アジアにおいて、北回帰線のやや南にある都市は？",
@@ -9361,7 +9444,7 @@
                         {
                             "problem": "コードの値からデータの対象物が連想できるものはどれか。",
                             "answer": [
-                                "ニモニックコード"
+                                "ニモニックコードMnemonic Code"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9531,7 +9614,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-06"
                         },
                         {
                             "problem": "azureのログのデータベースのサービスは何？",
@@ -9540,7 +9623,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "ストレージアカウントとストレージ\"サービスのわかりやすい例え",
