@@ -1214,7 +1214,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "(A)を利用することで、オンプレミスのADにあるユーザ情報を使用して、AWSアプリケーションに接続することができる。",
@@ -1618,7 +1618,7 @@
                             ],
                             "memo": "2022大阪 NO.1",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 },
@@ -1738,7 +1738,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "整式の剰余の解法",
@@ -1823,6 +1823,26 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "高校数学で出題される3次以上の方程式は3つに分類される。",
+                            "answer": [
+                                "因数分解してとく",
+                                "相反方程式",
+                                "複2次式"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "おい",
+                            "answer": [
+                                "\\textcolor{magenta}{\\underline{$a,\\ b,\\ c,\\ d$を実数}} とするとき\n\n\n\n\\begin{array}{ll}\n\\text{特に} & \\textcolor{blue}{a + bi = c + di} \\quad \\Longleftrightarrow \\quad \\textcolor{red}{a = c \\text{ かつ } b = d} \\quad \\cdots \\textcircled{\\small 1} \\\\\n            & \\textcolor{blue}{a + bi = 0} \\quad \\Longleftrightarrow \\quad \\textcolor{red}{a = 0 \\text{ かつ } b = 0} \\quad \\cdots \\textcircled{\\small 2}\n\\end{array}\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 },
@@ -1877,7 +1897,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "斜軸回転体の初手　",
@@ -3234,15 +3254,15 @@
                             "last_answered_date": "2025-04-02"
                         },
                         {
-                            "problem": "メンデルの法則を3つ",
+                            "problem": "メンデルの法則Mendelian inheritanceを3つ",
                             "answer": [
                                 "優性の法則",
                                 "分離の法則",
                                 "独立の法則"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "ヌクレオチドの絵を描いてください",
@@ -3273,8 +3293,8 @@
                                 "鉱質コルチコイド"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 },
@@ -3316,8 +3336,8 @@
                                 "Claudin "
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 },
@@ -4141,7 +4161,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "供給曲線はなぜ右肩あがりなのか。説明して",
@@ -4164,11 +4184,12 @@
                         {
                             "problem": "景気が過熱している場合、一般的に買いオペか売りオペどちらを実施するのが効果的であるか。またその理由を答えて",
                             "answer": [
-                                "売りオペ\n"
+                                "売りオペ\n",
+                                "資金量が減ることで、資金の貸し借りのコスト（＝金利）が上昇しやすくなります\n お金を「借りたい人」は相変わらずたくさんいるのに、「貸せるお金」は少ない。→金利が上がる。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "会社設立時の出資者が有限責任社員と無限責任社員である会社は，（A）会社という",
@@ -4819,6 +4840,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "PITRはシステム用語で何の略？",
+                            "answer": [
+                                "point in time recovery"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
                         }
                     ]
                 }
@@ -6520,8 +6550,8 @@
                                 "彼女はそのプロジェクトが時間通りに完了するよう頼んだ"
                             ],
                             "memo": "ask that S + V (原形)\n\"ask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "I ask that he go to the meeting.",
@@ -7101,7 +7131,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "CPUの主な演算装置は2つあります。それらを答えよ。",
@@ -7532,8 +7562,8 @@
                                 "自由落下"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-05"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "物体を回転させる力を何という？",
@@ -8223,7 +8253,7 @@
                             ],
                             "memo": "構造平野と卓状地の違い、準平原と楯状地の違いというのは、かなりあいまいです",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "春先に地中海からイタリア南部に向けて吹いてくる高温多湿な風は？",
@@ -9662,6 +9692,27 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "LRSの意味は？",
+                            "answer": [
+                                "（プライマリ・リージョンの）１つのデータセンター内の３つの物理ディスクへ、データを同期的にコピーします。\n\nそのため、２つのディスクが壊れてしまった場合でも、引き続きデータを利用することができます。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "Azure Storage には4種類のストレージサービスがある。答えて",
+                            "answer": [
+                                "blob storage",
+                                "file storage",
+                                "queue storage",
+                                "table storage"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 }
