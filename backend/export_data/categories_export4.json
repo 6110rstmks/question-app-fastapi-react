@@ -1712,15 +1712,15 @@
                             "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "triangle similarity criteriaを答えて",
+                            "problem": "triangle similarity criteriaを答えて3",
                             "answer": [
                                 "AA(angle-angle): Two pairs of corresponding angles are equal.",
-                                "SSS: Three pairs of corresponding sides are proportional.",
-                                "SAS: Two pairs of corresponding sides are proportional and the corresponding angles between them are equal."
+                                "SSS(Side-Side-Side): Three pairs of corresponding sides are proportional.",
+                                "SAS(Side-Angle-Side): Two pairs of corresponding sides are proportional and the corresponding angles between them are equal."
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "二重絶対値は内と外、どっちから外す？",
@@ -3030,7 +3030,7 @@
                             ],
                             "memo": "DNA複製で出てくるへりかーぜとごっちゃにならない。\n今回は遺伝子組み換え",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "ベクターの例は？",
@@ -3051,13 +3051,13 @@
                             "last_answered_date": "2025-03-26"
                         },
                         {
-                            "problem": "大腸菌においてラクトースだけが存在する場合は、リプレッサーが（A）ことによって、RNAポリメラーゼがプロモーターに結合できるようになり、転写が始まる。",
+                            "problem": "大腸菌においてラクトースだけが存在する場合は、（A）ことによって、RNAポリメラーゼがプロモーターに結合できるようになり、転写が始まる。",
                             "answer": [
-                                "結合部位（オペレーター）から離れる"
+                                "ラクトースがリプレッサーに結合して、リプレッサーが結合部位（オペレーター）から離れる"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "真核生物Eukaryoteの細胞において、RNAポリメラーゼがプロモーターが結合するには（A）が必要",
@@ -7987,15 +7987,6 @@
                             "last_answered_date": "2025-03-18"
                         },
                         {
-                            "problem": "ラトソルの栄養は多いか少ないか？",
-                            "answer": [
-                                "すくない"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-09"
-                        },
-                        {
                             "problem": "trade windはどちらから西から東or 東から西どちらにふくか？おぼえかたは？",
                             "answer": [
                                 "from East to WEST"
@@ -8170,7 +8161,7 @@
                                 "低緯度から高緯度"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-04"
                         },
                         {
@@ -8328,21 +8319,12 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "ディナルアルプス山脈の場所はどこ？",
-                            "answer": [
-                                "Dinaric Alps\nヨーロッパ南東部、バルカン半島の西部を占める山脈"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
-                        },
-                        {
                             "problem": "イヌイットInuitは（A）と呼ばれる住居で生活。",
                             "answer": [
                                 "イグルーIgloo"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -8362,16 +8344,6 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-26"
-                        },
-                        {
-                            "problem": "熱帯とは、最寒月平均気温、 （A）が（B）度以上という場所",
-                            "answer": [
-                                "最も寒い月の平均気温",
-                                "18"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
                         },
                         {
                             "problem": "リャマやアルパカなどから手に入れた毛皮で、防寒用の（A）と呼ばれる衣服などを作ります。",
@@ -8427,15 +8399,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-08"
-                        },
-                        {
-                            "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
-                            "answer": [
-                                "ダイアモンド"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-04-03"
                         },
                         {
                             "problem": "カルスト地形はどのようにして形成されますか？",
@@ -8537,7 +8500,7 @@
                                 "フィヨルド"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-06"
                         },
                         {
@@ -9270,6 +9233,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "ディナルアルプス山脈の場所はどこ？",
+                            "answer": [
+                                "Dinaric Alps\nヨーロッパ南東部、バルカン半島の西部を占める山脈"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 },
@@ -9343,11 +9315,11 @@
                         {
                             "problem": "滅多に雨が降らない砂漠気候にごくまれに短期の豪雨がくる。  そのときは、普段は涸れていて水が流れていない川に水が流れるがこの川のことをなんという？",
                             "answer": [
-                                "ワジ"
+                                "ワジWadi "
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "南半球の西岸海洋性気候の国はなにがあるか",
@@ -9524,6 +9496,16 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-06"
+                        },
+                        {
+                            "problem": "熱帯とは、最寒月平均気温、 （A）が（B）度以上という場所",
+                            "answer": [
+                                "最も寒い月の平均気温",
+                                "18"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-04"
                         }
                     ]
                 },
@@ -9619,6 +9601,29 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
+                            "answer": [
+                                "ダイアモンド"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-03"
+                        }
+                    ]
+                },
+                {
+                    "name": "土壌",
+                    "questions": [
+                        {
+                            "problem": "ラトソルの栄養は多いか少ないか？",
+                            "answer": [
+                                "すくない"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-09"
                         }
                     ]
                 }
