@@ -945,8 +945,8 @@
                                 "memcached"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "なぜaws elasticacheが必要なのか",
@@ -3028,7 +3028,7 @@
                             "answer": [
                                 "制限酵素Restriction enzyme"
                             ],
-                            "memo": "",
+                            "memo": "DNA複製で出てくるへりかーぜとごっちゃにならない。\n今回は遺伝子組み換え",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
                         },
@@ -7439,7 +7439,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 }
@@ -7878,7 +7878,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "入出力動作(I/O)の完了を待っている状態。は「実行状態」「実行可能状態」「待ち状態」のうちどれか",
@@ -7968,15 +7968,6 @@
                 {
                     "name": "m",
                     "questions": [
-                        {
-                            "problem": "熱帯雨林気候の土壌は?",
-                            "answer": [
-                                "ラトソル"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-06"
-                        },
                         {
                             "problem": "キャッサバは何の原料？",
                             "answer": [
@@ -8257,7 +8248,7 @@
                         {
                             "problem": "ベンゲラ海流（寒流）の海岸にある砂漠は（海岸砂漠は）？",
                             "answer": [
-                                "ナミブ砂漠"
+                                "ナミブ砂漠（アフリカ）"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8343,7 +8334,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "イヌイットInuitは（A）と呼ばれる住居で生活。",
@@ -8385,11 +8376,11 @@
                         {
                             "problem": "リャマやアルパカなどから手に入れた毛皮で、防寒用の（A）と呼ばれる衣服などを作ります。",
                             "answer": [
-                                "ポンチョ"
+                                "ポンチョPoncho"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-29"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
@@ -8646,7 +8637,7 @@
                         {
                             "problem": "ナイル川の中流に建設された多目的ダムは何？",
                             "answer": [
-                                "アスワンハイダム"
+                                "アスワンハイダムAswan Dam"
                             ],
                             "memo": "",
                             "is_correct": 1,
@@ -8800,10 +8791,10 @@
                         {
                             "problem": "世界最大の湖は？",
                             "answer": [
-                                "カスピ海"
+                                "カスピ海Caspian Sea"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-07"
                         },
                         {
@@ -8870,7 +8861,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "アスワンハイダムは何川に建設された？",
@@ -8898,6 +8889,51 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "カスピ海の下には何の国がある？",
+                            "answer": [
+                                "イラン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "世界で一番深い湖は？",
+                            "answer": [
+                                "バイカル湖"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "かつて氷期のころ氷河に覆われていた湖は（氷河湖）？",
+                            "answer": [
+                                "五大湖"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "カスピ海が淡水湖ではなく塩湖である理由は？",
+                            "answer": [
+                                "乾燥地帯にあるため、水がどんどん蒸発して、塩分濃度が高い。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "シベリア南部にある三日月型の断層湖はなんですか？",
+                            "answer": [
+                                "バイカル湖"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 },
@@ -9004,9 +9040,9 @@
                         {
                             "problem": "オビ川はどこ",
                             "answer": [
-                                ""
+                                "ウラル山脈のすぐ東側を流れ、北極海に注ぎ込む川です。\n"
                             ],
-                            "memo": "ウラル山脈のすぐ東側を流れ、北極海に注ぎ込む川です。\n\n",
+                            "memo": "\n",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-08"
                         },
@@ -9017,7 +9053,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "アンデス山脈はどこか？また、アンデス山脈は新期造山帯？古期造山帯？",
@@ -9186,17 +9222,17 @@
                                 "上→カザフスタン",
                                 "下→トルクメニスタン"
                             ],
-                            "memo": "",
+                            "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "トルコの上には何がある？",
                             "answer": [
-                                "黒海"
+                                "黒海black sea"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-04"
                         },
                         {
@@ -9216,6 +9252,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "マラカイボ湖はどの国にある？",
+                            "answer": [
+                                "ベネズエラ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "ナミビアの下には何の国がある？",
+                            "answer": [
+                                "南アフリカ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 },
@@ -9461,6 +9515,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "熱帯雨林気候の土壌は?",
+                            "answer": [
+                                "ラトソルlatosol"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-06"
                         }
                     ]
                 },
