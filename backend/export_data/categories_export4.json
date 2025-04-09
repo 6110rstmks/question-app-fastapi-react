@@ -582,7 +582,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "AWSのRoute53おいて、CNAMEレコードではなくて、ALIASレコードを使用すべき理由。",
@@ -609,7 +609,7 @@
                             ],
                             "memo": "ALBのconnection drainingと間違えそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -936,16 +936,16 @@
                                 "redis"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "memcachedとredisのうちマルチスレッドはどちらか？",
+                            "problem": "aws elasticacheについてmemcachedとredisのうちマルチスレッドはどちらか？",
                             "answer": [
                                 "memcached"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-27"
                         }
                     ]
@@ -1186,7 +1186,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 },
@@ -1553,8 +1553,8 @@
                                 "整式×　三角関数\n整式　×　指数関数"
                             ],
                             "memo": "∫(x^3 +x)cosxdx を計算せよ。 ←瞬間部分積分が適用できる例",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "sinxの積分漸化式の解法の流れ",
@@ -1659,7 +1659,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 },
@@ -1771,7 +1771,7 @@
                             "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "指数関数の逆関数は？",
+                            "problem": "指数関数のinverse functionは？",
                             "answer": [
                                 "対数関数"
                             ],
@@ -2118,8 +2118,8 @@
                                 "チオカルばみどthiocarbamide"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "元素記号のSeは？",
@@ -2583,8 +2583,8 @@
                                 "フェニルチオカルバミドPhenylthiocarbamide\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "What organs destroy red blood cells?2",
@@ -3383,7 +3383,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "nucleotideはヌクレオシドが何結合で連結しているか？",
@@ -3943,8 +3943,8 @@
                                 "りんご酸"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "Rubiscoの正式名称は？",
@@ -4093,8 +4093,8 @@
                                 "ヤシャブシ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "陽樹と陰樹の光合成曲線を書いてください",
@@ -4114,7 +4114,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 }
@@ -4179,7 +4179,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "景気が過熱している場合、一般的に買いオペか売りオペどちらを実施するのが効果的であるか。またその理由を答えて",
@@ -4187,7 +4187,7 @@
                                 "売りオペ\n",
                                 "資金量が減ることで、資金の貸し借りのコスト（＝金利）が上昇しやすくなります\n お金を「借りたい人」は相変わらずたくさんいるのに、「貸せるお金」は少ない。→金利が上がる。"
                             ],
-                            "memo": "",
+                            "memo": "逆算して考える。\n景気が加熱している→金利を上げる→金利を上げるためには資金量を減らす必要がある→",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-08"
                         },
@@ -4224,8 +4224,8 @@
                                 "キチンの波\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "株式会社の出資者は、資本家であるが経営には参加していないことも多い。この状況を何というか。（高校政経）",
@@ -4244,7 +4244,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "需要曲線・供給曲線の縦軸と横軸は？",
@@ -4839,7 +4839,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "PITRはシステム用語で何の略？",
@@ -4875,8 +4875,8 @@
                                 "cavity　kævəti/"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "一口ちょうだい",
@@ -4993,7 +4993,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "This policy serves to protect customers.",
@@ -5010,8 +5010,8 @@
                                 "かぶ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "They tried to make sense of the email from their boss.",
@@ -6370,8 +6370,8 @@
                                 "双子葉植物　だいからりどぅん"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "ammunition",
@@ -6515,7 +6515,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "vesicle　意味　アクセント",
@@ -6577,7 +6577,7 @@
                                 "I make a grimance"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-04"
                         },
                         {
@@ -6605,7 +6605,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "The turnout for the concert was incredible",
@@ -6633,6 +6633,51 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "a virulent disease",
+                            "answer": [
+                                "悪い病気"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "健康のために甘いものを控える",
+                            "answer": [
+                                "I retain from eating sugary food for my health."
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "反省会",
+                            "answer": [
+                                "review meeing"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "computer scientists aren't the only potential beneficiers from AI",
+                            "answer": [
+                                "潜在的な受益者\n受益者のかのうせいのあるもの"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "is athletic performance determined by genetics?",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 }
@@ -6673,8 +6718,8 @@
                                 "C&Cサーバ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "緊急事態を装って組織内部の人間からパスワードや機密情報を入手する不正な行為は，なんという攻撃に分類されるか",
@@ -7131,7 +7176,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "CPUの主な演算装置は2つあります。それらを答えよ。",
@@ -7281,7 +7326,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "単純な命令セットをもっているのはCISC？RISC",
@@ -7661,8 +7706,8 @@
                                 "フラグメンテーション"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "ページング方式において、ページインは（A）から（B）にページを移すことをいう。",
@@ -7690,7 +7735,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "softwareのページングにおいて読込み対象と読込むタイミングを決定するアルゴリズムは二種類ある。答えて",
@@ -7700,7 +7745,7 @@
                             ],
                             "memo": "ページングはプログラムやデータを分割して記憶領域を管理し、コンピュータの仮想記憶を実現するための方式です。ページングでは、仮想記憶(補助記憶装置)と実記憶(主記憶)間のデータの受け渡しをページという固定長の単位で行いますが、このページのやり取りは「ページフォールトが発生したときに主記憶のどのページを置換えるか」および「どのページをどのタイミングで主記憶に読み込むか」という二つのアルゴリズムに基づいて管理が行われます。\n前者の置換え対象を決定する方法としては、LRU(Least Recently Used)やFIFO(First In First Out)があり、後者の読込み対象と読込むタイミングを決定するアルゴリズムとしては、この設問で問われている「デマンドページング方式」や「プリページング方式」があります。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "デマンドページング方式はページの読込み対象と読込むタイミングを決定するアルゴリズムであるが、どのタイミングで読み込みを行うか。",
@@ -7768,7 +7813,7 @@
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "実行可能なタスクに対してプロセッサの使用権限を割り当てることを何という",
@@ -7820,11 +7865,11 @@
                         {
                             "problem": "ノンプリエンプティブ方式だけのスケジューリング方式はなにか？",
                             "answer": [
-                                "到着順"
+                                "到着順方式"
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 }
@@ -8225,7 +8270,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "以下高潮の説明。熱帯低気圧が接近すると、気圧が低下するため、海面が（A）",
@@ -8316,7 +8361,7 @@
                                 "ポンチョ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-29"
                         },
                         {
@@ -8326,7 +8371,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "山脈は二種類に分類できる。答えて",
@@ -8362,8 +8407,8 @@
                                 "アムステルダム"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
@@ -8577,8 +8622,8 @@
                                 "アスワンハイダム"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "北アメリカでは西経（A）度を境に、西側が（B）、東側が（C）",
@@ -8600,7 +8645,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "扇状地の一番上から順番に 扇頂→扇央→扇端 という名前がついています。扇頂の方が粒が（大きく・小さく）、扇端にいくほど粒が（大きく・小さく）なっていきます。",
@@ -8695,7 +8740,7 @@
                                 "極夜polar night"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-07"
                         },
                         {
@@ -8714,7 +8759,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "アメリカの乾燥地帯で行われている農業の方法を何という？",
@@ -8723,7 +8768,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "世界最大の湖は？",
@@ -8741,7 +8786,7 @@
                             ],
                             "memo": "https://livedoor.blogimg.jp/keppentyan/imgs/4/e/4ee04263-s.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "発展途上国の中でも、（アフリカ）のサハラ以南にある 最貧国とアジアの新興国・産油国などの格差を何という？",
@@ -8757,7 +8802,7 @@
                             "answer": [
                                 "フィヨルド",
                                 "リアス式海岸",
-                                "エスチュありー"
+                                "エスチュアリー"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8799,6 +8844,33 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "アスワンハイダムは何川に建設された？",
+                            "answer": [
+                                "ナイル川"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "フランスとスペインの境界にある山脈は？",
+                            "answer": [
+                                "ピレネー山脈"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "エスチュアリーとは",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 },
@@ -8862,7 +8934,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "ミシシッピ川の場所は？",
@@ -8871,7 +8943,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "エジプトの場所はどこ？",
@@ -8909,7 +8981,7 @@
                             ],
                             "memo": "ウラル山脈のすぐ東側を流れ、北極海に注ぎ込む川です。\n\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "ヴォルタ川はどこにありますか？",
@@ -8956,7 +9028,7 @@
                             ],
                             "memo": "まさにステップ気候という名前の由来はここから取られているのです。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "サンアンドレアス断層San Andreas Faultはどこにある？",
@@ -8976,7 +9048,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "アドリア海はどこにある？どの国に面している？",
@@ -9040,7 +9112,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "ポー川はどこの国で流れている？",
@@ -9058,8 +9130,8 @@
                                 "フランス、スペイン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "ベルギーはどの3つの国に囲まれているか？",
@@ -9070,16 +9142,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "トルコの下には何があるか",
                             "answer": [
-                                "地中海、しりあ"
+                                "地中海、シリア"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "ウズベキスタンの場所は？上と下には何がある？",
@@ -9116,7 +9188,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 },
@@ -9188,7 +9260,7 @@
                             "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "マジで雨が降らない砂漠気候ですが、ごくまれに短期の豪雨がくることがあります。  そんな豪雨のときは、普段は涸れていて水が流れていない川に水が流れます。  この川のことをなんという？",
+                            "problem": "滅多に雨が降らない砂漠気候にごくまれに短期の豪雨がくる。  そのときは、普段は涸れていて水が流れていない川に水が流れるがこの川のことをなんという？",
                             "answer": [
                                 "ワジ"
                             ],
@@ -9222,7 +9294,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "温帯 (B) の定義",
@@ -9267,7 +9339,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "亜寒帯冬季少雨気候をアルファベットで表すと",
@@ -9496,8 +9568,8 @@
                                 "ニモニックコードMnemonic Code"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-08"
                         },
                         {
                             "problem": "地震の大きさを表す単位3",
@@ -9604,7 +9676,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-08"
                         }
                     ]
                 }
@@ -9694,7 +9766,7 @@
                             "last_answered_date": "2025-04-07"
                         },
                         {
-                            "problem": "LRSの意味は？",
+                            "problem": "azure のstorage の冗長オプションであるLRSの意味は？",
                             "answer": [
                                 "（プライマリ・リージョンの）１つのデータセンター内の３つの物理ディスクへ、データを同期的にコピーします。\n\nそのため、２つのディスクが壊れてしまった場合でも、引き続きデータを利用することができます。"
                             ],
@@ -9709,6 +9781,15 @@
                                 "file storage",
                                 "queue storage",
                                 "table storage"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "リソースに対して、どのようなアクションがあったかを記録するログは？",
+                            "answer": [
+                                "activity log"
                             ],
                             "memo": "",
                             "is_correct": 0,
