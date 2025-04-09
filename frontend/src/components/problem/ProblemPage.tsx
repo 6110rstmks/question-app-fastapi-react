@@ -24,27 +24,49 @@ const ProblemPage: React.FC = () => {
         handleNavigateToProblemReviewPage,
     } = useProblemPage(problemData);
 
-    // レビューモードが終わったら、終了画面を表示
-    if (reviewFlg && currentReviewProblemIndex >= unsolvedProblems.length) {
-        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />
-    }
+    const isNormalFinished = currentProblemIndex >= problemData.length;
+    const isReviewFinished = reviewFlg && currentReviewProblemIndex >= unsolvedProblems.length;
 
-    // 通常出題が終わったら、終了画面を表示
-    if (currentProblemIndex >= problemData.length) {
-        return <ProblemComplete unsolvedCount={unsolvedProblems.length} onReview={handleNavigateToProblemReviewPage} />
+    if (isNormalFinished || isReviewFinished) {
+        return (
+            <ProblemComplete
+                unsolvedCount={unsolvedProblems.length}
+                onReview={handleNavigateToProblemReviewPage}
+            />
+        );
     }
 
     return (
         <div>
             <ProblemNormal
                 reviewFlg={reviewFlg}
-                problem={reviewFlg ? unsolvedProblems[currentReviewProblemIndex] : problemData[currentProblemIndex]}
-                currentProblemIndex={reviewFlg ?  currentReviewProblemIndex2: currentProblemIndex}
-                problemLength={reviewFlg ? totalReviewProblemIndex : problemData.length}
+                problem={
+                    reviewFlg 
+                        ? unsolvedProblems[currentReviewProblemIndex] 
+                        : problemData[currentProblemIndex]
+                }
+                currentProblemIndex={
+                    reviewFlg 
+                        ?  currentReviewProblemIndex2
+                        : currentProblemIndex
+                }
+                problemLength={
+                    reviewFlg 
+                        ? totalReviewProblemIndex 
+                        : problemData.length
+                }
                 showAnswer={showAnswer}
                 onShowAnswer={() => setShowAnswer(true)}
-                onSolved={reviewFlg ? handleAnswerSolvedReview : handleAnswerSolved}
-                onUnsolved={reviewFlg ? handleAnswerUnsolvedReview : handleAnswerUnsolved}
+                onSolved={
+                    reviewFlg 
+                        ? handleAnswerSolvedReview 
+                        : handleAnswerSolved
+                }
+                onUnsolved={
+                    reviewFlg 
+                        ? handleAnswerUnsolvedReview 
+                        : handleAnswerUnsolved
+                }
             />
         </div>
     );

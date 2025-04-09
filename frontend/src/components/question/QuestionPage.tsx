@@ -110,9 +110,9 @@ const QuestionPage: React.FC = () => {
                             }`}
                             onClick={handleUpdateIsCorrect}
                         >
-                            {question?.is_correct === SolutionStatus.NOT_SOLVED ? '不正解' :
-                            question?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? '一時的に正解' :
-                            '正解'}
+                            {question?.is_correct === SolutionStatus.NOT_SOLVED ? 'incorrect' :
+                            question?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? 'temp correct' :
+                            'correct'}
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ const QuestionPage: React.FC = () => {
                     }`}
                     onClick={() => setShowAnswer(!showAnswer)}
                 >
-                    {showAnswer ? '答えを隠す' : '答えを表示する'}
+                    {showAnswer ? 'Hide Answer' : 'Display answer'}
                 </div>
                 <div
                     className={`${styles.answerTextBox} ${
