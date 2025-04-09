@@ -109,8 +109,8 @@
                                 "transit gateway"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "VPC間でのせつぞくにおいて、ネットワーク構成が複雑な場合は二つある方法のうちどちらを選ぶか。",
@@ -947,6 +947,33 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "なぜaws elasticacheが必要なのか",
+                            "answer": [
+                                "データベースへの読み書きが増えて、データベースからのレスポンスが遅くなるが、インメモリデータベースを使用することでキャッシュとして中間で保存することでいつでもすぐに渡せる状態にしておく"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-09"
+                        },
+                        {
+                            "problem": "aws elasticacheについてmemcachedとredisのうちシングルスレッドはどちらか？",
+                            "answer": [
+                                "redis"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-09"
+                        },
+                        {
+                            "problem": "aws elasticacheについて文字列、リスト、セット、ソートセット、ハッシュテーブル、地理空間、ストリームなどのデータ構造を格納できるのはredis?memcached?",
+                            "answer": [
+                                "redis"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-09"
                         }
                     ]
                 },
@@ -1649,8 +1676,8 @@
                                 "    \\textcolor{blue}{\\text{平面}} \n    \\overrightarrow{AP} = k \\overrightarrow{AB} \\text{ となる実数 } k \\text{ がある}  \\iff \\overrightarrow{OP} = s \\overrightarrow{OA} + t \\overrightarrow{OB} \\quad (s + t = 1) \\\\\n    \\textcolor{blue}{\\text{空間}} \n    \\overrightarrow{AP} = k \\overrightarrow{AB} \\text{ となる実数 } k \\text{ がある} 　\\iff \\overrightarrow{OP} = s \\overrightarrow{OA} + t \\overrightarrow{OB} \\quad (s + t = 1)\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "vec a とvector bがlinear independence <=>",
@@ -1750,7 +1777,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "1の3乗根でつかう方程式",
@@ -4894,7 +4921,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "循環器疾患",
@@ -6704,13 +6731,13 @@
                     "name": " 攻撃手法",
                     "questions": [
                         {
-                            "problem": "SYNフラッド（ハーフオープン攻撃）とは？",
+                            "problem": "SYNフラッド（ハーフオープン攻撃）とは？また、SYNパケットとは？",
                             "answer": [
                                 "攻撃者はSYNパケットをひたすら送り続け、サーバーのリソースを消費させることでサービスを停止させます。この一連の攻撃は自動化されたツールやボットネットを利用して行われることが多く、その規模は大きくなりがちです。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "主にマルウェア感染によって作られた「ボットネット」に命令を送り、制御する遠隔攻撃用のサーバーをなんという？",
@@ -6810,8 +6837,8 @@
                                 "クライアント側で公開鍵\nサーバ側で秘密鍵"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "SSLの流れにおいて、クライアントからのSSLの要求に対して、（A）は証明書をクライアントに送付する。",
@@ -7176,7 +7203,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-09"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "CPUの主な演算装置は2つあります。それらを答えよ。",
@@ -7813,7 +7840,7 @@
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "実行可能なタスクに対してプロセッサの使用権限を割り当てることを何という",
@@ -8312,7 +8339,7 @@
                         {
                             "problem": "ディナルアルプス山脈の場所はどこ？",
                             "answer": [
-                                ""
+                                "Dinaric Alps\nヨーロッパ南東部、バルカン半島の西部を占める山脈"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8426,7 +8453,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "国内でカルスト地形が見られる場所",
@@ -8786,7 +8813,7 @@
                             ],
                             "memo": "https://livedoor.blogimg.jp/keppentyan/imgs/4/e/4ee04263-s.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "発展途上国の中でも、（アフリカ）のサハラ以南にある 最貧国とアジアの新興国・産油国などの格差を何という？",
@@ -8852,7 +8879,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "フランスとスペインの境界にある山脈は？",
@@ -8934,7 +8961,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "ミシシッピ川の場所は？",
@@ -8995,12 +9022,12 @@
                         {
                             "problem": "アンデス山脈はどこか？また、アンデス山脈は新期造山帯？古期造山帯？",
                             "answer": [
-                                "南アフリカ",
+                                "アフリカ",
                                 "新規造山帯"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "アペニン山脈はどこにある？",
@@ -9009,7 +9036,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "ベトナムの場所は？左には何がある？",
@@ -9019,7 +9046,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-09"
                         },
                         {
                             "problem": "カザフステップはどこ？",
@@ -9625,8 +9652,8 @@
                                 "return of end\n当期純利益は損益計算書の最後の項目"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "設備投資などの費用を一定期間に配分する会計処理のことを何という？",
@@ -9694,8 +9721,8 @@
                                 "CSR"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-09"
                         }
                     ]
                 }
@@ -9794,6 +9821,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "Microsoft Azure が提供する SSL/TLS 証明書の一種で、Azure 上の Web アプリケーション（App Service）に HTTPS 通信を簡単に導入するためのサービスは？",
+                            "answer": [
+                                "App Service 証明書"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-09"
                         }
                     ]
                 }
