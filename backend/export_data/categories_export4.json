@@ -2521,9 +2521,9 @@
                                 "二核性細胞",
                                 "子実体fruiting body"
                             ],
-                            "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png",
+                            "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png\n\nいい覚え方ないかな",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "What animals have echolocation?3",
@@ -2584,6 +2584,33 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "粘菌は菌類ですか。",
+                            "answer": [
+                                "違う。原生生物に分類される"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "菌類において、菌糸が集まって胞子を作る構造を何という・",
+                            "answer": [
+                                "子実体"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "鞭毛をもつ胞子を作る菌類はなにか？",
+                            "answer": [
+                                "ツボカビ類"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 },
@@ -2651,6 +2678,60 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "唾液に含まれる消化酵素は・",
+                            "answer": [
+                                "アミラーゼ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "膵液は3大栄養素すべてを分解する消化酵素を持っているか？",
+                            "answer": [
+                                "持っている。（アミラーゼ、トリプシン、リパーゼ）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "腸液に含まれるデンプンを分解する消化酵素は",
+                            "answer": [
+                                "まるたーぜ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "胃液から出るタンパク質を分解する消化酵素は？",
+                            "answer": [
+                                "ペプシン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "生物のSGLTとは何の略",
+                            "answer": [
+                                "sodium glucose cotransporter"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "生物におけるGLUTとは？",
+                            "answer": [
+                                "glucose transporter"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 },
@@ -3299,6 +3380,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-07"
+                        },
+                        {
+                            "problem": "細胞でどんな遺伝子が発現しているか調べる方法",
+                            "answer": [
+                                "DNA マイクロアレイ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "cDNAのcはどういう意味ですか？",
+                            "answer": [
+                                "complementary 相補的な"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 },
@@ -3838,8 +3937,8 @@
                                 "生じる"
                             ],
                             "memo": "反対に、カルビンベンソン回路において、水素を与えて還元する（酸化の反対）にはATPを与えてあげてPGAからGAPを生成する。\n\n上記と一緒に覚えてあげると理解が深まる。\n\nまた、酸化的リン酸化は酸化するのを駆動力として、ADPにリン酸をくっつけてATPを生成する（ADP->ATP）\n\nつまり\n酸化（脱水素）する時→ATPをつける\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 },
@@ -3922,11 +4021,11 @@
                         {
                             "problem": "カルビン・ベンソン回路の1番目の反応では、（A）が生成されます。",
                             "answer": [
-                                "PGA"
+                                "PGA Phosphoglyceric Acid"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "植物中のRuBisCOは、C3回路の1番目の反応で、空気中からCO2を取り込む働きする。 しかし、RuBisCOは、強光下では（A）",
@@ -6659,7 +6758,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "a virulent disease",
@@ -8878,7 +8977,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "カスピ海が淡水湖ではなく塩湖である理由は？",
@@ -8895,6 +8994,15 @@
                                 "バイカル湖"
                             ],
                             "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "チベット高原で放牧している動物は？",
+                            "answer": [
+                                "ヤク"
+                            ],
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm7T7vx1GU2-o6q0w6pAmhYKfn8gv_V7murA&s",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-10"
                         }
@@ -8968,7 +9076,7 @@
                                 "アメリカ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-08"
                         },
                         {
@@ -9054,7 +9162,7 @@
                             ],
                             "memo": "まさにステップ気候という名前の由来はここから取られているのです。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "サンアンドレアス断層San Andreas Faultはどこにある？",
@@ -9081,7 +9189,7 @@
                             "answer": [
                                 "イタリア、クロアチア、モンテネグロ、アルバニア"
                             ],
-                            "memo": "",
+                            "memo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Adriatic_Sea_map.png/240px-Adriatic_Sea_map.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
                         },
@@ -9242,6 +9350,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "中国の上にある国はなんですか？",
+                            "answer": [
+                                "モンゴル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 },
@@ -9354,9 +9471,9 @@
                             "answer": [
                                 "最寒月平均気温 −3℃〜18℃"
                             ],
-                            "memo": "",
+                            "memo": "一方熱帯の定義は\n最寒月平均気温 18℃いじょう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-10"
                         },
                         {
                             "problem": "氷雪気候をアルファベットで表すと",
