@@ -100,7 +100,7 @@
                             ],
                             "memo": "いい",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "VPC間で接続する方法は二つを答えて",
@@ -1241,7 +1241,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "(A)を利用することで、オンプレミスのADにあるユーザ情報を使用して、AWSアプリケーションに接続することができる。",
@@ -1615,7 +1615,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "2次方程式の複素数解の武器4",
@@ -1645,7 +1645,7 @@
                             ],
                             "memo": "2022大阪 NO.1",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -1785,8 +1785,8 @@
                                 "w^2 + w + 1 = 0"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "logarithmをみたときにまずやること",
@@ -2310,9 +2310,9 @@
                         {
                             "problem": "卵形成に関して卵原細胞から最後の卵までの細胞のDNA量の変化をグラフで描いて。横軸は間期、第一分裂、第二分裂の順番",
                             "answer": [
-                                "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png"
+                                ""
                             ],
-                            "memo": "",
+                            "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-06"
                         },
@@ -2367,14 +2367,14 @@
                     "name": "taxnomy",
                     "questions": [
                         {
-                            "problem": "旧口動物のうち脱皮動物を二つ答えよ",
+                            "problem": "旧口動物Protostomeのうち脱皮動物を二つ答えよ",
                             "answer": [
                                 "節足動物",
                                 "線形動物"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "Do fungus have cell wall？",
@@ -2437,7 +2437,7 @@
                                 "あおかび"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-03-23"
                         },
                         {
@@ -2586,9 +2586,9 @@
                             "last_answered_date": "2025-04-07"
                         },
                         {
-                            "problem": "粘菌は菌類ですか。",
+                            "problem": "粘菌Slime moldは菌類ですか。",
                             "answer": [
-                                "違う。原生生物に分類される"
+                                "違う。原生生物protistに分類される"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -2713,7 +2713,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "生物のSGLTとは何の略",
@@ -3410,8 +3410,8 @@
                                 "腎臓の集合管での水分吸収を促進"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "What is a class of steroid hormones that regulates salt and water balance?",
@@ -3582,7 +3582,7 @@
                     "name": "plant hormone",
                     "questions": [
                         {
-                            "problem": "光受容体であるクリプトクロムは何色の光を受容する？",
+                            "problem": "光受容体であるクリプトクロムCryptochromeは何色の光を受容する？",
                             "answer": [
                                 "blue"
                             ],
@@ -3596,7 +3596,7 @@
                                 "アブシシン酸"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-13"
                         },
                         {
@@ -3735,7 +3735,7 @@
                         {
                             "problem": "落葉と落果を促進する植物ホルモンは？",
                             "answer": [
-                                "エチレン"
+                                "ethylene"
                             ],
                             "memo": "",
                             "is_correct": 2,
@@ -4162,7 +4162,7 @@
                                 "カシ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-29"
                         },
                         {
@@ -4172,7 +4172,7 @@
                                 "横軸→光の強さ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-05"
                         },
                         {
@@ -4225,9 +4225,9 @@
                         {
                             "problem": "陽樹と陰樹の光合成曲線を書いてください",
                             "answer": [
-                                "https://cdn-ak.f.st-hatena.com/images/fotolife/B/BambooBornY/20200706/20200706201649.png"
+                                ""
                             ],
-                            "memo": "",
+                            "memo": "https://cdn-ak.f.st-hatena.com/images/fotolife/B/BambooBornY/20200706/20200706201649.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-07"
                         },
@@ -4239,7 +4239,7 @@
                                 "荒原"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-08"
                         }
                     ]
@@ -4342,7 +4342,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "在庫投資が原因で起こる、周期約４年の景気循環を、発見者にちなんで何の波と呼ぶか。",
@@ -4794,7 +4794,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 }
@@ -5947,8 +5947,8 @@
                                 "見逃した場合や復習が必要な場合は"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "arsenal",
@@ -6641,7 +6641,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "ecological system",
@@ -7866,7 +7866,7 @@
                         {
                             "problem": "人が誤操作をしたとしても事故につながらない、または誤操作自体が起きないようにすることで、安全を守ることができる設計を何という？",
                             "answer": [
-                                "フールプルーフ"
+                                "フールプルーフfool proof"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8515,7 +8515,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "カルスト地形はどのようにして形成されますか？",
@@ -8743,7 +8743,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "扇状地の一番上から順番に 扇頂→扇央→扇端 という名前がついています。扇頂の方が粒が（大きく・小さく）、扇端にいくほど粒が（大きく・小さく）なっていきます。",
@@ -8862,11 +8862,11 @@
                         {
                             "problem": "アメリカの乾燥地帯で行われている農業の方法を何という？",
                             "answer": [
-                                "センターピボット"
+                                "センターピボットCenter-pivot irrigation"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "世界最大の湖は？",
@@ -8930,8 +8930,8 @@
                                 "総輸出総額に対して、GDPの値が小さい→総人口が少ない"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "堆積土は二種類に分類できる",
@@ -8968,7 +8968,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "カスピ海の下には何の国がある？",
@@ -8986,7 +8986,7 @@
                             ],
                             "memo": "カスピ海と間違えた",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "かつて氷期のころ氷河に覆われていた湖は（氷河湖）？",
@@ -9031,10 +9031,10 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
-                            "problem": "播種とはどういう意味か",
+                            "problem": "播種（はしゅ）とはどういう意味か",
                             "answer": [
                                 "種を蒔く"
                             ],
@@ -9080,7 +9080,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "EUが外国の安い穀物に対抗するために、補助金を支払う政策をなんという？",
@@ -9117,6 +9117,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "滅多に雨が降らない砂漠気候にごくまれに短期の豪雨がくる。  そのときは、普段は涸れていて水が流れていない川に水が流れるがこの川のことをなんという？",
+                            "answer": [
+                                "ワジWadi "
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-10"
                         }
                     ]
                 },
@@ -9241,12 +9250,12 @@
                         {
                             "problem": "アンデス山脈はどこか？また、アンデス山脈は新期造山帯？古期造山帯？",
                             "answer": [
-                                "アフリカ",
+                                "南アメリカ",
                                 "新規造山帯"
                             ],
                             "memo": "https://social-line.com/wp-content/uploads/2019/04/e76729a62abcbe8690f7a13dab65237e.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "アペニン山脈はどこにある？",
@@ -9255,7 +9264,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "ベトナムの場所は？左には何がある？",
@@ -9299,11 +9308,11 @@
                         {
                             "problem": "アドリア海はどこにある？どの国に面している？",
                             "answer": [
-                                "イタリア、クロアチア、モンテネグロ、アルバニア"
+                                "イタリア、クロアチア、ボスニアへルツェ語尾な、モンテネグロ、アルバニア"
                             ],
-                            "memo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Adriatic_Sea_map.png/240px-Adriatic_Sea_map.png",
+                            "memo": "https://kotokurabe.com/makoto/wp-content/uploads/nature/mediterranean-sea-03.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "アタカマ砂漠の場所",
@@ -9330,7 +9339,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWhvexMmnRyW8EQwS1dfp9GD3T40xRiF7HDw&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "エジプトの左と下はなんですか",
@@ -9358,7 +9367,7 @@
                             ],
                             "memo": "https://stat.ameba.jp/user_images/20141214/13/worldhistory-univ/43/fe/p/o0800060013158442497.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "ポー川はどこの国で流れている？",
@@ -9425,7 +9434,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "アルプス山脈はどこにある？",
@@ -9461,7 +9470,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "中国の上にある国はなんですか？",
@@ -9488,7 +9497,7 @@
                             ],
                             "memo": "https://cdn-ak.f.st-hatena.com/images/fotolife/s/studyinnetherlands/20190810/20190810111746.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "ペルシャ湾どこ",
@@ -9512,6 +9521,24 @@
                             "problem": "ナミビアの下には何の国がある？",
                             "answer": [
                                 "南アフリカ\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "ナイジェリアはどの大陸にあるか",
+                            "answer": [
+                                "アフリカ大陸"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "テムズ川　どの国らへん",
+                            "answer": [
+                                "イギリス"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9587,15 +9614,6 @@
                             "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "滅多に雨が降らない砂漠気候にごくまれに短期の豪雨がくる。  そのときは、普段は涸れていて水が流れていない川に水が流れるがこの川のことをなんという？",
-                            "answer": [
-                                "ワジWadi "
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
-                        },
-                        {
                             "problem": "南半球の西岸海洋性気候の国はなにがあるか",
                             "answer": [
                                 "オーストラリアの南東端、ニュージーランド"
@@ -9638,8 +9656,8 @@
                                 "EF"
                             ],
                             "memo": " F は「Frost(極寒)」の F です。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "ステップ気候はアルファベットでどのようにあらわす？",
@@ -9666,12 +9684,12 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "亜寒帯冬季少雨気候をアルファベットで表すと",
                             "answer": [
-                                "Dw"
+                                "Dw\nwが少雨を表す"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9683,7 +9701,7 @@
                                 "タイガ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-06"
                         },
                         {
@@ -9695,7 +9713,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "AfとAwの中間気候は？また中間の理由は？",
@@ -9704,7 +9722,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "西岸海洋性気候は二つの要因に注意する？それはなにとなにか",
@@ -9740,9 +9758,9 @@
                                 "10",
                                 "最暖月平均気温 10℃以上 → 樹木がギリギリ生育できるから\n"
                             ],
-                            "memo": "",
+                            "memo": "一方Eは最暖月平均気温 0°から10℃",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "熱帯モンスーン気候のいろいろなおぼえかたとしてコツはなに？",
@@ -9760,7 +9778,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "熱帯雨林気候の土壌は?",
@@ -9772,14 +9790,24 @@
                             "last_answered_date": "2025-03-06"
                         },
                         {
-                            "problem": "熱帯とは、最寒月平均気温、 （A）が（B）度以上という場所",
+                            "problem": "熱帯とは、最寒月平均気温が（B）度以上という場所",
                             "answer": [
-                                "最も寒い月の平均気温",
                                 "18"
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "温暖湿潤気候(Cfa)の定義",
+                            "answer": [
+                                "最寒月平均気温 ー3〜18℃ (Cの要素)\n",
+                                "最暖月平均気温 22℃以上 (aの要素)\n",
+                                "降水 1年中湿潤 (fの要素)\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -9856,7 +9884,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "西アジアにおいて、北回帰線のやや南にある都市は？",
@@ -9874,7 +9902,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
@@ -9901,7 +9929,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "ベトナムの人口一位の都市は？",
@@ -9910,7 +9938,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "タイの首都バンコクには何の工場が集積しているか",
@@ -9937,7 +9965,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "パキスタンの人口一位は？",
@@ -9946,12 +9974,75 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "トルコの人口一位は？",
                             "answer": [
                                 "イスタンブール\n首都のアンカラではない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "韓国の　仁川　何と読む",
+                            "answer": [
+                                "インチョン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "インドの首都は？",
+                            "answer": [
+                                "デリー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "カラチはケッペンの気候区分でどれに属するか",
+                            "answer": [
+                                "BW"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "フランス南部に位置する都市で、欧州航空宇宙産業の中心地として知られています。​特に、エアバスやATRの組み立て工場が所在している都市は？",
+                            "answer": [
+                                "トゥールーズ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "スイスの首都は？",
+                            "answer": [
+                                "チューリッヒ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "スペインのバルセロナは何の工業で有名か？",
+                            "answer": [
+                                "バルセロナ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "アメリカの首都",
+                            "answer": [
+                                "ワシントン"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9986,7 +10077,7 @@
                             "last_answered_date": "2025-04-11"
                         },
                         {
-                            "problem": "都市の階層分類",
+                            "problem": "都市の階層分類4",
                             "answer": [
                                 "国家的中心都市",
                                 "広域中心都市",
@@ -10084,7 +10175,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "ROEの計算式の覚え方",
@@ -10289,7 +10380,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-09"
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 }
