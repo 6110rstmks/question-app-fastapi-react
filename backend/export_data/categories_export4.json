@@ -179,7 +179,7 @@
                             ],
                             "memo": "参考サイト\nhttps://qiita.com/memomaruRey/items/af1cfa19a20071b48ffe",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "標準キューとFIFOキューのうち、配信順序をベストエフォートではなく、必ず保証したい場合は、どちらを使用するか？",
@@ -618,7 +618,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "AWSにおいて、CNAMEレコードでアクセスしたら何レコードを返すか",
@@ -1447,7 +1447,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "EBSの指標のIOPSについてせつめいしてください",
@@ -1605,7 +1605,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "4次方程式の複素数解の武器2",
@@ -1800,11 +1800,11 @@
                         {
                             "problem": "指数関数のinverse functionは？",
                             "answer": [
-                                "対数関数"
+                                "Logarithmic function"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "量化するとおこること",
@@ -1830,15 +1830,6 @@
                                 "\\frac{|a|}{3} (\\beta - \\alpha)^3\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
-                        },
-                        {
-                            "problem": "3分の公式を使う場面は？",
-                            "answer": [
-                                "二次関数とそれに接する接線、それと直線に囲まれた面積を求めるとき。"
-                            ],
-                            "memo": "https://manabitimes.jp/math/796",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-07"
                         },
@@ -1943,6 +1934,15 @@
                             "memo": "https://hiraocafe.com/note/shajikukasagata.html\nより早く解けるのだそう",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-04"
+                        },
+                        {
+                            "problem": "3分の公式を使う場面は？",
+                            "answer": [
+                                "二次関数とそれに接する接線、それと直線に囲まれた面積を求めるとき。"
+                            ],
+                            "memo": "https://manabitimes.jp/math/796\n\n\nhttps://res.cloudinary.com/bend/f_auto,q_auto/shikakutimes/s3/bend-image/796_1_13-260x300.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -2048,7 +2048,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -2374,7 +2374,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "Do fungus have cell wall？",
@@ -3375,11 +3375,11 @@
                         {
                             "problem": "ヌクレオチドの絵を描いてください",
                             "answer": [
-                                "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/3_1_1_1/k_sci_bio_3_1_1_1_image01.png"
+                                ""
                             ],
-                            "memo": "",
+                            "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/3_1_1_1/k_sci_bio_3_1_1_1_image01.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "細胞でどんな遺伝子が発現しているか調べる方法",
@@ -3509,7 +3509,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-09"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "nucleotideはヌクレオシドが何結合で連結しているか？",
@@ -3798,8 +3798,8 @@
                                 "cell cycle"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "細胞周期の間期を英語で何という？",
@@ -4761,13 +4761,13 @@
                         {
                             "problem": "window functionは3つに分類できる。こたえよ",
                             "answer": [
-                                "⚫︎Aggregate window functions\n",
+                                "⚫︎Aggregate window functions　集約関数\n",
                                 "⚫︎Value window functions\n",
                                 "⚫︎Ranking window functions"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "sqlにおいて内部結合と外部結合ではどちらが高速ですか.またその理由",
@@ -4786,6 +4786,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-02-20"
+                        },
+                        {
+                            "problem": "Ranking window functionsの関数の例は？",
+                            "answer": [
+                                "row_number()"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 }
@@ -4941,7 +4950,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "パリティとは？（IT用語）",
@@ -5839,8 +5848,8 @@
                                 "社会関係資本"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "gymnosperm",
@@ -6640,8 +6649,8 @@
                                 "生態系"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "vesicle　意味　アクセント",
@@ -6802,8 +6811,8 @@
                                 ""
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 }
@@ -6905,7 +6914,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -7039,7 +7048,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "先に（A）を書き込み、主記憶は後でまとめて書き変えるという方式をライトバック方式と呼ぶ。",
@@ -7332,6 +7341,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "主記憶装置から命令レジスタに命令を読み込むことを何という？",
+                            "answer": [
+                                "命令フェッチ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -7776,7 +7794,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "仮想記憶において、（A）と呼ばれる装置が仮想記憶と主記憶装置または補助記憶装置との対応付けを行なっている。この仕組みを（B）と呼ぶ。",
@@ -8252,7 +8270,7 @@
                             ],
                             "memo": "あれとごっちゃにならないように！",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
@@ -8488,7 +8506,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -8799,11 +8817,11 @@
                             "problem": "砂嘴が伸びて対岸にくっついた地形は？またそれによって囲まれた湖を何という",
                             "answer": [
                                 "砂州",
-                                "ラグーン"
+                                "ラグーンlagoon"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "砂嘴が伸びていって陸地とつながった島をなんという",
@@ -9013,7 +9031,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "播種とはどういう意味か",
@@ -9180,7 +9198,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "イランはどこにある？ イランの右には何の国がある？左側には何の国がある？",
@@ -9189,9 +9207,9 @@
                                 "右→アフガニスタン",
                                 "左→イラク"
                             ],
-                            "memo": "",
+                            "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -9276,7 +9294,7 @@
                             ],
                             "memo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Adriatic_Sea_map.png/240px-Adriatic_Sea_map.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "アタカマ砂漠の場所",
@@ -9380,7 +9398,7 @@
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "トルコの上には何がある？",
@@ -9557,7 +9575,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "チュニス（チュニジアの首都）のケッペンの気候区分は？またその理由は",
@@ -9594,7 +9612,7 @@
                             ],
                             "memo": " F は「Frost(極寒)」の F です。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "ステップ気候はアルファベットでどのようにあらわす？",
@@ -9756,8 +9774,8 @@
                                 "チュニスTunis"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "スペインの首都は？",
