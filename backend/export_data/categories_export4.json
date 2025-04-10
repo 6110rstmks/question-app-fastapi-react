@@ -1415,13 +1415,13 @@
                             "last_answered_date": "2025-04-07"
                         },
                         {
-                            "problem": "RDSのコスト状況を把握したいので、コストレポートを作成したい。どのサービスを使えば良い？",
+                            "problem": "RDSのコスト状況を把握したいので、コストレポートを作成したい。どのAWSサービスを使えば良い？",
                             "answer": [
                                 "Cost explorer"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -1447,7 +1447,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "EBSの指標のIOPSについてせつめいしてください",
@@ -1659,7 +1659,7 @@
                             ],
                             "memo": "https://hiraocafe.com/note/vector-area.html",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "空間ベクトルの共面条件（4点O、A、B、Cが同一空間にあるための条件）を書いて ",
@@ -6596,7 +6596,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "I think I'll be working at the Chicago office for the time being.",
@@ -9108,6 +9108,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "昼夜間人口比率の公式は",
+                            "answer": [
+                                "\\frac{昼人口}{夜人口} \\times 100"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -9593,7 +9602,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "チュニス（チュニジアの首都）のケッペンの気候区分は？またその理由は",
@@ -9783,7 +9792,7 @@
                                 "アンカラAnkara"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-10"
                         },
                         {
@@ -9875,6 +9884,33 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "ターチンは何の資源で有名か",
+                            "answer": [
+                                "油田"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "ソウルの人口およそ",
+                            "answer": [
+                                "1000万人　\n首都に一極集中　全人口の1/5"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "ベトナムの人口一位の都市は？",
+                            "answer": [
+                                "ホーチミン\n首都のハノイではない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -9889,6 +9925,32 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-09"
+                        }
+                    ]
+                },
+                {
+                    "name": "都市・人口",
+                    "questions": [
+                        {
+                            "problem": "昼夜間人口比率が100より小さい日本の都市（ベッドタウン）の例は",
+                            "answer": [
+                                "神奈川、奈良、兵庫\nこれらが90~95"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "都市の階層分類",
+                            "answer": [
+                                "国家的中心都市",
+                                "広域中心都市",
+                                "準広域中心都市",
+                                "地域中心都市"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 }
