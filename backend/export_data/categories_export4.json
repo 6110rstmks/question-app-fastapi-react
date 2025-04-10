@@ -179,7 +179,7 @@
                             ],
                             "memo": "参考サイト\nhttps://qiita.com/memomaruRey/items/af1cfa19a20071b48ffe",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "標準キューとFIFOキューのうち、配信順序をベストエフォートではなく、必ず保証したい場合は、どちらを使用するか？",
@@ -1605,7 +1605,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "4次方程式の複素数解の武器2",
@@ -1737,8 +1737,8 @@
                                 "triangleのすべての辺がinteger"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "ヘロンの公式を答えよ",
@@ -1755,8 +1755,8 @@
                                 "343"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "x^4 + x^2 + 1は相反方程式？",
@@ -2700,11 +2700,11 @@
                         {
                             "problem": "腸液に含まれるデンプンを分解する消化酵素は",
                             "answer": [
-                                "まるたーぜ"
+                                "マルターぜ"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "胃液から出るタンパク質を分解する消化酵素は？",
@@ -7446,7 +7446,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-11"
                         }
                     ]
                 },
@@ -7523,7 +7523,7 @@
                     "name": "DMA",
                     "questions": [
                         {
-                            "problem": "DMA制御方式ではDMAと、よばれる装置がCPUを介さずになにをおこなうか？",
+                            "problem": "DMA制御方式ではDMAコントローラとよばれる装置がCPUを介さずになにをおこなうか？",
                             "answer": [
                                 "Transfer data between memory and input /output(5大装置を想像してください"
                             ],
@@ -7537,7 +7537,7 @@
                                 "direct  memory　access"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -7546,13 +7546,13 @@
                                 "DMAコントローラ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-27"
                         },
                         {
                             "problem": "プログラム格納方式はDMA方式に比べてどのような欠点があるか？",
                             "answer": [
-                                "CPUへの負担が大きいので処理効率がよくない。（低速な入出力を待っている間にCPUは他の処理ができない）"
+                                "CPUへの負担が大きいので処理効率がよくない。CPUがデータ転送のすべてを制御します（低速な入出力を待っている間にCPUは他の処理ができない）"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -10109,13 +10109,13 @@
                             "last_answered_date": "2025-04-07"
                         },
                         {
-                            "problem": "ストレージアカウントとストレージ\"サービスのわかりやすい例え",
+                            "problem": "azureにおいてストレージアカウントとストレージ\"サービスのわかりやすい例え",
                             "answer": [
                                 "ストレージアカウントは「鍵」として機能し、その「鍵」を使ってさまざまな「部屋」（ストレージサービス）にアクセスし、データを「収納」する役割を担っています。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-04-11"
                         },
                         {
                             "problem": "Azureでデータを暗号化する際に使用されるキーの種類を二つ答えよ",
