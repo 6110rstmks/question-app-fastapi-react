@@ -30,8 +30,6 @@ const QuestionPage: React.FC = () => {
 
     const urlRegex = /(https?:\/\/[^\s]+)/g;
 
-
-
     const [
         changeSubcategoryModalIsOpen,
         setChangeSubcategoryModalIsOpen

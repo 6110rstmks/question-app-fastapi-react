@@ -5,6 +5,7 @@ import { useProblemPage } from "./hooks/useProblemPage"
 import { ProblemNormal } from "./ui/ProblemNormalPage"
 import { ProblemComplete } from "./ui/ProblemComplete"
 
+
 const ProblemPage: React.FC = () => {
     const location = useLocation()
     const problemData = location.state as Question[]

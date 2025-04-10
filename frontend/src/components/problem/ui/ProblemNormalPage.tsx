@@ -8,6 +8,7 @@ import styles from './ProblemNormal.module.css'
 import { BlockMath } from "react-katex";
 import Modal from 'react-modal'
 import QuestionEditModal from "../../question/QuestionEditModal";
+import RenderMemoWithLinks from '../../RenderMemoWithlinks';
 
 interface Props {
     reviewFlg: boolean
@@ -166,7 +167,7 @@ export const ProblemNormal: React.FC<Props> = ({
                                 <div className={styles.memoContent}>
                                     {localProblem.memo.split('\n').map((line, index) => (
                                         <React.Fragment key={index}>
-                                        {line}
+                                        {RenderMemoWithLinks(line)}
                                         <br />
                                         </React.Fragment>
                                     ))}
