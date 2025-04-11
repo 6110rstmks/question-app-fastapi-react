@@ -826,8 +826,8 @@
                                 "read replicas→スケーラビリティ\nシステムの負荷が増えたときに適切にリソースを拡張し、パフォーマンスを維持すること。\nパフォーマンスの維持→これが重要"
                             ],
                             "memo": "Use Multi-AZ deployments for High Availability/Failover and Read Replicas for read scalability.\nhttps://medium.com/awesome-cloud/aws-difference-between-multi-az-and-read-replicas-in-amazon-rds-60fe848ef53a",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "RDSにおいてマルチAZにはできなくて、read replicasにはできることを一つ挙げて。",
@@ -1924,7 +1924,7 @@
                             ],
                             "memo": "https://manabitimes.jp/math/796\n\n\nhttps://res.cloudinary.com/bend/f_auto,q_auto/shikakutimes/s3/bend-image/796_1_13-260x300.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "1/12公式(二次関数版)の公式を答えよ",
@@ -2057,9 +2057,9 @@
                             "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "逆行列が存在する条件",
+                            "problem": "逆行列inverse matirxが存在する条件",
                             "answer": [
-                                "det(A)=ad−bc　　\ndet(A) \\neq 0"
+                                "det(A)=ad−bc　　\ndet(A) \\neq 0\n行列式が0でない"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -4825,13 +4825,13 @@
                             "last_answered_date": "2025-02-16"
                         },
                         {
-                            "problem": "適当な基準値を選び，それより小さな値のグループと大きな値のグループにデータを分割する。同様にして，グループの中で基準値を選び，それぞれのグループを分割する。この操作を繰り返していく方法を何という",
+                            "problem": "適当な基準値を選び，それより小さな値のグループと大きな値のグループにデータを分割する。同様にして，グループの中で基準値を選び，それぞれのグループを分割する。この操作を繰り返していくアルゴリズムの方法を何という",
                             "answer": [
                                 "クイックソート"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 },
@@ -8588,11 +8588,11 @@
                         {
                             "problem": "秋から冬にかけてディナルアルプス山脈からアドリア海に向けて吹いてくる風を何という？",
                             "answer": [
-                                "ボラ"
+                                "ボラBora"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "気圧帯は、赤道から30度ごとに 低→（）→（）→（）　と繰り返される",
@@ -8614,7 +8614,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "海岸付近の陸地が沈降したり、海面が上昇したりすることで、海水が陸地に入り込んでできた地形を何という？",
@@ -8905,8 +8905,8 @@
                                 "南南問題"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "沈水海岸の例3",
@@ -9009,7 +9009,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "シベリア南部にある三日月型の断層湖はなんですか？",
@@ -9773,7 +9773,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "ステップ気候は、砂漠気候を（A）分布している",
@@ -9785,13 +9785,13 @@
                             "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "砂漠気候(BW)の条件：降水量：概ね年降水量（A）未満",
+                            "problem": "砂漠気候(BW)の条件：降水量：概ね年降水量が（A）",
                             "answer": [
-                                "250mm"
+                                "250mm未満"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "AfとAwの中間気候は？また中間の理由は？",
@@ -9943,7 +9943,7 @@
                                 "トロント"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-28"
                         },
                         {
@@ -10071,7 +10071,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "ムンバイは何の工業で有名か？",
@@ -10187,7 +10187,7 @@
                                 "オタワ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-12"
                         },
                         {
@@ -10197,7 +10197,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "ブラジルの現在の首都は",
@@ -10215,7 +10215,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "オーストリアの首都は",
