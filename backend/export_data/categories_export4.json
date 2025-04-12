@@ -2298,6 +2298,62 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "Snの参加数は2種類ある。答えて、またどちらが安定",
+                            "answer": [
+                                "2+",
+                                "4+. こちらの方が安定"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "酸性の乾燥剤を二つ挙げよ",
+                            "answer": [
+                                "十酸化四リン",
+                                "濃硫酸"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "鉄の精錬において鉄鉱石（酸化鉄）の還元に一酸化炭素を利用しているが、それは一酸化炭素のどのような性質を利用している。",
+                            "answer": [
+                                "一酸化炭素は不安定なため、相手の酸素を奪って安定な二酸化炭素になろうとする働き"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "銑鉄は不純物である炭素が取り除かれ純度の高いものにしたものを何という",
+                            "answer": [
+                                "鋼"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "SiO2 + 4HFの反応を書いてください",
+                            "answer": [
+                                "SiF4 + 2H2O"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "鉱石にはFe2O3だけではなく、SiO2やAl2O3が不純物として存在しており、これらが石灰石の熱分解で生じたCaOと反応して 生じたCaSiO3やCa(AlO2)2を何という",
+                            "answer": [
+                                "スラグ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 }
@@ -10834,8 +10890,8 @@
                                 "Premium ファイル共有"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "azureのログのデータベースのサービスは何？",
