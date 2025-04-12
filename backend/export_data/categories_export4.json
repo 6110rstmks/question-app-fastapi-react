@@ -315,8 +315,9 @@
                             "last_answered_date": "2025-02-12"
                         },
                         {
-                            "problem": "RDSではリードレプリカを最大5個まで作成できるが、Auroraではリードレプリカを何個作成できるか",
+                            "problem": "RDSとAuroraにおいてリードレプリカをそれぞれ何個まで作成できるか",
                             "answer": [
+                                "5",
                                 "15"
                             ],
                             "memo": "",
@@ -757,8 +758,9 @@
                     "name": "RDS",
                     "questions": [
                         {
-                            "problem": "RDSではリードレプリカを最大5個まで作成できるが、Auroraではリードレプリカを何個作成できるか",
+                            "problem": "RDSとAuroraにおいてリードレプリカをそれぞれ何個まで作成できるか",
                             "answer": [
+                                "5",
                                 "15"
                             ],
                             "memo": "",
@@ -768,11 +770,11 @@
                         {
                             "problem": "lambda関数からrdsに接続して使用したい場合は、何を使用するのが良いか",
                             "answer": [
-                                "rds proxy"
+                                "RDS proxy"
                             ],
                             "memo": "Lambda を利用してrdsにアクセスする際は　rds proxyと覚える。\n",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "global databaseはRDSの機能か。auroraの機能か",
@@ -780,7 +782,7 @@
                                 "aurora"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-02-23"
                         },
                         {
@@ -846,6 +848,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-09"
+                        },
+                        {
+                            "problem": "AWS RDSにおいてオートスケールは可能か？",
+                            "answer": [
+                                "できない。自分で判断してスケールアップする必要がある。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 },
@@ -1288,6 +1299,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "DynamoDBはトランザクション管理が可能か？",
+                            "answer": [
+                                "不可能。RDBMSではないため"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 },
