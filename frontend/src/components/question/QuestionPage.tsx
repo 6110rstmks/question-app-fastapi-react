@@ -28,8 +28,6 @@ const QuestionPage: React.FC = () => {
 
     const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
 
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-
     const [
         changeSubcategoryModalIsOpen,
         setChangeSubcategoryModalIsOpen
@@ -95,7 +93,7 @@ const QuestionPage: React.FC = () => {
                             {question?.problem && question.problem.includes('\\') ? (
                                 <BlockMath math={question.problem} />
                             ) : (
-                                <span>{question?.problem}</span>
+                                <span>{RenderMemoWithLinks(question?.problem || '')}</span>
                             )}
                         </div>
                     </div>

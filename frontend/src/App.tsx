@@ -27,7 +27,6 @@ const App: React.FC = () => {
       <Navbar isAuth={isAuth} />
       <Routes>
         {/* 最初の画面 */}
-        {/* <Route path="/" element={<Navigate to="/categories/home" replace />} /> */}
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/categories/home" element={<Home />} />
 
@@ -36,10 +35,11 @@ const App: React.FC = () => {
 
         {/* 問題出題画面 */}
         <Route path="/set_question" element={<SetProblem />} />
-        {/* <Route path="/createquestion" element={<CreateQuestion category_id={}/>} /> */}
+
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth} />} />
         <Route path="/signup" element={<Signup />} />
+        
         <Route path="/category/:categoryId" element={<CategoryPage />} />
         <Route path="/subcategory/:subcategoryId" element={<SubcategoryPage />} />
         <Route path="/question/:questionId" element={<QuestionPage />} />

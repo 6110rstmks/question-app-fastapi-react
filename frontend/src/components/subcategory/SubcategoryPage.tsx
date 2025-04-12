@@ -5,6 +5,7 @@ import QuestionCreate from '../question/QuestionCreateModal';
 import styles from "./SubcategoryPage.module.css";
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
 import { handleNavigateToCategoryPage, handleNavigateToQuestionPage } from '../../utils/navigate_function';
+import { BlockMath } from 'react-katex'
 
 const SubcategoryPage: React.FC = () => {
     const navigate = useNavigate();
@@ -12,6 +13,9 @@ const SubcategoryPage: React.FC = () => {
 
     const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>();
     const subcategoryId = Number(subcategoryIdStr)
+
+    const isLatex = (text: string) => text.includes('\\')
+
 
     enum SolutionStatus {
         NOT_SOLVED = 0,
@@ -116,8 +120,14 @@ const SubcategoryPage: React.FC = () => {
                             <div key={index}>
                                 {answer.split('\n').map((line, i) => (
                                 <React.Fragment key={i}>
-                                    {line}
-                                    <br />
+                                    {isLatex(line) ? (
+                                        <BlockMath math={line} />
+                                    ) : (
+                                        <>
+                                        {line}
+                                        <br />
+                                        </>
+                                    )}
                                 </React.Fragment>
                                 ))}
                             </div>
