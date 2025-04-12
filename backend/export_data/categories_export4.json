@@ -2356,6 +2356,21 @@
                             "last_answered_date": "2025-04-12"
                         }
                     ]
+                },
+                {
+                    "name": "amino acid",
+                    "questions": [
+                        {
+                            "problem": "ベンゼン環をもつamino acid2",
+                            "answer": [
+                                "チロシン",
+                                "フェニルアラニン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        }
+                    ]
                 }
             ]
         },
