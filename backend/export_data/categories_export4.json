@@ -638,6 +638,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-06"
+                        },
+                        {
+                            "problem": "ドメイン名が example.com の場合、www.example.com、api.example.comはzone apexか？",
+                            "answer": [
+                                "違う。example.comはzone apex"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 },
@@ -1460,7 +1469,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "AWSアカウント作成時に最初に発行されるユーザを何という？",
@@ -1776,8 +1785,8 @@
                                 "内"
                             ],
                             "memo": "問題例くれ",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "Heron’s formulaいつつかう？",
@@ -1971,8 +1980,8 @@
                                 "二次関数とそれに接する接線、それと直線に囲まれた面積を求めるとき。"
                             ],
                             "memo": "https://manabitimes.jp/math/796\n\n\nhttps://res.cloudinary.com/bend/f_auto,q_auto/shikakutimes/s3/bend-image/796_1_13-260x300.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "1/12公式(二次関数版)の公式を答えよ",
@@ -2111,7 +2120,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -2123,7 +2132,7 @@
                             "answer": [
                                 "階差をとる",
                                 "係数比較してむりやり等比数列の形にする",
-                                "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n"
+                                "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n\\quad a_{n+1} = 2a_n + n^2 - 2n -3"
                             ],
                             "memo": "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
@@ -2326,7 +2335,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "銑鉄は不純物である炭素が取り除かれ純度の高いものにしたものを何という",
@@ -2340,11 +2349,11 @@
                         {
                             "problem": "SiO2 + 4HFの反応を書いてください",
                             "answer": [
-                                "SiF4 + 2H2O"
+                                "-> SiF4 + 2H2O"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "鉱石にはFe2O3だけではなく、SiO2やAl2O3が不純物として存在しており、これらが石灰石の熱分解で生じたCaOと反応して 生じたCaSiO3やCa(AlO2)2を何という",
@@ -2354,6 +2363,78 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "塩素の単体と水の反応式を描いてください。",
+                            "answer": [
+                                "Cl2 + H2O -> HCl + HClO"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "ハロゲンの酸化数は-1が最小だが、最大でどの酸化数をとるか。",
+                            "answer": [
+                                "+7"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "ハロゲンの単体の中で一番酸化力の高い単体はなんですか？",
+                            "answer": [
+                                "フッ素"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "フッ化水素は弱酸、強酸？またその理由は",
+                            "answer": [
+                                "弱酸\nハロゲンは下にいくほど、H-Xの結合が弱くなり電離しやすくなる。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "AgIは濃アンモニア水には溶解せず、（A）に溶解する",
+                            "answer": [
+                                "チオ硫酸ナトリウム水溶液"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "アルカリ金属は天然には単体として存在しない。どうしてか",
+                            "answer": [
+                                "非常に反応性が高いから.\n最外殻電子が1個。非常にイオン化しやすい"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
+                        },
+                        {
+                            "problem": "アルカリ金属は天然には存在しないが、どのようにして得られるか？",
+                            "answer": [
+                                "溶融塩電解"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
+                        },
+                        {
+                            "problem": "Na2CO3・10H2Oは空気中に放置すると水和水を失う性質を持つ。これを何という",
+                            "answer": [
+                                "風解性"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
                         }
                     ]
                 },
@@ -2669,7 +2750,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "原生動物の例3",
@@ -2999,13 +3080,13 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
-                            "problem": "脊椎動物の中枢神経系は（A）（B）からなる",
+                            "problem": "脊椎動物Vertebrateの中枢神経系は（A）（B）からなる",
                             "answer": [
                                 "脳　脊髄"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-14"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "大脳の外側である大脳皮質は二つに分けれる。なにとなに",
@@ -3061,8 +3142,8 @@
                                 "求心性神経"
                             ],
                             "memo": "https://www.youtube.com/watch?v=7dbv7EwJW2s\n13:07",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "中枢神経からの情報を伝える神経を何という？",
@@ -3071,7 +3152,7 @@
                             ],
                             "memo": "外に向かって信号を送るイメージで覚えれば良い",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "ニューロンの軸索の膜電位の測定において膜の内外における電位差を何という",
@@ -3156,6 +3237,27 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "新皮質と辺縁皮質のうち言語機能を司るのはどっちか",
+                            "answer": [
+                                "新皮質"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
+                        },
+                        {
+                            "problem": "大脳新皮質は4つの領域に分けることができる。答えて",
+                            "answer": [
+                                "前頭葉",
+                                "頭頂葉",
+                                "側頭葉",
+                                "後頭葉"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
                         }
                     ]
                 },
@@ -4273,7 +4375,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "C4植物における光合成は二種類の細胞で行われる。答えて",
@@ -4705,6 +4807,47 @@
                             "last_answered_date": "2025-03-26"
                         }
                     ]
+                },
+                {
+                    "name": "DNS",
+                    "questions": [
+                        {
+                            "problem": "ネームサーバが管理するドメイン情報の1レコードを何という？",
+                            "answer": [
+                                "リソースレコード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "リソースレコードが持つカラムの一つであるクラスの例は？",
+                            "answer": [
+                                "IN"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "DNS以外の名前解決としてどのような方法があるか",
+                            "answer": [
+                                "Hostsファイル\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "インターネット上のドメイン名はどこに管理されている",
+                            "answer": [
+                                "ICANN（アイキャン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
+                        }
+                    ]
                 }
             ]
         },
@@ -4951,8 +5094,8 @@
                                 "Value window functions"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "sqlにおいて内部結合と外部結合ではどちらが高速ですか.またその理由",
@@ -5153,7 +5296,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-13"
                         }
                     ]
                 },
@@ -6493,7 +6636,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "hypoの反対語は？",
@@ -6973,7 +7116,7 @@
                             "last_answered_date": "2025-04-10"
                         },
                         {
-                            "problem": "健康のために甘いものを控える",
+                            "problem": "健康のために甘いものを控える　英作文",
                             "answer": [
                                 "I retain from eating sugary food for my health."
                             ],
@@ -7030,6 +7173,33 @@
                             "problem": "末梢神経系　を英語で",
                             "answer": [
                                 "Peripheral nervous system"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "The fisherman caught an apex predator. ",
+                            "answer": [
+                                "漁師は最上位の捕食者を捕まえた。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "The mountain's apex was covered in snow.",
+                            "answer": [
+                                "その山の頂上は雪に覆われていた。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "Give me a call when you will wake up.　どこが間違えているか",
+                            "answer": [
+                                "will が不要\n時・条件をあらわす副詞節では未来のkとおでも現在系"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -8321,7 +8491,7 @@
                                 "タピオカ\nちなみにキャッサバは焼畑農業の代表的な作物"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-11"
                         },
                         {
@@ -8897,7 +9067,7 @@
                             ],
                             "memo": "春小麦が北側で冬小麦が南側なのは、春小麦が寒冷な地域で栽培されるものだから。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "カナダにおいてフランス系住民が多い州はどこ？",
@@ -9041,7 +9211,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "湿潤地域から乾燥地域に流れる河川を何という？",
@@ -9050,7 +9220,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "アメリカの乾燥地帯で行われている農業の方法を何という？",
@@ -9097,7 +9267,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "保護貿易の反対は？",
@@ -9188,7 +9358,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "チベット高原で放牧している動物は？",
@@ -9310,7 +9480,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "気温や湿度などの性質の似た空気の集まりのことを何という？",
@@ -9328,7 +9498,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
@@ -9346,7 +9516,34 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "肌の色が黒い、髪が縮れ毛で黒色等様々な特徴がある人種を何という",
+                            "answer": [
+                                "二グロイド"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "ハドソン湾はどこにある？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://image.itmedia.co.jp/nl/articles/1402/28/kuro_140228hokkyoku02.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
+                        },
+                        {
+                            "problem": "ベルギー南部のワロン地域の公用語は？",
+                            "answer": [
+                                "フランス語"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
                         }
                     ]
                 },
@@ -9445,7 +9642,7 @@
                             "answer": [
                                 "アフリカ大陸のナミビア"
                             ],
-                            "memo": "",
+                            "memo": "https://nationalflag.magazine7.net/wp-content/uploads/2018/09/namibia-1.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-11"
                         },
@@ -9504,7 +9701,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "ザグロス山脈はどこにある？",
@@ -9527,7 +9724,7 @@
                         {
                             "problem": "ヴォルタ川はどこにありますか？",
                             "answer": [
-                                "アフリカ大陸の西側"
+                                "アフリカ大陸の西側\nガーナの国にある"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9636,7 +9833,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "ドナウ川はどこ",
@@ -9673,7 +9870,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/c/0/soc_geo/10_0_34_2/c_soc_geo_10_0_34_2_image01.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "カスピ海の下には何の国がある？右には何の国",
@@ -9710,7 +9907,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwLwdFza8B-5FdfYmCerpm3UK5gDRQL0StxA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "サハラ砂漠の場所は？",
@@ -9731,9 +9928,9 @@
                             "last_answered_date": "2025-04-12"
                         },
                         {
-                            "problem": "ペルシャ湾どこ",
+                            "problem": "ペルシャ湾どこ　ペルシャ湾の左には何の国がある？",
                             "answer": [
-                                ""
+                                "サウジアラビア"
                             ],
                             "memo": "https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXMZO4605511013062019I00004-2.jpg?ixlib=js-3.8.0&w=696&h=696&auto=format%2Ccompress&fit=crop&bg=FFFFFF&s=32aeb379be32462dc8c071093bbbe751",
                             "is_correct": 0,
@@ -9758,11 +9955,11 @@
                             "last_answered_date": "2025-04-12"
                         },
                         {
-                            "problem": "ナイジェリアはどの大陸にあるか",
+                            "problem": "ナイジェリア　場所",
                             "answer": [
-                                "アフリカ大陸"
+                                ""
                             ],
-                            "memo": "",
+                            "memo": "https://gakusyu.shizuoka-c.ed.jp/society/kyoutsu/sekaino_kuniguni/logo_gazou/07_3_afurika_naijeria.gif",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-11"
                         },
@@ -9771,25 +9968,16 @@
                             "answer": [
                                 "イギリス"
                             ],
-                            "memo": "",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUMmv_sS_4EoIlDBkJuy8fCL_U5_N0lpn6SQ&s",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-11"
                         },
                         {
-                            "problem": "オホーツク海の気候は？",
+                            "problem": "オホーツク海の場所は？",
                             "answer": [
                                 ""
                             ],
                             "memo": "https://www.hro.or.jp/upload/40870/o7u1kr000000dgwp.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
-                        },
-                        {
-                            "problem": "合計特殊出生率が低い国は？",
-                            "answer": [
-                                "韓国"
-                            ],
-                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
                         },
@@ -9828,6 +10016,24 @@
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-australia-map-1.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "オビ川の右にある川は？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
+                        },
+                        {
+                            "problem": "イタリアの左には何の国がある？",
+                            "answer": [
+                                "フランス"
+                            ],
+                            "memo": "https://www.travel-zentech.jp/world/map/italy/image/Map_of_Italy_and_neighboring_countries.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-13"
                         }
                     ]
                 },
@@ -9842,15 +10048,6 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-06"
-                        },
-                        {
-                            "problem": "亜寒帯のタイガに多く分布している土壌はなにか？",
-                            "answer": [
-                                "podzol"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-22"
                         },
                         {
                             "problem": "地中海性気候はどのようなアルファベットで表す？",
@@ -9906,7 +10103,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "西岸海洋性気候は記号でどのように表す？",
@@ -9915,7 +10112,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "亜寒帯（D）の定義で最暖月平均気温 （A）℃以上なのはなぜか？",
@@ -9964,16 +10161,6 @@
                             "last_answered_date": "2025-04-05"
                         },
                         {
-                            "problem": "ステップ気候の土壌2",
-                            "answer": [
-                                "黒土",
-                                "栗色土"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
-                        },
-                        {
                             "problem": "ステップ気候は、砂漠気候を（A）分布している",
                             "answer": [
                                 "帯状に取り囲むように"
@@ -10016,7 +10203,7 @@
                             ],
                             "memo": "一方熱帯の定義は\n最寒月平均気温 18℃いじょう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "氷雪気候をアルファベットで表すと",
@@ -10034,7 +10221,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "亜寒帯冬季少雨気候をアルファベットで表すと",
@@ -10051,8 +10238,8 @@
                                 "タイガ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "亜寒帯冬季少雨気候(Dw)の定義",
@@ -10080,7 +10267,7 @@
                                 "乾季はある"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-11"
                         },
                         {
@@ -10196,8 +10383,8 @@
                                 "西経100°以西"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "オランダの国の面積は大きい？小さい？",
@@ -10215,7 +10402,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "西アジアにおいて、北回帰線のやや南にある都市は？",
@@ -10296,7 +10483,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "パキスタンの人口一位は？",
@@ -10501,6 +10688,25 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-02"
+                        },
+                        {
+                            "problem": "亜寒帯のタイガに多く分布している土壌はなにか？",
+                            "answer": [
+                                "podzol"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "ステップ気候の土壌2",
+                            "answer": [
+                                "黒土",
+                                "栗色土"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 },
@@ -10544,7 +10750,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "プライメートシティの例3",
@@ -10574,6 +10780,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "合計特殊出生率が低い国は？",
+                            "answer": [
+                                "韓国"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "人口置換水準の合計特殊出生率の値は？",
@@ -10828,7 +11043,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-13"
                         }
                     ]
                 }
@@ -10958,7 +11173,7 @@
                             "last_answered_date": "2025-04-08"
                         },
                         {
-                            "problem": "リソースに対して、どのようなアクションがあったかを記録するログは？",
+                            "problem": "azureにおいてリソースに対して、どのようなアクションがあったかを記録するログは？",
                             "answer": [
                                 "activity log"
                             ],
@@ -10972,8 +11187,8 @@
                                 "App Service 証明書"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 }
