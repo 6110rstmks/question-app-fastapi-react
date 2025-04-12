@@ -1422,6 +1422,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "cloudtrailは何のログを記録する",
+                            "answer": [
+                                "AWSのAPIやコンソールのログ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 },
@@ -1825,15 +1834,6 @@
                             "last_answered_date": "2025-04-10"
                         },
                         {
-                            "problem": "3分の公式 直線はx = β 接点はx= α",
-                            "answer": [
-                                "\\frac{|a|}{3} (\\beta - \\alpha)^3\n"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
-                        },
-                        {
                             "problem": "高校数学で出題される3次以上の方程式は3つに分類される。",
                             "answer": [
                                 "因数分解してとく",
@@ -1916,6 +1916,15 @@
                             "memo": "https://hiraocafe.com/note/shajikukasagata.html\nより早く解けるのだそう",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "3分の公式を答えて 直線はx = β 接点はx= α 二次関数の二次の係数はa",
+                            "answer": [
+                                "\\frac{|a|}{3} (\\beta - \\alpha)^3\n"
+                            ],
+                            "memo": "https://manabitimes.jp/math/796",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-07"
                         },
                         {
                             "problem": "3分の公式を使う場面は？",
@@ -2189,6 +2198,66 @@
                             "memo": "脂肪の水素添加という意味です。日本語ではよく「脂肪の水素化」や「油脂の硬化」と訳されます。\n\n簡単に説明すると…\n植物油や動物脂肪に水素（H₂）を添加して、化学的に安定させたり、固体化したりするプロセスのこ",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-18"
+                        }
+                    ]
+                },
+                {
+                    "name": "inorganic chemistry",
+                    "questions": [
+                        {
+                            "problem": "臭素の単体の状態は",
+                            "answer": [
+                                "液体"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "フッ素の単体、F2の半反応式を書いてください。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "鉄の精錬の2ステップを記載してください。",
+                            "answer": [
+                                "鉄鉱石(Fe2O3)を銑鉄(せんてつ)にする",
+                                "銑鉄を鋼(こう)にする"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "iceがとけて、waterになるとvolumeが現象する理由。",
+                            "answer": [
+                                "みずぶんしが氷の隙間にはいりこむため"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "molten salt electrolysisを使って生成されるmetalの特徴は？",
+                            "answer": [
+                                "ionization tendency is high."
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "炭酸塩、炭酸水素塩、水酸化物は加熱すると二酸化炭素CO2や水H2Oを発生しながら分解するを何という？",
+                            "answer": [
+                                "熱分解反応"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 }
@@ -6015,8 +6084,8 @@
                                 "紙のバッグをくしゃくしゃにする"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-28"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "He was sentenced to two concurrent prison terms.",
@@ -6762,7 +6831,7 @@
                                 "コンサートの来場者数はすごかったです。\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-07"
                         },
                         {
@@ -6807,8 +6876,8 @@
                                 "review meeing"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "computer scientists aren't the only potential beneficiers from AI",
@@ -6827,6 +6896,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "イオン化傾向　英語で",
+                            "answer": [
+                                "ionization tendency "
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "He got a blister on his heel from walking",
+                            "answer": [
+                                "彼は歩くことでかかとに水ぶくれを作りました。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 }
@@ -6927,7 +7014,7 @@
                                 "CSIRT"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-11"
                         }
                     ]
@@ -7560,8 +7647,8 @@
                                 "DMAコントローラ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "プログラム格納方式はDMA方式に比べてどのような欠点があるか？",
@@ -8183,15 +8270,6 @@
                             "last_answered_date": "2025-03-18"
                         },
                         {
-                            "problem": "ラトソルの色は何色？",
-                            "answer": [
-                                "赤色"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-02"
-                        },
-                        {
                             "problem": "気温の分布で大事なことは3つ。",
                             "answer": [
                                 "緯度",
@@ -8468,15 +8546,6 @@
                             "last_answered_date": "2025-04-11"
                         },
                         {
-                            "problem": "アウトストラーダ・デル・ソーレとは？",
-                            "answer": [
-                                "イタリア最長の高速道路"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-04"
-                        },
-                        {
                             "problem": "tradewindのふくむきの覚え方",
                             "answer": [
                                 "trade -> touzai\n\n両方tから始まる"
@@ -8528,7 +8597,7 @@
                                 "ロッテルダム"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-12"
                         },
                         {
@@ -8745,8 +8814,8 @@
                                 "湿潤"
                             ],
                             "memo": "なのでステップ気候の境界線が西軽100",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "沖積平野は3つに分類できる。答えて",
@@ -8805,15 +8874,6 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-04-01"
-                        },
-                        {
-                            "problem": "オランダの国の面積は大きい？小さい？",
-                            "answer": [
-                                "小さい（九州と同じくらい）"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-04"
                         },
                         {
                             "problem": "砂漠の中で水が手に入る箇所は3種類",
@@ -8975,16 +9035,6 @@
                             "last_answered_date": "2025-04-11"
                         },
                         {
-                            "problem": "カスピ海の下には何の国がある？右には何の国",
-                            "answer": [
-                                "下→イラン",
-                                "右→カザフスタン"
-                            ],
-                            "memo": "https://www3.nhk.or.jp/news/special/international_news_navi/wp-content/uploads/2023/07/daf821f3693718c66dd10bf7279899e4.jpg\n\nhttps://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
-                        },
-                        {
                             "problem": "世界で一番深い湖は？",
                             "answer": [
                                 "バイカル湖"
@@ -9026,7 +9076,7 @@
                                 "ヤク"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm7T7vx1GU2-o6q0w6pAmhYKfn8gv_V7murA&s",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-11"
                         },
                         {
@@ -9036,7 +9086,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "播種（はしゅ）とはどういう意味か",
@@ -9094,7 +9144,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "ペルー漁業では何の漁獲量が多いか。",
@@ -9177,15 +9227,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-11"
-                        },
-                        {
-                            "problem": "カラクム砂漠はどこの国にある？",
-                            "answer": [
-                                "トルクメニスタン"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 },
@@ -9515,6 +9556,16 @@
                             "last_answered_date": "2025-04-10"
                         },
                         {
+                            "problem": "カスピ海の下には何の国がある？右には何の国",
+                            "answer": [
+                                "下→イラン",
+                                "右→カザフスタン"
+                            ],
+                            "memo": "https://www3.nhk.or.jp/news/special/international_news_navi/wp-content/uploads/2023/07/daf821f3693718c66dd10bf7279899e4.jpg\n\nhttps://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-11"
+                        },
+                        {
                             "problem": "マラカイボ湖はどの国にある？",
                             "answer": [
                                 "ベネズエラ"
@@ -9528,7 +9579,7 @@
                             "answer": [
                                 "南アフリカ"
                             ],
-                            "memo": "",
+                            "memo": "https://image.jimcdn.com/app/cms/image/transf/dimension=362x10000:format=png/path/s21c8e14b942a5f50/image/i113e5fa9cea25683/version/1477533179/image.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-10"
                         },
@@ -9628,6 +9679,15 @@
                                 "ドイツの右、イタリアの上"
                             ],
                             "memo": "https://www.vivonet.co.jp/rekisi/a16_hungary/hungarymap.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "カラクム砂漠はどこの国にある？",
+                            "answer": [
+                                "トルクメニスタン"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
                         }
@@ -9800,7 +9860,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "温暖湿潤気候はアルファベットで表すと",
@@ -9902,6 +9962,15 @@
                     "name": "地誌",
                     "questions": [
                         {
+                            "problem": "アウトストラーダ・デル・ソーレとは？",
+                            "answer": [
+                                "イタリア最長の高速道路"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-04"
+                        },
+                        {
                             "problem": "ローヌ川河口近くにあるフランス有数の湾岸都市で、造船、鉄鋼、食品機械工業が盛んな都市はどこか",
                             "answer": [
                                 "フォス"
@@ -9993,6 +10062,15 @@
                             "last_answered_date": "2025-04-07"
                         },
                         {
+                            "problem": "オランダの国の面積は大きい？小さい？",
+                            "answer": [
+                                "小さい（九州と同じくらい）"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-04"
+                        },
+                        {
                             "problem": "アラブ首長国連邦をアルファベット三文字で何という？",
                             "answer": [
                                 "UAE"
@@ -10080,7 +10158,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "パキスタンの人口一位は？",
@@ -10276,6 +10354,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-09"
+                        },
+                        {
+                            "problem": "ラトソルの色は何色？",
+                            "answer": [
+                                "赤色"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-02"
                         }
                     ]
                 },
@@ -10418,7 +10505,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "村落の分類2",
@@ -10434,6 +10521,24 @@
                             "problem": "円村はどこにみられるか",
                             "answer": [
                                 "europe"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "円村には（A）がある。",
+                            "answer": [
+                                "教会"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "散村の例は",
+                            "answer": [
+                                "富山県の砺波平野"
                             ],
                             "memo": "",
                             "is_correct": 0,
