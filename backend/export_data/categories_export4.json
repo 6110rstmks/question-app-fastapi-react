@@ -985,6 +985,16 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "elasticacheの機能であるスティッキーセッション。ALBとCLBのスティッキーセッションで使用するCookieには2種類ある。答えて",
+                            "answer": [
+                                "期間ベースのスティッキーセッション",
+                                "アプリケーションベースのスティッキーセッション"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
                         }
                     ]
                 },
@@ -1303,7 +1313,7 @@
                         {
                             "problem": "DynamoDBはトランザクション管理が可能か？",
                             "answer": [
-                                "不可能。RDBMSではないため"
+                                "可能。"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -1447,6 +1457,15 @@
                             "problem": "cloudtrailは何のログを記録する",
                             "answer": [
                                 "AWSのAPIやコンソールのログ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "AWSアカウント作成時に最初に発行されるユーザを何という？",
+                            "answer": [
+                                "ルートアカウント"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -1794,7 +1813,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "整式の剰余の解法4",
@@ -1850,8 +1869,8 @@
                                 "直方体にうめこむ"
                             ],
                             "memo": "https://examist.jp/mathematics/trigonometric-ratio/toumensimentai/\n京大1999",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "高校数学で出題される3次以上の方程式は3つに分類される。",
@@ -2100,12 +2119,13 @@
                     "name": "numerical sequence",
                     "questions": [
                         {
-                            "problem": "recurrence relation （n次式型）の解法",
+                            "problem": "recurrence relation （n次式型）の解法2",
                             "answer": [
                                 "階差をとる",
-                                "係数比較してむりやり等比数列の形にする"
+                                "係数比較してむりやり等比数列の形にする",
+                                "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n"
                             ],
-                            "memo": "\\[\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\\]\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
+                            "memo": "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-06"
                         }
@@ -2923,7 +2943,7 @@
                                 "辺縁皮質"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-26"
                         },
                         {
@@ -2978,8 +2998,8 @@
                             "answer": [
                                 "遠心性神経"
                             ],
-                            "memo": "",
-                            "is_correct": 2,
+                            "memo": "外に向かって信号を送るイメージで覚えれば良い",
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -4861,7 +4881,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-13"
                         },
                         {
                             "problem": "sqlにおいて内部結合と外部結合ではどちらが高速ですか.またその理由",
@@ -6833,8 +6853,8 @@
                                 "antarctic"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "The turnout for the concert was incredible",
@@ -6930,6 +6950,15 @@
                             "problem": "He got a blister on his heel from walking",
                             "answer": [
                                 "彼は歩くことでかかとに水ぶくれを作りました。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "末梢神経系　を英語で",
+                            "answer": [
+                                "Peripheral nervous system"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -7435,14 +7464,14 @@
                             "last_answered_date": "2025-04-11"
                         },
                         {
-                            "problem": "CPUの主な演算装置は2つあります。それらを答えよ。",
+                            "problem": "CPUの演算装置は2つあります。それらを答えよ。",
                             "answer": [
                                 "ALUは「Arithmetic Logic Unit」の略で、直訳すると「算術論理装置",
                                 "もうひとつの演算装置として、\n\n浮動小数点ユニット（FPU）"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "システムにすぐに対処しなくてはならない問題などが生じたときに、実行中のプログラムの処理を強制的に停止し、優先的に事象の解決を図ることを可能にする仕組みは？",
@@ -7649,8 +7678,8 @@
                                 "Transfer data between memory and input /output(5大装置を想像してください"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "hardwareにおいてDMAは何の略か？",
@@ -9048,7 +9077,7 @@
                         {
                             "problem": "エスチュアリーとは",
                             "answer": [
-                                ""
+                                "平野を流れる河川が沈水して出来た三角状の入り江"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9583,7 +9612,7 @@
                             ],
                             "memo": "https://www3.nhk.or.jp/news/special/international_news_navi/wp-content/uploads/2023/07/daf821f3693718c66dd10bf7279899e4.jpg\n\nhttps://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-12"
                         },
                         {
                             "problem": "マラカイボ湖はどの国にある？",
@@ -9708,6 +9737,24 @@
                                 "トルクメニスタン"
                             ],
                             "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "ホワイ川はどこにある",
+                            "answer": [
+                                "中国"
+                            ],
+                            "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "マリー川どこにある",
+                            "answer": [
+                                "オーストラリア"
+                            ],
+                            "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-australia-map-1.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
                         }
@@ -10429,7 +10476,7 @@
                             "last_answered_date": "2025-04-11"
                         },
                         {
-                            "problem": "プライメートシティの例",
+                            "problem": "プライメートシティの例3",
                             "answer": [
                                 "タイ バンコク",
                                 "韓国 ソウル",
@@ -10780,12 +10827,11 @@
                             "last_answered_date": "2025-04-10"
                         },
                         {
-                            "problem": "azure storage account種類4",
+                            "problem": "azure storage account種類3",
                             "answer": [
                                 "Standard 汎用 v2",
                                 "Premium ブロック BLOB",
-                                "Premium ファイル共有",
-                                ""
+                                "Premium ファイル共有"
                             ],
                             "memo": "",
                             "is_correct": 0,
