@@ -2136,7 +2136,7 @@
                             ],
                             "memo": "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -2789,7 +2789,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png\n\nいい覚え方ないかな",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "What animals have echolocation?3",
@@ -3675,7 +3675,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "cDNAのcはどういう意味ですか？",
@@ -4667,7 +4667,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "物価の下落と経済活動の縮小が相互に作用して、景気悪化が進むことを何というか。",
@@ -7169,7 +7169,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "健康のために甘いものを控える　英作文",
@@ -7797,6 +7797,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "CPUの投機実行について説明してください",
+                            "answer": [
+                                "投機実行とは、分岐命令（if文など）で結果がまだ確定していない段階でも、その後に実行されるであろう命令を予測して先に実行してしまう技術です。予測が当たれば高速化され、外れた場合はその投機的な実行結果は破棄されます。"
+                            ],
+                            "memo": "投機：不確実だが当たれば利益の大きい事をねらってする行為\nif (x > 0) {\n    doSomething();\n}\nCPUは x > 0 の条件が評価される前に、「たぶん x > 0 だろう」と予測して doSomething() を先に実行し始めます。\n条件が合っていれば → 実行結果はそのまま使われる（高速化成功）\n条件が違っていれば → 実行結果を捨ててやり直す（無駄になるけど問題はない）",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -8289,7 +8298,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "メモリ管理の可変区画方式では、空き領域により小さいデータを読み込むので、領域の確保と解放を繰り返していくと、細かい領域がたくさん発生することがあります。この領域を何という？",
@@ -11137,7 +11146,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "terraformにおいて変数の種類は二種類ある",
@@ -11146,8 +11155,8 @@
                                 "ローカル変数"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 }
