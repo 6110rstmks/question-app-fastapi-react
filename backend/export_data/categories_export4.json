@@ -975,7 +975,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "aws elasticacheについてmemcachedとredisのうちシングルスレッドはどちらか？",
@@ -1834,7 +1834,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "1の3乗根でつかう方程式",
@@ -1990,7 +1990,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -2247,6 +2247,53 @@
                             "memo": "脂肪の水素添加という意味です。日本語ではよく「脂肪の水素化」や「油脂の硬化」と訳されます。\n\n簡単に説明すると…\n植物油や動物脂肪に水素（H₂）を添加して、化学的に安定させたり、固体化したりするプロセスのこ",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-18"
+                        },
+                        {
+                            "problem": "アミノ酸のもつ正の電荷と負の電荷が釣り合ってアミノ酸全体として電荷をもたないpHを何という",
+                            "answer": [
+                                "等電点"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "熱硬化性樹脂の例2",
+                            "answer": [
+                                "フェノール樹脂",
+                                "尿素樹脂"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "フェノール樹脂を合成する際、触媒として酸を用いた場合に生じる中間体を（A）、塩基を用いた際に生じる中間体を（B）という。",
+                            "answer": [
+                                "ノボラック",
+                                "レゾール"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "ホルムアルデヒドと尿素からできるアミノ樹脂は何？",
+                            "answer": [
+                                "尿素樹脂"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "分子式が同じで、構造が異なる物質同士を何という",
+                            "answer": [
+                                "異性体Isomer"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 },
@@ -4732,7 +4779,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "景気を測る指数は何？",
@@ -4742,6 +4789,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "インフレの時は中央銀行は金利を上げる？下げる？",
+                            "answer": [
+                                "上げる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 },
@@ -5218,8 +5274,8 @@
                                 "クイックソート"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -7269,6 +7325,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "等電点　英語",
+                            "answer": [
+                                "Isoelectric Point\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 }
@@ -7921,7 +7986,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -8650,8 +8715,8 @@
                                 "標高",
                                 "大陸の西岸か東岸か"
                             ],
-                            "memo": "",
-                            "is_correct": 2,
+                            "memo": "気温の年較差を考える時の3つのポイント\n\n↑これとごっちゃにならないように",
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-27"
                         },
                         {
@@ -9258,7 +9323,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "砂嘴が伸びて対岸にくっついた地形は？またそれによって囲まれた湖を何という",
@@ -9330,8 +9395,8 @@
                                 "垂直貿易"
                             ],
                             "memo": "https://livedoor.blogimg.jp/keppentyan/imgs/4/e/4ee04263-s.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "発展途上国の中でも、（アフリカ）のサハラ以南にある 最貧国とアジアの新興国・産油国などの格差を何という？",
@@ -9406,7 +9471,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "世界で一番深い湖は？",
@@ -9573,7 +9638,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "シベリア気団は乾燥している？湿っている？",
@@ -9701,7 +9766,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "チベット高原はどの場所にある。想像する",
@@ -9820,9 +9885,9 @@
                             "answer": [
                                 "アフリカ大陸の西側\nガーナの国にある"
                             ],
-                            "memo": "",
+                            "memo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkGtPaCARkiQGUMgs7RlAoLAiWpHfgn8B8RsWUjnMOOp-RlMcoCKXZOnRx8YlIQHASDPZNg4_bOLVCyauWqtfS99yjiJ8EGWmtQX8SO7ku2pon20zraU4glObze4sDH507gsW5YtzSFVhn/w1200-h630-p-k-no-nu/4c1e2d7739f148f73ba648c4d2c9e2bb.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "サンアンドレアス断層San Andreas Faultはどこにある？",
@@ -10540,8 +10605,8 @@
                                 "1000万人　\n首都に一極集中　全人口の1/5"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "ベトナムの人口一位の都市は？",
@@ -10639,8 +10704,8 @@
                                 "チューリッヒ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "スペインのバルセロナは何の工業で有名か？",
@@ -10702,8 +10767,8 @@
                                 "ブラジリア"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "イタビラ鉄山はどこの国か",
@@ -10813,8 +10878,8 @@
                                 "\\frac{昼人口}{夜人口} \\times 100"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "昼夜間人口比率が100より小さい日本の都市（ベッドタウン）の例は",
@@ -10823,7 +10888,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "都市の階層分類4",
@@ -10873,7 +10938,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "合計特殊出生率が低い国は？",
@@ -10891,7 +10956,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "少子化の原因2",
@@ -10928,7 +10993,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -11077,8 +11142,8 @@
                                 "\\frac{当期純利益}{自己資本} \\times 100"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "ROEの計算式の覚え方",
