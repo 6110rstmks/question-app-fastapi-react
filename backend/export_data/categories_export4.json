@@ -179,7 +179,7 @@
                             ],
                             "memo": "参考サイト\nhttps://qiita.com/memomaruRey/items/af1cfa19a20071b48ffe",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "標準キューとFIFOキューのうち、配信順序をベストエフォートではなく、必ず保証したい場合は、どちらを使用するか？",
@@ -1368,7 +1368,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "AWSにおいて、リージョンの中にAZ（アベイラビリティゾーン）があるか、AZ（アベイラビリティゾーン）の中にリージョンがあるかどっちか？",
@@ -1423,7 +1423,7 @@
                             ],
                             "memo": "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "ELB（ALB）とAPI gatewayをHTTPS末端にするというのはELBとAPI gatewayをSSLのフローでいうところの（WEBサーバ・WEBクライアント）にするということ。これのどっちか",
@@ -1672,7 +1672,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "2次方程式の複素数解の武器4",
@@ -1702,7 +1702,7 @@
                             ],
                             "memo": "2022大阪 NO.1",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -1972,7 +1972,7 @@
                             ],
                             "memo": "https://manabitimes.jp/math/796",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "3分の公式を使う場面は？",
@@ -2326,7 +2326,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "鉄の精錬において鉄鉱石（酸化鉄）の還元に一酸化炭素を利用しているが、それは一酸化炭素のどのような性質を利用している。",
@@ -2434,7 +2434,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -2580,7 +2580,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "ノギンNogginやコーディンChordinはどこから分泌されるのか？",
@@ -2867,7 +2867,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "鞭毛をもつ胞子を作る菌類はなにか？",
@@ -2952,7 +2952,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "膵液は3大栄養素すべてを分解する消化酵素を持っているか？",
@@ -3085,8 +3085,8 @@
                                 "脳　脊髄spinal cor"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "大脳の外側である大脳皮質は二つに分けれる。なにとなに",
@@ -4174,7 +4174,7 @@
                             ],
                             "memo": "https://i.ytimg.com/vi/PBL0-sel5zk/maxresdefault.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "筋肉の収縮時に明帯、暗帯、サルコメアのうち、長さが変わらないものはどれか。",
@@ -4264,6 +4264,15 @@
                             "answer": [
                                 "速筋",
                                 "遅筋"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-14"
+                        },
+                        {
+                            "problem": "運動神経からのアセチルコリンが受容体に結合したらその刺激が筋小胞体に作用してその後どうなる。",
+                            "answer": [
+                                "Ca2+が放出される"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -4635,11 +4644,11 @@
                         {
                             "problem": "供給曲線はなぜ右肩あがりなのか。説明して",
                             "answer": [
-                                "売りたい人は価格が高いほど増えていくから\n市場価格が上昇すると、生産者はその商品を高く販売できるため、利益が増えます。利益が増えると、より多くの財やサービスを生産しようとするインセンティブが生まれます"
+                                "売りたい人は価格が高いほど増えていくから\n市場価格が上昇すると、生産者はその商品を高く販売できるため、利益が増えます。利益が増えると、より多くの財やサービスを生産しようとするインセンティブが生まれます\n\n安く売れるものは誰もつくりたいとは思わないよね。"
                             ],
-                            "memo": "",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU1JiS1suZRmy5N0bG_woS0G-uvEwz4KnaVg&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "1996年以降の金融政策の手段になっている、債券の売買などを通して通貨量の調整を図る方法を何というか。",
@@ -4658,7 +4667,7 @@
                             ],
                             "memo": "逆算して考える。\n景気が加熱している→金利を上げる→金利を上げるためには資金量を減らす必要がある→",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "会社設立時の出資者が有限責任社員と無限責任社員である会社は，（A）会社という",
@@ -5316,7 +5325,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "raid2,3の読み書き単位は？",
@@ -5376,7 +5385,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 }
@@ -5538,8 +5547,8 @@
                                 "かぶ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "They tried to make sense of the email from their boss.",
@@ -7232,7 +7241,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "The fisherman caught an apex predator. ",
@@ -7250,7 +7259,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "Give me a call when you will wake up.　どこが間違えているか",
@@ -7467,8 +7476,8 @@
                                 "主記憶装置"
                             ],
                             "memo": "\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "CPUがキャッシュメモリと主記憶装置を同時に書き換える方式はライトスルー方式？ライトバック方式？",
@@ -7554,7 +7563,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "液晶ディスプレイなどの表示装置において，傾いた直線の境界を滑らかに表示する手法を何という？",
@@ -7786,8 +7795,8 @@
                                 "外部割り込み"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "主記憶装置から命令レジスタに命令を読み込むことを何という？",
@@ -8355,7 +8364,7 @@
                             ],
                             "memo": "ページングはプログラムやデータを分割して記憶領域を管理し、コンピュータの仮想記憶を実現するための方式です。ページングでは、仮想記憶(補助記憶装置)と実記憶(主記憶)間のデータの受け渡しをページという固定長の単位で行いますが、このページのやり取りは「ページフォールトが発生したときに主記憶のどのページを置換えるか」および「どのページをどのタイミングで主記憶に読み込むか」という二つのアルゴリズムに基づいて管理が行われます。\n前者の置換え対象を決定する方法としては、LRU(Least Recently Used)やFIFO(First In First Out)があり、後者の読込み対象と読込むタイミングを決定するアルゴリズムとしては、この設問で問われている「デマンドページング方式」や「プリページング方式」があります。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "デマンドページング方式はページの読込み対象と読込むタイミングを決定するアルゴリズムであるが、どのタイミングで読み込みを行うか。",
@@ -9191,7 +9200,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "扇状地の一番上から順番に 扇頂→扇央→扇端 という名前がついています。扇頂の方が粒が（大きく・小さく）、扇端にいくほど粒が（大きく・小さく）なっていきます。",
@@ -9286,7 +9295,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "湿潤地域から乾燥地域に流れる河川を何という？",
@@ -9379,7 +9388,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "フランスとスペインの境界にある山脈は？",
@@ -9405,8 +9414,8 @@
                                 "バイカル湖"
                             ],
                             "memo": "カスピ海と間違えた",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "かつて氷期のころ氷河に覆われていた湖は（氷河湖）？",
@@ -9527,7 +9536,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "アタカマ砂漠ができる原因となっている海流は？",
@@ -9619,6 +9628,16 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-13"
+                        },
+                        {
+                            "problem": "外来河川は、（A）から（B）に流れる河川。",
+                            "answer": [
+                                "湿潤地域",
+                                "乾燥地域"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -9776,7 +9795,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "ザグロス山脈はどこにある？",
@@ -10045,7 +10064,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUMmv_sS_4EoIlDBkJuy8fCL_U5_N0lpn6SQ&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "オホーツク海の場所は？",
@@ -10140,7 +10159,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "西岸海洋性気候は二つの要因に注意する？それはなにとなにか",
@@ -10159,7 +10178,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "南半球の西岸海洋性気候の国はなにがあるか",
@@ -10187,7 +10206,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "亜寒帯Dの定義で最暖月平均気温 （A）℃以上なのはなぜか？",
@@ -10269,7 +10288,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "温帯 (B) の定義",
@@ -10377,7 +10396,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -10486,7 +10505,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "メッカはどこの国の州都ですか？",
@@ -10522,7 +10541,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "ベトナムの人口一位の都市は？",
@@ -10702,7 +10721,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "オーストラリアの人口一位、二位は",
@@ -10836,7 +10855,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "複数の都市がつながって一つの巨大な都市圏を形成したものを何という？",
@@ -10882,7 +10901,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-14"
                         }
                     ]
                 },
@@ -10898,7 +10917,7 @@
                             ],
                             "memo": "国内で石炭が多く取れることと繋げる。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "先進国だけど原子力発電をやっていない国5",
@@ -10992,7 +11011,7 @@
                             ],
                             "memo": "覚え方：　かきけよ",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "テニスの試合方式には二種類ある。なにとなにか",
@@ -11214,7 +11233,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "Azureでデータを暗号化する際に使用されるキーの種類を二つ答えよ",
@@ -11224,7 +11243,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "azure のstorage の冗長オプションであるLRSの意味は？",
@@ -11233,7 +11252,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-14"
                         },
                         {
                             "problem": "Azure Storage には4種類のストレージサービスがある。答えて",
