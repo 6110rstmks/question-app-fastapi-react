@@ -971,7 +971,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-14"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "aws elasticacheについてmemcachedとredisのうちシングルスレッドはどちらか？",
@@ -1657,8 +1657,8 @@
                                 "実数係数mが(m>=2)次方程式の場合は、x= α x = β(αの共役な複素数)解をもつ　→Relationship between solution and coefficient"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "4次方程式の複素数解の武器2",
@@ -2653,6 +2653,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "天然ゴムを乾留することによって得られる物質を何という",
+                            "answer": [
+                                "いそぷれん"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-16"
+                        },
+                        {
+                            "problem": "生ゴムに30%～40%の硫黄を加硫して加熱した得られる黒色のかたいプラスチック状の物質なんという",
+                            "answer": [
+                                "エボナイト"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-16"
                         }
                     ]
                 }
@@ -4378,7 +4396,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "筋肉の明帯は（A）フィラメントからなる部分",
@@ -4451,7 +4469,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "横紋筋の例は？２",
@@ -5606,7 +5624,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-14"
+                            "last_answered_date": "2025-04-16"
                         }
                     ]
                 }
@@ -8556,7 +8574,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-14"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "メモリ管理の可変区画方式では、空き領域により小さいデータを読み込むので、領域の確保と解放を繰り返していくと、細かい領域がたくさん発生することがあります。この領域を何という？",
@@ -9881,6 +9899,15 @@
                             "last_answered_date": "2025-04-15"
                         },
                         {
+                            "problem": "えん麦　よみかた",
+                            "answer": [
+                                "えんばく"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-16"
+                        },
+                        {
                             "problem": "揚子江気団　読み方",
                             "answer": [
                                 "ようすこうきだん"
@@ -9988,7 +10015,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCRJz-3EVb8WUSmxwBlQz9HB4LMDHqm7Orkg&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "ミシシッピ川の場所は？",
@@ -10072,7 +10099,7 @@
                             ],
                             "memo": "https://cdn.mainichi.jp/vol1/2020/04/02/20200402biz00m020010000p/8.jpg?1",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "カザフステップはどこ？",
@@ -10214,7 +10241,7 @@
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "トルコの上には何がある？",
@@ -10268,7 +10295,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "中国の上にある国はなんですか？",
@@ -10285,7 +10312,7 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnxR7rTUpgIj6PVlcRUW5yLnZFbGo_AxHfw&s",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-12"
                         },
                         {
@@ -10378,6 +10405,15 @@
                                 "右→カザフスタン"
                             ],
                             "memo": "https://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-16"
+                        },
+                        {
+                            "problem": "メコン川の場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-16"
                         }
@@ -11301,7 +11337,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "稲作　2つに分類できる",
