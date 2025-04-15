@@ -583,7 +583,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "AWSのRoute53おいて、CNAMEレコードではなくて、ALIASレコードを使用すべき理由。",
@@ -646,7 +646,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 },
@@ -800,7 +800,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "RDSにおいてマルチAZとごっちゃになってしまう特性を持った機能は何か？",
@@ -1449,8 +1449,8 @@
                                 "AWSのAPIやコンソールのログ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "ある会社で本社の所在地に最も近いリージョンのS3バケットでトレーニング資料を管理しており、複数の国や地域にある支社の業務端末からトレーニング資料の追加、更新を実施します。支社の社員からアップロードに時間がかかるとクレームがきています。アーキテクチャの修正は行わずS3での資料管理の高速化を実現したい。実現案を2つあげて",
@@ -1460,7 +1460,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "RDSのコスト状況を把握したいので、コストレポートを作成したい。どのAWSサービスを使えば良い？",
@@ -1683,8 +1683,8 @@
                                 "\\text{実数解と虚数解で場合分けする。判別式Dの値）}\n→実数の場合は一般的な二次方程式と変わらない。　虚数会の場合\\quad 　α+β = -b/a αβ = |α|^2 = c/a"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "複素数単元における条件文の変形→AとBが直角　",
@@ -1715,8 +1715,8 @@
                                 "係数の関係式(条件式)\n係数の範囲"
                             ],
                             "memo": "https://hiraocafe.com/note/vector-area.html",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "空間ベクトルの共面条件（4点O、A、B、Cが同一空間にあるための条件）を書いて ",
@@ -1821,8 +1821,8 @@
                                 "Yes!(係数が1.0.1.0.1)だから"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "整式の剰余の解法4",
@@ -2185,15 +2185,6 @@
                             "last_answered_date": "2025-03-27"
                         },
                         {
-                            "problem": "HCLOはなんの化学式",
-                            "answer": [
-                                "次亜塩素酸"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-23"
-                        },
-                        {
                             "problem": "markovnikov’s rule",
                             "answer": [
                                 ""
@@ -2274,16 +2265,7 @@
                             ],
                             "memo": "https://kotobank.jp/image/dictionary/sekaidaihyakka/block/20307801.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-15"
-                        },
-                        {
-                            "problem": "アミノ酸のもつ正の電荷と負の電荷が釣り合ってアミノ酸全体として電荷をもたないpHを何という",
-                            "answer": [
-                                "等電点"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "アルコールを脱水することで何がつくられるか",
@@ -2393,6 +2375,15 @@
                             "last_answered_date": "2025-04-15"
                         },
                         {
+                            "problem": "HCLOはなんの化学式",
+                            "answer": [
+                                "次亜塩素酸"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
                             "problem": "鉄の精錬において鉄鉱石（酸化鉄）の還元に一酸化炭素を利用しているが、それは一酸化炭素のどのような性質を利用している。",
                             "answer": [
                                 "一酸化炭素は不安定なため、相手の酸素を奪って安定な二酸化炭素になろうとする働き"
@@ -2498,8 +2489,8 @@
                                 "フッ素"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "フッ化水素は弱酸、強酸？またその理由は",
@@ -2559,11 +2550,11 @@
                         {
                             "problem": "臭素の単体の状態は",
                             "answer": [
-                                "液体"
+                                "liquid"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 },
@@ -2579,6 +2570,93 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "アミノ酸のもつ正の電荷と負の電荷が釣り合ってアミノ酸全体として電荷をもたないpHを何という",
+                            "answer": [
+                                "等電点"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-16"
+                        }
+                    ]
+                },
+                {
+                    "name": "繊維",
+                    "questions": []
+                },
+                {
+                    "name": "油脂・せっけん",
+                    "questions": [
+                        {
+                            "problem": "パルミちん酸の示性式をかいて",
+                            "answer": [
+                                "C15H31COOH"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "不飽和脂肪酸はC=C結合部分は炭素が折れ線構造をしているがなぜか",
+                            "answer": [
+                                "cis型の配"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "不飽和脂肪酸は飽和脂肪酸に比べて融点が低い。その理由は",
+                            "answer": [
+                                "直線形の飽和脂肪酸と比べて分子同士が接近しにくくなるため、分子間にはたらく引力が弱くなる。その結果、融点が低くなる。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "高級脂肪酸のナトリウム塩を何という",
+                            "answer": [
+                                "せっけん"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "セッケンは水に溶けにくい油などの汚れを疎水基の集中したミセルの内側に取り込んで、水中に分散させる。この性質を何という",
+                            "answer": [
+                                "乳化作用"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "セッケンの欠点として「硬水中では使えない」があるが理由は",
+                            "answer": [
+                                "硬水（Ca2＋やMg2＋などを多く含む水）中では、次の反応が起こって沈殿が生成し、洗浄作用が低下する。\n\\mathrm{2R-COO^{-} + Ca^{2+} ⇄ (R-COO)_{2}Ca}"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        }
+                    ]
+                },
+                {
+                    "name": "高分子",
+                    "questions": [
+                        {
+                            "problem": "天然ゴムは、（A）が付加重合してできた（B）である。",
+                            "answer": [
+                                "イソプレン",
+                                "ポリイソプレン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 }
@@ -3107,8 +3185,8 @@
                                 "ペプシンPepsin"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "生物のSGLTとは何の略",
@@ -3374,7 +3452,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "大脳新皮質は4つの領域に分けることができる。答えて",
@@ -3795,7 +3873,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/3_1_1_1/k_sci_bio_3_1_1_1_image01.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "細胞でどんな遺伝子が発現しているか調べる方法",
@@ -3924,8 +4002,8 @@
                                 "Guanylic acid"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "nucleotideはヌクレオシドが何結合で連結しているか？",
@@ -4653,8 +4731,8 @@
                                 "横軸→光の強さ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "生産構造図 は二つに分類される。それぞれ答えて",
@@ -5039,7 +5117,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "DNS以外の名前解決としてどのような方法があるか",
@@ -5047,8 +5125,8 @@
                                 "Hostsファイル\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 }
@@ -5417,7 +5495,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "細分化したデータを複数の磁気ディスクに巡回的に並列入出力することによって，転送速度の向上を図っている。これはraid?の説明？",
@@ -5463,7 +5541,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-14"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "raid2,3の読み書き単位は？",
@@ -5577,8 +5655,8 @@
                                 "[dɔYtʃ ドィチャ]"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "循環器疾患",
@@ -7416,6 +7494,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "My parents forbade me to go out after 10 p.m",
+                            "answer": [
+                                "　両親は夜10時以降に外出することを禁じた。\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 }
@@ -7444,11 +7531,12 @@
                         {
                             "problem": "SYNフラッド（ハーフオープン攻撃）とは？また、SYNパケットとは？",
                             "answer": [
-                                "攻撃者はSYNパケットをひたすら送り続け、サーバーのリソースを消費させることでサービスを停止させます。この一連の攻撃は自動化されたツールやボットネットを利用して行われることが多く、その規模は大きくなりがちです。"
+                                "攻撃者はSYNパケットをひたすら送り続け、サーバーのリソースを消費させることでサービスを停止させます。この一連の攻撃は自動化されたツールやボットネットを利用して行われることが多く、その規模は大きくなりがちです。",
+                                "SYNパケットは、TCP通信において「接続の開始」を意味する特別なパケットです。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "主にマルウェア感染によって作られた「ボットネット」に命令を送り、制御する遠隔攻撃用のサーバーをなんという？",
@@ -7457,7 +7545,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "緊急事態を装って組織内部の人間からパスワードや機密情報を入手する不正な行為は，なんという攻撃に分類されるか",
@@ -7868,7 +7956,7 @@
                             ],
                             "memo": "投機：不確実だが当たれば利益の大きい事をねらってする行為\nif (x > 0) {\n    doSomething();\n}\nCPUは x > 0 の条件が評価される前に、「たぶん x > 0 だろう」と予測して doSomething() を先に実行し始めます。\n条件が合っていれば → 実行結果はそのまま使われる（高速化成功）\n条件が違っていれば → 実行結果を捨ててやり直す（無駄になるけど問題はない）",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-14"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "命令フェッチでは（A）から（B）に命令を読み込む",
@@ -8577,8 +8665,8 @@
                                 "ノンプリエンプティブ方式（協調的マルチタスク）"
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法（OSがCPUを管理しないで、アプリケーション（プログラム）にタスクの切り替えを任せる）\nつまりスケジューリング方式の例として、到着順方式がある。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "実行可能なタスクに対してプロセッサの使用権限を割り当てることを何という",
@@ -8616,7 +8704,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "入出力動作(I/O)の完了を待っている状態。は「実行状態」「実行可能状態」「待ち状態」のうちどれか",
@@ -8732,7 +8820,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-18"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "trade windはどちらから西から東or 東から西どちらにふくか？おぼえかたは？",
@@ -8892,7 +8980,7 @@
                             ],
                             "memo": "あれとごっちゃにならないように！",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
@@ -8982,7 +9070,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "高気圧と低気圧があったときに風はどちらからどちらにふく？",
@@ -9017,8 +9105,8 @@
                                 "局地風"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "以下高潮の説明。熱帯低気圧が接近すると、気圧が低下するため、海面が（A）",
@@ -9181,8 +9269,8 @@
                                 "ボラBora"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "気圧帯は、赤道から30度ごとに 低→（）→（）→（）　と繰り返される",
@@ -9242,7 +9330,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "南アメリカの西岸に位置しており、赤道を通る国は？",
@@ -9298,7 +9386,7 @@
                             ],
                             "memo": "春小麦が北側で冬小麦が南側なのは、春小麦が寒冷な地域で栽培されるものだから。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "カナダにおいてフランス系住民が多い州はどこ？",
@@ -9441,8 +9529,8 @@
                                 "外来河川"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "アメリカの乾燥地帯で行われている農業の方法を何という？",
@@ -9702,16 +9790,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "冬に北半球が寒くなる主な理由",
                             "answer": [
-                                "地球の地軸が傾いていること\n冬の時期、北半球は太陽の光が斜めに当たる\n太陽の高さ（南中高度）が低くなり、太陽の光が地面に対して斜めに当たります。すると、\n\n同じ太陽エネルギーでも広い面積に分散してしまい、地表があまり暖まりません。\n\nまた、日照時間も短くなり、太陽からのエネルギーを受け取る時間が減ります。"
+                                "地球の地軸が傾いていること\n冬の時期、北半球は太陽の光が斜めに当たる\n太陽の高さ（南中高度）が低くなり、太陽の光が地面に対して斜めに当たります。すると、\n\n同じ太陽エネルギーでも広い面積に分散してしまい、地表があまり暖まりません。\n\nまた、日照時間も短くなり、太陽からのエネルギーを受け取る時間が減ります。\n\n冬に南回帰線が地球の中央になって太陽光がもろあたるから。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "気温や湿度などの性質の似た空気の集まりのことを何という？",
@@ -9770,11 +9858,14 @@
                         {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
                             "answer": [
-                                ""
+                                "ア→シベリア気団",
+                                "イ→オホーツク気団",
+                                "ウ→揚子江気団",
+                                "エ→小笠原気団"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -9921,7 +10012,7 @@
                             ],
                             "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -9930,7 +10021,7 @@
                             ],
                             "memo": "\nhttps://chiri-tabi.com/img/reverlake.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "ヴォルタ川はどこにありますか？",
@@ -10024,7 +10115,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "アパラチア山脈はどこの国のどこらへんにある",
@@ -10194,13 +10285,14 @@
                             "last_answered_date": "2025-04-12"
                         },
                         {
-                            "problem": "ペルシャ湾どこ　ペルシャ湾の左には何の国がある？",
+                            "problem": "ペルシャ湾どこ　ペルシャ湾の左には何の国がある？上には何の国がある",
                             "answer": [
-                                "サウジアラビア"
+                                "サウジアラビア",
+                                "上→イラン"
                             ],
                             "memo": "https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXMZO4605511013062019I00004-2.jpg?ixlib=js-3.8.0&w=696&h=696&auto=format%2Ccompress&fit=crop&bg=FFFFFF&s=32aeb379be32462dc8c071093bbbe751",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "ガーナの左にはなんの国がある？",
@@ -10218,7 +10310,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "ナイジェリア　場所",
@@ -10254,7 +10346,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "イタリアの左には何の国がある？上には何がある",
@@ -10414,8 +10506,8 @@
                                 "Dw\nwが少雨を表す"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "DfとDwの植生は",
@@ -10542,8 +10634,8 @@
                                 "アンカラAnkara"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-10"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "チェニジアの首都は？",
@@ -10687,7 +10779,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "パキスタンの人口一位は？",
@@ -10705,7 +10797,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "韓国の　仁川　何と読む",
@@ -10768,7 +10860,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -10813,7 +10905,7 @@
                                 "オタワ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-12"
                         },
                         {
@@ -10897,6 +10989,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-09"
+                        },
+                        {
+                            "problem": "カラチはどこの国ですか？",
+                            "answer": [
+                                "パキスタン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "オランダの国の面積は大きい？小さい？",
