@@ -77,7 +77,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "IOPS数値が高いと何がいいのか？ ",
@@ -610,7 +610,7 @@
                             ],
                             "memo": "ALBのconnection drainingと間違えそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -800,7 +800,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "RDSにおいてマルチAZとごっちゃになってしまう特性を持った機能は何か？",
@@ -1325,8 +1325,8 @@
                                 "可能。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 },
@@ -1513,7 +1513,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 },
@@ -2332,11 +2332,48 @@
                             "last_answered_date": "2025-04-15"
                         },
                         {
+                            "problem": "アルデヒドの還元性を確認する方法を二つ答えて",
+                            "answer": [
+                                "銀鏡反応",
+                                "フェーリング反応"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-16"
+                        },
+                        {
+                            "problem": "（A）にアルデヒド（R-CHO）を加えて穏やかに加熱すると、（A）中に含まれる銀イオンAg+が還元されて銀Agの単体が生成される。",
+                            "answer": [
+                                "アンモニア性硝酸銀水溶液"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "レーヨンの別名は",
+                            "answer": [
+                                "再生繊維"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
                             "problem": "ホルムアルデヒドと尿素からできるアミノ樹脂は何？",
                             "answer": [
                                 "尿素樹脂"
                             ],
                             "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "ビスコースから希硫酸中でセルロースを繊維状に析出させると、（A）ができる。",
+                            "answer": [
+                                "ビスコースレーヨン"
+                            ],
+                            "memo": "https://kimika.net/wp-content/uploads/2018/11/y2rayon4.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-15"
                         }
@@ -2435,7 +2472,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "iceがとけて、waterになるとvolumeが現象する理由。",
@@ -2489,7 +2526,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "酸性の乾燥剤を二つ挙げよ",
@@ -3080,7 +3117,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "生物におけるGLUTとは？",
@@ -3812,8 +3849,8 @@
                                 "a region of repetitive DNA sequences at the end of a chromosome"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "内外2枚の生体膜で囲まれた細胞小器官の例を3つあげよ",
@@ -5287,8 +5324,8 @@
                                 "row_number()"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 }
@@ -5333,8 +5370,8 @@
                                 "二分探索木にさらに どのノードにおいても左の子の高さと右の子の高さの差が 1 以下"
                             ],
                             "memo": "https://learnersbucket.com/wp-content/uploads/2021/03/AVL-Tree-in-Javascript.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 }
@@ -8524,7 +8561,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "コンピュータが処理する作業の最小単位のことを何という？",
@@ -8549,7 +8586,7 @@
                             "answer": [
                                 "ノンプリエンプティブ方式（協調的マルチタスク）"
                             ],
-                            "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
+                            "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法（OSがCPUを管理しないで、アプリケーション（プログラム）にタスクの切り替えを任せる）\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-11"
                         },
@@ -8559,7 +8596,7 @@
                                 "タスクのディスパッチ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-12"
                         },
                         {
@@ -8607,7 +8644,7 @@
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 }
@@ -8687,7 +8724,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-14"
+                            "last_answered_date": "2025-04-16"
                         },
                         {
                             "problem": "キャッサバは何の原料？",
@@ -8704,7 +8741,7 @@
                                 "Precambrian"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-18"
                         },
                         {
@@ -9018,8 +9055,8 @@
                                 "成因に由来→準平原、構造平野"
                             ],
                             "memo": "構造平野と卓状地の違い、準平原と楯状地の違いというのは、かなりあいまいです",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "春先に地中海からイタリア南部に向けて吹いてくる高温多湿な風は？",
@@ -9177,7 +9214,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "海岸付近の陸地が沈降したり、海面が上昇したりすることで、海水が陸地に入り込んでできた地形を何という？",
@@ -9693,7 +9730,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-14"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "シベリア気団は乾燥している？湿っている？",
@@ -9730,6 +9767,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-13"
+                        },
+                        {
+                            "problem": "古生代・中生代の地層が長い間、侵食されてできた地形はなにか",
+                            "answer": [
+                                "構造平野"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
@@ -10062,9 +10108,9 @@
                             "answer": [
                                 "地中海、シリア"
                             ],
-                            "memo": "",
+                            "memo": "https://lh3.googleusercontent.com/proxy/DLAdaJvMCx_o-c3cQ1wq0kj6gEpyINWJRD7w5Ac2_bsDbLZ7SMWVjFYO5t7F5rljGuYXko8MPA9cZbKzJHDkfWZRcv6lu4AKlkRW0_xAVI_8iIY6EjZ99z8xkqZIXBbuvw2qzT_V",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "ウズベキスタンの場所は？上と下には何がある？",
@@ -10235,7 +10281,7 @@
                                 "下→イラン",
                                 "右→カザフスタン"
                             ],
-                            "memo": "https://www3.nhk.or.jp/news/special/international_news_navi/wp-content/uploads/2023/07/daf821f3693718c66dd10bf7279899e4.jpg\n\nhttps://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg",
+                            "memo": "https://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-12"
                         }
@@ -10568,8 +10614,8 @@
                                 "UAE"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "西アジアにおいて、北回帰線のやや南にある都市は？",
@@ -10659,7 +10705,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "トルコの人口一位は？",
@@ -10722,7 +10768,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "アメリカの首都",
@@ -10831,8 +10877,8 @@
                                 ""
                             ],
                             "memo": "https://ryugaku-au.net/wp-content/uploads/2017/06/0ad5ef87f5dfe55deabeca7bb9ef543e-1-460x314.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "ドイツ西北部のライン河畔にあり、ヨーロッパ最大の大炭鉱であるルール炭田を中心とした工業地帯は？",
@@ -10849,8 +10895,8 @@
                                 "2億"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "アスワンハイダムは何川に建設された？",
@@ -10983,8 +11029,8 @@
                                 "メキシコ メキシコシティ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "複数の都市がつながって一つの巨大な都市圏を形成したものを何という？",
@@ -11010,8 +11056,8 @@
                                 "韓国"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
                 },
@@ -11382,8 +11428,8 @@
                                 "activity log"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         },
                         {
                             "problem": "Microsoft Azure が提供する SSL/TLS 証明書の一種で、Azure 上の Web アプリケーション（App Service）に HTTPS 通信を簡単に導入するためのサービスは？",
