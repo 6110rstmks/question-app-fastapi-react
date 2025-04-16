@@ -72,8 +72,8 @@
                                 "IOPSの「PS」の部分は「Per Second(1秒あたりの)」という意味があるので、統合して考えるとIOPSとは「ストレージが1秒あたりに処理できるI/Oアクセスの数」ということになります。\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "IOPS数値が高いと何がいいのか？ ",
@@ -1508,8 +1508,8 @@
                                 "IOPSの「PS」の部分は「Per Second(1秒あたりの)」という意味があるので、統合して考えるとIOPSとは「ストレージが1秒あたりに処理できるI/Oアクセスの数」ということになります。\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
                         }
                     ]
                 },
@@ -2168,7 +2168,7 @@
                             ],
                             "memo": "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         }
                     ]
                 },
@@ -2738,7 +2738,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "アミノ酸のもつ正の電荷と負の電荷が釣り合ってアミノ酸全体として電荷をもたないpHを何という",
@@ -2809,8 +2809,8 @@
                                 "硬水（Ca2＋やMg2＋などを多く含む水）中では、次の反応が起こって沈殿が生成し、洗浄作用が低下する。\n\\mathrm{2R-COO^{-} + Ca^{2+} ⇄ (R-COO)_{2}Ca}"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
                         }
                     ]
                 },
@@ -7728,6 +7728,15 @@
                             "last_answered_date": "2025-04-16"
                         },
                         {
+                            "problem": "焼畑農業　英語で",
+                            "answer": [
+                                "Slash-and-burn agriculture"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
+                        },
+                        {
                             "problem": "My parents forbade me to go out after 10 p.m",
                             "answer": [
                                 "　両親は夜10時以降に外出することを禁じた。\n\n"
@@ -9203,7 +9212,7 @@
                             ],
                             "memo": "気温の分布",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
@@ -9562,7 +9571,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "南アメリカの西岸に位置しており、赤道を通る国は？",
@@ -11561,6 +11570,54 @@
                             "problem": "モンゴル族の組み立て式住居では移動しやすいように、簡単に組み立てられる（A）と呼ばれるテントで生活しています",
                             "answer": [
                                 "ゲル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
+                        },
+                        {
+                            "problem": "ホイットルセイの農業区分において商業的農業に分類される4つを答えて",
+                            "answer": [
+                                "混合農業",
+                                "酪農",
+                                "園芸農業",
+                                "地中海式農業"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
+                        },
+                        {
+                            "problem": "無理のある焼畑農業を続けていくとどのような問題がおきるか",
+                            "answer": [
+                                "砂漠化が進行"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
+                        },
+                        {
+                            "problem": "焼畑農業はどの気候区分でみられるか",
+                            "answer": [
+                                "熱帯"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
+                        },
+                        {
+                            "problem": "キャッサバの原産地は？",
+                            "answer": [
+                                "アマゾン盆地"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
+                        },
+                        {
+                            "problem": "熱帯の農業方式といえば",
+                            "answer": [
+                                "焼畑農業"
                             ],
                             "memo": "",
                             "is_correct": 0,
