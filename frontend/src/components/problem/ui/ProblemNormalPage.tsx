@@ -27,7 +27,7 @@ enum SolutionStatus {
     PERMANENT_SOLVED = 2,
 }
 
-export const ProblemNormal: React.FC<Props> = ({
+export const ProblemNormalPage: React.FC<Props> = ({
     reviewFlg,
     problem,
     currentProblemIndex,
@@ -124,7 +124,7 @@ export const ProblemNormal: React.FC<Props> = ({
                 </Modal>
                 
                 <div className={styles.questionContent}>
-                    {localProblem.problem}
+                 {RenderMemoWithLinks(localProblem.problem)}
                 </div>
 
                 {!showAnswer ? (

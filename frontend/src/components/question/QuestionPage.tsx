@@ -40,7 +40,6 @@ const QuestionPage: React.FC = () => {
     
     const isLatex = (text: string) => text.includes('\\')
 
-
     const { 
         categoryId,
         subcategoryId,
@@ -178,10 +177,10 @@ const QuestionPage: React.FC = () => {
             <div>
                 {question?.memo && (
                     <div className={styles.memo}>
-                    <h3>メモ</h3>
-                    <p>
-                        {RenderMemoWithLinks(question.memo)}
-                    </p>
+                        <h3>メモ</h3>
+                        <p>
+                            {RenderMemoWithLinks(question.memo)}
+                        </p>
                     </div>
                 )}
             </div>

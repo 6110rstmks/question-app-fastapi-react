@@ -16,6 +16,7 @@ import CategoryPage from './components/category/CategoryPage'
 import ReportPage from './components/ReportPage'
 import QuestionListPage from './components/question/QuestionListPage'
 import NoMatchPage from './components/NoMatchPage'
+import Today from './components/Today'
 import 'katex/dist/katex.min.css';
 
 
@@ -39,7 +40,7 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth} />} />
         <Route path="/signup" element={<Signup />} />
-        
+
         <Route path="/category/:categoryId" element={<CategoryPage />} />
         <Route path="/subcategory/:subcategoryId" element={<SubcategoryPage />} />
         <Route path="/question/:questionId" element={<QuestionPage />} />
@@ -48,6 +49,8 @@ const App: React.FC = () => {
         <Route path="/report_page" element={<ReportPage />}/>
         <Route path="/question_list" element={<QuestionListPage />}/>
         <Route path="*" element={<NoMatchPage />} />
+
+        <Route path="/today" element={<Today />}/>
       </Routes>
     </Router>
   );

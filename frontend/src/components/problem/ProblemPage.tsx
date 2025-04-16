@@ -2,9 +2,8 @@ import React from "react"
 import { useLocation } from "react-router"
 import { Question } from "../../types/Question"
 import { useProblemPage } from "./hooks/useProblemPage"
-import { ProblemNormal } from "./ui/ProblemNormalPage"
-import { ProblemComplete } from "./ui/ProblemComplete"
-
+import { ProblemNormalPage } from "./ui/ProblemNormalPage"
+import { ProblemComplete } from "./ui/ProblemCompletePage"
 
 const ProblemPage: React.FC = () => {
     const location = useLocation()
@@ -39,7 +38,7 @@ const ProblemPage: React.FC = () => {
 
     return (
         <div>
-            <ProblemNormal
+            <ProblemNormalPage
                 reviewFlg={reviewFlg}
                 problem={
                     reviewFlg 
