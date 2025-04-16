@@ -298,7 +298,7 @@
                                 "持ち合わせている。"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-02-12"
                         },
                         {
@@ -317,7 +317,7 @@
                                 "15"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-03-01"
                         },
                         {
@@ -353,7 +353,7 @@
                                 "aurora"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-03-13"
                         }
                     ]
@@ -606,7 +606,7 @@
                             ],
                             "memo": "ALBのconnection drainingと間違えそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -860,7 +860,7 @@
                                 "15"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-03-01"
                         }
                     ]
@@ -1266,8 +1266,8 @@
                                 "simpleAD\naws microsoft managed AD\nAD connector"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "(A)を利用することで、オンプレミスのADにあるユーザ情報を使用して、AWSアプリケーションに接続することができる。",
@@ -2186,7 +2186,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         }
                     ]
                 }
@@ -2594,8 +2594,8 @@
                                 "両方として働く"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "鉄、クロム、ニッケルの合金は",
@@ -2622,8 +2622,8 @@
                                 "みずぶんしが氷の隙間にはいりこむため"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "SiO2 + 4HFの反応を書いてください",
@@ -2824,8 +2824,8 @@
                                 "ポリイソプレン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "天然ゴムを乾留することによって得られる物質を何という",
@@ -2842,8 +2842,8 @@
                                 "エボナイト"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
                         }
                     ]
                 }
@@ -3382,7 +3382,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "生物におけるGLUTとは？",
@@ -4789,7 +4789,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "beta oxidationでは脂肪酸から何を生成する？",
@@ -4844,7 +4844,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "C4植物の光合成における葉肉細胞の働き。CO2をC3化合物と反応させ、（A）に変換してCO2を濃縮させる。",
@@ -6969,7 +6969,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "He had a stroke last year.",
@@ -8774,7 +8774,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "メモリ管理の可変区画方式では、空き領域により小さいデータを読み込むので、領域の確保と解放を繰り返していくと、細かい領域がたくさん発生することがあります。この領域を何という？",
@@ -9666,7 +9666,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "扇状地の一番上から順番に 扇頂→扇央→扇端 という名前がついています。扇頂の方が粒が（大きく・小さく）、扇端にいくほど粒が（大きく・小さく）なっていきます。",
@@ -9845,7 +9845,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "フランスとスペインの境界にある山脈は？",
@@ -10075,7 +10075,7 @@
                             ],
                             "memo": "https://www.jishin.go.jp/main/herpnews/series/2010/img/07/05_z_5.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -10106,6 +10106,16 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-16"
+                        },
+                        {
+                            "problem": "褶曲地形でよくとれる資源は",
+                            "answer": [
+                                "石油",
+                                "天然ガス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
                         }
                     ]
                 },
@@ -10206,7 +10216,7 @@
                             ],
                             "memo": "https://www.vivonet.co.jp/rekisi/a16_hungary/hungarymap.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "https://juken-geography.com/wp-content/uploads/2020/07/mountains-koki.png 10~16を答えて",
@@ -10221,7 +10231,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "アコンカグアはどこにある",
@@ -10230,7 +10240,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "ハドソン湾はどこにある？",
@@ -10303,7 +10313,7 @@
                             ],
                             "memo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkGtPaCARkiQGUMgs7RlAoLAiWpHfgn8B8RsWUjnMOOp-RlMcoCKXZOnRx8YlIQHASDPZNg4_bOLVCyauWqtfS99yjiJ8EGWmtQX8SO7ku2pon20zraU4glObze4sDH507gsW5YtzSFVhn/w1200-h630-p-k-no-nu/4c1e2d7739f148f73ba648c4d2c9e2bb.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "アペニン山脈はどこにある？",
@@ -10662,7 +10672,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "アウトストラーダ・デル・ソーレとは？",
@@ -10788,7 +10798,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "ソウルの人口およそ",
@@ -10806,7 +10816,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "タイの首都バンコクには何の工場が集積しているか",
@@ -10824,7 +10834,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "ムンバイは何の工業で有名か？",
@@ -10851,7 +10861,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "韓国の　仁川　何と読む",
@@ -11222,7 +11232,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "老齢人口が7%から14%の社会を何という？",
@@ -11268,7 +11278,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-04-17"
                         }
                     ]
                 },
@@ -11308,7 +11318,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "サトウキビの生産一位は？",
@@ -11360,7 +11370,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "散村の例は",
@@ -11528,6 +11538,33 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-16"
+                        },
+                        {
+                            "problem": "放牧はどのような環境でおこなわれるか",
+                            "answer": [
+                                "植物が生育しにくい地域"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
+                        },
+                        {
+                            "problem": "ツンドラ気候の遊牧では何をやっている",
+                            "answer": [
+                                "トナカイ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
+                        },
+                        {
+                            "problem": "モンゴル族の組み立て式住居では移動しやすいように、簡単に組み立てられる（A）と呼ばれるテントで生活しています",
+                            "answer": [
+                                "ゲル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-17"
                         }
                     ]
                 },
@@ -11623,8 +11660,8 @@
                                 "最寒月平均気温 −3℃〜18℃"
                             ],
                             "memo": "一方熱帯の定義は\n最寒月平均気温 18℃いじょう",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "氷雪気候をアルファベットで表すと",
@@ -12028,7 +12065,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-04-18"
                         },
                         {
                             "problem": "Azure Storage には4種類のストレージサービスがある。答えて",
