@@ -1642,6 +1642,15 @@
                             "memo": "デメリットはAPI Gateway/Step Funcstionsのコストがかかる、Step Funcstionsが入る分、実装難易度が高い",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "API Gateway × Cognito(user pool)でなにができる",
+                            "answer": [
+                                "ユーザー認証された人だけAPIを叩けるようにする"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
                         }
                     ]
                 }
@@ -10298,6 +10307,24 @@
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIg-uGKMJjxaaQqTxlj6B1ZD5-tJ6cMoOwlQ&s",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "アジアの東部から南東部をへて南部にいたる，モンスーンの影響を受ける地域を何という",
+                            "answer": [
+                                "モンスーンアジア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "モンスーンアジアでは何の穀物の生産が盛んか",
+                            "answer": [
+                                "米"
+                            ],
+                            "memo": "https://www.geography-lesson.com/wp-content/uploads/2025/04/123B1702-96E2-4E69-AEC7-5ACC22A645FF.jpeg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
                         }
                     ]
                 },
@@ -11617,7 +11644,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "大豆の生産量top3",
@@ -11627,6 +11654,17 @@
                                 "アルゼンチン"
                             ],
                             "memo": "だいじょうぶ、あめあるぜ",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
+                        },
+                        {
+                            "problem": "世界の米の生産量top3",
+                            "answer": [
+                                "中国",
+                                "インド",
+                                "バングラデッシュ"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
                         }
