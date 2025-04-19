@@ -1633,6 +1633,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "API Gateway×Step Functions×Lambdaでの構築のメリットを答えて",
+                            "answer": [
+                                "API Gatewayのタイムアウトの上限の29 秒(上限緩和申請可能)を超えた処理を実行できる（API Gateway×Lambdaの実装だとAPI Gatewayのタイムアウトの上限は29 秒(上限緩和申請可能)なので、29秒以上の処理はエラーとなる）"
+                            ],
+                            "memo": "デメリットはAPI Gateway/Step Funcstionsのコストがかかる、Step Funcstionsが入る分、実装難易度が高い",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
                         }
                     ]
                 }
