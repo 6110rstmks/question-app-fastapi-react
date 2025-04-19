@@ -2443,7 +2443,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "fat hydrogenation",
@@ -2476,7 +2476,10 @@
                         {
                             "problem": "フェノールの製法であるアルカリ融解法について流れを絵で書いて",
                             "answer": [
-                                ""
+                                "ベンゼンを濃硫酸とともに加熱するとベンゼンスルホン酸が生じる。",
+                                "ベンゼンスルホン酸と水酸化ナトリウム水溶液を混ぜてベンゼンスルホン酸ナトリウムを得る。",
+                                "ベンゼンスルホン酸ナトリウムと水酸化ナトリウム（固体）を混ぜて約300℃に加熱し、ナトリウムフェノキシドを得る。固体が融解した状態で反応が進むのでこの過程はアルカリ融解とよばれる。",
+                                "ナトリウムフェノキシドに塩酸や炭酸のようなフェノールよりも強い酸を加えることで弱酸遊離反応によってフェノールを得る"
                             ],
                             "memo": "https://kimika.net/wp-content/uploads/2019/10/y1fenol4.png",
                             "is_correct": 0,
@@ -2518,6 +2521,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-17"
+                        },
+                        {
+                            "problem": "高温で溶かした固体を使う反応のこと。水溶液でさえ強塩基であるを、純粋な固体で、熱して溶かすという激ヤバ反応を何という？",
+                            "answer": [
+                                "アルカリ融解"
+                            ],
+                            "memo": "https://okke.app/words/p/gw8uFiimFeR0m",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
                         },
                         {
                             "problem": "レーヨンの別名は",
@@ -2740,8 +2752,8 @@
                                 "風解性"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-19"
                         },
                         {
                             "problem": "水銀とその他の金属の合金を何という",
@@ -10325,6 +10337,15 @@
                             "memo": "https://www.geography-lesson.com/wp-content/uploads/2025/04/123B1702-96E2-4E69-AEC7-5ACC22A645FF.jpeg",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "世界全体の米の輸出量は約5000万トンです。生産量は約8億トンなので生産量全体の1割以下しか輸出されていないことになる。これを何と表現するか",
+                            "answer": [
+                                "米は自給的な性格が強い作物である、と表現します。"
+                            ],
+                            "memo": "https://www.geography-lesson.com/wp-content/uploads/2025/04/78E92557-544A-4AE9-A0D3-F549F5930942.jpeg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
                         }
                     ]
                 },
@@ -10837,7 +10858,7 @@
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-19"
                         },
                         {
                             "problem": "カラクム砂漠はどこの国にある？",
@@ -10903,7 +10924,7 @@
                             ],
                             "memo": "https://healthy-live.jp/guilin/image/map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         }
                     ]
                 },
@@ -11753,7 +11774,7 @@
                             "last_answered_date": "2025-04-13"
                         },
                         {
-                            "problem": "米の栽培条件",
+                            "problem": "米の栽培条件　年間降水量の目安は",
                             "answer": [
                                 "高温多雨　年降水量1000mm"
                             ],
@@ -11820,8 +11841,8 @@
                                 "ガーナ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "https://lh3.googleusercontent.com/QP7dYZj6r4abrYYmrlCnS6mPtwJQ-dHVolaUCmzHQYy4uuU6k9pKLZtcdaMK6phH6pgJ38HYBx3Dg0fuh275Dml2WRPCERshOGVBqlIRfrrAZeLfheI4nd60p6jRkYpXBvUa-98GwANqt89SDKX5fn_G0BpCl4O5-wKkfvD7MAFODjB1Fg=w740?key=9VOAdVoZDGmvgIrFyXnqMA　Xの地域で栽培が盛んな農作物は？",
@@ -12032,6 +12053,42 @@
                             "problem": "抑制栽培が行われる理由",
                             "answer": [
                                 "通常ならば，出回らない時期に生産・出荷することで，高い値段で売れるので，もうけを大きくすることができるためです。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "緑の革命のデメリットは",
+                            "answer": [
+                                "開発された新しい品種は、たくさんの農薬や肥料、そして水が必要。\n農薬や肥料によって土や水が汚染されたほか、近代的な設備を導入できる農家とそうで無い農家との間で、貧富の格差を拡大させた、という問題点もありました。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "小麦の世界全体での輸出量は約2億トンで、生産量の2割くらいは輸出に回されています。これをどのように表現する？",
+                            "answer": [
+                                "小麦は商業的な性格の強い作物であると呼ばれます。\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "春小麦を栽培する国はどのような国か",
+                            "answer": [
+                                "ロシアやカナダなどの寒い地域や、アメリカの高緯度地域では、冬が寒すぎて小麦が冬を越せないため、春になってから小麦の種を撒いて、8〜9月頃に収穫します。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "季節が逆になっているお陰で、オーストラリアは、北半球の国々が小麦を収穫していない時期に小麦を輸出できる強みがあります。このように、他の国では作物が収穫できない時期を何という",
+                            "answer": [
+                                "端境期"
                             ],
                             "memo": "",
                             "is_correct": 0,
