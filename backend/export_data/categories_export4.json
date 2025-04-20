@@ -871,11 +871,13 @@
                         {
                             "problem": "S3 glacierの種類を3つ述べてください",
                             "answer": [
-                                "glacier deep archive, glacier instant retrieval, glacier flexible retriebal"
+                                "glacier deep archive",
+                                "glacier instant retrieval",
+                                "glacier flexible retrieval"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "Glacier ではデータをアップロードすると、そのデータをアーカイブ化して圧縮します。その上で、（A)というスペースにデータを保存します。（A)に入る単語は？",
@@ -898,7 +900,9 @@
                         {
                             "problem": "glacierの取り出し方法にはどのようなものがあるか。3つこたえて、",
                             "answer": [
-                                "標準取り出し、　大容量取り出し、　迅速取り出し"
+                                "標準取り出",
+                                "大容量取り出し",
+                                "迅速取り出し"
                             ],
                             "memo": "",
                             "is_correct": 2,
@@ -1024,7 +1028,7 @@
                             ],
                             "memo": "AWS Data Firehoseとごっちゃにならないように",
                             "is_correct": 0,
-                            "last_answered_date": "2025-02-25"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "インターフェース型のVPCエンドポイントは、(A)と呼ばれるサービスを使って、各サービスを接続させることができる。(A)は？",
@@ -1075,6 +1079,15 @@
                             "problem": "VPCエンドポイントのInterface型エンドポイントを作成するとエンドポイント固有の（A）が作成される",
                             "answer": [
                                 "DNS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
+                        },
+                        {
+                            "problem": "ゲートウェイエンドポイントとインターフェイスエンドポイントの二つを利用してS3 にアクセスする際にインターフェースエンドポイントでは何をしようしてVPC から Amazon S3 にリクエストをルーティングするか",
+                            "answer": [
+                                "プライベートIP"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -1299,7 +1312,7 @@
                                 "Amazon S3バケット"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-23"
                         }
                     ]
@@ -1624,14 +1637,14 @@
                             "last_answered_date": "2025-04-19"
                         },
                         {
-                            "problem": "def lambda_handler(event, context): return { 'statusCode': 200, 'body': json.dumps('Hello World')}　lambdaの関数が右記の場合、API gatewayにおけるプロキシ統合と非プロキシ統合ではそれぞれどのような値を返すか",
+                            "problem": "def lambda_handler(event, context): return { 'statusCode': 200, 'body': json.dumps('Hello World')}　lambdaの関数が上記の場合、API gatewayにおけるプロキシ統合と非プロキシ統合ではそれぞれどのような値を返すか",
                             "answer": [
                                 "プロキシ統合→ { 'statusCode': 200, 'body': json.dumps('Hello World')}",
                                 "非プロキシ統合→Htllo world"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "API Gateway×Step Functions×Lambdaでの構築のメリットを答えて",
@@ -1676,7 +1689,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "IAMのポリシーのうち、ユーザによって作成したポリシーを何という",
@@ -1685,7 +1698,7 @@
                             ],
                             "memo": "AWS管理ポリシーやカスタマー管理ポリシーは1つのポリシーを作成すれば多くのIAMユーザなどにアタッチすることができますが、インラインポリシーは1つのIAMユーザなど、1対1でのアタッチしかできません。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "特定のIAMユーザやIAMロール専用に作成されるポリシーを何という",
@@ -1774,7 +1787,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "2次方程式の複素数解の武器4",
@@ -2127,8 +2140,8 @@
                                 "三次関数とその接線で囲まれた面積"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         }
                     ]
                 },
@@ -2292,7 +2305,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         }
                     ]
                 }
@@ -2678,7 +2691,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "Snの参加数は2種類ある。答えて、またどちらが安定",
@@ -3129,8 +3142,8 @@
                                 ""
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "ノギンNogginやコーディンChordinはどこから分泌されるのか？",
@@ -3538,7 +3551,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "生物におけるGLUTとは？",
@@ -4807,8 +4820,8 @@
                                 "心筋"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "運動神経からのアセチルコリンが受容体に結合したらその刺激が筋小胞体に作用してその後どうなる。",
@@ -4816,8 +4829,8 @@
                                 "Ca2+が放出される"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "僧帽筋どこにある？",
@@ -5305,7 +5318,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "景気を測る指数は何？",
@@ -5925,7 +5938,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "パリティとは？（IT用語）",
@@ -5949,7 +5962,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "PITRはシステム用語で何の略？",
@@ -6471,8 +6484,8 @@
                                 "他動詞\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "He had his driving license revoked.",
@@ -7907,6 +7920,20 @@
                             "last_answered_date": "2025-04-19"
                         }
                     ]
+                },
+                {
+                    "name": "和文英訳",
+                    "questions": [
+                        {
+                            "problem": "彼は理科だけではなく英語も好きです。",
+                            "answer": [
+                                "He likes English as well as science"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
+                        }
+                    ]
                 }
             ]
         },
@@ -7941,6 +7968,15 @@
                             "last_answered_date": "2025-04-15"
                         },
                         {
+                            "problem": "クラウドサービス利用者に金銭的負担をかけさせるサイバー攻撃です。脆弱性のあるシステムのリソースが大量消費されることによって経済的にサービスを停止せざるを得ない状況になる場合があります。これを何という",
+                            "answer": [
+                                "eDos攻撃"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
+                        },
+                        {
                             "problem": "主にマルウェア感染によって作られた「ボットネット」に命令を送り、制御する遠隔攻撃用のサーバーをなんという？",
                             "answer": [
                                 "C&Cサーバ"
@@ -7971,7 +8007,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "3ウェイハンドシェイクと紐づくプロトコルは？",
@@ -8558,7 +8594,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "last_answered_date": "2025-04-20"
                         }
                     ]
                 },
@@ -8991,7 +9027,7 @@
                             ],
                             "memo": "ページングはプログラムやデータを分割して記憶領域を管理し、コンピュータの仮想記憶を実現するための方式です。ページングでは、仮想記憶(補助記憶装置)と実記憶(主記憶)間のデータの受け渡しをページという固定長の単位で行いますが、このページのやり取りは「ページフォールトが発生したときに主記憶のどのページを置換えるか」および「どのページをどのタイミングで主記憶に読み込むか」という二つのアルゴリズムに基づいて管理が行われます。\n前者の置換え対象を決定する方法としては、LRU(Least Recently Used)やFIFO(First In First Out)があり、後者の読込み対象と読込むタイミングを決定するアルゴリズムとしては、この設問で問われている「デマンドページング方式」や「プリページング方式」があります。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "デマンドページング方式はページの読込み対象と読込むタイミングを決定するアルゴリズムであるが、どのタイミングで読み込みを行うか。",
@@ -9106,7 +9142,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "入出力動作(I/O)の完了を待っている状態。は「実行状態」「実行可能状態」「待ち状態」のうちどれか",
@@ -9220,6 +9256,15 @@
                                 "風積土"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
+                        },
+                        {
+                            "problem": "地理の問題を解く際に使用する年代 およそ1955年~73年はなにがあった",
+                            "answer": [
+                                "高度経済成長"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-20"
                         },
@@ -9288,15 +9333,6 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-11"
-                        },
-                        {
-                            "problem": "熱帯（A気候）のうち乾季なしの気候は何？",
-                            "answer": [
-                                "熱帯多雨林気候"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-18"
                         },
                         {
                             "problem": "気温の分布で大事なことは3つ。",
@@ -9663,17 +9699,8 @@
                                 "中国の桂林"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
-                        },
-                        {
-                            "problem": "ヨーロッパにおける米の生産国といえば？",
-                            "answer": [
-                                "イタリア"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "南西風はどちらからどちらにふくものをよぶか？",
@@ -9759,8 +9786,8 @@
                                 "南回帰線"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "南アメリカの西岸に位置しており、赤道を通る国は？",
@@ -10087,8 +10114,8 @@
                                 "乾燥地帯にあるため、水がどんどん蒸発して、塩分濃度が高い。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "シベリア南部にある三日月型の断層湖はなんですか？",
@@ -10143,15 +10170,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-15"
-                        },
-                        {
-                            "problem": "EUが外国の安い穀物に対抗するために、補助金を支払う政策をなんという？",
-                            "answer": [
-                                "EU共通農業政策"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
                         },
                         {
                             "problem": "ペルー漁業では何の漁獲量が多いか。",
@@ -10308,8 +10326,8 @@
                                 "三日月"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "ペルーにある標高の高い山脈は？",
@@ -10319,6 +10337,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "熱帯収束帯では雨が降るか、降らないか",
+                            "answer": [
+                                "よく降る"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -10404,12 +10431,39 @@
                             "memo": "https://www.geography-lesson.com/wp-content/uploads/2025/04/78E92557-544A-4AE9-A0D3-F549F5930942.jpeg",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "ブラジル高原は安定陸塊、古期造山帯、新期造山帯のどれか",
+                            "answer": [
+                                "安定陸塊"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
+                        },
+                        {
+                            "problem": "ホットスポットの例は？",
+                            "answer": [
+                                "ハワイ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
                         }
                     ]
                 },
                 {
                     "name": "religion",
                     "questions": [
+                        {
+                            "problem": "ユダヤ教の神を何という",
+                            "answer": [
+                                "ヤハウェ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
+                        },
                         {
                             "problem": "仏教には上座仏教と大乗仏教がある。戒律がしっかりしている仏教はどちらか。",
                             "answer": [
@@ -10546,7 +10600,7 @@
                             ],
                             "memo": "https://image.itmedia.co.jp/nl/articles/1402/28/kuro_140228hokkyoku02.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "黒海の周りにある国",
@@ -10888,8 +10942,8 @@
                                 "ガーナ、コートジボワールらへん"
                             ],
                             "memo": "https://gakusyu.shizuoka-c.ed.jp/society/kyoutsu/sekaino_kuniguni/logo_gazou/07_3_afurika_naijeria.gif",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "テムズ川　どの国らへん",
@@ -10940,11 +10994,11 @@
                             "problem": "イタリアの左には何の国がある？上には何がある",
                             "answer": [
                                 "左→フランス",
-                                "上→スイス"
+                                "上→スイス、オーストリア"
                             ],
                             "memo": "https://www.travel-zentech.jp/world/map/italy/image/Map_of_Italy_and_neighboring_countries.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "ラプラタ川の場所は",
@@ -10954,6 +11008,15 @@
                             "memo": "https://stat.ameba.jp/user_images/20150522/09/worldhistory-univ/eb/bf/p/o0800106613314313892.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "ハワイの場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "カスピ海の下には何の国がある？右には何の国",
@@ -11024,6 +11087,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "ブラジルの公用語はなんですか",
+                            "answer": [
+                                "ポルトガル語"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "アウトストラーダ・デル・ソーレとは？",
@@ -11140,7 +11212,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "ソウルの人口およそ",
@@ -11158,7 +11230,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "タイの首都バンコクには何の工場が集積しているか",
@@ -11185,7 +11257,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "パキスタンの人口一位は？",
@@ -11203,7 +11275,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "韓国の　仁川　何と読む",
@@ -11370,15 +11442,6 @@
                             "last_answered_date": "2025-04-15"
                         },
                         {
-                            "problem": "ドイツ西北部のライン河畔にあり、ヨーロッパ最大の大炭鉱であるルール炭田を中心とした工業地帯は？",
-                            "answer": [
-                                "ルール地方"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
-                        },
-                        {
                             "problem": "パキスタンの人口は？",
                             "answer": [
                                 "2億"
@@ -11439,7 +11502,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "ナスカの地上絵はどこの国",
@@ -11466,7 +11529,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "ブラジルのスラム街、貧困街を何という",
@@ -11627,8 +11690,8 @@
                                 "メキシコ メキシコシティ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "複数の都市がつながって一つの巨大な都市圏を形成したものを何という？",
@@ -11682,7 +11745,7 @@
                                 "アネクメーネ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-19"
                         }
                     ]
@@ -11743,7 +11806,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "大豆の生産量top3",
@@ -11878,16 +11941,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
-                            "problem": "じゃがいもは米や小麦と比べると保存がしづらい作物か",
+                            "problem": "じゃがいもは米や小麦と比べると保存がしやすい作物か、しづらい作物か",
                             "answer": [
                                 "そう"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "冬小麦Winter wheatのおぼえかたは？",
@@ -11904,8 +11967,8 @@
                                 "焼畑農業"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "通常の収穫・出荷時期よりも遅らせて栽培することを何という",
@@ -12059,7 +12122,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "アブラヤシの栽培にはどのような条件が適しているか",
@@ -12096,6 +12159,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "じゃがいもは長期保存に不向き。なのでアンデス山脈では長期保存できるようにするために、何に加工している",
+                            "answer": [
+                                "チューニョ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "カカオの生産量が多い国top2",
@@ -12360,7 +12432,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "AfとAwの中間気候は？また中間の理由は？",
@@ -12448,6 +12520,16 @@
                             "last_answered_date": "2025-04-19"
                         },
                         {
+                            "problem": "地中海性気候(Cs)の定義",
+                            "answer": [
+                                "最寒月平均気温 ー3〜18℃ (Cの要素)\n",
+                                "降水 夏少雨 冬の最多雨月降水量が夏の最少雨月降水量の3倍以上 (sの要素)"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
+                        },
+                        {
                             "problem": "西岸海洋性気候(Cfb)の定義",
                             "answer": [
                                 "最寒月平均気温 ー3〜18℃ (Cの要素)\n",
@@ -12466,6 +12548,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "熱帯（A気候）のうち乾季なしの気候は何？",
+                            "answer": [
+                                "熱帯多雨林気候"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-20"
                         }
                     ]
                 },
@@ -12480,8 +12571,39 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-03"
+                        },
+                        {
+                            "problem": "ヨーロッパにおける米の生産国といえば？",
+                            "answer": [
+                                "イタリア"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "EUが外国の安い穀物に対抗するために、補助金を支払う政策をなんという？",
+                            "answer": [
+                                "EU共通農業政策"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-17"
+                        },
+                        {
+                            "problem": "ドイツ西北部のライン河畔にあり、ヨーロッパ最大の大炭鉱であるルール炭田を中心とした工業地帯は？",
+                            "answer": [
+                                "ルール地方"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-15"
                         }
                     ]
+                },
+                {
+                    "name": "貿易",
+                    "questions": []
                 }
             ]
         },
@@ -12722,8 +12844,8 @@
                                 "ストレージアカウントは「鍵」として機能し、その「鍵」を使ってさまざまな「部屋」（ストレージサービス）にアクセスし、データを「収納」する役割を担っています。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-20"
                         },
                         {
                             "problem": "Azureでデータを暗号化する際に使用されるキーの種類を二つ答えよ",
@@ -12781,7 +12903,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-18"
+                            "last_answered_date": "2025-04-20"
                         }
                     ]
                 }
