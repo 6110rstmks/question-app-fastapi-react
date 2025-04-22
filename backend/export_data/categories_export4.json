@@ -114,8 +114,8 @@
                                 "transit gateway"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "VPCとAZ（アベイラビリティゾーン）の関係を答えて。　「VPCは複数のAZに（）ている。」",
@@ -606,7 +606,7 @@
                             ],
                             "memo": "ALBのconnection drainingと間違えそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -615,7 +615,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "AWSにおいて、CNAMEレコードでアクセスしたら何レコードを返すか",
@@ -975,7 +975,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "aws elasticacheについてmemcachedとredisのうちシングルスレッドはどちらか？",
@@ -1091,7 +1091,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         }
                     ]
                 },
@@ -1479,7 +1479,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "RDSのコスト状況を把握したいので、コストレポートを作成したい。どのAWSサービスを使えば良い？",
@@ -1532,7 +1532,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "EBSの指標のIOPSについてせつめいしてください",
@@ -1653,7 +1653,7 @@
                             ],
                             "memo": "デメリットはAPI Gateway/Step Funcstionsのコストがかかる、Step Funcstionsが入る分、実装難易度が高い",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "API Gateway × Cognito(user pool)でなにができる",
@@ -1672,8 +1672,8 @@
                                 "WEB Socket API"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         }
                     ]
                 },
@@ -1698,7 +1698,7 @@
                             ],
                             "memo": "AWS管理ポリシーやカスタマー管理ポリシーは1つのポリシーを作成すれば多くのIAMユーザなどにアタッチすることができますが、インラインポリシーは1つのIAMユーザなど、1対1でのアタッチしかできません。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "特定のIAMユーザやIAMロール専用に作成されるポリシーを何という",
@@ -1786,8 +1786,8 @@
                                 "実数係数m次方程式はx = αが解ならx = αも解"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "2次方程式の複素数解の武器4",
@@ -2105,7 +2105,7 @@
                             ],
                             "memo": "https://hiraocafe.com/note/shajikukasagata.html\nより早く解けるのだそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "3分の公式を使う場面は？",
@@ -2247,7 +2247,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         }
                     ]
                 },
@@ -2287,7 +2287,7 @@
                             ],
                             "memo": "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         }
                     ]
                 },
@@ -2305,7 +2305,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         }
                     ]
                 }
@@ -2692,8 +2692,8 @@
                                 "銑鉄を鋼(こう)にする"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "HCLOはなんの化学式",
@@ -2723,12 +2723,30 @@
                             "last_answered_date": "2025-04-16"
                         },
                         {
+                            "problem": "アルカリ金属の水酸化物は弱酸？強酸？",
+                            "answer": [
+                                "強酸"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
+                            "problem": "両性元素　語呂",
+                            "answer": [
+                                "ああすんなり"
+                            ],
+                            "memo": "Al Zn Sn Pb ",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
                             "problem": "銅とスズの合金は",
                             "answer": [
                                 "青銅（ブロンズ）"
                             ],
                             "memo": "どうすんのぶろんずぞう",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-04-19"
                         },
                         {
@@ -2793,7 +2811,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "アルカリ金属は天然には存在しないが、どのようにして得られるか？",
@@ -2830,7 +2848,7 @@
                             ],
                             "memo": "フェーリング反応で赤色沈殿が生じることと関連づけて覚えれば良い",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "iceがとけて、waterになるとvolumeが現象する理由。",
@@ -2887,6 +2905,44 @@
                             "last_answered_date": "2025-04-19"
                         },
                         {
+                            "problem": "アンモニアの工業的製法",
+                            "answer": [
+                                "ハーバボッシュ法"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
+                            "problem": "アルカリ金属　の元素　語呂",
+                            "answer": [
+                                "リッチな母ちゃん、ルビーせしめてフランスへ\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
+                            "problem": "アルカリ金属は原子番号が大きくなるほど、強くなる。その理由を答えて",
+                            "answer": [
+                                "原子番号が小さいほど、水酸化物イオンを引っ張る力がつよいため、塩基の力が弱くなる。"
+                            ],
+                            "memo": "https://受験理系特化プログラム.xyz/wp-content/uploads/2021/11/Screen-Shot-2021-11-17-at-9.47.54-AM.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
+                            "problem": "ダイヤモンド型構造　例３",
+                            "answer": [
+                                "ice",
+                                "silicon dioxide",
+                                "diamond"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
                             "problem": "molten salt electrolysisを使って生成されるmetalの特徴は？",
                             "answer": [
                                 "ionization tendency is high."
@@ -2933,6 +2989,24 @@
                             "last_answered_date": "2025-04-17"
                         },
                         {
+                            "problem": "アルカリ金属は柔らかい？硬い？",
+                            "answer": [
+                                "柔らかい　（ナイフできれるくらい）"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-23"
+                        },
+                        {
+                            "problem": "共有結合　のやつ　語呂",
+                            "answer": [
+                                "えんにしくしく"
+                            ],
+                            "memo": "SiO2 Si C SiC",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
                             "problem": "臭素の単体の状態は",
                             "answer": [
                                 "liquid"
@@ -2940,6 +3014,16 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "オキソ酸の酸性が強くなるための条件(2",
+                            "answer": [
+                                "Xのでんきいんせいどが大きい",
+                                "Xの酸化すうがおおきい"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
                         }
                     ]
                 },
@@ -3058,8 +3142,22 @@
                                 "イソプレン\n"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-22"
+                        }
+                    ]
+                },
+                {
+                    "name": "理論化学",
+                    "questions": [
+                        {
+                            "problem": "蒸気圧は温度が高くなればなるほど大きくなるのはなぜ？",
+                            "answer": [
+                                "分子が持つ熱エネルギーは温度が高くなるほど大きくなるから"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-22"
                         }
                     ]
                 }
@@ -3607,7 +3705,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         }
                     ]
                 },
@@ -5042,7 +5140,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "C4植物の光合成における葉肉細胞の働き。CO2をC3化合物と反応させ、（A）に変換してCO2を濃縮させる。",
@@ -5958,7 +6056,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "raid2,3の読み書き単位は？",
@@ -6551,6 +6649,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-21"
+                        },
+                        {
+                            "problem": "amphoteric substance",
+                            "answer": [
+                                "両性元素"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
+                            "problem": "The data is updated in minutes.",
+                            "answer": [
+                                "→ データは分単位で更新されます。\n\n"
+                            ],
+                            "memo": "in minutesのここでの意味は: 分単位",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-23"
                         },
                         {
                             "problem": "The procurement of raw materials is essential for maintaining production efficiency.",
@@ -7931,6 +8047,15 @@
                             "last_answered_date": "2025-04-18"
                         },
                         {
+                            "problem": "アルカリ土類金属の　元素　語呂",
+                            "answer": [
+                                "べんとうまじかさばらん"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
                             "problem": "焼畑農業　英語で",
                             "answer": [
                                 "Slash-and-burn agriculture"
@@ -8029,8 +8154,8 @@
                                 "eDos攻撃"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-23"
                         },
                         {
                             "problem": "主にマルウェア感染によって作られた「ボットネット」に命令を送り、制御する遠隔攻撃用のサーバーをなんという？",
@@ -9133,7 +9258,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "コンピュータが処理する作業の最小単位のことを何という？",
@@ -9321,8 +9446,8 @@
                                 "高度経済成長"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "モンゴル族の組み立て式住居では移動しやすいように、簡単に組み立てられる（A）と呼ばれるテントで生活しています",
@@ -9331,7 +9456,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "面積が大きい国上から5番目",
@@ -9805,7 +9930,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "氷河による侵食でできたU字谷に海水が入り込んでできた入江を何という？ちなみに沈水海岸のひとつ",
@@ -10234,7 +10359,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "トルティーヤはなにから作られているか",
@@ -10252,7 +10377,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ウズベキスタンとカザフスタンどちらが大きいか",
@@ -10292,7 +10417,7 @@
                             ],
                             "memo": "https://www.jishin.go.jp/main/herpnews/series/2010/img/07/05_z_5.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "バイカル湖はどんな形をしている",
@@ -10328,7 +10453,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "鳥趾状三角州（ちょうしじょうさんかくしゅう）とは、河川が分岐して、その先の河口部が鳥の足のような形に広がる三角州。その例は",
@@ -10442,7 +10567,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "アマゾン川流域にある地域で焼畑農業が盛んな熱帯雨林を何という",
@@ -10460,7 +10585,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ブラジル高原は安定陸塊、古期造山帯、新期造山帯のどれか",
@@ -10592,7 +10717,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ブータン王国の国民の80%は何教を信仰している",
@@ -10644,7 +10769,7 @@
                             ],
                             "memo": "https://plaza.rakuten.co.jp/img/user/81/61/5848161/94.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "サンベルトどこらへん",
@@ -10760,7 +10885,7 @@
                             ],
                             "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -10796,8 +10921,8 @@
                                 "カンボジア"
                             ],
                             "memo": "https://cdn.mainichi.jp/vol1/2020/04/02/20200402biz00m020010000p/8.jpg?1",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "カザフステップはどこ？",
@@ -10806,7 +10931,7 @@
                             ],
                             "memo": "まさにステップ気候という名前の由来はここから取られているのです。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "サンアンドレアス断層San Andreas Faultはどこにある？",
@@ -10939,7 +11064,7 @@
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "トルコの上には何がある？",
@@ -11030,7 +11155,7 @@
                             ],
                             "memo": "https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXMZO4605511013062019I00004-2.jpg?ixlib=js-3.8.0&w=696&h=696&auto=format%2Ccompress&fit=crop&bg=FFFFFF&s=32aeb379be32462dc8c071093bbbe751\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ガーナの左にはなんの国がある？",
@@ -11084,7 +11209,7 @@
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ニュージーランドおよび日付変更線以東なのはポリネシア、ミクロネシア？",
@@ -11157,7 +11282,7 @@
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/yMyi4m-DP1H6RQZ294-RNQz8Xr4-C8WLIFFf3ZsYcnLnL1qbkpZEyIChFCtxjYmjZOIaYS0FKuHUs-v4IkU9bgtZAF14OBswvHdq_Jt1LeDnB_qfmVW46fM1PKw5kf0",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "アメリカのテキサス州の場所",
@@ -11254,7 +11379,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-23"
                         },
                         {
                             "problem": "南アメリカのほとんどの国では何語が公用語",
@@ -11272,7 +11397,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "アウトストラーダ・デル・ソーレとは？",
@@ -11389,7 +11514,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "タイの首都バンコクには何の工場が集積しているか",
@@ -11470,7 +11595,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "スイスの首都は？",
@@ -11597,7 +11722,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "バングラデッシュは世界の人口ランキングで何位？",
@@ -11615,7 +11740,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ナスカの地上絵はどこの国",
@@ -11656,11 +11781,11 @@
                         {
                             "problem": "ブラジルのスラム街、貧困街を何という",
                             "answer": [
-                                "ファベーら"
+                                "ファベーラ"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "エクアドルの首都は？",
@@ -11669,7 +11794,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ロシアのモスクワの街路はどのような形状か",
@@ -11739,7 +11864,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2021/01/terra-rossa-terra-roxa-memorize.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ラトソルの栄養は多いか少ないか？",
@@ -11757,7 +11882,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "その土地に元々あった岩石の影響を大きく受けた土壌を何という",
@@ -11766,7 +11891,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ブラジル高原の土壌はなんですか",
@@ -11852,8 +11977,8 @@
                                 "北京"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "アメリカの人口一位の年は",
@@ -11862,7 +11987,7 @@
                             ],
                             "memo": "首都はワシントン",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ニュージーランドの人口最大都市は？",
@@ -11909,7 +12034,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "都市の階層分類4",
@@ -11989,14 +12114,14 @@
                             "last_answered_date": "2025-04-15"
                         },
                         {
-                            "problem": "コナーベーションの例の都市は？",
+                            "problem": "コナーベーションの都市の例は？2",
                             "answer": [
                                 "ルール地方",
                                 "五大湖都市"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "カラチはどこの国ですか？",
@@ -12124,8 +12249,8 @@
                                 "ポーランド"
                             ],
                             "memo": "国内で石炭が多く取れることと繋げる。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "先進国だけど原子力発電をやっていない国5",
@@ -12136,7 +12261,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "世界の米の生産量top3",
@@ -12278,7 +12403,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "焼畑農業はどの気候区分でみられるか",
@@ -12299,7 +12424,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "乾燥地域においては地下水路を用いてオアシス農業が行われている。このような地下水路は、イランでは何と呼ばれるか。",
@@ -12308,7 +12433,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "緑の革命のデメリットは",
@@ -12325,8 +12450,8 @@
                                 "そう"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "大規模な広い農場で多数の労働者を雇用、管理して行う農業のことを何という",
@@ -12335,7 +12460,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ブラジルでは大土地所有制のことをなんとよぶ",
@@ -12448,7 +12573,7 @@
                             ],
                             "memo": "ライ麦は耐寒性が高く、ドイツ、ポーランド、ロシアなど緯度の高い地域で主に栽培される。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "ツンドラ気候の遊牧では何をやっている",
@@ -12486,8 +12611,8 @@
                                 "ホイットルセー"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "季節が逆になっているお陰で、オーストラリアは、北半球の国々が小麦を収穫していない時期に小麦を輸出できる強みがあります。このように、他の国では作物が収穫できない時期を何という",
@@ -12496,7 +12621,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "綿花の栽培条件を生育期と収穫期に分けて答えて",
@@ -12554,7 +12679,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "園芸農業のうち、都市から近い地域で新鮮な野菜などを栽培し、都市に販売する農業を漢字4文字で何というか。",
@@ -12593,7 +12718,7 @@
                             "last_answered_date": "2025-04-20"
                         },
                         {
-                            "problem": "アジアで米の生産量が多い国に見られる特徴は？",
+                            "problem": "アジアで米の生産量が多い国に見られる特徴は？3",
                             "answer": [
                                 "モンスーンアジア",
                                 "人口が多い",
@@ -12601,7 +12726,7 @@
                             ],
                             "memo": "中国、インド、インドネシア、バングラデッシュ、ベトナム、タイ",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "パリ盆地のケスタでは、急斜面を利用して（A）栽培がされています。",
@@ -12682,8 +12807,8 @@
                                 "小麦は商業的な性格の強い作物であると呼ばれます。\n\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-22"
                         },
                         {
                             "problem": "春小麦を栽培する国はどのような国か",
@@ -12692,7 +12817,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "モンスーンアジアでは何の穀物の生産が盛んか",
@@ -12727,7 +12852,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
@@ -12745,7 +12870,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "マドリードはケッペンの気候区分に基づくと何気候に属するか？",
@@ -12911,7 +13036,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "AfとAwの中間気候は？また中間の理由は？",
@@ -13005,7 +13130,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "地中海性気候(Cs)の定義",
@@ -13024,7 +13149,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "イギリスは国全体でどの気候区分に属するか？",
@@ -13044,7 +13169,7 @@
                             ],
                             "memo": "最寒月平均気温 ー3〜18℃ (Cの要素)\n最暖月平均気温 22℃以上 (aの要素)\n降水 1年中湿潤 (fの要素)\nCfaの定義↑",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "高山気候の年較差は小さいが、一日の中での寒暖差（日較差）は大きい、なぜ",
@@ -13052,8 +13177,8 @@
                                 "高い山の上にあるので昼間は日差しがよく当たるが、夜は気温がぐっとさがる"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "熱帯（A気候）のうち乾季なしの気候は何？",
@@ -13387,6 +13512,44 @@
                     "name": "m",
                     "questions": [
                         {
+                            "problem": "AzureにおいてWeb AppsとMobile AppとFunctionsとAPI Appsの群の総称を何という",
+                            "answer": [
+                                "App Service"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-21"
+                        },
+                        {
+                            "problem": "App Service アプリを実行するためのコンピューティングリソース構成を定義するためのリソースを何という",
+                            "answer": [
+                                "App Service Plan"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-21"
+                        },
+                        {
+                            "problem": "Azure monitor にはどんなサービスがあるか",
+                            "answer": [
+                                "Application insights",
+                                "Container insights",
+                                "Alerts"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
+                            "problem": "Log Analytics workspaceで使用できるクエリ言語は何という",
+                            "answer": [
+                                "KQL"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-23"
+                        },
+                        {
                             "problem": "Azureにおいてクラウド上でデータを保存するための「アクセス許可と管理の窓口」はなんですか？",
                             "answer": [
                                 "ストレージアカウント"
@@ -13441,7 +13604,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "Azure Storage には4種類のストレージサービスがある。答えて",
@@ -13474,15 +13637,32 @@
                             "last_answered_date": "2025-04-12"
                         },
                         {
+                            "problem": "Azureの診断設定（diagnostic settings）とは",
+                            "answer": [
+                                "Azure のリソース（例：App Service、Storage Account、Key Vault など）からログやメトリックを収集し、それを Log Analytics、Event Hub、Storage Account に送信するための設定をするもの"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-22"
+                        },
+                        {
                             "problem": "azure でのサービスプリンシパルについて",
                             "answer": [
                                 "外部アプリケーションから認証が必要なときに利用する"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-04-21"
                         }
                     ]
+                },
+                {
+                    "name": "logic apps",
+                    "questions": []
+                },
+                {
+                    "name": "application insights",
+                    "questions": []
                 }
             ]
         }
