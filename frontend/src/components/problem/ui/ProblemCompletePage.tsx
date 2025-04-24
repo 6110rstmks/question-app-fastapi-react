@@ -36,7 +36,7 @@ export const ProblemComplete: React.FC<Props> = ({ unsolvedCount, onReview }) =>
                 </div>
                 
                 <div className={styles.navigationSection}>
-                    <Link to="/categories/home" className={styles.homeLink}>
+                    <Link to="/set_question" className={styles.homeLink}>
                         <span className={styles.homeLinkIcon}>↩</span>
                         Back to Home
                     </Link>
