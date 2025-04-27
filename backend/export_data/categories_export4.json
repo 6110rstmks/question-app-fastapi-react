@@ -1686,8 +1686,8 @@
                                 "カスタマー管理ポリシー\n"
                             ],
                             "memo": "AWS管理ポリシーやカスタマー管理ポリシーは1つのポリシーを作成すれば多くのIAMユーザなどにアタッチすることができますが、インラインポリシーは1つのIAMユーザなど、1対1でのアタッチしかできません。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "IAMのポリシーは3つに分類される。答えて",
@@ -2247,7 +2247,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-24"
+                            "last_answered_date": "2025-04-27"
                         }
                     ]
                 },
@@ -2305,7 +2305,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         }
                     ]
                 }
@@ -2437,6 +2437,24 @@
                             "last_answered_date": "2025-04-25"
                         },
                         {
+                            "problem": "化学において、ひとつの軌道には電子は何個まではいる",
+                            "answer": [
+                                "2\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
+                            "problem": "原子核に近い方が力が強い（安定している）これをエネルギー準位でいいかえると？",
+                            "answer": [
+                                "エネルギー準位が低い"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
                             "problem": "大抵の場合は最外殻電子＝価電子。ただし例外がある。答えて",
                             "answer": [
                                 "Noble gasの価電子は0"
@@ -2460,8 +2478,8 @@
                                 "軌道"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-28"
                         }
                     ]
                 },
@@ -2805,6 +2823,15 @@
                             "last_answered_date": "2025-04-23"
                         },
                         {
+                            "problem": "硫酸イオンで沈澱する陽イオンの語呂",
+                            "answer": [
+                                "ばかな硫酸"
+                            ],
+                            "memo": "Ba, K, Pb",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
                             "problem": "銅とスズの合金は",
                             "answer": [
                                 "青銅（ブロンズ）"
@@ -3017,6 +3044,24 @@
                             "last_answered_date": "2025-04-23"
                         },
                         {
+                            "problem": "AgClとPbCl2のうち熱湯にとけるのはどっち？",
+                            "answer": [
+                                "PbCl2"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
+                            "problem": "硝酸を作成する工業的製法を何という",
+                            "answer": [
+                                "オストワルト法"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
                             "problem": "molten salt electrolysisを使って生成されるmetalの特徴は？",
                             "answer": [
                                 "ionization tendency is high."
@@ -3081,6 +3126,24 @@
                             "last_answered_date": "2025-04-25"
                         },
                         {
+                            "problem": "無機化学において、ほとんどの金属イオンの沈殿は何色か？例外を除いて",
+                            "answer": [
+                                "白色"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
+                            "problem": "𝐹𝑒(𝑂𝐻)3の色は？",
+                            "answer": [
+                                "赤色"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
                             "problem": "臭素の単体の状態は",
                             "answer": [
                                 "liquid"
@@ -3098,6 +3161,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-22"
+                        },
+                        {
+                            "problem": "炭酸イオン(CO3^2-)で沈澱する陽イオンは？",
+                            "answer": [
+                                "アルカリ金属イオン、NH4+イオンを除くほとんどのイオンが沈澱する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
+                            "problem": " 塩化物の沈殿の頃は",
+                            "answer": [
+                                "銀Agの生PbはげHg"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
                         }
                     ]
                 },
@@ -3806,7 +3887,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         }
                     ]
                 },
@@ -6148,16 +6229,6 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-04-03"
-                        },
-                        {
-                            "problem": "What are the benefits of A mechanism called RAID that bundles multiple hard disks into one logical unit?2",
-                            "answer": [
-                                "Reduce access time",
-                                "It becomes hard to break down."
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
                         },
                         {
                             "problem": "raid2,3の読み書き単位は？",
@@ -9358,8 +9429,8 @@
                                 "実行可能なタスクに対してプロセッサの使用権限を割り当てること\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "コンピュータが処理する作業の最小単位のことを何という？",
@@ -9566,7 +9637,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-25"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "外来河川は、（A）から（B）に流れる河川。",
@@ -10096,8 +10167,8 @@
                                 "地球を卵に見立てれば、ひび割れた殻がプレート"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "ナイル川の中流に建設された多目的ダムは何？",
@@ -10450,8 +10521,8 @@
                                 "構造平野"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "プレートの境界付近では、プレートの動きによって地震や火山活動がみられたり、地溝・海嶺・褶曲山脈・海溝などの大地形がつくられたりします。 このような動きが見られるプレート沿いの一帯を何という",
@@ -10554,7 +10625,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-24"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "鳥趾状三角州（ちょうしじょうさんかくしゅう）とは、河川が分岐して、その先の河口部が鳥の足のような形に広がる三角州。その例は",
@@ -10582,7 +10653,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-26"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "河口の形は二種類ある。答えて",
@@ -10592,7 +10663,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "イギリス南部を流れる川は？",
@@ -10601,7 +10672,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-24"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "アフリカにある赤道直下の湖は？",
@@ -10677,7 +10748,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIg-uGKMJjxaaQqTxlj6B1ZD5-tJ6cMoOwlQ&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "アジアの東部から南東部をへて南部にいたる，モンスーンの影響を受ける地域を何という",
@@ -10879,7 +10950,7 @@
                                 "オーストラリア"
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-australia-map-1.png",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-21"
                         },
                         {
@@ -10889,7 +10960,7 @@
                             ],
                             "memo": "https://plaza.rakuten.co.jp/img/user/81/61/5848161/94.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-25"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "サンベルトどこらへん",
@@ -10915,7 +10986,7 @@
                                 "中国"
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-20"
                         },
                         {
@@ -11201,8 +11272,8 @@
                             "answer": [
                                 "イラン"
                             ],
-                            "memo": "",
-                            "is_correct": 1,
+                            "memo": "https://stat.ameba.jp/user_images/20150520/13/worldhistory-univ/b2/aa/p/o0800060013312582636.png",
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-12"
                         },
                         {
@@ -11357,7 +11428,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "オビ川の右にある川は？",
@@ -11458,7 +11529,7 @@
                                 ""
                             ],
                             "memo": "https://healthy-live.jp/guilin/image/map.gif",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-19"
                         },
                         {
@@ -11486,7 +11557,7 @@
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/Dm2VQGX4CLVMUSS0nGMh7o7cmRVQEcfifM2I69joZy2A0_gBInhmLQRhkWTjpIAUUnHTqK6USP-kIXRumxwCP4HvfimRdtKZQTjR-7hjJk49kjplV2xj99yr7oMF",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         }
                     ]
                 },
@@ -11833,8 +11904,8 @@
                                 "中央炭田"
                             ],
                             "memo": "https://lh6.googleusercontent.com/proxy/gNq_2M3ezpkYFfQRsnPsOkpGj0sD4FNO9ZeC0Q08KxNK5bxhFsv6V9sl66RKCjQ1fX2JEpNKlijrs9Jy7d70hOjQCEc3zNN9gGe1pqkxSQ",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "フランス北東部、モーゼル川上流域に分布するフランス最大の鉄鉱石産地は？",
@@ -11861,7 +11932,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "ナスカの地上絵はどこの国",
@@ -12382,7 +12453,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "世界の米の生産量top3",
@@ -12524,7 +12595,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "焼畑農業はどの気候区分でみられるか",
@@ -12590,7 +12661,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-25"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "冬小麦Winter wheatのおぼえかたは？",
@@ -12818,7 +12889,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-24"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "春に種をまいて、秋に収穫する小麦は春小麦？冬小麦？",
@@ -12865,7 +12936,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         },
                         {
                             "problem": "カカオの生産量が多い国top2",
@@ -13442,7 +13513,30 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-24"
+                            "last_answered_date": "2025-04-27"
+                        }
+                    ]
+                },
+                {
+                    "name": "工業的製法",
+                    "questions": [
+                        {
+                            "problem": "オストワルト法で使用する触媒は？",
+                            "answer": [
+                                "白銀"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
+                            "problem": "オストワルト方における4𝑁𝐻3+5𝑂2→4𝑁𝑂+6𝐻2𝑂の反応を高温下で行う理由は？",
+                            "answer": [
+                                "𝑁2+𝑂2⇄2𝑁𝑂右は問題の反応に含まれる反応式で、これは右向きが吸熱反応である。ルシャトリエの原理より、温度が上がると、右向きに平衡がすすむから。というか右向きに反応を進めたいから"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
                         }
                     ]
                 }
@@ -13791,7 +13885,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-27"
                         }
                     ]
                 },
