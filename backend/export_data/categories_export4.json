@@ -210,7 +210,7 @@
                                 "fan-out pattern（構成）"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-03-28"
                         },
                         {
@@ -220,8 +220,17 @@
                                 "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
                             ],
                             "memo": "ああ",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-03-01"
+                        },
+                        {
+                            "problem": "ECサイトなどにおけるなどにおける注文処理でのSQSのユースケースをこたえて",
+                            "answer": [
+                                "フロント側から注文のAPIを叩いて、バックエンド側でSQSにメッセージを送って、SQSを挟んで、在庫確認処理や、決済処理、配達準備処理が発火する。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-01"
                         }
                     ]
                 },
@@ -355,6 +364,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-03-13"
+                        },
+                        {
+                            "problem": "自動でスケールイン/スケールアウトのは通常のAuroraかAurora serverlessか",
+                            "answer": [
+                                "Aurora serverless"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-01"
                         }
                     ]
                 },
@@ -606,7 +624,7 @@
                             ],
                             "memo": "ALBのconnection drainingと間違えそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-22"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -615,7 +633,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "AWSにおいて、CNAMEレコードでアクセスしたら何レコードを返すか",
@@ -975,7 +993,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-04-29"
                         },
                         {
                             "problem": "aws elasticacheについてmemcachedとredisのうちシングルスレッドはどちらか？",
@@ -1003,7 +1021,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         }
                     ]
                 },
@@ -1078,11 +1096,11 @@
                         {
                             "problem": "VPCエンドポイントのInterface型エンドポイントを作成するとエンドポイント固有の（A）が作成される",
                             "answer": [
-                                "DNS"
+                                "ENI"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "ゲートウェイエンドポイントとインターフェイスエンドポイントの二つを利用してS3 にアクセスする際にインターフェースエンドポイントでは何をしようしてVPC から Amazon S3 にリクエストをルーティングするか",
@@ -1164,7 +1182,7 @@
                                 "データの拡張性の観点ではKinesis Data Stremasは送信されてくるデータの量に応じてシャドーの数を増やすことができる。"
                             ],
                             "memo": "ああ",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-03-01"
                         },
                         {
@@ -1634,7 +1652,7 @@
                             ],
                             "memo": "REST API(v1)では間にNLBが追加で必要\nhttps://storage.googleapis.com/zenn-user-upload/1544e697e447-20240226.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-26"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "def lambda_handler(event, context): return { 'statusCode': 200, 'body': json.dumps('Hello World')}　lambdaの関数が上記の場合、API gatewayにおけるプロキシ統合と非プロキシ統合ではそれぞれどのような値を返すか",
@@ -1644,7 +1662,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-25"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "API Gateway×Step Functions×Lambdaでの構築のメリットを答えて",
@@ -1715,8 +1733,61 @@
                                 "インラインポリシー"
                             ],
                             "memo": "そのエンティティ専用であり、再利用はできません（他のユーザーやロールに使い回せない）。",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-01"
+                        }
+                    ]
+                },
+                {
+                    "name": "SNS",
+                    "questions": [
+                        {
+                            "problem": "SNSのサブスクライバーを答えて３",
+                            "answer": [
+                                "Kinesis Data Firehose",
+                                "SQS→この場合、ファンアウト構成",
+                                "Lambda"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-24"
+                            "last_answered_date": "2025-05-01"
+                        },
+                        {
+                            "problem": "SNSトピックとは",
+                            "answer": [
+                                "発行者（Publisher）と購読者（Subscriber）をつなぐ中継地点です。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-01"
+                        },
+                        {
+                            "problem": "SNSだけの構成とSNS + SQS構成では処理の信頼性および処理タイミングにどのような違いがあるか",
+                            "answer": [
+                                "SNSだけ：処理の信頼性→宛先が落ちていると通知失敗\n処理タイミング→即座に処理\n",
+                                "SNS + SQS構成：処理の信頼性→SQSがバッファーになるので安全\n処理タイミング：後でゆっくり処理（スケーラブル）"
+                            ],
+                            "memo": "Publisher\n   ↓\nSNS Topic\n   ├─ Email通知\n   ├─ Lambda関数\n   └─ HTTPSエンドポイント（Webhook）\n＝＝＝＝＝＝＝＝＝\nPublisher\n   ↓\nSNS Topic\n   ├─ SQSキュー（→ メール処理ワーカー）\n   ├─ SQSキュー（→ ログ保存処理）\n   └─ SQSキュー（→ 分析処理）",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-01"
+                        },
+                        {
+                            "problem": "「ユーザーにメールを即時送信」ケースの場合、SNSだけの構成か、SNS + SQS構成どちらが適切か",
+                            "answer": [
+                                "SNSだけ、処理が軽く、即時性が重要だから"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-01"
+                        },
+                        {
+                            "problem": "「注文情報を複数サービスで処理（在庫・請求など）」ケースの場合、SNSだけの構成か、SNS + SQS構成どちらが適切か",
+                            "answer": [
+                                "SNS + SQS構成\n並列かつ非同期で信頼性の高い分散処理が必要"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-01"
                         }
                     ]
                 }
@@ -2287,7 +2358,7 @@
                             ],
                             "memo": "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         }
                     ]
                 },
@@ -2362,7 +2433,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "金属単体が水溶液中で陽イオンになる性質を何という",
@@ -2370,8 +2441,8 @@
                                 "イオン化傾向"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-29"
                         },
                         {
                             "problem": "s軌道には何この電子が入るか",
@@ -2971,7 +3042,7 @@
                         {
                             "problem": "フッ化水素は弱酸、強酸？またその理由は",
                             "answer": [
-                                "弱酸\nハロゲンは下にいくほど、H-Xの結合が弱くなり電離しやすくなる。"
+                                "弱酸\nハロゲンは下にいくほど、H-Xの結合が弱くなり電離しやすくなる。(結合が強いので発熱が小さく)"
                             ],
                             "memo": "",
                             "is_correct": 1,
@@ -3014,13 +3085,13 @@
                             "last_answered_date": "2025-04-25"
                         },
                         {
-                            "problem": "アルカリ金属は原子番号が大きくなるほど、強くなる。その理由を答えて",
+                            "problem": "アルカリ金属は原子番号が大きくなるほど、塩基の力が強くなる。その理由を答えて",
                             "answer": [
                                 "原子番号が小さいほど、水酸化物イオンを引っ張る力がつよいため、塩基の力が弱くなる。"
                             ],
                             "memo": "https://受験理系特化プログラム.xyz/wp-content/uploads/2021/11/Screen-Shot-2021-11-17-at-9.47.54-AM.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-22"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "ダイヤモンド型構造　例３",
@@ -3056,6 +3127,15 @@
                             "problem": "硝酸を作成する工業的製法を何という",
                             "answer": [
                                 "オストワルト法"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
+                            "problem": "NH3 と錯イオンcoordination complexを作る元素の頃は",
+                            "answer": [
+                                "どうもぎんこにあえんCu Ag Co Ni Zn"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -3144,6 +3224,15 @@
                             "last_answered_date": "2025-04-27"
                         },
                         {
+                            "problem": "H2SO4は不揮発性の酸？揮発性の酸？",
+                            "answer": [
+                                "不揮発性の酸"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-29"
+                        },
+                        {
                             "problem": "臭素の単体の状態は",
                             "answer": [
                                 "liquid"
@@ -3160,7 +3249,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-22"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "炭酸イオン(CO3^2-)で沈澱する陽イオンは？",
@@ -3220,7 +3309,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-27"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "塩基性アミノ酸を一つ答えて",
@@ -3887,7 +3976,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-27"
+                            "last_answered_date": "2025-04-29"
                         }
                     ]
                 },
@@ -5322,7 +5411,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "C4植物の光合成における葉肉細胞の働き。CO2をC3化合物と反応させ、（A）に変換してCO2を濃縮させる。",
@@ -6279,7 +6368,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "PITRはシステム用語で何の略？",
@@ -6820,7 +6909,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "amphoteric substance",
@@ -8225,7 +8314,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-22"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "焼畑農業　英語で",
@@ -8249,6 +8338,15 @@
                             "problem": "海峡",
                             "answer": [
                                 "strait"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-27"
+                        },
+                        {
+                            "problem": "濃硝酸　英語で",
+                            "answer": [
+                                " concentrated nitric acid,"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9640,6 +9738,15 @@
                             "last_answered_date": "2025-04-27"
                         },
                         {
+                            "problem": "OPECの正式名称は？",
+                            "answer": [
+                                "石油国輸出機構"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-04-30"
+                        },
+                        {
                             "problem": "外来河川は、（A）から（B）に流れる河川。",
                             "answer": [
                                 "湿潤地域",
@@ -9760,7 +9867,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-24"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "cuestaの代表例",
@@ -9798,7 +9905,7 @@
                             ],
                             "memo": "気温の分布とごっちゃにならないように",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-27"
+                            "last_answered_date": "2025-04-29"
                         },
                         {
                             "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
@@ -10549,7 +10656,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "ウズベキスタンとカザフスタンどちらが大きいか",
@@ -10642,8 +10749,8 @@
                                 "水力"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "ナイル川はどこから流れてきて、どこに注ぎ込むか",
@@ -10899,7 +11006,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-25"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "インドの国民の80%は何教を信仰している",
@@ -10951,7 +11058,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-australia-map-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "タクラマカン砂漠の場所は",
@@ -10960,7 +11067,7 @@
                             ],
                             "memo": "https://plaza.rakuten.co.jp/img/user/81/61/5848161/94.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-27"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "サンベルトどこらへん",
@@ -10987,7 +11094,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "オーストリアの場所は。左と下にはなにがある。",
@@ -11012,7 +11119,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "アコンカグアはどこにある",
@@ -11066,17 +11173,17 @@
                             ],
                             "memo": "https://nationalflag.magazine7.net/wp-content/uploads/2018/09/namibia-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
-                            "problem": "イランはどこにある？ イランの右には何の国がある？左側には何の国がある？",
+                            "problem": " イランの右には何の国がある2？左側には何の国がある？",
                             "answer": [
-                                "右→アフガニスタン",
+                                "右→アフガニスタン、パキスタン",
                                 "左→イラク"
                             ],
                             "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-02"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -11122,7 +11229,7 @@
                             ],
                             "memo": "まさにステップ気候という名前の由来はここから取られているのです。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-22"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "サンアンドレアス断層San Andreas Faultはどこにある？",
@@ -11145,13 +11252,13 @@
                             "last_answered_date": "2025-04-25"
                         },
                         {
-                            "problem": "アドリア海はどこにある？どの国に面している？",
+                            "problem": "アドリア海はどこにある？どの国に面している？4つ答えて",
                             "answer": [
                                 "イタリア、クロアチア、ボスニアヘルテェゴビナ、モンテネグロ、アルバニア"
                             ],
                             "memo": "https://kotokurabe.com/makoto/wp-content/uploads/nature/mediterranean-sea-03.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "アタカマ砂漠の場所",
@@ -11274,7 +11381,7 @@
                             ],
                             "memo": "https://stat.ameba.jp/user_images/20150520/13/worldhistory-univ/b2/aa/p/o0800060013312582636.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "アルプス山脈はどこにある？",
@@ -11310,7 +11417,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "中国の上にある国はなんですか？",
@@ -11347,7 +11454,7 @@
                             ],
                             "memo": "https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXMZO4605511013062019I00004-2.jpg?ixlib=js-3.8.0&w=696&h=696&auto=format%2Ccompress&fit=crop&bg=FFFFFF&s=32aeb379be32462dc8c071093bbbe751\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "ガーナの左にはなんの国がある？",
@@ -11392,7 +11499,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13iJk4Cj7I8J_9AC7OSbXpUaIlI5TnnEEcw&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-24"
+                            "last_answered_date": "2025-04-29"
                         },
                         {
                             "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　8,10,30,41,53,54,55.56.57,66答えて",
@@ -11474,7 +11581,7 @@
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/yMyi4m-DP1H6RQZ294-RNQz8Xr4-C8WLIFFf3ZsYcnLnL1qbkpZEyIChFCtxjYmjZOIaYS0FKuHUs-v4IkU9bgtZAF14OBswvHdq_Jt1LeDnB_qfmVW46fM1PKw5kf0",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-22"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "アメリカのテキサス州の場所",
@@ -11492,7 +11599,7 @@
                             ],
                             "memo": "https://satoru-world.net/wp-content/uploads/2021/05/bunrui.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-24"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "カスピ海の下には何の国がある？右には何の国",
@@ -11530,7 +11637,7 @@
                             ],
                             "memo": "https://healthy-live.jp/guilin/image/map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "ホワイ川の上にはなんの川がある？",
@@ -11548,7 +11655,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-26"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "ゴビ砂漠　場所",
@@ -11558,6 +11665,15 @@
                             "memo": "https://lh3.googleusercontent.com/proxy/Dm2VQGX4CLVMUSS0nGMh7o7cmRVQEcfifM2I69joZy2A0_gBInhmLQRhkWTjpIAUUnHTqK6USP-kIXRumxwCP4HvfimRdtKZQTjR-7hjJk49kjplV2xj99yr7oMF",
                             "is_correct": 0,
                             "last_answered_date": "2025-04-27"
+                        },
+                        {
+                            "problem": "インド洋はどこか",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://www.kaijipr.or.jp/assets/img/mamejiten/nature/shizen18.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-01"
                         }
                     ]
                 },
@@ -11733,7 +11849,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "パキスタンの人口一位は？",
@@ -11799,15 +11915,6 @@
                             "last_answered_date": "2025-04-14"
                         },
                         {
-                            "problem": "スペインのバルセロナは何の工業で有名か？",
-                            "answer": [
-                                "繊維"
-                            ],
-                            "memo": "すぺいんの「す」→せんいの「せ」で覚える",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
-                        },
-                        {
                             "problem": "オランダの首都は？",
                             "answer": [
                                 "アムステルダムAmsterdam\n"
@@ -11833,7 +11940,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "カナダの首都は",
@@ -11986,7 +12093,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "ロシアのモスクワの街路はどのような形状か",
@@ -12046,7 +12153,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-26"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "テラローシャとテラローサが紛らわしいけど覚え方は？",
@@ -12074,7 +12181,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "その土地に元々あった岩石の影響を大きく受けた土壌を何という",
@@ -12293,8 +12400,8 @@
                                 "ジェントリフィケーションGentrification"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-29"
                         },
                         {
                             "problem": "合計特殊出生率が低い国は？",
@@ -12499,7 +12606,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-04-29"
                         },
                         {
                             "problem": "ダイヤモンドの輸出の上位top3",
@@ -12616,7 +12723,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "乾燥地域においては地下水路を用いてオアシス農業が行われている。このような地下水路は、イランでは何と呼ばれるか。",
@@ -12625,7 +12732,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "緑の革命のデメリットは",
@@ -12652,7 +12759,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-04-29"
                         },
                         {
                             "problem": "ブラジルでは大土地所有制のことをなんとよぶ",
@@ -12765,7 +12872,7 @@
                             ],
                             "memo": "ライ麦は耐寒性が高く、ドイツ、ポーランド、ロシアなど緯度の高い地域で主に栽培される。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "ツンドラ気候の遊牧では何をやっている",
@@ -13009,7 +13116,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "モンスーンアジアでは何の穀物の生産が盛んか",
@@ -13361,7 +13468,7 @@
                             ],
                             "memo": "最寒月平均気温 ー3〜18℃ (Cの要素)\n最暖月平均気温 22℃以上 (aの要素)\n降水 1年中湿潤 (fの要素)\nCfaの定義↑",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "高山気候の年較差は小さいが、一日の中での寒暖差（日較差）は大きい、なぜ",
@@ -13684,7 +13791,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-04-29"
                         }
                     ]
                 }
@@ -13763,24 +13870,25 @@
                             "last_answered_date": "2025-04-25"
                         },
                         {
-                            "problem": "App Service アプリを実行するためのコンピューティングリソース構成を定義するためのリソースを何という",
+                            "problem": "AzureのApp Service アプリを実行するためのコンピューティングリソース構成を定義するためのリソースを何という",
                             "answer": [
                                 "App Service Plan"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "Azure monitor にはどんなサービスがあるか3",
                             "answer": [
                                 "Application insights",
                                 "Container insights",
-                                "Alerts"
+                                "Alerts",
+                                "action gruop"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "Log Analytics workspaceで使用できるクエリ言語は何という",
@@ -13846,7 +13954,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-01"
                         },
                         {
                             "problem": "Azure Storage には4種類のストレージサービスがある。答えて",
@@ -13907,7 +14015,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-22"
+                            "last_answered_date": "2025-05-01"
                         }
                     ]
                 }
