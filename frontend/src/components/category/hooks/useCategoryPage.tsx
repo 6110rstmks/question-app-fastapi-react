@@ -9,6 +9,7 @@ export const useCategoryPage = (categoryId: number) => {
     const [category, setCategory] = useState<Category>();
     const [subcategoryName, setSubcategoryName] = useState<string>("");
     const [searchWord, setSearchWord] = useState<string>("");
+    const [errMessage, setErrorMessage] = useState<string>("");
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchWord(e.target.value);
@@ -25,10 +26,15 @@ export const useCategoryPage = (categoryId: number) => {
         }
 
         const response = await createSubcategory(subcategoryName, categoryId);
-        const data = await response.json() as SubcategoryWithQuestionCount;
 
-        addSubcategory(data);
-        setSubcategoryName("");
+        if (!response.ok) {
+            const data = await response.json();
+            setErrorMessage(data.detail);
+            return
+        }
+        const data = await response.json() as SubcategoryWithQuestionCount
+        addSubcategory(data)
+        setSubcategoryName("")
     }
 
     useEffect(() => {

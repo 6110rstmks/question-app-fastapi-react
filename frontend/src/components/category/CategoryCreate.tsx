@@ -10,7 +10,7 @@ const CategoryCreate: React.FC<CategoryCreateProps> = ({isAuth }) => {
     const [errMessage, setErrorMessage] = useState<string>("");
     const navigate = useNavigate();
 
-    const addCategory = async () => {
+    const handleAddCategory = async () => {
         const response = await createCategory(categoryName);
         if (!response.ok) {
             const data = await response.json();
@@ -40,7 +40,7 @@ const CategoryCreate: React.FC<CategoryCreateProps> = ({isAuth }) => {
                         autoFocus
                     />
                 </div>
-                <button className="categoryButton" onClick={addCategory}>
+                <button className="categoryButton" onClick={handleAddCategory}>
                     Create
                 </button>
                 <div>{errMessage && <p>{errMessage}</p>}</div>
