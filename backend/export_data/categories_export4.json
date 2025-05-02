@@ -12270,6 +12270,16 @@
                             "last_answered_date": "2025-05-02"
                         },
                         {
+                            "problem": "玄武岩が含まれる土壌は2",
+                            "answer": [
+                                "レグール",
+                                "テラローシャ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-02"
+                        },
+                        {
                             "problem": "ラトソルの色は何色？",
                             "answer": [
                                 "赤色"
@@ -12496,7 +12506,7 @@
                                 "ハノイ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-25"
                         },
                         {
