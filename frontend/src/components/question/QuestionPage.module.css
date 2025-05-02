@@ -126,4 +126,5 @@
 .answerText {
   word-break: break-all;
   white-space: pre-wrap;
+  margin-top: 27px;
 }
