@@ -371,8 +371,8 @@
                                 "Aurora serverless"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         }
                     ]
                 },
@@ -1599,8 +1599,8 @@
                                 "aws Data Firehose"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "amazon data firehose のデータの転送先を2つ答えよ",
@@ -1778,8 +1778,8 @@
                                 "SNS + SQS構成：処理の信頼性→SQSがバッファーになるので安全\n処理タイミング：後でゆっくり処理（スケーラブル）"
                             ],
                             "memo": "Publisher\n   ↓\nSNS Topic\n   ├─ Email通知\n   ├─ Lambda関数\n   └─ HTTPSエンドポイント（Webhook）\n＝＝＝＝＝＝＝＝＝\nPublisher\n   ↓\nSNS Topic\n   ├─ SQSキュー（→ メール処理ワーカー）\n   ├─ SQSキュー（→ ログ保存処理）\n   └─ SQSキュー（→ 分析処理）",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "「ユーザーにメールを即時送信」ケースの場合、SNSだけの構成か、SNS + SQS構成どちらが適切か",
@@ -3130,8 +3130,8 @@
                                 "ニッケル"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "AgClとPbCl2のうち熱湯にとけるのはどっち？",
@@ -3230,8 +3230,8 @@
                                 "白色"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "𝐹𝑒(𝑂𝐻)3の色は？",
@@ -9886,7 +9886,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "cuestaの代表例",
@@ -9922,7 +9922,7 @@
                                 "隔海度",
                                 "大陸のどこか"
                             ],
-                            "memo": "気温の分布とごっちゃにならないように",
+                            "memo": "気温の分布とごっちゃにならないように\nセンター`2015年の大問1の3とか",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-01"
                         },
@@ -10656,8 +10656,8 @@
                                 "変動帯"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "トルティーヤはなにから作られているか",
@@ -10685,6 +10685,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-24"
+                        },
+                        {
+                            "problem": "北緯南緯５０～６０度付近一帯にみられる低圧の空気の帯を何という",
+                            "answer": [
+                                "高緯度低圧帯"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-02"
                         },
                         {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
@@ -10815,8 +10824,8 @@
                                 "綿花"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "アルプス・ヒマラヤ造山帯に含まれる山脈は2",
@@ -10826,7 +10835,44 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
+                            "last_answered_date": "2025-05-03"
+                        },
+                        {
+                            "problem": "ウラル山脈は古期造山帯か新期造山帯か",
+                            "answer": [
+                                "古期造山帯"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
                             "last_answered_date": "2025-05-02"
+                        },
+                        {
+                            "problem": "海洋性気候の反対の言葉は？",
+                            "answer": [
+                                "大陸性気候"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-03"
+                        },
+                        {
+                            "problem": "大陸性気候と海洋性気候の気温の年較差に関する情報を述べて",
+                            "answer": [
+                                "海洋性気候→隔海度が小さくて気温の年較差が小さい気候（暖まりにくく冷めにくい）",
+                                "大陸性気候→隔海度が大きくて気温の年較差が大きい気候（暖まりやすく冷めやすい）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "中緯度高圧帯を別名でなんと呼ぶ",
+                            "answer": [
+                                "亜熱帯高圧帯"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -10883,8 +10929,8 @@
                                 "セルバ"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIg-uGKMJjxaaQqTxlj6B1ZD5-tJ6cMoOwlQ&s",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-02"
                         },
                         {
                             "problem": "アジアの東部から南東部をへて南部にいたる，モンスーンの影響を受ける地域を何という",
@@ -10957,7 +11003,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-02"
                         },
                         {
                             "problem": "エネルギー資源は２つに分けられる。答えて",
@@ -10985,7 +11031,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "last_answered_date": "2025-05-03"
+                        },
+                        {
+                            "problem": "47都道府県の県庁所在地の中で過去最高気温が最も低い場所はどこ",
+                            "answer": [
+                                "那覇（海洋性気候だから）ほかの県に比べて低い"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-03"
                         }
                     ]
                 },
@@ -11095,7 +11150,7 @@
                                 "オーストラリア"
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-australia-map-1.png",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-02"
                         },
                         {
@@ -11186,7 +11241,7 @@
                             ],
                             "memo": "https://image.itmedia.co.jp/makoto/articles/1403/05/l_ki_jizi01.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-04"
                         },
                         {
                             "problem": "ミシシッピ川の場所は？",
@@ -11539,7 +11594,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13iJk4Cj7I8J_9AC7OSbXpUaIlI5TnnEEcw&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　8,10,30,41,53,54,55.56.57,66答えて",
@@ -11642,6 +11697,15 @@
                             "last_answered_date": "2025-05-02"
                         },
                         {
+                            "problem": "デカン高原の場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://juken-geography.com/wp-content/uploads/2021/01/intrazonal-soil-map.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-02"
+                        },
+                        {
                             "problem": "カスピ海の下には何の国がある？右には何の国",
                             "answer": [
                                 "下→イラン",
@@ -11676,7 +11740,7 @@
                                 ""
                             ],
                             "memo": "https://healthy-live.jp/guilin/image/map.gif",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-01"
                         },
                         {
@@ -11744,7 +11808,7 @@
                                 "ポルトガル語"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-03"
                         },
                         {
@@ -11772,7 +11836,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "カナダの人口最大都市は？",
@@ -11861,8 +11925,8 @@
                                 "ホーチミン\n首都のハノイではない"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "タイの首都バンコクには何の工場が集積しているか",
@@ -12270,14 +12334,23 @@
                             "last_answered_date": "2025-05-02"
                         },
                         {
-                            "problem": "玄武岩が含まれる土壌は2",
+                            "problem": "玄武岩がもとの岩石である土壌は2",
                             "answer": [
                                 "レグール",
                                 "テラローシャ"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "last_answered_date": "2025-05-03"
+                        },
+                        {
+                            "problem": "テラロッサがある場所は",
+                            "answer": [
+                                "地中海沿岸"
+                            ],
+                            "memo": "https://juken-geography.com/wp-content/uploads/2021/01/intrazonal-soil-map.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "ラトソルの色は何色？",
@@ -12305,7 +12378,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-04"
                         },
                         {
                             "problem": "テラロッサが赤色であることの覚え方",
@@ -12396,13 +12469,13 @@
                             "last_answered_date": "2025-04-18"
                         },
                         {
-                            "problem": "昼夜間人口比率が100より小さい日本の都市の例は",
+                            "problem": "昼夜間人口比率が100より小さい日本の都市の例は3",
                             "answer": [
                                 "神奈川、奈良、兵庫\nこれらが90~95"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-26"
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "都市の階層分類4",
@@ -12913,8 +12986,8 @@
                                 "おーえらい小麦"
                             ],
                             "memo": "大麦側が寒い、小麦側が暖かい",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "コーヒーの原産国は",
@@ -13211,8 +13284,8 @@
                                 "1960年から始まった緑の革命により自給できるようになり、輸出もできるようになった"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         }
                     ]
                 },
@@ -13247,7 +13320,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "last_answered_date": "2025-05-04"
                         },
                         {
                             "problem": "マドリードはケッペンの気候区分に基づくと何気候に属するか？",
@@ -13944,8 +14017,8 @@
                                 "App Service"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "AzureのApp Service アプリを実行するためのコンピューティングリソース構成を定義するためのリソースを何という",
