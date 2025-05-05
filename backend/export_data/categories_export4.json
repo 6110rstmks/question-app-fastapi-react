@@ -3534,6 +3534,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "反応エンタルピーは反応の経路によって変わらない。この法則をなんという",
+                            "answer": [
+                                "ヘスの法則"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
                         }
                     ]
                 },
@@ -10832,6 +10841,34 @@
                             "last_answered_date": "2025-05-04"
                         },
                         {
+                            "problem": "温帯草原の呼び名。北アメリカではなんと呼ばれる？",
+                            "answer": [
+                                "プレーリー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "疎林とは、字の如く樹木がまばらに生えている林のこと。具体的な二つの植物を答えて",
+                            "answer": [
+                                "バオバブ",
+                                "アカシア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "ヒマラヤ山脈は南アジア、西アジア、東南アジアどこらへんにある",
+                            "answer": [
+                                "南アジア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
                             "answer": [
                                 "ア→シベリア気団",
@@ -11038,6 +11075,33 @@
                             "last_answered_date": "2025-05-04"
                         },
                         {
+                            "problem": "温帯草原の呼び名。アルゼンチンではなんと呼ばれる？",
+                            "answer": [
+                                "パンパ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "回帰線付近には亜熱帯高圧帯が分布しているため、その付近の気候は乾燥帯になりやすいにもかかわらず、インドのコルカタ付近は乾燥帯にならず、サバナ気候になっている理由",
+                            "answer": [
+                                "季節風の影響\nコルカタは、本来乾燥帯になってもおかしくない位置にありますが、夏の季節風の影響によって夏は雨が降るわけですね。\n\nでも、冬になると亜熱帯高圧帯の影響が強まってはっきりとした乾季がきてしまいます。\n\nその結果、雨季と乾季がはっきりとしたサバナ気候になるというわけです。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "南アジアといえばどんな国がある",
+                            "answer": [
+                                "インド、パキスタン、バングラデッシュ、ネパール、スリランカ"
+                            ],
+                            "memo": "https://www.jica.go.jp/overseas/asia/sasia_history/__icsFiles/afieldfile/2024/08/06/sasia_history_01.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
                             "problem": "揚子江気団　読み方",
                             "answer": [
                                 "ようすこうきだん"
@@ -11156,7 +11220,7 @@
                                 "バルト楯状地"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-04"
                         },
                         {
@@ -11165,7 +11229,7 @@
                                 "フン族"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-05"
                         },
                         {
@@ -11358,7 +11422,7 @@
                                 ""
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/lake-world-map.png",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-03"
                         },
                         {
@@ -11865,7 +11929,7 @@
                                 "中国の右上"
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/yMyi4m-DP1H6RQZ294-RNQz8Xr4-C8WLIFFf3ZsYcnLnL1qbkpZEyIChFCtxjYmjZOIaYS0FKuHUs-v4IkU9bgtZAF14OBswvHdq_Jt1LeDnB_qfmVW46fM1PKw5kf0",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-05-01"
                         },
                         {
@@ -11892,8 +11956,26 @@
                                 ""
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2021/01/intrazonal-soil-map.png",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "中国の深圳どこ",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://www.jeri.or.jp/wp-content/uploads/2023/08/202310-11_02_01.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
+                            "problem": "https://oke-files.s3.amazonaws.com/uploads/iTXJ10M4Lebeu/c2b8a69761534fc4a06abcd850f2c0b9.jpg ここにある河川の覚え方　語呂",
+                            "answer": [
+                                "校長のチューはほんまめっちゃええ感じでインダス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
                         },
                         {
                             "problem": "カスピ海の下には何の国がある？右には何の国",
@@ -12202,10 +12284,10 @@
                         {
                             "problem": "スイスの首都は？",
                             "answer": [
-                                "チューリッヒZurich"
+                                "ベルン"
                             ],
-                            "memo": "",
-                            "is_correct": 1,
+                            "memo": "人口最大はチューリッヒZurich",
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-14"
                         },
                         {
@@ -12493,7 +12575,7 @@
                                 "黒色"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-04"
                         },
                         {
@@ -12523,6 +12605,15 @@
                             "memo": "https://juken-geography.com/wp-content/uploads/2021/01/intrazonal-soil-map.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-03"
+                        },
+                        {
+                            "problem": "温暖冬季少雨気候 (Cw)の土壌はなんですか",
+                            "answer": [
+                                "黄色土"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
                         },
                         {
                             "problem": "ラトソルの色は何色？",
@@ -14024,6 +14115,38 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-04"
+                        }
+                    ]
+                },
+                {
+                    "name": "地誌 China",
+                    "questions": [
+                        {
+                            "problem": "中国のシリコンバレーはどこ",
+                            "answer": [
+                                "深圳"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
+                            "problem": "中国の経済特区の場所はどこらへん",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxAsV5WXhHJF-Tbbtmq_uqfNRfitF3EIAGpw&s",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
+                            "problem": "カシミール地方はどの国の領土なのか、インド・パキスタン・中国が争っている領土問題をなんという",
+                            "answer": [
+                                "カシミール問題"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
                         }
                     ]
                 }
