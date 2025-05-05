@@ -1672,7 +1672,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-05"
                         },
                         {
                             "problem": "API Gateway×Step Functions×Lambdaでの構築のメリットを答えて",
@@ -2433,8 +2433,8 @@
                                 "ワルダー法"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-06"
                         },
                         {
                             "problem": "熱濃硫酸\tの半反応式を書いて",
@@ -3321,8 +3321,8 @@
                                 "銀Agの生PbはげHg"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-05"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-06"
                         }
                     ]
                 },
@@ -9890,7 +9890,25 @@
                             ],
                             "memo": "https://soudabushi.com/image/ocean_current.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
+                            "problem": "冷帯で平地にタイガが広がるためロシアは何業が盛ん？",
+                            "answer": [
+                                "林業"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
+                            "problem": "特定の一次産品の生産・輸出に依存する経済のことをなんという",
+                            "answer": [
+                                "モノカルチャー経済"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-06"
                         },
                         {
                             "problem": "外来河川は、（A）から（B）に流れる河川。",
@@ -10500,7 +10518,7 @@
                                 "外来河川"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-03"
                         },
                         {
@@ -10869,6 +10887,15 @@
                             "last_answered_date": "2025-05-05"
                         },
                         {
+                            "problem": "日本ではアルミニウムの精錬は行われているか？",
+                            "answer": [
+                                "行われていない。電力価格の高い日本では力を大量に消費するアルミニウムの精錬は厳しい。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
                             "answer": [
                                 "ア→シベリア気団",
@@ -11016,7 +11043,7 @@
                                 "古期造山帯"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-04"
                         },
                         {
@@ -11090,7 +11117,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-06"
                         },
                         {
                             "problem": "南アジアといえばどんな国がある",
@@ -11100,6 +11127,34 @@
                             "memo": "https://www.jica.go.jp/overseas/asia/sasia_history/__icsFiles/afieldfile/2024/08/06/sasia_history_01.jpg",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-05"
+                        },
+                        {
+                            "problem": "地球上で最も硬い物質",
+                            "answer": [
+                                "ダイヤモンド"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-06"
+                        },
+                        {
+                            "problem": "中国とインドの国境らへんにある山脈はなにか",
+                            "answer": [
+                                "ヒマラヤ山脈"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-06"
+                        },
+                        {
+                            "problem": "スラブ系言語に分類される言語は2",
+                            "answer": [
+                                "ロシア語",
+                                "ポーランド語"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-06"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -11248,7 +11303,7 @@
                                 "水力"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-03"
                         },
                         {
@@ -11266,7 +11321,7 @@
                                 "那覇（海洋性気候だから）ほかの県に比べて低い"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-03"
                         },
                         {
@@ -11433,6 +11488,15 @@
                             "memo": "https://juken-geography.com/wp-content/uploads/2021/02/estuary-map.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "カッパーベルト　どこらへん",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://oke-files.s3.amazonaws.com/uploads/qMtw0JquiE9sl/a64389c45c9b44349086926c289c6566.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-06"
                         },
                         {
                             "problem": "ホワイ川はどこにある",
@@ -11623,9 +11687,9 @@
                             "answer": [
                                 ""
                             ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-IaZnyvZaxeV7ivDrmXlGRr7AlrDbUm6oQQ&s",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-06"
                         },
                         {
                             "problem": "アパラチア山脈はどこの国のどこらへんにある",
@@ -11766,7 +11830,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-05"
                         },
                         {
                             "problem": "中国の上にある国はなんですか？",
@@ -12018,10 +12082,10 @@
                         {
                             "problem": "ホワイ川の上にはなんの川がある？",
                             "answer": [
-                                "黄河"
+                                "黄河（こうが"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-03"
                         },
                         {
@@ -12031,7 +12095,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-06"
                         },
                         {
                             "problem": "ゴビ砂漠　場所",
@@ -12098,8 +12162,8 @@
                                 "フランス語"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-06"
                         },
                         {
                             "problem": "ローヌ川河口近くにあるフランス有数の湾岸都市で、造船、鉄鋼、食品機械工業が盛んな都市はどこか",
@@ -12397,7 +12461,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-05"
                         },
                         {
                             "problem": "バングラデッシュは世界の人口ランキングで何位？",
@@ -12910,6 +12974,15 @@
                             "last_answered_date": "2025-05-04"
                         },
                         {
+                            "problem": "ブータンの人口は？",
+                            "answer": [
+                                "約80万"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
                             "problem": "人間の非常住地域を何という？",
                             "answer": [
                                 "アネクメーネ"
@@ -13020,7 +13093,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-01"
+                            "last_answered_date": "2025-05-05"
                         },
                         {
                             "problem": "ダイヤモンドの輸出の上位top3",
@@ -14143,6 +14216,15 @@
                             "problem": "カシミール地方はどの国の領土なのか、インド・パキスタン・中国が争っている領土問題をなんという",
                             "answer": [
                                 "カシミール問題"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-05"
+                        },
+                        {
+                            "problem": "かつて満州国があったのは東北、華北、華中、華南のどこか",
+                            "answer": [
+                                "東北"
                             ],
                             "memo": "",
                             "is_correct": 0,
