@@ -1760,7 +1760,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "SNSトピックとは",
@@ -2368,7 +2368,7 @@
                             ],
                             "memo": "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-06"
+                            "last_answered_date": "2025-05-09"
                         }
                     ]
                 },
@@ -3137,7 +3137,7 @@
                             ],
                             "memo": "https://受験理系特化プログラム.xyz/wp-content/uploads/2021/11/Screen-Shot-2021-11-17-at-9.47.54-AM.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "ダイヤモンド型構造　例３",
@@ -7096,7 +7096,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "amphoteric substance",
@@ -10960,8 +10960,8 @@
                                 "行われていない。電力価格の高い日本では力を大量に消費するアルミニウムの精錬は厳しい。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-05"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "ドイツで最大規模を誇る国際空港は",
@@ -10971,6 +10971,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "下降気流のある場所では雨が降りやすいか？乾燥しやすいか",
+                            "answer": [
+                                "乾燥しやすい"
+                            ],
+                            "memo": "上昇気流の反対と覚える",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
@@ -11167,7 +11176,7 @@
                             ],
                             "memo": "https://chitonitose.com/geo/img/Anglo_America_Cfb.webp",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-05"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "日本海流（黒潮）はどこにあるか",
@@ -11203,7 +11212,7 @@
                             ],
                             "memo": "https://www.jica.go.jp/overseas/asia/sasia_history/__icsFiles/afieldfile/2024/08/06/sasia_history_01.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-06"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "地球上で最も硬い物質",
@@ -11240,7 +11249,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-06"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "ハンガリー・フィンランドは何系の言語を使用するか",
@@ -11279,12 +11288,21 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "熱帯低気圧はどこで生じない？",
                             "answer": [
                                 "赤道直下"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "サンフランシスコは最暖月が20度未満ととても低い。それはなぜか",
+                            "answer": [
+                                "カリフォルニア海流が流れているから"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -11515,7 +11533,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "仏教には上座仏教と大乗仏教がある。戒律がしっかりしている仏教はどちらか。",
@@ -11696,13 +11714,13 @@
                             "last_answered_date": "2025-05-08"
                         },
                         {
-                            "problem": "中国の深圳の近くにはなんの国がある",
+                            "problem": "中国の深圳の近くにはなんの地域がある",
                             "answer": [
                                 "香港"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "ホワイ川はどこにある",
@@ -11815,9 +11833,9 @@
                         {
                             "problem": "ヴォルタ川はどこにありますか？",
                             "answer": [
-                                "アフリカ大陸の西側\nガーナの国にある"
+                                "ガーナの国にある"
                             ],
-                            "memo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkGtPaCARkiQGUMgs7RlAoLAiWpHfgn8B8RsWUjnMOOp-RlMcoCKXZOnRx8YlIQHASDPZNg4_bOLVCyauWqtfS99yjiJ8EGWmtQX8SO7ku2pon20zraU4glObze4sDH507gsW5YtzSFVhn/w1200-h630-p-k-no-nu/4c1e2d7739f148f73ba648c4d2c9e2bb.jpg",
+                            "memo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkGtPaCARkiQGUMgs7RlAoLAiWpHfgn8B8RsWUjnMOOp-RlMcoCKXZOnRx8YlIQHASDPZNg4_bOLVCyauWqtfS99yjiJ8EGWmtQX8SO7ku2pon20zraU4glObze4sDH507gsW5YtzSFVhn/w1200-h630-p-k-no-nu/4c1e2d7739f148f73ba648c4d2c9e2bb.jpg\n\nhttps://pbs.twimg.com/media/FwxC3ZqaAAM5qXx.jpg",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-02"
                         },
@@ -11973,9 +11991,8 @@
                             "last_answered_date": "2025-04-19"
                         },
                         {
-                            "problem": "ウズベキスタンの場所は？上と下には何がある？ちかくに何の湖がある？",
+                            "problem": "ウズベキスタンの下には何がある？ちかくに何の湖がある？",
                             "answer": [
-                                "上→カザフスタン",
                                 "下→トルクメニスタン",
                                 "湖→カスピ海"
                             ],
@@ -12262,7 +12279,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSij1vR4aN4-qRiD2JXBFYmgR8gMCQ0n8NsA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "ケープタウンの場所は",
@@ -12270,6 +12287,15 @@
                                 ""
                             ],
                             "memo": "https://tabijo-bp.com/wp-content/uploads/images/2017111821262189e.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-09"
+                        },
+                        {
+                            "problem": "ウズベキスタンの上にはなんの国がある？",
+                            "answer": [
+                                "カザフスタン"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-08"
                         },
@@ -12326,7 +12352,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "ゴビ砂漠　場所",
@@ -12556,7 +12582,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "トルコの人口一位は？",
@@ -13563,7 +13589,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "大麦、エン麦、ライ麦、小麦の順番をどのように覚える",
@@ -13629,7 +13655,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "焼畑農業のメリットは",
@@ -13929,6 +13955,15 @@
                             "problem": "サンフランシスコはケッペンの気候区分で何に分類される",
                             "answer": [
                                 "地中海性気候"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-09"
+                        },
+                        {
+                            "problem": "チリの海岸沿いはケッペンの何に分類される",
+                            "answer": [
+                                "Cs"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -14668,7 +14703,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         }
                     ]
                 }
