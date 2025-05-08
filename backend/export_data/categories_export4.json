@@ -230,7 +230,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "last_answered_date": "2025-05-08"
                         }
                     ]
                 },
@@ -2547,11 +2547,11 @@
                         {
                             "problem": "イオン化エネルギーといえば？お決まりのフレーズ",
                             "answer": [
-                                "外部からエネルギーをもらって電子を１つ手放す時のエネルギーだし"
+                                "外部からエネルギーをもらって電子を１つ手放す時のエネルギー"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "イオン化エネルギーはなんの指標か。化学受験テクニック塾より",
@@ -9042,7 +9042,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "MIPS(million instructions per second)が高いほど、どうなるか？ヒント：MIPSの単語の意味を考えたらわかりますよ。",
@@ -9894,8 +9894,8 @@
                                 "風積土"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "地理の問題を解く際に使用する年代 およそ1955年~73年はなにがあった",
@@ -9943,15 +9943,6 @@
                             "last_answered_date": "2025-05-05"
                         },
                         {
-                            "problem": "冷帯で平地にタイガが広がるためロシアは何業が盛ん？",
-                            "answer": [
-                                "林業"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-05"
-                        },
-                        {
                             "problem": "特定の一次産品の生産・輸出に依存する経済のことをなんという",
                             "answer": [
                                 "モノカルチャー経済"
@@ -9964,6 +9955,33 @@
                             "problem": "航空機の乗り継ぎ拠点として利用されている、多くの航空路線が集まる空港のことをなんという",
                             "answer": [
                                 "ハブ空港"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-09"
+                        },
+                        {
+                            "problem": "ぶどうが栽培できる北限はどこらへん？",
+                            "answer": [
+                                "パリ盆地"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "インダス川はどこの国を流れている",
+                            "answer": [
+                                "パキスタン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "カスピ海周辺は乾燥帯かもしくは温帯か？",
+                            "answer": [
+                                "乾燥帯"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -10172,7 +10190,7 @@
                                 "構造平野"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-07"
                         },
                         {
@@ -10746,15 +10764,6 @@
                             "last_answered_date": "2025-05-03"
                         },
                         {
-                            "problem": "播種（はしゅ）とはどういう意味か",
-                            "answer": [
-                                "種を蒔く"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
-                        },
-                        {
                             "problem": "南半球と北半球について季節はどうなっているか",
                             "answer": [
                                 "逆になっている"
@@ -10915,7 +10924,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "温帯草原の呼び名。北アメリカではなんと呼ばれる？",
@@ -11234,6 +11243,54 @@
                             "last_answered_date": "2025-05-06"
                         },
                         {
+                            "problem": "ハンガリー・フィンランドは何系の言語を使用するか",
+                            "answer": [
+                                "ウラル系"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "地形と資源の原則として、安定陸塊ー＞（A）、古期造山帯ー＞（B）、新期造山帯→（C）となる。",
+                            "answer": [
+                                "A→鉄鉱石",
+                                "B→石炭",
+                                "C→石油"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "コロンビア、エクアドル共に輸出の一位が原油であるためそれぞれを何で見極めれば良いか",
+                            "answer": [
+                                "コロンビア→コーヒー",
+                                "エクアドル→バナナ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "メキシコが銀の産出量が一位であることは何と紐づけて覚えたら良いか",
+                            "answer": [
+                                "アステカ文明→豊富な銀などをもとに栄えた"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "熱帯低気圧はどこで生じない？",
+                            "answer": [
+                                "赤道直下"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
                             "problem": "揚子江気団　読み方",
                             "answer": [
                                 "ようすこうきだん"
@@ -11324,7 +11381,7 @@
                                 "環太平洋造山帯があるから（火山があるから）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-06"
                         },
                         {
@@ -11418,6 +11475,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "カルスト地形の周辺で見られる産業は",
+                            "answer": [
+                                "セメント"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-09"
+                        },
+                        {
+                            "problem": "インド洋で発生する熱帯低気圧をなんという",
+                            "answer": [
+                                "サイクロン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
                         }
                     ]
                 },
@@ -11432,6 +11507,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-26"
+                        },
+                        {
+                            "problem": "タイの8割の民族は何の宗教を信仰しているか",
+                            "answer": [
+                                "仏教"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "仏教には上座仏教と大乗仏教がある。戒律がしっかりしている仏教はどちらか。",
@@ -11493,8 +11577,8 @@
                                 "チベット仏教（ラマ教）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-06"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "ヨーロッパの宗教の分布をヨーロッパの北側、南西側、東側で答えて",
@@ -11564,7 +11648,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2021/02/estuary-map.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-09"
                         },
                         {
                             "problem": "カッパーベルト　どこらへん",
@@ -11572,6 +11656,51 @@
                                 ""
                             ],
                             "memo": "https://oke-files.s3.amazonaws.com/uploads/qMtw0JquiE9sl/a64389c45c9b44349086926c289c6566.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "フィリピンのミンダナオ島はどこか",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://prtimes.jp/i/35268/10/resize/d35268-10-930518-2.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "黒海の上にはなんの国がある？",
+                            "answer": [
+                                "ウクライナ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "フィリピン海プレートはどこ",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSij1vR4aN4-qRiD2JXBFYmgR8gMCQ0n8NsA&s",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "カスピ海の右にはなんの国がある",
+                            "answer": [
+                                "カザフスタン"
+                            ],
+                            "memo": "https://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "中国の深圳の近くにはなんの国がある",
+                            "answer": [
+                                "香港"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-08"
                         },
@@ -11630,9 +11759,8 @@
                         {
                             "problem": "黒海の周りにある国",
                             "answer": [
-                                "ウクライナの下、ロシアの左、",
-                                "ブルガリアの右",
-                                "トルコの上、"
+                                "ロシアの左、",
+                                "ブルガリアの右"
                             ],
                             "memo": "https://image.itmedia.co.jp/makoto/articles/1403/05/l_ki_jizi01.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
@@ -11853,7 +11981,7 @@
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "トルコの上には何がある？",
@@ -11989,7 +12117,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13iJk4Cj7I8J_9AC7OSbXpUaIlI5TnnEEcw&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　8,10,30,41,53,54,55.56.57,66答えて",
@@ -11998,7 +12126,7 @@
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "ニュージーランドおよび日付変更線以東なのはポリネシア、ミクロネシア？",
@@ -12016,7 +12144,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/08/takujouchi-tatejouchi-bunpu-e1598533702168.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "カラクム砂漠はどこの国にある？",
@@ -12116,7 +12244,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-05"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "シドニーとメルボルンの位置は",
@@ -12128,10 +12256,27 @@
                             "last_answered_date": "2025-04-15"
                         },
                         {
-                            "problem": "カスピ海の下には何の国がある？右には何の国",
+                            "problem": "北アメリカプレートはどこ",
                             "answer": [
-                                "下→イラン",
-                                "右→カザフスタン"
+                                ""
+                            ],
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSij1vR4aN4-qRiD2JXBFYmgR8gMCQ0n8NsA&s",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "ケープタウンの場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://tabijo-bp.com/wp-content/uploads/images/2017111821262189e.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "カスピ海の下には何の国がある？",
+                            "answer": [
+                                "下→イラン"
                             ],
                             "memo": "https://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
@@ -12181,7 +12326,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-06"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "ゴビ砂漠　場所",
@@ -12199,7 +12344,16 @@
                             ],
                             "memo": "https://www.kaijipr.or.jp/assets/img/mamejiten/nature/shizen18.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
+                            "last_answered_date": "2025-05-09"
+                        },
+                        {
+                            "problem": "黒海の下にはなんの国がある",
+                            "answer": [
+                                "トルコ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-09"
                         }
                     ]
                 },
@@ -12223,6 +12377,33 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-03"
+                        },
+                        {
+                            "problem": "マレーシアは多民族国家か？単一民族国家か？",
+                            "answer": [
+                                "多民族国家"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "おもに19世紀せいきごろから，中国人で海外に移住いじゅうした者をなんという",
+                            "answer": [
+                                "華僑\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
+                            "problem": "カラジャス鉄山はどこの国か",
+                            "answer": [
+                                "ブラジル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "アウトストラーダ・デル・ソーレとは？",
@@ -12603,6 +12784,15 @@
                             "memo": "https://stat.ameba.jp/user_images/20190930/08/m-coupe339/3c/3f/j/o1080144014602836646.jpg?caw=800",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-02"
+                        },
+                        {
+                            "problem": "冷帯で平地にタイガが広がるためロシアは何業が盛ん？",
+                            "answer": [
+                                "林業"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-05"
                         }
                     ]
                 },
@@ -12736,7 +12926,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2021/01/intrazonal-soil-map.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "温暖冬季少雨気候 (Cw)の土壌はなんですか",
@@ -13287,7 +13477,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "緑の革命のデメリットは",
@@ -13314,7 +13504,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-06"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "冬小麦Winter wheatのおぼえかたは？",
@@ -13592,6 +13782,15 @@
                             "last_answered_date": "2025-05-07"
                         },
                         {
+                            "problem": "播種（はしゅ）とはどういう意味か",
+                            "answer": [
+                                "種を蒔く"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-08"
+                        },
+                        {
                             "problem": "カカオの生産量が多い国top2",
                             "answer": [
                                 "コートジボワール\n",
@@ -13733,7 +13932,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "砂漠気候(BW)の条件：降水量：概ね年降水量が（A）",
@@ -14525,8 +14724,8 @@
                                 "コードをみるだけでは、実際にどのリソースが作成されているかわからないため、現在のインフラ状態を把握できないため。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-08"
                         }
                     ]
                 }
