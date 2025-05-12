@@ -26,11 +26,9 @@ class QuestionUpdate(BaseModel):
     problem: str = Field(min_length=2, max_length=999, examples=["列志向データベースの強みを説明せよ"])
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     memo: str = Field(max_length=999, examples=["ここにquestionに関するメモを記入できます。"])
-    # is_correct: bool = Field(default=False, example=False)
     is_correct: SolutionStatus = Field(default=SolutionStatus.NOT_SOLVED, example=SolutionStatus.NOT_SOLVED)
     
 class QuestionIsCorrectUpdate(BaseModel):
-    # is_correct: bool = Field(default=False, example=False)
     is_correct: SolutionStatus = Field(default=SolutionStatus.NOT_SOLVED, example=SolutionStatus.NOT_SOLVED)
     
 class QuestionBelongsToSubcategoryIdUpdate(BaseModel):

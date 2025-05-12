@@ -106,9 +106,9 @@ export const ProblemNormalPage: React.FC<Props> = ({
                             }`}
                             onClick={handleUpdateIsCorrect}
                         >
-                            {localProblem?.is_correct === SolutionStatus.NOT_SOLVED ? '不正解' :
-                            localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? '一時的に正解' :
-                            '正解'}
+                            {localProblem?.is_correct === SolutionStatus.NOT_SOLVED ? 'incorrect' :
+                            localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? 'temp correct' :
+                            'correct'}
                         </button>
                     </div>
                 </div>

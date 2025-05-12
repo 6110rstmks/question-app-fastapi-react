@@ -4,8 +4,7 @@ from schemas.category import CategoryCreate
 from models2 import Category, CategoryQuestion, Subcategory, SubcategoryQuestion, Question
 from config import PAGE_SIZE
 from fastapi import HTTPException
-import enum
-from enum import Enum
+# from enum import Enum
 
 def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None, answer_word: str = None):
 
@@ -130,10 +129,10 @@ def find_all_categories_with_questions(db: Session):
     return result
 
 
-class SolutionStatus(str, Enum):
-    NOT_SOLVED = "NOT_SOLVED"
-    TEMPORARY_SOLVED = "TEMPORARY_SOLVED"
-    PERMANENT_SOLVED = "PERMANENT_SOLVED"
+# class SolutionStatus(str, Enum):
+#     NOT_SOLVED = "NOT_SOLVED"
+#     TEMPORARY_SOLVED = "TEMPORARY_SOLVED"
+#     PERMANENT_SOLVED = "PERMANENT_SOLVED"
 
 # def find_all_categories_with_questions(db: Session):
 #     query1 = select(CategoryQuestion.category_id).distinct()
