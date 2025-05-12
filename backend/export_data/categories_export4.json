@@ -615,8 +615,8 @@
                                 "CNAMEレコード名でアクセスしたらAレコード名を返す。\nでも通信するためにはIPアドレスが欲しいので、Aレコードが返されたらそのAレコード名を使用して名前解決をしてIPアドレスを受け取る必要がある。\n\n対して、Aliasレコードでは、クライアントとRoute53の通信は１回で済むのでCNAMEを使うよりも通信の速度が上がる"
                             ],
                             "memo": "https://www.youtube.com/watch?v=Ly_7Z5BPcOc\n\n上記の動画の3分から視聴してください。",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-05"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "AWSのRoute53で使用されるレコードを4こ列挙してください。",
@@ -628,7 +628,7 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "route53のヘルスチェエクは何をする",
+                            "problem": "Route53のヘルスチェエクは何をする",
                             "answer": [
                                 "指定したエンドポイント（IPアドレスやドメイン名）に対して定期的にリクエストを送り、その応答を監視することで、エンドポイントの可用性や健全性を確認する機能です。"
                             ],
@@ -832,8 +832,8 @@
                                 "リードレプリカ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "AWS RDSにおいてマルチAZを配置する目的は何か。またその理由",
@@ -1446,6 +1446,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-20"
+                        },
+                        {
+                            "problem": "AWSにおけるNICはなにか",
+                            "answer": [
+                                "ENI"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
                         }
                     ]
                 },
@@ -1691,7 +1700,7 @@
                             ],
                             "memo": "デメリットはAPI Gateway/Step Funcstionsのコストがかかる、Step Funcstionsが入る分、実装難易度が高い",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "API Gateway × Cognito(user pool)でなにができる",
@@ -1768,7 +1777,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "SNSのサブスクライバーを答えて３",
@@ -1778,8 +1787,8 @@
                                 "Lambda"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "SNSだけの構成とSNS + SQS構成では処理の信頼性および処理タイミングにどのような違いがあるか",
@@ -2539,11 +2548,11 @@
                         {
                             "problem": "尿素の酸素原子を硫黄原子で置換した構造の化合物を何という？",
                             "answer": [
-                                "チオカルばみどthiocarbamide"
+                                "チオカルバミドthiocarbamide"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "元素記号のSeは？",
@@ -2581,6 +2590,16 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-11"
+                        },
+                        {
+                            "problem": "蒸気圧の全圧が、（各成分の飽和蒸気圧）×（各成分のモル分率）の和、で表すことができる法則のことをなんという。また式を書いて",
+                            "answer": [
+                                "ラウールの法則",
+                                "\nP = \\frac{n_A}{n_A + n_B} P_A + \\frac{n_B}{n_A + n_B} P_B\n"
+                            ],
+                            "memo": "\n\n\n",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "原子核に近い方が力が強い（安定している）これをエネルギー準位でいいかえると？",
@@ -2774,7 +2793,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "分子式が同じで、構造が異なる物質同士を何という",
@@ -3368,16 +3387,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "BaSO4の用途は",
                             "answer": [
-                                "造影剤"
+                                "放射線の造影剤"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "オキソ酸の酸性が強くなるための条件(2",
@@ -3387,7 +3406,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "炭酸イオン(CO3^2-)で沈澱する陽イオンは？",
@@ -3408,11 +3427,11 @@
                             "last_answered_date": "2025-05-06"
                         },
                         {
-                            "problem": "フッ素と臭素で酸化力が強いのはどっち",
+                            "problem": "オキソ酸の酸としての強さは含まれる酸素O原子の数が増えるほど強くなる？弱くなる？",
                             "answer": [
-                                "フッ素"
+                                "強くなる"
                             ],
-                            "memo": "",
+                            "memo": "https://kimika.net/wp-content/uploads/2017/08/m2harogen18.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-13"
                         }
@@ -3615,8 +3634,8 @@
                                 "燃焼エンタルピー"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "1molの物質を単体から生成するときのΔHをなんという",
@@ -3690,6 +3709,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-16"
+                        },
+                        {
+                            "problem": "フッ素と臭素で酸化力が強いのはどっち",
+                            "answer": [
+                                "フッ素"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
                         }
                     ]
                 },
@@ -3712,7 +3740,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "中和滴定で濃度を知りたいものをなんという",
@@ -3771,7 +3799,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "ハーバーボッシュ法で用いる触媒は",
@@ -3780,7 +3808,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         }
                     ]
                 }
@@ -5121,24 +5149,6 @@
                     "name": "m",
                     "questions": [
                         {
-                            "problem": "IPLとレーザーではパルス幅はどちらが長いか",
-                            "answer": [
-                                "IPL"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
-                        },
-                        {
-                            "problem": "レーザーとIPLのどちらが単一波長であるか",
-                            "answer": [
-                                "レーザー"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
-                        },
-                        {
                             "problem": "椎茸の旨味の成分は？",
                             "answer": [
                                 "Guanylic acid"
@@ -5222,15 +5232,6 @@
                             "last_answered_date": "2025-05-12"
                         },
                         {
-                            "problem": "ヤグレーザーの波長は？",
-                            "answer": [
-                                "1064nm"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
-                        },
-                        {
                             "problem": "紫外線　3種類",
                             "answer": [
                                 "UV-A",
@@ -5242,18 +5243,9 @@
                             "last_answered_date": "2025-05-13"
                         },
                         {
-                            "problem": "脱毛サロンで使用されているIPLの波長はおよそどれくらいか",
+                            "problem": "赤色光の波長は約nmか",
                             "answer": [
-                                "500~1200nm\n幅が広い　ものによる"
-                            ],
-                            "memo": "単一波長ではない。→さまざまな症状に効くと謳っている",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
-                        },
-                        {
-                            "problem": "レーザー脱毛の中で最も波長の長いものは？",
-                            "answer": [
-                                "ヤグレーザー　1064nm"
+                                "700nm"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -5269,11 +5261,20 @@
                             "last_answered_date": "2025-05-12"
                         },
                         {
-                            "problem": "波長が長ければ長いほど、肌の表面もしくは肌の奥どちらまで浸透するか？",
+                            "problem": "Ｘ線の波長はどのくらいか",
                             "answer": [
-                                "肌の奥"
+                                "0.01nmから１nm"
                             ],
-                            "memo": "https://www.biyougeka.com/content/uploads/2019/08/06153753/main__content_uploads_column_post_maincolumn_skin_machine_different_skin_machine_different_diff01_pic01.jpg",
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "医薬品や医療機器の製造販売にあたり、企業は厚生労働相に承認申請し、認められなければならない。これが認められることをなんという",
+                            "answer": [
+                                "薬事承認"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-13"
                         },
@@ -5285,24 +5286,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-13"
-                        },
-                        {
-                            "problem": "レーザー治療では波長が長いほど、もしくは短いのどちらがやけどのリスクがあるか",
-                            "answer": [
-                                "長い"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
-                        },
-                        {
-                            "problem": "フォトフェイシャルは誰向けに開発された？",
-                            "answer": [
-                                "白人"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "真皮まで届いて肌の老化を進めるのはUV-A,UV-B,UV-Cのどれか",
@@ -9561,7 +9544,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         }
                     ]
                 },
@@ -9772,7 +9755,7 @@
                     "name": "wave",
                     "questions": [
                         {
-                            "problem": "振動数f(HZ)は周期T(s)の（A）",
+                            "problem": "振動数f(HZ)は周期T(s)の何か",
                             "answer": [
                                 "逆数"
                             ],
@@ -9803,6 +9786,24 @@
                             "problem": "波長は、ギリシャ文字でなにで表す",
                             "answer": [
                                 "λ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "波の速さの公式",
+                            "answer": [
+                                "v=λ/T"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "プラチナバンドが障害物を回り込んで届きやすいという特徴のはなぜか",
+                            "answer": [
+                                "低周波数帯であるため"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -10278,7 +10279,7 @@
                             ],
                             "memo": "https://soudabushi.com/image/ocean_current.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "特定の一次産品の生産・輸出に依存する経済のことをなんという",
@@ -10480,11 +10481,11 @@
                             "answer": [
                                 "緯度",
                                 "隔海度→大陸性か海洋性かによって暖まりやすく冷めやすいなどが決まるから",
-                                "大陸のどこか"
+                                "大陸のどこか（内陸か海洋か）"
                             ],
                             "memo": "気温の分布とごっちゃにならないように\nセンター`2015年の大問1の3とか",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
@@ -11262,7 +11263,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "温帯草原の呼び名。北アメリカではなんと呼ばれる？",
@@ -11281,7 +11282,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "ヒマラヤ山脈は南アジア、西アジア、東南アジアどこらへんにある",
@@ -11326,7 +11327,7 @@
                             ],
                             "memo": "https://chitonitose.com/geo/img/Latin_America_terrain.webp",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
@@ -11550,7 +11551,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "南アジアといえばどんな国がある",
@@ -11607,7 +11608,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "熱帯低気圧はどこで生じない？",
@@ -11643,7 +11644,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-10"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "日本の太平洋側は夏に高温多雨になる、それはなぜか",
@@ -11652,7 +11653,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "カスピ海は中東か南アジアでいうとどちらにあるか？",
@@ -11662,15 +11663,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-13"
-                        },
-                        {
-                            "problem": "スウェーデンの左にある国は",
-                            "answer": [
-                                "ノルウェー"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -11890,7 +11882,7 @@
                             "answer": [
                                 "亜熱帯高圧帯の支配",
                                 "寒流の影響",
-                                "隔海度が大きい\n",
+                                "隔海度が大きい",
                                 "卓越風に対する山地の風下"
                             ],
                             "memo": "",
@@ -11999,7 +11991,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "ヨーロッパの宗教の分布をヨーロッパの北側、南西側、東側で答えて",
@@ -12042,7 +12034,7 @@
                             ],
                             "memo": "\nhttps://lh3.googleusercontent.com/proxy/Dm2VQGX4CLVMUSS0nGMh7o7cmRVQEcfifM2I69joZy2A0_gBInhmLQRhkWTjpIAUUnHTqK6USP-kIXRumxwCP4HvfimRdtKZQTjR-7hjJk49kjplV2xj99yr7oMF",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "サンベルトどこらへん",
@@ -12144,6 +12136,15 @@
                             "last_answered_date": "2025-05-12"
                         },
                         {
+                            "problem": "カスピ海と黒海ではどちらが西側にあるか",
+                            "answer": [
+                                "黒海"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
                             "problem": "ホワイ川はどこにある",
                             "answer": [
                                 "中国　黄河と長河の間"
@@ -12231,12 +12232,12 @@
                             "last_answered_date": "2025-05-10"
                         },
                         {
-                            "problem": " イランの右には何の国がある2？左側には何の国がある？",
+                            "problem": " イランの右には何の国がある2？",
                             "answer": [
-                                "右→アフガニスタン、パキスタン"
+                                "アフガニスタン、パキスタン"
                             ],
                             "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-05-03"
                         },
                         {
@@ -12264,7 +12265,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "ベトナムの場所は？左には何がある？",
@@ -12295,13 +12296,13 @@
                             "last_answered_date": "2025-04-15"
                         },
                         {
-                            "problem": "中央アジアのカザフスタンの上に何がある？",
+                            "problem": "カザフスタンの上に何がある？",
                             "answer": [
                                 "ロシア"
                             ],
                             "memo": "https://keynoters.co.jp/images/sample/kazakhstan_map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "アドリア海はどこにある？どの国に面している？5つ答えて",
@@ -12336,7 +12337,7 @@
                                 "アメリカの東"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWhvexMmnRyW8EQwS1dfp9GD3T40xRiF7HDw&s",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-18"
                         },
                         {
@@ -12603,7 +12604,7 @@
                             ],
                             "memo": "https://ryoko-ki.com/assets/images/GON-001138/001.PNG",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "インドのコルカタの場所は",
@@ -12622,6 +12623,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "ベネズエラの左にある国は",
+                            "answer": [
+                                "コロンビア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "カラクム砂漠はどこの国にある？",
@@ -12804,13 +12814,22 @@
                             "last_answered_date": "2025-05-12"
                         },
                         {
-                            "problem": "カスピ海の下には何の国がある？",
+                            "problem": "スウェーデンの左にある国は",
+                            "answer": [
+                                "ノルウェー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "カスピ海の下にある国",
                             "answer": [
                                 "下→イラン"
                             ],
                             "memo": "https://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　\n\n黒海の下にはトルコ",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "メコン川の場所は",
@@ -12919,7 +12938,16 @@
                             ],
                             "memo": "https://chitonitose.com/geo/img/map_Brazil.webp",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-14"
+                        },
+                        {
+                            "problem": "イランの上にある湖は",
+                            "answer": [
+                                "カスピ海"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
                         }
                     ]
                 },
@@ -12951,7 +12979,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "おもに19世紀せいきごろから，中国人で海外に移住いじゅうした者をなんという",
@@ -12996,7 +13024,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "カナダの人口最大都市は？",
@@ -13176,7 +13204,7 @@
                             ],
                             "memo": "人口最大はチューリッヒZurich",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -14129,7 +14157,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "キャッサバの原産地は？",
@@ -14203,7 +14231,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "播種（はしゅ）とはどういう意味か",
@@ -14211,8 +14239,8 @@
                                 "種を蒔く"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "イランでカナートは何を表す",
@@ -14221,7 +14249,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "カカオの生産量が多い国top2",
@@ -14559,7 +14587,7 @@
                             ],
                             "memo": "EF：最暖月平均気温 0℃未満",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "亜寒帯Dの定義で最暖月平均気温 （A）℃以上なのはなぜか？",
@@ -14882,7 +14910,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-13"
                         }
                     ]
                 },
@@ -15107,7 +15135,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-13"
                         },
                         {
                             "problem": "ラトソル、砂漠土、黒土などが属する土壌をなんという",
@@ -15126,7 +15154,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "テラロッサがある場所は",
@@ -15252,6 +15280,119 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-10"
+                        }
+                    ]
+                },
+                {
+                    "name": "IPL・レーザー",
+                    "questions": [
+                        {
+                            "problem": "波長が長ければ長いほど、肌の表面もしくは肌の奥どちらまで浸透するか？",
+                            "answer": [
+                                "肌の奥"
+                            ],
+                            "memo": "https://www.biyougeka.com/content/uploads/2019/08/06153753/main__content_uploads_column_post_maincolumn_skin_machine_different_skin_machine_different_diff01_pic01.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "IPLとレーザーではパルス幅はどちらが長いか",
+                            "answer": [
+                                "IPL"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "脱毛サロンで使用されているIPLの波長はおよそどれくらいか",
+                            "answer": [
+                                "500~1200nm\n幅が広い　ものによる"
+                            ],
+                            "memo": "単一波長ではない。→さまざまな症状に効くと謳っている",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "レーザー脱毛の中で最も波長の長いものは？",
+                            "answer": [
+                                "ヤグレーザー　1064nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "ヤグレーザーの波長は？",
+                            "answer": [
+                                "1064nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "レーザー治療では波長が長いほど、もしくは短いのどちらがやけどのリスクがあるか",
+                            "answer": [
+                                "長い"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "レーザーとIPLのどちらが単一波長であるか",
+                            "answer": [
+                                "レーザー"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "フォトフェイシャルは誰向けに開発された？",
+                            "answer": [
+                                "白人"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "ノーリスはIPLかレーザーか？",
+                            "answer": [
+                                "IPL"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "ノーリスはどのようにしてやけどや色素沈着のリスクを軽減するか",
+                            "answer": [
+                                "950nm以上の波長をカット"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "フォトフェイシャルRはどの機種をさすか",
+                            "answer": [
+                                "ステラm22"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "Vビームの波長は",
+                            "answer": [
+                                "595nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
                         }
                     ]
                 }
@@ -15571,7 +15712,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-13"
                         }
                     ]
                 }
