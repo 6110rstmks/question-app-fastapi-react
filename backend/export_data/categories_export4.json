@@ -5190,6 +5190,17 @@
                             "last_answered_date": "2025-05-12"
                         },
                         {
+                            "problem": "紫外線　3種類",
+                            "answer": [
+                                "UV-A",
+                                "UV-B",
+                                "UV-C"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
                             "problem": "脱毛サロンで使用されているIPLの波長はおよそどれくらいか",
                             "answer": [
                                 "700nm"
@@ -5208,11 +5219,29 @@
                             "last_answered_date": "2025-05-12"
                         },
                         {
+                            "problem": "紫外線の波長は何nm以下か？",
+                            "answer": [
+                                "380nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
                             "problem": "波長が長ければ長いほど、肌の表面もしくは肌の奥どちらまで浸透するか？",
                             "answer": [
                                 "肌の奥"
                             ],
                             "memo": "https://www.biyougeka.com/content/uploads/2019/08/06153753/main__content_uploads_column_post_maincolumn_skin_machine_different_skin_machine_different_diff01_pic01.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "UV-A,UV-B,UV-Cのうち、オゾン層で吸収されるものは？",
+                            "answer": [
+                                "UV-C"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-12"
                         }
@@ -5276,13 +5305,13 @@
                             "last_answered_date": "2025-03-13"
                         },
                         {
-                            "problem": "フィとクロムの（Pf型 / Pfr型）がジベレリンの合成を誘導し発芽を促す",
+                            "problem": "フィトクロムの（Pf型 / Pfr型）がジベレリンの合成を誘導し発芽を促す",
                             "answer": [
                                 "Pfr"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-29"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "（A）が作用することでセルロース繊維間の多糖の切断が促され植物細胞の細胞壁が緩むのでその分だけ植物細胞内に水が入ってきて吸水でき細胞が成長する。",
@@ -5408,6 +5437,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-24"
+                        },
+                        {
+                            "problem": "フィとクロムは何か？Go",
+                            "answer": [
+                                "光受容体"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-13"
                         }
                     ]
                 },
@@ -11540,6 +11578,15 @@
                             "last_answered_date": "2025-05-10"
                         },
                         {
+                            "problem": "カスピ海は中東か南アジアでいうとどちらにあるか？",
+                            "answer": [
+                                "中東"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
                             "problem": "揚子江気団　読み方",
                             "answer": [
                                 "ようすこうきだん"
@@ -12592,7 +12639,7 @@
                             "last_answered_date": "2025-05-09"
                         },
                         {
-                            "problem": "オーストリアの下にはなにがある",
+                            "problem": "オーストリアの下にはなにがある2",
                             "answer": [
                                 "イタリア、スロヴェニア"
                             ],
