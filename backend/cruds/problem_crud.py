@@ -120,13 +120,13 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
         raise HTTPException(status_code=400, detail="出題する問題がありませんでした。")
     return results
 
-# def generate_problems_by_day(db: Session, problem_fetch_by_date: ProblemFetchByDate):
 def generate_problems_by_day(db: Session, day: str):
     query = (
         select(Question).
         where(Question.last_answered_date == day).
         where(Question.is_correct == SolutionStatus.NOT_SOLVED).
-        order_by(func.random())
+        order_by(func.random()).
+        limit(5)
     )
 
     return db.execute(query).scalars().all()

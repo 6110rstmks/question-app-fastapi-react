@@ -22,9 +22,8 @@ const Calendar: React.FC = () => {
     const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
 
     const handleSetProblemByDay = async (day: string) => {
-        console.log(day)
         const data = await fetchProblemByDay(day)
-        // const problemData = await response.json();
+        console.log(data)
         navigate('/problem', { state: data });
     }
 

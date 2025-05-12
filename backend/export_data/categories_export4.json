@@ -127,6 +127,16 @@
                             "last_answered_date": "2025-03-07"
                         },
                         {
+                            "problem": "セキュリティグループとネットワークACLの適用対象の違いを述べて",
+                            "answer": [
+                                "セキュリティグループ→インスタンス単位",
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
                             "problem": "AWSのネットワークACLはステートレスですか？ステートフルですか？",
                             "answer": [
                                 "ステートレス"
@@ -624,7 +634,7 @@
                             ],
                             "memo": "ALBのconnection drainingと間違えそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "Route53のフェールオーバルーティングのアクティブ/パッシブとアクティブ/アクティブの違いは？",
@@ -1752,6 +1762,15 @@
                     "name": "SNS",
                     "questions": [
                         {
+                            "problem": "SNSトピックとは",
+                            "answer": [
+                                "発行者（Publisher）と購読者（Subscriber）をつなぐ中継地点です。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
+                        },
+                        {
                             "problem": "SNSのサブスクライバーを答えて３",
                             "answer": [
                                 "Kinesis Data Firehose",
@@ -1760,16 +1779,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
-                        },
-                        {
-                            "problem": "SNSトピックとは",
-                            "answer": [
-                                "発行者（Publisher）と購読者（Subscriber）をつなぐ中継地点です。"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "SNSだけの構成とSNS + SQS構成では処理の信頼性および処理タイミングにどのような違いがあるか",
@@ -2186,7 +2196,7 @@
                             ],
                             "memo": "https://hiraocafe.com/note/shajikukasagata.html\nより早く解けるのだそう",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "3分の公式を使う場面は？",
@@ -2414,7 +2424,7 @@
                             ],
                             "memo": "https://kimika.net/rr4mizutokeru.html",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "無極性溶媒の例2",
@@ -2470,7 +2480,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "27℃、1.0 × 10⁵ Pa の N₂ と O₂ の混合気体が水 1.0 L に接している。それぞれが水に何 mol 溶けているか求めよ。ただし、水 1.0 L に対する 27℃ での 1.0 × 10⁵ Pa の気体の溶解度は、N₂ が 6.0 × 10⁻⁴ mol、O₂ が 1.2 × 10⁻³ mol とする。また、混合気体の物質量比は N₂ : O₂ = 3 : 2 とする。",
@@ -2614,8 +2624,8 @@
                                 "NH3, HCl"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "イオン化傾向のどこまでが熱水と反応する？",
@@ -2682,8 +2692,8 @@
                                 "contact process"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         }
                     ]
                 },
@@ -2736,7 +2746,7 @@
                             ],
                             "memo": "https://cdn-ak.f.st-hatena.com/images/fotolife/n/nobita_60/20220919/20220919230949.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "アニリン塩酸塩を強塩基であるNaOHと反応させると、（A）が遊離する",
@@ -3258,7 +3268,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "ハーバーボッシュ法で用いる触媒は",
@@ -3439,16 +3449,6 @@
                     "name": "amino acid",
                     "questions": [
                         {
-                            "problem": "ベンゼン環をもつamino acid2",
-                            "answer": [
-                                "チロシン",
-                                "フェニルアラニン"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
-                        },
-                        {
                             "problem": "アミノ酸のもつ正の電荷と負の電荷が釣り合ってアミノ酸全体として電荷をもたないpHを何という",
                             "answer": [
                                 "等電点"
@@ -3467,13 +3467,14 @@
                             "last_answered_date": "2025-05-03"
                         },
                         {
-                            "problem": "20種類のアミノ酸のなかで鏡像異性体をもっていないアミノ酸は？",
+                            "problem": "ベンゼン環をもつamino acid2",
                             "answer": [
-                                "グリシン"
+                                "チロシン",
+                                "フェニルアラニン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-19"
                         },
                         {
                             "problem": "塩基性アミノ酸を一つ答えて",
@@ -3482,6 +3483,15 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
+                            "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "20種類のアミノ酸のなかで鏡像異性体をもっていないアミノ酸は？",
+                            "answer": [
+                                "グリシン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
                             "last_answered_date": "2025-05-04"
                         }
                     ]
@@ -3563,15 +3573,6 @@
                             "last_answered_date": "2025-04-17"
                         },
                         {
-                            "problem": "生ゴムに30%～40%の硫黄を加硫して加熱した得られる黒色のかたいプラスチック状の物質なんという",
-                            "answer": [
-                                "エボナイトebonite"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
-                        },
-                        {
                             "problem": "天然ゴムを乾留することによって得られる物質を何という",
                             "answer": [
                                 "イソプレン\n"
@@ -3579,6 +3580,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-22"
+                        },
+                        {
+                            "problem": "生ゴムに30%～40%の硫黄を加硫して加熱した得られる黒色のかたいプラスチック状の物質なんという",
+                            "answer": [
+                                "エボナイトebonite"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-02"
                         }
                     ]
                 },
@@ -3609,6 +3619,15 @@
                             "last_answered_date": "2025-05-10"
                         },
                         {
+                            "problem": "反応エンタルピーとは",
+                            "answer": [
+                                "反応前後のエンタルピー変化（低圧条件）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-10"
+                        },
+                        {
                             "problem": "黒鉛の燃焼熱は394kjの発熱する。このときΔHはどのように表す",
                             "answer": [
                                 "-394"
@@ -3627,22 +3646,13 @@
                             "last_answered_date": "2025-05-08"
                         },
                         {
-                            "problem": "反応エンタルピーとは",
-                            "answer": [
-                                "反応前後のエンタルピー変化（低圧条件）"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-10"
-                        },
-                        {
                             "problem": "1molの物質を単体から生成するときのΔHをなんという",
                             "answer": [
                                 "生成エンタルピー"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "反応エンタルピーは反応の経路によって変わらない。この法則をなんという",
@@ -3723,15 +3733,6 @@
                             "last_answered_date": "2025-05-11"
                         },
                         {
-                            "problem": "中和滴定の操作で出てくる、『濃度』が既にわかっている溶液のことをなんという",
-                            "answer": [
-                                "標準溶液"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
-                        },
-                        {
                             "problem": "中和滴定で濃度を知りたいものをなんという",
                             "answer": [
                                 "試料"
@@ -3739,6 +3740,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-10"
+                        },
+                        {
+                            "problem": "中和滴定の操作で出てくる、『濃度』が既にわかっている溶液のことをなんという",
+                            "answer": [
+                                "標準溶液"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-11"
                         }
                     ]
                 }
@@ -3947,7 +3957,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "What chlorophyll did plants get the fastest in their evolution?",
@@ -5079,6 +5089,15 @@
                     "name": "m",
                     "questions": [
                         {
+                            "problem": "IPLとレーザーではパルス幅はどちらが長いか",
+                            "answer": [
+                                "IPL"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
                             "problem": "椎茸の旨味の成分は？",
                             "answer": [
                                 "Guanylic acid"
@@ -5151,6 +5170,51 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "ラメラ構造は表皮、真皮、皮下組織のどこにあるか",
+                            "answer": [
+                                "表皮"
+                            ],
+                            "memo": "https://www.esthepure.com/wp-content/uploads/2019/01/chart1-1.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "ヤグレーザーの波長は？",
+                            "answer": [
+                                "1064nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "脱毛サロンで使用されているIPLの波長はおよそどれくらいか",
+                            "answer": [
+                                "700nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "脱毛器の中で最も波長の長いものは？",
+                            "answer": [
+                                "ヤグレーザー　1064nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "波長が長ければ長いほど、肌の表面もしくは肌の奥どちらまで浸透するか？",
+                            "answer": [
+                                "肌の奥"
+                            ],
+                            "memo": "https://www.biyougeka.com/content/uploads/2019/08/06153753/main__content_uploads_column_post_maincolumn_skin_machine_different_skin_machine_different_diff01_pic01.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
                         }
                     ]
                 },
@@ -7219,7 +7283,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "amphoteric substance",
@@ -8650,8 +8714,8 @@
                                 "彼は彼女の秘密を暴露すると脅して、彼女を脅迫しようとした。\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "I take it back.”",
@@ -8659,8 +8723,8 @@
                                 "前言撤回（とりけすよ）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "My parents forbade me to go out after 10 p.m",
@@ -8695,6 +8759,15 @@
                     "name": "和文英訳",
                     "questions": [
                         {
+                            "problem": "私はトイレを流した 英語にして",
+                            "answer": [
+                                "I flushed the toilet."
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-02"
+                        },
+                        {
                             "problem": "（英作文）家に帰ったら、昼飯を作る。",
                             "answer": [
                                 "when I get home, I'll make lunch."
@@ -8711,15 +8784,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-26"
-                        },
-                        {
-                            "problem": "私はトイレを流した 英語にして",
-                            "answer": [
-                                "I flushed the toilet."
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
                         }
                     ]
                 }
@@ -10026,8 +10090,8 @@
                                 "火山あり"
                             ],
                             "memo": "https://www.youtube.com/watch?v=ZfH6lTSc2tA&list=PLt4g_MlAkmOrUl1XgaV9d8a7B-IcBKstq&index=2\n8:00",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "ブナは何に分類される？",
@@ -10109,15 +10173,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-09"
-                        },
-                        {
-                            "problem": "ぶどうが栽培できる北限はどこらへん？",
-                            "answer": [
-                                "パリ盆地"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
                         },
                         {
                             "problem": "インダス川はどこの国を流れている",
@@ -11001,8 +11056,8 @@
                                 "乾燥している"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "肌の色が黒い、髪が縮れ毛で黒色等様々な特徴がある人種を何という",
@@ -11083,7 +11138,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "温帯草原の呼び名。北アメリカではなんと呼ばれる？",
@@ -11137,8 +11192,17 @@
                                 "乾燥しやすい"
                             ],
                             "memo": "上昇気流の反対と覚える",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-11"
+                        },
+                        {
+                            "problem": "アマゾン川の河口は何と一致するか？",
+                            "answer": [
+                                "赤道"
+                            ],
+                            "memo": "https://chitonitose.com/geo/img/Latin_America_terrain.webp",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
@@ -11308,7 +11372,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "中緯度高圧帯を別名でなんと呼ぶ",
@@ -11334,8 +11398,8 @@
                                 ""
                             ],
                             "memo": "https://chitonitose.com/geo/img/Anglo_America_Cfb.webp",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "日本海流（黒潮）はどこにあるか",
@@ -11388,27 +11452,8 @@
                                 "ヒマラヤ山脈"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-10"
-                        },
-                        {
-                            "problem": "スラブ系言語に分類される言語は2",
-                            "answer": [
-                                "ロシア語",
-                                "ポーランド語"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
-                        },
-                        {
-                            "problem": "スペインとフランスにまたがるバスク地方を中心に分布する孤立した言語をなんという",
-                            "answer": [
-                                "バスク語"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "ハンガリー・フィンランドは何系の言語を使用するか",
@@ -11668,8 +11713,8 @@
                                 "暖流"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "バルカン半島周辺に流れている川は",
@@ -11686,7 +11731,7 @@
                                 "セメント"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-09"
                         },
                         {
@@ -11705,7 +11750,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-10"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "砂漠ができる理由は4種類ある。答えて",
@@ -11793,8 +11838,8 @@
                                 "イスラム教"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "インドの国民の80%は何教を信仰している",
@@ -11944,8 +11989,8 @@
                                 "中国　黄河と長河の間"
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "オーストリアの左にはなにがある。",
@@ -12051,7 +12096,7 @@
                             ],
                             "memo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkGtPaCARkiQGUMgs7RlAoLAiWpHfgn8B8RsWUjnMOOp-RlMcoCKXZOnRx8YlIQHASDPZNg4_bOLVCyauWqtfS99yjiJ8EGWmtQX8SO7ku2pon20zraU4glObze4sDH507gsW5YtzSFVhn/w1200-h630-p-k-no-nu/4c1e2d7739f148f73ba648c4d2c9e2bb.jpg\n\nhttps://pbs.twimg.com/media/FwxC3ZqaAAM5qXx.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "アペニン山脈はどこにある？",
@@ -12094,8 +12139,7 @@
                             "problem": "中央アジアのカザフスタンの場所は？上と右と下には何がある？",
                             "answer": [
                                 "上→ロシア",
-                                "右→中国、モンゴル",
-                                "下→ウズベキスタン"
+                                "右→中国、モンゴル"
                             ],
                             "memo": "https://keynoters.co.jp/images/sample/kazakhstan_map.gif",
                             "is_correct": 0,
@@ -12108,7 +12152,7 @@
                             ],
                             "memo": "https://kotokurabe.com/makoto/wp-content/uploads/nature/mediterranean-sea-03.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "アタカマ砂漠の場所",
@@ -12126,7 +12170,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-IaZnyvZaxeV7ivDrmXlGRr7AlrDbUm6oQQ&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "アパラチア山脈はどこの国のどこらへんにある",
@@ -12283,8 +12327,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnxR7rTUpgIj6PVlcRUW5yLnZFbGo_AxHfw&s",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "デンマークの下には何の国がある？",
@@ -12386,6 +12430,15 @@
                             "last_answered_date": "2025-05-10"
                         },
                         {
+                            "problem": "ギアナ高地の場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://chitonitose.com/geo/img/Latin_America_terrain.webp",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
                             "problem": "カラクム砂漠はどこの国にある？",
                             "answer": [
                                 "トルクメニスタン"
@@ -12455,7 +12508,7 @@
                             ],
                             "memo": "https://satoru-world.net/wp-content/uploads/2021/05/bunrui.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "デカン高原の場所は",
@@ -12548,6 +12601,15 @@
                             "last_answered_date": "2025-05-11"
                         },
                         {
+                            "problem": "カザフスタンの下には何がある？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-11"
+                        },
+                        {
                             "problem": "カスピ海の下には何の国がある？",
                             "answer": [
                                 "下→イラン"
@@ -12628,6 +12690,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-11"
+                        },
+                        {
+                            "problem": "カザフスタンの右には何がある？",
+                            "answer": [
+                                "中国、モンゴル"
+                            ],
+                            "memo": "https://keynoters.co.jp/images/sample/kazakhstan_map.gif",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-11"
+                        },
+                        {
+                            "problem": "https://juken-geography.com/wp-content/uploads/2020/07/mountains-alps-himalaya.png ⑥の山脈がある国はどこか",
+                            "answer": [
+                                "イラン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-12"
                         }
                     ]
                 },
@@ -12694,8 +12774,8 @@
                                 "フランス語"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "ローヌ川河口近くにあるフランス有数の湾岸都市で、造船、鉄鋼、食品機械工業が盛んな都市はどこか",
@@ -12953,7 +13033,7 @@
                         {
                             "problem": "パキスタンの人口は？",
                             "answer": [
-                                "2億"
+                                "2.4億"
                             ],
                             "memo": "",
                             "is_correct": 1,
@@ -13020,8 +13100,8 @@
                                 "マオリ語"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "オランダの国の面積は大きい？小さい？",
@@ -13363,15 +13443,17 @@
                                 "プライメートシティ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
-                            "problem": "プライメートシティの例3",
+                            "problem": "プライメートシティの例5",
                             "answer": [
                                 "タイ バンコク",
                                 "韓国 ソウル",
-                                "メキシコ メキシコシティ"
+                                "メキシコ メキシコシティ",
+                                "エチオピア",
+                                "チェコ"
                             ],
                             "memo": "",
                             "is_correct": 1,
@@ -13403,6 +13485,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-29"
+                        },
+                        {
+                            "problem": "pull要因の人口移動は先進国、発展途上国のどちらでみられるか？",
+                            "answer": [
+                                "発展途上国"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "合計特殊出生率が低い国は？",
@@ -13531,6 +13622,15 @@
                             "memo": "人口一位はニューヨーク",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-15"
+                        },
+                        {
+                            "problem": "世界一位の人口の国は",
+                            "answer": [
+                                "インド"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-11"
                         }
                     ]
                 },
@@ -13579,7 +13679,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-02"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "世界の米の生産量top3",
@@ -13590,7 +13690,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "大豆の生産量top3",
@@ -13882,7 +13982,7 @@
                             ],
                             "memo": "ライ麦は耐寒性が高く、ドイツ、ポーランド、ロシアなど緯度の高い地域で主に栽培される。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "ツンドラ気候の遊牧では何をやっている",
@@ -13902,8 +14002,8 @@
                                 "地中海式農業"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "焼畑農業のメリットは",
@@ -13930,7 +14030,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "綿花の栽培条件を生育期と収穫期に分けて答えて",
@@ -13960,6 +14060,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-09"
+                        },
+                        {
+                            "problem": "ぶどうが栽培できる北限はどこらへん？",
+                            "answer": [
+                                "パリ盆地"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "米の栽培条件　年間降水量の目安は",
@@ -14232,8 +14341,8 @@
                                 "Cs"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-12"
                         },
                         {
                             "problem": "砂漠気候(BW)の条件：降水量：概ね年降水量が（A）",
@@ -14455,7 +14564,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-11"
                         },
                         {
                             "problem": "温暖湿潤気候(Cfa)の定義",
@@ -14562,7 +14671,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-11"
+                        },
+                        {
+                            "problem": "ケッペンの気候区分の砂漠気候はアルファベットでどのように表す",
+                            "answer": [
+                                "BW"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-12"
                         }
                     ]
                 },
@@ -14663,6 +14781,33 @@
                     "name": "地誌 North America",
                     "questions": [
                         {
+                            "problem": "ブラジルのスラム街、貧困街を何という",
+                            "answer": [
+                                "ファベーラ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
+                        },
+                        {
+                            "problem": "自由の女神はアメリカのどの都市にある",
+                            "answer": [
+                                "ニューヨーク"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-01"
+                        },
+                        {
+                            "problem": "ファベーラとは",
+                            "answer": [
+                                "ブラジルの貧困街のこと"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-04"
+                        },
+                        {
                             "problem": "https://gakusyu.live/wp-content/uploads/2024/11/image-2048x1421.png アメリカのこの画像の春小麦,放牧、酪農の場所をイメージして。",
                             "answer": [
                                 ""
@@ -14672,13 +14817,22 @@
                             "last_answered_date": "2025-04-19"
                         },
                         {
-                            "problem": "ブラジルのスラム街、貧困街を何という",
+                            "problem": "アメリカにおいてアジア系の人種が多いのはどこらへんか",
                             "answer": [
-                                "ファベーラ"
+                                ""
+                            ],
+                            "memo": "https://social-studies-magazine.com/wp-content/uploads/2022/01/IMG_2194-min-1536x1147.jpg",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
+                        },
+                        {
+                            "problem": "コロンビア川には（A）が建設されています。",
+                            "answer": [
+                                "ダム→水力発電"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-07"
                         },
                         {
                             "problem": "ブラジルは何発電の割合がすごい高いか",
@@ -14693,42 +14847,6 @@
                             "problem": "ブラジルでは大土地所有制のことをなんとよぶ",
                             "answer": [
                                 "ファゼンダ"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
-                        },
-                        {
-                            "problem": "アメリカにおいてアジア系の人種が多いのはどこらへんか",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "https://social-studies-magazine.com/wp-content/uploads/2022/01/IMG_2194-min-1536x1147.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
-                        },
-                        {
-                            "problem": "自由の女神はアメリカのどの都市にある",
-                            "answer": [
-                                "ニューヨーク"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-01"
-                        },
-                        {
-                            "problem": "コロンビア川には（A）が建設されています。",
-                            "answer": [
-                                "ダム→水力発電"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-07"
-                        },
-                        {
-                            "problem": "ファベーラとは",
-                            "answer": [
-                                "ブラジルの貧困街のこと"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -14763,13 +14881,13 @@
                     "name": "地誌 China",
                     "questions": [
                         {
-                            "problem": "中国のモンゴル族は何の宗教を信仰する人が多いか",
+                            "problem": "中国の経済特区の場所はどこらへん",
                             "answer": [
-                                "ラマ教（チベット仏教）"
+                                ""
                             ],
-                            "memo": "",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxAsV5WXhHJF-Tbbtmq_uqfNRfitF3EIAGpw&s",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-10"
                         },
                         {
                             "problem": "中国のシリコンバレーはどこ",
@@ -14779,15 +14897,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-09"
-                        },
-                        {
-                            "problem": "中国の経済特区の場所はどこらへん",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxAsV5WXhHJF-Tbbtmq_uqfNRfitF3EIAGpw&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-10"
                         },
                         {
                             "problem": "カシミール地方はどの国の領土なのか、インド・パキスタン・中国が争っている領土問題をなんという",
@@ -14806,12 +14915,40 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-11"
+                        },
+                        {
+                            "problem": "中国のモンゴル族は何の宗教を信仰する人が多いか",
+                            "answer": [
+                                "ラマ教（チベット仏教）"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-03"
                         }
                     ]
                 },
                 {
                     "name": "言語",
                     "questions": [
+                        {
+                            "problem": "スラブ系言語に分類される言語は2",
+                            "answer": [
+                                "ロシア語",
+                                "ポーランド語"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-09"
+                        },
+                        {
+                            "problem": "スペインとフランスにまたがるバスク地方を中心に分布する孤立した言語をなんという",
+                            "answer": [
+                                "バスク語"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-11"
+                        },
                         {
                             "problem": "ゲルマン語系の言語は？3",
                             "answer": [
