@@ -1,5 +1,11 @@
 # 将来実装予定の案
 
+サブカテゴリの他カテゴリへの取り付け
+
+現状
+other > IPL・レーザーに入っているサブカテゴリを
+skin > IPL・レーザーに変更したい。
+
 ===============
 alertの部分を
 https://zenn.dev/chot/articles/react-router7-flash-message
@@ -106,7 +112,10 @@ githubに画像をかくのうしておいて、そのurlから引っ張って�
 名前は　tag
 でsubcategory_tagみたいなテーブルを作る。
 
-->今の所必要な場面はない。
+->例えば　geography > soilで
+間帯土壌と風帯土壌で区分したい
+
+IPL・レーザーでIPL・レーザーで区分してサブカテゴリ内で問題を出題したいケースがでてくる。
 
 
 <!--  -->
