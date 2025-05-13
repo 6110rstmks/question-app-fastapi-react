@@ -3,6 +3,8 @@ import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
 import { fetchSubcategoriesWithQuestionCountByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI";
 import { fetchCategory } from "../../../api/CategoryAPI";
 import { Category } from "../../../types/Category";
+import { fetchProblem } from '../../../api/ProblemAPI'
+import { useNavigate } from "react-router";
 
 export const useCategoryPage = (categoryId: number) => {
     const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([]);
@@ -11,6 +13,9 @@ export const useCategoryPage = (categoryId: number) => {
     const [searchWord, setSearchWord] = useState<string>("");
     const [errMessage, setErrorMessage] = useState<string>("");
 
+    const navigate = useNavigate();
+
+
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchWord(e.target.value);
     }
@@ -18,6 +23,16 @@ export const useCategoryPage = (categoryId: number) => {
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
         setSubcategories((prev) => [...prev, subcategory]);
     };
+
+    const handleSetProblem = async () => {
+        const response = await fetchProblem('category', true, 7, [categoryId], [])
+        if (!response.ok) {
+            alert('出題する問題がありません。');
+            return
+        }
+        const problemData = await response.json()
+        navigate('/problem', { state: problemData });
+    }
 
     const handleAddSubcategory = async () => {
         if (!subcategoryName.trim()) {
@@ -60,6 +75,7 @@ export const useCategoryPage = (categoryId: number) => {
         setSubcategoryName,
         handleAddSubcategory,
         searchWord,
-        handleSearch
+        handleSearch,
+        handleSetProblem
     };
 };

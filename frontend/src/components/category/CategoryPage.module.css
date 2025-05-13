@@ -12,4 +12,16 @@
 .subcategory_name:hover {
     background-color: #f0fdf4;
     color: #15803d;
-  }
+}
+
+.displayIncorrectedQuestionBtn {
+    word-wrap: break-word;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 11px;
+    padding-right: 11px;
+    color: #fff;
+    background-color: #9ACD32;
+    border-radius: 100vh;
+    cursor: pointer;
+}

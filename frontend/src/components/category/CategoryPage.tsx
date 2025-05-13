@@ -15,7 +15,8 @@ const CategoryPage: React.FC = () => {
         setSubcategoryName,
         searchWord,
         handleAddSubcategory,
-        handleSearch
+        handleSearch,
+        handleSetProblem
     } = useCategoryPage(categoryId)
 
     const navigate = useNavigate()
@@ -23,6 +24,12 @@ const CategoryPage: React.FC = () => {
     return (
         <div>
             <h2>{category?.name}</h2>
+            <button 
+                className={styles.displayIncorrectedQuestionBtn}
+                onClick={handleSetProblem}
+            >
+                カテゴリから問題を出題する。
+            </button>
             <div>
                 <label className={styles.inputField}>
                     サブカテゴリー名:

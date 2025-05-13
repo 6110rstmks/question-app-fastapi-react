@@ -48,7 +48,7 @@
     word-break: break-all;
 }
 
- .displayIncorrectedQuestionBtn {
+.displayIncorrectedQuestionBtn {
     width: 122px;
     height: 88px;
     word-wrap: break-word;
@@ -56,7 +56,7 @@
     background-color: #9ACD32;
     border-radius: 100vh;
     cursor: pointer;
- }
+}
 
  .problemText {
     cursor: pointer;
