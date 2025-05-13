@@ -3767,7 +3767,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "中和滴定で濃度を知りたいものをなんという",
@@ -9888,13 +9888,13 @@
                             "last_answered_date": "2025-05-13"
                         },
                         {
-                            "problem": "波の速さの公式",
+                            "problem": "波の速さの公式　振動数を使って答えて",
                             "answer": [
                                 "v=λ/T"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "プラチナバンドが障害物を回り込んで届きやすいという特徴のはなぜか",
@@ -10394,15 +10394,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-14"
-                        },
-                        {
-                            "problem": "グレートディバイディング山脈はどこの国にある？",
-                            "answer": [
-                                "オーストラリア"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-10"
                         },
                         {
                             "problem": "温帯草原のパンパはどの国の言葉か",
@@ -11340,7 +11331,7 @@
                                 "アカシア"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-14"
                         },
                         {
@@ -11591,8 +11582,8 @@
                                 "パンパ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "北回帰線付近には亜熱帯高圧帯が分布しているため、その付近の気候は乾燥帯になりやすいにもかかわらず、インドのコルカタ付近は乾燥帯にならず、サバナ気候になっている理由",
@@ -12798,7 +12789,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "シドニーとメルボルンの位置は",
@@ -15201,6 +15192,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "グレートディバイディング山脈はどこの国にある？",
+                            "answer": [
+                                "オーストラリア"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-10"
                         },
                         {
                             "problem": "ドナウ川が流れている国2",
