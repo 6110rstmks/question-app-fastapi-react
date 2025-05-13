@@ -2396,7 +2396,7 @@
                             ],
                             "memo": "\na_1 = 1,\\quad a_{n+1} = 2a_n + 3n - 1\n\n\nhttps://examist.jp/mathematics/recurrence-formula/njisikizenkasiki/",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-14"
                         }
                     ]
                 },
@@ -2644,7 +2644,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "イオン化エネルギーはどのように例えるとわかりやすいか。化学受験テクニック塾より",
@@ -5321,7 +5321,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "医薬品や医療機器の製造販売にあたり、企業は厚生労働相に承認申請し、認められなければならない。これが認められることをなんという",
@@ -5568,7 +5568,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "フィトクロムは何か？Go",
@@ -7498,13 +7498,13 @@
                             "last_answered_date": "2025-04-06"
                         },
                         {
-                            "problem": "lava",
+                            "problem": "lava 日本語で",
                             "answer": [
                                 "溶岩"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "tavern　アクセントも",
@@ -9140,7 +9140,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "最大容量が多いのはHDD?SSD？",
@@ -9441,7 +9441,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "MIPS(million instructions per second)が高いほど、どうなるか？ヒント：MIPSの単語の意味を考えたらわかりますよ。",
@@ -9455,11 +9455,11 @@
                         {
                             "problem": "クロック周波数の単位はなんですか？",
                             "answer": [
-                                "Hz"
+                                "Hz\n周波数だから。波動分野の周波数の単位はHz"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-01"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "CPUの性能を表す評価指標の一つで、コンピュータの内部にある発振器が１秒間に発生させる信号の回数のことをなんというか？",
@@ -9884,8 +9884,8 @@
                                 "λ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "波の速さの公式　振動数を使って答えて",
@@ -10524,8 +10524,8 @@
                                 "モナドノック"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "cuestaが見られる盆地は",
@@ -11349,8 +11349,8 @@
                                 "フランクフルト空港"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "下降気流のある場所では雨が降りやすいか？乾燥しやすいか",
@@ -11367,8 +11367,8 @@
                                 "赤道"
                             ],
                             "memo": "https://chitonitose.com/geo/img/Latin_America_terrain.webp",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
@@ -11537,8 +11537,8 @@
                                 "大陸性気候→隔海度が大きくて気温の年較差が大きい気候（暖まりやすく冷めやすい）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "中緯度高圧帯を別名でなんと呼ぶ",
@@ -11692,8 +11692,8 @@
                                 "中東"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -12122,15 +12122,6 @@
                             "last_answered_date": "2025-05-13"
                         },
                         {
-                            "problem": "カスピ海の右にはなんの国がある",
-                            "answer": [
-                                "カザフスタン"
-                            ],
-                            "memo": "https://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1706/peterhermesfurian170600123/80790032-%E9%BB%92%E6%B5%B7%E3%81%A8%E3%82%AB%E3%82%B9%E3%83%94%E6%B5%B7%E5%9C%B0%E5%9F%9F%E3%81%AE%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%B3%E3%81%AE%E9%A6%96%E9%83%BD%E3%80%81%E5%9B%BD%E5%A2%83%E3%80%81%E5%B7%9D%E3%82%84%E6%B9%96%E3%81%A7%E3%80%82%E6%9D%B1%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%81%A8%E8%A5%BF%E3%82%A2%E3%82%B8%E3%82%A2%E3%81%AE%E9%96%93%E6%B0%B4%E3%81%AE%E9%81%BA%E4%BD%93%E3%80%82%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82%E8%8B%B1%E8%AA%9E%E3%81%AE%E3%83%A9%E3%83%99%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%80%82.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
-                        },
-                        {
                             "problem": "中国の深圳の近くにはなんの地域がある",
                             "answer": [
                                 "香港"
@@ -12176,8 +12167,9 @@
                             "last_answered_date": "2025-05-13"
                         },
                         {
-                            "problem": "カスピ海の右にある国は",
+                            "problem": "カスピ海の右にある国は2",
                             "answer": [
+                                "カザフスタン",
                                 "トルクメニスタン"
                             ],
                             "memo": "https://cdn.mainichi.jp/vol1/2017/06/16/20170616biz00m010018000p/8.jpg?2",
@@ -12238,7 +12230,8 @@
                         {
                             "problem": "黒海の左にはなんの国がある２",
                             "answer": [
-                                "ルーマニア、ブルガリア"
+                                "ルーマニア",
+                                "ブルガリア"
                             ],
                             "memo": "https://image.itmedia.co.jp/makoto/articles/1403/05/l_ki_jizi01.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
@@ -12510,7 +12503,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "中国の上にある国はなんですか？",
@@ -12762,7 +12755,7 @@
                             ],
                             "memo": "https://satoru-world.net/wp-content/uploads/2021/05/bunrui.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-11"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "デカン高原の場所は",
@@ -12880,6 +12873,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "アルゼンチンの場所は",
+                            "answer": [
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyGDeXCEo8UBLuH6HhLBz2qudHfo6O9c8AKQ&s"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "カスピ海の下にある国",
@@ -13825,7 +13827,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "世界の米の生産量top3",
@@ -14896,7 +14898,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-05-14"
                         }
                     ]
                 },
@@ -15015,7 +15017,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-14"
                         }
                     ]
                 },
@@ -15032,7 +15034,7 @@
                             "last_answered_date": "2025-05-10"
                         },
                         {
-                            "problem": "中国のシリコンバレーはどこ",
+                            "problem": "中国のシリコンバレーの地名を答えて、漢字で",
                             "answer": [
                                 "深圳（しんせん"
                             ],
@@ -15066,6 +15068,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-03"
+                        },
+                        {
+                            "problem": "インド・パキスタン・中国が争っている領土はどこか",
+                            "answer": [
+                                "カシミール地方"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-14"
                         }
                     ]
                 },
@@ -15629,8 +15640,8 @@
                                 "ノーリス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-14"
                         },
                         {
                             "problem": "ノーリスは二つの疾患・症状に対して唯一国内の薬事承認を得ている。答えて",
