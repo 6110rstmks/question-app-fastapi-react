@@ -1,15 +1,10 @@
 import React from 'react'
-import { Subcategory, SubcategoryWithCategoryName } from '../types/Subcategory'
+import { SubcategoryWithCategoryName } from '../types/Subcategory'
 import { Question } from '../types/Question'
+import { SolutionStatus } from '../types/SolutionStatus'
 
 import styles from './ChangeCategorySubcategoryModal.module.css'
 import useChangeCategorySubcategoryModal from './useChangeCategorySubcategoryModal'
-
-enum SolutionStatus {
-    NOT_SOLVED = 0,
-    TEMPORARY_SOLVED = 1,
-    PERMANENT_SOLVED = 2,
-}
 
 interface ChangeCategorySubcategoryProps {
     categoryId: number;
@@ -48,7 +43,7 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
             problem: "", 
             answer: [], 
             memo: "", 
-            is_correct: SolutionStatus.NOT_SOLVED,  // 修正：`false`ではなく`SolutionStatus.NOT_SOLVED`に変更
+            is_correct: SolutionStatus.Incorrect,  // 修正：`false`ではなく`SolutionStatus.NOT_SOLVED`に変更
             answer_count: 0 
         },  
         setModalIsOpen, 

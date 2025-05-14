@@ -1,7 +1,6 @@
 from __future__ import annotations
 from sqlalchemy import ForeignKey
 from sqlalchemy import Integer
-from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column
@@ -12,10 +11,7 @@ from sqlalchemy import ARRAY
 from sqlalchemy import Date
 from datetime import datetime
 from sqlalchemy.sql import func
-import enum
 from schemas.question import SolutionStatus
-
-
 
 class Base(DeclarativeBase):
     pass
@@ -28,7 +24,7 @@ class Category(Base):
     user_id = Column(
         Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False
     )
-
+    pinned_order = Column(Integer)
     user = relationship("User", back_populates="categories")
     subcategories = relationship("Subcategory", back_populates="category")
     questions = relationship("CategoryQuestion", back_populates="category")
@@ -55,9 +51,10 @@ class Question(Base):
     problem = Column(String, nullable=False)
     answer = Column(ARRAY(String), nullable=False)
     memo = Column(String)
-    # is_correct = Column(Boolean, nullable=False, default=False)
-    # is_correct = Column(Enum(SolutionStatus), nullable=False)
-    is_correct = Column(Enum(SolutionStatus), nullable=False, default=SolutionStatus.NOT_SOLVED)
+    is_correct = Column(Enum(SolutionStatus), nullable=False, default=SolutionStatus.Incorrect)
+
+    # これに変更する予定。実装難易度高いので保留
+    # solved_status = Column(Enum(SolutionStatus), nullable=False, default=SolutionStatus.Incorrect)
     answer_count = Column(Integer, nullable=False, default=0)
     last_answered_date = Column(Date, default=func.current_date())
     

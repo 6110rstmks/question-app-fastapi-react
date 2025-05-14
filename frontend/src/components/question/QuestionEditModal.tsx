@@ -2,18 +2,14 @@ import styles from './QuestionEdit.module.css'
 import React,{ ChangeEvent } from 'react'
 import { Question } from '../../types/Question'
 import { useQuestionEdit } from './hooks/useQuestionEdit'
-
+import { SolutionStatus } from '../../types/SolutionStatus'
 interface QuestionEditProps {
     setModalIsOpen: (isOpen: boolean) => void;
     question?: Question;
     setQuestion: (question: Question) => void;
 }
 
-enum SolutionStatus {
-    NOT_SOLVED = 0,
-    TEMPORARY_SOLVED = 1,
-    PERMANENT_SOLVED = 2,
-}
+
 
 const QuestionEditModal: React.FC<QuestionEditProps> = ({
     setModalIsOpen,
@@ -94,8 +90,8 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                         <label className={styles.radioLabel}>
                             <input
                                 type="radio"
-                                value={SolutionStatus.PERMANENT_SOLVED.toString()}  // ここを修正
-                                checked={isCorrect === SolutionStatus.PERMANENT_SOLVED}  // 修正
+                                value={SolutionStatus.Correct.toString()} 
+                                checked={isCorrect === SolutionStatus.Correct} 
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />
@@ -104,8 +100,8 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                         <label className={styles.radioLabel}>
                             <input
                                 type="radio"
-                                value={SolutionStatus.TEMPORARY_SOLVED.toString()}  // ここを修正
-                                checked={isCorrect === SolutionStatus.TEMPORARY_SOLVED}  // 修正
+                                value={SolutionStatus.Temporary.toString()}
+                                checked={isCorrect === SolutionStatus.Temporary}
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />
@@ -114,8 +110,8 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                         <label className={styles.radioLabel}>
                             <input
                                 type="radio"
-                                value={SolutionStatus.NOT_SOLVED.toString()}  // ここを修正
-                                checked={isCorrect === SolutionStatus.NOT_SOLVED}  // 修正
+                                value={SolutionStatus.Incorrect.toString()} 
+                                checked={isCorrect === SolutionStatus.Incorrect}
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />

@@ -1,8 +1,8 @@
 // 正解ステータスのEnum型を定義
 export enum SolutionStatus {
-    NOT_SOLVED = 0,
-    TEMPORARY_SOLVED = 1,
-    PERMANENT_SOLVED = 2,
+    Incorrect = 0,
+    Temporary = 1,
+    Correct = 2,
 }
 
 export interface Question {

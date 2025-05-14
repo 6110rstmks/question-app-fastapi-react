@@ -1,10 +1,9 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, func
 from schemas.category import CategoryCreate
-from models2 import Category, CategoryQuestion, Subcategory, SubcategoryQuestion, Question
+from models2 import Category, CategoryQuestion, Subcategory, Question
 from config import PAGE_SIZE
 from fastapi import HTTPException
-# from enum import Enum
 
 def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None, answer_word: str = None):
 
@@ -123,7 +122,7 @@ def find_all_categories_with_questions(db: Session):
         category.incorrected_answered_question_count = 0
         
         for categoryquestion in category.questions:
-            if categoryquestion.question.is_correct == False:
+            if categoryquestion.question.is_correct == 'Incorrect':
                 category.incorrected_answered_question_count += 1
                     
     return result

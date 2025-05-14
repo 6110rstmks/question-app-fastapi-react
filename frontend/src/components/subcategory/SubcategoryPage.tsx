@@ -6,6 +6,7 @@ import styles from "./SubcategoryPage.module.css";
 import { useSubcategoryPage } from './hooks/useSubcategoryPage';
 import { handleNavigateToCategoryPage, handleNavigateToQuestionPage } from '../../utils/navigate_function';
 import { BlockMath } from 'react-katex'
+import { SolutionStatus } from '../../types/SolutionStatus';
 
 const SubcategoryPage: React.FC = () => {
     const navigate = useNavigate();
@@ -13,15 +14,9 @@ const SubcategoryPage: React.FC = () => {
 
     const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>();
     const subcategoryId = Number(subcategoryIdStr)
-
     const isLatex = (text: string) => text.includes('\\')
 
 
-    enum SolutionStatus {
-        NOT_SOLVED = 0,
-        TEMPORARY_SOLVED = 1,
-        PERMANENT_SOLVED = 2,
-    }
 
     const { subcategoryName, 
         setSubcategoryName, 
@@ -34,7 +29,8 @@ const SubcategoryPage: React.FC = () => {
         setIsEditing,
         uncorrectedQuestionCnt,
         handleKeyPress,
-        handleSetProblem
+        handleSetUnsolvedProblem,
+        handleSetTemporaryProblem
     } = useSubcategoryPage(subcategoryId)
 
     return (
@@ -71,17 +67,22 @@ const SubcategoryPage: React.FC = () => {
             </button>
             <button 
                 className={styles.displayIncorrectedQuestionBtn}
-                onClick={handleSetProblem}>
+                onClick={handleSetUnsolvedProblem}>
                 このサブカテゴリから問題を出題する。
+            </button>
+            <button 
+                className={styles.displayIncorrectedQuestionBtn}
+                onClick={handleSetTemporaryProblem}
+                >temporaryの問題を出題数する
+            </button>
+            <button 
+                className={styles.displayIncorrectedQuestionBtn}
+                >incorrectの問題に絞って表示する
             </button>
             <button 
                 className={styles.createQuestionBtn}
                 onClick={() => setModalIsOpen(true)}>
                     Create Question
-            </button>
-            <button 
-                className={styles.displayIncorrectedQuestionBtn}
-                >未正解の問題に絞って表示する
             </button>
             <h2>未正当の問題の数：{uncorrectedQuestionCnt}</h2>
             <Modal
@@ -100,8 +101,8 @@ const SubcategoryPage: React.FC = () => {
                     <div 
                         className={`
                             ${styles.questionBox} ${
-                                question?.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correct : 
-                                question?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.temporary : 
+                                question?.is_correct === SolutionStatus.Correct ? styles.correct : 
+                                question?.is_correct === SolutionStatus.Temporary ? styles.temporary : 
                                 styles.incorrect
                             }`} 
                         key={question.id}>

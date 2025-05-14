@@ -9,7 +9,7 @@ import { BlockMath } from "react-katex";
 import Modal from 'react-modal'
 import QuestionEditModal from "../../question/QuestionEditModal";
 import RenderMemoWithLinks from '../../RenderMemoWithlinks';
-
+import { SolutionStatus } from "../../../types/SolutionStatus";
 interface Props {
     reviewFlg: boolean
     problem: Question
@@ -21,11 +21,6 @@ interface Props {
     onUnsolved: () => void
 }
 
-enum SolutionStatus {
-    NOT_SOLVED = 0,
-    TEMPORARY_SOLVED = 1,
-    PERMANENT_SOLVED = 2,
-}
 
 export const ProblemNormalPage: React.FC<Props> = ({
     reviewFlg,
@@ -100,14 +95,14 @@ export const ProblemNormalPage: React.FC<Props> = ({
                             >Edit</button>
                         <button
                             className={`${styles.statusButton} ${
-                                localProblem?.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correct : 
-                                localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.temporary : 
+                                localProblem?.is_correct === SolutionStatus.Correct ? styles.correct : 
+                                localProblem?.is_correct === SolutionStatus.Temporary ? styles.temporary : 
                                 styles.incorrect
                             }`}
                             onClick={handleUpdateIsCorrect}
                         >
-                            {localProblem?.is_correct === SolutionStatus.NOT_SOLVED ? 'incorrect' :
-                            localProblem?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? 'temp correct' :
+                            {localProblem?.is_correct === SolutionStatus.Incorrect ? 'incorrect' :
+                            localProblem?.is_correct === SolutionStatus.Temporary ? 'temp correct' :
                             'correct'}
                         </button>
                     </div>
@@ -124,7 +119,7 @@ export const ProblemNormalPage: React.FC<Props> = ({
                 </Modal>
                 
                 <div className={styles.questionContent}>
-                 {RenderMemoWithLinks(localProblem.problem)}
+                    {RenderMemoWithLinks(localProblem.problem)}
                 </div>
 
                 {!showAnswer ? (

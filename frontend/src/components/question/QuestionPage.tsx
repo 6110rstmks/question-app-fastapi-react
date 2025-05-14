@@ -7,12 +7,8 @@ import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
 import { useQuestionPage } from './hooks/useQuestionPage'
 import { BlockMath } from 'react-katex'
 import RenderMemoWithLinks from '../RenderMemoWithlinks';
+import { SolutionStatus } from '../../types/SolutionStatus';
 
-enum SolutionStatus {
-    NOT_SOLVED = 0,
-    TEMPORARY_SOLVED = 1,
-    PERMANENT_SOLVED = 2,
-}
 
 interface QuestionPageNavigationParams {
     categoryId: number,
@@ -99,14 +95,14 @@ const QuestionPage: React.FC = () => {
                     <div className={styles.questionIsFlg}>
                         <div
                             className={`${styles.questionIsFlgValue} ${
-                                question?.is_correct === SolutionStatus.PERMANENT_SOLVED ? styles.correct : 
-                                question?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? styles.temporary : 
+                                question?.is_correct === SolutionStatus.Correct ? styles.correct : 
+                                question?.is_correct === SolutionStatus.Temporary ? styles.temporary : 
                                 styles.incorrect
                             }`}
                             onClick={handleUpdateIsCorrect}
                         >
-                            {question?.is_correct === SolutionStatus.NOT_SOLVED ? 'incorrect' :
-                            question?.is_correct === SolutionStatus.TEMPORARY_SOLVED ? 'temp correct' :
+                            {question?.is_correct === SolutionStatus.Incorrect ? 'incorrect' :
+                            question?.is_correct === SolutionStatus.Temporary ? 'temp correct' :
                             'correct'}
                         </div>
                     </div>

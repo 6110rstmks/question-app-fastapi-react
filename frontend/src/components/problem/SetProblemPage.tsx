@@ -21,8 +21,7 @@ const SetProblemPage: React.FC = () => {
         setProblemCnt,
         selectedCategoryIds,
         subcategories,
-        incorrectedOnlyFlgChecked,
-        setIncorrectedOnlyFlgChecked,
+        setSolutionStatus,
         handleSetProblem,
         handleCheckboxChange
     } = useSetProblemPage()
@@ -59,9 +58,9 @@ const SetProblemPage: React.FC = () => {
                     <label className={styles.checkboxLabel}>
                         <input
                             type="checkbox"
-                            checked={incorrectedOnlyFlgChecked}
+                            // checked={incorrectedOnlyFlgChecked}
                             onChange={(e) => {
-                                setIncorrectedOnlyFlgChecked(e.target.checked)
+                                // setIncorrectedOnlyFlgChecked(e.target.checked)
                                 setToggleQuestionCnt((prev) => !prev)
                             }}
                         />

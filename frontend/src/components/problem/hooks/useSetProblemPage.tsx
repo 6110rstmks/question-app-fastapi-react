@@ -8,7 +8,8 @@ import { fetchQuestionCount } from '../../../api/QuestionAPI'
 import { fetchProblem } from '../../../api/ProblemAPI'
 
 const useSetProblemPage = () => {
-    const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(true);
+    // const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(true);
+    const [solutionStatus, setSolutionStatus] = useState<string>('incorrect');
     const [subcategories, setSubcategories] = useState<Subcategory[]>([])
     const [selectedType, setSelectedType] = useState<string>('random')
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([])
@@ -45,10 +46,10 @@ const useSetProblemPage = () => {
             return;
         }
 
-        const response = await fetchProblem(selectedType, incorrectedOnlyFlgChecked, problemCnt, selectedCategoryIds)
+        console.log(selectedType)
 
+        const response = await fetchProblem(selectedType, ['incorrect'], problemCnt, selectedCategoryIds, [])
         const data = await response.json();
-
         navigate('/problem', { state: data });
     }
 
@@ -72,8 +73,7 @@ const useSetProblemPage = () => {
         setProblemCnt,
         selectedCategoryIds,
         subcategories,
-        incorrectedOnlyFlgChecked,
-        setIncorrectedOnlyFlgChecked,
+        setSolutionStatus,
         handleSetProblem,
         handleCheckboxChange
     }

@@ -1,10 +1,5 @@
 import { Question, QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../types/Question';
-
-enum SolutionStatus {
-    NOT_SOLVED = 0,
-    TEMPORARY_SOLVED = 1,
-    PERMANENT_SOLVED = 2,
-}
+import { SolutionStatus } from '../types/SolutionStatus';
 
 export const fetchQuestion = async (question_id: number): Promise<Question> => {
     const url = `http://localhost:8000/questions/${question_id}`;
@@ -45,9 +40,9 @@ export const updateQuestionIsCorrect = async (question: Question): Promise<void>
 
     // is_correctを順番にサイクルさせるロジック
     const updatedStatus = 
-        question.is_correct === SolutionStatus.NOT_SOLVED ? SolutionStatus.TEMPORARY_SOLVED :
-        question.is_correct === SolutionStatus.TEMPORARY_SOLVED ? SolutionStatus.PERMANENT_SOLVED :
-        SolutionStatus.NOT_SOLVED;
+        question.is_correct === SolutionStatus.Incorrect ? SolutionStatus.Temporary :
+        question.is_correct === SolutionStatus.Temporary ? SolutionStatus.Correct :
+        SolutionStatus.Incorrect;
 
     const response = await fetch(url, {
         method: 'PUT',
@@ -65,7 +60,6 @@ export const deleteQuestion = async (question_id: number): Promise<void> => {
     const response = await fetch(`http://localhost:8000/questions/${question_id}`, {
         method: 'DELETE',
     });
-
 };
 
 export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {

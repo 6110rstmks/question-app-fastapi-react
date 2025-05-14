@@ -11,10 +11,8 @@ export const useCategoryPage = (categoryId: number) => {
     const [category, setCategory] = useState<Category>();
     const [subcategoryName, setSubcategoryName] = useState<string>("");
     const [searchWord, setSearchWord] = useState<string>("");
-    const [errMessage, setErrorMessage] = useState<string>("");
 
     const navigate = useNavigate();
-
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchWord(e.target.value);
@@ -24,8 +22,8 @@ export const useCategoryPage = (categoryId: number) => {
         setSubcategories((prev) => [...prev, subcategory]);
     };
 
-    const handleSetProblem = async () => {
-        const response = await fetchProblem('category', true, 7, [categoryId], [])
+    const handleSetUnsolvedProblem = async () => {
+        const response = await fetchProblem('category', ['incorrect'], 7, [categoryId], [])
         if (!response.ok) {
             alert('出題する問題がありません。');
             return
@@ -34,17 +32,26 @@ export const useCategoryPage = (categoryId: number) => {
         navigate('/problem', { state: problemData });
     }
 
+    const handleSetTemporaryProblem = async () => {
+        const response = await fetchProblem('category', ['temporary'], 7, [categoryId], [])
+        if (!response.ok) {
+            const data = await response.json();
+            alert(data.detail);
+        } else {
+            const problemData = await response.json()
+            navigate('/problem', { state: problemData });
+        }
+    }
+
     const handleAddSubcategory = async () => {
         if (!subcategoryName.trim()) {
             alert('サブカテゴリー名を入力してください');
             return
         }
-
         const response = await createSubcategory(subcategoryName, categoryId);
-
         if (!response.ok) {
             const data = await response.json();
-            setErrorMessage(data.detail);
+            alert(data.detail);
             return
         }
         const data = await response.json() as SubcategoryWithQuestionCount
@@ -76,6 +83,7 @@ export const useCategoryPage = (categoryId: number) => {
         handleAddSubcategory,
         searchWord,
         handleSearch,
-        handleSetProblem
+        handleSetUnsolvedProblem,
+        handleSetTemporaryProblem
     };
 };

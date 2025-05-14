@@ -8,11 +8,11 @@ from . import subcategory_question_crud as subcategory_question_cruds
 from datetime import date
 from enum import Enum
 
-class SolutionStatus(str, Enum):
-    NOT_SOLVED = "NOT_SOLVED"
-    TEMPORARY_SOLVED = "TEMPORARY_SOLVED"
-    PERMANENT_SOLVED = "PERMANENT_SOLVED"
-
+class SolutionStatus(int, Enum):
+    Incorrect = 0
+    Temporary = 1
+    Correct = 2
+    
 def find_all_questions(
     db: Session,
     search_problem_word: str = None,
@@ -27,7 +27,6 @@ def find_all_questions(
             func.array_to_string(Question.answer, ',').ilike(f"%{search_answer_word}%")
         )
         return db.execute(query).scalars().all()
-
     return db.query(Question).all()
 
 def find_all_questions_in_category(db: Session, category_id: int):
@@ -141,17 +140,11 @@ def get_question_count_by_last_answered_date(db: Session, days_array: list[str])
     return_days_count_array = {}
     
     for day in days_array:        
-        # count = db.scalar(
-        #             select(func.count()).
-        #             select_from(Question).
-        #             where(Question.last_answered_date == day).
-        #             where(Question.is_correct == False)
-        #         )
         count = db.scalar(
             select(func.count()).
             select_from(Question).
             where(Question.last_answered_date == day).
-            where(Question.is_correct == SolutionStatus.NOT_SOLVED)
+            where(Question.is_correct == SolutionStatus.Incorrect)
         )
         
         return_days_count_array[day] = int(count)
@@ -163,8 +156,7 @@ def get_question_uncorrected_count(db: Session):
     count = db.scalar(
                     select(func.count()).
                     select_from(Question).
-                    # where(Question.is_correct == False)
-                    where(Question.is_correct == SolutionStatus.NOT_SOLVED)
+                    where(Question.is_correct == SolutionStatus.Incorrect)
                 )
     
     return int(count)
@@ -175,8 +167,7 @@ def get_question_uncorrected_count_in_subcategory(db: Session, subcategory_id: i
                     select(func.count()).
                     select_from(Question).
                     join(SubcategoryQuestion).
-                    # where(Question.is_correct == False).
-                    where(Question.is_correct == SolutionStatus.NOT_SOLVED).
+                    where(Question.is_correct == SolutionStatus.Incorrect).
                     where(SubcategoryQuestion.subcategory_id == subcategory_id)
                 )
     return int(count)

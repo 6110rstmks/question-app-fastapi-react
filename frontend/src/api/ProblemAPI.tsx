@@ -1,6 +1,6 @@
 export const fetchProblem = async (
     selectedType: string,
-    incorrectedOnlyFlgChecked: boolean,
+    solvedStatus: string[],
     problemCnt: number,
     selectedCategoryIds?: number[],
     selectedSubcategoryIds?: number[]
@@ -13,7 +13,7 @@ export const fetchProblem = async (
         },
         body: JSON.stringify({ 
             type: selectedType,
-            incorrected_only_flg: incorrectedOnlyFlgChecked,
+            solved_status: solvedStatus,
             problem_cnt: problemCnt,
             category_ids: selectedCategoryIds,
             subcategory_ids: selectedSubcategoryIds

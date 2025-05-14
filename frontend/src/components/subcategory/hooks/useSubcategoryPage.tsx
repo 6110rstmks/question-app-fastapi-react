@@ -52,8 +52,18 @@ export const useSubcategoryPage = (
         }
     };
 
-    const handleSetProblem = async () => {
-        const response = await fetchProblem('subcategory', true, 7, [], [subcategoryId]);
+    const handleSetTemporaryProblem = async () => {
+        const response = await fetchProblem('subcategory', ['temporary'], 7, [], [subcategoryId]);
+        if (!response.ok) {
+            alert('出題する問題がありません。');
+            return
+        }
+        const problemData = await response.json();
+        navigate('/problem', { state: problemData });
+    }
+
+    const handleSetUnsolvedProblem = async () => {
+        const response = await fetchProblem('subcategory', ['incorrect'], 7, [], [subcategoryId]);
         if (!response.ok) {
             alert('出題する問題がありません。');
             return 
@@ -148,7 +158,8 @@ export const useSubcategoryPage = (
         setIsEditing,
         uncorrectedQuestionCnt,
         handleKeyPress,
-        handleSetProblem
+        handleSetUnsolvedProblem,
+        handleSetTemporaryProblem
     };
 }
 
