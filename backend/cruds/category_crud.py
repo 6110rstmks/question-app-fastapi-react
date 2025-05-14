@@ -127,12 +127,6 @@ def find_all_categories_with_questions(db: Session):
                     
     return result
 
-
-# class SolutionStatus(str, Enum):
-#     NOT_SOLVED = "NOT_SOLVED"
-#     TEMPORARY_SOLVED = "TEMPORARY_SOLVED"
-#     PERMANENT_SOLVED = "PERMANENT_SOLVED"
-
 # def find_all_categories_with_questions(db: Session):
 #     query1 = select(CategoryQuestion.category_id).distinct()
 #     category_ids = db.execute(query1).scalars().all()

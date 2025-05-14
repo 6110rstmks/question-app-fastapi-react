@@ -3,13 +3,13 @@
 Correct, Temporary, Incorrectの定義をしっかり定める。
 ここにさらに　OnHoldのようなタイプも追加したい。→今はよくわからないのでこの問題は解かない。
 
-onHold →問題に対する理解がないので、一旦保留にする。
+(10)onHold →問題に対する理解がないので、一旦保留にする。
 
-incorrect →とけていない。短期記憶にも入っていない。￥
+(0)incorrect →とけていない。短期記憶にも入っていない。￥
 
-temp correct→二週間立てば忘れてる。
+(1)temp correct→二週間立てば忘れてる。
 
-correct→ 2,3ヶ月立てば忘れる。
+(2)correct→ 2,3ヶ月立てば忘れる。
 
 perfect correct→一年たってもわすれてないであろう知識
 

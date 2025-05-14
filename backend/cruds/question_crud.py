@@ -6,13 +6,8 @@ from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 from datetime import date
-from enum import Enum
+from config import SolutionStatus
 
-class SolutionStatus(int, Enum):
-    Incorrect = 0
-    Temporary = 1
-    Correct = 2
-    
 def find_all_questions(
     db: Session,
     search_problem_word: str = None,

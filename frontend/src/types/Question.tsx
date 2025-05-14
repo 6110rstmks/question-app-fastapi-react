@@ -1,10 +1,4 @@
-// 正解ステータスのEnum型を定義
-export enum SolutionStatus {
-    Incorrect = 0,
-    Temporary = 1,
-    Correct = 2,
-}
-
+import { SolutionStatus } from './SolutionStatus';
 export interface Question {
     id: number;
     problem: string;

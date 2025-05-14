@@ -3,13 +3,8 @@ from pydantic import BaseModel, Field, ConfigDict
 from pydantic import BaseModel, Field
 from typing import List
 from datetime import datetime
-from enum import Enum
-    
-class SolutionStatus(int, Enum):
-    Incorrect = 0
-    Temporary = 1
-    Correct = 2
-    
+from config import SolutionStatus
+
 class QuestionCreate(BaseModel):
     problem: str = Field(min_length=2, max_length=999, examples=["列志向データベースの強みを説明せよ"])
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])

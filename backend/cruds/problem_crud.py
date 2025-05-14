@@ -4,12 +4,7 @@ from sqlalchemy import select, func
 from models2 import Question, CategoryQuestion, SubcategoryQuestion
 from sqlalchemy.sql.expression import false
 from fastapi import HTTPException
-from enum import Enum
-
-class SolutionStatus(str, Enum):
-    Incorrect = "Incorrect"
-    Temporary = "Temporary"
-    Correct = "Correct"
+from config import SolutionStatus
 
 def generate_problems(db: Session, problem_fetch: ProblemFetch):
 
