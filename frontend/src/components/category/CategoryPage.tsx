@@ -29,13 +29,13 @@ const CategoryPage: React.FC = () => {
                 className={styles.displayIncorrectedQuestionBtn}
                 onClick={handleSetUnsolvedProblem}
             >
-                未正解のカテゴリから問題を出題する。
+                未正解の問題から出題する。
             </button>
             <button 
                 className={styles.displayIncorrectedQuestionBtn}
                 onClick={handleSetTemporaryProblem}
             >
-                Temporaryのカテゴリから問題を出題する。
+                Temporaryの問題から出題する。
             </button>
             <div>
                 <label className={styles.inputField}>

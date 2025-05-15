@@ -21,7 +21,6 @@ interface Props {
     onUnsolved: () => void
 }
 
-
 export const ProblemNormalPage: React.FC<Props> = ({
     reviewFlg,
     problem,
@@ -38,9 +37,9 @@ export const ProblemNormalPage: React.FC<Props> = ({
     const isLatex = (text: string) => text.includes('\\')
 
     const handleUpdateIsCorrect = async () => {
-        await updateQuestionIsCorrect(localProblem!); // API コール
-        const updatedProblem = await fetchQuestion(localProblem.id); // データをリフレッシュ
-        setLocalProblem(updatedProblem); // 最新のデータをローカルに反映
+        await updateQuestionIsCorrect(localProblem!)
+        const updatedProblem = await fetchQuestion(localProblem.id)
+        setLocalProblem(updatedProblem)
     }
 
     useEffect(() => {
@@ -105,6 +104,20 @@ export const ProblemNormalPage: React.FC<Props> = ({
                             localProblem?.is_correct === SolutionStatus.Temporary ? 'temp correct' :
                             'correct'}
                         </button>
+                        {/* やりかけ↓ */}
+                        {/* <select
+                            className={`${styles.statusDropdown} ${
+                                localProblem?.is_correct === SolutionStatus.Correct ? styles.correct : 
+                                localProblem?.is_correct === SolutionStatus.Temporary ? styles.temporary : 
+                                styles.incorrect
+                            }`}
+                            value={localProblem?.is_correct}
+                            onChange={(e) => handleUpdateIsCorrect(Number(e.target.value) as SolutionStatus)}
+                        >
+                            <option value={SolutionStatus.Incorrect}>incorrect</option>
+                            <option value={SolutionStatus.Temporary}>temp correct</option>
+                            <option value={SolutionStatus.Correct}>correct</option>
+                        </select> */}
                     </div>
                 </div>
 
@@ -132,7 +145,6 @@ export const ProblemNormalPage: React.FC<Props> = ({
                 ) : (
                     <div className={styles.answerSection}>
                         <h3 className={styles.answerHeading}>答え</h3>
-                        {/* <div className={styles.answerContent}> */}
                         <div className={styles.answerTextBox}>
                             {localProblem.answer.length > 0 ? (
                                 localProblem?.answer.map((answer, index) => (

@@ -9,11 +9,16 @@ Correct, Temporary, Incorrectの定義をしっかり定める。
 
 (1)temp correct→二週間立てば忘れてる。
 
-(2)correct→ 2,3ヶ月立てば忘れる。
+(2)correct→ 1,2ヶ月立てば忘れる。
 
-perfect correct→一年たってもわすれてないであろう知識
+perfect correct→半年たってもわすれてないであろう知識
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+Questionpaeのsolution_statusの選択をプルダウンにする。
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select
+
+＝＝＝＝＝＝＝＝＝＝＝
 
 サブカテゴリの他カテゴリへの取り付け
 

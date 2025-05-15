@@ -16,8 +16,6 @@ const SubcategoryPage: React.FC = () => {
     const subcategoryId = Number(subcategoryIdStr)
     const isLatex = (text: string) => text.includes('\\')
 
-
-
     const { subcategoryName, 
         setSubcategoryName, 
         questions, setQuestions, 
@@ -58,6 +56,10 @@ const SubcategoryPage: React.FC = () => {
                     >{subcategoryName}</h1>
                 )}                
                 <button className={styles.deleteBtn} onClick={handleDeleteSubcategory}>Delete</button>
+                <button 
+                    className={styles.displayIncorrectedQuestionBtn}
+                    >incorrectの問題に絞って表示する
+                </button>
             </div>
             <button 
                 className={`${styles.createQuestionBtn} ${showAnswer ? styles.on : styles.off}`} 
@@ -68,16 +70,12 @@ const SubcategoryPage: React.FC = () => {
             <button 
                 className={styles.displayIncorrectedQuestionBtn}
                 onClick={handleSetUnsolvedProblem}>
-                このサブカテゴリから問題を出題する。
+                incorrectから問題を出題する。
             </button>
             <button 
                 className={styles.displayIncorrectedQuestionBtn}
                 onClick={handleSetTemporaryProblem}
                 >temporaryの問題を出題数する
-            </button>
-            <button 
-                className={styles.displayIncorrectedQuestionBtn}
-                >incorrectの問題に絞って表示する
             </button>
             <button 
                 className={styles.createQuestionBtn}

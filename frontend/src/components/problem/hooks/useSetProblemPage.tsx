@@ -46,8 +46,6 @@ const useSetProblemPage = () => {
             return;
         }
 
-        console.log(selectedType)
-
         const response = await fetchProblem(selectedType, ['incorrect'], problemCnt, selectedCategoryIds, [])
         const data = await response.json();
         navigate('/problem', { state: data });

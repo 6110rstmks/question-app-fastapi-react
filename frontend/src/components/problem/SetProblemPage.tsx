@@ -21,7 +21,6 @@ const SetProblemPage: React.FC = () => {
         setProblemCnt,
         selectedCategoryIds,
         subcategories,
-        setSolutionStatus,
         handleSetProblem,
         handleCheckboxChange
     } = useSetProblemPage()
@@ -64,7 +63,7 @@ const SetProblemPage: React.FC = () => {
                                 setToggleQuestionCnt((prev) => !prev)
                             }}
                         />
-                        <span>Include Only Incorrectly Answered Questions</span>
+                        <span>Include Only Incorrect Questions</span>
                     </label>
                 </div>
 
@@ -91,8 +90,6 @@ const SetProblemPage: React.FC = () => {
                         <span>Select by Category</span>
                     </label>
                 </div>
-
-
 
                     {selectedType === 'category' && (
                         <div className={styles.categorySection}>
