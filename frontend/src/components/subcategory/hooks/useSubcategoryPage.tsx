@@ -62,7 +62,8 @@ export const useSubcategoryPage = (
         navigate('/problem', { 
             state: {
                 problemData, 
-                from: 'subcategoryPage' 
+                from: 'subcategoryPage',
+                backToId: subcategoryId
             }
         });
     }
@@ -78,7 +79,8 @@ export const useSubcategoryPage = (
         navigate('/problem', { 
             state: {
                 problemData, 
-                from: 'subcategorypage' 
+                from: 'subcategoryPage',
+                backToId: subcategoryId
             }
         });
     }

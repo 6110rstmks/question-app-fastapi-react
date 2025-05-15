@@ -32,7 +32,7 @@ export const useCategoryPage = (categoryId: number) => {
         navigate('/problem', { 
             state: {
                 problemData, 
-                from: 'setProblemPage',
+                from: 'categoryPage',
                 backToId: categoryId
             }
         })

@@ -15,6 +15,7 @@ export const ProblemComplete: React.FC<Props> = ({
     from,
     backToId
 }) => {
+    console.log(from)
     return (
         <div className={styles.completeContainer}>
             <div className={styles.completeCard}>
@@ -46,7 +47,7 @@ export const ProblemComplete: React.FC<Props> = ({
                     <div className={styles.navigationSection}>
                         <Link to={`/category/${backToId}`} className={styles.homeLink}>
                             <span className={styles.homeLinkIcon}>↩</span>
-                            Back to Category
+                            Back to CategoryPage
                         </Link>
                     </div>
                 )}
@@ -55,7 +56,7 @@ export const ProblemComplete: React.FC<Props> = ({
                     <div className={styles.navigationSection}>
                         <Link to={`/subcategory/${backToId}`} className={styles.homeLink}>
                             <span className={styles.homeLinkIcon}>↩</span>
-                            Back to Category
+                            Back to SubcategoryPage
                         </Link>
                     </div>
                 )}
@@ -64,7 +65,7 @@ export const ProblemComplete: React.FC<Props> = ({
                 <div className={styles.navigationSection}>
                     <Link to="/set_question" className={styles.homeLink}>
                         <span className={styles.homeLinkIcon}>↩</span>
-                        Back to Original Location
+                        Back to SetProblemPage
                     </Link>
                 </div>
                 )}
