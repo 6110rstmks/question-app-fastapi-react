@@ -29,17 +29,29 @@ export const useCategoryPage = (categoryId: number) => {
             return
         }
         const problemData = await response.json()
-        navigate('/problem', { state: problemData });
+        navigate('/problem', { 
+            state: {
+                problemData, 
+                from: 'setProblemPage',
+                backToId: categoryId
+            }
+        })
     }
 
     const handleSetTemporaryProblem = async () => {
         const response = await fetchProblem('category', ['temporary'], 7, [categoryId], [])
         if (!response.ok) {
-            const data = await response.json();
-            alert(data.detail);
+            const data = await response.json()
+            alert(data.detail)
         } else {
             const problemData = await response.json()
-            navigate('/problem', { state: problemData });
+            navigate('/problem', { 
+                state: {
+                    problemData, 
+                    from: 'categoryPage',
+                    backToId: categoryId
+                }
+            })
         }
     }
 

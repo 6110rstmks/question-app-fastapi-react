@@ -47,8 +47,13 @@ const useSetProblemPage = () => {
         }
 
         const response = await fetchProblem(selectedType, ['incorrect'], problemCnt, selectedCategoryIds, [])
-        const data = await response.json();
-        navigate('/problem', { state: data });
+        const problemData = await response.json();
+        navigate('/problem', { 
+            state: {
+                problemData, 
+                from: 'setProblemPage' 
+            }
+        });    
     }
 
     useEffect(() => {

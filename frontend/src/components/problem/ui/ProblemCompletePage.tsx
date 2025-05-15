@@ -1,13 +1,20 @@
-import React from "react";
-import { Link } from "react-router";
+import React from "react"
+import { Link } from "react-router"
 import styles from "./ProblemCompletePage.module.css";
 
 interface Props {
-    unsolvedCount: number;
-    onReview: () => void;
+    unsolvedCount: number
+    onReview: () => void
+    from: string
+    backToId: number
 }
 
-export const ProblemComplete: React.FC<Props> = ({ unsolvedCount, onReview }) => {
+export const ProblemComplete: React.FC<Props> = ({
+    unsolvedCount,
+    onReview,
+    from,
+    backToId
+}) => {
     return (
         <div className={styles.completeContainer}>
             <div className={styles.completeCard}>
@@ -34,13 +41,35 @@ export const ProblemComplete: React.FC<Props> = ({ unsolvedCount, onReview }) =>
                         </div>
                     )}
                 </div>
-                
+
+                {from === "categoryPage" && (
+                    <div className={styles.navigationSection}>
+                        <Link to={`/category/${backToId}`} className={styles.homeLink}>
+                            <span className={styles.homeLinkIcon}>↩</span>
+                            Back to Category
+                        </Link>
+                    </div>
+                )}
+
+                {from === "subcategoryPage" && (
+                    <div className={styles.navigationSection}>
+                        <Link to={`/subcategory/${backToId}`} className={styles.homeLink}>
+                            <span className={styles.homeLinkIcon}>↩</span>
+                            Back to Category
+                        </Link>
+                    </div>
+                )}
+
+                {from === "setProblemPage" && (
                 <div className={styles.navigationSection}>
                     <Link to="/set_question" className={styles.homeLink}>
                         <span className={styles.homeLinkIcon}>↩</span>
-                        Back to Home
+                        Back to Original Location
                     </Link>
                 </div>
+                )}
+                
+
             </div>
         </div>
     );

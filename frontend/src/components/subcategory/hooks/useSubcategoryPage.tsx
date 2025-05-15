@@ -59,7 +59,12 @@ export const useSubcategoryPage = (
             return
         }
         const problemData = await response.json();
-        navigate('/problem', { state: problemData });
+        navigate('/problem', { 
+            state: {
+                problemData, 
+                from: 'subcategoryPage' 
+            }
+        });
     }
 
     const handleSetUnsolvedProblem = async () => {
@@ -70,7 +75,12 @@ export const useSubcategoryPage = (
         }
 
         const problemData = await response.json();
-        navigate('/problem', { state: problemData });
+        navigate('/problem', { 
+            state: {
+                problemData, 
+                from: 'subcategorypage' 
+            }
+        });
     }
 
     //「削除」と入力してクリックすることで削除が実行される。

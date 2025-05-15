@@ -19,8 +19,6 @@ export const fetchProblem = async (
             subcategory_ids: selectedSubcategoryIds
         }),
     })
-
-    // return response.json()
     return response
 }
 
