@@ -22,11 +22,14 @@ const Calendar: React.FC = () => {
     const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
 
     const handleSetProblemByDay = async (day: string) => {
-        const data = await fetchProblemByDay(day)
-        console.log(data)
-        navigate('/problem', { state: data });
+        const problemData = await fetchProblemByDay(day)
+        navigate('/problem', { 
+            state: {
+                problemData, 
+                from: 'setProblemPage',
+            }
+        })
     }
-
 
     useEffect(() => {
         const days_array = days.map(day => format(day, "yyyy-MM-dd"));
@@ -40,12 +43,12 @@ const Calendar: React.FC = () => {
     , [currentDate]);
 
     return (
-        // div
         
         <div className={styles.calendar_container}>
             <div>
                 <input type="checkbox" name="" id="" />
-                正解のみを表示する</div>
+                temporaryのみを表示する
+            </div>
         {/* ヘッダー */}
             <div className={styles.calendar_header}>
                 <button onClick={prevMonth} className={styles.nav_button}>◀</button>

@@ -52,7 +52,6 @@ export const useCategoryPage = (
         
         const { value, checked } = event.target;
         const parsedValue = JSON.parse(value);
-        // console.log(parsedValue); 
 
         const subcategoryId = parseInt(parsedValue.id, 10);
 
@@ -60,15 +59,12 @@ export const useCategoryPage = (
         const categoryId = parseInt(parsedValue.category_id, 10)
 
         if (checked) {
-            console.log(111)
             setSelectedCategoryIds((prev) => {
                 const updated = [...prev, categoryId]
-                console.log("更新直後１のselectedCategoryIds:", updated);
                 return updated
             });
 
         } else if (!checked) {
-            console.log(333)
 
             // チェックが外れた場合でかつすでに同じカテゴリのサブカテゴリにチェックが入っている場合、何もしない
             setSelectedCategoryIds((prev) => {
@@ -76,9 +72,7 @@ export const useCategoryPage = (
                 if (index === -1) return prev; // もしcategoryIdがなければそのまま返す
             
                 const updated = [...prev];
-                updated.splice(index, 1); // 最初に見つかったcategoryIdのみ削除
-            
-                console.log("更新直後３のselectedCategoryIds:", updated);
+                updated.splice(index, 1); // 最初に見つかったcategoryIdのみ削除   
                 return updated;
             });
 
@@ -117,7 +111,6 @@ export const useCategoryPage = (
     const handleClickCategoryName = async (category: Category) => {
         setSearchWord(category.name)
         const data: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(category.id);
-        // console.log(data)
         setSearchFlg(true);
         setDisplayedCategoryName(category.name);
         setSubcategoriesWithCategoryName(data)
@@ -205,7 +198,6 @@ export const useCategoryPage = (
         setModalIsOpen(false);
         
         const data = await fetchSubcategoriesWithCategoryNameByQuestionId(question!.id);
-        console.log(data)
         setSubcategoriesRelatedToQuestion(data);
     }
     return { 

@@ -7,15 +7,11 @@ import { ProblemComplete } from "./ui/ProblemCompletePage"
 
 const ProblemPage: React.FC = () => {
     const location = useLocation()
-    // const problemData = location.state as Question[]
     const { problemData, from, backToId } = location.state as {
         problemData: Question[]
         from: string
         backToId: number
     };
-    console.log(location.state)
-    console.log(problemData)
-    console.log(from)
 
     const {
         currentProblemIndex, // 現在の問題番号

@@ -37,48 +37,34 @@ const CategoryPage: React.FC = () => {
             >
                 Temporaryの問題から出題する。
             </button>
-            {/* <div>
-                <label className={styles.inputField}>
-                    サブカテゴリー名:
-                    <input 
-                    type="text" 
-                    value={subcategoryName} 
-                    onChange={(e) => setSubcategoryName(e.target.value)} 
+
+            <div className={styles.container}>
+                <div className={styles.header}>
+                    <h3 className={styles.title}>サブカテゴリーの追加</h3>
+                </div>
+                
+                <div className={styles.content}>
+                    <div className={styles.formGroup}>
+                    <label className={styles.label} htmlFor="subcategory">
+                        サブカテゴリー名
+                    </label>
+                    <input
+                        id="subcategory"
+                        type="text"
+                        value={subcategoryName}
+                        onChange={(e) => setSubcategoryName(e.target.value)}
+                        className={styles.input}
+                        placeholder="新しいサブカテゴリー名を入力"
                     />
-                </label>
-                <button 
-                    className={styles.submitBtn}
-                    onClick={handleAddSubcategory}
-                >Submit</button>
-            </div> */}
-                <div className={styles.container}>
-      <div className={styles.header}>
-        <h3 className={styles.title}>サブカテゴリーの追加</h3>
-      </div>
-      
-      <div className={styles.content}>
-        <div className={styles.formGroup}>
-          <label className={styles.label} htmlFor="subcategory">
-            サブカテゴリー名
-          </label>
-          <input
-            id="subcategory"
-            type="text"
-            value={subcategoryName}
-            onChange={(e) => setSubcategoryName(e.target.value)}
-            className={styles.input}
-            placeholder="新しいサブカテゴリー名を入力"
-          />
-        </div>
-        
-        <button
-          onClick={handleAddSubcategory}
-          className={styles.displayIncorrectedQuestionBtn}
-        >
-          追加する
-        </button>
-      </div>
-    </div>
+                    </div>
+                    <button
+                        onClick={handleAddSubcategory}
+                        className={styles.addSubcategoryBtn}
+                        >
+                        追加する
+                    </button>
+                </div>
+            </div>
 
             <div className={styles.search_section}>
                 <div className={styles.search_container}>

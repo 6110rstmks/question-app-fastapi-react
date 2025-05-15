@@ -5,8 +5,8 @@ import styles from "./ProblemCompletePage.module.css";
 interface Props {
     unsolvedCount: number
     onReview: () => void
-    from: string
-    backToId: number
+    from?: string
+    backToId?: number
 }
 
 export const ProblemComplete: React.FC<Props> = ({
@@ -15,7 +15,6 @@ export const ProblemComplete: React.FC<Props> = ({
     from,
     backToId
 }) => {
-    console.log(from)
     return (
         <div className={styles.completeContainer}>
             <div className={styles.completeCard}>
