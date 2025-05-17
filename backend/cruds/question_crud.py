@@ -63,7 +63,10 @@ def find_by_name(db: Session, name: str):
 def create(db: Session, question_create: QuestionCreate):
     try:
         question_data = question_create.model_dump(exclude={"category_id", "subcategory_id"})
-        new_question = Question(**question_data)
+        new_question = Question(
+            **question_data,
+            last_answered_date=func.current_date()
+        )
         db.add(new_question)
         db.commit()
 
@@ -98,9 +101,7 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     question = find_question_by_id(db, id)
     if question is None:
         return None
-    
-    print(question_is_correct_update.is_correct)
-    print('iiiioo')
+
     
     stmt = (
         update(Question).
