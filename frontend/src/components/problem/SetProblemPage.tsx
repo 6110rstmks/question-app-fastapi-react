@@ -42,9 +42,8 @@ const SetProblemPage: React.FC = () => {
             )}
 
             <div className={styles.problemSelector}>
-            
-                <p>The total number of Questions：<span>{questionCount}</span></p>
                 <h2>問題選択</h2>
+                <p>The total number of Questions：<span>{questionCount}</span></p>
                 <div className={styles.problemCount}>
                     <span>Number of Questions to Answer：{problemCnt}</span>
                     <div className={styles.counterButtons}>
@@ -152,7 +151,6 @@ const SetProblemPage: React.FC = () => {
                         <div>《  》は問題数</div>
                         </div>
                     )}
-
                 <button className={styles.submitButton} onClick={handleSetProblem}>Submit Questions</button>
             </div>
         </div>
