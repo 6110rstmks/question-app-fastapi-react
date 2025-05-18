@@ -6,10 +6,10 @@ import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesWithQuestionCountByCategoryId } from '../../../api/SubcategoryAPI'
 import { fetchQuestionCount } from '../../../api/QuestionAPI'
 import { fetchProblem } from '../../../api/ProblemAPI'
+import { SolutionStatus } from '../../../types/SolutionStatus';
 
 const useSetProblemPage = () => {
-    // const [incorrectedOnlyFlgChecked, setIncorrectedOnlyFlgChecked] = useState<boolean>(true);
-    const [solutionStatus, setSolutionStatus] = useState<string>('incorrect');
+    const [solutionStatusNumber, setSolutionStatusNumber] = useState<SolutionStatus>(0);
     const [subcategories, setSubcategories] = useState<Subcategory[]>([])
     const [selectedType, setSelectedType] = useState<string>('random')
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([])
@@ -19,6 +19,11 @@ const useSetProblemPage = () => {
     const [questionCount, setQuestionCount] = useState<number | null>(null)
 
     const navigate = useNavigate();
+
+    function toLowerFirst(str: string): string {
+        if (!str) return '';
+        return str.charAt(0).toLowerCase() + str.slice(1);
+    }
 
     // カテゴリのチェックボックスにチェックを入れたら
     const handleCheckboxChange = async (categoryId: number) => {
@@ -46,7 +51,8 @@ const useSetProblemPage = () => {
             return;
         }
 
-        const response = await fetchProblem(selectedType, ['incorrect'], problemCnt, selectedCategoryIds, [])
+        // const response = await fetchProblem(selectedType, ['incorrect'], problemCnt, selectedCategoryIds, [])
+        const response = await fetchProblem(selectedType, [toLowerFirst(SolutionStatus[solutionStatusNumber])], problemCnt, selectedCategoryIds, [])
         const problemData = await response.json();
         navigate('/problem', { 
             state: {
@@ -76,9 +82,10 @@ const useSetProblemPage = () => {
         setProblemCnt,
         selectedCategoryIds,
         subcategories,
-        setSolutionStatus,
         handleSetProblem,
-        handleCheckboxChange
+        handleCheckboxChange,
+        solutionStatusNumber,
+        setSolutionStatusNumber
     }
 
 }

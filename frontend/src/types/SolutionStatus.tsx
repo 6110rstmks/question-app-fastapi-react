@@ -4,5 +4,4 @@ export enum SolutionStatus {
     Temporary = 1,
     Correct = 2,
     Perfect = 3
-    
 }

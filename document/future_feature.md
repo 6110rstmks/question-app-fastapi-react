@@ -9,9 +9,15 @@ Correct, Temporary, Incorrectの定義をしっかり定める。
 
 (1)temp correct→二週間立てば忘れてる。
 
-(2)correct→ 1,2ヶ月立てば忘れる。
+(2)correct→ 2ヶ月立てば忘れる。
 
 perfect correct→半年たってもわすれてないであろう知識
+
+
+familiar(incorrect)
+recognition
+recall
+automatic
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 

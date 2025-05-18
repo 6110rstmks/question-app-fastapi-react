@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import useSetProblemPage from './hooks/useSetProblemPage';
-import styles from './SetProblemPage.module.css';
-import Calendar from '../Calendar';
+import React, { useState } from 'react'
+import useSetProblemPage from './hooks/useSetProblemPage'
+import styles from './SetProblemPage.module.css'
+import Calendar from '../Calendar'
+import { SolutionStatus } from '../../types/SolutionStatus';
 
 const SetProblemPage: React.FC = () => {
     const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false)
@@ -22,7 +23,9 @@ const SetProblemPage: React.FC = () => {
         selectedCategoryIds,
         subcategories,
         handleSetProblem,
-        handleCheckboxChange
+        handleCheckboxChange,
+        solutionStatusNumber,
+        setSolutionStatusNumber,
     } = useSetProblemPage()
 
     return (
@@ -42,7 +45,7 @@ const SetProblemPage: React.FC = () => {
             )}
 
             <div className={styles.problemSelector}>
-                <h2>問題選択</h2>
+                <h2>Select Problem</h2>
                 <p>The total number of Questions：<span>{questionCount}</span></p>
                 <div className={styles.problemCount}>
                     <span>Number of Questions to Answer：{problemCnt}</span>
@@ -56,13 +59,30 @@ const SetProblemPage: React.FC = () => {
                     <label className={styles.checkboxLabel}>
                         <input
                             type="checkbox"
-                            // checked={incorrectedOnlyFlgChecked}
+                            checked={solutionStatusNumber === SolutionStatus.Incorrect}
                             onChange={(e) => {
-                                // setIncorrectedOnlyFlgChecked(e.target.checked)
-                                setToggleQuestionCnt((prev) => !prev)
+                                setSolutionStatusNumber(
+                                    e.target.checked ? SolutionStatus.Incorrect : SolutionStatus.Correct
+                                );
+                            setToggleQuestionCnt((prev) => !prev)
                             }}
                         />
-                        <span>Include Only Incorrect Questions</span>
+                        <span>InCorrectから出題する。</span>
+                    </label>
+                </div>
+                <div className={styles.secondLabel}> 
+                    <label className={styles.checkboxLabel}>
+                        <input
+                            type="checkbox"
+                            checked={solutionStatusNumber === SolutionStatus.Incorrect}
+                            onChange={(e) => {
+                                setSolutionStatusNumber(
+                                    e.target.checked ? SolutionStatus.Incorrect : SolutionStatus.Correct
+                                );
+                            setToggleQuestionCnt((prev) => !prev)
+                            }}
+                        />
+                        <span>InCorrectから出題する。</span>
                     </label>
                 </div>
 
