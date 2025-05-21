@@ -23,6 +23,7 @@ const QuestionListPage = () => {
                         type="text"
                         className={styles.search_box}
                         onChange={handleProblemSearch}
+                        autoFocus={true}
                     />
                     <button onClick={() => handleProblemSearchClick()}>検索する</button>
                 </div>
