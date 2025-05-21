@@ -709,13 +709,13 @@
                             "last_answered_date": "2025-05-19"
                         },
                         {
-                            "problem": "フェイルオーバールーティングポリシーは、メインに障害が発生していた場合にサブにアクセスするようにルーティングするポリシーを設定するが、どのようにして障害を検知するか",
+                            "problem": "Route53のフェイルオーバールーティングポリシーは、メインに障害が発生していた場合にサブにアクセスするようにルーティングするポリシーを設定するが、どのようにして障害を検知するか",
                             "answer": [
                                 "ヘルスチェック"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "Route53のフェールオーバールーティングでアクティブ・アクティブでは障害時はどのように動作するか",
@@ -859,8 +859,8 @@
                                 "aurora"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-02-23"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "amazon auroraにはリードレプリカが存在するが、amazon RDSはリードレプリカの機能は持ち合わせているか",
@@ -1085,7 +1085,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-22"
                         }
                     ]
                 },
@@ -1373,8 +1373,8 @@
                                 "AWSのAPIやコンソールのログ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "ある会社で本社の所在地に最も近いリージョンのS3バケットでトレーニング資料を管理しており、複数の国や地域にある支社の業務端末からトレーニング資料の追加、更新を実施します。支社の社員からアップロードに時間がかかるとクレームがきています。アーキテクチャの修正は行わずS3での資料管理の高速化を実現したい。実現案を2つあげて",
@@ -1771,8 +1771,8 @@
                                 "ユーザー認証された人だけAPIを叩けるようにする"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "API gatewayで提供されている3つのタイプを答えて",
@@ -2471,13 +2471,13 @@
                     "name": "整式の剰余",
                     "questions": [
                         {
-                            "problem": "P(x) = \\textcolor{green}{(ax - b)} Q(x) + \\textcolor{red}{R}　について剰余定理と因数定理を説明",
+                            "problem": "P(x) = {(ax - b)} Q(x) + {R}　について剰余定理と因数定理を説明",
                             "answer": [
                                 "剰余定理→両編にx = \\frac{a}{b} を代入すると　P(\\frac{a}{b}) = R"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-22"
                         }
                     ]
                 }
@@ -3060,7 +3060,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-17"
+                            "last_answered_date": "2025-05-23"
                         },
                         {
                             "problem": "レーヨンの別名は",
@@ -3087,7 +3087,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-23"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "第2級アルコールを酸化すると何が生じる",
@@ -3200,8 +3200,8 @@
                                 "ああすんなり"
                             ],
                             "memo": "Al Zn Sn Pb ",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-25"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "濃硝酸の中に金属を入れて、表面に酸化被膜が生じ溶けることが出来なくなった状態を何という",
@@ -3892,8 +3892,8 @@
                                 ""
                             ],
                             "memo": "https://受験理系特化プログラム.xyz/wp-content/uploads/2016/07/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2016-07-26-22.40.10.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "中和滴定で共洗いする理由と共洗いしてはいけない理由は？",
@@ -3928,7 +3928,7 @@
                     "name": "工業的製法",
                     "questions": [
                         {
-                            "problem": "オストワルト方における4𝑁𝐻3+5𝑂2→4𝑁𝑂+6𝐻2𝑂の反応を高温下で行う理由は？",
+                            "problem": "オストワルト法における4𝑁𝐻3+5𝑂2→4𝑁𝑂+6𝐻2𝑂の反応を高温下で行う理由は？",
                             "answer": [
                                 "𝑁2+𝑂2⇄2𝑁𝑂の右は問題の反応に含まれる反応式で、これは右向きが吸熱反応である。ルシャトリエの原理より、温度が上がると、右向きに平衡がすすむから。というか右向きに反応を進めたいから"
                             ],
@@ -6118,7 +6118,7 @@
                             ],
                             "memo": "\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-15"
+                            "last_answered_date": "2025-05-22"
                         }
                     ]
                 },
@@ -6607,15 +6607,6 @@
             ]
         },
         {
-            "name": "dbt",
-            "subcategories": [
-                {
-                    "name": "snapshot",
-                    "questions": []
-                }
-            ]
-        },
-        {
             "name": "snowflake",
             "subcategories": [
                 {
@@ -6633,10 +6624,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "name": "python",
-            "subcategories": []
         },
         {
             "name": "deeplearning",
@@ -6697,10 +6684,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "name": "typescript",
-            "subcategories": []
         },
         {
             "name": "database",
@@ -6897,10 +6880,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "name": "css",
-            "subcategories": []
         },
         {
             "name": "algorithm",
@@ -8980,8 +8959,8 @@
                                 "潜在的な受益者\n受益者のかのうせいのあるもの"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "is athletic performance determined by genetics?",
@@ -10097,7 +10076,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-03"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "力 x 距離 = ?",
@@ -10161,7 +10140,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "円運動の速度は？",
@@ -10715,7 +10694,7 @@
                             ],
                             "memo": "気温の年較差を考える時の3つのポイントとごっちゃにならないように",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "気温の低減率とは",
@@ -11482,8 +11461,8 @@
                                 "クルド人"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "ブラジル海流は暖流か寒流か",
@@ -12217,8 +12196,8 @@
                                 ""
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/lake-world-map.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-21"
                         },
                         {
                             "problem": "カナダのセントローレンス川の場所は",
@@ -12325,7 +12304,7 @@
                             "answer": [
                                 "中国　黄河と長河の間"
                             ],
-                            "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png",
+                            "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png\n\n降水量が1000mmのライン",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-11"
                         },
@@ -12525,8 +12504,8 @@
                                 "下→スーダン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "コンゴ川どこにある？",
@@ -12593,7 +12572,7 @@
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "トルコの上には何がある？",
@@ -12620,7 +12599,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/c/0/soc_geo/10_0_34_2/c_soc_geo_10_0_34_2_image01.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-15"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "マラカイボ湖はどの国にある？",
@@ -12655,8 +12634,8 @@
                                 "モンゴル"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwLwdFza8B-5FdfYmCerpm3UK5gDRQL0StxA&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "サハラ砂漠の場所は？",
@@ -12830,6 +12809,15 @@
                             "last_answered_date": "2025-05-20"
                         },
                         {
+                            "problem": "上海の場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZXbBiU3Cwroj94t4ZaV2FG7ZZQ47Tq-uLjQ&s",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-21"
+                        },
+                        {
                             "problem": "カラクム砂漠はどこの国にある？",
                             "answer": [
                                 "トルクメニスタン"
@@ -12853,8 +12841,8 @@
                                 "フランス"
                             ],
                             "memo": "https://www.travel-zentech.jp/world/map/italy/image/Map_of_Italy_and_neighboring_countries.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "ラプラタ川の場所は",
@@ -13008,8 +12996,8 @@
                                 "イギリス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "スウェーデンの左にある国は",
@@ -13023,11 +13011,11 @@
                         {
                             "problem": "アルゼンチンの場所は",
                             "answer": [
-                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyGDeXCEo8UBLuH6HhLBz2qudHfo6O9c8AKQ&s"
+                                ""
                             ],
-                            "memo": "",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyGDeXCEo8UBLuH6HhLBz2qudHfo6O9c8AKQ&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "雲南省の場所は？",
@@ -13046,6 +13034,15 @@
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7-Kc1SlNxPIEAz8cTMyLqdhkbhJ48VkRUg&s",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-21"
+                        },
+                        {
+                            "problem": "しんしゃんういぐる自治区の場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://ipdefenseforum.com/wp-content/uploads/2022/02/IPDF_V46N4_Jpn_Map.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-23"
                         },
                         {
                             "problem": "カスピ海の下にある国",
@@ -13118,7 +13115,7 @@
                             ],
                             "memo": "https://www.kaijipr.or.jp/assets/img/mamejiten/nature/shizen18.png",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-21"
                         },
                         {
                             "problem": "黒海の下にはなんの国がある",
@@ -13182,7 +13179,7 @@
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-18"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "テンシャン山脈の場所は",
@@ -13223,7 +13220,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-05-23"
                         },
                         {
                             "problem": "カラジャス鉄山はどこの国か",
@@ -13303,8 +13300,8 @@
                                 "メッカ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "メッカはどこの国の州都ですか？",
@@ -13312,8 +13309,8 @@
                                 "サウジアラビア"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
@@ -13951,8 +13948,8 @@
                                 "ブラジリア"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-14"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-22"
                         }
                     ]
                 },
@@ -14000,8 +13997,8 @@
                                 "ノルウェー、アイスランド、ニュージーランド（水力強い、人口少ない）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "世界の米の生産量top3",
@@ -14058,7 +14055,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "last_answered_date": "2025-05-22"
                         }
                     ]
                 },
@@ -14172,8 +14169,8 @@
                                 "カナート"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "緑の革命のデメリットは",
@@ -14268,7 +14265,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-19"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "大麦、エン麦、ライ麦、小麦の順番をどのように覚える",
@@ -14519,8 +14516,8 @@
                                 "地下水路"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "カカオの生産量が多い国top2",
@@ -15113,7 +15110,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "貿易依存度が大きいことは何を表すか",
@@ -15155,7 +15152,7 @@
                             ],
                             "memo": "ファゼンダはブラジルでは大土地所有制のこと",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "自由の女神はアメリカのどの都市にある",
@@ -15190,8 +15187,8 @@
                                 ""
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2022/01/IMG_2194-min-1536x1147.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "コロンビア川には（A）が建設されています。",
@@ -15233,6 +15230,25 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-21"
+                        },
+                        {
+                            "problem": "新疆ウイグル　これなんとよむ",
+                            "answer": [
+                                "しんしゃんういぐる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-22"
+                        },
+                        {
+                            "problem": "ホワイ川は年降水量1,000mmの等量線になっており、これより以北は何の栽培地帯か、また以南は何の栽培地帯か",
+                            "answer": [
+                                "北→小麦",
+                                "南→米"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "中国の経済特区の場所はどこらへん",
@@ -15295,7 +15311,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-21"
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "中国のモンゴル族は何の宗教を信仰する人が多いか",
@@ -15319,6 +15335,15 @@
                             "problem": "黄河流域や東北部で盛んに栽培されているのは小麦か米のどちらか",
                             "answer": [
                                 "小麦"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-23"
+                        },
+                        {
+                            "problem": "経済特区などが設置された東部沿岸部に比べ、西部内陸部は経済発展が遅れていました。東部沿岸部との経済格差・社会格差を縮小させるために何をおこなったか",
+                            "answer": [
+                                "西部大開発"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -15370,7 +15395,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-20"
+                            "last_answered_date": "2025-05-23"
                         },
                         {
                             "problem": "ハンガリー・フィンランドは何系の言語を使用するか",
@@ -15456,8 +15481,8 @@
                                 "ドナウ川"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         },
                         {
                             "problem": "インダス川はどこの国を流れている",
@@ -15580,6 +15605,15 @@
                             "last_answered_date": "2025-05-20"
                         },
                         {
+                            "problem": "淮河（わいが）の別名は",
+                            "answer": [
+                                "ホワイ川"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-22"
+                        },
+                        {
                             "problem": "ドナウ川が流れている国3",
                             "answer": [
                                 "ドイツ",
@@ -15663,7 +15697,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-19"
+                            "last_answered_date": "2025-05-23"
                         },
                         {
                             "problem": "河川の侵食によってできたV字谷に海水が入り込んでできた入江をなんという",
@@ -16238,10 +16272,6 @@
             ]
         },
         {
-            "name": "docker",
-            "subcategories": []
-        },
-        {
             "name": "政経",
             "subcategories": [
                 {
@@ -16273,25 +16303,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-18"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "React",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": [
-                        {
-                            "problem": "フロントエンドのSSR（server side rendering）の反対は？",
-                            "answer": [
-                                "CSR"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-09"
                         }
                     ]
                 }
@@ -16520,6 +16531,25 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-20"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "frontend",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "フロントエンドのSSR（server side rendering）の反対は？",
+                            "answer": [
+                                "CSR"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-09"
                         }
                     ]
                 }
