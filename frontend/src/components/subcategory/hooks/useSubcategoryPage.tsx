@@ -6,6 +6,7 @@ import { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
 import { handleKeyDown } from '../../../utils/function';
 import { fetchProblem } from '../../../api/ProblemAPI';
+import { handleNavigateToCategoryPage } from '../../../utils/navigate_function';
 interface locationState {
     categoryId: number;
     categoryName: string;
@@ -88,25 +89,30 @@ export const useSubcategoryPage = (
     //「削除」と入力してクリックすることで削除が実行される。
     const handleDeleteSubcategory = async () => {
 
-        let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
+        let confirmation = prompt("削除を実行するには、「削除」と入力してください:")
 
         if (confirmation !== '削除') {
-            return;
+            return
         }
 
-        let confirmation2 = prompt("本当に削除しますか？削除する場合は「本当に削除」と入力してください:");
+        let confirmation2 = prompt("本当に削除しますか？削除する場合は「本当に削除」と入力してください:")
 
         if (confirmation2 !== '本当に削除') {
-            return;
+            return
         }
 
         const response = await fetch(`http://localhost:8000/subcategories/${subcategoryId}`, {
             method: 'DELETE',
         });
         if (!response.ok) {
-            prompt('Failed to delete subcategory');
+            prompt('Failed to delete subcategory')
         }
-        navigate('/');
+
+        handleNavigateToCategoryPage(
+            navigate,
+            categoryInfo
+        )
+
     }
     
     useEffect(() => {
