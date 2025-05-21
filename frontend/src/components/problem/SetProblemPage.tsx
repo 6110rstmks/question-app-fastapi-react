@@ -3,9 +3,10 @@ import useSetProblemPage from './hooks/useSetProblemPage'
 import styles from './SetProblemPage.module.css'
 import Calendar from '../Calendar'
 import { SolutionStatus } from '../../types/SolutionStatus';
+import { set } from 'date-fns';
 
 const SetProblemPage: React.FC = () => {
-    const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false)
+    // const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false)
     const [isDisplayCalendar, setIsDisplayCalendar] = useState<boolean>(false)
 
     const toggleCalendar = () => {
@@ -58,29 +59,33 @@ const SetProblemPage: React.FC = () => {
                 <div> 
                     <label className={styles.checkboxLabel}>
                         <input
-                            type="checkbox"
-                            checked={solutionStatusNumber === SolutionStatus.Incorrect}
-                            onChange={(e) => {
-                                setSolutionStatusNumber(
-                                    e.target.checked ? SolutionStatus.Incorrect : SolutionStatus.Correct
-                                );
-                            setToggleQuestionCnt((prev) => !prev)
-                            }}
+                            type="radio"
+                            checked={solutionStatusNumber === SolutionStatus.Temporary}
+                            // onChange={(e) => {
+                            //     setSolutionStatusNumber(
+                            //         e.target.checked ? SolutionStatus.Temporary : SolutionStatus.Correct
+                            //     );
+                            // setToggleQuestionCnt((prev) => !prev)
+                            // }}
+                            value={SolutionStatus.Temporary}
+                            onChange={(e) => {setSolutionStatusNumber(Number(e.target.value))}}
                         />
-                        <span>InCorrectから出題する。</span>
+                        <span>Temporaryから出題する。</span>
                     </label>
                 </div>
                 <div className={styles.secondLabel}> 
                     <label className={styles.checkboxLabel}>
                         <input
-                            type="checkbox"
+                            type="radio"
                             checked={solutionStatusNumber === SolutionStatus.Incorrect}
-                            onChange={(e) => {
-                                setSolutionStatusNumber(
-                                    e.target.checked ? SolutionStatus.Incorrect : SolutionStatus.Correct
-                                );
-                            setToggleQuestionCnt((prev) => !prev)
-                            }}
+                            // onChange={(e) => {
+                            //     setSolutionStatusNumber(
+                            //         e.target.checked ? SolutionStatus.Incorrect : SolutionStatus.Correct
+                            //     );
+                            // setToggleQuestionCnt((prev) => !prev)
+                            // }}
+                            value={SolutionStatus.Incorrect}
+                            onChange={(e) => {setSolutionStatusNumber(Number(e.target.value))}}
                         />
                         <span>InCorrectから出題する。</span>
                     </label>
@@ -125,11 +130,11 @@ const SetProblemPage: React.FC = () => {
                                     </label>
                                     <div className={styles.categoryContent}>
                                         <span>{category.name}</span> 
-                                        <span>
+                                        {/* <span>
                                             {toggleQuestionCnt 
                                                 ? `《${category.incorrected_answered_question_count}》`
                                                 : `《${category.question_count}》`}
-                                        </span>
+                                        </span> */}
                                         <div
                                             className={`${styles.subcategories} ${
                                                 showAll ? styles.showAll : ''

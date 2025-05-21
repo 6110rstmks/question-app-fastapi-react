@@ -5,11 +5,14 @@ from models2 import Question, CategoryQuestion, SubcategoryQuestion
 from sqlalchemy.sql.expression import false
 from fastapi import HTTPException
 from config import SolutionStatus
+from datetime import datetime, timedelta
 
 def generate_problems(db: Session, problem_fetch: ProblemFetch):
 
     all_status = ['incorrect', 'temporary', 'correct']
-    print(problem_fetch.solved_status)
+    
+    # 15日前の日付を計算
+    fifteen_days_ago = datetime.now() - timedelta(days=15)
 
     # 「ランダム」でかつ「全問題から出題」の場合
     if problem_fetch.type == "random" and all(status in problem_fetch.solved_status for status in all_status):
@@ -24,12 +27,29 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
             .limit(problem_fetch.problem_cnt)
         )
         
+    # 「ランダム」でかつ「temporaryのみ」の場合
+
+    elif problem_fetch.type == "random" and 'temporary' in problem_fetch.solved_status:
+        query2 = (
+            select(Question)
+            .where(
+                Question.is_correct == SolutionStatus.Temporary,
+                Question.last_answered_date < fifteen_days_ago
+            )
+            .order_by(func.random())
+            .limit(problem_fetch.problem_cnt)
+        )
+        
         
     # 「カテゴリ」でかつ「全問題から出題」の場合
     elif problem_fetch.type == "category" and all_status in problem_fetch.solved_status:
         query1 = select(CategoryQuestion.question_id).where(CategoryQuestion.category_id.in_(problem_fetch.category_ids))
         question_ids = db.execute(query1).scalars().all()
-        query2 = select(Question).where(Question.id.in_(question_ids)).limit(problem_fetch.problem_cnt)
+        query2 = (
+            select(Question)
+            .where(Question.id.in_(question_ids))
+            .limit(problem_fetch.problem_cnt)
+        )
         
     # 「カテゴリ」でかつ「未正解のみ」の場合
     elif problem_fetch.type == "category" and 'incorrect' in problem_fetch.solved_status:
