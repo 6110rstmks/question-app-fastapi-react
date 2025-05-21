@@ -51,7 +51,7 @@ const useSetProblemPage = () => {
             return;
         }
 
-        const response = await fetchProblem(selectedType, [toLowerFirst(SolutionStatus[solutionStatusNumber])], problemCnt, selectedCategoryIds, [])
+        const response = await fetchProblem(selectedType, toLowerFirst(SolutionStatus[solutionStatusNumber]), problemCnt, selectedCategoryIds, [])
         const problemData = await response.json();
         navigate('/problem', { 
             state: {

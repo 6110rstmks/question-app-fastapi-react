@@ -53,7 +53,7 @@ export const useSubcategoryPage = (
     };
 
     const handleSetTemporaryProblem = async () => {
-        const response = await fetchProblem('subcategory', ['temporary'], 7, [], [subcategoryId]);
+        const response = await fetchProblem('subcategory', 'temporary', 4, [], [subcategoryId]);
         if (!response.ok) {
             alert('出題する問題がありません。');
             return
@@ -69,7 +69,7 @@ export const useSubcategoryPage = (
     }
 
     const handleSetUnsolvedProblem = async () => {
-        const response = await fetchProblem('subcategory', ['incorrect'], 7, [], [subcategoryId]);
+        const response = await fetchProblem('subcategory', 'incorrect', 4, [], [subcategoryId]);
         if (!response.ok) {
             alert('出題する問題がありません。');
             return 

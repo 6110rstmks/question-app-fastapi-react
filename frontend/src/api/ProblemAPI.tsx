@@ -1,6 +1,6 @@
 export const fetchProblem = async (
     selectedType: string,
-    solvedStatus: string[],
+    solvedStatus: string,
     problemCnt: number,
     selectedCategoryIds?: number[],
     selectedSubcategoryIds?: number[]

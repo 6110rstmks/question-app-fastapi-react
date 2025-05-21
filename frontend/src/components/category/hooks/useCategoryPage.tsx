@@ -23,7 +23,7 @@ export const useCategoryPage = (categoryId: number) => {
     };
 
     const handleSetUnsolvedProblem = async () => {
-        const response = await fetchProblem('category', ['incorrect'], 7, [categoryId], [])
+        const response = await fetchProblem('category', 'incorrect', 4, [categoryId], [])
         if (!response.ok) {
             alert('出題する問題がありません。');
             return
@@ -39,7 +39,7 @@ export const useCategoryPage = (categoryId: number) => {
     }
 
     const handleSetTemporaryProblem = async () => {
-        const response = await fetchProblem('category', ['temporary'], 7, [categoryId], [])
+        const response = await fetchProblem('category', 'temporary', 4, [categoryId], [])
         if (!response.ok) {
             const data = await response.json()
             alert(data.detail)

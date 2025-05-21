@@ -9,89 +9,69 @@ from datetime import datetime, timedelta
 
 def generate_problems(db: Session, problem_fetch: ProblemFetch):
 
-    all_status = ['incorrect', 'temporary', 'correct']
-    
     # 15日前の日付を計算
     fifteen_days_ago = datetime.now() - timedelta(days=15)
+    # five_days_ago = datetime.now() - timedelta(days=5)
+    
+    status_enum = getattr(SolutionStatus, problem_fetch.solved_status.capitalize())
 
-    # 「ランダム」でかつ「全問題から出題」の場合
-    if problem_fetch.type == "random" and all(status in problem_fetch.solved_status for status in all_status):
-        query2 = select(Question).order_by(func.random()).limit(problem_fetch.problem_cnt)
-        
-    # 「ランダム」でかつ「未正解のみ」の場合
-    elif problem_fetch.type == "random" and 'incorrect' in problem_fetch.solved_status:
-        query2 = (
-            select(Question)
-            .where(Question.is_correct == SolutionStatus.Incorrect)
-            .order_by(func.random())
-            .limit(problem_fetch.problem_cnt)
-        )
-        
-    # 「ランダム」でかつ「temporaryのみ」の場合
-
-    elif problem_fetch.type == "random" and 'temporary' in problem_fetch.solved_status:
+    # 「ランダム」でかつ「未正解のみ」「temporaryのみ」の場合
+    if problem_fetch.type == "random":
         query2 = (
             select(Question)
             .where(
-                Question.is_correct == SolutionStatus.Temporary,
+                Question.is_correct == status_enum,
                 Question.last_answered_date < fifteen_days_ago
             )
             .order_by(func.random())
             .limit(problem_fetch.problem_cnt)
         )
         
+        results = db.execute(query2).scalars().all()
         
-    # 「カテゴリ」でかつ「全問題から出題」の場合
-    elif problem_fetch.type == "category" and all_status in problem_fetch.solved_status:
-        query1 = select(CategoryQuestion.question_id).where(CategoryQuestion.category_id.in_(problem_fetch.category_ids))
-        question_ids = db.execute(query1).scalars().all()
-        query2 = (
-            select(Question)
-            .where(Question.id.in_(question_ids))
-            .limit(problem_fetch.problem_cnt)
+        if not results:
+        # 15日前に解答した問題がなければ、すべてのIncorrect問題から取得
+            query2 = (
+                select(Question)
+                .where(
+                    Question.is_correct == status_enum,
+                )
+                .order_by(func.random())
+                .limit(problem_fetch.problem_cnt)
+            )            
+        
+    # 「カテゴリ」の場合
+    # elif problem_fetch.type == "category" and problem_fetch.solved_status == 'incorrect':
+    elif problem_fetch.type == "category":
+        query1 = (
+            select(CategoryQuestion.question_id)
+            .where(CategoryQuestion.category_id.in_(problem_fetch.category_ids))
         )
         
-    # 「カテゴリ」でかつ「未正解のみ」の場合
-    elif problem_fetch.type == "category" and 'incorrect' in problem_fetch.solved_status:
-        query1 = select(CategoryQuestion.question_id).where(CategoryQuestion.category_id.in_(problem_fetch.category_ids))
         question_ids = db.execute(query1).scalars().all()
+
         query2 = (
             select(Question)
             .where(Question.id.in_(question_ids))
-            .where(Question.is_correct == SolutionStatus.Incorrect)
+            .where(Question.is_correct == status_enum)
             .order_by(func.random())
             .limit(problem_fetch.problem_cnt)
         )
     
     # 「カテゴリ」でかつ「temporaryのみ」の場合
-    elif problem_fetch.type == "category" and 'temporary' in problem_fetch.solved_status:
-        query1 = select(CategoryQuestion.question_id).where(CategoryQuestion.category_id.in_(problem_fetch.category_ids))
-        question_ids = db.execute(query1).scalars().all()
-        query2 = (
-            select(Question)
-            .where(Question.id.in_(question_ids))
-            .where(Question.is_correct == SolutionStatus.Temporary)
-            .order_by(func.random())
-            .limit(problem_fetch.problem_cnt)
-        )
-
-    # 「サブカテゴリ」でかつ「未正解のみ」の場合
-    elif problem_fetch.type == "subcategory" and 'incorrect' in problem_fetch.solved_status:
-        query1 = (
-            select(SubcategoryQuestion.question_id)
-            .where(SubcategoryQuestion.subcategory_id.in_(problem_fetch.subcategory_ids))
-        )
-        question_ids = db.execute(query1).scalars().all()
-        query2 = (
-            select(Question)
-            .where(Question.id.in_(question_ids))
-            .where(Question.is_correct == SolutionStatus.Incorrect)
-            .order_by(func.random())
-            .limit(problem_fetch.problem_cnt)
-        )
+    # elif problem_fetch.type == "category" and problem_fetch.solved_status == 'temporary':
+    #     query1 = select(CategoryQuestion.question_id).where(CategoryQuestion.category_id.in_(problem_fetch.category_ids))
+    #     question_ids = db.execute(query1).scalars().all()
+    #     query2 = (
+    #         select(Question)
+    #         .where(Question.id.in_(question_ids))
+    #         .where(Question.is_correct == SolutionStatus.Temporary)
+    #         .order_by(func.random())
+    #         .limit(problem_fetch.problem_cnt)
+    #     )
         
     # 「サブカテゴリ」でかつ「temporaryのみ」の場合
-    elif problem_fetch.type == "subcategory" and 'temporary' in problem_fetch.solved_status:
+    elif problem_fetch.type == "subcategory" and problem_fetch.solved_status == 'temporary':
         query1 = (
             select(SubcategoryQuestion.question_id)
             .where(SubcategoryQuestion.subcategory_id.in_(problem_fetch.subcategory_ids))
@@ -106,9 +86,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
         )
     else:
         raise HTTPException(status_code=400, detail="不明なものが入力されました。")
-    
-    print(db.execute(query2).scalars().all())
-    
+        
     # クエリ結果が空の場合
     results = db.execute(query2).scalars().all()
     if not results:
@@ -117,11 +95,11 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
 
 def generate_problems_by_day(db: Session, day: str):
     query = (
-        select(Question).
-        where(Question.last_answered_date == day).
-        where(Question.is_correct == SolutionStatus.Incorrect).
-        order_by(func.random()).
-        limit(5)
+        select(Question)
+        .where(Question.last_answered_date == day)
+        .where(Question.is_correct == SolutionStatus.Incorrect)
+        .order_by(func.random())
+        .limit(5)
     )
 
     return db.execute(query).scalars().all()
