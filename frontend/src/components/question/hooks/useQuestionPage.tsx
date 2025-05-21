@@ -5,12 +5,15 @@ import { Question } from '../../../types/Question'
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from '../../../api/SubcategoryAPI'
 import { deleteQuestion, incrementAnswerCount, fetchQuestion, updateQuestionIsCorrect } from '../../../api/QuestionAPI'
 import { handleKeyDown } from '../../../utils/function'
+import { handleNavigateToSubcategoryPage } from '../../../utils/navigate_function'
+import { Category } from '../../../types/Category'
 
 export const useQuestionPage = (
     categoryId: number,
     subcategoryId: number,
     questionId: number,
-    categoryName: string
+    categoryName: string,
+    subcategoryName: string,
 ) => {
     const [question, setQuestion] = useState<Question>();
     const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([]);
@@ -24,7 +27,14 @@ export const useQuestionPage = (
             return;
         }
         await deleteQuestion(questionId); // API コール
-        navigate('/');
+
+        const categoryForNavigation: Category = { id: categoryId, name: categoryName, userId: 1 };
+
+        handleNavigateToSubcategoryPage(
+            navigate,
+            categoryForNavigation,
+            subcategoryId,
+        )
     }
 
     const handleAnswerQuestion = () => {
@@ -94,7 +104,6 @@ export const useQuestionPage = (
         handleDeleteQuestion,
         handleAnswerQuestion,
         handleUpdateIsCorrect,
-        // handleNavigateToPreviousSubcategoryPage
     };
 }
 
