@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Today = () => {
 
     const handleMTComplete = () => {
@@ -11,10 +9,10 @@ const Today = () => {
         <div>
             <div>Today M.T ：　{menu[1]}</div>
 
-            
+
             <p>これらは昼休みにおこないます。</p>
     
-            <button onClick={handleMTComplete}>M.T完了</button>
+            <button onClick={handleMTComplete}>完了</button>
         </div>
     )
 }

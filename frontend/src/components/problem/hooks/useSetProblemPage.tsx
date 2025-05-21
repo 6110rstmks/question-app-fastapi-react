@@ -46,8 +46,6 @@ const useSetProblemPage = () => {
 
     // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
     const handleSetProblem = async () => {
-        console.log(solutionStatusNumber)
-        console.log(toLowerFirst(SolutionStatus[solutionStatusNumber]))
         if (selectedType === 'category' && selectedCategoryIds.length === 0) {
             alert('Please select at least one category');
             return;
@@ -88,7 +86,5 @@ const useSetProblemPage = () => {
         solutionStatusNumber,
         setSolutionStatusNumber
     }
-
 }
-
 export default useSetProblemPage
