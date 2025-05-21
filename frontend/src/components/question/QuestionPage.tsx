@@ -57,7 +57,8 @@ const QuestionPage: React.FC = () => {
         categoryId,
         subcategoryId,
         questionId,
-        categoryName
+        categoryName,
+        subcategoryName,
     );
 
     // ページ遷移時にカテゴリ情報をローカルストレージに保存
