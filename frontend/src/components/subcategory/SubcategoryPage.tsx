@@ -61,27 +61,43 @@ const SubcategoryPage: React.FC = () => {
                     >incorrectの問題に絞って表示する
                 </button>
             </div>
-            <button 
-                className={`${styles.createQuestionBtn} ${showAnswer ? styles.on : styles.off}`} 
-                onClick={() => setShowAnswer((prev) => !prev)}
-            >
-                {showAnswer ? "答えを一括非表示" : "答えを一括表示"}
-            </button>
-            <button 
-                className={styles.displayIncorrectedQuestionBtn}
-                onClick={handleSetUnsolvedProblem}>
-                incorrectから問題を出題する。
-            </button>
-            <button 
-                className={styles.displayIncorrectedQuestionBtn}
-                onClick={handleSetTemporaryProblem}
-                >temporaryの問題を出題数する
-            </button>
-            <button 
-                className={styles.createQuestionBtn}
-                onClick={() => setModalIsOpen(true)}>
-                    Create Question
-            </button>
+            <div className={styles.btnContainer}>
+                <div>
+                    <button 
+                        className={`${styles.createQuestionBtn} ${showAnswer ? styles.on : styles.off}`} 
+                        onClick={() => setShowAnswer((prev) => !prev)}
+                    >
+                        {showAnswer ? "答えを一括非表示" : "答えを一括表示"}
+                    </button>
+                    <button 
+                        className={styles.displayIncorrectedQuestionBtn}
+                        onClick={handleSetUnsolvedProblem}>
+                        incorrectから問題を出題する。
+                    </button>
+                    <button 
+                        className={styles.displayIncorrectedQuestionBtn}
+                        onClick={handleSetTemporaryProblem}
+                        >temporaryの問題を出題数する
+                    </button>
+                    <button 
+                        className={styles.createQuestionBtn}
+                        onClick={() => setModalIsOpen(true)}>
+                            Create Question
+                    </button>
+                </div>
+                <div>
+                    <button
+                        className={styles.changeCategoryBtn}
+                        // onClick={()}
+                    >
+                            カテゴリを付け替える。
+                    </button>
+                </div>
+            </div>
+
+            <div>
+
+            </div>
             <h2>未正当の問題の数：{uncorrectedQuestionCnt}</h2>
             <Modal
                 isOpen={modalIsOpen}

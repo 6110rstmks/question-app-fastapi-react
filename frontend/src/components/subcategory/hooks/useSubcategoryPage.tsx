@@ -86,6 +86,8 @@ export const useSubcategoryPage = (
         });
     }
 
+    // const 
+
     //「削除」と入力してクリックすることで削除が実行される。
     const handleDeleteSubcategory = async () => {
 

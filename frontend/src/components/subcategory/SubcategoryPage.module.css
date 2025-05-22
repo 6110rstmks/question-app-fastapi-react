@@ -15,6 +15,12 @@
     cursor: pointer;
 }
 
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
 .createQuestionBtn {
     width: 88px;
     height: 88px;
