@@ -12,7 +12,9 @@ export const fetchQuestion = async (question_id: number): Promise<Question> => {
     return await response.json();
 }
 
-export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord = async (searchProblemWord: string): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
+export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord = async (
+    searchProblemWord: string
+): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
     const url = `http://localhost:8000/questions/?searchProblemWord=${searchProblemWord}`;
     const response = await fetch(url, {
         method: 'GET',
@@ -23,7 +25,10 @@ export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProble
     return await response.json();
 }
 
-export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord = async (searchAnswerWord: string): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
+// 
+export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord = async (
+    searchAnswerWord: string
+): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
     const url = `http://localhost:8000/questions/?searchAnswerWord=${searchAnswerWord}`;
     const response = await fetch(url, {
         method: 'GET',
@@ -62,6 +67,7 @@ export const deleteQuestion = async (question_id: number): Promise<void> => {
     });
 };
 
+// 特定のサブカテゴリに紐づくQuestionを取得するAPI
 export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {
     const url = `http://localhost:8000/questions/subcategory_id/${subcategory_id}`
     const response = await fetch(url, {
@@ -97,7 +103,9 @@ export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
     return await response.json();
 };
 
-export const fetchUncorrectedQuestionCountBySubcategoryId = async (subcategory_id: number): Promise<number> => {
+export const fetchUncorrectedQuestionCountBySubcategoryId = async (
+    subcategory_id: number
+): Promise<number> => {
     const url = `http://localhost:8000/questions/count/uncorrected/subcategory_id/${subcategory_id}`;
     const response = await fetch(url, {
         method: 'GET',
@@ -108,7 +116,8 @@ export const fetchUncorrectedQuestionCountBySubcategoryId = async (subcategory_i
     return await response.json();
 }
 
-export const fetchQuestionCountsByLastAnsweredDate = async (
+// 日付ごとの問題数を取得するAPI
+export const fetchQuestionsCountsByLastAnsweredDate = async (
     days_array: string[]
 ): Promise<Record<string, number>> => {
     const url = 'http://localhost:8000/questions/count/by_last_answered_date';
@@ -133,7 +142,9 @@ export const fetchQuestionCountsByLastAnsweredDate = async (
 };
 
 // Questionのanswer_countをインクリメントするAPI
-export const incrementAnswerCount = async (question_id: number): Promise<void> => {
+export const incrementAnswerCount = async (
+    question_id: number
+): Promise<void> => {
     const url = `http://localhost:8000/questions/increment_answer_count/${question_id}`;
     const response = await fetch(url, {
         method: 'PUT',

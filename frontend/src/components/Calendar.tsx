@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, subMonths, eachDayOfInterval } from "date-fns";
 import styles from "./Calendar.module.css";
-import { fetchQuestionCountsByLastAnsweredDate } from "../api/QuestionAPI";
+import { fetchQuestionsCountsByLastAnsweredDate } from "../api/QuestionAPI";
 import { fetchProblemByDay } from "../api/ProblemAPI";
 import { useNavigate } from 'react-router';
 
@@ -35,7 +35,7 @@ const Calendar: React.FC = () => {
         const days_array = days.map(day => format(day, "yyyy-MM-dd"));
         // days_arrayをAPIに送信して、それに紐づくQuestionを取得する
         const fetchCounts = async () => {
-            const data: Record<string, number> = await fetchQuestionCountsByLastAnsweredDate(days_array);
+            const data: Record<string, number> = await fetchQuestionsCountsByLastAnsweredDate(days_array);
             setQuestionCounts(data);
         };
         fetchCounts();
