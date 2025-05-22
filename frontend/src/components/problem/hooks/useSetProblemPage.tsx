@@ -14,7 +14,7 @@ const useSetProblemPage = () => {
     const [selectedType, setSelectedType] = useState<string>('random')
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([])
     const [categories, setCategories] = useState<CategoryWithQuestionCount[]>([])
-    const [problemCnt, setProblemCnt] = useState<number>(5)
+    const [problemCount, setProblemCount] = useState<number>(5)
     const [showAll, setShowAll] = useState<boolean>(false)
     const [questionCount, setQuestionCount] = useState<number | null>(null)
 
@@ -51,7 +51,7 @@ const useSetProblemPage = () => {
             return;
         }
 
-        const response = await fetchProblem(selectedType, toLowerFirst(SolutionStatus[solutionStatusNumber]), problemCnt, selectedCategoryIds, [])
+        const response = await fetchProblem(selectedType, toLowerFirst(SolutionStatus[solutionStatusNumber]), problemCount, selectedCategoryIds, [])
         const problemData = await response.json();
         navigate('/problem', { 
             state: {
@@ -66,8 +66,8 @@ const useSetProblemPage = () => {
             const response = await fetchAllCategoriesWithQuestions();
             setCategories(response);
 
-            const questionCnt = await fetchQuestionCount()
-            setQuestionCount(questionCnt)
+            const questionCount = await fetchQuestionCount()
+            setQuestionCount(questionCount)
         })()
     }, [])
 
@@ -77,8 +77,8 @@ const useSetProblemPage = () => {
         showAll,
         selectedType,
         setSelectedType,
-        problemCnt,
-        setProblemCnt,
+        problemCount,
+        setProblemCount,
         selectedCategoryIds,
         subcategories,
         handleSetProblem,

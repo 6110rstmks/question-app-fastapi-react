@@ -6,7 +6,7 @@ import { SolutionStatus } from '../../types/SolutionStatus';
 import { set } from 'date-fns';
 
 const SetProblemPage: React.FC = () => {
-    // const [toggleQuestionCnt, setToggleQuestionCnt] = useState<boolean>(false)
+    // const [toggleQuestionCount, setToggleQuestionCount] = useState<boolean>(false)
     const [isDisplayCalendar, setIsDisplayCalendar] = useState<boolean>(false)
 
     const toggleCalendar = () => {
@@ -19,8 +19,8 @@ const SetProblemPage: React.FC = () => {
         showAll,
         selectedType,
         setSelectedType,
-        problemCnt,
-        setProblemCnt,
+        problemCount,
+        setProblemCount,
         selectedCategoryIds,
         subcategories,
         handleSetProblem,
@@ -49,10 +49,10 @@ const SetProblemPage: React.FC = () => {
                 <h2>Select Problem</h2>
                 <p>The total number of Questions：<span>{questionCount}</span></p>
                 <div className={styles.problemCount}>
-                    <span>Number of Questions to Answer：{problemCnt}</span>
+                    <span>Number of Questions to Answer：{problemCount}</span>
                     <div className={styles.counterButtons}>
-                    <button onClick={() => setProblemCnt(prev => Math.max(1, prev - 1))}>-</button>
-                    <button onClick={() => setProblemCnt(prev => prev + 1)}>+</button>
+                    <button onClick={() => setProblemCount(prev => Math.max(1, prev - 1))}>-</button>
+                    <button onClick={() => setProblemCount(prev => prev + 1)}>+</button>
                     </div>
                 </div>
 
@@ -65,7 +65,7 @@ const SetProblemPage: React.FC = () => {
                             //     setSolutionStatusNumber(
                             //         e.target.checked ? SolutionStatus.Temporary : SolutionStatus.Correct
                             //     );
-                            // setToggleQuestionCnt((prev) => !prev)
+                            // setToggleQuestionCount((prev) => !prev)
                             // }}
                             value={SolutionStatus.Temporary}
                             onChange={(e) => {setSolutionStatusNumber(Number(e.target.value))}}
@@ -82,7 +82,7 @@ const SetProblemPage: React.FC = () => {
                             //     setSolutionStatusNumber(
                             //         e.target.checked ? SolutionStatus.Incorrect : SolutionStatus.Correct
                             //     );
-                            // setToggleQuestionCnt((prev) => !prev)
+                            // setToggleQuestionCount((prev) => !prev)
                             // }}
                             value={SolutionStatus.Incorrect}
                             onChange={(e) => {setSolutionStatusNumber(Number(e.target.value))}}
@@ -131,7 +131,7 @@ const SetProblemPage: React.FC = () => {
                                     <div className={styles.categoryContent}>
                                         <span>{category.name}</span> 
                                         {/* <span>
-                                            {toggleQuestionCnt 
+                                            {toggleQuestionCount 
                                                 ? `《${category.incorrected_answered_question_count}》`
                                                 : `《${category.question_count}》`}
                                         </span> */}

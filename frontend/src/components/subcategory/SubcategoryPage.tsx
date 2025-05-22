@@ -25,7 +25,7 @@ const SubcategoryPage: React.FC = () => {
         setShowAnswer,
         isEditing,
         setIsEditing,
-        uncorrectedQuestionCnt,
+        uncorrectedQuestionCount,
         handleKeyPress,
         handleSetUnsolvedProblem,
         handleSetTemporaryProblem
@@ -98,7 +98,7 @@ const SubcategoryPage: React.FC = () => {
             <div>
 
             </div>
-            <h2>未正当の問題の数：{uncorrectedQuestionCnt}</h2>
+            <h2>未正当の問題の数：{uncorrectedQuestionCount}</h2>
             <Modal
                 isOpen={modalIsOpen}
                 contentLabel="Example Modal"

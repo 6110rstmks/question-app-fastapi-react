@@ -24,7 +24,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
                 Question.last_answered_date < fifteen_days_ago
             )
             .order_by(func.random())
-            .limit(problem_fetch.problem_cnt)
+            .limit(problem_fetch.problem_count)
         )
         
         results = db.execute(query2).scalars().all()
@@ -37,7 +37,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
                     Question.is_correct == status_enum,
                 )
                 .order_by(func.random())
-                .limit(problem_fetch.problem_cnt)
+                .limit(problem_fetch.problem_count)
             )            
         
     # 「カテゴリ」の場合
@@ -55,7 +55,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
             .where(Question.id.in_(question_ids))
             .where(Question.is_correct == status_enum)
             .order_by(func.random())
-            .limit(problem_fetch.problem_cnt)
+            .limit(problem_fetch.problem_count)
         )
     
     # 「カテゴリ」でかつ「temporaryのみ」の場合
@@ -67,7 +67,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
     #         .where(Question.id.in_(question_ids))
     #         .where(Question.is_correct == SolutionStatus.Temporary)
     #         .order_by(func.random())
-    #         .limit(problem_fetch.problem_cnt)
+    #         .limit(problem_fetch.problem_count)
     #     )
         
     # 「サブカテゴリ」でかつ「temporaryのみ」の場合
@@ -82,7 +82,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
             .where(Question.id.in_(question_ids))
             .where(Question.is_correct == SolutionStatus.Temporary)
             .order_by(func.random())
-            .limit(problem_fetch.problem_cnt)
+            .limit(problem_fetch.problem_count)
         )
     else:
         raise HTTPException(status_code=400, detail="不明なものが入力されました。")

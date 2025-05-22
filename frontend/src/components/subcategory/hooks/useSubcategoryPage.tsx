@@ -25,7 +25,7 @@ export const useSubcategoryPage = (
 ) => {
     const [subcategoryName, setSubcategoryName] = useState<string>('');
     const [questions, setQuestions] = useState<Question[]>([]);
-    const [uncorrectedQuestionCnt, setUncorrectedQuestionCnt] = useState<number | null>(null);
+    const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null);
     const location = useLocation()
     const navigate = useNavigate();
 
@@ -152,8 +152,8 @@ export const useSubcategoryPage = (
             const subcategory_data = await fetchSubcategory(subcategoryId);
             setSubcategoryName(subcategory_data.name)
 
-            const uncorrectedQuestionCnt = await fetchUncorrectedQuestionCountBySubcategoryId(subcategoryId);
-            setUncorrectedQuestionCnt(uncorrectedQuestionCnt);
+            const uncorrectedQuestionCount = await fetchUncorrectedQuestionCountBySubcategoryId(subcategoryId);
+            setUncorrectedQuestionCount(uncorrectedQuestionCount);
         })();
 
         // これなくてもいい気がする。
@@ -176,7 +176,7 @@ export const useSubcategoryPage = (
         setShowAnswer,
         isEditing,
         setIsEditing,
-        uncorrectedQuestionCnt,
+        uncorrectedQuestionCount,
         handleKeyPress,
         handleSetUnsolvedProblem,
         handleSetTemporaryProblem

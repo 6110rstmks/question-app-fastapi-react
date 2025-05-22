@@ -48,6 +48,8 @@ fetchCategory, fetchSubcategory
 
 ex)firstDispTime
 
+## 変数、関数名の命名規則
+countはcntと略さず、countとする。
 
 
 

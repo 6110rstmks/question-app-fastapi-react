@@ -1,7 +1,7 @@
 export const fetchProblem = async (
     selectedType: string,
     solvedStatus: string,
-    problemCnt: number,
+    problemCount: number,
     selectedCategoryIds?: number[],
     selectedSubcategoryIds?: number[]
 ) => {
@@ -14,7 +14,7 @@ export const fetchProblem = async (
         body: JSON.stringify({ 
             type: selectedType,
             solved_status: solvedStatus,
-            problem_cnt: problemCnt,
+            problem_count: problemCount,
             category_ids: selectedCategoryIds,
             subcategory_ids: selectedSubcategoryIds
         }),

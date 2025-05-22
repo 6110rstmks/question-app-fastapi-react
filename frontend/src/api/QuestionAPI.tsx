@@ -85,6 +85,7 @@ export const fetchQuestionCount = async (): Promise<number> => {
     return await response.json();
 };
 
+// すべての不正解のQuestionの数を取得するAPI
 export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
     const url = 'http://localhost:8000/questions/count/uncorrected';
     const response = await fetch(url, {
@@ -131,7 +132,7 @@ export const fetchQuestionCountsByLastAnsweredDate = async (
     return data;
 };
 
-// Questionのanswer_cntをインクリメントするAPI
+// Questionのanswer_countをインクリメントするAPI
 export const incrementAnswerCount = async (question_id: number): Promise<void> => {
     const url = `http://localhost:8000/questions/increment_answer_count/${question_id}`;
     const response = await fetch(url, {
