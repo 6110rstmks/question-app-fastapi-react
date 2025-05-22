@@ -46,6 +46,8 @@ fetchCategory, fetchSubcategory
 
 ローワーキャメルケースで統一
 
+ex)firstDispTime
+
 
 
 

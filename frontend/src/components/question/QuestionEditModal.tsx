@@ -129,11 +129,16 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                 </div>
 
                 <div className={styles.footer}>
-                    {/* <button onClick={() => setModalIsOpen(false)} className={`${styles.secondaryButton} ${styles.closeButton}`}> */}
-                    <button onClick={handleCloseModal} className={`${styles.secondaryButton} ${styles.closeButton}`}>
+                    <button 
+                        onClick={handleCloseModal} 
+                        className={`${styles.secondaryButton} ${styles.closeButton}`}
+                    >
                         Close
                     </button>      
-                    <button onClick={updateQuestion} className={styles.primaryButton}>
+                    <button 
+                        onClick={updateQuestion} 
+                        className={styles.primaryButton}
+                    >
                         Save
                     </button>
                 </div>

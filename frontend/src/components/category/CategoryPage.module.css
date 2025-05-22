@@ -1,41 +1,38 @@
-
-
 .displayIncorrectedQuestionBtn {
-    word-wrap: break-word;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 11px;
-    padding-right: 11px;
-    color: #fff;
-    background-color: #9ACD32;
-    border-radius: 100vh;
-    cursor: pointer;
+  word-wrap: break-word;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 11px;
+  padding-right: 11px;
+  color: #fff;
+  background-color: #9ACD32;
+  border-radius: 100vh;
+  cursor: pointer;
 }
 
 .container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
   
-  .header {
-    padding: 1rem 1.5rem;
-    /* background: linear-gradient(to right, #2dd4bf, #22c55e); */
-    background-color: #055950;
+.header {
+  padding: 1rem 1.5rem;
+  background-color: #055950;
 
-  }
+}
   
-  .title {
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: white;
-    margin: 0;
-  }
-  
+.title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+
   .content {
     padding-left: 2rem;
     padding-top: 2.5em;
@@ -55,23 +52,23 @@
     margin-bottom: 0.5rem;
   }
   
-  .input {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    color: #1f2937;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #1f2937;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
   
-  .input:focus {
-    outline: none;
-    border-color: #2dd4bf;
-    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
-  }
+.input:focus {
+  outline: none;
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
   
-.subcategory_name {
+.subcategoryName {
     padding: 0.75rem 1rem;
     align-items: center;
     color: #374151;
@@ -81,16 +78,14 @@
     margin-bottom: 0.5rem;
 }
   
-.subcategory_name:hover {
+.subcategoryName:hover {
     background-color: #f0fdf4;
     color: #15803d;
 }
 
-  
-
-  .displayIncorrectedQuestionBtn:hover {
-    background-color: #8bb92d;
-  }
+.displayIncorrectedQuestionBtn:hover {
+  background-color: #8bb92d;
+}
 
 .addSubcategoryBtn {
     width: 100%;                           /* w-full */

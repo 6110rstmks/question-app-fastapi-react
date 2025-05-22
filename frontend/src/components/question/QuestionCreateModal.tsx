@@ -97,7 +97,11 @@ const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
                         </button>
                     </div>   
                     <div>                        
-                        <button onClick={() => setModalIsOpen(false)}>Close</button>
+                        <button 
+                            onClick={() => setModalIsOpen(false)}
+                        >
+                            Close
+                        </button>
                     </div> 
                 </div>        
             </div>

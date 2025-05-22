@@ -101,7 +101,11 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
                             </div>
                         ))}
                     </div>
-                    <button onClick={handleChangeBelongingToSubcategory}>Change</button>
+                    <button 
+                        onClick={handleChangeBelongingToSubcategory}
+                    >
+                        Change
+                    </button>
             </div>
                     
         </div>

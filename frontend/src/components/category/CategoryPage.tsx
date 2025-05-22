@@ -66,11 +66,11 @@ const CategoryPage: React.FC = () => {
                 </div>
             </div>
 
-            <div className={styles.search_section}>
-                <div className={styles.search_container}>
+            <div className={styles.searchSection}>
+                <div className={styles.searchContainer}>
                     <input
                     type="text"
-                    className={styles.search_box}
+                    className={styles.searchBox}
                     value={searchWord}
                     onChange={handleSearch}
                     placeholder="Search"
@@ -80,7 +80,7 @@ const CategoryPage: React.FC = () => {
             </div>
             <div>        
                 {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
-                    <div className={styles.subcategory_name} 
+                    <div className={styles.subcategoryName} 
                         key={subcategory.id} 
                         onClick={() => category && handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}>
                         ・{subcategory.name}
