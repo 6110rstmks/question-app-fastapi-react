@@ -12,6 +12,7 @@ export const fetchQuestion = async (question_id: number): Promise<Question> => {
     return await response.json();
 }
 
+// 問題文の一部からカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
 export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord = async (
     searchProblemWord: string
 ): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
@@ -25,7 +26,7 @@ export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProble
     return await response.json();
 }
 
-// 
+// 解答の一部からカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
 export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord = async (
     searchAnswerWord: string
 ): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
