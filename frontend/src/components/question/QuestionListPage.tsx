@@ -3,6 +3,7 @@ import styles from './QuestionListPage.module.css'
 import { handleNavigateToQuestionPage } from "../../utils/navigate_function"
 import { useNavigate } from "react-router"
 import { useQuestionListPage } from "./hooks/useQuestionListPage"
+import { SolutionStatus } from '../../types/SolutionStatus'
 
 const QuestionListPage = () => {
     const navigate = useNavigate();
@@ -43,9 +44,11 @@ const QuestionListPage = () => {
                     {questions.map((question) => (
                         <div key={question.id} 
                             className={`
-                                ${styles.questionBox}
-                                ${question.is_correct ? styles.correct : styles.incorrect}
-                            `} 
+                                ${styles.questionBox} ${
+                                question?.is_correct === SolutionStatus.Correct ? styles.correct : 
+                                question?.is_correct === SolutionStatus.Temporary ? styles.temporary : 
+                                styles.incorrect
+                            }`} 
                             onClick={() => handleNavigateToQuestionPage(
                                 navigate,
                                 question.id,
@@ -53,11 +56,11 @@ const QuestionListPage = () => {
                                 question.category_name,
                                 question.subcategoryId)}>
                             <div>
-                                <div>問題：</div>
+                                <div>Problem：</div>
                                 {question.problem}
                             </div>
                             <div>
-                                <div>解答：</div>
+                                <div>Answer：</div>
                                 {question?.answer.map((answer, index) => (
                                     <div key={index}>
                                         {answer.split('\n').map((line, i) => (
@@ -74,8 +77,6 @@ const QuestionListPage = () => {
                 </div>
             </div>
         </div>
-
-
     );
 }
 
