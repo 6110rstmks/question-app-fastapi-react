@@ -91,7 +91,7 @@ export const useQuestionEdit = (
         if (
             event.metaKey && // macOSでcommandキーまたはCapsLockキーを表す
             event.key === "Enter"
-        ) {            
+        ) {
             event.preventDefault()
             updateQuestion()
         }

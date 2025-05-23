@@ -17,17 +17,18 @@ export const useQuestionCreate = (
         const newAnswers = [...answers]
         newAnswers[index] = value
         setAnswers(newAnswers)
-    };
+    }
 
     const addAnswerField = () => {
         setAnswers([...answers, ''])
-    };
+    }
 
     const removeAnswerInput = (indexToRemove: number) => {
         setAnswers(answers.filter((_, index) => index !== indexToRemove))
     }
 
     const createQuestion = async () => {
+        console.log(problem)
         // 問題文が空の場合はエラーを表示
         if (!problem) {
             alert('問題文を入力してください')
@@ -47,27 +48,26 @@ export const useQuestionCreate = (
                 category_id: categoryId,
                 subcategory_id: subcategoryId 
             }),
-        });
+        })
 
         if (!response.ok) {
-            throw new Error('Failed to create question');
+            throw new Error('Failed to create question')
         }
         const data = await fetchQuestionsBySubcategoryId(subcategoryId)
         setQuestions(data)
         setModalIsOpen(false)
-    };
+    }
 
     // サイト内ショートカットキーの設定
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
         if (
             event.metaKey && // macOSでcommandキーまたはCapsLockキーを表す
             event.key === "Enter"
-        ) {            
+        ) {
             event.preventDefault()
             createQuestion()
         }
-    }, [])
-
+    }, [problem, answers, memo])
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
         return () => {

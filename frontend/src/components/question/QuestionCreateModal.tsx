@@ -92,7 +92,10 @@ const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
                     </div>
 
                     <div className={styles.footer}>
-                        <button onClick={createQuestion} className={styles.primaryButton}>
+                        <button 
+                            onClick={createQuestion} 
+                            className={styles.primaryButton}
+                        >
                             Save
                         </button>
                     </div>   
