@@ -32,7 +32,6 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
             // link.download = "categories.csv";
             // link.download = "backup_self_made_app.zip";
             link.download = "categories_export4.json";
-
     
             // ダウンロードをトリガー
             document.body.appendChild(link);
