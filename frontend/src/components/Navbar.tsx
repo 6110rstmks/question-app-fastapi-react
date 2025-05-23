@@ -68,7 +68,6 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
         // link.download = "backup_self_made_app.zip";
         link.download = "backup_self_made_app.zip";
 
-
         // ダウンロードをトリガー
         document.body.appendChild(link);
         link.click();
