@@ -33,25 +33,25 @@ export const useQuestionEdit = (
     }, [blockBrowserBack])
 
     const handleProblemChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setInputProblemValue(event.target.value);
-    };
+        setInputProblemValue(event.target.value)
+    }
 
     const handleAnswerChange = (index: number, value: string) => {
-        const updatedAnswers = [...inputAnswerValue];
-        updatedAnswers[index] = value;
-        setInputAnswerValue(updatedAnswers);
+        const updatedAnswers = [...inputAnswerValue]
+        updatedAnswers[index] = value
+        setInputAnswerValue(updatedAnswers)
     }
 
     const handleIsCorrectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setIsCorrect(event.target.value === SolutionStatus.Correct.toString() ? SolutionStatus.Correct : 
                      event.target.value === SolutionStatus.Temporary.toString() ? SolutionStatus.Temporary : 
-                     SolutionStatus.Incorrect);
+                     SolutionStatus.Incorrect)
     }
     
     const handleCloseModal = () => {
-        let confirmation = prompt("本当にCloseしますか？　「Y」と入力");
+        let confirmation = prompt("本当にCloseしますか？　「Y」と入力")
         if (confirmation !== 'Y') {
-            return;
+            return
         }
         setModalIsOpen(false)
     }
@@ -71,20 +71,20 @@ export const useQuestionEdit = (
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(updatedQuestion),
-            });
+            })
 
             if (!response.ok) {
-                throw new Error('Failed to update the question.');
+                throw new Error('Failed to update the question.')
             }
             
-            const data = await fetchQuestion(question!.id);
-            setQuestion(data);
-            setModalIsOpen(false);
+            const data = await fetchQuestion(question!.id)
+            setQuestion(data)
+            setModalIsOpen(false)
         } catch (error) {
-            console.error(error);
-            alert('質問の更新に失敗しました。');
+            console.error(error)
+            alert('質問の更新に失敗しました。')
         }
-    };
+    }
 
     // サイト内ショートカットキーの設定
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -95,7 +95,7 @@ export const useQuestionEdit = (
             event.preventDefault()
             updateQuestion()
         }
-    }, [])
+    }, [inputAnswerValue, inputProblemValue, inputMemoValue])
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
