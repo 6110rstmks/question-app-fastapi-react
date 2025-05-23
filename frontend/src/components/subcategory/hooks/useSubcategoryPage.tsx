@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router';
 import { fetchQuestionsBySubcategoryId, fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
-import { handleKeyDown } from '../../../utils/function';
+import { handleKeyDownForShowAnswer } from '../../../utils/function';
 import { fetchProblem } from '../../../api/ProblemAPI';
 import { handleNavigateToCategoryPage } from '../../../utils/navigate_function';
 interface locationState {
@@ -123,14 +123,14 @@ export const useSubcategoryPage = (
             return;
         }
 
-        const onKeyDown = (event: KeyboardEvent) => handleKeyDown(event, setShowAnswer);
+        const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer);
 
         window.addEventListener('keydown', onKeyDown);
 
         return () => {
             window.removeEventListener('keydown', onKeyDown);
         };
-    }, [handleKeyDown]);
+    }, [handleKeyDownForShowAnswer]);
 
     // これはリロードした際に必要。
     useEffect(() => {

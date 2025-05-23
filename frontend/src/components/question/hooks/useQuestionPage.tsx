@@ -4,7 +4,7 @@ import { SubcategoryWithCategoryName } from '../../../types/Subcategory'
 import { Question } from '../../../types/Question'
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from '../../../api/SubcategoryAPI'
 import { deleteQuestion, incrementAnswerCount, fetchQuestion, updateQuestionIsCorrect } from '../../../api/QuestionAPI'
-import { handleKeyDown } from '../../../utils/function'
+import { handleKeyDownForShowAnswer } from '../../../utils/function'
 import { handleNavigateToSubcategoryPage } from '../../../utils/navigate_function'
 import { Category } from '../../../types/Category'
 
@@ -45,18 +45,17 @@ export const useQuestionPage = (
                 return {
                     ...prev,
                     answer_count: prev.answer_count + 1,
-                };
+                }
             }
-            return prev;
-        });
-
+            return prev
+        })
         alert('回答数を更新しました')
     }
 
     const handleUpdateIsCorrect = async () => {
         await incrementAnswerCount(question!.id)
         await updateQuestionIsCorrect(question!) 
-        const data = await fetchQuestion(question!.id) // データをリフレッシュ
+        const data = await fetchQuestion(question!.id)
         setQuestion(data)
 
     }
@@ -70,13 +69,13 @@ export const useQuestionPage = (
     // }
 
     useEffect(() => {
-        const onKeyDown = (event: KeyboardEvent) => handleKeyDown(event, setShowAnswer);
+        const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer);
 
         window.addEventListener('keydown', onKeyDown);
         return () => {
             window.removeEventListener('keydown', onKeyDown);
         };
-    }, [handleKeyDown]);
+    }, [handleKeyDownForShowAnswer]);
 
     useEffect(() => {
         // 質問データを取得して設定

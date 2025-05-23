@@ -9,23 +9,13 @@ export const addSubcategory = (
     setSubcategories((prev) => [...prev, subcategory]);
 };
 
-// export const handleKeyDown = useCallback((
-//     event: KeyboardEvent,
-//     setShowAnswer: React.Dispatch<React.SetStateAction<boolean>>
-// ) => {
-//     if (event.ctrlKey && event.key.toLowerCase() === 'b') {
-//         event.preventDefault();
-//         setShowAnswer(prev => !prev);
-//     }
-// }, []);
-
-export const handleKeyDown = (
+export const handleKeyDownForShowAnswer = (
     event: KeyboardEvent,
     setShowAnswer: React.Dispatch<React.SetStateAction<boolean>>
 ) => {
-    if (event.ctrlKey && event.key.toLowerCase() === 'b') {
-        event.preventDefault();
-        setShowAnswer(prev => !prev);
+    if (event.key.toLowerCase() === 'b') {
+        event.preventDefault()
+        setShowAnswer(prev => !prev)
     }
 };
 
@@ -33,7 +23,7 @@ export const handleUpdateIsCorrect = async (
     question: Question,
     setQuestion: React.Dispatch<React.SetStateAction<Question | null>>
 ) => {
-    await updateQuestionIsCorrect(question!); // API コール
-    const data = await fetchQuestion(question!.id); // データをリフレッシュ
+    await updateQuestionIsCorrect(question!)
+    const data = await fetchQuestion(question!.id)
     setQuestion(data)
 }
