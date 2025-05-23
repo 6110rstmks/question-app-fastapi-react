@@ -31,8 +31,8 @@ export const useQuestionCreate = (
 
         // 問題文が空の場合はエラーを表示
         if (!problem) {
-            alert('問題文を入力してください');
-            return;
+            alert('問題文を入力してください')
+            return
         } 
 
         const response = await fetch('http://localhost:8000/questions', {
