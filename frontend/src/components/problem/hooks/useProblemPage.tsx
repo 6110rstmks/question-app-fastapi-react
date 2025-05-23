@@ -59,6 +59,7 @@ export const useProblemPage = (problemData: Question[]) => {
         setTotalReviewProblemIndex(unsolvedProblems.length)
     };
 
+    // サイト内ショートカットキーの設定
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
         if (event.ctrlKey && (event.key.toLowerCase() === 'k' || event.key.toLowerCase() === 'b')) {
             event.preventDefault();
