@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router';
 import { Home } from './components/HomePage'
@@ -6,6 +6,7 @@ import Login from './components/login/Login'
 import Logout from './components/login/Logout'
 import Signup from './components/login/Signup'
 import Navbar from './components/Navbar'
+import KeyboardShortcuts from './components/KeyboardShortcuts'
 import QuestionPage from './components/question/QuestionPage'
 import CategoryCreate from './components/category/CategoryCreate'
 import SubcategoryPage from './components/subcategory/SubcategoryPage'
@@ -17,17 +18,18 @@ import ReportPage from './components/ReportPage'
 import QuestionListPage from './components/question/QuestionListPage'
 import NoMatchPage from './components/NoMatchPage'
 import Today from './components/Today'
-import 'katex/dist/katex.min.css';
-
+import 'katex/dist/katex.min.css'
 
 const App: React.FC = () => {
-  const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"))
+    const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"))
 
   return (
     <Router>
       <Navbar isAuth={isAuth} />
+      <KeyboardShortcuts /> 
       <Routes>
         {/* 最初の画面 */}
+
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/categories/home" element={<Home />} />
 

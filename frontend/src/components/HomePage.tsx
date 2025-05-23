@@ -50,6 +50,8 @@ export const Home: React.FC = () => {
             <h3>The total number of Questions：{questionCount}</h3>
             <h3>The total number of uncorrected Questions：{uncorrectedQuestionCount}</h3>
             <h3>The total number of corrected Questions：{(questionCount?? 0)  - (uncorrectedQuestionCount?? 0)}</h3>
+
+            <h1>ctr i でsetproblempageにとべる</h1>
             <div className={styles.searchContainer}>
                 <Search 
                     type="category"
