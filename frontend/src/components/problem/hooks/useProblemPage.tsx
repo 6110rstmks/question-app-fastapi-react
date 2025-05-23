@@ -61,7 +61,10 @@ export const useProblemPage = (problemData: Question[]) => {
 
     // サイト内ショートカットキーの設定
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
-        if (event.key.toLowerCase() === 'k' || event.key.toLowerCase() === 'b') {
+        if (
+            event.key.toLowerCase() === 'k' ||
+            event.key.toLowerCase() === 'b'
+        ) {            
             event.preventDefault()
             setShowAnswer(prev => !prev)
         } else if (event.key.toLowerCase() === 'j') {
