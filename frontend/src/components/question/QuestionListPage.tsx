@@ -9,8 +9,9 @@ const QuestionListPage = () => {
     const navigate = useNavigate();
     const { 
         questions,
-        handleProblemSearch,
-        handleAnswerSearch,
+        searchAnswerWord,
+        setSearchProblemWord,
+        setSearchAnswerWord,
         handleProblemSearchClick,
         handleAnswerSearchClick
     } = useQuestionListPage()
@@ -23,7 +24,7 @@ const QuestionListPage = () => {
                     <input
                         type="text"
                         className={styles.search_box}
-                        onChange={handleProblemSearch}
+                        onChange={(e) => setSearchProblemWord(e.target.value)}
                         autoFocus={true}
                     />
                     <button onClick={() => handleProblemSearchClick()}>検索する</button>
@@ -33,7 +34,8 @@ const QuestionListPage = () => {
                     <input
                         type="text"
                         className={styles.searchBox}
-                        onChange={handleAnswerSearch}
+                        onChange={(e ) => setSearchAnswerWord(e.target.value)}
+                        value={searchAnswerWord}
                     />
                     <button onClick={() => handleAnswerSearchClick()}>検索する</button>
                 </div>

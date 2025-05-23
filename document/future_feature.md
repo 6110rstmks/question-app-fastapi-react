@@ -29,6 +29,9 @@ automatic
 
 →ただこれはexportには出力しない。
 
+ーーーーーーー
+auth.mdを作成する。
+
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 http://localhost:3000/question_list

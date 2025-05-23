@@ -9,16 +9,11 @@ import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/Subcategor
 import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI'
 import { useNavigate } from "react-router"
 
-
 export const useQuestionListPage = () => {
     const [searchProblemWord, setSearchProblemWord] = useState<string>("")
     const [searchAnswerWord, setSearchAnswerWord] = useState<string>("")
     const [questions , setQuestions] = useState<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]>([])
     const navigate = useNavigate()
-
-    const handleNavigateToHomePage = () => {
-        navigate('/')
-    }
 
     // サイト内ショートカットキーの設定
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -27,7 +22,7 @@ export const useQuestionListPage = () => {
             event.metaKey // macOSでcommandキーまたはCapsLockキーを表す
         ) {            
             event.preventDefault()
-            handleNavigateToHomePage()
+            navigate('/')
         }
     }, [])
 
@@ -38,17 +33,20 @@ export const useQuestionListPage = () => {
         };
     }, [handleKeyDown])
 
-    const handleProblemSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchProblemWord(e.target.value)
-    }
-
     const handleAnswerSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchAnswerWord(e.target.value)
     }
 
     const handleProblemSearchClick = async () => {
-        if (searchProblemWord.trim() === "") return;
-        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord(searchProblemWord)
+        if (searchProblemWord.trim() === "") return
+
+        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] =
+        await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord(
+          searchProblemWord
+        )
+
+        setSearchAnswerWord(searchProblemWord)
+
         for (let i = 0; i < questions_data.length; i++) {
             const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
             const category = await fetchCategory(category_id)
@@ -62,7 +60,9 @@ export const useQuestionListPage = () => {
 
     const handleAnswerSearchClick = async () => {
         if (searchAnswerWord.trim() === "") return;
-        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord(searchAnswerWord)
+        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = 
+        await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord(searchAnswerWord)
+
         for (let i = 0; i < questions_data.length; i++) {
             const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
             const category = await fetchCategory(category_id)
@@ -76,8 +76,9 @@ export const useQuestionListPage = () => {
     
     return {
         questions,
-        handleProblemSearch,
-        handleAnswerSearch,
+        searchAnswerWord,
+        setSearchProblemWord,
+        setSearchAnswerWord,
         handleProblemSearchClick,
         handleAnswerSearchClick
     }
