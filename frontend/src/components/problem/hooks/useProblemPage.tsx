@@ -88,12 +88,12 @@ export const useProblemPage = (problemData: Question[]) => {
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
         return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-    }, [handleKeyDown]);
+            window.removeEventListener('keydown', handleKeyDown)
+        }
+    }, [handleKeyDown])
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0)
     }, [])
 
     return {
@@ -110,5 +110,5 @@ export const useProblemPage = (problemData: Question[]) => {
         handleAnswerSolvedReview,
         handleAnswerUnsolvedReview,
         handleNavigateToProblemReviewPage,
-    };
-};
+    }
+}
