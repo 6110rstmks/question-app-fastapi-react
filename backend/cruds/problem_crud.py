@@ -1,8 +1,7 @@
 from sqlalchemy.orm import Session
-from schemas.problem import ProblemFetch, ProblemFetchByDate
+from schemas.problem import ProblemFetch
 from sqlalchemy import select, func
 from models2 import Question, CategoryQuestion, SubcategoryQuestion
-from sqlalchemy.sql.expression import false
 from fastapi import HTTPException
 from config import SolutionStatus
 from datetime import datetime, timedelta
@@ -17,17 +16,20 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
 
     # 「ランダム」の場合
     if problem_fetch.type == "random":
-        query2 = (
-            select(Question)
-            .where(
-                Question.is_correct == status_enum,
-                Question.last_answered_date < fifteen_days_ago
-            )
-            .order_by(func.random())
-            .limit(problem_fetch.problem_count)
-        )
         
-        results = db.execute(query2).scalars().all()
+        if problem_fetch.solved_status == "temporary":
+            query2 = (
+                select(Question)
+                .where(
+                    Question.is_correct == status_enum,
+                    Question.last_answered_date < fifteen_days_ago
+                )
+                .order_by(func.random())
+                .limit(problem_fetch.problem_count)
+            )
+            results = db.execute(query2).scalars().all()
+        else:
+            results = None
         
         if not results:
         # 15日前に解答した問題がなければ、すべてのIncorrect問題から取得
