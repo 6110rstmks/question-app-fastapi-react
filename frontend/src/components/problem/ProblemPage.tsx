@@ -3,7 +3,7 @@ import { useLocation } from "react-router"
 import { Question } from "../../types/Question"
 import { useProblemPage } from "./hooks/useProblemPage"
 import { ProblemNormalPage } from "./ui/ProblemNormalPage"
-import { ProblemComplete } from "./ui/ProblemCompletePage"
+import { ProblemCompletePage } from "./ui/ProblemCompletePage"
 
 const ProblemPage: React.FC = () => {
     const location = useLocation()
@@ -34,7 +34,7 @@ const ProblemPage: React.FC = () => {
 
     if (isNormalFinished || isReviewFinished) {
         return (
-            <ProblemComplete
+            <ProblemCompletePage
                 unsolvedCount={unsolvedProblems.length}
                 onReview={handleNavigateToProblemReviewPage}
                 from={from}

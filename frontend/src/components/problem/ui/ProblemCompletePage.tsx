@@ -9,7 +9,7 @@ interface Props {
     backToId?: number
 }
 
-export const ProblemComplete: React.FC<Props> = ({
+export const ProblemCompletePage: React.FC<Props> = ({
     unsolvedCount,
     onReview,
     from,
