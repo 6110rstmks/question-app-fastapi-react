@@ -3,7 +3,12 @@ import { useNavigate } from 'react-router'
 import { SubcategoryWithCategoryName } from '../../../types/Subcategory'
 import { Question } from '../../../types/Question'
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from '../../../api/SubcategoryAPI'
-import { deleteQuestion, incrementAnswerCount, fetchQuestion, updateQuestionIsCorrect } from '../../../api/QuestionAPI'
+import { 
+    deleteQuestion,
+    incrementAnswerCount, 
+    fetchQuestion, 
+    updateQuestionIsCorrect 
+} from '../../../api/QuestionAPI'
 import { handleKeyDownForShowAnswer } from '../../../utils/function'
 import { handleNavigateToSubcategoryPage } from '../../../utils/navigate_function'
 import { Category } from '../../../types/Category'
@@ -14,6 +19,8 @@ export const useQuestionPage = (
     questionId: number,
     categoryName: string,
     subcategoryName: string,
+    changeSubcategoryModalIsOpen: boolean,
+    editModalIsOpen: boolean,
 ) => {
     const [question, setQuestion] = useState<Question>()
     const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
@@ -57,25 +64,18 @@ export const useQuestionPage = (
         await updateQuestionIsCorrect(question!) 
         const data = await fetchQuestion(question!.id)
         setQuestion(data)
-
     }
 
-    // このQuestionPageに遷移した元のSubcategoryPageに戻る。
-    // const handleNavigateToPreviousSubcategoryPage = () => {
-    //     const category = { id: categoryId, name: categoryName };
-    //     navigate(`/subcategory/${subcategoryId}`, {
-    //         state: category
-    //     });
-    // }
-
     useEffect(() => {
-        const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer);
+        const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer)
 
-        window.addEventListener('keydown', onKeyDown);
+        if (!changeSubcategoryModalIsOpen && !editModalIsOpen) {
+            window.addEventListener('keydown', onKeyDown)
+        }
         return () => {
-            window.removeEventListener('keydown', onKeyDown);
-        };
-    }, [handleKeyDownForShowAnswer]);
+            window.removeEventListener('keydown', onKeyDown)
+        }
+    }, [handleKeyDownForShowAnswer, changeSubcategoryModalIsOpen, editModalIsOpen]);
 
     useEffect(() => {
         // 質問データを取得して設定

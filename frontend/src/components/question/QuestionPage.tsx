@@ -22,7 +22,10 @@ const QuestionPage: React.FC = () => {
     const { questionId: questionIdStr } = useParams<{ questionId: string }>();
     const questionId = Number(questionIdStr)
 
-    const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
+    const [
+        editModalIsOpen,
+        setEditModalIsOpen
+    ] = useState<boolean>(false);
 
     const [
         changeSubcategoryModalIsOpen,
@@ -59,6 +62,8 @@ const QuestionPage: React.FC = () => {
         questionId,
         categoryName,
         subcategoryName,
+        changeSubcategoryModalIsOpen,
+        editModalIsOpen
     );
 
     // ページ遷移時にカテゴリ情報をローカルストレージに保存
