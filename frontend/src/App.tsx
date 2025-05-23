@@ -21,7 +21,7 @@ import 'katex/dist/katex.min.css';
 
 
 const App: React.FC = () => {
-  const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"));
+  const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"))
 
   return (
     <Router>

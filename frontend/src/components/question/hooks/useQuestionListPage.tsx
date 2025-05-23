@@ -33,10 +33,6 @@ export const useQuestionListPage = () => {
         };
     }, [handleKeyDown])
 
-    const handleAnswerSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchAnswerWord(e.target.value)
-    }
-
     const handleProblemSearchClick = async () => {
         if (searchProblemWord.trim() === "") return
 
