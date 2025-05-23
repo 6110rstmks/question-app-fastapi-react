@@ -15,7 +15,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
     
     status_enum = getattr(SolutionStatus, problem_fetch.solved_status.capitalize())
 
-    # 「ランダム」でかつ「未正解のみ」「temporaryのみ」の場合
+    # 「ランダム」の場合
     if problem_fetch.type == "random":
         query2 = (
             select(Question)
@@ -75,21 +75,6 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
             .limit(problem_fetch.problem_count)
         )
     
-    
-    
-    # elif problem_fetch.type == "subcategory" and problem_fetch.solved_status == 'temporary':
-    #     query1 = (
-    #         select(SubcategoryQuestion.question_id)
-    #         .where(SubcategoryQuestion.subcategory_id.in_(problem_fetch.subcategory_ids))
-    #     )
-    #     question_ids = db.execute(query1).scalars().all()
-    #     query2 = (
-    #         select(Question)
-    #         .where(Question.id.in_(question_ids))
-    #         .where(Question.is_correct == SolutionStatus.Temporary)
-    #         .order_by(func.random())
-    #         .limit(problem_fetch.problem_count)
-    #     )
     else:
         raise HTTPException(status_code=400, detail="不明なものが入力されました。")
         
