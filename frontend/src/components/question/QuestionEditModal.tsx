@@ -21,9 +21,8 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
         isCorrect,
         inputMemoValue,
         setInputMemoValue,
+        setInputAnswerValue,
         updateQuestion,
-        addAnswerInput,
-        removeAnswerInput,
         handleProblemChange,
         handleIsCorrectChange,
         handleCloseModal,
@@ -55,7 +54,7 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                     <div className={styles.answerHeader}>
                         <label className={styles.label}>Answer:</label>
                         <button 
-                            onClick={addAnswerInput} 
+                            onClick={() => setInputAnswerValue([...inputAnswerValue, ''])}
                             className={styles.secondaryButton}
                         >
                             答えを追加
@@ -72,8 +71,10 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                             />
                             {inputAnswerValue.length > 1 && (
                                 <button 
-                                    onClick={() => removeAnswerInput(index)}
-                                    className={styles.deleteButton}
+                                onClick={() =>
+                                    setInputAnswerValue(inputAnswerValue.filter((_, i) => i !== index))
+                                  }
+                                className={styles.deleteButton}
                                 >
                                     Delete
                                 </button>

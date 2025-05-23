@@ -11,7 +11,6 @@ export const useQuestionEdit = (
 ) => {
     const [inputAnswerValue, setInputAnswerValue] = useState<string[]>(question?.answer || [''])
     const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "")
-    // const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false)
     const [isCorrect, setIsCorrect] = useState<SolutionStatus>(question?.is_correct || SolutionStatus.Incorrect)
     const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "")
 
@@ -48,15 +47,7 @@ export const useQuestionEdit = (
                      event.target.value === SolutionStatus.Temporary.toString() ? SolutionStatus.Temporary : 
                      SolutionStatus.Incorrect);
     }
-
-    const addAnswerInput = () => {
-        setInputAnswerValue([...inputAnswerValue, ''])
-    }
-
-    const removeAnswerInput = (indexToRemove: number) => {
-        setInputAnswerValue(inputAnswerValue.filter((_, index) => index !== indexToRemove))
-    }
-
+    
     const handleCloseModal = () => {
         let confirmation = prompt("本当にCloseしますか？　「Y」と入力");
         if (confirmation !== 'Y') {
@@ -88,13 +79,30 @@ export const useQuestionEdit = (
             
             const data = await fetchQuestion(question!.id);
             setQuestion(data);
-            alert('質問が更新されました！');
             setModalIsOpen(false);
         } catch (error) {
             console.error(error);
             alert('質問の更新に失敗しました。');
         }
     };
+
+    // サイト内ショートカットキーの設定
+    const handleKeyDown = useCallback((event: KeyboardEvent) => {
+        if (
+            event.metaKey && // macOSでcommandキーまたはCapsLockキーを表す
+            event.key === "Enter"
+        ) {            
+            event.preventDefault()
+            updateQuestion()
+        }
+    }, [])
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown)
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown)
+        }
+    }, [handleKeyDown])
 
     useEffect(() => {
         setInputProblemValue(question?.problem || "")
@@ -109,9 +117,8 @@ export const useQuestionEdit = (
         isCorrect,
         inputMemoValue,
         setInputMemoValue,
+        setInputAnswerValue,
         updateQuestion,
-        addAnswerInput,
-        removeAnswerInput,
         handleProblemChange,
         handleIsCorrectChange,
         handleCloseModal,
