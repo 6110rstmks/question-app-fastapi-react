@@ -29,32 +29,32 @@ export const useProblemPage = (problemData: Question[]) => {
     const handleAnswerUnsolved = () => {
         setUnsolvedProblems((prev) => [...prev, problemData[currentProblemIndex]])
         setCurrentProblemIndex((prev) => prev + 1)
-        setShowAnswer(false);
+        setShowAnswer(false)
     };
 
     // レビューモードで「解けた」ボタンを押すと次の問題に進む。
     const handleAnswerSolvedReview = () => {
-        setUnsolvedProblems(unsolvedProblems.filter((problem) => problem.id !== unsolvedProblems[currentReviewProblemIndex].id));
-        setCurrentReviewProblemIndex2((prev) => prev + 1);
-        setShowAnswer(false);
+        setUnsolvedProblems(unsolvedProblems.filter((problem) => problem.id !== unsolvedProblems[currentReviewProblemIndex].id))
+        setCurrentReviewProblemIndex2((prev) => prev + 1)
+        setShowAnswer(false)
 
-        incrementAnswerCount(problemData[currentProblemIndex].id);
-        updateLastAnsweredDate(problemData[currentProblemIndex].id);
+        incrementAnswerCount(problemData[currentProblemIndex].id)
+        updateLastAnsweredDate(problemData[currentProblemIndex].id)
     };
 
     // 再度出題した用の関数
     const handleAnswerUnsolvedReview = () => {
-        setCurrentReviewProblemIndex((prev) => prev + 1);
-        setCurrentReviewProblemIndex2((prev) => prev + 1);
-        setShowAnswer(false);
+        setCurrentReviewProblemIndex((prev) => prev + 1)
+        setCurrentReviewProblemIndex2((prev) => prev + 1)
+        setShowAnswer(false)
     };
 
     // ProblemCompleteにおいて「解けなかった問題を再度復習する」ボタンを押すと問題のレビューモードに移行する。
     const handleNavigateToProblemReviewPage = () => {
-        setReviewFlg(true);
+        setReviewFlg(true)
         setCurrentProblemIndex(0);
-        setCurrentReviewProblemIndex(0);
-        setCurrentReviewProblemIndex2(0);
+        setCurrentReviewProblemIndex(0)
+        setCurrentReviewProblemIndex2(0)
         setShowAnswer(false);
         setTotalReviewProblemIndex(unsolvedProblems.length)
     };
@@ -62,16 +62,16 @@ export const useProblemPage = (problemData: Question[]) => {
     // サイト内ショートカットキーの設定
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
         if (event.key.toLowerCase() === 'k' || event.key.toLowerCase() === 'b') {
-            event.preventDefault();
-            setShowAnswer(prev => !prev);
+            event.preventDefault()
+            setShowAnswer(prev => !prev)
         } else if (event.key.toLowerCase() === 'j') {
-            event.preventDefault();
-            handleAnswerSolved();
+            event.preventDefault()
+            handleAnswerSolved()
         } else if (event.key.toLowerCase() === 'l') {
-            event.preventDefault();
-            handleAnswerUnsolved();
+            event.preventDefault()
+            handleAnswerUnsolved()
         }
-    }, []);
+    }, [])
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
