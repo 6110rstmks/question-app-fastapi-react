@@ -1,4 +1,3 @@
-// KeyboardShortcuts.tsx
 import { useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router';
 
