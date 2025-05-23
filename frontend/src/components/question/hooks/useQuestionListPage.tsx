@@ -1,14 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
-import { fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord, fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord } from '../../../api/QuestionAPI';
-import { fetchCategory } from '../../../api/CategoryAPI';
-import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI';
-import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI';
+import { 
+    fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord, 
+    fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord 
+} from '../../../api/QuestionAPI'
+import { fetchCategory } from '../../../api/CategoryAPI'
+import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI'
+import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI'
+import { useNavigate } from "react-router"
+
 
 export const useQuestionListPage = () => {
     const [searchProblemWord, setSearchProblemWord] = useState<string>("")
     const [searchAnswerWord, setSearchAnswerWord] = useState<string>("")
     const [questions , setQuestions] = useState<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]>([])
+    const navigate = useNavigate()
+
+    const handleNavigateToHomePage = () => {
+        navigate('/')
+    }
+
+    // サイト内ショートカットキーの設定
+    const handleKeyDown = useCallback((event: KeyboardEvent) => {
+        if (
+            event.key.toLowerCase() === 'k' &&
+            event.metaKey // macOSでcommandキーまたはCapsLockキーを表す
+        ) {            
+            event.preventDefault()
+            handleNavigateToHomePage()
+        }
+    }, [])
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown)
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown)
+        };
+    }, [handleKeyDown])
 
     const handleProblemSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchProblemWord(e.target.value)

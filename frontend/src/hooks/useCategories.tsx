@@ -41,11 +41,11 @@ export const useCategories = (
     }, [])
 
     useEffect(() => {
-        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keydown', handleKeyDown)
         return () => {
-            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('keydown', handleKeyDown)
         };
-    }, [handleKeyDown]);
+    }, [handleKeyDown])
 
     useEffect(() => {
         // 未ログイン時にリダイレクト
