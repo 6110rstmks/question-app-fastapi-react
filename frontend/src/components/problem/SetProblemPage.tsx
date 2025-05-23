@@ -61,16 +61,10 @@ const SetProblemPage: React.FC = () => {
                         <input
                             type="radio"
                             checked={solutionStatusNumber === SolutionStatus.Temporary}
-                            // onChange={(e) => {
-                            //     setSolutionStatusNumber(
-                            //         e.target.checked ? SolutionStatus.Temporary : SolutionStatus.Correct
-                            //     );
-                            // setToggleQuestionCount((prev) => !prev)
-                            // }}
                             value={SolutionStatus.Temporary}
                             onChange={(e) => {setSolutionStatusNumber(Number(e.target.value))}}
                         />
-                        <span>Temporaryから出題する。</span>
+                        <span>15日前にTemporaryになった問題から出題する。</span>
                     </label>
                 </div>
                 <div className={styles.secondLabel}> 
@@ -78,16 +72,10 @@ const SetProblemPage: React.FC = () => {
                         <input
                             type="radio"
                             checked={solutionStatusNumber === SolutionStatus.Incorrect}
-                            // onChange={(e) => {
-                            //     setSolutionStatusNumber(
-                            //         e.target.checked ? SolutionStatus.Incorrect : SolutionStatus.Correct
-                            //     );
-                            // setToggleQuestionCount((prev) => !prev)
-                            // }}
                             value={SolutionStatus.Incorrect}
                             onChange={(e) => {setSolutionStatusNumber(Number(e.target.value))}}
                         />
-                        <span>InCorrectから出題する。</span>
+                        <span>InCorrectの問題から出題する。</span>
                     </label>
                 </div>
 
