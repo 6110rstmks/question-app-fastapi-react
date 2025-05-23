@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router';
+import React, { useState } from 'react'
+import { useParams, useNavigate } from 'react-router'
 import Modal from 'react-modal'
-import QuestionCreate from '../question/QuestionCreateModal';
-import styles from "./SubcategoryPage.module.css";
-import { useSubcategoryPage } from './hooks/useSubcategoryPage';
-import { handleNavigateToCategoryPage, handleNavigateToQuestionPage } from '../../utils/navigate_function';
+import QuestionCreate from '../question/QuestionCreateModal'
+import styles from "./SubcategoryPage.module.css"
+import { useSubcategoryPage } from './hooks/useSubcategoryPage'
+import { 
+    handleNavigateToCategoryPage,
+     handleNavigateToQuestionPage 
+} from '../../utils/navigate_function'
 import { BlockMath } from 'react-katex'
-import { SolutionStatus } from '../../types/SolutionStatus';
+import { SolutionStatus } from '../../types/SolutionStatus'
 
 const SubcategoryPage: React.FC = () => {
-    const navigate = useNavigate();
-    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+    const navigate = useNavigate()
+    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
 
-    const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>();
+    const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>()
     const subcategoryId = Number(subcategoryIdStr)
     const isLatex = (text: string) => text.includes('\\')
 

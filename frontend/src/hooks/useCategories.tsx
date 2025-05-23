@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
-import { Category } from "../types/Category";
-import { fetchCategories, fetchPageCount } from "../api/CategoryAPI";
-import { isAuthenticated } from "../utils/auth_function";
+import { useEffect, useState } from "react"
+import { Category } from "../types/Category"
+import { fetchCategories, fetchPageCount } from "../api/CategoryAPI"
+import { isAuthenticated } from "../utils/auth_function"
 import { useNavigate } from "react-router"
-import { fetchQuestionCount, fetchUncorrectedQuestionCount } from "../api/QuestionAPI"
+import { 
+    fetchQuestionCount, 
+    fetchUncorrectedQuestionCount
+} from "../api/QuestionAPI"
 
 export const useCategories = (
     page: number,
@@ -26,11 +29,11 @@ export const useCategories = (
         // 未ログイン時にリダイレクト
         if (!isAuthenticated()) {
             navigate('/login')
-            return;
+            return
         }
         const loadPageCount = async () => {
             const count = await fetchPageCount();
-            setPageCount(count);
+            setPageCount(count)
             
             const questionCount = await fetchQuestionCount()
             setQuestionCount(questionCount)
