@@ -12,7 +12,7 @@ export const useQuestionEdit = (
     const [inputAnswerValue, setInputAnswerValue] = useState<string[]>(question?.answer || [''])
     const [inputProblemValue, setInputProblemValue] = useState<string>(question?.problem || "")
     // const [isCorrect, setIsCorrect] = useState<boolean>(question?.is_correct || false)
-    const [isCorrect, setIsCorrect] = useState<SolutionStatus>(question?.is_correct || SolutionStatus.Incorrect);
+    const [isCorrect, setIsCorrect] = useState<SolutionStatus>(question?.is_correct || SolutionStatus.Incorrect)
     const [inputMemoValue, setInputMemoValue] = useState<string>(question?.memo || "")
 
     // タッチパッド誤操作のブラウザバックを防ぐ
@@ -43,10 +43,6 @@ export const useQuestionEdit = (
         setInputAnswerValue(updatedAnswers);
     }
 
-    // const handleIsCorrectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     setIsCorrect(event.target.value === 'true');
-    // }
-
     const handleIsCorrectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setIsCorrect(event.target.value === SolutionStatus.Correct.toString() ? SolutionStatus.Correct : 
                      event.target.value === SolutionStatus.Temporary.toString() ? SolutionStatus.Temporary : 
@@ -54,11 +50,11 @@ export const useQuestionEdit = (
     }
 
     const addAnswerInput = () => {
-        setInputAnswerValue([...inputAnswerValue, '']);
+        setInputAnswerValue([...inputAnswerValue, ''])
     }
 
     const removeAnswerInput = (indexToRemove: number) => {
-        setInputAnswerValue(inputAnswerValue.filter((_, index) => index !== indexToRemove));
+        setInputAnswerValue(inputAnswerValue.filter((_, index) => index !== indexToRemove))
     }
 
     const handleCloseModal = () => {
@@ -66,7 +62,7 @@ export const useQuestionEdit = (
         if (confirmation !== 'Y') {
             return;
         }
-        setModalIsOpen(false);
+        setModalIsOpen(false)
     }
 
     const updateQuestion = async () => {
@@ -75,7 +71,7 @@ export const useQuestionEdit = (
             answer: inputAnswerValue,
             memo: inputMemoValue,
             is_correct: isCorrect
-        };
+        }
 
         try {
             const response = await fetch(`http://localhost:8000/questions/${question?.id}`, {
@@ -101,11 +97,11 @@ export const useQuestionEdit = (
     };
 
     useEffect(() => {
-        setInputProblemValue(question?.problem || "");
-        setInputAnswerValue(question?.answer || ['']);
-        setInputMemoValue(question?.memo || "");
-        setIsCorrect(question?.is_correct ?? SolutionStatus.Incorrect);  // SolutionStatus を使ってデフォルトを設定
-    }, [question]);
+        setInputProblemValue(question?.problem || "")
+        setInputAnswerValue(question?.answer || [''])
+        setInputMemoValue(question?.memo || "")
+        setIsCorrect(question?.is_correct ?? SolutionStatus.Incorrect)  // SolutionStatus を使ってデフォルトを設定
+    }, [question])
 
     return {
         inputProblemValue,
@@ -121,5 +117,4 @@ export const useQuestionEdit = (
         handleCloseModal,
         handleAnswerChange
     }
-    
 }

@@ -4,11 +4,10 @@ import { Question } from '../../types/Question'
 import { useQuestionEdit } from './hooks/useQuestionEdit'
 import { SolutionStatus } from '../../types/SolutionStatus'
 interface QuestionEditProps {
-    setModalIsOpen: (isOpen: boolean) => void;
-    question?: Question;
-    setQuestion: (question: Question) => void;
+    setModalIsOpen: (isOpen: boolean) => void
+    question?: Question
+    setQuestion: (question: Question) => void
 }
-
 
 const QuestionEditModal: React.FC<QuestionEditProps> = ({
     setModalIsOpen,
@@ -94,7 +93,7 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />
-                            正解
+                            Correct
                         </label>
                         <label className={styles.radioLabel}>
                             <input
@@ -104,7 +103,7 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />
-                            一時的に正解
+                            Temporary
                         </label>
                         <label className={styles.radioLabel}>
                             <input
@@ -114,7 +113,7 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                                 onChange={handleIsCorrectChange}
                                 className={styles.radio}
                             />
-                            不正解
+                            Incorrect
                         </label>
                     </div>
                 </div>
