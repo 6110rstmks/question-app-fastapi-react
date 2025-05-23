@@ -1,9 +1,9 @@
-import { useState, useEffect, useCallback } from "react";
-import { Question } from "../../../types/Question";
+import { useState, useEffect, useCallback } from "react"
+import { Question } from "../../../types/Question"
 import { 
     incrementAnswerCount,
     updateLastAnsweredDate 
-} from "../../../api/QuestionAPI";
+} from "../../../api/QuestionAPI"
 
 export const useProblemPage = (problemData: Question[]) => {
     const [currentProblemIndex, setCurrentProblemIndex] = useState(0)
@@ -12,9 +12,18 @@ export const useProblemPage = (problemData: Question[]) => {
     const [unsolvedProblems, setUnsolvedProblems] = useState<Question[]>([])
 
     // currentReviewProblemIndexとcurrentReviewProblemIndex2の違いは？
-    const [currentReviewProblemIndex, setCurrentReviewProblemIndex] = useState(0)
-    const [currentReviewProblemIndex2, setCurrentReviewProblemIndex2] = useState(0)
-    const [totalReviewProblemIndex, setTotalReviewProblemIndex] = useState(0)
+    const [
+        currentReviewProblemIndex,
+        setCurrentReviewProblemIndex
+    ] = useState(0)
+    const [
+        currentReviewProblemIndex2,
+        setCurrentReviewProblemIndex2
+    ] = useState(0)
+    const [
+        totalReviewProblemIndex, 
+        setTotalReviewProblemIndex
+    ] = useState(0)
 
     // 通常モードにおいて「解けた」ボタンを押すと次の問題に進む。
     const handleAnswerSolved = () => {
@@ -75,7 +84,6 @@ export const useProblemPage = (problemData: Question[]) => {
             handleAnswerUnsolved()
         }
     }, [])
-
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
