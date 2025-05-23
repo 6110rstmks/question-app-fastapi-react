@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, subMonths, eachDayOfInterval } from "date-fns";
-import styles from "./Calendar.module.css";
-import { fetchQuestionsCountsByLastAnsweredDate } from "../api/QuestionAPI";
-import { fetchProblemByDay } from "../api/ProblemAPI";
+import React, { useState, useEffect } from "react"
+import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, subMonths, eachDayOfInterval } from "date-fns"
+import styles from "./Calendar.module.css"
+import { fetchQuestionsCountsByLastAnsweredDate } from "../api/QuestionAPI"
+import { fetchProblemByDay } from "../api/ProblemAPI"
 import { useNavigate } from 'react-router';
 
 const Calendar: React.FC = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
 
-    const [questionCounts, setQuestionCounts] = useState<Record<string, number>>({});
-    const startMonth = startOfMonth(currentDate);
-    const endMonth = endOfMonth(currentDate);
-    const startDate = startOfWeek(startMonth);
-    const endDate = endOfWeek(endMonth);
+    const [questionCounts, setQuestionCounts] = useState<Record<string, number>>({})
+    const startMonth = startOfMonth(currentDate)
+    const endMonth = endOfMonth(currentDate)
+    const startDate = startOfWeek(startMonth)
+    const endDate = endOfWeek(endMonth)
 
-    const days = eachDayOfInterval({ start: startDate, end: endDate });
+    const days = eachDayOfInterval({ start: startDate, end: endDate })
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
-    const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
-    const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
+    const prevMonth = () => setCurrentDate(subMonths(currentDate, 1))
+    const nextMonth = () => setCurrentDate(addMonths(currentDate, 1))
 
     const handleSetProblemByDay = async (day: string) => {
         const problemData = await fetchProblemByDay(day)
@@ -38,9 +38,9 @@ const Calendar: React.FC = () => {
             const data: Record<string, number> = await fetchQuestionsCountsByLastAnsweredDate(days_array);
             setQuestionCounts(data);
         };
-        fetchCounts();
+        fetchCounts()
     }
-    , [currentDate]);
+    , [currentDate])
 
     return (
         
