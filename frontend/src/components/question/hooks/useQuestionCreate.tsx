@@ -9,26 +9,25 @@ export const useQuestionCreate = (
     setModalIsOpen: (isOpen: boolean) => void,
 ) => {
 
-    const [answers, setAnswers] = useState<string[]>(['']);
-    const [problem, setProblem] = useState<string>('');
-    const [memo, setMemo] = useState<string>('');
+    const [answers, setAnswers] = useState<string[]>([''])
+    const [problem, setProblem] = useState<string>('')
+    const [memo, setMemo] = useState<string>('')
 
     const handleAnswerChange = (index: number, value: string) => {
-        const newAnswers = [...answers];
-        newAnswers[index] = value;
-        setAnswers(newAnswers);
+        const newAnswers = [...answers]
+        newAnswers[index] = value
+        setAnswers(newAnswers)
     };
 
     const addAnswerField = () => {
-        setAnswers([...answers, '']);
+        setAnswers([...answers, ''])
     };
 
     const removeAnswerInput = (indexToRemove: number) => {
-        setAnswers(answers.filter((_, index) => index !== indexToRemove));
+        setAnswers(answers.filter((_, index) => index !== indexToRemove))
     }
 
     const createQuestion = async () => {
-
         // 問題文が空の場合はエラーを表示
         if (!problem) {
             alert('問題文を入力してください')
@@ -42,21 +41,39 @@ export const useQuestionCreate = (
             },
             // ここは例外でjavascriptのコードだが、pythonコード側にデータを送るため命名方式はキャメルケースを使用する。
             body: JSON.stringify({ 
-                                    problem: problem,
-                                    answer: answers,
-                                    memo: memo,
-                                    category_id: categoryId,
-                                    subcategory_id: subcategoryId 
-                                }),
+                problem: problem,
+                answer: answers,
+                memo: memo,
+                category_id: categoryId,
+                subcategory_id: subcategoryId 
+            }),
         });
 
         if (!response.ok) {
             throw new Error('Failed to create question');
         }
         const data = await fetchQuestionsBySubcategoryId(subcategoryId)
-        setQuestions(data);
-        setModalIsOpen(false);
+        setQuestions(data)
+        setModalIsOpen(false)
     };
+
+    // サイト内ショートカットキーの設定
+    const handleKeyDown = useCallback((event: KeyboardEvent) => {
+        if (
+            event.metaKey && // macOSでcommandキーまたはCapsLockキーを表す
+            event.key === "Enter"
+        ) {            
+            event.preventDefault()
+            createQuestion()
+        }
+    }, [])
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown)
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown)
+        }
+    }, [handleKeyDown])
 
     // タッチパッド誤操作のブラウザバックを防ぐ
     const blockBrowserBack = useCallback(() => {
