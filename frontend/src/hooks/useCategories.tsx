@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import { Category } from "../types/Category"
 import { fetchCategories, fetchPageCount } from "../api/CategoryAPI"
 import { isAuthenticated } from "../utils/auth_function"
@@ -24,6 +24,28 @@ export const useCategories = (
     const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null)
     
     const navigate = useNavigate()
+
+    const handleNavigateToQuestionListPage = () => {
+        navigate('/question_list')
+    }
+
+    // サイト内ショートカットキーの設定
+    const handleKeyDown = useCallback((event: KeyboardEvent) => {
+        if (
+            event.key.toLowerCase() === 'k' &&
+            event.metaKey // macOSでcommandキーまたはCapsLockキーを表す
+        ) {            
+            event.preventDefault()
+            handleNavigateToQuestionListPage()
+        }
+    }, [])
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [handleKeyDown]);
 
     useEffect(() => {
         // 未ログイン時にリダイレクト

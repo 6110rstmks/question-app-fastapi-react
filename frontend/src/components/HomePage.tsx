@@ -29,7 +29,7 @@ export const Home: React.FC = () => {
         searchAnswerWord, 
         setSearchAnswerWord
     ] = useState<string>("")
-    
+
     const { 
         categories,
         pageCount,
@@ -73,7 +73,6 @@ export const Home: React.FC = () => {
                     setPage={setPage} 
                 />
                 <Link to="/question_list" className={styles.moreBtn}>Question一覧検索ページ</Link>
-
                 <Search 
                     type="question"
                     searchQuestionWord={searchQuestionWord}
