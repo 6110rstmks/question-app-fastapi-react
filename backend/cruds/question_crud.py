@@ -29,11 +29,6 @@ def find_all_questions_in_category(db: Session, category_id: int):
     return db.execute(query).scalars().all()
 
 def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
-    # query1 = select(SubcategoryQuestion.question_id).where(SubcategoryQuestion.subcategory_id == subcategory_id)
-    # question_ids = db.execute(query1).scalars().all()
-    # query = select(Question).where(Question.id.in_(question_ids))
-    # return db.execute(query).scalars().all()
-
 
     query1 = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
     subcategoriesquestions = db.execute(query1).scalars().all()
@@ -48,14 +43,6 @@ def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
 def find_question_by_id(db: Session, id: int):
     query = select(Question).where(Question.id == id)
     return db.execute(query).scalars().first()
-
-
-# これはどう考えても、category_crudに書くべきだと思う
-def find_subcategory_by_question_id(db: Session, question_id: int):
-    query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
-    subcategoryquestion = db.execute(query).scalars().first()
-    query2 = select(Subcategory).where(Subcategory.id == subcategoryquestion.subcategory_id)
-    return db.execute(query2).scalars().first()
 
 def find_by_name(db: Session, name: str):
     return db.query(Question).filter(Question.name.like(f"%{name}%")).all()
@@ -102,7 +89,6 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     if question is None:
         return None
 
-    
     stmt = (
         update(Question).
         where(Question.id == id).
@@ -284,7 +270,7 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
 
     return changeSubcategoryUpdate.subcategory_ids
 
-def increment_answer_count(
+def update_last_answered_date(
     db: Session, 
     question_id: int
 ):
@@ -297,22 +283,35 @@ def increment_answer_count(
             update(Question).
             where(Question.id == question_id).
             values(
-                last_answered_date=func.current_date() + text("INTERVAL '1 day'"),
-                answer_count=Question.answer_count + 1
+                last_answered_date=func.current_date() + text("INTERVAL '1 day'")
             )
         )
 
     else:
         # last_answered_dateが現在日づげでない場合はlast_answered_dateを現在日付に更新。
-        # answer_countをインクリメント更新
         stmt = (
             update(Question).
             where(Question.id == question_id).
             values(
-                last_answered_date=func.current_date(),
-                answer_count=Question.answer_count + 1
+                last_answered_date=func.current_date()
             )
         )
+    db.execute(stmt)
+    db.commit()
+    return find_question_by_id(db, question_id)
+        
+
+def increment_answer_count(
+    db: Session, 
+    question_id: int
+):
+    stmt = (
+        update(Question).
+        where(Question.id == question_id).
+        values(
+            answer_count=Question.answer_count + 1
+        )
+    )
     db.execute(stmt)
     db.commit()
     return find_question_by_id(db, question_id)

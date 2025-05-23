@@ -1,31 +1,34 @@
 import { useState, useEffect, useCallback } from "react";
 import { Question } from "../../../types/Question";
-import { incrementAnswerCount } from "../../../api/QuestionAPI";
+import { 
+    incrementAnswerCount,
+    updateLastAnsweredDate 
+} from "../../../api/QuestionAPI";
 
 export const useProblemPage = (problemData: Question[]) => {
-    const [currentProblemIndex, setCurrentProblemIndex] = useState(0);
-    const [reviewFlg, setReviewFlg] = useState(false);
-    const [showAnswer, setShowAnswer] = useState(false);
-    const [unsolvedProblems, setUnsolvedProblems] = useState<Question[]>([]);
+    const [currentProblemIndex, setCurrentProblemIndex] = useState(0)
+    const [reviewFlg, setReviewFlg] = useState(false)
+    const [showAnswer, setShowAnswer] = useState(false)
+    const [unsolvedProblems, setUnsolvedProblems] = useState<Question[]>([])
 
     // currentReviewProblemIndexとcurrentReviewProblemIndex2の違いは？
-    const [currentReviewProblemIndex, setCurrentReviewProblemIndex] = useState(0);
-    const [currentReviewProblemIndex2, setCurrentReviewProblemIndex2] = useState(0);
-    const [totalReviewProblemIndex, setTotalReviewProblemIndex] = useState(0);
+    const [currentReviewProblemIndex, setCurrentReviewProblemIndex] = useState(0)
+    const [currentReviewProblemIndex2, setCurrentReviewProblemIndex2] = useState(0)
+    const [totalReviewProblemIndex, setTotalReviewProblemIndex] = useState(0)
 
     // 通常モードにおいて「解けた」ボタンを押すと次の問題に進む。
     const handleAnswerSolved = () => {
-        setCurrentProblemIndex((prev) => prev + 1);
-        setShowAnswer(false);
+        setCurrentProblemIndex((prev) => prev + 1)
+        setShowAnswer(false)
 
-        // answer_countをインクリメントするAPIを叩く
-        incrementAnswerCount(problemData[currentProblemIndex].id);
+        incrementAnswerCount(problemData[currentProblemIndex].id)
+        updateLastAnsweredDate(problemData[currentProblemIndex].id)
     };
 
     // 通常モードにおいて「解けなかった」ボタンを押すと未解決の問題リストに追加され、次の問題に進む。
     const handleAnswerUnsolved = () => {
-        setUnsolvedProblems((prev) => [...prev, problemData[currentProblemIndex]]);
-        setCurrentProblemIndex((prev) => prev + 1);
+        setUnsolvedProblems((prev) => [...prev, problemData[currentProblemIndex]])
+        setCurrentProblemIndex((prev) => prev + 1)
         setShowAnswer(false);
     };
 
@@ -36,7 +39,7 @@ export const useProblemPage = (problemData: Question[]) => {
         setShowAnswer(false);
 
         incrementAnswerCount(problemData[currentProblemIndex].id);
-
+        updateLastAnsweredDate(problemData[currentProblemIndex].id);
     };
 
     // 再度出題した用の関数

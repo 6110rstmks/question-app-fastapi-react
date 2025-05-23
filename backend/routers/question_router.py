@@ -85,6 +85,17 @@ async def increment_answer_count(
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
 
+# Questionのlast_answered_dateを更新するエンドポイント
+@router.put("/update_last_answered_date/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
+async def update_last_answered_date(
+    db: DbDependency,
+    id: int = Path(gt=0),
+):
+    updated_item = question_crud.update_last_answered_date(db, id)
+    if not updated_item:
+        raise HTTPException(status_code=404, detail="Question not updated")
+    return updated_item
+
 # Questionのcorrect_flgカラムを更新するエンドポイント
 @router.put("/edit_flg/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update_correct_flg(

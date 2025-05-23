@@ -15,14 +15,14 @@ export const useQuestionPage = (
     categoryName: string,
     subcategoryName: string,
 ) => {
-    const [question, setQuestion] = useState<Question>();
-    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([]);
-    const [showAnswer, setShowAnswer] = useState<boolean>(false);
+    const [question, setQuestion] = useState<Question>()
+    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
+    const [showAnswer, setShowAnswer] = useState<boolean>(false)
 
     const navigate = useNavigate()
 
     const handleDeleteQuestion = async () => {
-        let confirmation = prompt("削除を実行するには、「削除」と入力してください:");
+        let confirmation = prompt("削除を実行するには、「削除」と入力してください:")
         if (confirmation !== '削除') {
             return;
         }
@@ -38,7 +38,7 @@ export const useQuestionPage = (
     }
 
     const handleAnswerQuestion = () => {
-        incrementAnswerCount(question!.id); // API コール
+        incrementAnswerCount(question!.id) // API コール
         // 表示するquestion.answer_countの数も更新
         setQuestion((prev) => {
             if (prev) {
@@ -50,13 +50,15 @@ export const useQuestionPage = (
             return prev;
         });
 
-        alert('回答数を更新しました');
+        alert('回答数を更新しました')
     }
 
     const handleUpdateIsCorrect = async () => {
-        await updateQuestionIsCorrect(question!); // API コール
-        const data = await fetchQuestion(question!.id); // データをリフレッシュ
+        await incrementAnswerCount(question!.id)
+        await updateQuestionIsCorrect(question!) 
+        const data = await fetchQuestion(question!.id) // データをリフレッシュ
         setQuestion(data)
+
     }
 
     // このQuestionPageに遷移した元のSubcategoryPageに戻る。
@@ -79,20 +81,19 @@ export const useQuestionPage = (
     useEffect(() => {
         // 質問データを取得して設定
         (async () => {
-            const data: Question = await fetchQuestion(questionId);
-            setQuestion(data);
+            const data: Question = await fetchQuestion(questionId)
+            setQuestion(data)
 
             // 所属するサブカテゴリを変更する際に使用する。
             const data2: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByQuestionId(questionId);
-            setSubcategoriesWithCategoryName(data2);
-        })();
+            setSubcategoriesWithCategoryName(data2)
+        })()
 
-
-    }, [questionId]);
+    }, [questionId])
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+        window.scrollTo(0, 0)
+    }, [])
 
     return { 
         subcategoriesWithCategoryName,
@@ -104,7 +105,7 @@ export const useQuestionPage = (
         handleDeleteQuestion,
         handleAnswerQuestion,
         handleUpdateIsCorrect,
-    };
+    }
 }
 
 

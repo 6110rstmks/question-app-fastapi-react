@@ -155,3 +155,15 @@ export const incrementAnswerCount = async (
     });
 }
 
+export const updateLastAnsweredDate = async (
+    question_id: number
+): Promise<void> => {
+    const url = `http://localhost:8000/questions/update_last_answered_date/${question_id}`;
+    const response = await fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+}
+
