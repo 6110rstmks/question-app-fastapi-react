@@ -13,7 +13,7 @@ export const handleKeyDownForShowAnswer = (
     event: KeyboardEvent,
     setShowAnswer: React.Dispatch<React.SetStateAction<boolean>>
 ) => {
-    if (event.key.toLowerCase() === 'b') {
+    if (event.key.toLowerCase() === 'b' || event.key.toLowerCase() === 'k') {
         event.preventDefault()
         setShowAnswer(prev => !prev)
     }
