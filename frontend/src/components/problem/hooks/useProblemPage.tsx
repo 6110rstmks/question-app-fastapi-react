@@ -58,7 +58,8 @@ export const useProblemPage = (problemData: Question[]) => {
         setShowAnswer(false)
     };
 
-    // ProblemCompleteにおいて「解けなかった問題を再度復習する」ボタンを押すと問題のレビューモードに移行する。
+    // ProblemCompleteにおいて「解けなかった問題を再度復習する」ボタンを押すと
+    // 問題のレビューモードに移行する。
     const handleNavigateToProblemReviewPage = () => {
         setReviewFlg(true)
         setCurrentProblemIndex(0);

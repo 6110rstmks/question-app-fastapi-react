@@ -10,7 +10,7 @@ const ProblemPage: React.FC = () => {
     const { problemData, from, backToId } = location.state as {
         problemData: Question[]
         from: string
-        backToId: number
+        backToId: number // 戻る先のID(カテゴリIDまたはサブカテゴリIDが入る)
     };
 
     const {
@@ -36,7 +36,7 @@ const ProblemPage: React.FC = () => {
         return (
             <ProblemCompletePage
                 unsolvedCount={unsolvedProblems.length}
-                onReview={handleNavigateToProblemReviewPage}
+                handleNavigateToProblemReviewPage={handleNavigateToProblemReviewPage}
                 from={from}
                 backToId={backToId}
             />

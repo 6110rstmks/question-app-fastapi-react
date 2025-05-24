@@ -4,14 +4,14 @@ import styles from "./ProblemCompletePage.module.css";
 
 interface Props {
     unsolvedCount: number
-    onReview: () => void
+    handleNavigateToProblemReviewPage: () => void
     from?: string
     backToId?: number
 }
 
 export const ProblemCompletePage: React.FC<Props> = ({
     unsolvedCount,
-    onReview,
+    handleNavigateToProblemReviewPage,
     from,
     backToId
 }) => {
@@ -29,7 +29,7 @@ export const ProblemCompletePage: React.FC<Props> = ({
                             </p>
                             <button 
                                 className={styles.reviewButton} 
-                                onClick={onReview}
+                                onClick={handleNavigateToProblemReviewPage}
                             >
                                 解けなかった問題を再度復習する
                             </button>

@@ -3,7 +3,6 @@ import { Question } from '../../../types/Question'
 import { fetchQuestion } from '../../../api/QuestionAPI'
 import { SolutionStatus } from '../../../types/SolutionStatus'
 
-
 export const useQuestionEdit = (
     question: Question | undefined,
     setQuestion: (question: Question) => void,
@@ -49,7 +48,7 @@ export const useQuestionEdit = (
     }
     
     const handleCloseModal = () => {
-        let confirmation = prompt("本当にCloseしますか？　「Y」と入力")
+        let confirmation = prompt("本当にCloseしますか？「Y」と入力")
         if (confirmation !== 'Y') {
             return
         }
