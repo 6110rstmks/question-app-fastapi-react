@@ -5,21 +5,33 @@ import {
     updateLastAnsweredDate 
 } from "../../../api/QuestionAPI"
 
-export const useProblemPage = (problemData: Question[]) => {
-    const [currentProblemIndex, setCurrentProblemIndex] = useState(0)
+export const useProblemPage = (
+    problemData: Question[]
+) => {
+    const [
+        currentProblemIndex, 
+        setCurrentProblemIndex
+    ] = useState<number>(0)
+
     const [reviewFlg, setReviewFlg] = useState(false)
     const [showAnswer, setShowAnswer] = useState(false)
-    const [unsolvedProblems, setUnsolvedProblems] = useState<Question[]>([])
+
+    const [
+        unsolvedProblems,
+        setUnsolvedProblems
+    ] = useState<Question[]>([])
 
     // currentReviewProblemIndexとcurrentReviewProblemIndex2の違いは？
     const [
         currentReviewProblemIndex,
         setCurrentReviewProblemIndex
     ] = useState(0)
+
     const [
         currentReviewProblemIndex2,
         setCurrentReviewProblemIndex2
     ] = useState(0)
+
     const [
         totalReviewProblemIndex, 
         setTotalReviewProblemIndex
@@ -29,7 +41,6 @@ export const useProblemPage = (problemData: Question[]) => {
     const handleAnswerSolved = () => {
         setCurrentProblemIndex((prev) => prev + 1)
         setShowAnswer(false)
-
         incrementAnswerCount(problemData[currentProblemIndex].id)
         updateLastAnsweredDate(problemData[currentProblemIndex].id)
     };

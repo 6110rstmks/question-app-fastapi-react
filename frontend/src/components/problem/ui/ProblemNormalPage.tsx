@@ -2,14 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router';
 import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
 import { Question } from "../../../types/Question";
-import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI";
-import { updateQuestionIsCorrect, fetchQuestion } from "../../../api/QuestionAPI";
+import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI"
+import { 
+    updateQuestionIsCorrect,
+    fetchQuestion 
+} from "../../../api/QuestionAPI"
 import styles from './ProblemNormal.module.css'
-import { BlockMath } from "react-katex";
+import { BlockMath } from "react-katex"
 import Modal from 'react-modal'
-import QuestionEditModal from "../../question/QuestionEditModal";
-import RenderMemoWithLinks from '../../RenderMemoWithlinks';
-import { SolutionStatus } from "../../../types/SolutionStatus";
+import QuestionEditModal from "../../question/QuestionEditModal"
+import RenderMemoWithLinks from '../../RenderMemoWithlinks'
+import { SolutionStatus } from "../../../types/SolutionStatus"
+
 interface Props {
     reviewFlg: boolean
     problem: Question
@@ -31,9 +35,21 @@ export const ProblemNormalPage: React.FC<Props> = ({
     onSolved,
     onUnsolved
 }) => {
-    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
-    const [localProblem, setLocalProblem] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
-    const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false)
+    const [
+        subcategoriesWithCategoryName,
+        setSubcategoriesWithCategoryName
+    ] = useState<SubcategoryWithCategoryName[]>([]) // Questionに関連するぱんくずリスト用
+
+    const [
+        localProblem,
+         setLocalProblem
+    ] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
+
+    const [
+        editModalIsOpen,
+        setEditModalIsOpen
+    ] = useState<boolean>(false)
+
     const isLatex = (text: string) => text.includes('\\')
 
     const handleUpdateIsCorrect = async () => {
@@ -43,13 +59,18 @@ export const ProblemNormalPage: React.FC<Props> = ({
     }
 
     useEffect(() => {
-        setLocalProblem(problem); // 新しい問題が渡されるたびにローカル状態を更新
-
-        (async () => {
-
-            const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
-            setSubcategoriesWithCategoryName(data_subcategories_with_category_name);       
-        })();
+        console.log('soiueoueoiu')
+        setLocalProblem(problem)
+        // (async () => {
+        //     const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
+        //     setSubcategoriesWithCategoryName(data_subcategories_with_category_name);       
+        // })()
+        const fetchData = async () => {
+            const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id);
+            setSubcategoriesWithCategoryName(data_subcategories_with_category_name);
+        };
+    
+        fetchData()
     }, [problem])
 
     return (
@@ -86,7 +107,7 @@ export const ProblemNormalPage: React.FC<Props> = ({
             )}
             <div className={styles.questionCard}>
                 <div className={styles.questionHeader}>
-                    <div className={styles.questionLabel}>問題：</div>
+                    <div className={styles.questionLabel}>問題：{problem.last_answered_date}</div>
                     <div className={styles.correctnessToggle}>
                         <button 
                             className={styles.editButton}

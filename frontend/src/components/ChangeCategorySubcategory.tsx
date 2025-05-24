@@ -44,7 +44,8 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
             answer: [], 
             memo: "", 
             is_correct: SolutionStatus.Incorrect,  // 修正：`false`ではなく`SolutionStatus.NOT_SOLVED`に変更
-            answer_count: 0 
+            answer_count: 0 ,
+            last_answered_date: ""
         },  
         setModalIsOpen, 
         setSubcategoriesRelatedToQuestion

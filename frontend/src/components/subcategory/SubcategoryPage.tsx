@@ -13,13 +13,17 @@ import { SolutionStatus } from '../../types/SolutionStatus'
 
 const SubcategoryPage: React.FC = () => {
     const navigate = useNavigate()
-    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
+    const [
+        modalIsOpen, 
+        setModalIsOpen
+    ] = useState<boolean>(false)
 
     const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>()
     const subcategoryId = Number(subcategoryIdStr)
     const isLatex = (text: string) => text.includes('\\')
 
-    const { subcategoryName, 
+    const { 
+        subcategoryName, 
         setSubcategoryName, 
         questions, setQuestions, 
         categoryInfo, 
