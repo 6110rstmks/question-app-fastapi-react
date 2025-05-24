@@ -107,7 +107,7 @@ export const ProblemNormalPage: React.FC<Props> = ({
             )}
             <div className={styles.questionCard}>
                 <div className={styles.questionHeader}>
-                    <div className={styles.questionLabel}>問題：{problem.last_answered_date}</div>
+                    <div className={styles.questionLabel}>問題：{problem.last_answered_date.slice(0, 10)}</div>
                     <div className={styles.correctnessToggle}>
                         <button 
                             className={styles.editButton}

@@ -3,7 +3,7 @@ import { useParams, Link, useLocation } from 'react-router';
 import styles from './QuestionPage.module.css'
 import Modal from 'react-modal'
 import QuestionEditModal from './QuestionEditModal';
-import ChangeCategorySubcategory from '../ChangeCategorySubcategory';
+import ChangeCategorySubcategory from '../ChangeCategorySubcategoryModal';
 import { useQuestionPage } from './hooks/useQuestionPage'
 import { BlockMath } from 'react-katex'
 import RenderMemoWithLinks from '../RenderMemoWithlinks';

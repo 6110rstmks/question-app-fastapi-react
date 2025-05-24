@@ -3,7 +3,7 @@ import { Question } from '../../../types/Question'
 import { fetchQuestion } from '../../../api/QuestionAPI'
 import { SolutionStatus } from '../../../types/SolutionStatus'
 
-export const useQuestionEdit = (
+export const useQuestionEditModal = (
     question: Question | undefined,
     setQuestion: (question: Question) => void,
     setModalIsOpen: (isOpen: boolean) => void

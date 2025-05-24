@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 
-export const useQuestionCreate = (
+export const useQuestionCreateModal = (
     categoryId: number,
     subcategoryId: number,
     setQuestions: (questions: Question[]) => void,

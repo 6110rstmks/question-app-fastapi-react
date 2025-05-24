@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import styles from "./QuestionCreateModal.module.css"
 import { Question } from '../../types/Question'
-import { useQuestionCreate } from './hooks/useQuestionCreate'
+import { useQuestionCreateModal } from './hooks/useQuestionCreateModal'
 interface QuestionCreateProps {
     categoryId: number;
     subcategoryId: number;
@@ -25,7 +25,7 @@ const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
         createQuestion,
         handleAnswerChange,
         addAnswerField,
-    } = useQuestionCreate(
+    } = useQuestionCreateModal(
         categoryId,
         subcategoryId,
         setQuestions,

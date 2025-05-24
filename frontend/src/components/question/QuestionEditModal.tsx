@@ -1,7 +1,7 @@
 import styles from './QuestionEdit.module.css'
 import React,{ ChangeEvent } from 'react'
 import { Question } from '../../types/Question'
-import { useQuestionEdit } from './hooks/useQuestionEdit'
+import { useQuestionEditModal } from './hooks/useQuestionEditModal'
 import { SolutionStatus } from '../../types/SolutionStatus'
 interface QuestionEditProps {
     setModalIsOpen: (isOpen: boolean) => void
@@ -27,7 +27,7 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
         handleIsCorrectChange,
         handleCloseModal,
         handleAnswerChange
-    } = useQuestionEdit(
+    } = useQuestionEditModal(
         question, 
         setQuestion, 
         setModalIsOpen

@@ -15,7 +15,7 @@ interface ChangeCategorySubcategoryProps {
 }
 
 
-const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
+const ChangeCategorySubcategoryModal: React.FC<ChangeCategorySubcategoryProps> = ({
     categoryId,
     defaultCategoryName,
     question,
@@ -115,4 +115,4 @@ const ChangeCategorySubcategory: React.FC<ChangeCategorySubcategoryProps> = ({
     )
 }
 
-export default ChangeCategorySubcategory
+export default ChangeCategorySubcategoryModal
