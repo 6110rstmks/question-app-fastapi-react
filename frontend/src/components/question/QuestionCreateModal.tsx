@@ -19,7 +19,7 @@ const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
         problem,
         setProblem,
         answers,
-        memo,
+        inputMemoValue,
         setMemo,
         removeAnswerInput,
         createQuestion,
@@ -85,7 +85,7 @@ const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
                     <div className={styles.formGroup}>
                             <label className={styles.label}>Memo:</label>
                             <textarea
-                                value={memo}
+                                value={inputMemoValue}
                                 onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setMemo(e.target.value)}
                                 className={styles.memoInput}
                             />

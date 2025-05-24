@@ -11,7 +11,7 @@ export const useQuestionCreate = (
 
     const [answers, setAnswers] = useState<string[]>([''])
     const [problem, setProblem] = useState<string>('')
-    const [memo, setMemo] = useState<string>('')
+    const [inputMemoValue, setInputMemoValue] = useState<string>('')
 
     const handleAnswerChange = (index: number, value: string) => {
         const newAnswers = [...answers]
@@ -44,7 +44,7 @@ export const useQuestionCreate = (
             body: JSON.stringify({ 
                 problem: problem,
                 answer: answers,
-                memo: memo,
+                memo: inputMemoValue,
                 category_id: categoryId,
                 subcategory_id: subcategoryId 
             }),
@@ -67,7 +67,7 @@ export const useQuestionCreate = (
             event.preventDefault()
             createQuestion()
         }
-    }, [problem, answers, memo])
+    }, [problem, answers, inputMemoValue])
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
         return () => {
@@ -97,8 +97,8 @@ export const useQuestionCreate = (
         problem,
         setProblem,
         answers,
-        memo,
-        setMemo,
+        inputMemoValue,
+        setInputMemoValue,
         removeAnswerInput,
         createQuestion,
         handleAnswerChange,
