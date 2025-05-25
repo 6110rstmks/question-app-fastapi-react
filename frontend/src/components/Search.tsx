@@ -55,6 +55,15 @@ const Search: React.FC<SearchProps> = ({
         setPage(1);
     };
 
+    const handleEnter = () => {
+    }
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            handleEnter();
+        }
+    }
+
     return (
         <div className={styles.searchSection}>
           <div className={styles.searchContainer}>
@@ -71,6 +80,7 @@ const Search: React.FC<SearchProps> = ({
                         : searchAnswerWord
                 }
                 onChange={handleSearch}
+                onKeyDown={handleKeyDown}  // ← Enter検知用
                 placeholder={`${
                     type === 'category'
                     ? 'カテゴリ'

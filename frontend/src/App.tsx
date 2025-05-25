@@ -1,7 +1,7 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router';
-import { Home } from './components/HomePage'
+import { HomePage } from './components/HomePage'
 import Login from './components/login/Login'
 import Logout from './components/login/Logout'
 import Signup from './components/login/Signup'
@@ -31,7 +31,7 @@ const App: React.FC = () => {
         {/* 最初の画面 */}
 
         <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/categories/home" element={<Home />} />
+        <Route path="/categories/home" element={<HomePage />} />
 
         {/* カテゴリ作成画面 */}
         <Route path="/createcategory" element={<CategoryCreate isAuth={isAuth} />} />

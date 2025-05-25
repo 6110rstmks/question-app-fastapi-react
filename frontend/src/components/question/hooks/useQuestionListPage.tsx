@@ -41,6 +41,7 @@ export const useQuestionListPage = () => {
           searchProblemWord
         )
 
+        // 利便性向上のため、解答ワードにも検索ワードを設定
         setSearchAnswerWord(searchProblemWord)
 
         for (let i = 0; i < questions_data.length; i++) {
@@ -68,6 +69,9 @@ export const useQuestionListPage = () => {
             questions_data[i].subcategoryId = subcategory_id
         }
         setQuestions(questions_data)
+
+        const params = new URLSearchParams({ answer: searchAnswerWord });
+        navigate(`/question_list?${params.toString()}`);
     }
     
     return {

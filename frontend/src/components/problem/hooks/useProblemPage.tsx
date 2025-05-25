@@ -85,15 +85,24 @@ export const useProblemPage = (
         if (
             event.key.toLowerCase() === 'k' ||
             event.key.toLowerCase() === 'b'
-        ) {            
+        ) {
             event.preventDefault()
             setShowAnswer(prev => !prev)
         } else if (event.key.toLowerCase() === 'j') {
+
             event.preventDefault()
-            handleAnswerSolved()
+            if (reviewFlg) {
+                handleAnswerSolvedReview()
+            } else {
+                handleAnswerSolved()
+            }
         } else if (event.key.toLowerCase() === 'l') {
             event.preventDefault()
-            handleAnswerUnsolved()
+            if (reviewFlg) {
+                handleAnswerUnsolvedReview()
+            } else {
+                handleAnswerUnsolved()
+            }
         }
     }, [])
 

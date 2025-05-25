@@ -6,7 +6,7 @@ import { Link } from "react-router"
 import styles from "./HomePage.module.css"
 import Search from "./Search"
 
-export const Home: React.FC = () => {
+export const HomePage: React.FC = () => {
     const [page, setPage] = useState<number>(1)
     const [limit] = useState<number>(3)
 

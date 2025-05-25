@@ -44,12 +44,14 @@ export const useCategoryBox = ({
         setShowForm(false);
     }
 
+    // この関数は showForm（フォームが表示されているかどうか）に応じて、categoryBox の高さを変える処理
+
     const adjustHeight = () => {
         if (categoryBoxRef.current) {
             if (showForm) {
-                categoryBoxRef.current.style.height = "450px"; // フォームが表示されるときの高さ
+                categoryBoxRef.current.style.height = "450px" // フォームが表示されるときの高さ
             } else {
-                categoryBoxRef.current.style.height = "400.5px"; // フォームが非表示のときの高さ
+                categoryBoxRef.current.style.height = "400.5px" // フォームが非表示のときの高さ
             }
         }
     };
