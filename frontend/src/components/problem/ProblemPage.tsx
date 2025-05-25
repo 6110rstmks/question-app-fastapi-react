@@ -21,6 +21,8 @@ const ProblemPage: React.FC = () => {
         currentReviewProblemIndex,
         currentReviewProblemIndex2,
         totalReviewProblemIndex,
+        editModalIsOpen,
+        setEditModalIsOpen,
         setShowAnswer,
         handleAnswerSolved,
         handleAnswerUnsolved,
@@ -74,6 +76,8 @@ const ProblemPage: React.FC = () => {
                         ? handleAnswerUnsolvedReview 
                         : handleAnswerUnsolved
                 }
+                editModalIsOpen={editModalIsOpen}
+                setEditModalIsOpen={setEditModalIsOpen}
             />
         </div>
     );

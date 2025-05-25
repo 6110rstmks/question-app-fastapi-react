@@ -23,6 +23,8 @@ interface Props {
     onShowAnswer: () => void
     onSolved: () => void
     onUnsolved: () => void
+    editModalIsOpen: boolean
+    setEditModalIsOpen: (isOpen: boolean) => void
 }
 
 export const ProblemNormalPage: React.FC<Props> = ({
@@ -33,7 +35,9 @@ export const ProblemNormalPage: React.FC<Props> = ({
     showAnswer,
     onShowAnswer,
     onSolved,
-    onUnsolved
+    onUnsolved,
+    editModalIsOpen,
+    setEditModalIsOpen
 }) => {
     const [
         subcategoriesWithCategoryName,
@@ -45,10 +49,10 @@ export const ProblemNormalPage: React.FC<Props> = ({
          setLocalProblem
     ] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
 
-    const [
-        editModalIsOpen,
-        setEditModalIsOpen
-    ] = useState<boolean>(false)
+    // const [
+    //     editModalIsOpen,
+    //     setEditModalIsOpen
+    // ] = useState<boolean>(false)
 
     const isLatex = (text: string) => text.includes('\\')
 

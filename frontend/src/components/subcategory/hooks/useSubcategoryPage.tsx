@@ -137,7 +137,7 @@ export const useSubcategoryPage = (
         return () => {
             window.removeEventListener('keydown', onKeyDown);
         };
-    }, [handleKeyDownForShowAnswer]);
+    }, [handleKeyDownForShowAnswer, modalIsOpen]);
 
     // これはリロードした際に必要。
     useEffect(() => {

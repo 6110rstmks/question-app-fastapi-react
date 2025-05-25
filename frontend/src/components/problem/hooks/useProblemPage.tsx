@@ -17,6 +17,11 @@ export const useProblemPage = (
     const [showAnswer, setShowAnswer] = useState(false)
 
     const [
+        editModalIsOpen,
+        setEditModalIsOpen
+    ] = useState<boolean>(false)
+
+    const [
         unsolvedProblems,
         setUnsolvedProblems
     ] = useState<Question[]>([])
@@ -107,11 +112,15 @@ export const useProblemPage = (
     }, [])
 
     useEffect(() => {
-        window.addEventListener('keydown', handleKeyDown);
+        // window.addEventListener('keydown', handleKeyDown);
+
+        if (!editModalIsOpen) {
+            window.addEventListener('keydown', handleKeyDown)
+        }
         return () => {
             window.removeEventListener('keydown', handleKeyDown)
         }
-    }, [handleKeyDown])
+    }, [handleKeyDown, editModalIsOpen])
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -125,6 +134,8 @@ export const useProblemPage = (
         currentReviewProblemIndex,
         currentReviewProblemIndex2,
         totalReviewProblemIndex,
+        editModalIsOpen,
+        setEditModalIsOpen,
         setShowAnswer,
         handleAnswerSolved,
         handleAnswerUnsolved,
