@@ -86,7 +86,7 @@ const QuestionPage: React.FC = () => {
             </div>
         ))}
         <div className={styles.questionBox}>
-            <h3>id:{question?.id}</h3>
+            <h3>id:{question?.id} {question?.last_answered_date.slice(0, 10)}</h3>
                 <div className={styles.questionHeader}>
                     <div className={styles.question_problem}>
                         問題：
