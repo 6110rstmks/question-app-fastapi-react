@@ -112,8 +112,6 @@ export const useProblemPage = (
     }, [])
 
     useEffect(() => {
-        // window.addEventListener('keydown', handleKeyDown);
-
         if (!editModalIsOpen) {
             window.addEventListener('keydown', handleKeyDown)
         }
