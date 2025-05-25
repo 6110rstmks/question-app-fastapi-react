@@ -3,7 +3,6 @@ import useSetProblemPage from './hooks/useSetProblemPage'
 import styles from './SetProblemPage.module.css'
 import Calendar from '../Calendar'
 import { SolutionStatus } from '../../types/SolutionStatus';
-import { set } from 'date-fns';
 
 const SetProblemPage: React.FC = () => {
     // const [toggleQuestionCount, setToggleQuestionCount] = useState<boolean>(false)
@@ -121,7 +120,7 @@ const SetProblemPage: React.FC = () => {
                                         {/* <span>
                                             {toggleQuestionCount 
                                                 ? `《${category.incorrected_answered_question_count}》`
-                                                : `《${category.question_count}》`}
+                                                : `《${category.temporary_answered_question_count}》`}
                                         </span> */}
                                         <div
                                             className={`${styles.subcategories} ${

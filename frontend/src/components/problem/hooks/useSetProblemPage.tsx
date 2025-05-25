@@ -9,14 +9,21 @@ import { fetchProblem } from '../../../api/ProblemAPI'
 import { SolutionStatus } from '../../../types/SolutionStatus'
 
 const useSetProblemPage = () => {
-    const [solutionStatusNumber, setSolutionStatusNumber] = useState<SolutionStatus>(0)
+    const [
+        solutionStatusNumber,
+        setSolutionStatusNumber
+    ] = useState<SolutionStatus>(0)
+
     const [subcategories, setSubcategories] = useState<Subcategory[]>([])
     const [selectedType, setSelectedType] = useState<string>('random')
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([])
     const [categories, setCategories] = useState<CategoryWithQuestionCount[]>([])
     const [problemCount, setProblemCount] = useState<number>(5)
     const [showAll, setShowAll] = useState<boolean>(false)
-    const [questionCount, setQuestionCount] = useState<number | null>(null)
+    const [
+        questionCount,
+        setQuestionCount
+    ] = useState<number | null>(null)
 
     const navigate = useNavigate()
 
@@ -34,7 +41,9 @@ const useSetProblemPage = () => {
             event.preventDefault()
             handleSetProblem()
         }
-    }, [])
+    // なぜSolutionStatusNumberを依存配列にいれるかについては、Stale Closureの問題を避けるため
+    // 理解してないのでまた調べて
+    }, [solutionStatusNumber])
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
@@ -64,12 +73,20 @@ const useSetProblemPage = () => {
 
     // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
     const handleSetProblem = async () => {
-        if (selectedType === 'category' && selectedCategoryIds.length === 0) {
+        console.log(SolutionStatus[solutionStatusNumber])
+        if (selectedType === 'category' && 
+            selectedCategoryIds.length === 0
+        ) {
             alert('Please select at least one category')
             return
         }
 
-        const response = await fetchProblem(selectedType, toLowerFirst(SolutionStatus[solutionStatusNumber]), problemCount, selectedCategoryIds, [])
+        const response = await fetchProblem(
+            selectedType,
+            toLowerFirst(SolutionStatus[solutionStatusNumber]),
+            problemCount, selectedCategoryIds,
+            []
+        )
         const problemData = await response.json()
         navigate('/problem', { 
             state: {
