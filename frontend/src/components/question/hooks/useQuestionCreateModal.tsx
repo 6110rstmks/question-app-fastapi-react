@@ -68,6 +68,7 @@ export const useQuestionCreateModal = (
             createQuestion()
         }
     }, [problem, answers, inputMemoValue])
+    
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
         return () => {

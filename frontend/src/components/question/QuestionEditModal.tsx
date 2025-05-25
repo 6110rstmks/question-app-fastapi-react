@@ -23,7 +23,7 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
         setInputMemoValue,
         setInputAnswerValue,
         updateQuestion,
-        handleProblemChange,
+        setInputProblemValue,
         handleIsCorrectChange,
         handleCloseModal,
         handleAnswerChange
@@ -42,12 +42,12 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
             <div className={styles.content}>
                 <div className={styles.formGroup}>
                     <label className={styles.label}>Problem:</label>
-                    <input 
-                        type='text'
+                    <textarea
+                        placeholder="問題文を記入"
                         value={inputProblemValue}
-                        onChange={handleProblemChange}
+                        onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setInputProblemValue(e.target.value)}
                         className={styles.textInput}
-                    />
+                    ></textarea>
                 </div>
 
                 <div className={styles.answerContainer}>

@@ -59,15 +59,11 @@ export const ProblemNormalPage: React.FC<Props> = ({
     }
 
     useEffect(() => {
-        console.log('soiueoueoiu')
         setLocalProblem(problem)
-        // (async () => {
-        //     const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
-        //     setSubcategoriesWithCategoryName(data_subcategories_with_category_name);       
-        // })()
+
         const fetchData = async () => {
-            const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id);
-            setSubcategoriesWithCategoryName(data_subcategories_with_category_name);
+            const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
+            setSubcategoriesWithCategoryName(data_subcategories_with_category_name)
         };
     
         fetchData()

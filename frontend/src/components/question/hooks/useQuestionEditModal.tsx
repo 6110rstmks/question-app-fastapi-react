@@ -31,10 +31,6 @@ export const useQuestionEditModal = (
         }
     }, [blockBrowserBack])
 
-    const handleProblemChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setInputProblemValue(event.target.value)
-    }
-
     const handleAnswerChange = (index: number, value: string) => {
         const updatedAnswers = [...inputAnswerValue]
         updatedAnswers[index] = value
@@ -118,7 +114,7 @@ export const useQuestionEditModal = (
         setInputMemoValue,
         setInputAnswerValue,
         updateQuestion,
-        handleProblemChange,
+        setInputProblemValue,
         handleIsCorrectChange,
         handleCloseModal,
         handleAnswerChange

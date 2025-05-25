@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from 'react'
 import { fetchSubcategory } from '../../../api/SubcategoryAPI'
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router'
 import { fetchQuestionsBySubcategoryId, fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
-import { updateSubcategoryName } from '../../../api/SubcategoryAPI';
-import { handleKeyDownForShowAnswer } from '../../../utils/function';
-import { fetchProblem } from '../../../api/ProblemAPI';
+import { updateSubcategoryName } from '../../../api/SubcategoryAPI'
+import { handleKeyDownForShowAnswer } from '../../../utils/function'
+import { fetchProblem } from '../../../api/ProblemAPI'
 import { handleNavigateToCategoryPage } from '../../../utils/navigate_function';
 interface locationState {
     categoryId: number;
@@ -27,16 +27,21 @@ export const useSubcategoryPage = (
     const [questions, setQuestions] = useState<Question[]>([]);
     const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null);
     const location = useLocation()
-    const navigate = useNavigate();
+    const [
+        modalIsOpen, 
+        setModalIsOpen
+    ] = useState<boolean>(false)
+
+    const navigate = useNavigate()
 
     // 初回レンダリングかどうかの状態を管理
     // useEffectの初回実行を防ぐ。
-    const isFirstRender = useRef(true);
+    const isFirstRender = useRef(true)
 
     // サブカテゴリ名の編集モードの状態を管理
-    const [isEditing, setIsEditing] = useState<boolean>(false);
+    const [isEditing, setIsEditing] = useState<boolean>(false)
     // 回答の表示非表示ボタンの状態を管理
-    const [showAnswer, setShowAnswer] = useState(false); 
+    const [showAnswer, setShowAnswer] = useState(false) 
 
     // リロードした際はここから取得する
 
@@ -125,7 +130,9 @@ export const useSubcategoryPage = (
 
         const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer);
 
-        window.addEventListener('keydown', onKeyDown);
+        if (!modalIsOpen) {
+            window.addEventListener('keydown', onKeyDown)
+        }
 
         return () => {
             window.removeEventListener('keydown', onKeyDown);
@@ -166,6 +173,8 @@ export const useSubcategoryPage = (
     }, [subcategoryId])
 
     return {
+        modalIsOpen,
+        setModalIsOpen,
         subcategoryName,
         setSubcategoryName,
         questions,
