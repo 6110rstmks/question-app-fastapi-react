@@ -25,8 +25,8 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
 
     const { 
         subcategoriesWithQuestionCount,
-        subcategoryName,
-        setSubcategoryName,
+        inputSubcategoryName,
+        setInputSubcategoryName,
         handleAddSubcategory,
         categoryBoxRef
     } = useCategoryBox({
@@ -63,8 +63,8 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
                             サブカテゴリー名:
                             <input 
                             type="text" 
-                            value={subcategoryName} 
-                            onChange={(e) => setSubcategoryName(e.target.value)} 
+                            value={inputSubcategoryName} 
+                            onChange={(e) => setInputSubcategoryName(e.target.value)} 
                             autoFocus
                             />
                         </label>

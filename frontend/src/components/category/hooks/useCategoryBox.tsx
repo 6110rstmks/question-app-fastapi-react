@@ -19,11 +19,17 @@ export const useCategoryBox = ({
     searchQuestionWord,
     searchAnswerWord
 }: useCategoryBoxProps) => {
+
     const [
         subcategoriesWithQuestionCount,
         setSubcategoriesWithQuestionCount
     ] = useState<SubcategoryWithQuestionCount[]>([])
-    const [subcategoryName, setSubcategoryName] = useState<string>('')
+
+    const [
+        inputSubcategoryName,
+        setInputSubcategoryName
+    ] = useState<string>('')
+
     const categoryBoxRef = useRef<HTMLDivElement | null>(null)
 
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
@@ -31,19 +37,19 @@ export const useCategoryBox = ({
     };
 
     const handleAddSubcategory = async () => {
-        if (!subcategoryName.trim()) {
+        if (!inputSubcategoryName.trim()) {
             alert('サブカテゴリー名を入力してください')
             return
         }
 
-        const response = await createSubcategory(subcategoryName, categoryId)
+        const response = await createSubcategory(inputSubcategoryName, categoryId)
 
         const data = await response.json() as SubcategoryWithQuestionCount
 
         if (subcategoriesWithQuestionCount.length < 6) {
             addSubcategory(data)
         }
-        setSubcategoryName("")
+        setInputSubcategoryName("")
         setShowForm(false)
     }
 
@@ -73,8 +79,8 @@ export const useCategoryBox = ({
 
     return { 
         subcategoriesWithQuestionCount, 
-        subcategoryName, 
-        setSubcategoryName, 
+        inputSubcategoryName, 
+        setInputSubcategoryName, 
         handleAddSubcategory,
         adjustHeight, 
         categoryBoxRef 
