@@ -417,6 +417,15 @@
                             "last_answered_date": "2025-03-03"
                         },
                         {
+                            "problem": "t3a.2xlargeはこれ全体でなんというか",
+                            "answer": [
+                                "インスタンスタイプ"
+                            ],
+                            "memo": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F129517%2F17c63048-b65f-5d69-5c2c-310c3791b95a.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=4395f0962f7ac6b3a541d601979b00d8\n\ntはインスタンスファミリー\n",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
                             "problem": "ストレージに特化したEC2インスタンスタイプは？",
                             "answer": [
                                 "l3enインスタンスタイプ"
@@ -424,6 +433,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "c5.9xlarge　においてインスタンスサイズはどこを表すか",
+                            "answer": [
+                                "9xlarge"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 },
@@ -1484,8 +1502,8 @@
                                 "AWS DataSync"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 },
@@ -1882,7 +1900,7 @@
                             ],
                             "memo": "そのエンティティ専用であり、再利用はできません（他のユーザーやロールに使い回せない）。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 },
@@ -2112,6 +2130,15 @@
                             "last_answered_date": "2025-05-08"
                         },
                         {
+                            "problem": "1radの定義は",
+                            "answer": [
+                                "半径と同じ長さの弧を持つ扇形が作る中心角"
+                            ],
+                            "memo": "https://rikeilabo.com/wp-content/uploads/2019/01/2-130.%E5%BC%A7%E5%BA%A6%E6%B3%95%E7%94%BB%E5%83%8F.010.jpeg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
                             "problem": "ユークリッド距離について説明",
                             "answer": [
                                 "二点間の距離公式にピタゴラスの定理を利用した距離"
@@ -2212,8 +2239,8 @@
                                 "Logarithmic function"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "量化するとおこること",
@@ -2243,6 +2270,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "π(rad)は何度か",
+                            "answer": [
+                                "180"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "x4+x2+x+1=0  is reciprocal equation??",
@@ -2341,8 +2377,8 @@
                                 "\\frac{|\\mathit{a}|}{12} |\\beta - \\alpha|^3\n"
                             ],
                             "memo": "https://res.cloudinary.com/bend/f_auto,q_auto/shikakutimes/s3/bend-image/796_2_112-300x292.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "3分の公式を答えて 直線はx = β 接点はx= α 二次関数の二次の係数はa",
@@ -2827,7 +2863,7 @@
                             ],
                             "memo": "中学受験の内容でgptに聞いても答えれない。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "大抵の場合は最外殻電子＝価電子。ただし例外がある。答えて",
@@ -3170,8 +3206,8 @@
                                 "ケトン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-24"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ベンゼンの酸化開裂をするときに必要な触媒は",
@@ -3198,7 +3234,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ビスコースから希硫酸中でセルロースを繊維状に析出させると、（A）ができる。",
@@ -3348,8 +3384,8 @@
                                 "熱分解反応"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "銑鉄は不純物である炭素が取り除かれ純度の高いものにしたものを何という",
@@ -3542,8 +3578,8 @@
                                 "+7"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "アルカリ金属は天然には単体として存在しない。どうしてか",
@@ -3578,8 +3614,8 @@
                                 "えんにしくしく"
                             ],
                             "memo": "SiO2 Si C SiC",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-05"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "無機化学において、ほとんどの金属イオンの沈殿は何色か？例外を除いて",
@@ -3747,8 +3783,8 @@
                                 "硬水（Ca2＋やMg2＋などを多く含む水）中では、次の反応が起こって沈殿が生成し、洗浄作用が低下する。\n\\mathrm{2R-COO^{-} + Ca^{2+} ⇄ (R-COO)_{2}Ca}"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "不飽和脂肪酸は飽和脂肪酸に比べて融点が低い。その理由は",
@@ -3807,8 +3843,8 @@
                                 "エボナイトebonite"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "天然ゴムを乾留することによって得られる物質を何という",
@@ -3854,7 +3890,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "黒鉛の燃焼熱は394kjの発熱する。このときΔHはどのように表す",
@@ -4471,8 +4507,8 @@
                                 "軟体動物の貝類（イカ、タコは閉鎖血管系）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "粘菌Slime moldは菌類ですか。",
@@ -4623,8 +4659,8 @@
                                 "アミラーゼAmylase"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "膵液は3大栄養素すべてを分解する消化酵素を持っているか？",
@@ -4715,8 +4751,8 @@
                                 "oxygen-hemoglobin dissociation curve"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "酸素解離度曲線の横軸と縦軸について答えて、",
@@ -5806,7 +5842,7 @@
                             ],
                             "memo": "根の方がオーキシンに対する感受性が高い。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "オーキシンの極性移動にはオーキシンを排出する（A）とオーキシンを取り込む（B）の膜タンパク質が働いている。",
@@ -5843,8 +5879,8 @@
                                 "コルメラ始原細胞の分化を抑制し、根端分裂組織を維持する\n\n→コルメラ始原細胞の分化を抑制　が答えで良いと思う"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "落葉と落果を促進する植物ホルモンは？",
@@ -6018,9 +6054,9 @@
                             "answer": [
                                 "アクチン"
                             ],
-                            "memo": "https://i.ytimg.com/vi/PBL0-sel5zk/maxresdefault.jpg",
+                            "memo": "https://i.ytimg.com/vi/PBL0-sel5zk/maxresdefault.jpg\n\nhttps://image.jimcdn.com/app/cms/image/transf/dimension=681x10000:format=jpg/path/s3ba844ef2fd81f30/image/i578a1e4411053ec2/version/1633134782/%E7%AD%8B%E8%82%89-%E7%AD%8B%E7%B7%9A%E7%B6%AD-%E7%AD%8B%E5%8E%9F%E7%B7%9A%E7%B6%AD-%E7%AD%8B%E7%AF%80-%E3%82%B5%E3%83%AB%E3%82%B3%E3%83%A1%E3%82%A2-%E7%AD%8B%E5%B0%8F%E8%83%9E%E4%BD%93-%E3%82%A2%E3%82%AF%E3%83%81%E3%83%B3-%E3%83%9F%E3%82%AA%E3%82%B7%E3%83%B3-%E6%A8%AA%E8%A1%8C%E5%B0%8F%E7%AE%A1.jpg",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "筋肉の収縮時に明帯、暗帯、サルコメアのうち、長さが変わらないものはどれか。",
@@ -6287,7 +6323,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "葉緑体に含まれる各光合成色素に様々な波長の光をあてたときの急光度ををグラフ化したものをなんという",
@@ -6296,7 +6332,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOqVOVnVoEwQEcxdDS6TVvCwT4Ux3-9-RhvA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-22"
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 },
@@ -6643,8 +6679,8 @@
                                 "所有と経営の分離\n"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "「買いオペ」とは、日銀が市場から債券（国債）や手形を買うことです。これにより、市場の通貨流通量を（増やし・減らし）、物価の下落を抑えて金利を引き下げる効果があるため（インフレ・デフレ）傾向の時に行われます。",
@@ -6842,7 +6878,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 }
@@ -7158,8 +7194,8 @@
                                 "二分探索木にさらに どのノードにおいても左の子の高さと右の子の高さの差が 1 以下"
                             ],
                             "memo": "https://learnersbucket.com/wp-content/uploads/2021/03/AVL-Tree-in-Javascript.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 }
@@ -7337,8 +7373,8 @@
                                 "cavity　kævəti/"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "一口ちょうだい",
@@ -7869,7 +7905,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "Sumo, or Japanese wrestling, dates back hundreds of years.",
@@ -9211,7 +9247,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "computer scientists aren't the only potential beneficiers from AI",
@@ -9378,7 +9414,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "彼は理科だけではなく英語も好きです。",
@@ -9516,6 +9552,15 @@
                     "name": "SSL",
                     "questions": [
                         {
+                            "problem": "同じ程度の暗号強度を持つ鍵長を選んだ場合、公開鍵暗号方式と共通鍵暗号方式ではどちらが暗号化や復号化に必要な時間が短いか",
+                            "answer": [
+                                "公開鍵暗号方式"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
                             "problem": "セキュリティのSSLを一言で説明してください",
                             "answer": [
                                 "通信内容を暗号化する仕組み"
@@ -9548,8 +9593,44 @@
                                 "WEBサーバ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-13"
+                        },
+                        {
+                            "problem": "暗号化アルゴリズムがAESであるのは共通鍵暗号方式か公開鍵暗号方式か",
+                            "answer": [
+                                "共通鍵暗号方式"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "デジタル署名には共通鍵暗号方式か公開鍵暗号方式のどちらが使用されているか",
+                            "answer": [
+                                "公開鍵暗号方式"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "公開鍵から秘密鍵を作成するか秘密鍵から公開鍵を作成するかどっちか",
+                            "answer": [
+                                "秘密鍵から公開鍵を作成する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "楕円曲線暗号は共通鍵暗号方式か公開鍵暗号方式のどちらか",
+                            "answer": [
+                                "公開鍵暗号方式"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 }
@@ -9930,11 +10011,11 @@
                             "problem": "CPUの演算装置は2つあります。それらを答えよ。",
                             "answer": [
                                 "ALUは「Arithmetic Logic Unit」の略で、直訳すると「算術論理装置",
-                                "もうひとつの演算装置として、\n\n浮動小数点ユニット（FPU）"
+                                "\n\n浮動小数点ユニット（FPU）"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "システムにすぐに対処しなくてはならない問題などが生じたときに、実行中のプログラムの処理を強制的に停止し、優先的に事象の解決を図ることを可能にする仕組みは？",
@@ -10436,7 +10517,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "円運動において、角速度が2π(rad/s)のとき周期（T）は？",
+                            "answer": [
+                                "T = 2π ÷ π = 2.0s"
+                            ],
+                            "memo": "https://www.youtube.com/watch?v=l28_BKgR-D8",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "円運動の加速度は？",
@@ -10544,7 +10634,7 @@
                                 "主記憶装置"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-29"
                         },
                         {
@@ -10649,8 +10739,8 @@
                                 "ノンプリエンプティブ方式（協調的マルチタスク）"
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法（OSがCPUを管理しないで、アプリケーション（プログラム）にタスクの切り替えを任せる）\nつまりスケジューリング方式の例として、到着順方式がある。",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "実行可能なタスクに対してプロセッサの使用権限を割り当てることを何という",
@@ -11154,8 +11244,8 @@
                                 "ナミブ砂漠（アフリカ）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "高気圧と低気圧があったときに風はどちらからどちらにふく？",
@@ -11290,8 +11380,8 @@
                                 "山口県の秋吉台（あきよしだい）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "海外で見られるカルスト地形の場所を答えて2",
@@ -11879,8 +11969,8 @@
                                 "ミシシッピ川"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ノルウェーは何の発電が95パーセントの割合を占めているか",
@@ -12187,8 +12277,8 @@
                                 "モンスーンアジア"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-25"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ブラジル高原は安定陸塊、古期造山帯、新期造山帯のどれか",
@@ -12359,8 +12449,8 @@
                                 "ヤハウェ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-26"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "タイの8割の民族は何の宗教を信仰しているか",
@@ -12457,7 +12547,7 @@
                             ],
                             "memo": "https://www.hro.or.jp/upload/40870/o7u1kr000000dgwp.jpg",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "マリー川どこにある",
@@ -12465,8 +12555,8 @@
                                 "オーストラリア"
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-australia-map-1.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "タクラマカン砂漠の場所は",
@@ -12988,7 +13078,7 @@
                             "last_answered_date": "2025-05-16"
                         },
                         {
-                            "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　30,34,41,53,54,55.56.57,66答えて",
+                            "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　34,41,53,54,55.56.57,66答えて",
                             "answer": [
                                 ""
                             ],
@@ -13101,8 +13191,8 @@
                                 "チリ"
                             ],
                             "memo": "https://hugkum.sho.jp/wp-content/uploads/2024/05/18548.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "アンデス山脈の場所は",
@@ -13121,6 +13211,15 @@
                             "memo": "https://cafegoot.com/wp-content/uploads/Map_of_Bolivia_and_neighboring_countries.gif",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-25"
+                        },
+                        {
+                            "problem": "ギリシャの場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8RlJQR81GNH0j2Tl4cvc95WCt6JJa_350wA&s",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "カラクム砂漠はどこの国にある？",
@@ -13273,8 +13372,8 @@
                                 "イラン"
                             ],
                             "memo": "https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXMZO4605511013062019I00004-2.jpg?ixlib=js-3.8.0&w=696&h=696&auto=format%2Ccompress&fit=crop&bg=FFFFFF&s=32aeb379be32462dc8c071093bbbe751\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "オーストリアの下にはなにがある2",
@@ -13328,8 +13427,8 @@
                                 ""
                             ],
                             "memo": "https://yunnan-walker.com/wp-content/uploads/2022/08/%E4%B8%AD%E5%9B%BD%E3%80%81%E9%9B%B2%E5%8D%97%E7%9C%81-1024x576.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "中国の黒竜江省の場所は",
@@ -13474,8 +13573,8 @@
                                 "アマゾン川を超えたところにギアナ高原がある。"
                             ],
                             "memo": "https://chitonitose.com/geo/img/map_Brazil.webp",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "イランの上にある湖は",
@@ -13669,7 +13768,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "タイの首都バンコクには何の工場が集積しているか",
@@ -13822,8 +13921,8 @@
                                 "中央炭田"
                             ],
                             "memo": "https://lh6.googleusercontent.com/proxy/gNq_2M3ezpkYFfQRsnPsOkpGj0sD4FNO9ZeC0Q08KxNK5bxhFsv6V9sl66RKCjQ1fX2JEpNKlijrs9Jy7d70hOjQCEc3zNN9gGe1pqkxSQ",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "フランス北東部、モーゼル川上流域に分布するフランス最大の鉄鉱石産地は？",
@@ -13914,7 +14013,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 },
@@ -14108,7 +14207,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJf8TMGAshFESfokO4BSZZDL4-dwgABQlWxQ&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "合計特殊出生率が低い国は？",
@@ -14153,8 +14252,8 @@
                                 "マドリードMadrid"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "カナダにおいてフランス系住民が多い州はどこ？",
@@ -14236,7 +14335,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "人間の非常住地域を何という？",
@@ -14419,8 +14518,8 @@
                                 "都市"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "村落は第何次産業が中心か",
@@ -14484,7 +14583,7 @@
                             "last_answered_date": "2025-04-19"
                         },
                         {
-                            "problem": "焼畑農業で栽培されるサバナ気候の作物4",
+                            "problem": "焼畑農業で栽培されるサバナ気候(Aw)の作物4",
                             "answer": [
                                 "もろこし",
                                 "アワ",
@@ -14492,7 +14591,7 @@
                                 "キビ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-05-04"
                         },
                         {
@@ -14643,7 +14742,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "https://lh3.googleusercontent.com/QP7dYZj6r4abrYYmrlCnS6mPtwJQ-dHVolaUCmzHQYy4uuU6k9pKLZtcdaMK6phH6pgJ38HYBx3Dg0fuh275Dml2WRPCERshOGVBqlIRfrrAZeLfheI4nd60p6jRkYpXBvUa-98GwANqt89SDKX5fn_G0BpCl4O5-wKkfvD7MAFODjB1Fg=w740?key=9VOAdVoZDGmvgIrFyXnqMA　Xの地域で栽培が盛んな農作物は？",
@@ -14785,7 +14884,7 @@
                             ],
                             "memo": "https://asmira.jp/wp-content/uploads/2020/01/south-america-terrain-3-213x300.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "園芸農業のうち、都市から近い地域で新鮮な野菜などを栽培し、都市に販売する農業を漢字4文字で何というか。",
@@ -14811,8 +14910,8 @@
                                 "春小麦"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "世界全体の米の輸出量は約5000万トンです。生産量は約8億トンなので生産量全体の1割以下しか輸出されていないことになる。これを何と表現するか",
@@ -14894,8 +14993,8 @@
                                 "近郊農業"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "カカオの生産量が多い国top2",
@@ -15158,8 +15257,8 @@
                                 "EF"
                             ],
                             "memo": " F は「Frost(極寒)」の F です。",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "ステップ気候はアルファベットでどのようにあらわす？",
@@ -15328,7 +15427,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUfLodDQXM7fC9dJQKslH6tS_SnpH2kmVTmw&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "イギリスは国全体でどの気候区分に属するか？",
@@ -15345,6 +15444,15 @@
                                 "褐色森林土"
                             ],
                             "memo": "温暖冬季少雨気候 (Cw)の土壌は黄色土",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "なぜサバナ気候は雨季と乾季がはっきりしているのか",
+                            "answer": [
+                                "自転軸が約23°傾いて自転していため、熱帯収束帯の位置が図のAwの部分からずれて、亜熱帯高圧帯になる。"
+                            ],
+                            "memo": "https://juken-geography.com/wp-content/uploads/2020/03/Aw-why.jpg",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-26"
                         },
@@ -15387,7 +15495,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "ケッペンの気候区分の砂漠気候はアルファベットでどのように表す",
@@ -15406,6 +15514,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "サバナ気候の土壌は基本的に何か",
+                            "answer": [
+                                "ラトソル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 },
@@ -15608,7 +15725,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-22"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "新疆ウイグル　これなんとよむ",
@@ -15708,7 +15825,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "インド・パキスタン・中国が争っている領土はどこか",
@@ -15791,8 +15908,8 @@
                                 "イタリア語"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "ハンガリー・フィンランドは何系の言語を使用するか",
@@ -15933,7 +16050,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ロッキー山脈の場所は？またロッキー山脈は新期造山帯、古期造山帯？",
@@ -16030,7 +16147,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-22"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "沖積平野のうち平野と海の境目（川の河口）にあるのはなにか",
@@ -16039,7 +16156,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "インダス川とガンジス川はどちらが西にあるか",
@@ -16292,7 +16409,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk0XFLz2UN8JqbWstN9tJtX8IoYuiF45Tkdg&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ブラジルの公用語はなんですか",
@@ -16343,7 +16460,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDE6h6s9naH1F6q9D9Hr4lUaLuKnpfVfygeA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-22"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ラプラタ川はフィヨルド・エスチュアリー・リアス海岸のどれにあたるか",
@@ -16352,7 +16469,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "アメリカにあるリアス海岸の例は？",
@@ -16545,7 +16662,7 @@
                             ],
                             "memo": "https://www.cynosure.co.jp/blog/4",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-22"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ヤグレーザーの波長は？",
@@ -16655,8 +16772,8 @@
                                 "ピコレーザー"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ノーリスはどのようにしてやけどや色素沈着のリスクを軽減するか",
@@ -16802,7 +16919,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "漢方には副作用があるかないか",
@@ -16822,7 +16939,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 }
