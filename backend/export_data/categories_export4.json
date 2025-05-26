@@ -376,6 +376,15 @@
                             "last_answered_date": "2025-03-13"
                         },
                         {
+                            "problem": "とあるシステムでDBにAurora PostgreSQLを使用している。 \n日中帯はリードレプリカ1台のみを稼働させ、夜間帯はバッチ処理を行うためにリードレプリカ台数を増加させたい。 \n急激なリクエスト増加に対応するために、バッチ処理開始時刻の前に増加させておきたい。\nこれに対応する方針を一つ述べて",
+                            "answer": [
+                                "Auroraのスケーリング機能を活用し、特定の時間帯に自動的にリードレプリカの数を増加させるように設定"
+                            ],
+                            "memo": "そのほかの方法としてはEventBridgeを使用してバッチの実行前後にリードレプリカを追加・削除するトリガーを設定する",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
                             "problem": "自動でスケールイン/スケールアウトのは通常のAuroraかAurora serverlessか",
                             "answer": [
                                 "Aurora serverless"
@@ -761,8 +770,8 @@
                                 "プライベートホストゾーン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "Route53のフェイルオーバールーティングポリシーは、メインに障害が発生していた場合にサブにアクセスするようにルーティングするポリシーを設定するが、どのようにして障害を検知するか",
@@ -937,6 +946,15 @@
                             "last_answered_date": "2025-04-18"
                         },
                         {
+                            "problem": "db.c6gd.mediumにおいてmediumをなんという",
+                            "answer": [
+                                "インスタンスサイズ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
                             "problem": "RDSにおいてマルチAZとごっちゃになってしまう特性を持った似ている機能は何か？",
                             "answer": [
                                 "リードレプリカ"
@@ -1000,6 +1018,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-03-01"
+                        },
+                        {
+                            "problem": "db.r6g.2xlargeにおいて　この文字列全体をなんという",
+                            "answer": [
+                                "DBインスタンスクラス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "db.c6gd.2xlargeにおいてc6gdを何という",
+                            "answer": [
+                                "インスタンスファミリー"
+                            ],
+                            "memo": "EC2と同じやね",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 },
@@ -1095,7 +1131,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-06"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "aws elasticacheについてmemcachedとredisのうちマルチスレッドはどちらか？",
@@ -3024,13 +3060,23 @@
                             "last_answered_date": "2025-05-25"
                         },
                         {
+                            "problem": "異性体は大きく二つに分けることができる。答えて",
+                            "answer": [
+                                "構造異性体",
+                                "立体異性体"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
                             "problem": "分子式が同じで、構造が異なる物質同士を何という",
                             "answer": [
                                 "異性体Isomer"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "カルボニル基をかいてください",
@@ -3262,6 +3308,16 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-25"
+                        },
+                        {
+                            "problem": "立体異性体は二つに分類することができる。答えて",
+                            "answer": [
+                                "幾何異性体",
+                                "光学異性体"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 },
@@ -4520,13 +4576,13 @@
                             "last_answered_date": "2025-04-11"
                         },
                         {
-                            "problem": "菌類において、菌糸が集まって胞子を作る構造を何という・",
+                            "problem": "菌類において、菌糸が集まって胞子を作る構造を何という",
                             "answer": [
                                 "子実体"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "鞭毛をもつ胞子を作る菌類はなにか？",
@@ -4564,8 +4620,8 @@
                                 "門\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "キク科の野菜 2",
@@ -5746,8 +5802,8 @@
                                 "アブシシン酸Abscisic acid"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "What cells do not have centrosomes?",
@@ -6101,8 +6157,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpywUUQH89rBWlt7amEnBHlozUY74EbBp-WQ&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-01"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "大臀筋（だいでんきん）どこにあるか",
@@ -7508,8 +7564,8 @@
                                 "かぶ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-14"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "They tried to make sense of the email from their boss.",
@@ -9202,7 +9258,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-07"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "He was staring out the window.",
@@ -9555,6 +9611,15 @@
                             "problem": "同じ程度の暗号強度を持つ鍵長を選んだ場合、公開鍵暗号方式と共通鍵暗号方式ではどちらが暗号化や復号化に必要な時間が短いか",
                             "answer": [
                                 "公開鍵暗号方式"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "100人の送受信者が共通鍵暗号方式でそれぞれ秘密に通信を行うとき、必要な共通鍵の数は",
+                            "answer": [
+                                "4950"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -10520,7 +10585,7 @@
                             "last_answered_date": "2025-05-26"
                         },
                         {
-                            "problem": "円運動において、角速度が2π(rad/s)のとき周期（T）は？",
+                            "problem": "円運動において、角速度がπ(rad/s)のとき周期（T）は？",
                             "answer": [
                                 "T = 2π ÷ π = 2.0s"
                             ],
@@ -11004,6 +11069,15 @@
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQKwRCJHyyVbCWpibZ8fA1xOQFhZA07s9Zw&s",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-24"
+                        },
+                        {
+                            "problem": "大規模な火山噴火によってできた巨大な凹地をなんという",
+                            "answer": [
+                                "カルデラ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "外来河川は、（A）から（B）に流れる河川。",
@@ -11666,17 +11740,17 @@
                                 "乾燥地帯にあるため、水がどんどん蒸発して、塩分濃度が高い。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "シベリア南部にある三日月型の断層湖はなんですか？",
                             "answer": [
                                 "バイカル湖"
                             ],
-                            "memo": "",
+                            "memo": "https://www.virginbmw.com/vbmw_data/img/column/column05/06/map.gif",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "チベット高原で放牧している動物は？",
@@ -11989,7 +12063,7 @@
                             ],
                             "memo": "https://www.ide.go.jp/library/Japanese/Publish/Reports/AjikenPolicyBrief/images/139_01.jpg\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "イギリス南部を流れる川は？",
@@ -12212,6 +12286,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-20"
+                        },
+                        {
+                            "problem": "黄麻（こうま）という植物から作られる繊維をなんという",
+                            "answer": [
+                                "ジュート"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -12437,6 +12520,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-19"
+                        },
+                        {
+                            "problem": "カルデラが見られる九州の山は？",
+                            "answer": [
+                                "阿蘇山"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 },
@@ -12854,7 +12946,7 @@
                             ],
                             "memo": "https://kotokurabe.com/makoto/wp-content/uploads/nature/mediterranean-sea-03.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "アタカマ砂漠の場所",
@@ -13078,7 +13170,7 @@
                             "last_answered_date": "2025-05-16"
                         },
                         {
-                            "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　34,41,53,54,55.56.57,66答えて",
+                            "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　41,53,54,55.56.57,66答えて",
                             "answer": [
                                 ""
                             ],
@@ -13201,7 +13293,7 @@
                             ],
                             "memo": "https://o.quizlet.com/vTRAo7eN2Sh2CpvZa-VxkQ.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-26"
                         },
                         {
                             "problem": "ボリビア 場所",
@@ -13758,8 +13850,8 @@
                                 "1000万人　\n首都に一極集中　全人口の1/5"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "ベトナムの人口一位の都市は？",
@@ -14153,7 +14245,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "複数の都市がつながって一つの巨大な都市圏を形成したものを何という？",
@@ -14827,8 +14919,8 @@
                                 "インドのアッサム地方"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "ぶどうが栽培できる北限はどこらへん？",
@@ -14854,8 +14946,8 @@
                                 "高温多雨　年降水量1000mm"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "世界の農業は、歴史的には3つの段階で発展してきた。古い順番に答えて",
@@ -15314,7 +15406,7 @@
                             ],
                             "memo": "地中海性気候が-3度以上18度\n温暖冬季少雨気候",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "AfとAwの中間気候は？また中間の理由は？",
@@ -15866,63 +15958,6 @@
                     ]
                 },
                 {
-                    "name": "言語",
-                    "questions": [
-                        {
-                            "problem": "スペインとフランスにまたがる（A）を中心に分布する孤立した言語をなんという",
-                            "answer": [
-                                "バスク語",
-                                "A＝バスク地方"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-20"
-                        },
-                        {
-                            "problem": "スラブ系言語に分類される言語は2",
-                            "answer": [
-                                "ロシア語",
-                                "ポーランド語"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
-                        },
-                        {
-                            "problem": "ウラル語族の言語を答えて2",
-                            "answer": [
-                                "フィンランド語",
-                                "ハンガリー語"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-20"
-                        },
-                        {
-                            "problem": "ゲルマン語系の言語は？5",
-                            "answer": [
-                                "英語",
-                                "ドイツ語",
-                                "スウェーデン語",
-                                "ノルウェー語",
-                                "イタリア語"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-27"
-                        },
-                        {
-                            "problem": "ハンガリー・フィンランドは何系の言語を使用するか",
-                            "answer": [
-                                "ウラル系"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-22"
-                        }
-                    ]
-                },
-                {
                     "name": "山脈・川・高原・湖",
                     "questions": [
                         {
@@ -16041,7 +16076,7 @@
                             ],
                             "memo": "https://gakuen.gifu-net.ed.jp/~contents/kou_chirekikouminn/sekaishichizu/Russia/image/russia03s_ani.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "リアス海岸で有名な海外の場所として、アメリカのサンフランシスコ湾以外にもう一つ例をあげて",
@@ -16261,8 +16296,8 @@
                                 "レグール"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "その土地に元々あった岩石の影響を大きく受けた土壌を何という",
@@ -16525,6 +16560,82 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-25"
+                        }
+                    ]
+                },
+                {
+                    "name": "language",
+                    "questions": [
+                        {
+                            "problem": "スペインとフランスにまたがる（A）を中心に分布する孤立した言語をなんという",
+                            "answer": [
+                                "バスク語",
+                                "A＝バスク地方"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-20"
+                        },
+                        {
+                            "problem": "スラブ系言語に分類される言語は2",
+                            "answer": [
+                                "ロシア語",
+                                "ポーランド語"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-25"
+                        },
+                        {
+                            "problem": "ウラル語族の言語を答えて2",
+                            "answer": [
+                                "フィンランド語",
+                                "ハンガリー語"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "シナ・チベット語族に属する語は？",
+                            "answer": [
+                                "中国語",
+                                "チベット語"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "ヨーロッパのゲルマン語派・イタリック語派・スラヴ語派・ケルト語派・ヘレニック系語派・アジアのインド＝イラン語派などを包摂する一大語群を何と言う",
+                            "answer": [
+                                "インド・ヨーロッパ語族"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "ゲルマン語系の言語は？5",
+                            "answer": [
+                                "英語",
+                                "ドイツ語",
+                                "スウェーデン語",
+                                "ノルウェー語",
+                                "イタリア語"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "ハンガリー・フィンランドは何系の言語を使用するか",
+                            "answer": [
+                                "ウラル系"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-22"
                         }
                     ]
                 }
