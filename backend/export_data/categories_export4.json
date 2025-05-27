@@ -114,8 +114,8 @@
                                 "transit gateway"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "VPCとAZ（アベイラビリティゾーン）の関係を答えて。　「VPCは複数のAZに（）ている。」",
@@ -130,7 +130,7 @@
                             "problem": "セキュリティグループとネットワークACLの適用対象の違いを述べて",
                             "answer": [
                                 "セキュリティグループ→インスタンス単位",
-                                ""
+                                "ネットワークACL→"
                             ],
                             "memo": "",
                             "is_correct": 1,
@@ -317,8 +317,8 @@
                                 "持ち合わせている。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-02-12"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "auroraはスループットが高いことで有名だが、どのようにして高いことをawsは謳っているか",
@@ -391,7 +391,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 },
@@ -622,7 +622,7 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "s3_client = boto3.client('s3')\n\n# 署名付きURLを生成\nsigned_url = s3_client.generate_presigned_url(\n    'get_object',\n    Params={'Bucket': 'my-bucket', 'Key': 'my-file.txt'},\n    ExpiresIn=3600  # URLの有効期限（1時間）\n)\n\nprint(f\"Signed URL: {signed_url}\")\n\nこれで生成されたURLには何が施されているか\n\n出力URL：https://my-bucket.s3.amazonaws.com/my-file.txt?AWSAccessKeyId=EXAMPLEACCESSKEY&Expires=1735689600&Signature=exampleSignature12345",
+                            "problem": "s3_client = boto3.client('s3')\n\n# 署名付きURLを生成\nsigned_url = s3_client.generate_presigned_url(\n    'get_object',\n    Params={'Bucket': 'my-bucket', 'Key': 'my-file.txt'},\n    ExpiresIn=3600  # URLの有効期限（1時間）\n)\n\nprint(f\"Signed URL: {signed_url}\")\n\nこれで生成されたURLには何が施されているか\n\n出力URL：\nhttps://my-bucket.s3.amazonaws.com/my-file.txt?AWSAccessKeyId=EXAMPLEACCESSKEY&Expires=1735689600&Signature=exampleSignature12345",
                             "answer": [
                                 "URLには暗号化された署名が含まれており、この署名によってURLが改ざんされていないことが保証されています。",
                                 "このURLを持っている人は、IAM認証なしで1hだけこのファイルにアクセス可能です。"
@@ -1020,13 +1020,13 @@
                             "last_answered_date": "2025-03-01"
                         },
                         {
-                            "problem": "db.r6g.2xlargeにおいて　この文字列全体をなんという",
+                            "problem": "RDSのdb.r6g.2xlargeにおいて　この文字列全体をなんという",
                             "answer": [
                                 "DBインスタンスクラス"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "db.c6gd.2xlargeにおいてc6gdを何という",
@@ -1359,8 +1359,8 @@
                                 "可能。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 },
@@ -1401,8 +1401,8 @@
                                 "レイテンシーは「ポチってから応答が返るまでの時間」のこと。数え方は「低い（良い）」か「高い（悪い）」。\n通信の遅延時間とも言う。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "AWSにおいて、リージョンの中にAZ（アベイラビリティゾーン）があるか、AZ（アベイラビリティゾーン）の中にリージョンがあるかどっちか？",
@@ -1450,14 +1450,15 @@
                             "last_answered_date": "2025-03-26"
                         },
                         {
-                            "problem": "HTTPSの終端を扱うAWSのサービスは二つある。それらを答えよ。また、そもそもHTTPSの終端とはなにか？",
+                            "problem": "HTTPSの終端を扱うAWSのサービスは3つある。それらを答えよ。また、そもそもHTTPSの終端とはなにか？",
                             "answer": [
                                 "ALB",
-                                " API gateway"
+                                " API gateway",
+                                "Cloudfront"
                             ],
                             "memo": "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "ELB（ALB）とAPI gatewayをHTTPS末端にするというのはELBとAPI gatewayをSSLのフローでいうところの（WEBサーバ・WEBクライアント）にするということ。これのどっちか",
@@ -1511,8 +1512,17 @@
                                 "ルートアカウント"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-16"
+                        },
+                        {
+                            "problem": "AWSが提供するSSL/TLS証明書の発行、管理、および自動化を行うフルマネージドサービスは",
+                            "answer": [
+                                "ACM"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "AWSへの接続方法には2つ方法があり、インターネットを使用する方法としない方法（専用線接続）があるが、しない方法はどのようなサービスがあるか？",
@@ -1777,7 +1787,7 @@
                             ],
                             "memo": "AWS Data Firehoseとごっちゃにならないように",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-21"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "インターフェース型のVPCエンドポイントは、何と呼ばれるサービスを使って、各サービスを接続させることができる？",
@@ -1794,8 +1804,8 @@
                                 "アプリケーション(EC2)がVPC内にデプロイされており、Amazon S3に頻繁にデータをアップロードまたはS3からダウンロードする。\n頻繁にというワードが重要"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "VPCエンドポイントの説明について。VPCとその他のAWSサービスを（A)接続できるサービス。",
@@ -1853,18 +1863,18 @@
                                 "HTTP API"
                             ],
                             "memo": "REST API(v1)では間にNLBが追加で必要\nhttps://storage.googleapis.com/zenn-user-upload/1544e697e447-20240226.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-04"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
-                            "problem": "def lambda_handler(event, context): return { 'statusCode': 200, 'body': json.dumps('Hello World')}　lambdaの関数が上記の場合、API gatewayにおけるプロキシ統合と非プロキシ統合ではそれぞれどのような値を返すか",
+                            "problem": "def lambda_handler(event, context): \n  return { \n    'statusCode': 200,\n    'body': json.dumps('Hello World')\n}　\n\nlambdaの関数が上記の場合、API gatewayにおけるプロキシ統合と非プロキシ統合ではそれぞれどのような値を返すか",
                             "answer": [
                                 "プロキシ統合→ { 'statusCode': 200, 'body': json.dumps('Hello World')}",
                                 "非プロキシ統合→Htllo world"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-10"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "API Gateway×Step Functions×Lambdaでの構築のメリットを答えて",
@@ -1926,8 +1936,8 @@
                                 "AWS管理ポリシーやカスタマー管理ポリシーは1つのポリシーを作成すれば多くのIAMユーザなどにアタッチすることができますが、インラインポリシーは1つのIAMユーザなど、1対1でのアタッチしかできません。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "AWSにおいて特定のIAMユーザやIAMロール専用に作成されるポリシーを何という",
@@ -1990,6 +2000,22 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-02"
+                        }
+                    ]
+                },
+                {
+                    "name": "ACM",
+                    "questions": [
+                        {
+                            "problem": "AWS Certificate Manager (ACM) はどのようなAWSサービスと統合されているか",
+                            "answer": [
+                                "ELB",
+                                "Cloudfront",
+                                "API gateway"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 }
@@ -2314,7 +2340,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "x4+x2+x+1=0  is reciprocal equation??",
@@ -3028,8 +3054,8 @@
                                 "クメンヒドロペルオキシドを酸で分解してフェノールが生成"
                             ],
                             "memo": "https://cdn-ak.f.st-hatena.com/images/fotolife/n/nobita_60/20220919/20220919230949.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "アニリン塩酸塩を強塩基であるNaOHと反応させると、（A）が遊離する",
@@ -3908,8 +3934,8 @@
                                 "イソプレン\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 },
@@ -4870,8 +4896,8 @@
                                 "中脳midbrain"
                             ],
                             "memo": "https://www.youtube.com/watch?v=vvlCYyJmvdM\n参考\n16:30",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-05"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "平衡保持の中枢であるのは何脳？",
@@ -5461,8 +5487,8 @@
                                 "腎臓の集合管での水分吸収を促進"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "What is a class of steroid hormones that regulates salt and water balance?",
@@ -6313,8 +6339,8 @@
                                 "二酸化炭素ではなく、酸素を取り込んでしまう"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "C3植物は、強い光の中では枯れてしまう。この理由についてRubiscoという単語を用いて説明",
@@ -10600,7 +10626,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=Iqqd5PPuS2E&list=PLtdcmqO4ps6WjlJp8b3ZATi2VL_-fniLL&index=34",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 },
@@ -11419,7 +11445,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-12"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "作物が栽培できなくなる限界を何という？",
@@ -11629,8 +11655,8 @@
                                 "外来河川"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "砂嘴が伸びて対岸にくっついた地形は？またそれによって囲まれた湖を何という",
@@ -11708,15 +11734,6 @@
                             "last_answered_date": "2025-04-12"
                         },
                         {
-                            "problem": "フランスとスペインの境界にある山脈は？",
-                            "answer": [
-                                "ピレネー山脈"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
-                        },
-                        {
                             "problem": "エスチュアリーとは",
                             "answer": [
                                 "平野を流れる河川が沈水して出来た三角状の入り江"
@@ -11758,7 +11775,7 @@
                                 "ヤク"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm7T7vx1GU2-o6q0w6pAmhYKfn8gv_V7murA&s",
-                            "is_correct": 1,
+                            "is_correct": 2,
                             "last_answered_date": "2025-04-20"
                         },
                         {
@@ -12089,8 +12106,8 @@
                                 "綿花"
                             ],
                             "memo": "デカン高原の土壌はレグールでレグールは綿花を栽培するのに適している",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "アルプス・ヒマラヤ造山帯に含まれる山脈は2",
@@ -12479,7 +12496,7 @@
                                 "サイクロン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 2,
                             "last_answered_date": "2025-05-22"
                         },
                         {
@@ -12825,8 +12842,8 @@
                                 ""
                             ],
                             "memo": "https://image.itmedia.co.jp/nl/articles/1402/28/kuro_140228hokkyoku02.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-21"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "黒海の左にはなんの国がある２",
@@ -13501,8 +13518,8 @@
                                 "ノルウェー"
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/7/8/670/img_78a17dcddeb06cda655b6ecd37234631339087.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "アルゼンチンの場所は",
@@ -13510,8 +13527,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyGDeXCEo8UBLuH6HhLBz2qudHfo6O9c8AKQ&s",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "雲南省の場所は？",
@@ -13734,7 +13751,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "カラジャス鉄山はどこの国か",
@@ -13904,8 +13921,8 @@
                                 "インチョン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "カラチはケッペンの気候区分でどれに属するか",
@@ -14213,8 +14230,8 @@
                                 "地域中心都市"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "昼夜間人口比率の公式は",
@@ -14684,7 +14701,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "乾燥地域においては地下水路を用いてオアシス農業が行われている。このような地下水路は、イランでは何と呼ばれるか。",
@@ -15499,8 +15516,8 @@
                                 "落葉広葉樹(ブナ、コナラ)、一部針葉樹との混合林"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "地中海性気候(Cs)の定義",
@@ -16086,6 +16103,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "フランスとスペインの境界にある山脈は？",
+                            "answer": [
+                                "ピレネー山脈"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-15"
                         },
                         {
                             "problem": "ロッキー山脈の場所は？またロッキー山脈は新期造山帯、古期造山帯？",
@@ -17337,8 +17363,8 @@
                                 "ストレージアカウントの冗長オプションの一つ\nLRSのようにデータセンターレベルの障害発生時にデータが失われることはありませんが、リージョン内の全てのデータセンターが利用不可能になるようなリージョンレベルの災害(例: 大地震、大規模停電など)発生時にはデータが失われる可能性があるため、地域災害からデータを保護する目的で利用する場合は、後述するGRS、GZRSのように地理的に離れた場所にデータを冗長化する冗長オプションの方が適しています。\nそのため、２つのディスクが壊れてしまった場合でも、引き続きデータを利用することができます。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "azure のstorage の冗長オプションであるZRSの意味は？",
@@ -17389,7 +17415,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-09"
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 }
