@@ -1326,7 +1326,7 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "オンプレのADをそのまま使用したい場合はsimple ADとAD connectorのどちらを使用すれば良いか",
+                            "problem": "オンプレのADをそのまま使用したい場合は（Simple AD / AD Connector / AWS Managed Microsoft AD）ののどちらを使用すれば良いか",
                             "answer": [
                                 "AD connector"
                             ],
@@ -1344,11 +1344,65 @@
                             "last_answered_date": "2025-05-28"
                         },
                         {
+                            "problem": "Simple AD / AD Connector / AWS Managed Microsoft ADのうち一番効果なのはどれか",
+                            "answer": [
+                                " AWS Managed Microsoft AD"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
                             "problem": "AD connector自体にADの有無はあるか",
                             "answer": [
                                 "ない。（オンプレミスADを使う）"
                             ],
                             "memo": "それに対してsimple ADではAWS上にADが作成される",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "Simple AD / AD Connector / AWS Managed Microsoft ADのうち「なんちゃってAD」的な簡易版なのはどれか",
+                            "answer": [
+                                "Simple AD"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "Active directoryの機能にドメイン参加があるが、ドメイン参加をするとどうなるのか",
+                            "answer": [
+                                "ドメイン参加前\n\nPCはローカルアカウントでログイン（例　PC/ユーザー名）\n\n管理者が一台ずつ設定・管理\nドメイン参加後：\n\nPCはADユーザーアカウントでログイン可能（例：corp.example.com/user1）\n\n管理者はAD上でポリシーやアクセス制御を一元管理できる\n\nファイル共有、プリンタ利用、VPN接続なども一括設定できる\n"
+                            ],
+                            "memo": " ドメイン参加のメリット\n機能\t説明\n共通ログイン（SSO）\tADに参加していればどのPCでも自分のIDでログインできる",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "AWS Managed Microsoft ADは最大ユーザを何名管理できるか",
+                            "answer": [
+                                "50000"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "Simple AD / AD Connector / AWS Managed Microsoft ADのうちドメイン参加の機能を有していないものはどれか",
+                            "answer": [
+                                "ない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "既存の  ADワークロードを AWS クラウドに移行するにはSimple AD / AD Connector / AWS Managed Microsoft ADのうちどれが最適か",
+                            "answer": [
+                                "AWS Managed Microsoft AD"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-28"
                         }
@@ -9772,6 +9826,20 @@
                             "last_answered_date": "2025-05-26"
                         }
                     ]
+                },
+                {
+                    "name": "SSO",
+                    "questions": [
+                        {
+                            "problem": "ケルベロス認証の代表例は",
+                            "answer": [
+                                "WindowsのActive Directory"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        }
+                    ]
                 }
             ]
         },
@@ -16280,9 +16348,9 @@
                             "answer": [
                                 "リアス海岸"
                             ],
-                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX_wM0L4_FSVme2SHNUU_qrtaTmYkk9SMAuw&s",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX_wM0L4_FSVme2SHNUU_qrtaTmYkk9SMAuw&s\n\n志摩半島　https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Et1JUMNwMuYdhnvEH1PNI21_4gkz8YYRZQ&s\n\n三陸海岸　https://assets.st-note.com/production/uploads/images/7315865/rectangle_large_type_2_8cb56091121a513db4c72cd80e6cea01.jpg?fit=bounds&quality=85&width=1280",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
