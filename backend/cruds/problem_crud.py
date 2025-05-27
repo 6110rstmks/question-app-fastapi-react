@@ -77,6 +77,18 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
                 .limit(problem_fetch.problem_count)
             )
             results = db.execute(query2).scalars().all()
+        elif problem_fetch.solved_status == "correct":
+            query2 = (
+                select(Question)
+                .where(Question.id.in_(question_ids))
+                .where(
+                    Question.is_correct == status_enum,
+                    Question.last_answered_date < one_month_ago
+                )
+                .order_by(func.random())
+                .limit(problem_fetch.problem_count)
+            )
+            results = db.execute(query2).scalars().all()
         else:
             results = None
             
