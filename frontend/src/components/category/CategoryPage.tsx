@@ -35,7 +35,13 @@ const CategoryPage: React.FC = () => {
                 className={styles.displayIncorrectedQuestionBtn}
                 onClick={handleSetTemporaryProblem}
             >
-                Temporaryの問題から出題する。
+                15日より前のTemporaryの問題から出題する。
+            </button>
+            <button 
+                className={styles.displayIncorrectedQuestionBtn}
+                onClick={handleSetTemporaryProblem}
+            >
+                1ヶ月より前のCorrectの問題から出題する。
             </button>
 
             <div className={styles.container}>

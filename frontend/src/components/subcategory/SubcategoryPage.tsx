@@ -14,7 +14,6 @@ import { SolutionStatus } from '../../types/SolutionStatus'
 const SubcategoryPage: React.FC = () => {
     const navigate = useNavigate()
 
-
     const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>()
     const subcategoryId = Number(subcategoryIdStr)
     const isLatex = (text: string) => text.includes('\\')
@@ -64,7 +63,7 @@ const SubcategoryPage: React.FC = () => {
                 <button className={styles.deleteBtn} onClick={handleDeleteSubcategory}>Delete</button>
                 <button 
                     className={styles.displayIncorrectedQuestionBtn}
-                    >incorrectの問題に絞って表示する
+                    >15日より前のincorrectの問題に絞って表示する
                 </button>
             </div>
             <div className={styles.btnContainer}>
