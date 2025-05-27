@@ -1374,29 +1374,6 @@
                     ]
                 },
                 {
-                    "name": "auto scaling",
-                    "questions": [
-                        {
-                            "problem": "ECSはAutoScalingに対応しているか？",
-                            "answer": [
-                                "している。"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-14"
-                        },
-                        {
-                            "problem": "Auto Scalingグループの最大のEC2の起動台数はいくつか",
-                            "answer": [
-                                "5"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-22"
-                        }
-                    ]
-                },
-                {
                     "name": "クライアントVPN",
                     "questions": []
                 },
@@ -1860,6 +1837,41 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-19"
+                        }
+                    ]
+                },
+                {
+                    "name": "Application auto scaling",
+                    "questions": [
+                        {
+                            "problem": "ECSはAutoScalingに対応しているか？",
+                            "answer": [
+                                "している。"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-02-14"
+                        },
+                        {
+                            "problem": "Auto Scalingグループの最大のEC2の起動台数はいくつか",
+                            "answer": [
+                                "5"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-02-22"
+                        },
+                        {
+                            "problem": "Application Auto Scaling の対応サービス",
+                            "answer": [
+                                "ECS",
+                                "DynamoDB",
+                                "DynamoDB",
+                                "Amazon EMR"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 },
@@ -5837,8 +5849,8 @@
                                 "アブシシン酸Abscisic acid"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "What cells do not have centrosomes?",
@@ -7286,7 +7298,7 @@
                             ],
                             "memo": "https://learnersbucket.com/wp-content/uploads/2021/03/AVL-Tree-in-Javascript.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 }
@@ -12329,7 +12341,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -16339,7 +16351,7 @@
                                 "間帯土壌"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-27"
                         },
                         {
@@ -16623,6 +16635,15 @@
                             "last_answered_date": "2025-05-27"
                         },
                         {
+                            "problem": "浅い海底が隆起または海面の低下した海岸を何と言う",
+                            "answer": [
+                                "離水海岸"
+                            ],
+                            "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n離水海岸は沈水海岸には含まれない",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
+                        },
+                        {
                             "problem": "沈水海岸を英語で",
                             "answer": [
                                 "Submergent coastline"
@@ -16703,6 +16724,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-25"
+                        },
+                        {
+                            "problem": "河川の侵食で形成された谷をＶ字谷というのに対して、氷河による侵食で形成された谷を何と言う",
+                            "answer": [
+                                "U字谷"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         }
                     ]
                 }
@@ -16803,7 +16833,7 @@
                                 "595nm"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 2,
                             "last_answered_date": "2025-05-24"
                         },
                         {
@@ -16841,6 +16871,17 @@
                             "memo": "https://www.cynosure.co.jp/blog/4",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "Qスイッチレーザーは三種類ある。答えて",
+                            "answer": [
+                                "Ｑスイッチルビーレーザー",
+                                "ＱスイッチYAGレーザー",
+                                "アレキサンドライトレーザー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "ヤグレーザーの波長は？",
@@ -16925,6 +16966,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-24"
+                        },
+                        {
+                            "problem": "Qスイッチレーザーは何に対して効果があるか",
+                            "answer": [
+                                "シミ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "アレキサンドライトレーザーの波長は？",
@@ -17021,6 +17071,15 @@
                             "memo": "UV-Aの方が真皮層まで届くと言う知識と紐づける",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-25"
+                        },
+                        {
+                            "problem": "https://www.nihonbashi-f-laser.com/asset/IMG_0668.jpg このような画像の疾患をなんという",
+                            "answer": [
+                                "血管腫"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-27"
                         },
                         {
                             "problem": "アズノール軟膏はなにへの使用が適さない？",
