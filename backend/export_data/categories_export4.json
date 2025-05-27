@@ -1326,6 +1326,24 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
+                            "problem": "オンプレのADをそのまま使用したい場合はsimple ADとAD connectorのどちらを使用すれば良いか",
+                            "answer": [
+                                "AD connector"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "VPNやDirect connectが必要なのはsimple ADかAD connectorか",
+                            "answer": [
+                                "AD connector"
+                            ],
+                            "memo": "ADは作られず、オンプレミスADを使から",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
                             "problem": "AD connector自体にADの有無はあるか",
                             "answer": [
                                 "ない。（オンプレミスADを使う）"
