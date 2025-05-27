@@ -83,6 +83,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-01"
+                        },
+                        {
+                            "problem": "複数のEC2から同時アクセス可能なのはEBS、EFSのどちらか",
+                            "answer": [
+                                "EFS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -646,8 +655,8 @@
                                 "S3の署名付きURL"
                             ],
                             "memo": "\t署名付きURLの有効期限（秒単位）。604800秒 = 7日間。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -707,7 +716,16 @@
                             ],
                             "memo": "https://o2mamiblog.com/wp-content/uploads/2022/05/Route53-0006-1024x576.jpg\nhttps://o2mamiblog.com/wp-content/uploads/2022/05/Route53-0013-1024x576.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "Route53においてプライベートサブネット内にあるドメインをルーティングすることが可能なのはパブリックホストゾーンか、プライベートホストゾーンか",
+                            "answer": [
+                                "プライベートホストゾーン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "AWSにおいて、CNAMEレコードでアクセスしたら何レコードを返すか",
@@ -770,7 +788,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "Route53のホストゾーンは二つに分けられる。答えて",
@@ -952,7 +970,7 @@
                             ],
                             "memo": "ストレージのオートスケールだけは可能\n\nAurora serverlessなら可能",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "db.c6gd.mediumにおいてmediumをなんという",
@@ -1404,7 +1422,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -1629,7 +1647,7 @@
                                 "AWS KMS"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-24"
                         },
                         {
@@ -2113,11 +2131,31 @@
                             "answer": [
                                 "ELB",
                                 "Cloudfront",
-                                "API gateway"
+                                "API gateway",
+                                "lambda"
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "ACMとlambdaやELB、Cloudfront、API gatewayを使用する際にACMとの統合を行わずにサードパーティの証明書発行機関（CA）からSSL/TLS証明書を取得する場合はどのようなデメリットがあるか",
+                            "answer": [
+                                "証明書の更新作業を行う必要がある。（ACMでは証明書の自動更新がサポートされている）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "ACMとlambdaやELB、Cloudfront、API gatewayを統合することでどのようなメリットがあるか",
+                            "answer": [
+                                "簡単なデプロイ：ACMはこれらのAWSサービスに直接統合されており、証明書のデプロイが簡単になります。複雑な設定は不要で、数回のクリックでセキュリティの強化が完了します。",
+                                "自動更新：ACMは証明書の自動更新をサポートしており、証明書の期限切れを心配する必要がありません。AWSが提供する証明書は90日ごとに自動更新されます。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 }
@@ -3623,8 +3661,8 @@
                                 "Cu2O→赤"
                             ],
                             "memo": "フェーリング反応で赤色沈殿が生じることと関連づけて覚えれば良い",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-25"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "iceがとけて、waterになるとvolumeが現象する理由。",
@@ -3695,8 +3733,8 @@
                                 "原子番号が小さいほど、水酸化物イオンを引っ張る力がつよいため、塩基の力が弱くなる。"
                             ],
                             "memo": "https://受験理系特化プログラム.xyz/wp-content/uploads/2021/11/Screen-Shot-2021-11-17-at-9.47.54-AM.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ダイヤモンド型構造　例３",
@@ -3844,7 +3882,7 @@
                             ],
                             "memo": "CaC2 + 2H2O → C2H2 + Ca(OH)2\nその後にこの反応が続く",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "BaSO4の用途は",
@@ -4727,8 +4765,8 @@
                                 "複眼"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ナス科　4つ答えて",
@@ -4862,7 +4900,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "胃液から出るタンパク質を分解する消化酵素は？",
@@ -5148,8 +5186,8 @@
                                 "後頭葉"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -5908,7 +5946,7 @@
                             ],
                             "memo": "アブラナ科のおしべは６本\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -6083,7 +6121,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-22"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "植物の内皮細胞のなかには（A）と呼ばれる重力を感知する構造体が存在する。",
@@ -6676,7 +6714,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ユリ科の例を3つあげてください",
@@ -6726,7 +6764,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 }
@@ -6757,13 +6795,14 @@
                             "last_answered_date": "2025-04-18"
                         },
                         {
-                            "problem": "インフレの時は中央銀行は金利を上げる？下げる？",
+                            "problem": "インフレの時は中央銀行は金利を上げる？下げる？理由も含めて",
                             "answer": [
-                                "上げる"
+                                "上げる",
+                                "金利が高くなると、借り入れコストが増えるため、企業も個人もお金を借りにくくなり、支出が減ります。\n\n需要を抑えて物価上昇を抑制\n　→ 需要が落ち着くことで、物の値段（インフレ）も落ち着きやすくなります。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "帰属計算ぶんもふくめて金銭で換算したGDPをなんとよぶ？",
@@ -8980,8 +9019,8 @@
                                 "イナゴ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-03-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "He felt a pang of guilt after lying to his friend.",
@@ -9268,8 +9307,8 @@
                                 "その山の頂上は雪に覆われていた。\n"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ecological system",
@@ -9636,6 +9675,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "Active directoryの中のデータ（ユーザー・グループなど）にアクセスするための標準プロトコルをなんというか",
+                            "answer": [
+                                "LDAP"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -9778,7 +9826,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "SSLの流れにおいて、クライアントからのSSLの要求に対して、（A）は証明書をクライアントに送付する。",
@@ -9823,7 +9871,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -10627,8 +10675,8 @@
                                 "低周波数帯であるため"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -10715,7 +10763,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-22"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "円運動の速度は？",
@@ -11204,13 +11252,13 @@
                             "last_answered_date": "2025-05-24"
                         },
                         {
-                            "problem": "中緯度高圧帯の上にあるラインは？",
+                            "problem": "中緯度高圧帯の上にあるライン（帯）は？",
                             "answer": [
                                 "高緯度低圧帯"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQKwRCJHyyVbCWpibZ8fA1xOQFhZA07s9Zw&s",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "大規模な火山噴火によってできた巨大な凹地をなんという",
@@ -11587,7 +11635,7 @@
                                 "石灰岩が溶けること"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-05-15"
                         },
                         {
@@ -11595,7 +11643,7 @@
                             "answer": [
                                 "山口県の秋吉台（あきよしだい）"
                             ],
-                            "memo": "",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWwDGaAmdeZgHOOz3Qy1wM6F-wleIk-IpigQ&s",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-26"
                         },
@@ -11657,15 +11705,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-17"
-                        },
-                        {
-                            "problem": "海岸付近の陸地が沈降したり、海面が上昇したりすることで、海水が陸地に入り込んでできた地形を何という？",
-                            "answer": [
-                                "沈水海岸"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
                         },
                         {
                             "problem": "回帰線のうち、北側にある線を（A）、南側にある線を（B）という。",
@@ -12113,6 +12152,15 @@
                             "last_answered_date": "2025-05-16"
                         },
                         {
+                            "problem": "ドリーネが結合して大きくなると名称が変わりなにになるか",
+                            "answer": [
+                                "ウバーレ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
                             "answer": [
                                 "ア→シベリア気団",
@@ -12196,7 +12244,7 @@
                             ],
                             "memo": "https://www.ide.go.jp/library/Japanese/Publish/Reports/AjikenPolicyBrief/images/139_01.jpg\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "イギリス南部を流れる川は？",
@@ -12986,8 +13034,8 @@
                                 ""
                             ],
                             "memo": "https://www.i-net-japan.co.jp/river/2015-img/kita-amerika.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "エジプトの場所はどこ？",
@@ -13312,13 +13360,13 @@
                             "last_answered_date": "2025-05-16"
                         },
                         {
-                            "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　41,55.56.57,66答えて",
+                            "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　41,55.56.57答えて",
                             "answer": [
                                 ""
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-16"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ニュージーランドおよび日付変更線以東なのはポリネシア、ミクロネシア？",
@@ -13345,7 +13393,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA1-iPfL2xV2ipce6XJ0CnCW18flEOEPicnw&s\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ギアナ高地の場所は",
@@ -13844,7 +13892,7 @@
                             ],
                             "memo": "https://www.sakaiku.jp/real/florida_c_2.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -14010,8 +14058,8 @@
                                 "ホーチミン\n首都のハノイではない"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "タイの首都バンコクには何の工場が集積しているか",
@@ -14448,9 +14496,9 @@
                             "answer": [
                                 "ハノイ"
                             ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-23"
+                            "memo": "人口最大都市は",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "スペインの首都は？",
@@ -14613,7 +14661,7 @@
                             ],
                             "memo": "人口最大はチューリッヒZurich",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-20"
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -14696,8 +14744,8 @@
                                 "ブラジル"
                             ],
                             "memo": "共通点は南アメリカ",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "原油の産出量top3",
@@ -15208,8 +15256,8 @@
                                 "輸送農業"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "アメリカの北東部には、メガロポリスと呼ばれる巨大な都市圏があって、この大都市圏に新鮮な野菜を供給するために、園芸農業が広がっている。つまりこれは何農業",
@@ -15425,8 +15473,8 @@
                                 "Cfb"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ステップ気候は、砂漠気候を（A）分布している",
@@ -16143,8 +16191,8 @@
                                 "古期造山帯"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "バルカン半島周辺に流れている川は",
@@ -16217,7 +16265,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "フランスとスペインの境界にある山脈は？",
@@ -16281,8 +16329,8 @@
                                 "ホワイ川"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ドナウ川が流れている国3",
@@ -16349,8 +16397,8 @@
                                 "リアス海岸"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX_wM0L4_FSVme2SHNUU_qrtaTmYkk9SMAuw&s\n\n志摩半島　https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Et1JUMNwMuYdhnvEH1PNI21_4gkz8YYRZQ&s\n\n三陸海岸　https://assets.st-note.com/production/uploads/images/7315865/rectangle_large_type_2_8cb56091121a513db4c72cd80e6cea01.jpg?fit=bounds&quality=85&width=1280",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -16374,7 +16422,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "熱帯雨林気候の土壌は?",
@@ -16736,7 +16784,7 @@
                             ],
                             "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n離水海岸は沈水海岸には含まれない",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "沈水海岸を英語で",
@@ -16771,8 +16819,8 @@
                                 "サンフランシスコ湾"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "氷河による侵食でできたU字谷に海水が入り込んでできた入江を何という？ちなみに沈水海岸のひとつ",
@@ -16800,7 +16848,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "「陸地に深く入り込んでいる」という特徴を持つのはエスチュアリーかフィヨルドかどちらか",
@@ -16828,6 +16876,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "海岸付近の陸地が沈降したり、海面が上昇したりすることで、海水が陸地に入り込んでできた地形を何という？",
+                            "answer": [
+                                "沈水海岸"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-03"
                         }
                     ]
                 }
@@ -17224,7 +17281,7 @@
                         {
                             "problem": "日焼け止めに書いてあるPAはUV-A、UV-B、UV-Cのうちどれに対して効果があるのか",
                             "answer": [
-                                "UV-B"
+                                "UV-A"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -17242,11 +17299,20 @@
                         {
                             "problem": "SPFはUV-A、UV-B、UV-Cのうちどれに対する防止効果があるか",
                             "answer": [
-                                "UV-A"
+                                "UV-B"
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-25"
+                        },
+                        {
+                            "problem": "エモリエントの代表的なものは",
+                            "answer": [
+                                "ワセリン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
