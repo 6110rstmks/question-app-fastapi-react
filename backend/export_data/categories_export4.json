@@ -1324,6 +1324,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "AD connector自体にADの有無はあるか",
+                            "answer": [
+                                "ない。（オンプレミスADを使う）"
+                            ],
+                            "memo": "それに対してsimple ADではAWS上にADが作成される",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -1858,7 +1867,7 @@
                                 "5"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-02-22"
                         },
                         {
@@ -16882,6 +16891,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "ステラm22には肌の症状に合わせて波長を変えるフィルタがあるかないか",
+                            "answer": [
+                                "ある"
+                            ],
+                            "memo": "https://mitakabiyou.com/stellam22",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ヤグレーザーの波長は？",
