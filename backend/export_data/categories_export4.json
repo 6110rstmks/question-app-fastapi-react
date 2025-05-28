@@ -69,11 +69,11 @@
                         {
                             "problem": "EBSの指標のIOPSについてせつめいしてください",
                             "answer": [
-                                "IOPSの「PS」の部分は「Per Second(1秒あたりの)」という意味があるので、統合して考えるとIOPSとは「ストレージが1秒あたりに処理できるI/Oアクセスの数」ということになります。\n"
+                                "IOPSの「PS」の部分は「Per Second(1秒あたりの)」という意味があるので、「ストレージが1秒あたりに処理できるI/Oアクセスの数」ということになります。\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "IOPS数値が高いと何がいいのか？ ",
@@ -450,7 +450,16 @@
                             ],
                             "memo": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F129517%2F17c63048-b65f-5d69-5c2c-310c3791b95a.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=4395f0962f7ac6b3a541d601979b00d8\n\ntはインスタンスファミリー\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "ストレージ最適化のインスタンスファミリーのDの覚え方は？",
+                            "answer": [
+                                "Dense storage（最大 48 TB の HDD 搭載）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ストレージに特化したEC2インスタンスタイプは？",
@@ -462,6 +471,15 @@
                             "last_answered_date": "2025-03-23"
                         },
                         {
+                            "problem": "コンピューティング最適化のインスタンスファミリーはアルファベットの何か",
+                            "answer": [
+                                "C"
+                            ],
+                            "memo": "computeで覚える",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
                             "problem": "c5.9xlarge　においてインスタンスサイズはどこを表すか",
                             "answer": [
                                 "9xlarge"
@@ -469,6 +487,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "汎用型のインスタンスファミリーの覚え方は？",
+                            "answer": [
+                                "コンピューティング最適化、ストレージ最適化、メモリ最適化、以外のものが汎用型"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -518,7 +545,7 @@
                                 "AZ\nリージョンではない"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-25"
                         },
                         {
@@ -647,7 +674,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "aws s3 presign s3://amzn-s3-demo-bucket/mydoc.txt --expires-in 604800　これは何のコマンドか",
@@ -770,7 +797,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "Route53において複数のレコードの中からヘルスチェックでOKとなったレコードのみランダムにアクセスするようにルーティングするポリシーは？",
@@ -888,7 +915,7 @@
                         {
                             "problem": "transit gatewayは究極なにか？",
                             "answer": [
-                                "中央ハブ"
+                                "中央ハブ（エッジ間ルーティング）"
                             ],
                             "memo": "",
                             "is_correct": 2,
@@ -930,6 +957,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-02-12"
+                        },
+                        {
+                            "problem": "VPCピアリングとtransit gatewayを比較したときにトランジティブルーティングが不可能なのはどちらか",
+                            "answer": [
+                                "VPCピアリング（A⇄B、B⇄C は接続できても A⇄C は通信できない。）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -1358,8 +1394,8 @@
                                 "AD connector"
                             ],
                             "memo": "ADは作られず、オンプレミスADを使から",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "Simple AD / AD Connector / AWS Managed Microsoft ADのうち一番効果なのはどれか",
@@ -1441,38 +1477,6 @@
                     ]
                 },
                 {
-                    "name": "dynamodb",
-                    "questions": [
-                        {
-                            "problem": "DynamoDBストリームはDynamoDB テーブルに保存されたデータ項目の（A)をキャプチャする機能です。",
-                            "answer": [
-                                "変更"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-27"
-                        },
-                        {
-                            "problem": "DynamoDBテーブルに対する変更（項目の追加、更新、削除）をリアルタイムでキャプチャしてストリームに記録する機能を何という？",
-                            "answer": [
-                                "Dynamodbストリーム"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-23"
-                        },
-                        {
-                            "problem": "DynamoDBはトランザクション管理が可能か？",
-                            "answer": [
-                                "可能。"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-05-27"
-                        }
-                    ]
-                },
-                {
                     "name": "クライアントVPN",
                     "questions": []
                 },
@@ -1538,12 +1542,12 @@
                             "problem": "HTTPSの終端を扱うAWSのサービスは3つある。それらを答えよ。また、そもそもHTTPSの終端とはなにか？",
                             "answer": [
                                 "ALB",
-                                " API gateway",
+                                "API gateway",
                                 "Cloudfront"
                             ],
                             "memo": "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ELB（ALB）とAPI gatewayをHTTPS末端にするというのはELBとAPI gatewayをSSLのフローでいうところの（WEBサーバ・WEBクライアント）にするということ。これのどっちか",
@@ -1606,8 +1610,8 @@
                                 "ACM"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "AWSへの接続方法には2つ方法があり、インターネットを使用する方法としない方法（専用線接続）があるが、しない方法はどのようなサービスがあるか？",
@@ -1615,7 +1619,7 @@
                                 "AWS direct connect"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-20"
                         },
                         {
@@ -1665,11 +1669,11 @@
                         {
                             "problem": "EBSの指標のIOPSについてせつめいしてください",
                             "answer": [
-                                "IOPSの「PS」の部分は「Per Second(1秒あたりの)」という意味があるので、統合して考えるとIOPSとは「ストレージが1秒あたりに処理できるI/Oアクセスの数」ということになります。\n"
+                                "IOPSの「PS」の部分は「Per Second(1秒あたりの)」という意味があるので、「ストレージが1秒あたりに処理できるI/Oアクセスの数」ということになります。\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -1683,8 +1687,17 @@
                                 "専用線のため帯域幅が確保され、安定した通信速度で接続できます\n（インターネットが混み合っていても大丈夫）"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-26"
+                        },
+                        {
+                            "problem": "AWSのdirect connectはVPCと接続可能か",
+                            "answer": [
+                                "可能"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -1961,16 +1974,94 @@
                             "last_answered_date": "2025-02-22"
                         },
                         {
-                            "problem": "Application Auto Scaling の対応サービス",
+                            "problem": "Application Auto Scaling の対応サービス4",
                             "answer": [
                                 "ECS",
-                                "DynamoDB",
+                                "Aurora",
                                 "DynamoDB",
                                 "Amazon EMR"
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-27"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dynamodb",
+                    "questions": [
+                        {
+                            "problem": "DynamoDBストリームはDynamoDB テーブルに保存されたデータ項目の（A)をキャプチャする機能です。",
+                            "answer": [
+                                "変更"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "Dynamodbには二つのキャパシティモードがある。答えて",
+                            "answer": [
+                                "オンデマンドモード",
+                                "プロビジョニングモード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": " DynamoDB の利用量 ( キャパシティ ) を計算する単位のことをなんという",
+                            "answer": [
+                                "キャパシティユニット"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "DynamoDBテーブルに対する変更（項目の追加、更新、削除）をリアルタイムでキャプチャしてストリームに記録する機能を何という？",
+                            "answer": [
+                                "Dynamodbストリーム"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-23"
+                        },
+                        {
+                            "problem": "DyanamoDBの二つのキャパシティモードのうち、\nテーブルへの読み取り・書き込みリクエストの数に応じて、自動でキャパシティを調整して応答してくれるのはどちらか",
+                            "answer": [
+                                "オンデマンドキャパシティモード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "DynamoDB がテーブルの項目を保持する領域をなんという",
+                            "answer": [
+                                "パーティション"
+                            ],
+                            "memo": "https://user-images.githubusercontent.com/58995947/211311846-921fbadb-94bc-468f-81de-ae23255b6c55.png\n画像のようにh具体的な領域がみえるようになっている。\n対してRDSにはパーティションキーという概念は存在せず、データの物理配置はユーザーから隠蔽されている。",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "DynamoDBはトランザクション管理が可能か？",
+                            "answer": [
+                                "可能。"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "DyanamoDBの二つのキャパシティモードのうち、自動でキャパシティを調整して応答してくれるのはどちらか",
+                            "answer": [
+                                "プロビジョンドキャパシティモード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -2083,6 +2174,15 @@
                             "last_answered_date": "2025-05-14"
                         },
                         {
+                            "problem": "SNSだけの構成とSNS + SQS構成を比較したときSNSだけの構成ではどのようなリスクがあるか",
+                            "answer": [
+                                "メッセージのロストのリスクがある（通知先がHTTPエンドポイントやLambdaの場合、失敗した通知は再試行されるが、最終的に失敗する可能性もある"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
                             "problem": "SNSのサブスクライバーを答えて３",
                             "answer": [
                                 "Kinesis Data Firehose",
@@ -2100,13 +2200,13 @@
                                 "SNS + SQS構成：処理の信頼性→SQSがバッファーになるので安全\n処理タイミング：後でゆっくり処理（スケーラブル）"
                             ],
                             "memo": "Publisher\n   ↓\nSNS Topic\n   ├─ Email通知\n   ├─ Lambda関数\n   └─ HTTPSエンドポイント（Webhook）\n＝＝＝＝＝＝＝＝＝\nPublisher\n   ↓\nSNS Topic\n   ├─ SQSキュー（→ メール処理ワーカー）\n   ├─ SQSキュー（→ ログ保存処理）\n   └─ SQSキュー（→ 分析処理）",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "「ユーザーにメールを即時送信」ケースの場合、SNSだけの構成か、SNS + SQS構成どちらが適切か",
                             "answer": [
-                                "SNSだけ、処理が軽く、即時性が重要だから"
+                                "SNSだけ（処理が軽く、即時性が重要だから"
                             ],
                             "memo": "",
                             "is_correct": 1,
@@ -2120,6 +2220,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-02"
+                        },
+                        {
+                            "problem": "SNSにはFIFOモードがあるか",
+                            "answer": [
+                                "ある"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -2337,8 +2446,8 @@
                                 "半径と同じ長さの弧を持つ扇形が作る中心角"
                             ],
                             "memo": "https://rikeilabo.com/wp-content/uploads/2019/01/2-130.%E5%BC%A7%E5%BA%A6%E6%B3%95%E7%94%BB%E5%83%8F.010.jpeg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ユークリッド距離について説明",
@@ -3046,8 +3155,8 @@
                                 "18（希ガス）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-07"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "イオン化傾向のどこまでが熱水と反応する？",
@@ -3318,8 +3427,8 @@
                                 "フェーリング反応"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "炭素-炭素二重結合は回転できるか",
@@ -3400,8 +3509,8 @@
                                 "アルデヒド"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-23"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ジメチルケトンは慣用名で何と呼ばれている",
@@ -4276,7 +4385,7 @@
                             ],
                             "memo": "この反応は次の二段階で起こる。\n①\n（）②",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "アンモニアの工業的製法は",
@@ -4487,8 +4596,8 @@
                                 "◯"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ノギンやコーディンがBMPに結合することで、BMPは（A）できなくなる",
@@ -5735,7 +5844,7 @@
                             ],
                             "memo": "ヨモギ、ゴボウ、レタス、キク、コスモス、ハルジオン、ヒマワリ、ダリア",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "椎茸の旨味の成分は？",
@@ -6102,7 +6211,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "落葉と落果を促進する植物ホルモンは？",
@@ -6713,8 +6822,8 @@
                                 "単子葉植物"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "ユリ科の例を3つあげてください",
@@ -6734,7 +6843,7 @@
                             ],
                             "memo": "(キャベツ、ダイコン、ブロッコリー、コマツナ、ナズナ、アブラナ)",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "セリ科の植物の例4",
@@ -6755,7 +6864,7 @@
                             ],
                             "memo": "(ササ、イネ、タケ、エノコログサ、トウモロコシ、ススキ、ムギ)\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "アヤメ科は単子葉植物か双子葉植物か",
@@ -6998,7 +7107,7 @@
                                 "MACアドレスからIPアドレスを求める"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-14"
                         },
                         {
@@ -7561,6 +7670,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "システムの一部に障害が発生しても全体としては停止することなく稼働を続け、その間に復旧を図るような設計となっているシステムをなんという",
+                            "answer": [
+                                "フォールトトレランス"
+                            ],
+                            "memo": "これを実現するには各機器を最低でも二重構成にし、障害発生時には機器の切替えを即座に行えるように設計されていることが必須条件となります。",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 }
@@ -8127,8 +8245,8 @@
                                 "の講師は、大きな講堂の後ろまで自分の声が届くように声を張り上げなければならなかった"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "Sumo, or Japanese wrestling, dates back hundreds of years.",
@@ -8137,7 +8255,7 @@
                             ],
                             "memo": "our classic eight-hour-night only dates back to the invention of the light bulb in the late 1800s\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "The procurement of raw materials is essential for maintaining production efficiency.",
@@ -9541,8 +9659,8 @@
                                 "暗くなる　　dar"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "焼畑農業　英語で",
@@ -9627,8 +9745,8 @@
                                 "when I get home, I'll make lunch."
                             ],
                             "memo": "特に、「家に帰ったら」の部分は未来のことなので、英語では 「when + 現在形」 で表し、その結果として「昼飯を作る」には 「will」 を使って未来を表します。",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "その間違いは誤解から生じました。",
@@ -10889,8 +11007,8 @@
                                 "主記憶装置"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "人が誤操作をしたとしても事故につながらない、または誤操作自体が起きないようにすることで、安全を守ることができる設計を何という？",
@@ -11636,7 +11754,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-15"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "国内でカルスト地形が見られる場所",
@@ -12067,7 +12185,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ウズベキスタンとカザフスタンどちらが大きいか",
@@ -12795,7 +12913,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-26"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ブータン王国の国民の80%は何教を信仰している",
@@ -13191,7 +13309,7 @@
                             ],
                             "memo": "https://stat.ameba.jp/user_images/20141214/13/worldhistory-univ/43/fe/p/o0800060013158442497.png\n\nhttps://juken-geography.com/wp-content/uploads/2020/07/river-europa-map-1.png\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　\n\nhttps://tk.ismcdn.jp/mwimgs/3/1/375w/img_31404d25cc4c883f7a0382195354537a309472.jpg",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ポー川はどこの国で流れている？",
@@ -14116,15 +14234,6 @@
                             "last_answered_date": "2025-05-23"
                         },
                         {
-                            "problem": "フランス南部に位置する都市で、欧州航空宇宙産業の中心地として知られています。​特に、エアバスやATRの組み立て工場が所在している都市は？",
-                            "answer": [
-                                "トゥールーズToulouse"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-25"
-                        },
-                        {
                             "problem": "アメリカのステップ気候は（A）、（B）に分布！",
                             "answer": [
                                 "北緯40°以南",
@@ -14178,15 +14287,6 @@
                             "memo": "https://lh6.googleusercontent.com/proxy/gNq_2M3ezpkYFfQRsnPsOkpGj0sD4FNO9ZeC0Q08KxNK5bxhFsv6V9sl66RKCjQ1fX2JEpNKlijrs9Jy7d70hOjQCEc3zNN9gGe1pqkxSQ",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-26"
-                        },
-                        {
-                            "problem": "フランス北東部、モーゼル川上流域に分布するフランス最大の鉄鉱石産地は？",
-                            "answer": [
-                                "ロレーヌ地方"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
                         },
                         {
                             "problem": "バングラデッシュは世界の人口ランキングで何位？",
@@ -14928,7 +15028,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-13"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "熱帯の農業方式といえば",
@@ -15432,6 +15532,15 @@
                             "last_answered_date": "2025-05-12"
                         },
                         {
+                            "problem": "サハラ砂漠の南側の部分のステップ気候のことをなんという",
+                            "answer": [
+                                "サヘル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
                             "problem": "砂漠気候(BW)の条件：降水量：概ね年降水量が（A）",
                             "answer": [
                                 "250mm未満"
@@ -15811,12 +15920,12 @@
                             "last_answered_date": "2025-05-22"
                         },
                         {
-                            "problem": "ヨーロッパでドイツに次ぐ自動車工業の盛んな国は",
+                            "problem": "ヨーロッパでドイツに次ぐ自動車工業の盛んな国とその都市は",
                             "answer": [
                                 "スペイン（バルセロナ）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-26"
                         },
                         {
@@ -15874,6 +15983,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-14"
+                        },
+                        {
+                            "problem": "フランス北東部、モーゼル川上流域に分布するフランス最大の鉄鉱石産地は？",
+                            "answer": [
+                                "ロレーヌ地方"
+                            ],
+                            "memo": "https://www.icruises.jp/area/uploads/202006/maps_rhine.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-25"
+                        },
+                        {
+                            "problem": "フランス南部に位置する都市で、欧州航空宇宙産業の中心地として知られています。​特に、エアバスやATRの組み立て工場が所在している都市は？",
+                            "answer": [
+                                "トゥールーズToulouse"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
@@ -16312,7 +16439,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ニュージーランドは環太平洋造山帯に含まれていますか？",
@@ -16550,7 +16677,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ラトソルの色は何色？",
@@ -16651,8 +16778,8 @@
                                 "ベンゲラ鉄道"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ファベーラとは",
@@ -16828,8 +16955,8 @@
                                 "フィヨルド"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "リアス海岸では波が穏やかであるという特徴から何が盛んに行われているか",
@@ -16884,7 +17011,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 }
@@ -17135,7 +17262,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "アレキサンドライトレーザーの波長は？",
@@ -17325,8 +17452,8 @@
                                 "ASTやALTの上昇"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "漢方には副作用があるかないか",
@@ -17579,8 +17706,8 @@
                                 "activity log"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "Microsoft Azure が提供する SSL/TLS 証明書の一種で、Azure 上の Web アプリケーション（App Service）に HTTPS 通信を簡単に導入するためのサービスは？",
@@ -17621,6 +17748,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-18"
+                        },
+                        {
+                            "problem": "AzureのApplication insightsにデータを保存する」は正しいか間違っているか",
+                            "answer": [
+                                "間違っている。データの保存先はlog analytics workspaceです。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         }
                     ]
                 },
