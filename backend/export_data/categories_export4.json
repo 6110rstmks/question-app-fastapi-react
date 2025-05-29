@@ -165,7 +165,7 @@
                                 "メッセージの重複処理を防ぐ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-01"
                         },
                         {
@@ -204,6 +204,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-02-12"
+                        },
+                        {
+                            "problem": "SQSアクセスポリシーは何に対して適用するか",
+                            "answer": [
+                                "SQS自体"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "特定のAWSサービス(EC2, SNS)からのみSQSへのアクセスを許可してまたは特定のAWSサービス（lambda）からのみSQSへのアクセスを禁止するには何を設定する？",
@@ -250,6 +259,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-17"
+                        },
+                        {
+                            "problem": "SQSアクセスポリシーではPrincipalの設定を明示的にする必要があるかする必要はないか",
+                            "answer": [
+                                "する必要がある。"
+                            ],
+                            "memo": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"AllowLambdaToSend\",\n      \"Effect\": \"Allow\",\n      \"Principal\": {\n        \"Service\": \"lambda.amazonaws.com\"\n      },\n      \"Action\": \"sqs:SendMessage\",\n      \"Resource\": \"arn:aws:sqs:ap-northeast-1:123456789012:MyQueue\"\n    }\n  ]\n}",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -391,7 +409,7 @@
                             ],
                             "memo": "そのほかの方法としてはEventBridgeを使用してバッチの実行前後にリードレプリカを追加・削除するトリガーを設定する",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "自動でスケールイン/スケールアウトのは通常のAuroraかAurora serverlessか",
@@ -403,13 +421,13 @@
                             "last_answered_date": "2025-05-27"
                         },
                         {
-                            "problem": "AWS auroraがデフォルトでオンになっている機能は",
+                            "problem": "AWS Auroraにおいてデフォルトでオンになっている機能は",
                             "answer": [
                                 "マルチAZ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -496,66 +514,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-28"
-                        }
-                    ]
-                },
-                {
-                    "name": "ELB",
-                    "questions": [
-                        {
-                            "problem": "どうしてELBを使用するか。説明してください。",
-                            "answer": [
-                                "例えば、Webサーバーとして機能するEC2インスタンスが複数台あり、それらへアクセスを分散させて安定稼働を図りたい場合等に用いられる。",
-                                "同じ構成のec2インスタンスを別々のAZに配置することがえき、負荷分散が可能です。"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-12"
-                        },
-                        {
-                            "problem": "NLBはOSI参照モデルの第何層,何層で動作するか？",
-                            "answer": [
-                                "4層（トランスポート層）"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-25"
-                        },
-                        {
-                            "problem": "ELBのconnection drainingについて説明してください",
-                            "answer": [
-                                "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を停止する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。\n"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-14"
-                        },
-                        {
-                            "problem": "ELBにおいて複数のアベイラビリティーゾーンに設置された複数のEC2インスタンスに着信要求を均等に分散する機能をなんというか？",
-                            "answer": [
-                                "クロスゾーン負荷分散"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-20"
-                        },
-                        {
-                            "problem": "Auto ScalingグループにALBのターゲットグループを構成して、EC2インスタンスを複数の（A）に分散させます。",
-                            "answer": [
-                                "AZ\nリージョンではない"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-25"
-                        },
-                        {
-                            "problem": "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を（A）する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。",
-                            "answer": [
-                                "停止"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-13"
                         }
                     ]
                 },
@@ -1051,8 +1009,8 @@
                                 "リードレプリカ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-13"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "AWS RDSにおいてマルチAZを配置する目的は何か。またその理由",
@@ -1307,6 +1265,18 @@
                             "last_answered_date": "2025-05-25"
                         },
                         {
+                            "problem": "Cloudfrontにおいてオリジンとして利用できるリソースは",
+                            "answer": [
+                                "EC2",
+                                "S3",
+                                "ALB",
+                                "API gateway"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
+                        {
                             "problem": "S3 バケットで公開しているコンテンツを、CloudFront からのアクセスのみに制限するための機能を何という",
                             "answer": [
                                 "Origin Access Identity (OAI)\nまたはOrigin Access Control (OAC)"
@@ -1464,11 +1434,11 @@
                         {
                             "problem": "Active directoryの機能にドメイン参加があるが、ドメイン参加をするとどうなるのか",
                             "answer": [
-                                "ドメイン参加前\n\nPCはローカルアカウントでログイン（例　PC/ユーザー名）\n\n管理者が一台ずつ設定・管理\nドメイン参加後：\n\nPCはADユーザーアカウントでログイン可能（例：corp.example.com/user1）\n\n管理者はAD上でポリシーやアクセス制御を一元管理できる\n\nファイル共有、プリンタ利用、VPN接続なども一括設定できる\n"
+                                "ドメイン参加前\n\nPCはローカルアカウントでログイン（例　PC/ユーザー名）\n\n管理者が一台ずつ設定・管理\n===========\nドメイン参加後：\n\nPCはADユーザーアカウントでログイン可能（例：corp.example.com/user1）\n\n管理者はAD上でポリシーやアクセス制御を一元管理できる\n\nファイル共有、プリンタ利用、VPN接続なども一括設定できる\n"
                             ],
                             "memo": " ドメイン参加のメリット\n機能\t説明\n共通ログイン（SSO）\tADに参加していればどのPCでも自分のIDでログインできる",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "AWS Managed Microsoft ADは最大ユーザを何名管理できるか",
@@ -1486,7 +1456,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "既存の  ADワークロードを AWS クラウドに移行するにはSimple AD / AD Connector / AWS Managed Microsoft ADのうちどれが最適か",
@@ -2021,6 +1991,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "Amazon EC2 auto scaling のウォームプールとは",
+                            "answer": [
+                                "起動済みまたは部分的に初期化されたインスタンスをあらかじめプールしておく機能です。これにより、急激なトラフィックの増加に対応するためのスケーリング時間を短縮できます。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -2121,6 +2100,93 @@
                     ]
                 },
                 {
+                    "name": "ALB",
+                    "questions": [
+                        {
+                            "problem": "どうしてELBを使用するか。説明してください。",
+                            "answer": [
+                                "例えば、Webサーバーとして機能するEC2インスタンスが複数台あり、それらへアクセスを分散させて安定稼働を図りたい場合等に用いられる。",
+                                "同じ構成のec2インスタンスを別々のAZに配置することがえき、負荷分散が可能です。"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-02-12"
+                        },
+                        {
+                            "problem": "NLBはOSI参照モデルの第何層,何層で動作するか？",
+                            "answer": [
+                                "4層（トランスポート層）"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "ELBのconnection drainingについて説明してください",
+                            "answer": [
+                                "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を停止する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-14"
+                        },
+                        {
+                            "problem": "ELBにおいて複数のアベイラビリティーゾーンに設置された複数のEC2インスタンスに着信要求を均等に分散する機能をなんというか？",
+                            "answer": [
+                                "クロスゾーン負荷分散"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-02-20"
+                        },
+                        {
+                            "problem": "Auto ScalingグループにALBのターゲットグループを構成して、EC2インスタンスを複数の（A）に分散させます。",
+                            "answer": [
+                                "AZ\nリージョンではない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "albは単一AZ内に作成されるか、単一リージョン内に作成されるかどっち",
+                            "answer": [
+                                "単一リージョン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
+                        {
+                            "problem": "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を（A）する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。",
+                            "answer": [
+                                "停止"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-13"
+                        },
+                        {
+                            "problem": "ALB自体が複数のリージョンをまたぐことは可能か？　",
+                            "answer": [
+                                "不可能"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
+                        {
+                            "problem": "1つのALBを複数リージョンにまたがって使うことはできないが、あるサービスと使用することで複数のリージョンにまたがらせれる。答えて",
+                            "answer": [
+                                "Route53"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        }
+                    ]
+                },
+                {
                     "name": "API gateway",
                     "questions": [
                         {
@@ -2186,6 +2252,15 @@
                             "last_answered_date": "2025-04-27"
                         },
                         {
+                            "problem": "アイデンティティベースのポリシーとリソースベースのポリシーにおいてリソースベースのポリシーの対象は",
+                            "answer": [
+                                "AWSリソース（S3バケット、SQSキュー、Lambda関数など）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
+                        {
                             "problem": "IAMのポリシーは3つに分類される。答えて",
                             "answer": [
                                 "AWS管理ポリシー",
@@ -2195,6 +2270,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-25"
+                        },
+                        {
+                            "problem": "アイデンティティベースのポリシーとリソースベースのポリシーにおいてアイデンティティベースのポリシーの対象は",
+                            "answer": [
+                                "IAMユーザ、グループ、ロール"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "AWS IAMにおいてカスタマー管理ポリシーとインラインポリシーの違いは",
@@ -2213,6 +2297,15 @@
                             "memo": "そのエンティティ専用であり、再利用はできません（他のユーザーやロールに使い回せない）。",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "アイデンティティベースポリシーとリソースベースポリシーのクロスアカウントに対する対応の違いを教えて",
+                            "answer": [
+                                "リソースベースポリシー→\nクロスアカウント対応：\n\n単体でクロスアカウントアクセスを許可できる。（直接他アカウントのプリンシパルを指定可能）"
+                            ],
+                            "memo": "例：\nリソースベースポリシー→アカウントBのS3バケットに、アカウントAのIAMユーザーを許可するエントリを書けば、それだけでアクセス可能。\n\n// アカウントBのS3バケットのバケットポリシー\n{\n  \"Effect\": \"Allow\",\n  \"Principal\": {\n    \"AWS\": \"arn:aws:iam::123456789012:user/SomeUser\"（アカウントAのユーザ）\n  },\n  \"Action\": \"s3:GetObject\",\n  \"Resource\": \"arn:aws:s3:::example-bucket/*\"\n}",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -2320,6 +2413,21 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-28"
+                        }
+                    ]
+                },
+                {
+                    "name": "EFS",
+                    "questions": [
+                        {
+                            "problem": "EFSのパフォーマンスモードには二つのモードがある。答えて",
+                            "answer": [
+                                "汎用モード",
+                                "最大I/Oモード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 }
@@ -2566,8 +2674,8 @@
                                 "Yes!(係数が1.0.1.0.1)だから"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "整式の剰余の解法4",
@@ -3148,7 +3256,7 @@
                             ],
                             "memo": "ドルトンの分圧の法則とは異なるね\n\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "石油の分留において、重油の次に沸点の低いものはなにか",
@@ -3305,8 +3413,8 @@
                                 "contact process"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-11"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -3647,7 +3755,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -3743,8 +3851,8 @@
                                 "4+. こちらの方が安定"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "鉱石にはFe2O3だけではなく、SiO2やAl2O3が不純物として存在しており、これらが石灰石の熱分解で生じたCaOと反応して 生じたCaSiO3やCa(AlO2)2を何という",
@@ -4073,8 +4181,8 @@
                                 "アルカリ金属イオン、NH4+イオンを除くほとんどのイオンが沈澱する"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-30"
                         },
                         {
                             "problem": " 塩化物の沈殿の語呂",
@@ -4266,8 +4374,8 @@
                                 "物質が蓄えているエネルギー"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-30"
                         },
                         {
                             "problem": "反応エンタルピーとは",
@@ -4276,7 +4384,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "黒鉛の燃焼熱は394kjの発熱する。このときΔHはどのように表す",
@@ -4969,8 +5077,8 @@
                                 "コケ植物"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -5138,7 +5246,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "酸素解離度曲線の横軸と縦軸について答えて、",
@@ -6065,7 +6173,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-30"
                         },
                         {
                             "problem": "UV-A,UV-B,UV-Cのうち、オゾン層で吸収されるものは？",
@@ -6332,6 +6440,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-16"
+                        },
+                        {
+                            "problem": "植物が刺激に対して一定の方向に曲がる反応をなんという",
+                            "answer": [
+                                "屈性"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -6362,8 +6479,8 @@
                                 "cell cycle"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "細胞周期の間期を英語で何という？",
@@ -7182,7 +7299,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-14"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "わかりそうでわからないのサイトでMPUは何と例えている？",
@@ -7646,8 +7763,8 @@
                                 "ともにデータの書き込みにストライピングを用います。\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "細分化したデータを複数の磁気ディスクに巡回的に並列入出力することによって，転送速度の向上を図っている。これはraid?の説明？",
@@ -8328,8 +8445,8 @@
                                 "相撲, すなわち日本式レスリング, の起源は何百年前にも遡る。"
                             ],
                             "memo": "our classic eight-hour-night only dates back to the invention of the light bulb in the late 1800s\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "The procurement of raw materials is essential for maintaining production efficiency.",
@@ -9828,8 +9945,8 @@
                                 "The mistake arose from a misunderstanding."
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "彼は理科だけではなく英語も好きです。",
@@ -9864,7 +9981,7 @@
                             "answer": [
                                 "ユーザ名、パスワード、メールアドレスなどをまとめて管理するサービスのこと"
                             ],
-                            "memo": "",
+                            "memo": "学校の自主室のPCは学籍番号でログインできるようになっていたけどそれ",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-19"
                         },
@@ -9991,7 +10108,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "セキュリティのSSLを一言で説明してください",
@@ -10044,8 +10161,8 @@
                                 "公開鍵暗号方式"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "公開鍵から秘密鍵を作成するか秘密鍵から公開鍵を作成するかどっちか",
@@ -10053,8 +10170,8 @@
                                 "秘密鍵から公開鍵を作成する"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "楕円曲線暗号は共通鍵暗号方式か公開鍵暗号方式のどちらか",
@@ -11186,8 +11303,8 @@
                                 "ノンプリエンプティブ方式（協調的マルチタスク）"
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法（OSがCPUを管理しないで、アプリケーション（プログラム）にタスクの切り替えを任せる）\nつまりスケジューリング方式の例として、到着順方式がある。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "実行可能なタスクに対してプロセッサの使用権限を割り当てることを何という",
@@ -11339,8 +11456,8 @@
                                 "風積土"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-14"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "地理の問題を解く際に使用する年代 およそ1955年~73年はなにがあった",
@@ -11421,14 +11538,14 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "パンパは何川流域にあるか",
                             "answer": [
                                 "ラプラタ川"
                             ],
-                            "memo": "",
+                            "memo": "https://toudounavi.com/wp-content/uploads/2024/05/3-5_2south-america.png\n\nhttps://stat.ameba.jp/user_images/20150522/09/worldhistory-univ/eb/bf/p/o0800106613314313892.png\n",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-29"
                         },
@@ -12176,7 +12293,7 @@
                                 "ペルー海流"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 2,
                             "last_answered_date": "2025-04-17"
                         },
                         {
@@ -13160,6 +13277,15 @@
                             "last_answered_date": "2025-05-27"
                         },
                         {
+                            "problem": "ペルー海流の場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://geography0123.com/wp-content/uploads/2023/08/image-57.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
+                        {
                             "problem": "ホワイ川はどこにある",
                             "answer": [
                                 "中国　黄河と長河の間"
@@ -13327,8 +13453,8 @@
                                 "イタリア、クロアチア、ボスニアヘルテェゴビナ、モンテネグロ、アルバニア"
                             ],
                             "memo": "https://kotokurabe.com/makoto/wp-content/uploads/nature/mediterranean-sea-03.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "アタカマ砂漠の場所",
@@ -13364,8 +13490,8 @@
                                 "下→スーダン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "コンゴ川どこにある？",
@@ -13458,8 +13584,8 @@
                                 ""
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/c/0/soc_geo/10_0_34_2/c_soc_geo_10_0_34_2_image01.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "マラカイボ湖はどの国にある？",
@@ -13674,8 +13800,8 @@
                                 ""
                             ],
                             "memo": "https://o.quizlet.com/vTRAo7eN2Sh2CpvZa-VxkQ.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "ボリビア 場所",
@@ -14223,8 +14349,8 @@
                                 "サウジアラビア"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
@@ -14422,8 +14548,8 @@
                                 "放射環状路型"
                             ],
                             "memo": "https://stat.ameba.jp/user_images/20190930/08/m-coupe339/3c/3f/j/o1080144014602836646.jpg?caw=800",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "冷帯で平地にタイガが広がるためロシアは何業が盛ん？",
@@ -14625,8 +14751,8 @@
                                 "インド"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJf8TMGAshFESfokO4BSZZDL4-dwgABQlWxQ&s",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "カナダの首都は",
@@ -14772,7 +14898,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -15485,8 +15611,8 @@
                                 "砂漠化が進行"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-21"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "同じ耕地に、種類の異なる作物を一定の順番で栽培していくことを何という",
@@ -15985,8 +16111,8 @@
                                 "ラトソル"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -16073,8 +16199,8 @@
                                 "ロレーヌ地方"
                             ],
                             "memo": "https://www.icruises.jp/area/uploads/202006/maps_rhine.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "フランス南部に位置する都市で、欧州航空宇宙産業の中心地として知られています。​特に、エアバスやATRの組み立て工場が所在している都市は？",
@@ -16243,8 +16369,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxAsV5WXhHJF-Tbbtmq_uqfNRfitF3EIAGpw&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-10"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "雲南省は何の栽培で有名か",
@@ -16333,8 +16459,8 @@
                                 "西部大開発"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "中国本土が社会主義なのに対してホンコンは何主義か",
@@ -16843,7 +16969,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk0XFLz2UN8JqbWstN9tJtX8IoYuiF45Tkdg&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "ブラジルの公用語はなんですか",
@@ -16909,7 +17035,7 @@
                             "last_answered_date": "2025-05-27"
                         },
                         {
-                            "problem": "シナ・チベット語族に属する語は？",
+                            "problem": "シナ・チベット語族に属する語は？2",
                             "answer": [
                                 "中国語",
                                 "チベット語"
@@ -16935,7 +17061,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "ゲルマン語系の言語は？5",
@@ -17011,8 +17137,8 @@
                                 "ラッパ状"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDE6h6s9naH1F6q9D9Hr4lUaLuKnpfVfygeA&s",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "ラプラタ川はフィヨルド・エスチュアリー・リアス海岸のどれにあたるか",
@@ -17075,8 +17201,8 @@
                                 "エスチュアリー"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "河川の侵食で形成された谷をＶ字谷というのに対して、氷河による侵食で形成された谷を何と言う",
@@ -17154,8 +17280,8 @@
                                 "ガルgal"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "latexを用いずに⁵をgptに表示してもらいたい場合はなんとお願いする？",
@@ -17231,8 +17357,8 @@
                                 "ピコレーザー"
                             ],
                             "memo": "https://www.cynosure.co.jp/blog/4",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "Qスイッチレーザーは三種類ある。答えて",
@@ -17453,6 +17579,16 @@
                             "last_answered_date": "2025-05-27"
                         },
                         {
+                            "problem": "保湿剤は作用機構から二つに分類される。答えて",
+                            "answer": [
+                                "エモリエント",
+                                "モイスチャライザー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
+                        {
                             "problem": "アズノール軟膏はなにへの使用が適さない？",
                             "answer": [
                                 "にきび"
@@ -17556,7 +17692,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 }
@@ -17578,13 +17714,13 @@
                             "last_answered_date": "2025-04-04"
                         },
                         {
-                            "problem": "BS（balance sheet）の左側を何という？",
+                            "problem": "BS（balance sheet）の左側にはなんの項目がある",
                             "answer": [
                                 "資産"
                             ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-12"
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZp_aSN7ySpH9thCskdWFxKfVXy_vOv6s52A&s",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "ROEの公式",
@@ -17753,7 +17889,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-10"
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "azureのログのデータベースのサービスは何？",
@@ -17861,8 +17997,8 @@
                                 "ZRSは、LRSよりもコスト、可用性、持続性の高いオプションです。\n通常Azureリージョン内には複数のデータセンターが存在しますが、ZRSでは同一リージョン内の3つのデータセンター間で同期的に3重化され、年間99.9999999999%(トゥエルブナイン)以上の持続性が提供されます。\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "azure storage account種類3",
@@ -17884,8 +18020,8 @@
                                 "table storage"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 }
