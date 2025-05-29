@@ -732,6 +732,24 @@
                             "last_answered_date": "2025-05-28"
                         },
                         {
+                            "problem": "Route53においてルーティング先として複数のリソースを設定し、各リソースへのルーティングの割合を指定してトラフィックを分散させるルーティング方式は",
+                            "answer": [
+                                "加重ルーティング"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-30"
+                        },
+                        {
+                            "problem": "Route53においてユーザーから最もレイテンシーが少ないリージョンにアクセスするようルーティングするポリシーは",
+                            "answer": [
+                                "レイテンシールーティングポリシー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-30"
+                        },
+                        {
                             "problem": "AWSにおいて、CNAMEレコードでアクセスしたら何レコードを返すか",
                             "answer": [
                                 "Aレコード"
@@ -782,15 +800,6 @@
                                 "複数値回答ルーティングポリシー"
                             ],
                             "memo": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F129517%2F7669a102-de9f-b9f9-390e-136b17507482.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=fae81d9a0e5152fad80b3315de0f937c\n\n複数のレコードの例、この中のヘルスチェックでOKとなったものの中で、レコードを返す\nName\tType\tRouting Policy\tValue\tHealth Check\nwww.example.com\tA\tMultivalue Answer\t13.112.0.1\tTokyo Health Check\nwww.example.com\tA\tMultivalue Answer\t3.91.24.5\tVirginia Health Check\nwww.example.com\tA\tMultivalue Answer\t18.194.2.3\tFrankfurt Health Check\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
-                        },
-                        {
-                            "problem": "Amazon Route 53 Resolverとはなにか",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-28"
                         },
@@ -1712,6 +1721,15 @@
                     "name": "glue",
                     "questions": [
                         {
+                            "problem": "AWS Glueではメタデータはどこに保管する",
+                            "answer": [
+                                "AWS Glueデータカタログ\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-30"
+                        },
+                        {
                             "problem": "AWS glue data catalogにおいて（A）により自動メタデータ登録が可能",
                             "answer": [
                                 "glueクローラ"
@@ -2248,7 +2266,7 @@
                                 "カスタマー管理ポリシー\n"
                             ],
                             "memo": "AWS管理ポリシーやカスタマー管理ポリシーは1つのポリシーを作成すれば多くのIAMユーザなどにアタッチすることができますが、インラインポリシーは1つのIAMユーザなど、1対1でのアタッチしかできません。",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-27"
                         },
                         {
@@ -2272,9 +2290,11 @@
                             "last_answered_date": "2025-04-25"
                         },
                         {
-                            "problem": "アイデンティティベースのポリシーとリソースベースのポリシーにおいてアイデンティティベースのポリシーの対象は",
+                            "problem": "アイデンティティベースのポリシーとリソースベースのポリシーにおいてアイデンティティベースのポリシーの対象を3つ答えて",
                             "answer": [
-                                "IAMユーザ、グループ、ロール"
+                                "IAMユーザ",
+                                "グループ",
+                                "ロール"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -2338,7 +2358,7 @@
                                 "Lambda"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-05-13"
                         },
                         {
