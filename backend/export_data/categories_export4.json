@@ -618,7 +618,7 @@
                                 "infrequency access.  低頻度アクセス用のストレージ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-02-12"
                         },
                         {
@@ -649,16 +649,26 @@
                             "last_answered_date": "2025-03-02"
                         },
                         {
-                            "problem": "Glacier ではデータをアップロードすると、そのデータをアーカイブ化して圧縮します。その上で、（A)というスペースにデータを保存します。（A)に入る単語は？",
+                            "problem": "S3のオブジェクトロックには二つのモードがある。答えて",
                             "answer": [
-                                "ボールト vault"
+                                "コンプライアンスモード",
+                                "ガバナンスモード"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
-                            "problem": "Amazon S3のバケット作成時にデフォルトで暗号化されるかいなか",
+                            "problem": "S3のオブジェクトロックのコンプライアンスモードとガバナンスモードのうち、管理者による削除が可能なのはどちらか",
+                            "answer": [
+                                "ガバナンスモード"
+                            ],
+                            "memo": "コンプライアンスモードでは管理者による削除が不可能",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
+                        {
+                            "problem": "Amazon S3のバケット作成時にデフォルトで暗号化されるかされないかどっち\n",
                             "answer": [
                                 "される"
                             ],
@@ -684,6 +694,15 @@
                             "memo": "\t署名付きURLの有効期限（秒単位）。604800秒 = 7日間。",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "S3のオブジェクトロックのうち、保持期間中はオブジェクトの削除や変更を防止し、保持期間終了後に変更を許可するようなものはどちらか",
+                            "answer": [
+                                "コンプライアンスモード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -804,9 +823,9 @@
                             "answer": [
                                 "複数値回答ルーティングポリシー"
                             ],
-                            "memo": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F129517%2F7669a102-de9f-b9f9-390e-136b17507482.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=fae81d9a0e5152fad80b3315de0f937c",
+                            "memo": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F129517%2F7669a102-de9f-b9f9-390e-136b17507482.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=fae81d9a0e5152fad80b3315de0f937c\n\n複数のレコードの例、この中のヘルスチェックでOKとなったものの中で、レコードを返す\nName\tType\tRouting Policy\tValue\tHealth Check\nwww.example.com\tA\tMultivalue Answer\t13.112.0.1\tTokyo Health Check\nwww.example.com\tA\tMultivalue Answer\t3.91.24.5\tVirginia Health Check\nwww.example.com\tA\tMultivalue Answer\t18.194.2.3\tFrankfurt Health Check\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "Amazon Route 53 Resolverとはなにか",
@@ -1018,6 +1037,15 @@
                             "last_answered_date": "2025-05-26"
                         },
                         {
+                            "problem": "このアプリケーションのデータベース層には、Amazon RDS MySQLデータベースが配置されています。最近、RDSインスタンスへの読み取り要求が増加しており、その結果、データベース処理のパフォーマンスが低下しています。 どうすればよい",
+                            "answer": [
+                                "リードレプリカの導入"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
                             "problem": "RDSにおいてマルチAZとごっちゃになってしまう特性を持った似ている機能は何か？",
                             "answer": [
                                 "リードレプリカ"
@@ -1162,6 +1190,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-13"
+                        },
+                        {
+                            "problem": "Glacier ではデータをアップロードすると、そのデータをアーカイブ化して圧縮します。その上で、（A)というスペースにデータを保存します。（A)に入る単語は？",
+                            "answer": [
+                                "ボールト vault"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-02-12"
                         },
                         {
                             "problem": "S3 glacierの種類を3つ述べてください",
@@ -2016,6 +2053,15 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
+                        {
+                            "problem": "DynamoDBのキャパシティユニットはどのように訳されるか",
+                            "answer": [
+                                "CU"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
                             "last_answered_date": "2025-05-28"
                         },
                         {
@@ -2042,6 +2088,15 @@
                                 "パーティション"
                             ],
                             "memo": "https://user-images.githubusercontent.com/58995947/211311846-921fbadb-94bc-468f-81de-ae23255b6c55.png\n画像のようにh具体的な領域がみえるようになっている。\n対してRDSにはパーティションキーという概念は存在せず、データの物理配置はユーザーから隠蔽されている。",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "Dynamodbテーブル作成時に設定しなければならなキーは？",
+                            "answer": [
+                                "パーティションキー"
+                            ],
+                            "memo": "ソートキーは任意",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-28"
                         },
@@ -2227,8 +2282,8 @@
                                 "ある"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -3110,8 +3165,8 @@
                                 "ほのおを出さずにもえる"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "原子核に近い方が力が強い（安定している）これをエネルギー準位でいいかえると？",
@@ -5974,7 +6029,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "Ｘ線の波長はどのくらいか",
@@ -6062,6 +6117,16 @@
                 {
                     "name": "plant hormone",
                     "questions": [
+                        {
+                            "problem": "膨圧運動の例は？2",
+                            "answer": [
+                                "気孔の開閉",
+                                "オジギソウの接触傾性"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
                         {
                             "problem": "光受容体であるクリプトクロムCryptochromeは何色の光を受容する？",
                             "answer": [
@@ -6171,8 +6236,8 @@
                                 "低い",
                                 "茎はしっかりしていて鈍感（感受性が低い）\n根は繊細で敏感（感受性が高い）"
                             ],
-                            "memo": "根の方がオーキシンに対する感受性が高い。",
-                            "is_correct": 0,
+                            "memo": "根の方がオーキシンに対する感受性が高い。\nhttps://assets.st-note.com/img/1705550681668-ssxkhbB2G6.pnghttps://assets.st-note.com/img/1705550681668-ssxkhbB2G6.png",
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-26"
                         },
                         {
@@ -6249,6 +6314,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-05-14"
+                        },
+                        {
+                            "problem": "チューリップの花の開閉は何傾性？",
+                            "answer": [
+                                "温度傾性"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "フィトクロムは何か？Go",
@@ -10871,8 +10945,8 @@
                                 "角速度"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "単振動とはなにかときかれたらなんと答える",
@@ -11355,8 +11429,8 @@
                                 "ラプラタ川"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "カシミール地方を巡って争っている国3",
@@ -11536,8 +11610,8 @@
                                 "大陸のどこか（東岸か西岸か）"
                             ],
                             "memo": "気温の分布とごっちゃにならないように\nセンター`2015年の大問1の3とか\nhttps://juken-geography.com/systematic/temperature/",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-29"
                         },
                         {
                             "problem": "暖流は低緯度、高緯度どちらからどちらに流れる？",
@@ -11994,8 +12068,8 @@
                                 "エスチュアリー"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "貿易依存度とは、（A）に対する輸出額・輸入額の割合です。",
@@ -12651,7 +12725,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "アマゾン川流域にある地域で焼畑農業が盛んな熱帯雨林を何という",
@@ -12800,7 +12874,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "大きな山脈の風下側にできる 砂漠をなんという",
@@ -13622,6 +13696,15 @@
                             "last_answered_date": "2025-05-26"
                         },
                         {
+                            "problem": "グレートプレーンズの場所は",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://exam.fukuumedia.com/wp-content/uploads/2019/11/greatprenzuprean.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-29"
+                        },
+                        {
                             "problem": "カラクム砂漠はどこの国にある？",
                             "answer": [
                                 "トルクメニスタン"
@@ -14051,7 +14134,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "インドの製造業（産業）で強いものは",
@@ -15009,7 +15092,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "園芸農業は、市場との距離によって2つに分けられる。答えて",
@@ -16964,8 +17047,8 @@
                                 "養殖"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "日本にあるリアス海岸を二つのべて",
