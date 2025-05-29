@@ -23,9 +23,9 @@ interface categoryInfo {
 export const useSubcategoryPage = (
     subcategoryId: number,
 ) => {
-    const [subcategoryName, setSubcategoryName] = useState<string>('');
-    const [questions, setQuestions] = useState<Question[]>([]);
-    const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null);
+    const [subcategoryName, setSubcategoryName] = useState<string>('')
+    const [questions, setQuestions] = useState<Question[]>([])
+    const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null)
     const location = useLocation()
     const [
         modalIsOpen, 
@@ -130,22 +130,22 @@ export const useSubcategoryPage = (
 
         const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer);
 
-        if (!modalIsOpen) {
+        if (!modalIsOpen && !isEditing) {
             window.addEventListener('keydown', onKeyDown)
         }
 
         return () => {
-            window.removeEventListener('keydown', onKeyDown);
-        };
-    }, [handleKeyDownForShowAnswer, modalIsOpen]);
+            window.removeEventListener('keydown', onKeyDown)
+        }
+    }, [handleKeyDownForShowAnswer, modalIsOpen, isEditing])
 
     // これはリロードした際に必要。
     useEffect(() => {
         if (location.state) {
             setCategoryInfo(location.state);
-            localStorage.setItem('categoryInfo', JSON.stringify(location.state));
+            localStorage.setItem('categoryInfo', JSON.stringify(location.state))
         }
-    }, [location.state]);
+    }, [location.state])
     
     useEffect(() => {
         // CategoryBoxからSubcategoryPageに移動する際に、CategoryBoxがページの下の方の場合、
