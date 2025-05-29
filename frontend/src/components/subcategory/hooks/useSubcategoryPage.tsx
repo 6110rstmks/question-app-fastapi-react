@@ -1,17 +1,20 @@
 import { useEffect, useState, useRef } from 'react'
 import { fetchSubcategory } from '../../../api/SubcategoryAPI'
 import { useLocation, useNavigate } from 'react-router'
-import { fetchQuestionsBySubcategoryId, fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionAPI'
+import { 
+    fetchQuestionsBySubcategoryId,
+    fetchUncorrectedQuestionCountBySubcategoryId 
+} from '../../../api/QuestionAPI'
 import { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI'
 import { handleKeyDownForShowAnswer } from '../../../utils/function'
 import { fetchProblem } from '../../../api/ProblemAPI'
-import { handleNavigateToCategoryPage } from '../../../utils/navigate_function';
+import { handleNavigateToCategoryPage } from '../../../utils/navigate_function'
 interface locationState {
-    categoryId: number;
-    categoryName: string;
-    subcategoryId: number;
-    subcategoryName: string;
+    categoryId: number
+    categoryName: string
+    subcategoryId: number
+    subcategoryName: string
 }
 
 interface categoryInfo {
