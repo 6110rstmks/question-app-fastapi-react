@@ -1,26 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
-import { fetchSubcategoriesWithQuestionCountByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI";
-import { fetchCategory } from "../../../api/CategoryAPI";
-import { Category } from "../../../types/Category";
+import React, { useState, useEffect } from 'react'
+import { SubcategoryWithQuestionCount } from "../../../types/Subcategory"
+import { fetchSubcategoriesWithQuestionCountByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI"
+import { fetchCategory } from "../../../api/CategoryAPI"
+import { Category } from "../../../types/Category"
 import { fetchProblem } from '../../../api/ProblemAPI'
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router"
+import { fetchUncorrectedQuestionCountByCategoryId } from '../../../api/QuestionAPI'
 
 export const useCategoryPage = (categoryId: number) => {
-    const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([]);
-    const [category, setCategory] = useState<Category>();
-    const [subcategoryName, setSubcategoryName] = useState<string>("");
-    const [searchWord, setSearchWord] = useState<string>("");
+    const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([])
+    const [category, setCategory] = useState<Category>()
+    const [subcategoryName, setSubcategoryName] = useState<string>("")
+    const [searchWord, setSearchWord] = useState<string>("")
+    const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null)
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchWord(e.target.value);
+        setSearchWord(e.target.value)
     }
 
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
         setSubcategories((prev) => [...prev, subcategory]);
-    };
+    }
 
     const handleSetUnsolvedProblem = async () => {
         const response = await fetchProblem('category', 'incorrect', 4, [categoryId], [])
@@ -77,20 +79,24 @@ export const useCategoryPage = (categoryId: number) => {
         (async () => {
             const category = await fetchCategory(categoryId);
             setCategory(category);
-        })();
-    }, []);
+
+            const uncorrectedQuestionCount = await fetchUncorrectedQuestionCountByCategoryId(categoryId)
+            setUncorrectedQuestionCount(uncorrectedQuestionCount);
+        })()
+    }, [])
 
     useEffect(() => {
         (async () => {
             const subcategories: SubcategoryWithQuestionCount[] = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId, searchWord);
             setSubcategories(subcategories)
         })();
-    }, [searchWord]);
+    }, [searchWord])
 
     return { 
         category,
         subcategories,
         subcategoryName,
+        uncorrectedQuestionCount,
         setSubcategoryName,
         handleAddSubcategory,
         searchWord,

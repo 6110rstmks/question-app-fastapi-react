@@ -34,6 +34,18 @@ async def get_question_count_by_last_answered_date(
 ):
     return question_crud.get_question_count_by_last_answered_date(db, question_get_count_by_answered_date.days_array)
 
+# 特定のカテゴリ内の不正解のQuestion数を取得するエンドポイント
+@router.get("/count/uncorrected/category_id/{category_id}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_uncorrected_count_in_category(
+    db: DbDependency,
+    category_id: int = Path(gt=0)
+):
+    found_category = category_crud.find_category_by_id(db, category_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    
+    return question_crud.get_question_uncorrected_count_in_category(db, category_id)
+
 # 不正解のQuestion数を取得するエンドポイント
 @router.get("/count/uncorrected", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_uncorrected_count(db: DbDependency):

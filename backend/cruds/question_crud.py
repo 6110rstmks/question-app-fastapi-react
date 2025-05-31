@@ -143,6 +143,16 @@ def get_question_uncorrected_count(db: Session):
     
     return int(count)
 
+def get_question_uncorrected_count_in_category(db: Session, category_id: int):
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(CategoryQuestion).
+                    where(Question.is_correct == SolutionStatus.Incorrect).
+                    where(CategoryQuestion.category_id == category_id)
+                )
+    return int(count)
+
 def get_question_uncorrected_count_in_subcategory(db: Session, subcategory_id: int):
 
     count = db.scalar(
@@ -315,8 +325,3 @@ def increment_answer_count(
     db.execute(stmt)
     db.commit()
     return find_question_by_id(db, question_id)
-
-
-    
-
-

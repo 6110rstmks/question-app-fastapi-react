@@ -12,7 +12,19 @@ export const fetchQuestion = async (question_id: number): Promise<Question> => {
     return await response.json();
 }
 
-// 問題文の一部からカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
+// 特定のサブカテゴリに紐づくQuestionを取得するAPI
+export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {
+    const url = `http://localhost:8000/questions/subcategory_id/${subcategory_id}`
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json();
+};
+
+// 問題文を部分検索することでカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
 export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord = async (
     searchProblemWord: string
 ): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
@@ -26,7 +38,7 @@ export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProble
     return await response.json();
 }
 
-// 解答の一部からカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
+// 解答を部分検索することでカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
 export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord = async (
     searchAnswerWord: string
 ): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
@@ -66,19 +78,7 @@ export const deleteQuestion = async (question_id: number): Promise<void> => {
     const response = await fetch(`http://localhost:8000/questions/${question_id}`, {
         method: 'DELETE',
     });
-};
-
-// 特定のサブカテゴリに紐づくQuestionを取得するAPI
-export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {
-    const url = `http://localhost:8000/questions/subcategory_id/${subcategory_id}`
-    const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    })
-    return await response.json();
-};
+}
 
 // すべてのQuestionの数を取得するAPI
 export const fetchQuestionCount = async (): Promise<number> => {
@@ -90,7 +90,49 @@ export const fetchQuestionCount = async (): Promise<number> => {
         }
     })
     return await response.json();
-};
+}
+
+// 特定のカテゴリ内の不正解のQuestionの数を取得するAPI
+export const fetchUncorrectedQuestionCountByCategoryId = async (
+    category_id: number
+): Promise<number> => {
+    const url = `http://localhost:8000/questions/count/uncorrected/category_id/${category_id}`;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json();
+}
+
+// 特定のカテゴリ内のTemporaryのQuestionの数を取得するAPI
+export const fetchTemporaryQuestionCountByCategoryId = async (
+    category_id: number
+): Promise<number> => {
+    const url = `http://localhost:8000/questions/count/temporary/category_id/${category_id}`;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json();
+}
+
+// 特定のカテゴリ内の正解のQuestionの数を取得するAPI
+export const fetchCorrectedQuestionCountByCategoryId = async (
+    category_id: number
+): Promise<number> => {
+    const url = `http://localhost:8000/questions/count/corrected/category_id/${category_id}`;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json();
+}
 
 // すべての不正解のQuestionの数を取得するAPI
 export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
@@ -102,8 +144,9 @@ export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
         }
     })
     return await response.json();
-};
+}
 
+// 特定のサブカテゴリ内の不正解のQuestionの数を取得するAPI
 export const fetchUncorrectedQuestionCountBySubcategoryId = async (
     subcategory_id: number
 ): Promise<number> => {
