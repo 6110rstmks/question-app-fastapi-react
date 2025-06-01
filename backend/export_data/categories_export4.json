@@ -211,8 +211,8 @@
                                 "SQS自体"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "特定のAWSサービス(EC2, SNS)からのみSQSへのアクセスを許可してまたは特定のAWSサービス（lambda）からのみSQSへのアクセスを禁止するには何を設定する？",
@@ -257,8 +257,8 @@
                                 "フロント側から注文のAPIを叩いて、バックエンド側でSQSにメッセージを送って、SQSを挟んで、在庫確認処理や、決済処理、配達準備処理（これらのバックエンド通知）が発火する。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "SQSアクセスポリシーではPrincipalの設定を明示的にする必要があるかする必要はないか",
@@ -267,7 +267,7 @@
                             ],
                             "memo": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"AllowLambdaToSend\",\n      \"Effect\": \"Allow\",\n      \"Principal\": {\n        \"Service\": \"lambda.amazonaws.com\"\n      },\n      \"Action\": \"sqs:SendMessage\",\n      \"Resource\": \"arn:aws:sqs:ap-northeast-1:123456789012:MyQueue\"\n    }\n  ]\n}",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-01"
                         }
                     ]
                 },
@@ -302,13 +302,13 @@
                             "last_answered_date": "2025-03-14"
                         },
                         {
-                            "problem": "Awsのサービスであるインターネットゲートウェイについて、（A）が外部のネットワークと接続するために必要となるAWSのコンポーネントです。",
+                            "problem": "Awsのサービスであるインターネットゲートウェイについて、何がインターネットと接続するために必要となるAWSのコンポーネントであるか",
                             "answer": [
                                 "VPC"
                             ],
-                            "memo": "",
+                            "memo": "インターネットゲートウェイは、AWSのVPC（Virtual Private Cloud）をインターネットに接続するためのコンポーネント",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "プライベートサブネットの通信は、インターネットゲートウェイを通るか、通らないか",
@@ -323,10 +323,10 @@
                             "problem": "インターネットゲートウェイは何にアタッチするか？またNATゲートウェイは何にアタッチするか",
                             "answer": [
                                 "インターネットゲートウェイ→VPC",
-                                "NATゲートウェイ→AZ"
+                                "NATゲートウェイ→パブリックサブネット"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-03"
                         }
                     ]
@@ -394,13 +394,13 @@
                             "last_answered_date": "2025-04-02"
                         },
                         {
-                            "problem": "global databaseはRDSの機能か。auroraの機能か",
+                            "problem": "global databaseはRDSの機能か。Auroraの機能か",
                             "answer": [
-                                "aurora"
+                                "Aurora"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-03-13"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "とあるシステムでDBにAurora PostgreSQLを使用している。 \n日中帯はリードレプリカ1台のみを稼働させ、夜間帯はバッチ処理を行うためにリードレプリカ台数を増加させたい。 \n急激なリクエスト増加に対応するために、バッチ処理開始時刻の前に増加させておきたい。\nこれに対応する方針を一つ述べて",
@@ -477,7 +477,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-30"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "ストレージに特化したEC2インスタンスタイプは？",
@@ -521,8 +521,8 @@
                                 "コンピューティング最適化、ストレージ最適化、メモリ最適化、以外のものが汎用型"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         }
                     ]
                 },
@@ -595,7 +595,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-02-12"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "データの使用頻度が不明であり、アクセスされるデータとアクセスされないデータが混在している場合はどのs3ストレージクラスを使用するか",
@@ -605,15 +605,6 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-06-01"
-                        },
-                        {
-                            "problem": "s3 glacier flexible retrievalとglacier instant retrievalのうち迅速にデータを取り出し可能なのはどちらか",
-                            "answer": [
-                                "glacier instant retrieval"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-02"
                         },
                         {
                             "problem": "S3のオブジェクトロックには二つのモードがある。答えて",
@@ -650,8 +641,8 @@
                                 "このURLを持っている人は、IAM認証なしで1hだけこのファイルにアクセス可能です。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "S3のイベント通知にはどのようなものがあるか",
@@ -670,8 +661,8 @@
                                 "AWS lambda"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "aws s3 presign s3://amzn-s3-demo-bucket/mydoc.txt --expires-in 604800　これは何のコマンドか",
@@ -698,8 +689,8 @@
                                 "コンプライアンスモード"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         }
                     ]
                 },
@@ -777,7 +768,7 @@
                             ],
                             "memo": "https://o2mamiblog.com/wp-content/uploads/2022/05/Route53-0002-1.jpg\n\nhttps://o2mamiblog.com/wp-content/uploads/2022/05/Route53-0009-1024x576.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "Route53においてユーザーから最もレイテンシーが少ないリージョンにアクセスするようルーティングするポリシーは",
@@ -966,14 +957,15 @@
                             "last_answered_date": "2025-03-24"
                         },
                         {
-                            "problem": "transit gatewayには二つの部品がある。なにとなにか。",
+                            "problem": "Transit Gatewayには3つの部品がある。なにとなにか。",
                             "answer": [
+                                "transit gateway本体",
                                 "transit gateway アタッチメント",
                                 "transit gatewayルートテーブル"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "VPCの接続元とVPCの接続先の二つあるとき、Transit gatewayアタッチメントはいくつ作成するか",
@@ -1001,6 +993,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "各ネットワーク（例：VPC、VPN、Direct Connect）をTransit Gatewayに接続するための接続ポイントをなんという",
+                            "answer": [
+                                "transit gateway アタッチメント"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         }
                     ]
                 },
@@ -1353,8 +1354,8 @@
                                 "5万"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "Simple AD / AD Connector / AWS Managed Microsoft ADのうちドメイン参加の機能を有していないものはどれか",
@@ -1363,7 +1364,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "既存の  ADワークロードを AWS クラウドに移行するにはSimple AD / AD Connector / AWS Managed Microsoft ADのうちどれが最適か",
@@ -1371,8 +1372,8 @@
                                 "AWS Managed Microsoft AD"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         }
                     ]
                 },
@@ -1610,13 +1611,13 @@
                             "last_answered_date": "2025-05-28"
                         },
                         {
-                            "problem": "BSボリュームの汎用SSDは別のAZ内のインスタンスにアタッチ可能か",
+                            "problem": "EBSボリュームの汎用SSDは別のAZ内のインスタンスにアタッチ可能か",
                             "answer": [
                                 "できない"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         }
                     ]
                 },
@@ -1624,14 +1625,14 @@
                     "name": "Direct Connect",
                     "questions": [
                         {
-                            "problem": "aws direct connectのメリットは？2つ",
+                            "problem": "aws Direct Connectのメリットは？2つ",
                             "answer": [
                                 "インターネット回線を使用せず、専用のプライベートなネットワークで接続するためセキュリティが高い",
                                 "専用線のため帯域幅が確保され、安定した通信速度で接続できます\n（インターネットが混み合っていても大丈夫）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "AWSのdirect connectはVPCと接続可能か",
@@ -1639,8 +1640,8 @@
                                 "可能"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         }
                     ]
                 },
@@ -1700,7 +1701,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "storage gatewayは以下の3つに分類される。答えて",
@@ -1911,8 +1912,8 @@
                                 "インターフェース型"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "VPCエンドポイントのInterface型エンドポイントを作成するとエンドポイント固有の（A）が作成される",
@@ -1952,8 +1953,8 @@
                                 "5"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "Application Auto Scaling の対応サービス4",
@@ -2007,7 +2008,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": " DynamoDB の利用量 ( キャパシティ ) を計算する単位のことをなんという",
@@ -2061,7 +2062,7 @@
                             ],
                             "memo": "ソートキーは任意",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "DynamoDBにおいてテーブルの過去の状態を最大 35 日前までさかのぼって復元できる機能をなんという",
@@ -2095,7 +2096,7 @@
                             "answer": [
                                 "プロビジョンドキャパシティモード"
                             ],
-                            "memo": "",
+                            "memo": "リクエスト数の予想ができない場合はオンデマンドモード、予想ができる場合はキャパシティを静的に設定するプロビジョンドモードを使用する",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-28"
                         },
@@ -2107,6 +2108,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "Dynamodbのキャパシティモードのうち、オンデマンドモードとプロビジョンドモードでAuto Scaling設定が可能なのはどちらか",
+                            "answer": [
+                                "プロビジョンドモード"
+                            ],
+                            "memo": "オンデマンドモードでは、DynamoDB がトラフィックに応じて 自動でスケーリングするため、キャパシティーユニットの概念がなく、Auto Scaling の設定は不要です。",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         }
                     ]
                 },
@@ -2213,11 +2223,11 @@
                         {
                             "problem": "Auto ScalingグループにALBのターゲットグループを構成して、EC2インスタンスを複数の（A）に分散させます。",
                             "answer": [
-                                "AZ\nリージョンではない"
+                                "AZ\nリージョンではない。リージョンないの複数のAZ"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-25"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "ALBは単一AZ内に作成されるか、単一リージョン内に作成されるかどっち",
@@ -2291,7 +2301,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "スティッキーセッションを使用しない場合はELBはどのような動作をするか",
@@ -2391,6 +2401,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "s3 glacier flexible retrievalとglacier instant retrievalのうち迅速にデータを取り出し可能なのはどちらか",
+                            "answer": [
+                                "glacier instant retrieval"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-02"
                         }
                     ]
                 },
@@ -2541,8 +2560,8 @@
                                 "リソースベースポリシー→\nクロスアカウント対応：\n\n単体でクロスアカウントアクセスを許可できる。（直接他アカウントのプリンシパルを指定可能）"
                             ],
                             "memo": "例：\nリソースベースポリシー→アカウントBのS3バケットに、アカウントAのIAMユーザーを許可するエントリを書けば、それだけでアクセス可能。\n\n// アカウントBのS3バケットのバケットポリシー\n{\n  \"Effect\": \"Allow\",\n  \"Principal\": {\n    \"AWS\": \"arn:aws:iam::123456789012:user/SomeUser\"（アカウントAのユーザ）\n  },\n  \"Action\": \"s3:GetObject\",\n  \"Resource\": \"arn:aws:s3:::example-bucket/*\"\n}",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "IAMのインラインポリシーに再利用性はあるか",
@@ -2573,8 +2592,8 @@
                                 "発行者（Publisher）と購読者（Subscriber）をつなぐ中継地点です。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-14"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "SNSだけの構成とSNS + SQS構成を比較したときSNSだけの構成ではどのようなリスクがあるか",
@@ -2582,8 +2601,8 @@
                                 "メッセージのロストのリスクがある（通知先がHTTPエンドポイントやLambdaの場合、失敗した通知は再試行されるが、最終的に失敗する可能性もある"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "SNSのサブスクライバーを答えて３",
@@ -2648,7 +2667,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-30"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "ACMとlambdaやELB、Cloudfront、API gatewayを使用する際にACMとの統合を行わずにサードパーティの証明書発行機関（CA）からSSL/TLS証明書を取得する場合はどのようなデメリットがあるか",
@@ -10299,6 +10318,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-04-01"
+                        },
+                        {
+                            "problem": "攻撃対象となるWebサーバーなどに対し、複数のコンピューターから大量のパケットを送りつけることで、正常なサービス提供を妨げる行為をなんという",
+                            "answer": [
+                                "DDos"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-01"
                         }
                     ]
                 },
