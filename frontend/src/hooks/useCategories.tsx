@@ -84,5 +84,10 @@ export const useCategories = (
         loadCategories();
     }, [page, limit, searchCategoryWord, searchSubcategoryWord, searchQuestionWord, searchAnswerWord]);
 
-    return { categories, pageCount, questionCount, uncorrectedQuestionCount }
+    return { 
+        categories, 
+        pageCount, 
+        questionCount, 
+        uncorrectedQuestionCount 
+    }
 };

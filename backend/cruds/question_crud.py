@@ -269,7 +269,6 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
         
         # レコードが存在しない場合のみ挿入
         if not existing_category_question_record:
-            print('ここに入った')
             new_category_question = CategoryQuestion(
                 category_id=category_id, 
                 question_id=changeSubcategoryUpdate.question_id

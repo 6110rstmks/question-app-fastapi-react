@@ -15,6 +15,8 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
     
     status_enum = getattr(SolutionStatus, problem_fetch.solved_status.capitalize())
 
+    print(status_enum)
+
     # 「ランダム」の場合
     if problem_fetch.type == "random":
         
@@ -57,6 +59,8 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
     # 「カテゴリ」の場合
     elif problem_fetch.type == "category":
         
+        print('今日はっこ￥')
+        
         query1 = (
             select(CategoryQuestion.question_id)
             .where(CategoryQuestion.category_id.in_(problem_fetch.category_ids))
@@ -78,6 +82,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
             )
             results = db.execute(query2).scalars().all()
         elif problem_fetch.solved_status == "correct":
+            print('ここはっこ￥')
             query2 = (
                 select(Question)
                 .where(Question.id.in_(question_ids))
@@ -93,7 +98,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
             results = None
             
         if not results:
-            # 15日前に解答した問題がなければ、すべてのTemporary問題から取得
+            # 15日前に解答した問題がなければ、すべてのIncorrect問題から取得
             query2 = (
                 select(Question)
                 .where(Question.id.in_(question_ids))
@@ -127,6 +132,16 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
     if not results:
         raise HTTPException(status_code=400, detail="出題する問題がありませんでした。")
     return results
+
+# 可読性が低いため関数を分離する
+def generate_problems_by_category():
+    pass
+
+def generate_problems_by_subcategory():
+    pass
+
+def generate_problems_by_random():
+    pass
 
 def generate_problems_by_day(db: Session, day: str):
     query = (

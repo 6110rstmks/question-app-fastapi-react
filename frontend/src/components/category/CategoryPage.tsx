@@ -18,7 +18,8 @@ const CategoryPage: React.FC = () => {
         handleAddSubcategory,
         handleSearch,
         handleSetUnsolvedProblem,
-        handleSetTemporaryProblem
+        handleSetTemporaryProblem,
+        handleSetSolvedProblem
     } = useCategoryPage(categoryId)
 
     const navigate = useNavigate()
@@ -40,7 +41,7 @@ const CategoryPage: React.FC = () => {
             </button>
             <button 
                 className={styles.displayIncorrectedQuestionBtn}
-                onClick={handleSetTemporaryProblem}
+                onClick={handleSetSolvedProblem}
             >
                 1ヶ月より前のCorrectの問題から出題する。
             </button>

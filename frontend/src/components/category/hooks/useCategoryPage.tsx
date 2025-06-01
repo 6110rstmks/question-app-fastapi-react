@@ -12,7 +12,10 @@ export const useCategoryPage = (categoryId: number) => {
     const [category, setCategory] = useState<Category>()
     const [subcategoryName, setSubcategoryName] = useState<string>("")
     const [searchWord, setSearchWord] = useState<string>("")
-    const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null)
+    const [
+        uncorrectedQuestionCount,
+        setUncorrectedQuestionCount
+    ] = useState<number | null>(null)
 
     const navigate = useNavigate()
 
@@ -55,6 +58,22 @@ export const useCategoryPage = (categoryId: number) => {
                 }
             })
         }
+    }
+
+    const handleSetSolvedProblem = async () => {
+        const response = await fetchProblem('category', 'correct', 4, [categoryId], [])
+        if (!response.ok) {
+            alert('出題する問題がありません。');
+            return
+        }
+        const problemData = await response.json()
+        navigate('/problem', { 
+            state: {
+                problemData, 
+                from: 'categoryPage',
+                backToId: categoryId
+            }
+        })
     }
 
     const handleAddSubcategory = async () => {
@@ -102,6 +121,7 @@ export const useCategoryPage = (categoryId: number) => {
         searchWord,
         handleSearch,
         handleSetUnsolvedProblem,
-        handleSetTemporaryProblem
+        handleSetTemporaryProblem,
+        handleSetSolvedProblem
     };
 };
