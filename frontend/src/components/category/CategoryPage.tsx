@@ -13,6 +13,7 @@ const CategoryPage: React.FC = () => {
         subcategories,
         subcategoryName,
         uncorrectedQuestionCount,
+        correctedQuestionCountOrderThanOneMonth,
         setSubcategoryName,
         searchWord,
         handleAddSubcategory,
@@ -43,7 +44,7 @@ const CategoryPage: React.FC = () => {
                 className={styles.displayIncorrectedQuestionBtn}
                 onClick={handleSetSolvedProblem}
             >
-                1ヶ月より前のCorrectの問題から出題する。
+                1ヶ月より前のCorrectの問題から出題する（{correctedQuestionCountOrderThanOneMonth}）。
             </button>
 
             <div className={styles.container}>

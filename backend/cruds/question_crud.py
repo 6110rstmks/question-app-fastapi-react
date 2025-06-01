@@ -153,6 +153,20 @@ def get_question_uncorrected_count_in_category(db: Session, category_id: int):
                 )
     return int(count)
 
+# last_answered_dateが1ヶ月より前のの正解のQuestionの数を取得する。
+def get_question_corrected_count_in_category_older_than_one_month(db: Session, category_id: int):
+    one_month_ago = date.today().replace(day=1)  # 1ヶ月前の日付を取得
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(CategoryQuestion).
+                    where(Question.is_correct == SolutionStatus.Correct).
+                    where(CategoryQuestion.category_id == category_id).
+                    where(Question.last_answered_date < one_month_ago)
+                )
+    print("count", count)
+    return int(count)
+
 def get_question_uncorrected_count_in_subcategory(db: Session, subcategory_id: int):
 
     count = db.scalar(

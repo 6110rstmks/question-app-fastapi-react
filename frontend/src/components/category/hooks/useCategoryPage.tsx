@@ -6,15 +6,32 @@ import { Category } from "../../../types/Category"
 import { fetchProblem } from '../../../api/ProblemAPI'
 import { useNavigate } from "react-router"
 import { fetchUncorrectedQuestionCountByCategoryId } from '../../../api/QuestionAPI'
+import { fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth } from '../../../api/QuestionAPI'
+
 
 export const useCategoryPage = (categoryId: number) => {
-    const [subcategories, setSubcategories] = useState<SubcategoryWithQuestionCount[]>([])
+    const [
+        subcategories, 
+        setSubcategories
+    ] = useState<SubcategoryWithQuestionCount[]>([])
+
     const [category, setCategory] = useState<Category>()
-    const [subcategoryName, setSubcategoryName] = useState<string>("")
+
+    const [
+        subcategoryName,
+        setSubcategoryName
+    ] = useState<string>("")
+
     const [searchWord, setSearchWord] = useState<string>("")
+
     const [
         uncorrectedQuestionCount,
         setUncorrectedQuestionCount
+    ] = useState<number | null>(null)
+
+    const [
+        correctedQuestionCountOrderThanOneMonth,
+        setCorrectedQuestionCountOrderThanOneMonth
     ] = useState<number | null>(null)
 
     const navigate = useNavigate()
@@ -83,8 +100,8 @@ export const useCategoryPage = (categoryId: number) => {
         }
         const response = await createSubcategory(subcategoryName, categoryId);
         if (!response.ok) {
-            const data = await response.json();
-            alert(data.detail);
+            const data = await response.json()
+            alert(data.detail)
             return
         }
         const data = await response.json() as SubcategoryWithQuestionCount
@@ -101,6 +118,9 @@ export const useCategoryPage = (categoryId: number) => {
 
             const uncorrectedQuestionCount = await fetchUncorrectedQuestionCountByCategoryId(categoryId)
             setUncorrectedQuestionCount(uncorrectedQuestionCount);
+
+            const correctedQuestionCount = await fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth(categoryId)
+            setCorrectedQuestionCountOrderThanOneMonth(correctedQuestionCount)
         })()
     }, [])
 
@@ -116,6 +136,7 @@ export const useCategoryPage = (categoryId: number) => {
         subcategories,
         subcategoryName,
         uncorrectedQuestionCount,
+        correctedQuestionCountOrderThanOneMonth,
         setSubcategoryName,
         handleAddSubcategory,
         searchWord,

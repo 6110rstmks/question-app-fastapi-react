@@ -106,6 +106,22 @@ export const fetchUncorrectedQuestionCountByCategoryId = async (
     return await response.json();
 }
 
+// 特定のカテゴリ内の1ヶ月前より前に解いた正解のQuestionの数を取得するAPI
+export const fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth = async (
+    category_id: number
+): Promise<number> => {
+    const url = `http://localhost:8000/questions/count/corrected/category_id/${category_id}/order_than_one_month`;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+
+    console.log('fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth response:', response);
+    return await response.json();
+}
+
 // 特定のカテゴリ内のTemporaryのQuestionの数を取得するAPI
 export const fetchTemporaryQuestionCountByCategoryId = async (
     category_id: number
