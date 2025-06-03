@@ -326,8 +326,8 @@
                                 "NATゲートウェイ→パブリックサブネット"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         }
                     ]
                 },
@@ -576,7 +576,7 @@
                                 "s3 intelligent-tiering"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-02-12"
                         },
                         {
@@ -589,15 +589,6 @@
                             "last_answered_date": "2025-05-31"
                         },
                         {
-                            "problem": "glacierについて、なぜデータの長期保存に向いているのか",
-                            "answer": [
-                                "s3のストレージクラスの中では最もコストが安いから"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-06-01"
-                        },
-                        {
                             "problem": "データの使用頻度が不明であり、アクセスされるデータとアクセスされないデータが混在している場合はどのs3ストレージクラスを使用するか",
                             "answer": [
                                 "s3 intelligent-tiering\n"
@@ -605,16 +596,6 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-06-01"
-                        },
-                        {
-                            "problem": "S3のオブジェクトロックには二つのモードがある。答えて",
-                            "answer": [
-                                "コンプライアンスモード",
-                                "ガバナンスモード"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "S3のオブジェクトロックのコンプライアンスモードとガバナンスモードのうち、管理者による削除が可能なのはどちらか",
@@ -674,7 +655,7 @@
                             "last_answered_date": "2025-05-28"
                         },
                         {
-                            "problem": "S3のオブジェクトロックのうち、保持期間中はオブジェクトの削除や変更を防止し、保持期間終了後に変更を許可するようなものはどちらか",
+                            "problem": "S3の2つのオブジェクトロックのうち、保持期間中はオブジェクトの削除や変更を防止し、保持期間終了後に変更を許可するようなものはどちらか",
                             "answer": [
                                 "コンプライアンスモード"
                             ],
@@ -683,7 +664,7 @@
                             "last_answered_date": "2025-05-29"
                         },
                         {
-                            "problem": "S3のオブジェクト機能のリテンションモードには二つある。答えて",
+                            "problem": "S3のオブジェクトロック機能のリテンションモードには二つある。答えて",
                             "answer": [
                                 "ガバナンスモード",
                                 "コンプライアンスモード"
@@ -749,8 +730,8 @@
                                 "位置情報ルーティングポリシーは、ユーザーの位置情報に基づいてルーティングするポリシーです。このときユーザーの位置情報はIPアドレスで特定します。"
                             ],
                             "memo": "https://o2mamiblog.com/wp-content/uploads/2022/05/Route53-0006-1024x576.jpg\nhttps://o2mamiblog.com/wp-content/uploads/2022/05/Route53-0013-1024x576.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "Route53においてプライベートサブネット内にあるドメインをルーティングすることが可能なのはパブリックホストゾーンか、プライベートホストゾーンか",
@@ -790,6 +771,15 @@
                             "last_answered_date": "2025-06-02"
                         },
                         {
+                            "problem": "1つのIPアドレスに対して複数のサーバ（エンドポイント）を割り当てるネットワーク手法は？",
+                            "answer": [
+                                "anycast"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-01"
+                        },
+                        {
                             "problem": "AWSにおいて、CNAMEレコードでアクセスしたら何レコードを返すか",
                             "answer": [
                                 "Aレコード"
@@ -817,6 +807,16 @@
                             "last_answered_date": "2025-05-22"
                         },
                         {
+                            "problem": "Route53のシャッフルシャーディングはどのようなユースケースで使用されるか",
+                            "answer": [
+                                "DDoSや過負荷対策",
+                                "Route 53 のヘルスチェックシステム自身も内部的にシャッフルシャーディングを使っており"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-01"
+                        },
+                        {
                             "problem": "ドメイン名が example.com の場合、www.example.com、api.example.comはzone apexか？",
                             "answer": [
                                 "違う。example.comはzone apex"
@@ -831,8 +831,8 @@
                                 "フェールオーバールーティング以外のルーティングポリシーを使用して構成される"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "Route53において複数のレコードの中からヘルスチェックでOKとなったレコードのみランダムにアクセスするようにルーティングするポリシーは？",
@@ -1009,7 +1009,7 @@
                     "name": "RDS",
                     "questions": [
                         {
-                            "problem": "lambda関数からRDSに接続して使用したい場合は、何を使用するのが良いか",
+                            "problem": "lambdaなど複薄のクライアントアプリからRDSやAuroraに接続する場合はデータベースのコネクションを都度作成してしまう。そのエラーを解消する方法は？",
                             "answer": [
                                 "RDS proxy"
                             ],
@@ -1041,8 +1041,8 @@
                                 "できない。自分で判断してスケールアップする必要がある。"
                             ],
                             "memo": "ストレージのオートスケールだけは可能\n\nAurora serverlessなら可能",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "db.c6gd.mediumにおいてmediumをなんという",
@@ -1134,7 +1134,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "db.c6gd.2xlargeにおいてc6gdを何という",
@@ -1144,6 +1144,24 @@
                             "memo": "EC2と同じやね",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-31"
+                        },
+                        {
+                            "problem": "RDSではデフォルトでデータの暗号化がされるか、されないか",
+                            "answer": [
+                                "されない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "RDSでは障害発生時に自動的に再起動する機能が存在するか",
+                            "answer": [
+                                "存在する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 },
@@ -1182,7 +1200,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "S3 バケットで公開しているコンテンツを、CloudFront からのアクセスのみに制限するための機能を何という",
@@ -1203,7 +1221,7 @@
                             "last_answered_date": "2025-03-24"
                         },
                         {
-                            "problem": "Cloudfrontの署名付きCookieとは",
+                            "problem": "CloudFront + S3 の署名付きCookieとは",
                             "answer": [
                                 ""
                             ],
@@ -1291,8 +1309,8 @@
                                 "AD connector"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "オンプレのADをそのまま使用したい場合は（Simple AD / AD Connector / AWS Managed Microsoft AD）ののどちらを使用すれば良いか",
@@ -1426,7 +1444,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "マイクロサービスアーキテクチャのデバッグに適しているのはAWSサービスのどのサービスか",
+                            "answer": [
+                                "AWS X-ray"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "ひとつのAZにのみシステムを配置する方式はシングルAZかマルチAZか",
@@ -1472,8 +1499,8 @@
                                 "Cloudfront"
                             ],
                             "memo": "HTTPSの終端（Termination）は、HTTPSトラフィックが復号され、通常のHTTPトラフィックに変換されるプロセスです一般的には、負荷分散装置（Load Balancer）、リバースプロキシ、またはサーバー自体で行われます。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "ELB（ALB）とAPI gatewayをHTTPS末端にするというのはELBとAPI gatewayをSSLのフローでいうところの（WEBサーバ・WEBクライアント）にするということ。これのどっちか",
@@ -1485,13 +1512,13 @@
                             "last_answered_date": "2025-06-01"
                         },
                         {
-                            "problem": "あなたの会社ではAWSアカウントを「本番（Production）」と「開発（Dev）」で分けている。 開発環境から「本番環境のS3バケット」にログをバックアップしたい。AWSにおいてこの要件を満たすには何を使えば良いか。",
+                            "problem": "あなたの会社ではAWSアカウントを「本番（Production）」と「開発（Dev）」で分けている。 開発環境アカウントから「本番環境アカウントのS3バケット」にログをバックアップしたい。AWSにおいてこの要件を満たすには何を使えば良いか。",
                             "answer": [
-                                "sts assume role"
+                                "sts assume role(クロスアカウントアクセス )"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-29"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "cloudtrailは何のログを記録する",
@@ -1520,6 +1547,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-11"
+                        },
+                        {
+                            "problem": "パブリック IP の付け替えのことを何という",
+                            "answer": [
+                                "IPフローティング"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "AWSアカウント作成時に最初に発行されるユーザを何という？",
@@ -1565,6 +1601,35 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "Lambda＠Edgeはなんのサービスの機能ですか",
+                            "answer": [
+                                "cloudfront"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "VPCのネットワークインターフェイスとの間で行き来するIPトラフィックに関する情報をキャプチャできるようにする機能を何という",
+                            "answer": [
+                                "VPCフローログ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "VPCフローログはどのサービスに対して送信することができるか3`",
+                            "answer": [
+                                "cloudwatch",
+                                "S3",
+                                "Kinesis Data Firehose"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         }
                     ]
                 },
@@ -1575,6 +1640,24 @@
                             "problem": "古いEC2インスタンスから新しいEC2インスタンスにEBSを付け替える時の手順において「EBS ボリュームをデタッチ」と「EC2インスタンスの停止はどちらが先か」",
                             "answer": [
                                 "EC2インスタンスを停止してからEBSボリュームをデタッチ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "実際に利用しているストレージ容量に対する課金に加えて指定したIOPSに対しても課金されるのは4つのEBSボリュームタイプのうちどれか",
+                            "answer": [
+                                "プロビジョンドIOPS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "IOPSに対して課金があるAmazon EBSボリュームは何か",
+                            "answer": [
+                                "プロビジョンドIOPS"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -1618,6 +1701,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "Amazon EBSとEFSにおいてどちらが自動でボリューム拡張か",
+                            "answer": [
+                                "EFS"
+                            ],
+                            "memo": "EBSは手動でボリューム拡張",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         }
                     ]
                 },
@@ -1642,6 +1734,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "DIrect Connectの障害でシステムがダウンしてしまったため冗長化を考えている。できるだけ早く導入したい。かつ低コストにしたい。Direct ConnectかSite-to-Site VPNのどちらがよいか",
+                            "answer": [
+                                "Site-to-Site VPN"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 },
@@ -1678,40 +1779,6 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-06-01"
-                        }
-                    ]
-                },
-                {
-                    "name": "storage gateway",
-                    "questions": [
-                        {
-                            "problem": "オンプレミス環境で磁気テープなどに記録した大容量のバックアップデータをS3へ保存する場合はファイルゲートウェイ、テープゲートウェイ、ボリュームゲートウェイのどれを使用するか",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
-                        },
-                        {
-                            "problem": "storage gatewayはgatewayという役割からどのようなものであると予想できるか",
-                            "answer": [
-                                "中継する役割"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
-                        },
-                        {
-                            "problem": "storage gatewayは以下の3つに分類される。答えて",
-                            "answer": [
-                                "ファイルゲートウェイ",
-                                "テープゲートウェイ",
-                                "ボリュームゲートウェイ"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
                             "last_answered_date": "2025-06-01"
                         }
                     ]
@@ -1762,7 +1829,7 @@
                             "last_answered_date": "2025-05-27"
                         },
                         {
-                            "problem": "kinesis data streamsにおいてシャドーとは？",
+                            "problem": "Kinesis Data Streamsにおいてシャドーとは？",
                             "answer": [
                                 "流れてくる一連のデータレコードを保持します。データが乗っかるベルトコンベアのようなものとイメージいただけると良いです。1 つの Kinesis Data Streams の中には複数のシャードが存在します。シャードが増えれば増えるほど、一度に流せるデータの量が増えます。Kinesis Data Streams のスケーリングの単位でもあります。"
                             ],
@@ -1789,7 +1856,7 @@
                             "last_answered_date": "2025-05-25"
                         },
                         {
-                            "problem": "データの転送が主な用途なのはkinesis data stream? aws data firehose?",
+                            "problem": "データの転送が主な用途なのはkinesis data stream? Amazon data firehose?",
                             "answer": [
                                 "aws Data Firehose"
                             ],
@@ -1808,13 +1875,13 @@
                             "last_answered_date": "2025-06-02"
                         },
                         {
-                            "problem": "Amazon data firehoseにおいてデータ変換機能を有効化することで、データを取り込んだ時に（A)が呼び出され、その記述に沿って形式が変換されます。（A)は？",
+                            "problem": "Amazon Data firehoseにおいてデータ変換機能を有効化することで、データを取り込んだ時に（A)が呼び出され、その記述に沿って形式が変換されます。（A)は？",
                             "answer": [
                                 "lambda関数"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-28"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "kinesis data streamsからデータを取り出す方法として例を3つあげて",
@@ -1844,6 +1911,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-14"
+                        },
+                        {
+                            "problem": "IoTデバイスからのデータ収集をする際はAWSのどのサービスを使用すれば良いか",
+                            "answer": [
+                                "Kinesis Data Stream"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         }
                     ]
                 },
@@ -1851,14 +1927,14 @@
                     "name": "VPCエンドポイント",
                     "questions": [
                         {
-                            "problem": "VPCエンドポイントの二つの型を答えて",
+                            "problem": "VPCエンドポイントの二つのタイプを答えて",
                             "answer": [
                                 "ゲートウェイ型",
                                 "インターフェース型"
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "VPCエンドポイントのゲートウェイ型では二つのサービスのみが対応している。それらを答えよ",
@@ -1989,194 +2065,45 @@
                     ]
                 },
                 {
-                    "name": "Dynamodb",
+                    "name": "Storage Gateway",
                     "questions": [
                         {
-                            "problem": "DynamoDBストリームはDynamoDB テーブルに保存されたデータ項目の（A)をキャプチャする機能です。",
+                            "problem": "Storage Gatewayにおいてオンプレミス環境で磁気テープなどに記録した大容量のバックアップデータをS3へ保存する場合はファイルゲートウェイ、テープゲートウェイ、ボリュームゲートウェイのどれを使用するか",
                             "answer": [
-                                "変更"
+                                ""
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-31"
                         },
                         {
-                            "problem": "Dynamodbには二つのキャパシティモードがある。答えて",
+                            "problem": "storage gatewayはgatewayという役割からどのようなものであると予想できるか",
                             "answer": [
-                                "オンデマンドモード",
-                                "プロビジョニングモード"
+                                "中継する役割"
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-01"
                         },
                         {
-                            "problem": " DynamoDB の利用量 ( キャパシティ ) を計算する単位のことをなんという",
+                            "problem": "Storage Gatewayではデフォルトでデータの暗号化がなされるか、されないか",
                             "answer": [
-                                "キャパシティユニット（CU）"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
-                        },
-                        {
-                            "problem": "DynamoDBのキャパシティユニットはどのように訳されるか",
-                            "answer": [
-                                "CU"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-01"
-                        },
-                        {
-                            "problem": "DynamoDBテーブルに対する変更（項目の追加、更新、削除）をリアルタイムでキャプチャしてストリームに記録する機能を何という？",
-                            "answer": [
-                                "Dynamodbストリーム"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-23"
-                        },
-                        {
-                            "problem": "DyanamoDBの二つのキャパシティモードのうち、テーブルへの読み取り・書き込みリクエストの数に応じて、自動でキャパシティを調整して応答してくれるのはどちらか",
-                            "answer": [
-                                "オンデマンドキャパシティモード"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
-                        },
-                        {
-                            "problem": "DynamoDB がテーブルの項目を保持する領域をなんという",
-                            "answer": [
-                                "パーティション"
-                            ],
-                            "memo": "https://user-images.githubusercontent.com/58995947/211311846-921fbadb-94bc-468f-81de-ae23255b6c55.png\n画像のように具体的な領域がみえるようになっている。\n対してRDSにはパーティションキーという概念は存在せず、データの物理配置はユーザーから隠蔽されている。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
-                        },
-                        {
-                            "problem": "Dynamodbテーブル作成時に設定しなければならなキーは？",
-                            "answer": [
-                                "パーティションキー"
-                            ],
-                            "memo": "ソートキーは任意",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
-                        },
-                        {
-                            "problem": "DynamoDBにおいてテーブルの過去の状態を最大 35 日前までさかのぼって復元できる機能をなんという",
-                            "answer": [
-                                "ポイントインタイムリカバリ"
+                                "暗号化される"
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-02"
                         },
                         {
-                            "problem": "DynamoDBのポイントタイムインリカバリでは最大何日時点までデータをリカバリできるか",
+                            "problem": "storage gatewayは以下の3つに分類される。答えて",
                             "answer": [
-                                "35"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-02"
-                        },
-                        {
-                            "problem": "DynamoDBはトランザクション管理が可能か？",
-                            "answer": [
-                                "可能。"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-05-27"
-                        },
-                        {
-                            "problem": "DyanamoDBの二つのキャパシティモードのうち、自動でキャパシティを調整して応答してくれるのはどちらか",
-                            "answer": [
-                                "プロビジョンドキャパシティモード"
-                            ],
-                            "memo": "リクエスト数の予想ができない場合はオンデマンドモード、予想ができる場合はキャパシティを静的に設定するプロビジョンドモードを使用する",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
-                        },
-                        {
-                            "problem": "「誤ってDynamoDB内のデータを削除してしまった」このような場合はDynamoDBのなんの機能を使用する？",
-                            "answer": [
-                                "ポイントインタイムリカバリ"
+                                "ファイルゲートウェイ",
+                                "テープゲートウェイ",
+                                "ボリュームゲートウェイ"
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-01"
-                        },
-                        {
-                            "problem": "Dynamodbのキャパシティモードのうち、オンデマンドモードとプロビジョンドモードでAuto Scaling設定が可能なのはどちらか",
-                            "answer": [
-                                "プロビジョンドモード"
-                            ],
-                            "memo": "オンデマンドモードでは、DynamoDB がトラフィックに応じて 自動でスケーリングするため、キャパシティーユニットの概念がなく、Auto Scaling の設定は不要です。",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-02"
-                        }
-                    ]
-                },
-                {
-                    "name": "Elasticache",
-                    "questions": [
-                        {
-                            "problem": "インメモリデータベースとは？",
-                            "answer": [
-                                "データの保存、処理をメモリ（主記憶装置）上で行うこと"
-                            ],
-                            "memo": "AWS RDSでは処理をメモリ、データはストレージに保存しているのに対して、\nelastic cacheではメモリで処理してデータもメモリに保存している。",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-22"
-                        },
-                        {
-                            "problem": "aws elasticacheの種類2つ",
-                            "answer": [
-                                "memcached\n",
-                                "redis"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-27"
-                        },
-                        {
-                            "problem": "aws elasticacheについてmemcachedとredisのうちマルチスレッドはどちらか？",
-                            "answer": [
-                                "memcached"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-10"
-                        },
-                        {
-                            "problem": "なぜaws elasticacheが必要なのか",
-                            "answer": [
-                                "データベースへの読み書きが増えて、データベースからのレスポンスが遅くなるが、インメモリデータベースを使用することでキャッシュとして中間で保存することでいつでもすぐに渡せる状態にしておく"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-01"
-                        },
-                        {
-                            "problem": "AWS Elasticacheについてmemcachedとredisのうちシングルスレッドはどちらか？",
-                            "answer": [
-                                "redis"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
-                        },
-                        {
-                            "problem": "aws elasticacheについて文字列、リスト、セット、ソートセット、ハッシュテーブル、地理空間、ストリームなどのデータ構造を格納できるのはredis?memcached?",
-                            "answer": [
-                                "redis"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-26"
                         }
                     ]
                 },
@@ -2227,7 +2154,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "ALBは単一AZ内に作成されるか、単一リージョン内に作成されるかどっち",
@@ -2244,8 +2171,8 @@
                                 "スティキーセッション"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "ELBのスティッキーセッションはどのような場合に使用するか",
@@ -2274,7 +2201,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を（A）する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。",
@@ -2391,7 +2318,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "S3 Glacier Flexible Retrievalはどれくらいの頻度でのアクセスを想定しているか",
@@ -2410,6 +2337,225 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-02"
+                        },
+                        {
+                            "problem": "Glacierについて、なぜデータの長期保存に向いているのか",
+                            "answer": [
+                                "s3のストレージクラスの中では最もコストが安いから"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-01"
+                        }
+                    ]
+                },
+                {
+                    "name": "ElastiCache",
+                    "questions": [
+                        {
+                            "problem": "インメモリデータベースとは？",
+                            "answer": [
+                                "データの保存、処理をメモリ（主記憶装置）上で行うこと"
+                            ],
+                            "memo": "AWS RDSでは処理をメモリ、データはストレージに保存しているのに対して、\nelastic cacheではメモリで処理してデータもメモリに保存している。",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "aws elasticacheの種類2つ",
+                            "answer": [
+                                "memcached\n",
+                                "redis"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "aws elasticacheについてmemcachedとredisのうちマルチスレッドはどちらか？",
+                            "answer": [
+                                "memcached"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-10"
+                        },
+                        {
+                            "problem": "なぜaws elasticacheが必要なのか",
+                            "answer": [
+                                "データベースへの読み書きが増えて、データベースからのレスポンスが遅くなるが、インメモリデータベースを使用することでキャッシュとして中間で保存することでいつでもすぐに渡せる状態にしておく"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-01"
+                        },
+                        {
+                            "problem": "AWS Elasticacheについてmemcachedとredisのうちシングルスレッドはどちらか？",
+                            "answer": [
+                                "redis"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-15"
+                        },
+                        {
+                            "problem": "aws elasticacheについて文字列、リスト、セット、ソートセット、ハッシュテーブル、地理空間、ストリームなどのデータ構造を格納できるのはredis?memcached?",
+                            "answer": [
+                                "redis"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "ElastiCacheはRDBかNoSQLか",
+                            "answer": [
+                                "NoSQL"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        }
+                    ]
+                },
+                {
+                    "name": "DynamoDB",
+                    "questions": [
+                        {
+                            "problem": "DynamoDBストリームはDynamoDB テーブルに保存されたデータ項目の（A)をキャプチャする機能です。",
+                            "answer": [
+                                "変更"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "Dynamodbには二つのキャパシティモードがある。答えて",
+                            "answer": [
+                                "オンデマンドモード",
+                                "プロビジョニングモード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": " DynamoDB の利用量 ( キャパシティ ) を計算する単位のことをなんという",
+                            "answer": [
+                                "キャパシティユニット（CU）"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "DynamoDBのキャパシティユニットはどのように訳されるか",
+                            "answer": [
+                                "CU"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "DynamoDBテーブルに対する変更（項目の追加、更新、削除）をリアルタイムでキャプチャしてストリームに記録する機能を何という？",
+                            "answer": [
+                                "Dynamodbストリーム"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-23"
+                        },
+                        {
+                            "problem": "DyanamoDBの二つのキャパシティモードのうち、テーブルへの読み取り・書き込みリクエストの数に応じて、自動でキャパシティを調整して応答してくれるのはどちらか",
+                            "answer": [
+                                "オンデマンドキャパシティモード"
+                            ],
+                            "memo": "対してプロビジョンドモードでは手動で設定する。",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "DynamoDB がテーブルの項目を保持する領域をなんという",
+                            "answer": [
+                                "パーティション"
+                            ],
+                            "memo": "https://user-images.githubusercontent.com/58995947/211311846-921fbadb-94bc-468f-81de-ae23255b6c55.png\n画像のように具体的な領域がみえるようになっている。\n対してRDSにはパーティションキーという概念は存在せず、データの物理配置はユーザーから隠蔽されている。",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "Dynamodbテーブル作成時に設定しなければならなキーは？",
+                            "answer": [
+                                "パーティションキー"
+                            ],
+                            "memo": "ソートキーは任意",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "DynamoDBにおいてテーブルの過去の状態を最大 35 日前までさかのぼって復元できる機能をなんという",
+                            "answer": [
+                                "ポイントインタイムリカバリ"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "DynamoDBのポイントタイムインリカバリでは最大何日時点までデータをリカバリできるか",
+                            "answer": [
+                                "35"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "DynamoDBはトランザクション管理が可能か？",
+                            "answer": [
+                                "可能。"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-27"
+                        },
+                        {
+                            "problem": "「誤ってDynamoDB内のデータを削除してしまった」このような場合はDynamoDBのなんの機能を使用する？",
+                            "answer": [
+                                "ポイントインタイムリカバリ"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "Dynamodbのキャパシティモードのうち、オンデマンドモードとプロビジョンドモードでAuto Scaling設定が可能なのはどちらか",
+                            "answer": [
+                                "プロビジョンドモード"
+                            ],
+                            "memo": "オンデマンドモードでは、DynamoDB がトラフィックに応じて 自動でスケーリングするため、キャパシティーユニットの概念がなく、Auto Scaling の設定は不要です。",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "DynamoDB の高可用性の理由を述べてください",
+                            "answer": [
+                                "DynamoDB は同じAWSリージョン内の3つのアベイラビリティゾーンにデータを自動レプリケートするため"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "オートスケーリングが標準で実装されているのはオンデマンドキャパシティモードかプロビジョンドキャパシティモードか",
+                            "answer": [
+                                "オンデマンドキャパシティモード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         }
                     ]
                 },
@@ -2423,7 +2569,7 @@
                             ],
                             "memo": "REST API(v1)では間にNLBが追加で必要\nhttps://storage.googleapis.com/zenn-user-upload/1544e697e447-20240226.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "API Gateway から VPC 内のリソース（例：ALB、NLB、ECSなど）に安全にアクセスするための仕組みをなんという",
@@ -2435,7 +2581,7 @@
                             "last_answered_date": "2025-06-01"
                         },
                         {
-                            "problem": "def lambda_handler(event, context): \n  return { \n    'statusCode': 200,\n    'body': json.dumps('Hello World')\n}　\n\nlambdaの関数が上記の場合、API gatewayにおけるプロキシ統合と非プロキシ統合ではそれぞれどのような値を返すか",
+                            "problem": "def lambda_handler(event, context):\n    print(\"Received event:\", event)\n\n    return {\n        \"statusCode\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/json\"\n        },\n        \"body\": '{\"message\": \"Hello from Lambda (proxy integration)!\"}'\n    }\nlambdaの関数が上記の場合、API gatewayにおけるプロキシ統合と非プロキシ統合ではそれぞれどのような値を返すか",
                             "answer": [
                                 "プロキシ統合→ { 'statusCode': 200, 'body': json.dumps('Hello World')}",
                                 "非プロキシ統合→Htllo world"
@@ -2472,6 +2618,15 @@
                             "last_answered_date": "2025-06-01"
                         },
                         {
+                            "problem": "API Gatewayの3つのエンドポイントタイプの中で最寄りのCloud Frontから通信を受けることができるのはどれか",
+                            "answer": [
+                                "エッジ最適化エンドポイント"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
                             "problem": "API gatewayで提供されている3つのタイプを答えて",
                             "answer": [
                                 "HTTP API",
@@ -2490,6 +2645,26 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-31"
+                        },
+                        {
+                            "problem": "API Gatewayのエンドポイントを3種類述べて",
+                            "answer": [
+                                "リージョンエンドポイント",
+                                "エッジ最適化エンドポイント",
+                                "プライベートエンドポイント"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "API Gatewayの3つのエンドポイントの中でAPIと同一リージョン内のクライアントからの通信を受けることができるのはどれか",
+                            "answer": [
+                                "リージョン APIエンドポイント\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         }
                     ]
                 },
@@ -2511,8 +2686,8 @@
                                 "AWSリソース（S3バケット、SQSキュー、Lambda関数、KMSのキーポリシーなど）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "同じポリシーを複数のIAMロールに使いたい場合はインラインポリシーとカスタマー管理ポリシーのどちらを使えば良いか",
@@ -2609,7 +2784,8 @@
                             "answer": [
                                 "Kinesis Data Firehose",
                                 "SQS→この場合、ファンアウト構成",
-                                "Lambda"
+                                "Lambda",
+                                "Cloudwatch"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -2622,8 +2798,8 @@
                                 "SNS + SQS構成：処理の信頼性→SQSがバッファーになるので安全\n処理タイミング：後でゆっくり処理（スケーラブル）"
                             ],
                             "memo": "Publisher\n   ↓\nSNS Topic\n   ├─ Email通知\n   ├─ Lambda関数\n   └─ HTTPSエンドポイント（Webhook）\n＝＝＝＝＝＝＝＝＝\nPublisher\n   ↓\nSNS Topic\n   ├─ SQSキュー（→ メール処理ワーカー）\n   ├─ SQSキュー（→ ログ保存処理）\n   └─ SQSキュー（→ 分析処理）",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-02"
                         },
                         {
                             "problem": "「ユーザーにメールを即時送信」ケースの場合、SNSだけの構成か、SNS + SQS構成どちらが適切か",
@@ -2685,8 +2861,8 @@
                                 "自動更新：ACMは証明書の自動更新をサポートしており、証明書の期限切れを心配する必要がありません。AWSが提供する証明書は90日ごとに自動更新されます。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         }
                     ]
                 },
@@ -2702,6 +2878,47 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-29"
+                        }
+                    ]
+                },
+                {
+                    "name": "WAF",
+                    "questions": [
+                        {
+                            "problem": "AWS WAFはどのようなサービスに適用できますか3",
+                            "answer": [
+                                "Cloudfront",
+                                "ALB\n",
+                                "API gateway"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
+                        }
+                    ]
+                },
+                {
+                    "name": "cloudwatch",
+                    "questions": [
+                        {
+                            "problem": "EC2インスタンスに対してCloudwatchカスタムメトリクスを使用する必要がある監視項目は何か",
+                            "answer": [
+                                "メモリ使用率"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "cloudwatchアラームの通知先として利用できるサービスは？",
+                            "answer": [
+                                "SNS",
+                                "lambda",
+                                "SQS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
                         }
                     ]
                 }
@@ -17344,7 +17561,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-01"
                         },
                         {
                             "problem": "ニュージーランドの公用語は2",
@@ -18324,6 +18541,66 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-29"
+                        }
+                    ]
+                },
+                {
+                    "name": "network",
+                    "questions": [
+                        {
+                            "problem": "AzureにおいてVNetのIPアドレス範囲を分割した、より小さな論理的なセクションをなんという",
+                            "answer": [
+                                "Subnet"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "Azure 内に他ネットワークと論理的に分離されたプライベートなネットワークを構築できるサービスをなんという",
+                            "answer": [
+                                "VNet"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "サービスエンドポイントの主な目的は何ですか？",
+                            "answer": [
+                                "仮想ネットワークからAzureサービスへのトラフィックを最適化する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "仮想ネットワーク内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
+                            "answer": [
+                                "NSG"
+                            ],
+                            "memo": "https://az-start.com/wp-content/uploads/2022/05/84361a6617c900de2d59b4dbca3c62f7.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "Azure NSGと同じく、トラフィックを制御する機能として何がある",
+                            "answer": [
+                                "Azure firewall"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "Azure NSGと同じく、トラフィックを制御する機能としてAzure Firewallがあるが、これらの違いは",
+                            "answer": [
+                                "NsG→サブネットもしくは仮想マシンのNIC（Network Interface Card）上で機能する",
+                                "Firewallは仮想ネットワークとインターネットの境界で機能する。つまり、Azure Firewallの保護範囲は仮想ネットワーク全体"
+                            ],
+                            "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 }
