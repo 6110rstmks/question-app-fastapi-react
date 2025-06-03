@@ -153,6 +153,24 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "セキュリティグループとネットワークACLを両方適用する場合はどのような注意が必要か",
+                            "answer": [
+                                "両方のルールで許可されていないと拒否されてしまう"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "機械学習やHPCなどの処理速度を重視するシステムに利用されるファイルシステムは？(AWS)",
+                            "answer": [
+                                "FSx for Lustre"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 },
@@ -363,8 +381,8 @@
                                 "15"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-03-01"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "Aurora Serverlessはどのような特徴があるか",
@@ -646,6 +664,15 @@
                             "last_answered_date": "2025-06-02"
                         },
                         {
+                            "problem": "S3の整合性モデルは強力な整合性か結果整合性のどちらか",
+                            "answer": [
+                                "協力な整合性"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
                             "problem": "aws s3 presign s3://amzn-s3-demo-bucket/mydoc.txt --expires-in 604800　これは何のコマンドか",
                             "answer": [
                                 "S3の署名付きURL"
@@ -694,8 +721,8 @@
                                 "CNAMEレコード名でアクセスしたらAレコード名を返す。\nでも通信するためにはIPアドレスが欲しいので、Aレコードが返されたらそのAレコード名を使用して名前解決をしてIPアドレスを受け取る必要がある。\n\n対して、Aliasレコードでは、クライアントとRoute53の通信は１回で済むのでCNAMEを使うよりも通信の速度が上がる"
                             ],
                             "memo": "https://www.youtube.com/watch?v=Ly_7Z5BPcOc\n\n上記の動画の3分から視聴してください。",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "AWSのRoute53で使用されるレコードを4こ列挙してください。",
@@ -991,8 +1018,8 @@
                                 "VPCピアリング（A⇄B、B⇄C は接続できても A⇄C は通信できない。）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "各ネットワーク（例：VPC、VPN、Direct Connect）をTransit Gatewayに接続するための接続ポイントをなんという",
@@ -1124,8 +1151,8 @@
                                 "15"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-03-01"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "RDSのdb.r6g.2xlargeにおいて　この文字列全体をなんという",
@@ -1160,14 +1187,10 @@
                                 "存在する"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         }
                     ]
-                },
-                {
-                    "name": "ネットワーク",
-                    "questions": []
                 },
                 {
                     "name": "cloudfront",
@@ -1200,7 +1223,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "S3 バケットで公開しているコンテンツを、CloudFront からのアクセスのみに制限するための機能を何という",
@@ -1447,7 +1470,7 @@
                             "last_answered_date": "2025-06-03"
                         },
                         {
-                            "problem": "マイクロサービスアーキテクチャのデバッグに適しているのはAWSサービスのどのサービスか",
+                            "problem": "マイクロサービスアーキテクチャはものシリックアーキテクチャに比べてデバッグが行いづらいが、マイクロサービスアーキテクチャのデバッグに適しているのはAWSサービスのどのサービスか",
                             "answer": [
                                 "AWS X-ray"
                             ],
@@ -1558,6 +1581,15 @@
                             "last_answered_date": "2025-06-02"
                         },
                         {
+                            "problem": "AWSで使用される整合性モデル、強力な整合性と結果整合性のうち、反映に誤差が生じないのはどちらか",
+                            "answer": [
+                                "強力な整合性"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
                             "problem": "AWSアカウント作成時に最初に発行されるユーザを何という？",
                             "answer": [
                                 "ルートアカウント"
@@ -1664,6 +1696,15 @@
                             "last_answered_date": "2025-06-02"
                         },
                         {
+                            "problem": "インスタンスストアは揮発性か不揮発性か",
+                            "answer": [
+                                "揮発性"
+                            ],
+                            "memo": "インスタンスをstop するとデータが消えてしまいます",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
                             "problem": "Amazon EBSでは自動的に暗号化されるがその際はなんというサービスが使用される？",
                             "answer": [
                                 "AWS KMS"
@@ -1701,6 +1742,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "EC2で利用できる基本的なブロックストレージとしてEBSがあるが似たようなサービスに何があるか",
+                            "answer": [
+                                "インスタンスストア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "EBSとインスタンスストアの接続における違いで、EC2とはネットワークで接続するのはどちらか",
+                            "answer": [
+                                "EBS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "Amazon EBSとEFSにおいてどちらが自動でボリューム拡張か",
@@ -1812,6 +1871,17 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-27"
+                        },
+                        {
+                            "problem": "AWS Shield standardはすべてのリソースが対象であるのに対して、AWS Shield Advancedは対象サービスが限られている。対象サービスを答えて",
+                            "answer": [
+                                "Cloudfront",
+                                "Route53",
+                                "ELB"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 },
@@ -1940,10 +2010,10 @@
                             "problem": "VPCエンドポイントのゲートウェイ型では二つのサービスのみが対応している。それらを答えよ",
                             "answer": [
                                 "S3",
-                                "dynamodb"
+                                "DynamoDB"
                             ],
                             "memo": "AWS Data Firehoseとごっちゃにならないように",
-                            "is_correct": 1,
+                            "is_correct": 2,
                             "last_answered_date": "2025-05-27"
                         },
                         {
@@ -1990,6 +2060,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "VPCエンドポイントのインターフェースエンドポイントはどこに配置する？",
+                            "answer": [
+                                "VPC内の1つまたは複数のサブネット(通常は プライベートサブネットに配置されます（外部インターネットに依存しないため）。)"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "VPCエンドポイントのInterface型エンドポイントを作成するとエンドポイント固有の（A）が作成される",
@@ -2051,7 +2130,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "EC2 auto scaling とApplication Auto Scalingは同じものか、別物か",
+                            "answer": [
+                                "別物"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "Auto Scalingのデフォルトのクールダウンタイムの時間は",
@@ -2063,6 +2151,10 @@
                             "last_answered_date": "2025-06-01"
                         }
                     ]
+                },
+                {
+                    "name": "network",
+                    "questions": []
                 },
                 {
                     "name": "Storage Gateway",
@@ -2317,8 +2409,8 @@
                                 "数分から数時間"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "S3 Glacier Flexible Retrievalはどれくらいの頻度でのアクセスを想定しているか",
@@ -2437,8 +2529,8 @@
                                 "プロビジョニングモード"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": " DynamoDB の利用量 ( キャパシティ ) を計算する単位のことをなんという",
@@ -2511,6 +2603,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "DynamoDBの機能において複数の更新系の処理(PUT, UPDATE, DELETE)、あるいは参照系の処理(GET)をトランザクション内で順次実行し、そのうち１つでも処理が失敗すれば全ての処理をロールバックを何という",
+                            "answer": [
+                                "DynamoDBトランザクション"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "DynamoDBは強力な整合性か結果整合性のどちらか",
+                            "answer": [
+                                "強力な整合性"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "DynamoDBはトランザクション管理が可能か？",
@@ -2624,7 +2734,26 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "あるアプリがAPI GatewayとlambdaとDynamoDBで構築されており、これを世界中に展開し常にミリ秒のレイテンシーでアクセスできるようにするにはどのAPIエンドタイプを使用すれば良いか",
+                            "answer": [
+                                "リージョンAPIエンドポイント"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "api gatewayのタイムアウト時間の時間は",
+                            "answer": [
+                                "HTTP API→最大タイムアウト時間: 30秒",
+                                "REST API→最大タイムアウト時間：29秒"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "API gatewayで提供されている3つのタイプを答えて",
@@ -2663,8 +2792,8 @@
                                 "リージョン APIエンドポイント\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 },
@@ -2697,6 +2826,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "AdministratorAccessはどういった内容のポリシーか",
+                            "answer": [
+                                "すべてのアクセス権限を提供するポリシー’"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "IAMのポリシーは3つに分類される。答えて",
@@ -2807,17 +2945,17 @@
                                 "SNSだけ（処理が軽く、即時性が重要だから"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
-                            "problem": "「注文情報を複数サービスで処理（在庫・請求など）」ケースの場合、SNSだけの構成か、SNS + SQS構成どちらが適切か",
+                            "problem": "「注文情報を複数サービスで処理（在庫確認・請求など）」ケースの場合、SNSだけの構成か、SNS + SQS構成どちらが適切か",
                             "answer": [
                                 "SNS + SQS構成\n並列かつ非同期で信頼性の高い分散処理が必要→なぜ信頼性が高いか。\nSQSがあるのでSNSの送信が失敗してもキューとして保持されるため"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "SNSにはFIFOモードがあるか",
@@ -2910,7 +3048,7 @@
                             "last_answered_date": "2025-06-02"
                         },
                         {
-                            "problem": "cloudwatchアラームの通知先として利用できるサービスは？",
+                            "problem": "cloudwatchアラームの通知先として利用できるサービスは？3",
                             "answer": [
                                 "SNS",
                                 "lambda",
@@ -2919,6 +3057,20 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-02"
+                        }
+                    ]
+                },
+                {
+                    "name": "インスタンスストア",
+                    "questions": [
+                        {
+                            "problem": "インススタンスストアは無料か有料か",
+                            "answer": [
+                                "無料"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 }
@@ -18464,6 +18616,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-17"
+                        },
+                        {
+                            "problem": "Azureではサービスを利用するために作成される仮想マシンなどを指して「リソース」と呼び、リソースのコンテナーをなんという",
+                            "answer": [
+                                "リソースグループ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 },
@@ -18557,6 +18718,15 @@
                             "last_answered_date": "2025-06-03"
                         },
                         {
+                            "problem": "azureでawsのVPCに該当するものは何",
+                            "answer": [
+                                "VNet"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
                             "problem": "Azure 内に他ネットワークと論理的に分離されたプライベートなネットワークを構築できるサービスをなんという",
                             "answer": [
                                 "VNet"
@@ -18599,6 +18769,15 @@
                                 "Firewallは仮想ネットワークとインターネットの境界で機能する。つまり、Azure Firewallの保護範囲は仮想ネットワーク全体"
                             ],
                             "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "Azure NSGは無料か有料か",
+                            "answer": [
+                                "無料"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-03"
                         }
