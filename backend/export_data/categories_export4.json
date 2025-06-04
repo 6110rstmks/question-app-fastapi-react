@@ -169,8 +169,8 @@
                                 "FSx for Lustre"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         }
                     ]
                 },
@@ -763,7 +763,7 @@
                             ],
                             "memo": "https://o2mamiblog.com/wp-content/uploads/2022/05/Route53-0005-1024x576.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "Route53の地理的近接性ルーティングポリシーと位置情報ルーティングポリシーの違いは",
@@ -824,11 +824,11 @@
                         {
                             "problem": "ドメイン名が example.com の場合、www.example.com、api.example.comはzone apexか？",
                             "answer": [
-                                "違う。example.comはzone apex"
+                                "両方とも違う。example.comはzone apex"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "フェイルオーバー（アクティブ / アクティブ）はRoute53のどのルーティングポリシーを使用して構成されるか",
@@ -970,7 +970,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "VPCの接続元とVPCの接続先の二つあるとき、Transit gatewayアタッチメントはいくつ作成するか",
@@ -1133,6 +1133,15 @@
                             "last_answered_date": "2025-06-03"
                         },
                         {
+                            "problem": "RDSにて暗号化されているデータのスナップショットを作成したとき、そのスナップショットは暗号化されているか",
+                            "answer": [
+                                "暗号化されている"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
                             "problem": "RDSのdb.r6g.2xlargeにおいて　この文字列全体をなんという",
                             "answer": [
                                 "DBインスタンスクラス"
@@ -1188,8 +1197,8 @@
                                 "https://example.cloudfront.net/\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "Cloudfrontにおいてオリジンとして利用できるリソースは4",
@@ -1444,8 +1453,8 @@
                                 "ハイブリッド構成（Direct Connect + VPN）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "マイクロサービスアーキテクチャはものシリックアーキテクチャに比べてデバッグが行いづらいが、マイクロサービスアーキテクチャのデバッグに適しているのはAWSサービスのどのサービスか",
@@ -1518,8 +1527,8 @@
                                 "sts assume role(クロスアカウントアクセス )"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "cloudtrailは何のログを記録する",
@@ -1564,8 +1573,17 @@
                                 "強力な整合性"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
+                            "problem": "AWSアカウントやクラウドアプリケーションへのアクセス管理とSSO（シングルサインオン）を一元管理できるAWSサービスをなんという",
+                            "answer": [
+                                "IAM Identity Center"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "AWSアカウント作成時に最初に発行されるユーザを何という？",
@@ -1619,7 +1637,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "VPCのネットワークインターフェイスとの間で行き来するIPトラフィックに関する情報をキャプチャできるようにする機能を何という",
@@ -1740,6 +1758,15 @@
                             "last_answered_date": "2025-06-03"
                         },
                         {
+                            "problem": "EBSのraid構成の主に数字の何が使用されているか",
+                            "answer": [
+                                "0,1 "
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-05"
+                        },
+                        {
                             "problem": "Amazon EBSとEFSにおいてどちらが自動でボリューム拡張か",
                             "answer": [
                                 "EFS"
@@ -1778,8 +1805,8 @@
                                 "Site-to-Site VPN"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         }
                     ]
                 },
@@ -1792,8 +1819,8 @@
                                 "AWS Glueデータカタログ\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-30"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "AWS glue data catalogにおいて（A）により自動メタデータ登録が可能",
@@ -2125,7 +2152,7 @@
                                 "別物"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-06-03"
                         },
                         {
@@ -2182,7 +2209,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-05"
                         }
                     ]
                 },
@@ -2280,7 +2307,7 @@
                             ],
                             "memo": "期間ベースCookie\nロードバランサーが生成した Cookie (AWSALB) を使用し、ターゲットグループ内の同じターゲットにリクエストをルーティングする。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-04"
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を（A）する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。",
@@ -2317,6 +2344,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "ALBはパブリックサブネットかプライベートサブネットのどちらに配置するのが一般的か",
+                            "answer": [
+                                "パブリックサブネットに配置する。\nそれのターゲットはプライベートサブネットに配置する。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
                         }
                     ]
                 },
@@ -2350,7 +2386,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "Glaicerはデフォルトで保存データを暗号化しているサービスか？",
@@ -2619,6 +2655,15 @@
                             "last_answered_date": "2025-06-03"
                         },
                         {
+                            "problem": "DynamoDBにデータの更新があった際、Lambda関数を起動して非同期で処理を行うことができる機能は何か",
+                            "answer": [
+                                "DynamoDB Stream"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
                             "problem": "DynamoDBはトランザクション管理が可能か？",
                             "answer": [
                                 "可能。"
@@ -2655,13 +2700,13 @@
                             "last_answered_date": "2025-06-02"
                         },
                         {
-                            "problem": "オートスケーリングが標準で実装されているのはオンデマンドキャパシティモードかプロビジョンドキャパシティモードか",
+                            "problem": "DynamoDBにおいてオートスケーリングが標準で実装されているのはオンデマンドキャパシティモードかプロビジョンドキャパシティモードか",
                             "answer": [
                                 "オンデマンドキャパシティモード"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         }
                     ]
                 },
@@ -2809,7 +2854,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "API gatewayで提供されている3つのタイプを答えて",
@@ -2889,7 +2934,7 @@
                                 "すべてのアクセス権限を提供するポリシー’"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-06-04"
                         },
                         {
@@ -2915,6 +2960,15 @@
                             "last_answered_date": "2025-06-01"
                         },
                         {
+                            "problem": "    \"Principal\": {\n        \"Service\": \"events.amazonaws.com\"\n      },\n\nこれはlambdaのリソースベースポリシーです。これにおいてprincipalは何を意味する。",
+                            "answer": [
+                                "誰がこのリソースを呼び出せるか。ここではeventbridgeが呼び出せる。このlambdaを"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
                             "problem": "AWSにおいて特定のIAMユーザやIAMロール専用に作成されるポリシーを何という",
                             "answer": [
                                 "インラインポリシー"
@@ -2938,8 +2992,8 @@
                                 "ない"
                             ],
                             "memo": "1エンティティ専用",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "インラインポリシーにはARNが設定されているか",
@@ -3127,6 +3181,44 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-03"
+                        }
+                    ]
+                },
+                {
+                    "name": "site-to-site VPN",
+                    "questions": [
+                        {
+                            "problem": "サイト間VPNをAWSとオンプレミス間に構成するためには、オンプレミス側のネットワーク環境に何を設置して構成することが必要か",
+                            "answer": [
+                                "カスタマーゲートウェイデバイスを設置して、カスタマーゲートウェイを構成する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
+                        }
+                    ]
+                },
+                {
+                    "name": "ECR",
+                    "questions": [
+                        {
+                            "problem": "ECRのレジストリは二種類ある。答えて",
+                            "answer": [
+                                "プライベートレジストリ",
+                                "パブリックレジストリ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
+                            "problem": "aws ecr get-login-password  これはなんのコマンドか",
+                            "answer": [
+                                "ECRにログインするためのコマンド"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
                         }
                     ]
                 }
