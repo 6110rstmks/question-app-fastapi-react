@@ -290,66 +290,6 @@
                     ]
                 },
                 {
-                    "name": "NAT gateway",
-                    "questions": [
-                        {
-                            "problem": "NAT gatewayはどのようなユースケースで用いるか。",
-                            "answer": [
-                                "あるインスタンスがインターネットへはアクセスしつつインターネットからアクセスされないようなセキュリティ要件が求められる場合。インターネットにアクセスしたい場合としては外部のAPIを使用したい場合など"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-13"
-                        },
-                        {
-                            "problem": "NAT gatewayはpublic subnetに配置する？それともprivate subnet?",
-                            "answer": [
-                                "public subnet"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-01"
-                        },
-                        {
-                            "problem": "NAT gatewayネットワークの単元で学習したNATのサービスだが、NATは送信時に送信元のプライベートIPをルータの（A）に変換する。",
-                            "answer": [
-                                "パブリック"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-14"
-                        },
-                        {
-                            "problem": "Awsのサービスであるインターネットゲートウェイについて、何がインターネットと接続するために必要となるAWSのコンポーネントであるか",
-                            "answer": [
-                                "VPC"
-                            ],
-                            "memo": "インターネットゲートウェイは、AWSのVPC（Virtual Private Cloud）をインターネットに接続するためのコンポーネント",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
-                        },
-                        {
-                            "problem": "プライベートサブネットの通信は、インターネットゲートウェイを通るか、通らないか",
-                            "answer": [
-                                "通らない"
-                            ],
-                            "memo": "IGWは基本的に パブリックサブネット専用。",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-13"
-                        },
-                        {
-                            "problem": "インターネットゲートウェイは何にアタッチするか？またNATゲートウェイは何にアタッチするか",
-                            "answer": [
-                                "インターネットゲートウェイ→VPC",
-                                "NATゲートウェイ→パブリックサブネット"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-01"
-                        }
-                    ]
-                },
-                {
                     "name": "System Manager",
                     "questions": []
                 },
@@ -594,8 +534,8 @@
                                 "s3 intelligent-tiering"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-02-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "S3のstandard-IAやone-zone IAのIAは何という意味か。",
@@ -666,11 +606,49 @@
                         {
                             "problem": "S3の整合性モデルは強力な整合性か結果整合性のどちらか",
                             "answer": [
-                                "協力な整合性"
+                                "強力な整合性"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
+                            "problem": "CSE-C、SSE-S3、SSE-KMS\tのうちキーをAWSが用意するものはどれ",
+                            "answer": [
+                                "SSE-S3"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
+                            "problem": "SSE-KMSはどこが鍵を管理するか",
+                            "answer": [
+                                "KMS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
+                            "problem": "S3 暗号化方式の中で無料なものを答えて3",
+                            "answer": [
+                                "SSE-S3",
+                                "SSE-C",
+                                "CSE-C"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
+                            "problem": "S3の暗号化方式、CSE-KMS、CSE-CのCSEの意味は",
+                            "answer": [
+                                "Client-side-encryption"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "aws s3 presign s3://amzn-s3-demo-bucket/mydoc.txt --expires-in 604800　これは何のコマンドか",
@@ -687,8 +665,8 @@
                                 "コンプライアンスモード"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "S3のオブジェクトロック機能のリテンションモードには二つある。答えて",
@@ -802,9 +780,9 @@
                             "answer": [
                                 "anycast"
                             ],
-                            "memo": "",
+                            "memo": "ロードバランスも正解",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "AWSにおいて、CNAMEレコードでアクセスしたら何レコードを返すか",
@@ -1087,7 +1065,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "RDSにおいてマルチAZとごっちゃになってしまう特性を持った似ている機能は何か？",
@@ -1692,8 +1670,8 @@
                                 "プロビジョンドIOPS"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "インスタンスストアは揮発性か不揮発性か",
@@ -1839,6 +1817,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "RedShiftは行志向データベースか列志向データベースかどちらか",
+                            "answer": [
+                                "列志向データベース"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 },
@@ -1950,8 +1937,8 @@
                                 "lambda関数"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "kinesis data streamsからデータを取り出す方法として例を3つあげて",
@@ -2130,7 +2117,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "EC2 auto scaling とApplication Auto Scalingは同じものか、別物か",
@@ -2245,8 +2232,8 @@
                                 "AZ\nリージョンではない。リージョンないの複数のAZ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "ALBは単一AZ内に作成されるか、単一リージョン内に作成されるかどっち",
@@ -2254,8 +2241,8 @@
                                 "単一リージョン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "ELBにおいて特定のクライアントからのリクエストを常に同じバックエンドサーバーにルーティングする仕組みのことを何という",
@@ -2291,9 +2278,9 @@
                                 "期間ベースのスティッキーセッション",
                                 "アプリケーションベースのスティッキーセッション"
                             ],
-                            "memo": "",
+                            "memo": "期間ベースCookie\nロードバランサーが生成した Cookie (AWSALB) を使用し、ターゲットグループ内の同じターゲットにリクエストをルーティングする。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "ELBのConnection Drainingは既存の接続を開いたまま、登録解除または異常なインスタンスへのELBのリクエスト送信を（A）する機能です。これにより、ロードバランサーは、登録解除または異常なインスタンスに対して行われた実行中のリクエストを完了するトラフィック処理を実施します。",
@@ -2410,6 +2397,15 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
+                        },
+                        {
+                            "problem": "数分から数時間でのデータが取得可能なglacierの種類は何か？",
+                            "answer": [
+                                "glacier flexible retrieval"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
                             "last_answered_date": "2025-06-04"
                         },
                         {
@@ -2574,8 +2570,8 @@
                                 "パーティション"
                             ],
                             "memo": "https://user-images.githubusercontent.com/58995947/211311846-921fbadb-94bc-468f-81de-ae23255b6c55.png\n画像のように具体的な領域がみえるようになっている。\n対してRDSにはパーティションキーという概念は存在せず、データの物理配置はユーザーから隠蔽されている。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "Dynamodbテーブル作成時に設定しなければならなキーは？",
@@ -2616,7 +2612,7 @@
                         {
                             "problem": "DynamoDBは強力な整合性か結果整合性のどちらか",
                             "answer": [
-                                "強力な整合性"
+                                "両方とも提供されている"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -2666,6 +2662,66 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-02"
+                        }
+                    ]
+                },
+                {
+                    "name": "NAT Gateway",
+                    "questions": [
+                        {
+                            "problem": "NAT gatewayはどのようなユースケースで用いるか。",
+                            "answer": [
+                                "あるインスタンスがインターネットへはアクセスしつつインターネットからアクセスされないようなセキュリティ要件が求められる場合。インターネットにアクセスしたい場合としては外部のAPIを使用したい場合など"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-02-13"
+                        },
+                        {
+                            "problem": "NAT gatewayはpublic subnetに配置する？それともprivate subnet?",
+                            "answer": [
+                                "public subnet"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-01"
+                        },
+                        {
+                            "problem": "NAT gatewayネットワークの単元で学習したNATのサービスだが、NATは送信時に送信元のプライベートIPをルータの（A）に変換する。",
+                            "answer": [
+                                "パブリック"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-14"
+                        },
+                        {
+                            "problem": "Awsのサービスであるインターネットゲートウェイについて、何がインターネットと接続するために必要となるAWSのコンポーネントであるか",
+                            "answer": [
+                                "VPC"
+                            ],
+                            "memo": "インターネットゲートウェイは、AWSのVPC（Virtual Private Cloud）をインターネットに接続するためのコンポーネント",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "プライベートサブネットの通信は、インターネットゲートウェイを通るか、通らないか",
+                            "answer": [
+                                "通らない"
+                            ],
+                            "memo": "IGWは基本的に パブリックサブネット専用。",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-13"
+                        },
+                        {
+                            "problem": "インターネットゲートウェイは何にアタッチするか？またNATゲートウェイは何にアタッチするか",
+                            "answer": [
+                                "インターネットゲートウェイ→VPC",
+                                "NATゲートウェイ→パブリックサブネット"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-01"
                         }
                     ]
                 },
@@ -2733,17 +2789,17 @@
                                 "エッジ最適化エンドポイント"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "あるアプリがAPI GatewayとlambdaとDynamoDBで構築されており、これを世界中に展開し常にミリ秒のレイテンシーでアクセスできるようにするにはどのAPIエンドタイプを使用すれば良いか",
                             "answer": [
-                                "リージョンAPIエンドポイント"
+                                "エッジ最適化APIエンドポイント"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "api gatewayのタイムアウト時間の時間は",
@@ -2773,7 +2829,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-04"
                         },
                         {
                             "problem": "API Gatewayのエンドポイントを3種類述べて",
@@ -2783,8 +2839,8 @@
                                 "プライベートエンドポイント"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         },
                         {
                             "problem": "API Gatewayの3つのエンドポイントの中でAPIと同一リージョン内のクライアントからの通信を受けることができるのはどれか",
@@ -2891,8 +2947,8 @@
                                 "されていない"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-04"
                         }
                     ]
                 },
@@ -2918,7 +2974,7 @@
                             "last_answered_date": "2025-06-01"
                         },
                         {
-                            "problem": "SNSのサブスクライバーを答えて３",
+                            "problem": "SNSのサブスクライバーを答えて４",
                             "answer": [
                                 "Kinesis Data Firehose",
                                 "SQS→この場合、ファンアウト構成",
@@ -3014,8 +3070,8 @@
                                 "最大I/Oモード"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-03"
                         }
                     ]
                 },
@@ -3056,7 +3112,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "last_answered_date": "2025-06-04"
                         }
                     ]
                 },
