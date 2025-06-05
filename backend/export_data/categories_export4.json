@@ -773,7 +773,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-02"
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "1つのIPアドレスに対して複数のサーバ（エンドポイント）を割り当てるネットワーク手法は？",
@@ -1697,8 +1697,8 @@
                                 "揮発性"
                             ],
                             "memo": "インスタンスをstop するとデータが消えてしまいます",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "Amazon EBSでは自動的に暗号化されるがその際はなんというサービスが使用される？",
@@ -2853,8 +2853,8 @@
                                 "REST API→最大タイムアウト時間：29秒"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "API gatewayで提供されている3つのタイプを答えて",
@@ -3090,8 +3090,8 @@
                                 "lambda"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "ACMとlambdaやELB、Cloudfront、API gatewayを使用する際にACMとの統合を行わずにサードパーティの証明書発行機関（CA）からSSL/TLS証明書を取得する場合はどのようなデメリットがあるか",
@@ -3179,8 +3179,8 @@
                                 "無料"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-05"
                         }
                     ]
                 },
@@ -8401,6 +8401,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-22"
+                        },
+                        {
+                            "problem": "データベースや分散システムにおいて、プライマリ（主）データベースとレプリカ（複製）データベースの間でデータが同期する際に生じる遅延のことをなんという",
+                            "answer": [
+                                "レプリケーションラグ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-04"
                         }
                     ]
                 },
@@ -18997,6 +19006,10 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "prisma",
+            "subcategories": []
         }
     ]
 }
