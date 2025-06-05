@@ -435,7 +435,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "ストレージに特化したEC2インスタンスタイプは？",
@@ -481,6 +481,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "システム管理者は秘密鍵を使用して複数のEC2インスタンスを管理している。管理のオーバーヘッドを減らしたいと考えているが",
+                            "answer": [
+                                "System Manaer"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
                         }
                     ]
                 },
@@ -637,9 +646,9 @@
                                 "SSE-C",
                                 "CSE-C"
                             ],
-                            "memo": "",
+                            "memo": "逆に有料のものはSSE-KMS,CSE-KMS",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-04"
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "S3の暗号化方式、CSE-KMS、CSE-CのCSEの意味は",
@@ -1142,6 +1151,24 @@
                             "last_answered_date": "2025-06-04"
                         },
                         {
+                            "problem": "RDSではSSL/TLSでの暗号化がサポートされているか",
+                            "answer": [
+                                "されている"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
+                        },
+                        {
+                            "problem": "RDSはACMと直接統合されているか",
+                            "answer": [
+                                "していない。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
+                        },
+                        {
                             "problem": "RDSのdb.r6g.2xlargeにおいて　この文字列全体をなんという",
                             "answer": [
                                 "DBインスタンスクラス"
@@ -1238,6 +1265,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "静的コンテンツを配信するWEBアプリ。CloudfrontでオリジンにはS3を設定している。複数のリージョンに配信している。アクセスするユーザの地域によって表示するコンテンツを変更するようにしたい。WEBアプリの中身を改修することなくこれを実現したい。Cloudfrontにどのような設定をすればよい",
+                            "answer": [
+                                "Cloudfrontにlambda@edgeを設定する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
                         }
                     ]
                 },
@@ -2436,13 +2472,13 @@
                             "last_answered_date": "2025-06-04"
                         },
                         {
-                            "problem": "数分から数時間でのデータが取得可能なglacierの種類は何か？",
+                            "problem": "数分から数時間でのデータが取得可能なS3 Glacierの種類は何か？",
                             "answer": [
                                 "glacier flexible retrieval"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-04"
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "S3 Glacier Flexible Retrievalはどれくらいの頻度でのアクセスを想定しているか",
@@ -2966,7 +3002,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-04"
+                            "last_answered_date": "2025-06-05"
                         },
                         {
                             "problem": "AWSにおいて特定のIAMユーザやIAMロール専用に作成されるポリシーを何という",
@@ -3099,8 +3135,8 @@
                                 "証明書の更新作業を行う必要がある。（ACMでは証明書の自動更新がサポートされている）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-06"
                         },
                         {
                             "problem": "ACMとlambdaやELB、Cloudfront、API gatewayを統合することでどのようなメリットがあるか。2つ答えて",
@@ -3219,6 +3255,20 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-04"
+                        }
+                    ]
+                },
+                {
+                    "name": "KMS",
+                    "questions": [
+                        {
+                            "problem": "AWS Key Management Service（KMS）が暗号化と復号に使う「暗号鍵」を何という",
+                            "answer": [
+                                "CMK"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
                         }
                     ]
                 }
@@ -18782,12 +18832,41 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "Azureにおいてskuとはなんですか",
+                            "answer": [
+                                "Stock Keeping Unitの略で最小管理単位を示す"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
                         }
                     ]
                 },
                 {
                     "name": "logic apps",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "Azure Logic Appsでは、何と言うツールが搭載されているため、視覚的にワークフローを作成できるか",
+                            "answer": [
+                                "ロジックアップデザイナー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
+                        },
+                        {
+                            "problem": "Logic Appsのプランは二つある。答えて",
+                            "answer": [
+                                "Standard",
+                                "Consumption"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
+                        }
+                    ]
                 },
                 {
                     "name": "application insights",
@@ -19010,6 +19089,26 @@
         {
             "name": "prisma",
             "subcategories": []
+        },
+        {
+            "name": "GIt",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "git tagを使用するメリットは？コミットIDで良いのではないのか",
+                            "answer": [
+                                "コミットIDは人間にとっては読みづらい　bd3fa8e247ebc7c455caa2\n",
+                                "本番環境にどのコミットIDをデプロイしたのかわかりづらい；"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
