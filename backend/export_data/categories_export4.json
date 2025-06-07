@@ -180,6 +180,17 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-06"
+                        },
+                        {
+                            "problem": "VPCフローログはどのサービスに対して送信することができるか3`",
+                            "answer": [
+                                "cloudwatch logs",
+                                "S3",
+                                "Kinesis Data Firehose"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-05"
                         }
                     ]
                 },
@@ -1731,15 +1742,14 @@
                             "last_answered_date": "2025-06-05"
                         },
                         {
-                            "problem": "VPCフローログはどのサービスに対して送信することができるか3`",
+                            "problem": "ある企業は営業ツールの開発に取り組んでいます。これまでに蓄積されたコンタクトセンターでの顧客との通話記録を基に、顧客の課題を特定し、今後の営業ツールに活用するための仕組みが求められています。 通話記録の解析をする際に利用するべきAWSサービスは?2",
                             "answer": [
-                                "cloudwatch logs",
-                                "S3",
-                                "Kinesis Data Firehose"
+                                "Amazon Comprehend",
+                                "Amazon Transcribe"
                             ],
-                            "memo": "",
+                            "memo": "Amazon Transcribeを使用することで、顧客との通話記録の解析をテキストデータに変換することができる。\n\nAmazon Comprehendは、文書、カスタマーサポートのチケット、製品レビュー、電子メール、ソーシャルメディアのフィードなどに含まれるテキストから、貴重なインサイトを見つけ出すことができる。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-05"
+                            "last_answered_date": "2025-06-07"
                         },
                         {
                             "problem": "AWSのサービス（例えばAWS Lambda、Amazon EMR、AWS Glue、Step Functionsなど）がAWSリソースにアクセスする必要ときに必要な権限を付与するための IAMロールをなんという",
@@ -8475,6 +8485,29 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-02-12"
+                        }
+                    ]
+                },
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "分類問題において、あるクラスのサンプル数が他のクラスに比べて極端に少ない状態をなんという",
+                            "answer": [
+                                "クラス不均衡"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "あなたは新たに顧客データベースを利用したマーケティング戦略を検討しています。この過程において、顧客の特徴に基づいて自動的にカテゴリを分類することが求められます。  この要件を満たすために、どの機械学習アルゴリズムが適切か",
+                            "answer": [
+                                "K平均法（k-means）"
+                            ],
+                            "memo": "K平均法は、互いに近いデータを同一のクラスタに分類するという原則に基づいて、データセットをk個のクラスタに分ける手法",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
                         }
                     ]
                 }
@@ -19209,7 +19242,7 @@
                     "name": "m",
                     "questions": [
                         {
-                            "problem": "サービスを止めずに新バージョンを段階的に反映させる更新方法をなんという",
+                            "problem": "Kubernetesにおいてサービスを止めずに新バージョンを段階的に反映させる更新方法をなんという",
                             "answer": [
                                 "ローリングアップデート"
                             ],
