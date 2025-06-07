@@ -1815,6 +1815,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "AWS上でマイクロサービスアーキテクチャを活用したアプリケーションを開発しています。このアプリケーションでは、Amazon EKSコンテナを用いてマイクロサービス同士が相互に通信を行います。パフォーマンス状況を把握するための仕組みを事前に整える必要がある。これに適切なソリューションは",
+                            "answer": [
+                                "Amazon CloudWatch Container Insightを設定してEKSクラスターからメトリクスを収集する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
                         }
                     ]
                 },
@@ -2338,7 +2347,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-07"
                         }
                     ]
                 },
@@ -11213,7 +11222,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-07"
                         }
                     ]
                 },
@@ -17461,7 +17470,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-07"
                         },
                         {
                             "problem": "新疆ウイグル　これなんとよむ",
