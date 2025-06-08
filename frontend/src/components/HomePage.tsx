@@ -47,9 +47,16 @@ export const HomePage: React.FC = () => {
     return (
         <>
             <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
-            <h3>The total number of Questions：{questionCount}</h3>
-            <h3>The total number of uncorrected Questions：{uncorrectedQuestionCount}</h3>
-            <h3>The total number of corrected Questions：{(questionCount?? 0)  - (uncorrectedQuestionCount?? 0)}</h3>
+            <div className={styles.middleBox}>
+                <div>
+                    <h3>The total number of Questions：{questionCount}</h3>
+                    <h3>The total number of uncorrected Questions：{uncorrectedQuestionCount}</h3>
+                    <h3>The total number of temporary Questions：{uncorrectedQuestionCount}</h3>
+                    <h3>The total number of corrected Questions：{(questionCount?? 0)  - (uncorrectedQuestionCount?? 0)}</h3>
+                </div>
+
+                <button>カテゴリのブラックリスト一覧のページに移動</button>
+            </div>
 
             <h1>ctr i でsetproblempageにとべる</h1>
             <div className={styles.searchContainer}>

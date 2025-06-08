@@ -7,6 +7,10 @@
     margin-top: 14px;
 }
 
+.middleBox {
+    display: flex;
+}
+
 .createCategoryBtn {
     width: 88px;
     height: 88px;

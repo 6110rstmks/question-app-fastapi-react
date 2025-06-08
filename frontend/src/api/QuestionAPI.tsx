@@ -92,18 +92,15 @@ export const fetchQuestionCount = async (): Promise<number> => {
     return await response.json();
 }
 
-// 特定のカテゴリ内の不正解のQuestionの数を取得するAPI
-export const fetchUncorrectedQuestionCountByCategoryId = async (
-    category_id: number
-): Promise<number> => {
-    const url = `http://localhost:8000/questions/count/uncorrected/category_id/${category_id}`;
+export const fetchCorrectedQuestionCount = async (): Promise<number> => {
+    const url = 'http://localhost:8000/questions/count/corrected';
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 // 特定のカテゴリ内の1ヶ月前より前に解いた正解のQuestionの数を取得するAPI
@@ -162,6 +159,20 @@ export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
     return await response.json();
 }
 
+// 特定のカテゴリ内の不正解のQuestionの数を取得するAPI
+export const fetchUncorrectedQuestionCountByCategoryId = async (
+    category_id: number
+): Promise<number> => {
+    const url = `http://localhost:8000/questions/count/uncorrected/category_id/${category_id}`;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json();
+}
+
 // 特定のサブカテゴリ内の不正解のQuestionの数を取得するAPI
 export const fetchUncorrectedQuestionCountBySubcategoryId = async (
     subcategory_id: number
@@ -176,8 +187,19 @@ export const fetchUncorrectedQuestionCountBySubcategoryId = async (
     return await response.json();
 }
 
+export const fetchTemporaryQuestionCount = async (): Promise<number> => {
+    const url = 'http://localhost:8000/questions/count/temporary'
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json()
+}
+
 // 日付ごとの問題数を取得するAPI
-export const fetchQuestionsCountsByLastAnsweredDate = async (
+export const fetchQuestionCountsByLastAnsweredDate = async (
     days_array: string[]
 ): Promise<Record<string, number>> => {
     const url = 'http://localhost:8000/questions/count/by_last_answered_date';

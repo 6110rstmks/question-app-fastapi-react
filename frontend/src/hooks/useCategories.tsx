@@ -21,7 +21,21 @@ export const useCategories = (
     // アプリの初期状態の場合はカテゴリがまだ作成されていないためpageCount,questionCountはnull
     const [pageCount, setPageCount] = useState<number | null>(null)
     const [questionCount, setQuestionCount] = useState<number | null>(null)
-    const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null)
+
+    const [
+        uncorrectedQuestionCount, 
+        setUncorrectedQuestionCount
+    ] = useState<number | null>(null)
+
+    const [
+        correctedQuestionCount,
+        setCorrectedQuestionCount
+    ] = useState<number | null>(null)
+
+    const [
+        temporaryQuestionCount,
+        setTemporaryQuestionCount
+    ] = useState<number | null>(null)
     
     const navigate = useNavigate()
 
@@ -59,9 +73,12 @@ export const useCategories = (
             
             const questionCount = await fetchQuestionCount()
             setQuestionCount(questionCount)
-
             const uncorrectedQuestionCount = await fetchUncorrectedQuestionCount()
             setUncorrectedQuestionCount(uncorrectedQuestionCount)
+            const correctedQuestionCount = await fetchCorrectedQuestionCount()
+            setCorrectedQuestionCount(correctedQuestionCount)
+            const temporaryQuestionCount = await fetchTemporaryQuestionCount()
+            setTemporaryQuestionCount(temporaryQuestionCount)
 
         };
         loadPageCount();
@@ -82,7 +99,14 @@ export const useCategories = (
 
         };
         loadCategories();
-    }, [page, limit, searchCategoryWord, searchSubcategoryWord, searchQuestionWord, searchAnswerWord]);
+    }, [
+        page,
+        limit,
+        searchCategoryWord, 
+        searchSubcategoryWord, 
+        searchQuestionWord, 
+        searchAnswerWord
+    ]);
 
     return { 
         categories, 

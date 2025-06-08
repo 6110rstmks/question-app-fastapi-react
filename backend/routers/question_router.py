@@ -34,6 +34,11 @@ async def get_question_count_by_last_answered_date(
 ):
     return question_crud.get_question_count_by_last_answered_date(db, question_get_count_by_answered_date.days_array)
 
+# 不正解のQuestion数を取得するエンドポイント
+@router.get("/count/uncorrected", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_uncorrected_count(db: DbDependency):
+    return question_crud.get_question_uncorrected_count(db)
+
 # 特定のカテゴリ内の不正解のQuestion数を取得するエンドポイント
 @router.get("/count/uncorrected/category_id/{category_id}", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_uncorrected_count_in_category(
@@ -46,10 +51,14 @@ async def get_question_uncorrected_count_in_category(
     
     return question_crud.get_question_uncorrected_count_in_category(db, category_id)
 
-# 不正解のQuestion数を取得するエンドポイント
-@router.get("/count/uncorrected", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_uncorrected_count(db: DbDependency):
-    return question_crud.get_question_uncorrected_count(db)
+# Subcategoryに紐づくQuestion数を取得するエンドポイント
+@router.get("/count/uncorrected/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count_in_subcategory(
+    db: DbDependency, 
+    subcategory_id: int = Path(gt=0)
+):
+    return question_crud.get_question_uncorrected_count_in_subcategory(db, subcategory_id)
+
 
 @router.get("/count/corrected/category_id/{category_id}/order_than_one_month", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_corrected_count_in_category_order_than_one_month(
@@ -61,15 +70,6 @@ async def get_question_corrected_count_in_category_order_than_one_month(
         raise HTTPException(status_code=404, detail="Category not found")
     
     return question_crud.get_question_corrected_count_in_category_older_than_one_month(db, category_id)
-
-
-# Subcategoryに紐づくQuestion数を取得するエンドポイント
-@router.get("/count/uncorrected/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_count_in_subcategory(
-    db: DbDependency, 
-    subcategory_id: int = Path(gt=0)
-):
-    return question_crud.get_question_uncorrected_count_in_subcategory(db, subcategory_id)
 
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
