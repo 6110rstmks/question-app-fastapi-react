@@ -29,6 +29,15 @@ class Category(Base):
     subcategories = relationship("Subcategory", back_populates="category")
     questions = relationship("CategoryQuestion", back_populates="category")
     
+class CategoryBlacklist(Base):
+    __tablename__ = "category_blacklist"
+
+    id = Column(Integer, primary_key=True)
+    category_id = Column(
+        Integer, ForeignKey("categories.id", ondelete="CASCADE"), nullable=False
+    )
+    category = relationship("Category")
+    
 class Subcategory(Base):
     __tablename__ = "subcategories"
 
