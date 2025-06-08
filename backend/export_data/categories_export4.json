@@ -984,20 +984,6 @@
                     ]
                 },
                 {
-                    "name": "aws organization",
-                    "questions": [
-                        {
-                            "problem": "aws organizationの目的",
-                            "answer": [
-                                " 複数のawsアカウントを一元管理する"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-12"
-                        }
-                    ]
-                },
-                {
                     "name": "transit gateway",
                     "questions": [
                         {
@@ -1391,6 +1377,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-02"
+                        },
+                        {
+                            "problem": "Lambdaの実行時間制限の最大は？",
+                            "answer": [
+                                "15分"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -1824,6 +1819,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "AWS のコストと使用状況をモニタリングし、事前に設定した予算に基づいてアラートを受け取ることができるサービスは",
+                            "answer": [
+                                "AWS Budgets"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "ある会社はストレージとしてAmazon EFSを利用して、複数のAmazon EC2インスタンスでファイルを共有する構成でアプリケーションの運用を開始したところです。最近になって、EFSファイルシステムのファイルデータが増加したことで、利用されていない古いデータが大量に蓄積し続けていることでコストが増加しているよう。どうすればよいか",
+                            "answer": [
+                                "EFSファイルシステムのEFS ライフサイクル管理を有効にする。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -2021,7 +2034,7 @@
                     "name": "Redshift",
                     "questions": [
                         {
-                            "problem": "redshift spectrumで（A）に対して直接データ解析が可能。",
+                            "problem": "Redshift spectrumでどのAWSサービスに対して直接データ解析が可能か",
                             "answer": [
                                 "S3バケット"
                             ],
@@ -2036,6 +2049,15 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
+                            "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "Redshiftにおいて異なるAWSアカウントにあるRedshiftクラスタ間でデータを安全に共有することができる機能は",
+                            "answer": [
+                                "クロスデータアカウント共有"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
                             "last_answered_date": "2025-06-07"
                         }
                     ]
@@ -2974,6 +2996,20 @@
                     ]
                 },
                 {
+                    "name": "AWS Organization",
+                    "questions": [
+                        {
+                            "problem": "aws organizationの目的",
+                            "answer": [
+                                " 複数のawsアカウントを一元管理する"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-02-12"
+                        }
+                    ]
+                },
+                {
                     "name": "API gateway",
                     "questions": [
                         {
@@ -3478,6 +3514,43 @@
                             "memo": "BlazingTextは、Amazon SageMakerで利用可能なテキスト処理アルゴリズムであり、特にテキストデータの分類や単語の埋め込み（数値ベクトル化）に最適です",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-07"
+                        }
+                    ]
+                },
+                {
+                    "name": "AWS Batch",
+                    "questions": [
+                        {
+                            "problem": "AWS Lambdaの実行制限時間が15分なのに対してAWS Batchの実行制限時間は？",
+                            "answer": [
+                                "ない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "AWS Batchのコストは",
+                            "answer": [
+                                "No additional cost"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        }
+                    ]
+                },
+                {
+                    "name": "CloudHSM",
+                    "questions": [
+                        {
+                            "problem": "CloudHSM は、オンプレミスの HSM で動作しますか?",
+                            "answer": [
+                                "動作する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 }
@@ -4555,7 +4628,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "分子式が同じで、構造が異なる物質同士を何という",
@@ -8572,6 +8645,42 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "教師あり学習を用いて機械学習モデルを構築することを検討しています。どのアルゴリズムを選択すべきでしょうか。",
+                            "answer": [
+                                "線形回帰"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "機械学習のプロセスを効率化し、専門知識を持たない人々でも活用できる技術のことを何という",
+                            "answer": [
+                                "自動機械学習"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "来月売れるギフトカードの数を予測するために、どの種類の機械学習を使用すべきですか？",
+                            "answer": [
+                                "回帰"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "連続した数値を予測するために機械学習で使用される手法は",
+                            "answer": [
+                                "回帰"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 }
@@ -8979,6 +9088,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-04-08"
+                        },
+                        {
+                            "problem": "pay-as-you-go 日本語に訳すと",
+                            "answer": [
+                                "従量課金"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
                         }
                     ]
                 }
@@ -9527,8 +9645,8 @@
                                 "→ データは分単位で更新されます。\n\n"
                             ],
                             "memo": "in minutesのここでの意味は: 分単位",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "The isolation of Japan lasted for over two centuries.",
@@ -9617,8 +9735,8 @@
                                 "もり"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "葉酸を英語で",
@@ -10027,15 +10145,6 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "私の唇がかさかさ",
-                            "answer": [
-                                "My lip is chapped\n"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-23"
-                        },
-                        {
                             "problem": "Microsoft wants to take the pain out of designing web pages.",
                             "answer": [
                                 "Microsoftは、Webページのデザインの手間を取り除こうとしている。"
@@ -10276,7 +10385,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "I need to fabricate a new costume for Halloween. ",
@@ -10384,7 +10493,7 @@
                             ],
                             "memo": "hypoglycemia\nHyperglycemia",
                             "is_correct": 2,
-                            "last_answered_date": "2025-05-08"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "He wields a sword with great skill.",
@@ -10437,8 +10546,8 @@
                                 "イナゴ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "He felt a pang of guilt after lying to his friend.",
@@ -10474,7 +10583,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "The artist's latest work contrasts sharply with his earlier pieces.",
@@ -10626,8 +10735,8 @@
                                 "「私の会社は、新たに制定された環境法に従う必要がある。」\n\n"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "skeletal muscle",
@@ -11028,11 +11137,20 @@
                         {
                             "problem": "Please expedite the delivery as soon as possible",
                             "answer": [
-                                "できるだけ早く配達を促進してください。\n"
+                                "できるだけ早く迅速な配達をお願い\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-05"
+                            "last_answered_date": "2025-06-09"
+                        },
+                        {
+                            "problem": "The government’s intervention helped stabilize the economy.",
+                            "answer": [
+                                "政府の介入が経済の安定に役立った。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -11083,6 +11201,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-02"
+                        },
+                        {
+                            "problem": "私の唇がかさかさ",
+                            "answer": [
+                                "My lip is chapped\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-03-23"
+                        },
+                        {
+                            "problem": "The key takeaway is that we need to improve communication across departments.",
+                            "answer": [
+                                "最も重要なポイントは、部門間のコミュニケーションを改善する必要があるということです。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 }
@@ -11160,8 +11296,8 @@
                                 "DDos"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -12209,7 +12345,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "円運動の速度は？",
@@ -13603,8 +13739,8 @@
                                 "ウバーレ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "https://d12rf6ppj1532r.cloudfront.net/keyword_articles_images/c/2/sci/keyword_article_c2_sci_8/keyword_article_c2_sci_8_image06.png　　アイウエの気団を答えて",
@@ -14128,7 +14264,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "大きな山脈の風下側にできる 砂漠をなんという",
@@ -15338,7 +15474,7 @@
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "テンシャン山脈の場所は",
@@ -17181,7 +17317,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/03/Aw-why.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "西岸海洋性気候(Cfb)の定義",
@@ -18179,7 +18315,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "ニュージーランドの公用語は2",
@@ -19100,6 +19236,51 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-05"
+                        },
+                        {
+                            "problem": "AzureにおいてApache Sparkベースの分析サービスは？",
+                            "answer": [
+                                "Azure Databricks"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "Azureで提供されているメッセージングサービスは",
+                            "answer": [
+                                "Azure キュー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "Saasとして利用できるIoT向けアプリケーションプラットフォームはどれか",
+                            "answer": [
+                                "IoT Center"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "Azureにおいてデータベースの移行ができるサービスは",
+                            "answer": [
+                                "Azure Database Migration Service"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "Azureにおいて規制の厳しい各地域の法規制に準拠するために特別な運用がされているリージョンをなんとよぶ",
+                            "answer": [
+                                "ソブリンリージョン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
                         }
                     ]
                 },
@@ -19151,6 +19332,15 @@
                             "memo": "Application Insights は、アプリケーションのパフォーマンスや使用状況をモニタリングするためのサービス",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-31"
+                        },
+                        {
+                            "problem": "Azure Monitorはオンプレミスのサーバを監視することは可能か",
+                            "answer": [
+                                "可能’"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
                         }
                     ]
                 },
@@ -19197,6 +19387,27 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-29"
+                        },
+                        {
+                            "problem": "Azure Disk Storaeで開発やテスト環境に向いているSLAが最も低いディスクタイプはどれ？",
+                            "answer": [
+                                "Standard HDD"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "Azure Storageの冗長オプションを4つ答えて",
+                            "answer": [
+                                "LRS",
+                                "ZRS",
+                                "GRS",
+                                "GZRS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-07"
                         }
                     ]
                 },
@@ -19275,6 +19486,56 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-03"
+                        }
+                    ]
+                },
+                {
+                    "name": "AI",
+                    "questions": [
+                        {
+                            "problem": "トレーニング済みの機械学習モデルを Azure にデプロイして API として提供する場合、どのコンポーネントが必要ですか？",
+                            "answer": [
+                                "Azure Kubernetes Service (AKS)"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "Azure の画像認識サービスを使用して、画像内の特定のオブジェクトを検出する場合、どのサービスを使用するべきですか？",
+                            "answer": [
+                                "Custom Vision"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "Azure Machine Learning でデータの前処理を行うために使用できるモジュールはどれですか？",
+                            "answer": [
+                                "Normalize Data"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "自然言語処理（NLP）を使用して、テキストデータから感情を分析する場合、どの Azure サービスを使用するべきですか？",
+                            "answer": [
+                                "Text Analytics"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "Azure Machine Learning でモデルをトレーニングする際に、過学習を防ぐための一般的な方法はどれですか？",
+                            "answer": [
+                                "データの増強（拡張）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 }
