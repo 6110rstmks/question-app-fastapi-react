@@ -2094,7 +2094,7 @@
                             "last_answered_date": "2025-06-05"
                         },
                         {
-                            "problem": "AWS Shield standardはすべてのリソースが対象であるのに対して、AWS Shield Advancedは対象サービスが限られている。対象サービスを答えて",
+                            "problem": "AWS Shield standardはすべてのリソースが対象であるのに対して、AWS Shield Advancedは対象サービスが限られている。対象サービスを答えて3",
                             "answer": [
                                 "Cloudfront",
                                 "Route53",
@@ -2102,7 +2102,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-05"
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -7362,7 +7362,7 @@
                             ],
                             "memo": "(ナシ、イチゴ、スイカ、イチジク、バナナ、ビワ、リンゴ)\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "マメ科のおしべの数は",
@@ -7536,8 +7536,8 @@
                                 "コルメラ始原細胞の分化を抑制し、根端分裂組織を維持する\n\n→コルメラ始原細胞の分化を抑制　が答えで良いと思う"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "落葉と落果を促進する植物ホルモンは？",
@@ -15040,8 +15040,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXj-S34IQd57iee_ynSseqa6AOhWXBm7hRA&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "イランの左にある国は",
@@ -15131,7 +15131,7 @@
                             ],
                             "memo": "https://exam.fukuumedia.com/wp-content/uploads/2019/11/greatprenzuprean.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "カラクム砂漠はどこの国にある？",
@@ -16548,8 +16548,8 @@
                                 "焼畑農業"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "通常の収穫・出荷時期よりも遅らせて栽培することを何という",
@@ -18097,8 +18097,8 @@
                                 "テラローシャ→斜→日本から斜め"
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2021/01/terra-rossa-terra-roxa-memorize.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "元の岩石が石灰岩であるのはテラローシャかテラロッサのどちらか",
@@ -18583,8 +18583,8 @@
                                 "ガルgal"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "latexを用いずに⁵をgptに表示してもらいたい場合はなんとお願いする？",
@@ -18594,15 +18594,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-16"
-                        },
-                        {
-                            "problem": "用量反応曲線",
-                            "answer": [
-                                "薬物や毒物、ホルモンなどの物質が**生体に及ぼす効果（反応）を、その用量（投与量や濃度）**に対してグラフで表したもの"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "ニキビの正式名称",
@@ -19394,11 +19385,11 @@
                         {
                             "problem": "Azure Logic Appsでは、何と言うツールが搭載されているため、視覚的にワークフローを作成できるか",
                             "answer": [
-                                "ロジックアップデザイナー"
+                                "standard workflow designer"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-05"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "Logic Appsのプランは二つある。答えて",
