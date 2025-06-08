@@ -19376,6 +19376,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "Azure Cognitive ServiceとAzure Machine Learningのうち学習済みのモデルをAPIで利用できるのはどちらか",
+                            "answer": [
+                                "Azure Cognitive Service"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
