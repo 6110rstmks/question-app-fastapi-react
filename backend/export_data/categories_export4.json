@@ -1502,8 +1502,8 @@
                                 "Amazon S3バケット"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -1744,7 +1744,7 @@
                             ],
                             "memo": "Amazon Transcribeを使用することで、顧客との通話記録の解析をテキストデータに変換することができる。\n\nAmazon Comprehendは、文書、カスタマーサポートのチケット、製品レビュー、電子メール、ソーシャルメディアのフィードなどに含まれるテキストから、貴重なインサイトを見つけ出すことができる。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "AWSのサービス（例えばAWS Lambda、Amazon EMR、AWS Glue、Step Functionsなど）がAWSリソースにアクセスする必要ときに必要な権限を付与するための IAMロールをなんという",
@@ -2285,7 +2285,7 @@
                         {
                             "problem": "VPCエンドポイントのインターフェースエンドポイントはどこに配置する？",
                             "answer": [
-                                "VPC内の1つまたは複数のサブネット(通常は プライベートサブネットに配置されます（外部インターネットに依存しないため）。)"
+                                "VPC内の1つまたは複数のサブネットのENI(通常は プライベートサブネットに配置されます（外部インターネットに依存しないため）。)"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -2368,8 +2368,8 @@
                                 "5分(300秒)\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -2395,8 +2395,8 @@
                                 "中継する役割"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "Storage Gatewayではデフォルトでデータの暗号化がなされるか、されないか",
@@ -2876,8 +2876,8 @@
                                 "DynamoDB Stream"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "DynamoDBはトランザクション管理が可能か？",
@@ -3006,6 +3006,36 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-02-12"
+                        },
+                        {
+                            "problem": "SCPはAWS Organizationsのメンバーアカウントに対する上限ポリシーとして機能する。  上限ポリシーとは。例を出して説明して",
+                            "answer": [
+                                "SCPでEC2:をDeny → IAMポリシーでec2:StartInstancesをAllowしていても → ❌ EC2は使えない\n\nSCPでs3:GetObjectをAllowのみ → IAMでs3:DeleteObjectをAllowしても → ❌ 削除はできない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "AWS OrganizationでSCPが適用される対象は？3",
+                            "answer": [
+                                "OU\n",
+                                "ルートアカウント",
+                                "AWSアカウント"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "AWS Organization available feature set2",
+                            "answer": [
+                                "All feature",
+                                "consolidated billing"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -3028,7 +3058,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "def lambda_handler(event, context):\n    print(\"Received event:\", event)\n\n    return {\n        \"statusCode\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/json\"\n        },\n        \"body\": '{\"message\": \"Hello from Lambda (proxy integration)!\"}'\n    }\nlambdaの関数が上記の場合、API gatewayにおけるプロキシ統合と非プロキシ統合ではそれぞれどのような値を返すか",
@@ -6134,7 +6164,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "菌類において、菌糸が集まって胞子を作る構造を何という",
@@ -8635,7 +8665,7 @@
                             ],
                             "memo": "K平均法は、互いに近いデータを同一のクラスタに分類するという原則に基づいて、データセットをk個のクラスタに分ける手法",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "機械学習におけるバリアンスとは",
@@ -8644,7 +8674,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "教師あり学習を用いて機械学習モデルを構築することを検討しています。どのアルゴリズムを選択すべきでしょうか。",
@@ -8671,7 +8701,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "連続した数値を予測するために機械学習で使用される手法は",
@@ -10735,8 +10765,8 @@
                                 "「私の会社は、新たに制定された環境法に従う必要がある。」\n\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "skeletal muscle",
@@ -13852,8 +13882,8 @@
                                 "綿花"
                             ],
                             "memo": "デカン高原の土壌はレグールでレグールは綿花を栽培するのに適している",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "アルプス・ヒマラヤ造山帯に含まれる山脈は2",
@@ -14420,7 +14450,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-australia-map-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "タクラマカン砂漠の場所は",
@@ -14537,7 +14567,7 @@
                             ],
                             "memo": "https://chitonitose.com/geo/img/Africa_terrain.webp",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "カスピ海の右にある国は2",
@@ -14555,8 +14585,8 @@
                                 ""
                             ],
                             "memo": "https://geography0123.com/wp-content/uploads/2023/08/image-57.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "ホワイ川はどこにある",
@@ -14654,7 +14684,7 @@
                             ],
                             "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -15083,7 +15113,7 @@
                             ],
                             "memo": "https://cafegoot.com/wp-content/uploads/Map_of_Bolivia_and_neighboring_countries.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-01"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "ギリシャの場所は",
@@ -16179,8 +16209,8 @@
                                 "アムステルダムAmsterdam\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "人間の非常住地域を何という？",
@@ -17847,7 +17877,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "グレートディバイディング山脈は新期造山帯？古期造山帯？",
@@ -18411,7 +18441,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDE6h6s9naH1F6q9D9Hr4lUaLuKnpfVfygeA&s",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "ラプラタ川はフィヨルド・エスチュアリー・リアス海岸のどれにあたるか",
@@ -18447,7 +18477,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "日本にあるリアス海岸を二つのべて",
@@ -18475,7 +18505,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "河川の侵食で形成された谷をＶ字谷というのに対して、氷河による侵食で形成された谷を何と言う",
@@ -18494,6 +18524,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-05-28"
+                        },
+                        {
+                            "problem": "波が穏やかであるという特徴から養殖が盛んに行われているのは、リアス海岸かフィヨルドか",
+                            "answer": [
+                                "リアス海岸"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 }
@@ -18563,7 +18602,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-30"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "ニキビの正式名称",
@@ -18573,6 +18612,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-17"
+                        },
+                        {
+                            "problem": "適格請求書の別名は？",
+                            "answer": [
+                                "インボイス\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
                         }
                     ]
                 },
@@ -18840,7 +18888,7 @@
                             ],
                             "memo": "UV-Aの方が真皮層まで届くと言う知識と紐づける",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "https://www.nihonbashi-f-laser.com/asset/IMG_0668.jpg このような画像の疾患をなんという",
@@ -18849,7 +18897,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "保湿剤は作用機構から二つに分類される。答えて",
@@ -18922,7 +18970,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "エモリエントの代表的なものは",
@@ -19281,6 +19329,53 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "大量のセンターからデータを処理するAzureサービスは",
+                            "answer": [
+                                "IoT Hub"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "Azure Activity Logは保存期間が90日のため、長期に保存したい場合はどうすればよいか。",
+                            "answer": [
+                                "Blob StorageやLog Analyticsにデータを保存する。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "オンプレミス環境とAzure環境の接続方法を3つ答えてください",
+                            "answer": [
+                                "Azure ExpressRoute",
+                                "VPN接続（ポイント対サイト）",
+                                "VPN接続（サイト間）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "VNet内のリソース（仮想マシンなど）から、Azure の PaaS サービス（Azure Storage、Azure SQL Database など）へ、安全かつ直接的に通信できるようにするネットワーク機能は",
+                            "answer": [
+                                "サービスエンドポイント"
+                            ],
+                            "memo": " ≒ AWS Gateway VPC Endpoint",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "AzureポータルからVMのパブリックIPを公開せずに、安全でシームレスなRDP（リモートデスクトッププロトコル）接続を可能にするには、どのサービスを使用すべきですか",
+                            "answer": [
+                                "Azure Bastion"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -19340,7 +19435,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -19407,85 +19502,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
-                        }
-                    ]
-                },
-                {
-                    "name": "network",
-                    "questions": [
-                        {
-                            "problem": "AzureにおいてVNetのIPアドレス範囲を分割した、より小さな論理的なセクションをなんという",
-                            "answer": [
-                                "Subnet"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
-                        },
-                        {
-                            "problem": "azureでawsのVPCに該当するものは何",
-                            "answer": [
-                                "VNet"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
-                        },
-                        {
-                            "problem": "Azure 内に他ネットワークと論理的に分離されたプライベートなネットワークを構築できるサービスをなんという",
-                            "answer": [
-                                "VNet"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
-                        },
-                        {
-                            "problem": "サービスエンドポイントの主な目的は何ですか？",
-                            "answer": [
-                                "仮想ネットワークからAzureサービスへのトラフィックを最適化する"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
-                        },
-                        {
-                            "problem": "仮想ネットワーク内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
-                            "answer": [
-                                "NSG"
-                            ],
-                            "memo": "https://az-start.com/wp-content/uploads/2022/05/84361a6617c900de2d59b4dbca3c62f7.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
-                        },
-                        {
-                            "problem": "Azure NSGと同じく、トラフィックを制御する機能として何がある",
-                            "answer": [
-                                "Azure firewall"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
-                        },
-                        {
-                            "problem": "Azure NSGと同じく、トラフィックを制御する機能としてAzure Firewallがあるが、これらの違いは",
-                            "answer": [
-                                "NsG→サブネットもしくは仮想マシンのNIC（Network Interface Card）上で機能する",
-                                "Firewallは仮想ネットワークとインターネットの境界で機能する。つまり、Azure Firewallの保護範囲は仮想ネットワーク全体"
-                            ],
-                            "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
-                        },
-                        {
-                            "problem": "Azure NSGは無料か有料か",
-                            "answer": [
-                                "無料"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-08"
                         }
                     ]
                 },
@@ -19535,9 +19552,107 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-09"
                         }
                     ]
+                },
+                {
+                    "name": "Azure WAF",
+                    "questions": []
+                },
+                {
+                    "name": "Azure TCO",
+                    "questions": []
+                },
+                {
+                    "name": "Cosmos DB",
+                    "questions": []
+                },
+                {
+                    "name": "Database",
+                    "questions": []
+                },
+                {
+                    "name": "Network",
+                    "questions": [
+                        {
+                            "problem": "AzureにおいてVNetのIPアドレス範囲を分割した、より小さな論理的なセクションをなんという",
+                            "answer": [
+                                "Subnet"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "azureでawsのVPCに該当するものは何",
+                            "answer": [
+                                "VNet"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "Azure 内に他ネットワークと論理的に分離されたプライベートなネットワークを構築できるサービスをなんという",
+                            "answer": [
+                                "VNet"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "Azure サービスエンドポイントの主な目的は何ですか？",
+                            "answer": [
+                                "仮想ネットワークからAzureサービスへのトラフィックを最適化する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "仮想ネットワーク内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
+                            "answer": [
+                                "NSG"
+                            ],
+                            "memo": "https://az-start.com/wp-content/uploads/2022/05/84361a6617c900de2d59b4dbca3c62f7.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "Azure NSGと同じく、トラフィックを制御する機能として何がある",
+                            "answer": [
+                                "Azure firewall"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "Azure NSGと同じく、トラフィックを制御する機能としてAzure Firewallがあるが、これらの違いは",
+                            "answer": [
+                                "NsG→サブネットもしくは仮想マシンのNIC（Network Interface Card）上で機能する",
+                                "Firewallは仮想ネットワークとインターネットの境界で機能する。つまり、Azure Firewallの保護範囲は仮想ネットワーク全体"
+                            ],
+                            "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        },
+                        {
+                            "problem": "Azure NSGは無料か有料か",
+                            "answer": [
+                                "無料"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-03"
+                        }
+                    ]
+                },
+                {
+                    "name": "Azure Machine Learning",
+                    "questions": []
                 }
             ]
         },
