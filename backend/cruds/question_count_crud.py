@@ -13,6 +13,31 @@ def get_question_count(db: Session):
     
     return int(count)
 
+def get_question_count_in_category(
+    db: Session,
+    category_id: int
+):
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(CategoryQuestion).
+                    where(CategoryQuestion.category_id == category_id)
+                )
+    return int(count)
+
+def get_question_count_in_subcategory(
+    db: Session,
+    subcategory_id: int
+):
+
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(SubcategoryQuestion).
+                    where(SubcategoryQuestion.subcategory_id == subcategory_id)
+                )
+    return int(count)
+
 def get_question_count_by_last_answered_date(
     db: Session,
     days_array: list[str]
@@ -40,43 +65,10 @@ def get_question_count_by_last_answered_date(
             where(Question.last_answered_date == day).
             where(Question.is_correct == SolutionStatus.Incorrect).
             where(Question.id.notin_(blacklisted_question_ids))
-
         )
-        
         return_days_count_array[day] = int(count)
-        
 
     return return_days_count_array
-
-def get_question_uncorrected_count(db: Session):
-    count = db.scalar(
-                    select(func.count()).
-                    select_from(Question).
-                    where(Question.is_correct == SolutionStatus.Incorrect)
-                )
-    
-    return int(count)
-
-def get_question_uncorrected_count_in_category(
-    db: Session,
-    category_id: int
-):
-    count = db.scalar(
-                    select(func.count()).
-                    select_from(Question).
-                    join(CategoryQuestion).
-                    where(Question.is_correct == SolutionStatus.Incorrect).
-                    where(CategoryQuestion.category_id == category_id)
-                )
-    return int(count)
-
-def get_question_temporary_count(db: Session):
-    count = db.scalar(
-                    select(func.count()).
-                    select_from(Question).
-                    where(Question.is_correct == SolutionStatus.Temporary)
-                )
-    return int(count)
 
 # last_answered_dateが1ヶ月より前のの正解のQuestionの数を取得する。
 def get_question_corrected_count_in_category_older_than_one_month(
@@ -103,6 +95,29 @@ def get_question_corrected_count(db: Session):
                 )
     return int(count)
 
+
+def get_question_uncorrected_count(db: Session):
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    where(Question.is_correct == SolutionStatus.Incorrect)
+                )
+    return int(count)
+
+def get_question_uncorrected_count_in_category(
+    db: Session,
+    category_id: int
+):
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(CategoryQuestion).
+                    where(Question.is_correct == SolutionStatus.Incorrect).
+                    where(CategoryQuestion.category_id == category_id)
+                )
+    return int(count)
+
+
 def get_question_uncorrected_count_in_subcategory(
     db: Session,
     subcategory_id: int
@@ -117,15 +132,10 @@ def get_question_uncorrected_count_in_subcategory(
                 )
     return int(count)
 
-def get_question_count_in_subcategory(
-    db: Session,
-    subcategory_id: int
-):
-
+def get_question_temporary_count(db: Session):
     count = db.scalar(
                     select(func.count()).
                     select_from(Question).
-                    join(SubcategoryQuestion).
-                    where(SubcategoryQuestion.subcategory_id == subcategory_id)
+                    where(Question.is_correct == SolutionStatus.Temporary)
                 )
     return int(count)
