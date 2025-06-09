@@ -14,6 +14,7 @@ const CategoryPage: React.FC = () => {
         subcategoryName,
         uncorrectedQuestionCount,
         correctedQuestionCountOrderThanOneMonth,
+        questionCount,
         setSubcategoryName,
         searchWord,
         handleAddSubcategory,
@@ -27,7 +28,7 @@ const CategoryPage: React.FC = () => {
 
     return (
         <div>
-            <h2>{category?.name}</h2>
+            <h2>{category?.name} {questionCount}</h2>
             <button 
                 className={styles.displayIncorrectedQuestionBtn}
                 onClick={handleSetUnsolvedProblem}
@@ -103,10 +104,8 @@ const CategoryPage: React.FC = () => {
                 </div>
                 <div className={styles.verticalLine}></div>
                 <div className={styles.questionSearchContainer}>
-                    
                 </div>
             </div>
-
         </div>
     )
 }

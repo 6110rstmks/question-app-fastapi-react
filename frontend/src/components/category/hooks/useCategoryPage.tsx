@@ -8,6 +8,7 @@ import { useNavigate } from "react-router"
 import { 
     fetchUncorrectedQuestionCountByCategoryId,
     fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth,
+    fetchQuestionCountByCategoryId
 } from '../../../api/QuestionCountAPI'
 
 
@@ -25,6 +26,11 @@ export const useCategoryPage = (categoryId: number) => {
     ] = useState<string>("")
 
     const [searchWord, setSearchWord] = useState<string>("")
+
+    const [
+        questionCount,
+        setQuestionCount
+    ] = useState<number | null>(null)
 
     const [
         uncorrectedQuestionCount,
@@ -118,8 +124,11 @@ export const useCategoryPage = (categoryId: number) => {
             const category = await fetchCategory(categoryId);
             setCategory(category);
 
+            const questionCount = await fetchQuestionCountByCategoryId(categoryId)
+            setQuestionCount(questionCount)
+
             const uncorrectedQuestionCount = await fetchUncorrectedQuestionCountByCategoryId(categoryId)
-            setUncorrectedQuestionCount(uncorrectedQuestionCount);
+            setUncorrectedQuestionCount(uncorrectedQuestionCount)
 
             const correctedQuestionCount = await fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth(categoryId)
             setCorrectedQuestionCountOrderThanOneMonth(correctedQuestionCount)
@@ -139,6 +148,7 @@ export const useCategoryPage = (categoryId: number) => {
         subcategoryName,
         uncorrectedQuestionCount,
         correctedQuestionCountOrderThanOneMonth,
+        questionCount,
         setSubcategoryName,
         handleAddSubcategory,
         searchWord,
