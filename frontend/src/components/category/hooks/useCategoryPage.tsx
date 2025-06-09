@@ -5,8 +5,10 @@ import { fetchCategory } from "../../../api/CategoryAPI"
 import { Category } from "../../../types/Category"
 import { fetchProblem } from '../../../api/ProblemAPI'
 import { useNavigate } from "react-router"
-import { fetchUncorrectedQuestionCountByCategoryId } from '../../../api/QuestionAPI'
-import { fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth } from '../../../api/QuestionAPI'
+import { 
+    fetchUncorrectedQuestionCountByCategoryId,
+    fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth,
+} from '../../../api/QuestionCountAPI'
 
 
 export const useCategoryPage = (categoryId: number) => {

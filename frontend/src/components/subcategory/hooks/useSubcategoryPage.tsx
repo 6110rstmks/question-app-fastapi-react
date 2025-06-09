@@ -3,8 +3,9 @@ import { fetchSubcategory } from '../../../api/SubcategoryAPI'
 import { useLocation, useNavigate } from 'react-router'
 import { 
     fetchQuestionsBySubcategoryId,
-    fetchUncorrectedQuestionCountBySubcategoryId 
 } from '../../../api/QuestionAPI'
+import { fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
+
 import { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI'
 import { handleKeyDownForShowAnswer } from '../../../utils/function'

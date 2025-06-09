@@ -1,0 +1,74 @@
+from typing import Annotated, Dict
+from fastapi import APIRouter, Path, HTTPException, Depends, FastAPI
+from sqlalchemy.orm import Session
+from starlette import status
+from cruds import category_crud, question_crud
+from schemas.question import QuestionGetCountByLastAnsweredDate
+from database import get_db
+
+DbDependency = Annotated[Session, Depends(get_db)]
+
+# tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
+
+router = APIRouter(prefix="/question_count", tags=["Question Count"])
+app = FastAPI()
+
+# Question数を取得するエンドポイント
+@router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count(db: DbDependency):
+    return question_crud.get_question_count(db)
+
+# 最終回答日時ごとのQuestion数を取得するエンドポイント
+@router.post("/count/by_last_answered_date", response_model=Dict[str, int], status_code=status.HTTP_200_OK)
+async def get_question_count_by_last_answered_date(
+    db: DbDependency,
+    question_get_count_by_answered_date: QuestionGetCountByLastAnsweredDate
+):
+    return question_crud.get_question_count_by_last_answered_date(db, question_get_count_by_answered_date.days_array)
+
+@router.get("/count/corrected/", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_corrected_count(db: DbDependency):
+    return question_crud.get_question_corrected_count(db)
+
+@router.get("/count/corrected/category_id/{category_id}/order_than_one_month", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_corrected_count_in_category_order_than_one_month(
+    db: DbDependency,
+    category_id: int = Path(gt=0)
+):
+    found_category = category_crud.find_category_by_id(db, category_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    
+    return question_crud.get_question_corrected_count_in_category_older_than_one_month(db, category_id)
+
+
+@router.get("/count/temporary/)", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_temporary_count(
+    db: DbDependency
+):
+    return question_crud.get_question_temporary_count(db)
+
+# 不正解のQuestion数を取得するエンドポイント
+@router.get("/count/uncorrected/", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_uncorrected_count(db: DbDependency):
+    return question_crud.get_question_uncorrected_count(db)
+
+# 特定のカテゴリ内の不正解のQuestion数を取得するエンドポイント
+@router.get("/count/uncorrected/category_id/{category_id}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_uncorrected_count_in_category(
+    db: DbDependency,
+    category_id: int = Path(gt=0)
+):
+    found_category = category_crud.find_category_by_id(db, category_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    
+    return question_crud.get_question_uncorrected_count_in_category(db, category_id)
+
+# Subcategoryに紐づくQuestion数を取得するエンドポイント
+@router.get("/count/uncorrected/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count_in_subcategory(
+    db: DbDependency, 
+    subcategory_id: int = Path(gt=0)
+):
+    return question_crud.get_question_uncorrected_count_in_subcategory(db, subcategory_id)

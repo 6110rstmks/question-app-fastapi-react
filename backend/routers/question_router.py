@@ -21,56 +21,6 @@ async def change_belongs_to_subcategoryId(
 ):
     return question_crud.change_belongs_to_subcategoryId(db, changeSubcategoryUpdate)
 
-# Question数を取得するエンドポイント
-@router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_count(db: DbDependency):
-    return question_crud.get_question_count(db)
-
-# 最終回答日時ごとのQuestion数を取得するエンドポイント
-@router.post("/count/by_last_answered_date", response_model=Dict[str, int], status_code=status.HTTP_200_OK)
-async def get_question_count_by_last_answered_date(
-    db: DbDependency,
-    question_get_count_by_answered_date: QuestionGetCountByLastAnsweredDate
-):
-    return question_crud.get_question_count_by_last_answered_date(db, question_get_count_by_answered_date.days_array)
-
-# 不正解のQuestion数を取得するエンドポイント
-@router.get("/count/uncorrected", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_uncorrected_count(db: DbDependency):
-    return question_crud.get_question_uncorrected_count(db)
-
-# 特定のカテゴリ内の不正解のQuestion数を取得するエンドポイント
-@router.get("/count/uncorrected/category_id/{category_id}", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_uncorrected_count_in_category(
-    db: DbDependency,
-    category_id: int = Path(gt=0)
-):
-    found_category = category_crud.find_category_by_id(db, category_id)
-    if not found_category:
-        raise HTTPException(status_code=404, detail="Category not found")
-    
-    return question_crud.get_question_uncorrected_count_in_category(db, category_id)
-
-# Subcategoryに紐づくQuestion数を取得するエンドポイント
-@router.get("/count/uncorrected/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_count_in_subcategory(
-    db: DbDependency, 
-    subcategory_id: int = Path(gt=0)
-):
-    return question_crud.get_question_uncorrected_count_in_subcategory(db, subcategory_id)
-
-
-@router.get("/count/corrected/category_id/{category_id}/order_than_one_month", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_corrected_count_in_category_order_than_one_month(
-    db: DbDependency,
-    category_id: int = Path(gt=0)
-):
-    found_category = category_crud.find_category_by_id(db, category_id)
-    if not found_category:
-        raise HTTPException(status_code=404, detail="Category not found")
-    
-    return question_crud.get_question_corrected_count_in_category_older_than_one_month(db, category_id)
-
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
 async def create(
@@ -151,8 +101,6 @@ async def find_question_by_id(db: DbDependency, id: int = Path(gt=0)):
         raise HTTPException(status_code=404, detail="Question not found")
     return found_question
 
-
-
 # Category IDに紐づくQuestionsを取得するエンドポイント
 @router.get("/category_id/{category_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all_questions_in_category(db: DbDependency, category_id: int = Path(gt=0)):
@@ -161,8 +109,6 @@ async def find_all_questions_in_category(db: DbDependency, category_id: int = Pa
 @router.get("/subcategory_id/{subcategory_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all_questions_in_subcategory(db: DbDependency, subcategory_id: int = Path(gt=0)):
     return question_crud.find_all_questions_in_subcategory(db, subcategory_id)
-
-
 
 # Questionを削除するエンドポイント
 @router.delete("/{question_id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)

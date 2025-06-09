@@ -1,6 +1,6 @@
 import time
 from fastapi import FastAPI, Request, status
-from routers import category_router, question_router, subcategory_router, problem_router, auth_router, subcategory_question_router, category_question_router
+from routers import category_router, question_router, subcategory_router, problem_router, auth_router, subcategory_question_router, category_question_router, question_count_router
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_pagination import Page, add_pagination, paginate
 from fastapi.exceptions import RequestValidationError
@@ -32,6 +32,7 @@ app.include_router(auth_router.router)
 app.include_router(category_router.router)
 app.include_router(subcategory_router.router)
 app.include_router(question_router.router)
+app.include_router(question_count_router.router)
 app.include_router(problem_router.router)
 app.include_router(category_question_router.router)
 app.include_router(subcategory_question_router.router)

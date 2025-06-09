@@ -5,8 +5,10 @@ import { isAuthenticated } from "../utils/auth_function"
 import { useNavigate } from "react-router"
 import { 
     fetchQuestionCount, 
-    fetchUncorrectedQuestionCount
-} from "../api/QuestionAPI"
+    fetchUncorrectedQuestionCount,
+    fetchCorrectedQuestionCount,
+    fetchTemporaryQuestionCount
+} from "../api/QuestionCountAPI"
 
 export const useCategories = (
     page: number,
@@ -70,6 +72,10 @@ export const useCategories = (
         const loadPageCount = async () => {
             const count = await fetchPageCount();
             setPageCount(count)
+
+            // const temporaryQuestionCount = await fetchTemporaryQuestionCount()
+            // setTemporaryQuestionCount(temporaryQuestionCount)
+
             
             const questionCount = await fetchQuestionCount()
             setQuestionCount(questionCount)
@@ -77,9 +83,8 @@ export const useCategories = (
             setUncorrectedQuestionCount(uncorrectedQuestionCount)
             const correctedQuestionCount = await fetchCorrectedQuestionCount()
             setCorrectedQuestionCount(correctedQuestionCount)
-            const temporaryQuestionCount = await fetchTemporaryQuestionCount()
-            setTemporaryQuestionCount(temporaryQuestionCount)
 
+ 
         };
         loadPageCount();
     }, []);
@@ -112,6 +117,8 @@ export const useCategories = (
         categories, 
         pageCount, 
         questionCount, 
-        uncorrectedQuestionCount 
+        uncorrectedQuestionCount,
+        correctedQuestionCount,
+        temporaryQuestionCount,
     }
 };

@@ -4,7 +4,7 @@ import { Subcategory } from '../../../types/Subcategory'
 import { CategoryWithQuestionCount } from '../../../types/Category'
 import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesWithQuestionCountByCategoryId } from '../../../api/SubcategoryAPI'
-import { fetchQuestionCount } from '../../../api/QuestionAPI'
+import { fetchQuestionCount } from '../../../api/QuestionCountAPI'
 import { fetchProblem } from '../../../api/ProblemAPI'
 import { SolutionStatus } from '../../../types/SolutionStatus'
 
