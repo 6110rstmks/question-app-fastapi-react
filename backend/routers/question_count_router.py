@@ -66,8 +66,8 @@ async def get_question_uncorrected_count_in_category(
     return question_count_crud.get_question_uncorrected_count_in_category(db, category_id)
 
 # Subcategoryに紐づくQuestion数を取得するエンドポイント
-@router.get("/count/uncorrected/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_count_in_subcategory(
+@router.get("/count/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_uncorrected_count_in_subcategory(
     db: DbDependency, 
     subcategory_id: int = Path(gt=0)
 ):
