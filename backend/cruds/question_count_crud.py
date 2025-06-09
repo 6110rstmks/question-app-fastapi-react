@@ -3,6 +3,7 @@ from sqlalchemy import select, func
 from models2 import Question, SubcategoryQuestion, CategoryQuestion
 from datetime import date
 from config import SolutionStatus
+from models2 import CategoryBlacklist
 
 def get_question_count(db: Session):
     count = db.scalar(
@@ -16,6 +17,19 @@ def get_question_count_by_last_answered_date(
     db: Session,
     days_array: list[str]
 ):
+    
+    # ブラックリストカテゴリの問題IDを取得
+    blacklisted_category_ids = db.execute(
+        select(CategoryBlacklist.category_id)
+    ).scalars().all()
+
+    if blacklisted_category_ids:
+        blacklisted_question_ids = db.execute(
+            select(CategoryQuestion.question_id)
+            .where(CategoryQuestion.category_id.in_(blacklisted_category_ids))
+        ).scalars().all()
+    else:
+        blacklisted_question_ids = []
         
     return_days_count_array = {}
     
@@ -24,7 +38,9 @@ def get_question_count_by_last_answered_date(
             select(func.count()).
             select_from(Question).
             where(Question.last_answered_date == day).
-            where(Question.is_correct == SolutionStatus.Incorrect)
+            where(Question.is_correct == SolutionStatus.Incorrect).
+            where(Question.id.notin_(blacklisted_question_ids))
+
         )
         
         return_days_count_array[day] = int(count)
