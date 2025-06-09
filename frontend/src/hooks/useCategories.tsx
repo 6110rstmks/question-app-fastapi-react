@@ -21,8 +21,15 @@ export const useCategories = (
     const [categories, setCategories] = useState<Category[]>([])
 
     // アプリの初期状態の場合はカテゴリがまだ作成されていないためpageCount,questionCountはnull
-    const [pageCount, setPageCount] = useState<number | null>(null)
-    const [questionCount, setQuestionCount] = useState<number | null>(null)
+    const [
+        pageCount, 
+        setPageCount
+    ] = useState<number | null>(null)
+
+    const [
+        questionCount, 
+        setQuestionCount
+    ] = useState<number | null>(null)
 
     const [
         uncorrectedQuestionCount, 
@@ -73,16 +80,16 @@ export const useCategories = (
             const count = await fetchPageCount();
             setPageCount(count)
 
-            // const temporaryQuestionCount = await fetchTemporaryQuestionCount()
-            // setTemporaryQuestionCount(temporaryQuestionCount)
 
-            
             const questionCount = await fetchQuestionCount()
             setQuestionCount(questionCount)
             const uncorrectedQuestionCount = await fetchUncorrectedQuestionCount()
             setUncorrectedQuestionCount(uncorrectedQuestionCount)
             const correctedQuestionCount = await fetchCorrectedQuestionCount()
             setCorrectedQuestionCount(correctedQuestionCount)
+
+            const tempQuestionCnt = await fetchTemporaryQuestionCount()
+            setTemporaryQuestionCount(tempQuestionCnt)
 
  
         };

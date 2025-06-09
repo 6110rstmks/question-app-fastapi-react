@@ -66,7 +66,7 @@ async def get_question_corrected_count_in_category_order_than_one_month(
     return question_count_crud.get_question_corrected_count_in_category_older_than_one_month(db, category_id)
 
 
-@router.get("/count/temporary/)", response_model=int, status_code=status.HTTP_200_OK)
+@router.get("/count/temporary/", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_temporary_count(
     db: DbDependency
 ):

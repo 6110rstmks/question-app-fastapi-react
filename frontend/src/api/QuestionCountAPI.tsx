@@ -88,17 +88,17 @@ export const fetchCorrectedQuestionCountByCategoryId = async (
 // ------------------------------------------------------------------------ #
 
 export const fetchTemporaryQuestionCount = async (): Promise<number> => {
-    const url = 'http://localhost:8000/question_count/count/temporary'
+    const url = 'http://localhost:8000/question_count/count/temporary/'
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
     })
-    console.log('Temporary Question Count:', await response.json())
-    return await response.json()
+    console.log('Temporary Question Count API Response:', response);
+    const data = await response.json()
+    return data
 }
-
 
 // 特定のカテゴリ内のTemporaryのQuestionの数を取得するAPI
 export const fetchTemporaryQuestionCountByCategoryId = async (
@@ -119,7 +119,7 @@ export const fetchTemporaryQuestionCountByCategoryId = async (
 // ------------------------------------------------------------------------ #
 
 
-// すべての不正解のQuestionの数を取得するAPI
+
 export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
     const url = 'http://localhost:8000/question_count/count/uncorrected'
     const response = await fetch(url, {
@@ -128,7 +128,9 @@ export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
             'Content-Type': 'application/json',
         }
     })
-    return await response.json()
+    
+    const data = await response.json()
+    return data
 }
 
 // 特定のカテゴリ内の不正解のQuestionの数を取得するAPI
