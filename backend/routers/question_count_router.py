@@ -2,7 +2,7 @@ from typing import Annotated, Dict
 from fastapi import APIRouter, Path, HTTPException, Depends, FastAPI
 from sqlalchemy.orm import Session
 from starlette import status
-from cruds import category_crud, question_count_crud
+from cruds import category_crud, question_count_crud, subcategory_crud
 from schemas.question import QuestionGetCountByLastAnsweredDate
 from database import get_db
 
@@ -17,6 +17,30 @@ app = FastAPI()
 @router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_count(db: DbDependency):
     return question_count_crud.get_question_count(db)
+
+# カテゴリ内のQuestion数を取得するエンドポイント
+@router.get("/count/category_id/{category_id}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count_in_category(
+    db: DbDependency,
+    category_id: int = Path(gt=0)
+):  
+    found_category = category_crud.find_category_by_id(db, category_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    
+    return question_count_crud.get_question_count_in_category(db, category_id)
+
+# サブカテゴリ内のQuestion数を取得するエンドポイント
+@router.get("/count/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count_in_subcategory(
+    db: DbDependency,
+    subcategory_id: int = Path(gt=0)
+):
+    found_subcategory = subcategory_crud.find_subcategory_by_id(db, subcategory_id)
+    if not found_subcategory:
+        raise HTTPException(status_code=404, detail="Subcategory not found")
+    
+    return question_count_crud.get_question_count_in_subcategory(db, subcategory_id)
 
 # 最終回答日時ごとのQuestion数を取得するエンドポイント
 @router.post("/count/by_last_answered_date", response_model=Dict[str, int], status_code=status.HTTP_200_OK)
@@ -66,7 +90,7 @@ async def get_question_uncorrected_count_in_category(
     return question_count_crud.get_question_uncorrected_count_in_category(db, category_id)
 
 # Subcategoryに紐づくQuestion数を取得するエンドポイント
-@router.get("/count/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
+@router.get("/count/uncorrected/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_uncorrected_count_in_subcategory(
     db: DbDependency, 
     subcategory_id: int = Path(gt=0)
