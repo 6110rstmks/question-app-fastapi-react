@@ -103,4 +103,14 @@
     border: none;
     cursor: pointer;
 }
+
+.topContainer {
+  display: flex;
+}
+
+.verticalLine {
+  border-left: 6px solid green;
+  height: 500px;
+
+}
   

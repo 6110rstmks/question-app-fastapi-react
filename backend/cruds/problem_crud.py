@@ -5,8 +5,28 @@ from models2 import Question, CategoryQuestion, SubcategoryQuestion
 from fastapi import HTTPException
 from config import SolutionStatus
 from datetime import datetime, timedelta
+from models2 import CategoryBlacklist
 
 def generate_problems(db: Session, problem_fetch: ProblemFetch):
+    
+    # ブラックリストカテゴリの問題IDを取得
+    blacklisted_category_ids = db.execute(
+        select(CategoryBlacklist.category_id)
+    ).scalars().all()
+
+    if blacklisted_category_ids:
+        blacklisted_question_ids = db.execute(
+            select(CategoryQuestion.question_id)
+            .where(CategoryQuestion.category_id.in_(blacklisted_category_ids))
+        ).scalars().all()
+    else:
+        blacklisted_question_ids = []
+        
+    print(blacklisted_category_ids)
+    print(blacklisted_question_ids)
+        
+    
+    
 
     # 15日前の日付を計算
     fifteen_days_ago = datetime.now() - timedelta(days=15)
@@ -25,7 +45,8 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
                 select(Question)
                 .where(
                     Question.is_correct == status_enum,
-                    Question.last_answered_date < fifteen_days_ago
+                    Question.last_answered_date < fifteen_days_ago,
+                    Question.id.notin_(blacklisted_question_ids)
                 )
                 .order_by(func.random())
                 .limit(problem_fetch.problem_count)
@@ -36,7 +57,8 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
                 select(Question)
                 .where(
                     Question.is_correct == status_enum,
-                    Question.last_answered_date < one_month_ago
+                    Question.last_answered_date < one_month_ago,
+                    Question.id.notin_(blacklisted_question_ids)
                 )
                 .order_by(func.random())
                 .limit(problem_fetch.problem_count)
@@ -51,6 +73,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
                 select(Question)
                 .where(
                     Question.is_correct == status_enum,
+                    Question.id.notin_(blacklisted_question_ids)
                 )
                 .order_by(func.random())
                 .limit(problem_fetch.problem_count)
@@ -58,9 +81,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
         
     # 「カテゴリ」の場合
     elif problem_fetch.type == "category":
-        
-        print('今日はっこ￥')
-        
+                
         query1 = (
             select(CategoryQuestion.question_id)
             .where(CategoryQuestion.category_id.in_(problem_fetch.category_ids))
@@ -75,20 +96,21 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
                 .where(Question.id.in_(question_ids))
                 .where(
                     Question.is_correct == status_enum,
-                    Question.last_answered_date < fifteen_days_ago
+                    Question.last_answered_date < fifteen_days_ago,
+                    Question.id.notin_(blacklisted_question_ids)
                 )
                 .order_by(func.random())
                 .limit(problem_fetch.problem_count)
             )
             results = db.execute(query2).scalars().all()
         elif problem_fetch.solved_status == "correct":
-            print('ここはっこ￥')
             query2 = (
                 select(Question)
                 .where(Question.id.in_(question_ids))
                 .where(
                     Question.is_correct == status_enum,
-                    Question.last_answered_date < one_month_ago
+                    Question.last_answered_date < one_month_ago,
+                    Question.id.notin_(blacklisted_question_ids)
                 )
                 .order_by(func.random())
                 .limit(problem_fetch.problem_count)
@@ -102,7 +124,10 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
             query2 = (
                 select(Question)
                 .where(Question.id.in_(question_ids))
-                .where(Question.is_correct == status_enum)
+                .where(
+                    Question.is_correct == status_enum,
+                    Question.id.notin_(blacklisted_question_ids)
+                )
                 .order_by(func.random())
                 .limit(problem_fetch.problem_count)
             )
@@ -120,6 +145,7 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch):
             select(Question)
             .where(Question.id.in_(question_ids))
             .where(Question.is_correct == status_enum)
+            .where(Question.id.notin_(blacklisted_question_ids))
             .order_by(func.random())
             .limit(problem_fetch.problem_count)
         )

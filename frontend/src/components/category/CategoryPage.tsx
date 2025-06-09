@@ -89,16 +89,22 @@ const CategoryPage: React.FC = () => {
                     />
                 </div>
             </div>
-            <div>        
-                {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
-                    <div className={styles.subcategoryName} 
-                        key={subcategory.id} 
-                        onClick={() => category && handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}>
-                        ・{subcategory.name}
-                        <span>【{subcategory.question_count}】</span>
-                    </div>
+            <div className={styles.topContainer}>     
+                <div>
+                    {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (
+                        <div className={styles.subcategoryName} 
+                            key={subcategory.id} 
+                            onClick={() => category && handleNavigateToSubcategoryPage(navigate, category, subcategory.id)}>
+                            ・{subcategory.name}
+                            <span>【{subcategory.question_count}】</span>
+                        </div>
+                        
+                    ))}
+                </div>
+                <div className={styles.verticalLine}></div>
+                <div className={styles.questionSearchContainer}>
                     
-                ))}
+                </div>
             </div>
 
         </div>
