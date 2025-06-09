@@ -4697,13 +4697,13 @@
                             "last_answered_date": "2025-04-20"
                         },
                         {
-                            "problem": "アルコールを脱水することで何がつくられるか",
+                            "problem": "What is produced by dehydrating alcohol?",
                             "answer": [
                                 "アルケン"
                             ],
                             "memo": "https://kimika.net/wp-content/uploads/2017/08/aru-ete20192-1.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "メタンの工業的製法",
@@ -5155,11 +5155,11 @@
                         {
                             "problem": "水銀とその他の金属の合金を何という",
                             "answer": [
-                                "アマルガム"
+                                "Amalgam"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "アルカリ金属　の元素　語呂",
@@ -7397,14 +7397,14 @@
                     "name": "plant hormone",
                     "questions": [
                         {
-                            "problem": "膨圧運動の例は？2",
+                            "problem": "植物の膨圧運動の例は？2",
                             "answer": [
                                 "気孔の開閉",
                                 "オジギソウの接触傾性"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "光受容体であるクリプトクロムCryptochromeは何色の光を受容する？",
@@ -8866,7 +8866,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-04"
+                            "last_answered_date": "2025-06-09"
                         }
                     ]
                 },
@@ -13652,7 +13652,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "肌の色が黒い、髪が縮れ毛で黒色等様々な特徴がある人種を何という",
@@ -17757,13 +17757,13 @@
                             "last_answered_date": "2025-05-28"
                         },
                         {
-                            "problem": "インド・パキスタン・中国が争っている領土はどこか",
+                            "problem": "インド・パキスタン・Chinaが争っている領土はどこか",
                             "answer": [
                                 "カシミール地方"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-20"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "黄河流域や東北部で盛んに栽培されているのは小麦か米のどちらか",
@@ -18581,7 +18581,7 @@
                             ],
                             "memo": "覚え方：　かきけよ",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "テニスの試合方式には二種類ある。なにとなにか",
@@ -19162,6 +19162,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-22"
+                        },
+                        {
+                            "problem": "use case for depends_on in terraform ",
+                            "answer": [
+                                "explicit ordering"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
                         }
                     ]
                 }
@@ -19256,13 +19265,13 @@
                             "last_answered_date": "2025-06-03"
                         },
                         {
-                            "problem": "Azureにおいてskuとはなんですか",
+                            "problem": "What is 'sku' in Azure",
                             "answer": [
                                 "Stock Keeping Unitの略で最小管理単位を示す"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-05"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "AzureにおいてApache Sparkベースの分析サービスは？",
@@ -19380,14 +19389,14 @@
                             "last_answered_date": "2025-06-08"
                         },
                         {
-                            "problem": "Logic Appsのプランは二つある。答えて",
+                            "problem": "Azure Logic Appsのプランは二つある。答えて",
                             "answer": [
                                 "Standard",
                                 "Consumption"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-05"
+                            "last_answered_date": "2025-06-09"
                         }
                     ]
                 },
@@ -19588,13 +19597,13 @@
                             "last_answered_date": "2025-06-08"
                         },
                         {
-                            "problem": "Azure サービスエンドポイントの主な目的は何ですか？",
+                            "problem": "What is the main purpose of Azure service endpoints?\"",
                             "answer": [
-                                "仮想ネットワークからAzureサービスへのトラフィックを最適化する"
+                                "securely connect virtual networks (VNets) to Azure services over the Azure backbone network, instead of going over the public internet."
                             ],
-                            "memo": "",
+                            "memo": "VNetからAzureサービスへのトラフィックを最適化する",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "VNet内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
@@ -19606,7 +19615,7 @@
                             "last_answered_date": "2025-06-09"
                         },
                         {
-                            "problem": "Azure NSGと同じく、トラフィックを制御する機能として何がある",
+                            "problem": "Azure NSGと同じく、トラフィックを制御する機能として何がある\nWhat other features are available in Azure to control traffic, similar to NSG",
                             "answer": [
                                 "Azure firewall"
                             ],
@@ -19631,7 +19640,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 },
@@ -19743,6 +19752,10 @@
                             "last_answered_date": "2025-04-12"
                         }
                     ]
+                },
+                {
+                    "name": "Service Endpoints",
+                    "questions": []
                 }
             ]
         },
@@ -19829,7 +19842,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-05"
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 }
