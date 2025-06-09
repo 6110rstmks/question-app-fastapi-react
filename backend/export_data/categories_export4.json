@@ -1056,7 +1056,7 @@
                             "answer": [
                                 "transit gateway アタッチメント"
                             ],
-                            "memo": "",
+                            "memo": "VPC→\tTransit Gateway VPC Attachment\nVPN（Site-to-Site）→\tTransit Gateway VPN Attachment\nDirect Connect→\tTransit Gateway Direct Connect",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-02"
                         }
@@ -1317,6 +1317,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-07"
+                        },
+                        {
+                            "problem": "CloudFront を使ったウェブアプリケーションで、機密データ（クレジットカード番号、個人情報など）を暗号化して安全に転送する機能をなんという",
+                            "answer": [
+                                "field-level encryption"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
                         }
                     ]
                 },
@@ -3036,6 +3045,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "AWS Organizationにおいて複数のAWSアカウントの請求を1つにまとめて管理できる機能は",
+                            "answer": [
+                                "Consolidated Billing"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
                         }
                     ]
                 },
@@ -12374,8 +12392,8 @@
                                 "等速円運動の正射影"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "円運動の速度は？",
@@ -13422,8 +13440,8 @@
                                 "外来河川"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "砂嘴が伸びて対岸にくっついた地形は？またそれによって囲まれた湖を何という",
@@ -19161,29 +19179,8 @@
                                 "App Service"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
-                        },
-                        {
-                            "problem": "AzureのApp Service アプリを実行するためのコンピューティングリソース構成を定義するためのリソースを何という",
-                            "answer": [
-                                "App Service Plan"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
-                        },
-                        {
-                            "problem": "Azure monitor にはどんなサービスがあるか3",
-                            "answer": [
-                                "Application insights",
-                                "Container insights",
-                                "Alerts",
-                                "action gruop"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-01"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "Log Analytics workspaceで使用できるクエリ言語は何という",
@@ -19241,15 +19238,6 @@
                             "last_answered_date": "2025-05-28"
                         },
                         {
-                            "problem": "Microsoft Azure が提供する SSL/TLS 証明書の一種で、Azure 上の Web アプリケーション（App Service）に HTTPS 通信を簡単に導入するためのサービスは？",
-                            "answer": [
-                                "App Service 証明書"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-12"
-                        },
-                        {
                             "problem": "azure でのサービスプリンシパルについて",
                             "answer": [
                                 "外部アプリケーションから認証が必要なときに利用する"
@@ -19291,17 +19279,17 @@
                                 "Azure キュー"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-09"
                         },
                         {
-                            "problem": "Saasとして利用できるIoT向けアプリケーションプラットフォームはどれか",
+                            "problem": "AzureにおいてSaasとして利用できるIoT向けアプリケーションプラットフォームはどれか",
                             "answer": [
                                 "IoT Center"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-08"
                         },
                         {
                             "problem": "Azureにおいてデータベースの移行ができるサービスは",
@@ -19371,7 +19359,7 @@
                         {
                             "problem": "Azure Cognitive ServiceとAzure Machine Learningのうち学習済みのモデルをAPIで利用できるのはどちらか",
                             "answer": [
-                                "Azure Cognitive Service"
+                                "Azure Cognitive Services"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -19406,38 +19394,6 @@
                 {
                     "name": "application insights",
                     "questions": []
-                },
-                {
-                    "name": "azure monitor",
-                    "questions": [
-                        {
-                            "problem": "Azure Monitorの診断設定（diagnostic settings）とは",
-                            "answer": [
-                                "Azure のリソース（例：App Service、Storage Account、Key Vault など）からログやメトリックを収集し、それを Log Analytics、Event Hub、Storage Account に送信するための設定をするもの"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-18"
-                        },
-                        {
-                            "problem": "Azureの「Application insightsにデータを保存する」は正しいか間違っているか",
-                            "answer": [
-                                "間違っている。データの保存先はlog analytics workspaceです。"
-                            ],
-                            "memo": "Application Insights は、アプリケーションのパフォーマンスや使用状況をモニタリングするためのサービス",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
-                        },
-                        {
-                            "problem": "Azure Monitorはオンプレミスのサーバを監視することは可能か",
-                            "answer": [
-                                "可能’"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
-                        }
-                    ]
                 },
                 {
                     "name": "storage",
@@ -19570,7 +19526,36 @@
                 },
                 {
                     "name": "Database",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "Azureにおいてパフォーマンスに影響を与える問題のあるクエリを特定して解決するために使用できるツールまたは機能は？",
+                            "answer": [
+                                "Query Store\n",
+                                "Dynamic Management Views (DMVs)"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
+                        },
+                        {
+                            "problem": "Azure SQL Database で使用できるストレージ上のデータの暗号化",
+                            "answer": [
+                                "TDE Transparent Data Encryption"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
+                        },
+                        {
+                            "problem": "AzureにおいてSQL Server の高可用性および災害復旧（HA/DR）**のための機能は？",
+                            "answer": [
+                                "Always On Availability Groups"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
+                        }
+                    ]
                 },
                 {
                     "name": "Network",
@@ -19612,13 +19597,13 @@
                             "last_answered_date": "2025-06-03"
                         },
                         {
-                            "problem": "仮想ネットワーク内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
+                            "problem": "VNet内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
                             "answer": [
                                 "NSG"
                             ],
                             "memo": "https://az-start.com/wp-content/uploads/2022/05/84361a6617c900de2d59b4dbca3c62f7.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-09"
                         },
                         {
                             "problem": "Azure NSGと同じく、トラフィックを制御する機能として何がある",
@@ -19653,6 +19638,111 @@
                 {
                     "name": "Azure Machine Learning",
                     "questions": []
+                },
+                {
+                    "name": "AI Search",
+                    "questions": []
+                },
+                {
+                    "name": "Monitor",
+                    "questions": [
+                        {
+                            "problem": "Azure Monitorの診断設定（diagnostic settings）とは",
+                            "answer": [
+                                "Azure のリソース（例：App Service、Storage Account、Key Vault など）からログやメトリックを収集し、それを Log Analytics、Event Hub、Storage Account に送信するための設定をするもの"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-18"
+                        },
+                        {
+                            "problem": "Azureの「Application insightsにデータを保存する」は正しいか間違っているか",
+                            "answer": [
+                                "間違っている。データの保存先はlog analytics workspaceです。"
+                            ],
+                            "memo": "Application Insights は、アプリケーションのパフォーマンスや使用状況をモニタリングするためのサービス",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-05-31"
+                        },
+                        {
+                            "problem": "Azure Monitorはオンプレミスのサーバを監視することは可能か",
+                            "answer": [
+                                "可能’"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "Azure Monitor にはどんなサービスがあるか3",
+                            "answer": [
+                                "Application insights",
+                                "Container insights",
+                                "Alerts",
+                                "action gruop"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-01"
+                        }
+                    ]
+                },
+                {
+                    "name": "Microsoft Entra ID",
+                    "questions": [
+                        {
+                            "problem": "Microsoft Entra IDのどの機能が、ユーザーアカウントのセキュリティ強化のために多要素認証（MFA）を設定するために主に使用されますか？",
+                            "answer": [
+                                "条件付きアクセス　conditional access"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
+                        },
+                        {
+                            "problem": "Microsoft Entra ID で作成または構成する必要がある基本コンポーネント はどれですか？",
+                            "answer": [
+                                "OpenID Connect",
+                                "OAuth 2.0",
+                                "アプリ登録（App registration）\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
+                        }
+                    ]
+                },
+                {
+                    "name": "App Service",
+                    "questions": [
+                        {
+                            "problem": "高セキュリティかつスケーラブルなアプリケーションホスティングを必要とする企業向けの 完全に隔離された Azure App Service のホスティングオプションは？",
+                            "answer": [
+                                "Azure App Service Environment（ASE）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-09"
+                        },
+                        {
+                            "problem": "AzureのApp Service アプリを実行するためのコンピューティングリソース構成を定義するためのリソースを何という",
+                            "answer": [
+                                "App Service Plan"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-02"
+                        },
+                        {
+                            "problem": "Microsoft Azure が提供する SSL/TLS 証明書の一種で、Azure 上の Web アプリケーション（App Service）に HTTPS 通信を簡単に導入するためのサービスは？",
+                            "answer": [
+                                "App Service 証明書"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-04-12"
+                        }
+                    ]
                 }
             ]
         },
