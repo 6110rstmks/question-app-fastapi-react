@@ -5449,7 +5449,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "不飽和脂肪酸は飽和脂肪酸に比べて融点が低い。その理由は",
@@ -5793,7 +5793,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-17"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "カエルの前後軸の決定とショウジョウバエの前後軸の決定はそれぞれいつか。",
@@ -5828,11 +5828,11 @@
                         {
                             "problem": "卵と精子は、（A）の途中で出会って受精をします。",
                             "answer": [
-                                "輸卵管"
+                                "輸卵管Fallopian tube"
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "通常の体細胞分裂と比べて卵割に見られる特徴は？",
@@ -6250,6 +6250,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-29"
+                        },
+                        {
+                            "problem": "ヒルガオ科の食べ物は",
+                            "answer": [
+                                "さつまいも"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 },
@@ -6334,16 +6343,16 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "腸液に含まれるデンプンを分解する消化酵素は",
                             "answer": [
-                                "マルターぜ"
+                                "Maltase"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "胃液から出るタンパク質を分解する消化酵素は？",
@@ -6380,12 +6389,12 @@
                         {
                             "problem": "コルチ器を構成するものが二つある。答えよ",
                             "answer": [
-                                "おおい膜、",
+                                "おおい膜",
                                 "聴細胞"
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-10"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "聴細胞は何の振動により興奮させられるか。",
@@ -6402,13 +6411,13 @@
                     "name": "physiology 酸素解離度曲線",
                     "questions": [
                         {
-                            "problem": "酸素解離度曲線が左にシフトすると酸素と結合しやすくなるか。結合しにくくなるか。ネットで曲線を検索して図を見て答えて",
+                            "problem": "酸素解離度曲線が左にシフトすると酸素と結合しやすくなるか。結合しにくくなるか。\nhttps://i.ytimg.com/vi/ABp-kggVsRc/maxresdefault.jpg",
                             "answer": [
                                 "結合しやすくなる。\n理由は、ある定数の酸素濃度を確認した際に、酸素濃度が同じであるのに対して、HbO2の割合が増えるから。"
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-24"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "酸素解離度曲線を英語で答えよ",
@@ -6489,7 +6498,7 @@
                             ],
                             "memo": "小脳はフラミンゴのイメージ\nただよびの講師が言っていた",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "cerebrumの外側である大脳皮質は灰白質？白質？",
@@ -7071,7 +7080,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "What is a class of steroid hormones that regulates salt and water balance?",
@@ -7545,8 +7554,8 @@
                                 "Abscisic acidアブシシン酸"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-28"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "静止中心quiescent centeの働き",
@@ -8025,7 +8034,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOqVOVnVoEwQEcxdDS6TVvCwT4Ux3-9-RhvA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 },
@@ -8235,7 +8244,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 }
@@ -8373,8 +8382,8 @@
                                 "所有と経営の分離\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "「買いオペ」とは、日銀が市場から債券（国債）や手形を買うことです。これにより、市場の通貨流通量を（増やし・減らし）、物価の下落を抑えて金利を引き下げる効果があるため（インフレ・デフレ）傾向の時に行われます。",
@@ -8665,7 +8674,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "分類問題において、あるクラスのサンプル数が他のクラスに比べて極端に少ない状態をなんという",
@@ -8674,7 +8683,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "あなたは新たに顧客データベースを利用したマーケティング戦略を検討しています。この過程において、顧客の特徴に基づいて自動的にカテゴリを分類することが求められます。  この要件を満たすために、どの機械学習アルゴリズムが適切か",
@@ -8683,7 +8692,7 @@
                             ],
                             "memo": "K平均法は、互いに近いデータを同一のクラスタに分類するという原則に基づいて、データセットをk個のクラスタに分ける手法",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-09"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "機械学習におけるバリアンスとは",
@@ -9143,8 +9152,8 @@
                                 "従量課金"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 }
@@ -9658,7 +9667,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "He had his driving license revoked.",
@@ -9783,8 +9792,8 @@
                                 "もり"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "葉酸を英語で",
@@ -10828,8 +10837,8 @@
                                 "出来事の状況や経緯について、いろいろ聞かせてほしい時に使える一言"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "I think I'll be working at the Chicago office for the time being.",
@@ -10937,7 +10946,7 @@
                             ],
                             "memo": "ask that S + V (原形)\n\"ask\" は 要請・要求を表す動詞 であり、「that節」を取る場合、動詞は原形（仮定法現在 / 要求の用法） になります。\nこれは 「要求・提案・命令」 などを表す動詞でよく使われる文法です。\n\n",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "I ask that he go to the meeting.",
@@ -11199,6 +11208,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "The sovereign ruled the kingdom with absolute authority.",
+                            "answer": [
+                                "その君主は絶対的な権力を持って王国を統治した。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-10"
+                        },
+                        {
+                            "problem": "The company plans to ramp up production to meet the high demand.",
+                            "answer": [
+                                "会社は需要に対応するために生産を拡大する予定です。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-11"
                         }
                     ]
                 },
@@ -11405,8 +11432,8 @@
                                 "session→サーバ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 },
@@ -11419,8 +11446,8 @@
                                 "共通鍵暗号方式"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "100人の送受信者が共通鍵暗号方式でそれぞれ秘密に通信を行うとき、必要な共通鍵の数は",
@@ -11474,7 +11501,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "デジタル署名には共通鍵暗号方式か公開鍵暗号方式のどちらが使用されているか",
@@ -12402,7 +12429,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "円運動において、角速度がπ(rad/s)のとき周期（T）は？",
@@ -12722,7 +12749,7 @@
                                 "planed value\n計画上の出来高のことです。\nこれを基準に遅延（コストオーバー）などを判断します。"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-03-28"
                         },
                         {
@@ -13569,8 +13596,8 @@
                                 "ベンゲラ海流"
                             ],
                             "memo": "ナベで覚える",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-10"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "南半球と北半球について季節はどうなっているか",
@@ -13625,7 +13652,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "冬に北半球が寒くなる主な理由",
@@ -14105,7 +14132,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "長草草原は地域によって呼び方が変わるか、それとも変わらないか",
@@ -14114,7 +14141,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "揚子江気団　読み方",
@@ -14646,7 +14673,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "ハドソン湾はどこにある？",
@@ -14655,7 +14682,7 @@
                             ],
                             "memo": "https://image.itmedia.co.jp/nl/articles/1402/28/kuro_140228hokkyoku02.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "黒海の左にはなんの国がある２",
@@ -14739,7 +14766,7 @@
                             ],
                             "memo": "https://cdn.mainichi.jp/vol1/2020/04/02/20200402biz00m020010000p/8.jpg?1",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "カザフステップはどこ？",
@@ -14821,7 +14848,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3olmpMvfnE486EKUJUT68I7LAqOOrf7Q_Cw&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "ドナウ川はどこ",
@@ -15017,7 +15044,7 @@
                             "last_answered_date": "2025-05-17"
                         },
                         {
-                            "problem": "カナダ楯状地とバルト楯状地の場所は",
+                            "problem": "バルト楯状地の場所は",
                             "answer": [
                                 ""
                             ],
@@ -15068,7 +15095,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-13"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "ベネズエラの左にある国は",
@@ -15248,7 +15275,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "シドニーとメルボルンの位置は",
@@ -15313,7 +15340,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHrJsR_qxKaF_M7GZOy12YHnEJa7pf7VmoiQ&s\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "カザフスタンの下には何がある？",
@@ -15367,7 +15394,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7-Kc1SlNxPIEAz8cTMyLqdhkbhJ48VkRUg&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "しんしゃんういぐる自治区の場所は",
@@ -15521,8 +15548,8 @@
                                 "カスピ海"
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "テンシャン山脈の場所は",
@@ -15540,7 +15567,16 @@
                             ],
                             "memo": "https://www.sakaiku.jp/real/florida_c_2.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-11"
+                        },
+                        {
+                            "problem": "カナダ楯状地の場所は？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://juken-geography.com/wp-content/uploads/2020/08/takujouchi-tatejouchi-bunpu-e1598533702168.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
                         }
                     ]
                 },
@@ -16017,9 +16053,9 @@
                                 "エチオピア",
                                 "チェコ"
                             ],
-                            "memo": "",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7B-Ao2wVLCCOQND02ReTQSsnXFuyPD5pH_A&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-06-12"
                         },
                         {
                             "problem": "複数の都市がつながって一つの巨大な都市圏を形成したものを何という？",
@@ -16219,7 +16255,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -16264,7 +16300,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "人口増加のpull要因は都市部が農村から人口を吸引するようにして、都市に人口が流入することであるが、原因は何か",
@@ -16291,7 +16327,7 @@
                             ],
                             "memo": "人口最大はチューリッヒZurich",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-11"
                         }
                     ]
                 },
@@ -16420,8 +16456,8 @@
                                 "都市"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "村落は第何次産業が中心か",
@@ -16503,7 +16539,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-22"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "緑の革命のデメリットは",
@@ -16786,7 +16822,7 @@
                             ],
                             "memo": "https://asmira.jp/wp-content/uploads/2020/01/south-america-terrain-3-213x300.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "園芸農業のうち、都市から近い地域で新鮮な野菜などを栽培し、都市に販売する農業を漢字4文字で何というか。",
@@ -17014,7 +17050,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
@@ -17338,7 +17374,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUfLodDQXM7fC9dJQKslH6tS_SnpH2kmVTmw&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "イギリスは国全体でどの気候区分に属するか？",
@@ -17456,7 +17492,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-26"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "気候、農業、工業といずれも南北が対照的で、南北間の経済格差が大きいため南部からの出稼ぎも多い。この特徴はどこの国か？",
@@ -17512,7 +17548,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "フランス北東部、モーゼル川上流域に分布するフランス最大の鉄鉱石産地は？",
@@ -17653,8 +17689,8 @@
                                 "放牧"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "新疆ウイグル　これなんとよむ",
@@ -17913,7 +17949,7 @@
                             ],
                             "memo": "https://gakuen.gifu-net.ed.jp/~contents/kou_chirekikouminn/sekaishichizu/Russia/image/russia03s_ani.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "リアス海岸で有名な海外の場所として、アメリカのサンフランシスコ湾以外にもう一つ例をあげて",
@@ -17922,7 +17958,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "フランスとスペインの境界にある山脈は？",
@@ -18037,7 +18073,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-26"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "インダス川とガンジス川はどちらが西にあるか",
@@ -18206,8 +18242,8 @@
                                 "黄色土"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "ラトソルの色は何色？",
@@ -18549,8 +18585,8 @@
                                 "リアス海岸"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 }
@@ -18988,7 +19024,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 },
@@ -19170,7 +19206,21 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-09"
+                            "last_answered_date": "2025-06-10"
+                        }
+                    ]
+                },
+                {
+                    "name": "block",
+                    "questions": [
+                        {
+                            "problem": "data blockの役割を一つ述べてください",
+                            "answer": [
+                                "既存リソースの参照"
+                            ],
+                            "memo": "参照←これが大事\n",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-11"
                         }
                     ]
                 }
@@ -19189,7 +19239,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-09"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "Log Analytics workspaceで使用できるクエリ言語は何という",
@@ -19256,13 +19306,13 @@
                             "last_answered_date": "2025-05-17"
                         },
                         {
-                            "problem": "Azureではサービスを利用するために作成される仮想マシンなどを指して「リソース」と呼び、リソースのコンテナーをなんという",
+                            "problem": "Azureではサービスを利用するために作成される仮想マシンなどを指して「リソース」と呼び、リソースのコンテナーをなんという\nIn Azure, virtual machines and other service components are called 'resources.' What is the container that holds these resources called?\"",
                             "answer": [
-                                "リソースグループ"
+                                "Resource Group."
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "What is 'sku' in Azure",
@@ -19280,7 +19330,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "Azureで提供されているメッセージングサービスは",
@@ -19303,11 +19353,11 @@
                         {
                             "problem": "Azureにおいてデータベースの移行ができるサービスは",
                             "answer": [
-                                "Azure Database Migration Service"
+                                "Azure Database Migration Service(DMS)"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "Azureにおいて規制の厳しい各地域の法規制に準拠するために特別な運用がされているリージョンをなんとよぶ",
@@ -19316,7 +19366,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "大量のセンターからデータを処理するAzureサービスは",
@@ -19350,7 +19400,7 @@
                         {
                             "problem": "VNet内のリソース（仮想マシンなど）から、Azure の PaaS サービス（Azure Storage、Azure SQL Database など）へ、安全かつ直接的に通信できるようにするネットワーク機能は",
                             "answer": [
-                                "サービスエンドポイント"
+                                "Service Endpoint"
                             ],
                             "memo": " ≒ AWS Gateway VPC Endpoint",
                             "is_correct": 0,
@@ -19373,6 +19423,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-08"
+                        },
+                        {
+                            "problem": "リソースグループはどのようなもので分けてグループ化するか",
+                            "answer": [
+                                "環境、システムごと"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-10"
+                        },
+                        {
+                            "problem": "Resource GroupとSubscriptionについてどちらがどちらの配下に存在するか",
+                            "answer": [
+                                "Resource GroupはSubscriptionの配下に存在します。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-10"
                         }
                     ]
                 },
@@ -19386,7 +19454,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "Azure Logic Appsのプランは二つある。答えて",
@@ -19455,7 +19523,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-07"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "Azure Storageの冗長オプションを4つ答えて",
@@ -19481,7 +19549,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "Azure の画像認識サービスを使用して、画像内の特定のオブジェクトを検出する場合、どのサービスを使用するべきですか？",
@@ -19499,7 +19567,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "自然言語処理（NLP）を使用して、テキストデータから感情を分析する場合、どの Azure サービスを使用するべきですか？",
@@ -19570,13 +19638,13 @@
                     "name": "Network",
                     "questions": [
                         {
-                            "problem": "AzureにおいてVNetのIPアドレス範囲を分割した、より小さな論理的なセクションをなんという",
+                            "problem": "In Azure, the smaller logical sections created by dividing the IP address range of a Virtual Network (VNet) are called subnets.\nAzureにおいてVNetのIPアドレス範囲を分割した、より小さな論理的なセクションをなんという",
                             "answer": [
                                 "Subnet"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "azureでawsのVPCに該当するものは何",
@@ -19584,8 +19652,8 @@
                                 "VNet"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "Azure 内に他ネットワークと論理的に分離されたプライベートなネットワークを構築できるサービスをなんという",
@@ -19617,21 +19685,21 @@
                         {
                             "problem": "Azure NSGと同じく、トラフィックを制御する機能として何がある\nWhat other features are available in Azure to control traffic, similar to NSG",
                             "answer": [
-                                "Azure firewall"
+                                "Azure Firewall"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "Azure NSGと同じく、トラフィックを制御する機能としてAzure Firewallがあるが、これらの違いは",
                             "answer": [
                                 "NsG→サブネットもしくは仮想マシンのNIC（Network Interface Card）上で機能する",
-                                "Firewallは仮想ネットワークとインターネットの境界で機能する。つまり、Azure Firewallの保護範囲は仮想ネットワーク全体"
+                                "FirewallはVNetとインターネットの境界で機能する。つまり、Azure Firewallの保護範囲は仮想ネットワーク全体"
                             ],
                             "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-03"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "Azure NSGは無料か有料か",
@@ -19662,7 +19730,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-18"
+                            "last_answered_date": "2025-06-10"
                         },
                         {
                             "problem": "Azureの「Application insightsにデータを保存する」は正しいか間違っているか",
@@ -19674,13 +19742,13 @@
                             "last_answered_date": "2025-05-31"
                         },
                         {
-                            "problem": "Azure Monitorはオンプレミスのサーバを監視することは可能か",
+                            "problem": "Azure Monitorはオンプレミスのサーバを監視することは可能か\nIs it possible for Azure Monitor to monitor on-premises servers?",
                             "answer": [
-                                "可能’"
+                                "Yes"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-11"
                         },
                         {
                             "problem": "Azure Monitor にはどんなサービスがあるか3",
@@ -19750,6 +19818,16 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-12"
+                        },
+                        {
+                            "problem": "App ServiceのSlotのユースケースとして2つ述べて",
+                            "answer": [
+                                "ブルーグリーンデプロイメント",
+                                "A/B テストの実施"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-11"
                         }
                     ]
                 },
