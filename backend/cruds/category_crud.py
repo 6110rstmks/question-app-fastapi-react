@@ -5,6 +5,13 @@ from models2 import Category, CategoryQuestion, Subcategory, Question
 from config import PAGE_SIZE
 from fastapi import HTTPException
 
+def find_all_categories(db: Session):
+    """
+    全てのカテゴリを取得する。
+    """
+    query = select(Category)
+    return db.execute(query).scalars().all()
+
 def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None, answer_word: str = None):
 
     # カテゴリテーブルがそんざいするかどうかの確認。

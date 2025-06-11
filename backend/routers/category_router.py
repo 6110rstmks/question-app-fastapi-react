@@ -62,6 +62,12 @@ async def find_all(
 ):
     return (category_cruds.find_all(db))[skip : skip + limit]
 
+@router.get("/all_categories", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
+async def find_all_categories(
+    db: DbDependency
+):
+    return (category_cruds.find_all_categories(db))
+
 @router.get("/all_categories_with_questions", response_model=list[CategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
 async def find_all(
     db: DbDependency,

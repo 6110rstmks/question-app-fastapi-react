@@ -9,6 +9,18 @@ interface FetchCategoriesParams {
     searchAnswerWord: string;
 }
 
+export const fetchAllCategories = async (): Promise<Category[]> => {
+    const url = 'http://localhost:8000/categories/all_categories';
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+
+    return await response.json()
+}
+
 // ホーム画面の初期状態にて、カテゴリー一覧を取得するためのAPI
 // カテゴリ検索を行った際も、以下のAPIでカテゴリー一覧を取得する
 export const fetchCategories = async ({
