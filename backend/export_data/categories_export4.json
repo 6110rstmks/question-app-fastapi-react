@@ -8718,6 +8718,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-31"
+                        },
+                        {
+                            "problem": "Snowflakeがクラウドストレージ(AWS, Azure, GCP)にアクセスするための認証情報やアクセス制御を安全に管理するための仕組みを答えて",
+                            "answer": [
+                                "storage integration"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
                         }
                     ]
                 }
@@ -8844,8 +8853,8 @@
                                 "回帰"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-12"
                         },
                         {
                             "problem": "連続した数値を予測するために機械学習で使用される手法は",
@@ -19580,30 +19589,6 @@
                     ]
                 },
                 {
-                    "name": "logic apps",
-                    "questions": [
-                        {
-                            "problem": "Azure Logic Appsでは、何と言うツールが搭載されているため、視覚的にワークフローを作成できるか",
-                            "answer": [
-                                "standard workflow designer"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-11"
-                        },
-                        {
-                            "problem": "Azure Logic Appsのプランは二つある。答えて",
-                            "answer": [
-                                "Standard",
-                                "Consumption"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-09"
-                        }
-                    ]
-                },
-                {
                     "name": "application insights",
                     "questions": []
                 },
@@ -19859,15 +19844,6 @@
                     "name": "Monitor",
                     "questions": [
                         {
-                            "problem": "Azure Monitorの診断設定（diagnostic settings）とは",
-                            "answer": [
-                                "Azure のリソース（例：App Service、Storage Account、Key Vault など）からログやメトリックを収集し、それを Log Analytics、Event Hub、Storage Account に送信するための設定をするもの"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
-                        },
-                        {
                             "problem": "Azureの「Application insightsにデータを保存する」は正しいか間違っているか",
                             "answer": [
                                 "間違っている。データの保存先はlog analytics workspaceです。"
@@ -19896,6 +19872,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-01"
+                        },
+                        {
+                            "problem": "Azure のリソース（例：App Service、Storage Account、Key Vault など）からログやメトリックを収集し、それを Log Analytics、Event Hub、Storage Account に送信するための設定をするものをなんという",
+                            "answer": [
+                                "Azure Monitor Diagnostic Settings"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
                         }
                     ]
                 },
@@ -19928,7 +19913,7 @@
                     "name": "App Service",
                     "questions": [
                         {
-                            "problem": "高セキュリティかつスケーラブルなアプリケーションホスティングを必要とする企業向けの 完全に隔離された Azure App Service のホスティングオプションは？",
+                            "problem": "Azure App Serviceにおいて高セキュリティかつスケーラブルなアプリケーションホスティングを必要とする企業向けの 完全に隔離されたホスティングオプションは？",
                             "answer": [
                                 "Azure App Service Environment（ASE）"
                             ],
@@ -19989,6 +19974,57 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
+                        }
+                    ]
+                },
+                {
+                    "name": "Azure Backup",
+                    "questions": [
+                        {
+                            "problem": "Azure Backup を使用してVMのバックアップが定期的に取得されるようにする。VMを定期的にバックアップするために何を設定する必要がありますか。",
+                            "answer": [
+                                "バックアップポリシー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
+                        },
+                        {
+                            "problem": "Azure Backup を使用してVMのバックアップが定期的に取得されるようにする。VMを定期的にバックアップを保存する場所は",
+                            "answer": [
+                                "Recovery Services Container"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
+                        }
+                    ]
+                },
+                {
+                    "name": "Azure Load Balancer",
+                    "questions": []
+                },
+                {
+                    "name": "Logic apps",
+                    "questions": [
+                        {
+                            "problem": "Azure Logic Appsでは、何と言うツールが搭載されているため、視覚的にワークフローを作成できるか",
+                            "answer": [
+                                "standard workflow designer"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-11"
+                        },
+                        {
+                            "problem": "Azure Logic Appsのプランは二つある。答えて",
+                            "answer": [
+                                "Standard",
+                                "Consumption"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
                             "last_answered_date": "2025-06-12"
                         }
                     ]
