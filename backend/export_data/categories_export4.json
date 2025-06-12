@@ -4499,7 +4499,7 @@
                             ],
                             "memo": "ドルトンの分圧の法則とは異なるね\n\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-12"
                         },
                         {
                             "problem": "石油の分留において、重油の次に沸点の低いものはなにか",
@@ -7424,8 +7424,8 @@
                                 "チャート"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-13"
                         },
                         {
                             "problem": "UV-A,UV-B,UV-Cのうち、オゾン層で吸収されるものは？",
@@ -11361,6 +11361,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-12"
+                        },
+                        {
+                            "problem": "The detective probed the crime scene for clues",
+                            "answer": [
+                                "刑事は証拠を探すために犯罪現場を探査しました。\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-13"
                         }
                     ]
                 },
@@ -15194,7 +15203,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA1-iPfL2xV2ipce6XJ0CnCW18flEOEPicnw&s\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-12"
                         },
                         {
                             "problem": "ギアナ高地の場所は",
@@ -18688,12 +18697,12 @@
                             "last_answered_date": "2025-05-31"
                         },
                         {
-                            "problem": "入江がラッパ状になっているのはエスチュアリーかリアス海岸か",
+                            "problem": "入江がラッパ状になっているのはフィヨルドかエスチュアリーかリアス海岸か",
                             "answer": [
                                 "エスチュアリー"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-06-09"
                         },
                         {
@@ -18722,6 +18731,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-10"
+                        },
+                        {
+                            "problem": "U字谷に関係するのはエスチュアリーかフィヨルドかどちらか",
+                            "answer": [
+                                "フィヨルド"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
                         }
                     ]
                 }
@@ -19229,7 +19247,7 @@
                                 "\\frac{当期純利益}{自己資本} \\times 100"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-14"
                         },
                         {
@@ -19249,6 +19267,26 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-05-24"
+                        },
+                        {
+                            "problem": "企業の会計期間中（一般的には1年間）の収益と費用をまとめた財務諸表をなんという",
+                            "answer": [
+                                "損益計算書"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
+                        },
+                        {
+                            "problem": "財務三表を答えて",
+                            "answer": [
+                                "B/S",
+                                "P/L",
+                                "キャッシュフロー計算書"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
                         }
                     ]
                 }
@@ -20003,7 +20041,19 @@
                 },
                 {
                     "name": "Azure Load Balancer",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "Health Probeがサポートしているプロトコルは",
+                            "answer": [
+                                "TCP",
+                                "HTTP",
+                                "HTTPS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-12"
+                        }
+                    ]
                 },
                 {
                     "name": "Logic apps",
