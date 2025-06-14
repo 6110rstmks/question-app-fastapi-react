@@ -1961,7 +1961,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "EBSボリュームの汎用SSDは別のAZ内のインスタンスにアタッチ可能か",
@@ -4679,7 +4679,7 @@
                                 "No. 特異臭"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 2,
                             "last_answered_date": "2025-04-19"
                         },
                         {
@@ -4748,7 +4748,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "分子式が同じで、構造が異なる物質同士を何という",
@@ -4823,7 +4823,7 @@
                                 "ナトリウムフェノキシドに塩酸や炭酸のようなフェノールよりも強い酸を加えることで弱酸遊離反応によってフェノールを得る"
                             ],
                             "memo": "https://kimika.net/wp-content/uploads/2019/10/y1fenol4.png",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-26"
                         },
                         {
@@ -4897,7 +4897,7 @@
                                 "C10H8"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 2,
                             "last_answered_date": "2025-05-25"
                         },
                         {
@@ -5475,8 +5475,8 @@
                                 "フェニルアラニン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "塩基性アミノ酸を一つ答えて",
@@ -5521,7 +5521,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-11"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "不飽和脂肪酸は飽和脂肪酸に比べて融点が低い。その理由は",
@@ -5821,13 +5821,13 @@
                             "last_answered_date": "2025-05-19"
                         },
                         {
-                            "problem": "硝酸を作成する工業的製法を何という",
+                            "problem": "Nitoric Acidを作成する工業的製法を何という",
                             "answer": [
                                 "オストワルト法"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-01"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "オストワルト法において一酸化窒素NOと空気の混合気体を140℃以下に冷却すると、NOはO2と反応して自動的にNO2に酸化される。2NO + O2 ->2NO2 このように、化合物がO2により触媒を使わずに自動的に酸化される反応を何と言う",
@@ -5883,8 +5883,8 @@
                                 "バイソラックス突然変異体"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "原口背唇部から（A）や（B）が分泌されて、これらがBMPに結合することで、BMPは受容体に結合できなくなる。その結果原口背唇部に近い背側の外胚葉の細胞は表皮ではなく、（C）に分化する",
@@ -7461,7 +7461,7 @@
                             ],
                             "memo": "(ナシ、イチゴ、スイカ、イチジク、バナナ、ビワ、リンゴ)\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "マメ科のおしべの数は",
@@ -7469,8 +7469,8 @@
                                 "10本"
                             ],
                             "memo": "アブラナ科のおしべは６本\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-15"
                         }
                     ]
                 },
@@ -8150,8 +8150,8 @@
                                 "とうもろこし"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "葉緑体に含まれる各光合成色素に様々な波長の光をあてたときの急光度ををグラフ化したものをなんという",
@@ -8371,6 +8371,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-10"
+                        },
+                        {
+                            "problem": "単性花の反対は",
+                            "answer": [
+                                "両生花"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         }
                     ]
                 }
@@ -8408,7 +8417,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "帰属計算ぶんもふくめて金銭で換算したGDPをなんとよぶ？",
@@ -8753,7 +8762,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-15"
                         }
                     ]
                 }
@@ -8872,7 +8881,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "来月売れるギフトカードの数を予測するために、どの種類の機械学習を使用すべきですか？",
@@ -8890,7 +8899,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         }
                     ]
                 }
@@ -10990,8 +10999,8 @@
                                 "出来事の状況や経緯について、いろいろ聞かせてほしい時に使える一言"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "I think I'll be working at the Chicago office for the time being.",
@@ -11035,8 +11044,8 @@
                                 "彼女は祖父から家具を張り替えることを学んだ。\n"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "The mountain's apex was covered in snow.",
@@ -11351,7 +11360,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-11"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "The government’s intervention helped stabilize the economy.",
@@ -11359,8 +11368,8 @@
                                 "政府の介入が経済の安定に役立った。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "The sovereign ruled the kingdom with absolute authority.",
@@ -11369,7 +11378,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "The company plans to ramp up production to meet the high demand.",
@@ -11464,7 +11473,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         }
                     ]
                 }
@@ -11640,7 +11649,7 @@
                             ],
                             "memo": "kerberosは認証プロトコルであって、SSOではない",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "認証・認可を英語でそれぞれ答えて",
@@ -11650,7 +11659,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "認証について一言で説明して",
@@ -12600,8 +12609,8 @@
                                 "インバーターinverter"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-22"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "力 x 距離 = ?",
@@ -13292,7 +13301,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "cuestaが見られる盆地は",
@@ -13777,7 +13786,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-11"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "沈水海岸の例3",
@@ -13787,8 +13796,8 @@
                                 "エスチュアリー"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "貿易依存度とは、（A）に対する輸出額・輸入額の割合です。",
@@ -13886,8 +13895,8 @@
                                 "ワジWadi "
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "アタカマ砂漠ができる原因となっている海流は？",
@@ -13924,7 +13933,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "シベリア気団は乾燥している？湿っている？",
@@ -14254,7 +14263,7 @@
                             "answer": [
                                 "パンパ"
                             ],
-                            "memo": "",
+                            "memo": "https://asmira.jp/wp-content/uploads/2020/01/south-america-terrain-4-214x300.png",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-15"
                         },
@@ -14443,7 +14452,7 @@
                                 "カンポ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-06-13"
                         },
                         {
@@ -14593,7 +14602,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "大きな山脈の風下側にできる 砂漠をなんという",
@@ -14903,7 +14912,7 @@
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-asia-map-1.png\n\n降水量が1000mmのライン",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-11"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "オーストリアの左にはなにがある。",
@@ -14992,7 +15001,7 @@
                             ],
                             "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -15204,8 +15213,8 @@
                                 "ベネズエラ"
                             ],
                             "memo": "https://pbs.twimg.com/media/EalgXWyU0ActhIQ?format=jpg&name=large",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "ナミビアの下には何の国がある？",
@@ -15347,7 +15356,7 @@
                             "answer": [
                                 ""
                             ],
-                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXj-S34IQd57iee_ynSseqa6AOhWXBm7hRA&s",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXj-S34IQd57iee_ynSseqa6AOhWXBm7hRA&s\nムンバイの場所も合わせて抑えrう",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-12"
                         },
@@ -15447,8 +15456,8 @@
                                 "トルクメニスタン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "オビ川の右にある川は？",
@@ -15657,7 +15666,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7-Kc1SlNxPIEAz8cTMyLqdhkbhJ48VkRUg&s",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-11"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "しんしゃんういぐる自治区の場所は",
@@ -15692,8 +15701,8 @@
                                 ""
                             ],
                             "memo": "https://p.potaufeu.asahi.com/6eab-p/picture/23957942/c0371a1149cb5e426b9a08cac458a5dd.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-04"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "https://juken-geography.com/wp-content/uploads/2020/07/mountains-kantaiheiyou-e1594197143889.png 8,9を答えてください",
@@ -15840,6 +15849,15 @@
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/08/takujouchi-tatejouchi-bunpu-e1598533702168.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-12"
+                        },
+                        {
+                            "problem": "アフガニスタンの上にある国は",
+                            "answer": [
+                                "トルクメニスタン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         }
                     ]
                 },
@@ -16518,7 +16536,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -16695,8 +16713,8 @@
                                 "ベルギー"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         }
                     ]
                 },
@@ -16709,8 +16727,8 @@
                                 "europe"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "集落の分類2",
@@ -17213,8 +17231,8 @@
                                 "アンデス山脈"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "放牧はどのような環境でおこなわれるか",
@@ -17237,11 +17255,11 @@
                         {
                             "problem": "同じ耕地に、種類の異なる作物を一定の順番で栽培していくことを何という",
                             "answer": [
-                                "輪作"
+                                "輪作　Crop rotation"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "輪作で毎回違う作物を育てる理由",
@@ -18052,8 +18070,8 @@
                                 "ラマ教（チベット仏教）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "インド・パキスタン・Chinaが争っている領土はどこか",
@@ -18249,8 +18267,8 @@
                                 "エスチュアリー（三角江）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-07"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "ウラル山脈は古期造山帯か新期造山帯か",
@@ -18306,8 +18324,8 @@
                                 "北極海"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-19"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "世界最大の湖は？",
@@ -18662,7 +18680,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "ニュージーランドの公用語は2",
@@ -18680,8 +18698,8 @@
                                 "インド・ヨーロッパ語族"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "ゲルマン語系の言語は？5",
@@ -18812,8 +18830,8 @@
                                 "フィヨルド"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpPlPieSK6tvvrT7kbcDc79Kz_a4h_T5Rn7w&s\n\nU字谷で幅が広いところにはいってくるから",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "入江がラッパ状になっているのはフィヨルドかエスチュアリーかリアス海岸か",
@@ -18821,8 +18839,8 @@
                                 "エスチュアリー"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "河川の侵食で形成された谷をＶ字谷というのに対して、氷河による侵食で形成された谷を何と言う",
@@ -18857,8 +18875,8 @@
                                 "フィヨルド"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         }
                     ]
                 }
@@ -19205,7 +19223,7 @@
                             ],
                             "memo": "UV-Aの方が真皮層まで届くと言う知識と紐づける",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "https://www.nihonbashi-f-laser.com/asset/IMG_0668.jpg このような画像の疾患をなんという",
@@ -19287,7 +19305,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "エモリエントの代表的なものは",
@@ -19584,9 +19602,9 @@
                             "answer": [
                                 "activity log"
                             ],
-                            "memo": "",
+                            "memo": "「Application Insights」とは異なり、アプリケーション内部のログではなく、Azure ポータルやリソースレベルの操作ログ\n\nAWSでのCloudtrail",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "azure でのサービスプリンシパルについて",
@@ -19613,7 +19631,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "AzureにおいてApache Sparkベースの分析サービスは？",
@@ -19667,7 +19685,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "Azure Activity Logは保存期間が90日のため、長期に保存したい場合はどうすればよいか。",
@@ -19676,7 +19694,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "オンプレミス環境とAzure環境の接続方法を3つ答えてください",
@@ -19687,7 +19705,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "VNet内のリソース（仮想マシンなど）から、Azure の PaaS サービス（Azure Storage、Azure SQL Database など）へ、安全かつ直接的に通信できるようにするネットワーク機能は",
@@ -19713,8 +19731,8 @@
                                 "Azure Cognitive Services"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "リソースグループはどのようなもので分けてグループ化するか",
@@ -19726,13 +19744,13 @@
                             "last_answered_date": "2025-06-10"
                         },
                         {
-                            "problem": "Resource GroupとSubscriptionについてどちらがどちらの配下に存在するか",
+                            "problem": "AzureにおいてResource GroupとSubscriptionについてどちらがどちらの配下に存在するか",
                             "answer": [
                                 "Resource GroupはSubscriptionの配下に存在します。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "Azureリソースを論理的に分離し、課金とアクセス制御を行う単位は？",
@@ -19740,8 +19758,8 @@
                                 "subscription"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         }
                     ]
                 },
@@ -19812,7 +19830,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "Azure Queue Storageでメッセージを保存できる期間は最大何日ですか",
@@ -19844,7 +19862,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-08"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "Azure Machine Learning でデータの前処理を行うために使用できるモジュールはどれですか？",
@@ -19898,7 +19916,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "Azure SQL Database で使用できるストレージ上のデータの暗号化",
@@ -20015,8 +20033,8 @@
                                 "間違っている。データの保存先はlog analytics workspaceです。"
                             ],
                             "memo": "Application Insights は、アプリケーションのパフォーマンスや使用状況をモニタリングするためのサービス",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "Azure Monitorはオンプレミスのサーバを監視することは可能か\nIs it possible for Azure Monitor to monitor on-premises servers?",
@@ -20154,7 +20172,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "Azure Backup を使用してVMのバックアップが定期的に取得されるようにする。VMを定期的にバックアップを保存する場所は",
@@ -20267,8 +20285,8 @@
                                 "CSR"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-14"
                         }
                     ]
                 }
@@ -20287,7 +20305,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "ローリングアップデートとブルーグリーンの違いは",
@@ -20299,13 +20317,13 @@
                             "last_answered_date": "2025-05-31"
                         },
                         {
-                            "problem": "docker composeとkubernetesの違いは何か",
+                            "problem": "docker composeとkubernetesの違いは何か。規模の観点で",
                             "answer": [
                                 "docker composeが開発・小規模な本番環境なのに対して、kubernetesでは大規模な本番環境\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-06-14"
                         },
                         {
                             "problem": "一つ以上のコンテナをグループ化し、共有の実行環境を提供するKubernetesの最小単位をなんという",
@@ -20430,6 +20448,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-13"
+                        },
+                        {
+                            "problem": "14~16世紀にかけてイタリアで始まり西欧各地に広まった芸術・思想上の新しい動きは？",
+                            "answer": [
+                                "ルネサンス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
+                        },
+                        {
+                            "problem": "ルネサンスはどこの国で始まったか",
+                            "answer": [
+                                "イタリア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-14"
                         }
                     ]
                 },
