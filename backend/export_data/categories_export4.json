@@ -3706,8 +3706,8 @@
                                 "整式×　三角関数\n整式　×　指数関数"
                             ],
                             "memo": "∫(x^3 +x)cosxdx を計算せよ。 ←瞬間部分積分が適用できる例",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-08"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "sinxの積分漸化式の解法の流れ",
@@ -4775,7 +4775,7 @@
                             ],
                             "memo": "https://kimika.net/wp-content/uploads/2017/08/aru-ete20192-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "メタンの工業的製法",
@@ -5521,7 +5521,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "不飽和脂肪酸は飽和脂肪酸に比べて融点が低い。その理由は",
@@ -6224,8 +6224,8 @@
                                 "無体腔"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "子実体fruiting bodyはどの核相に分類されるか",
@@ -6931,7 +6931,7 @@
                             "answer": [
                                 "サンガー法"
                             ],
-                            "memo": "",
+                            "memo": "DNAマイクロアレイは「DNAマイクロアレイ」というのは遺伝子の発現量の比較をする実験のための技術、細胞でどんな遺伝子が発現しているか調べる方法",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-22"
                         },
@@ -7128,7 +7128,7 @@
                                 "DNA マイクロアレイ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-15"
                         },
                         {
@@ -7842,7 +7842,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4mH6KHLcluseYgW3yQNQDQR5Xon5KB26vaA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "抗体のタンパク質を何という？",
@@ -8154,13 +8154,13 @@
                             "last_answered_date": "2025-06-14"
                         },
                         {
-                            "problem": "葉緑体に含まれる各光合成色素に様々な波長の光をあてたときの急光度ををグラフ化したものをなんという",
+                            "problem": "葉緑体に含まれる各光合成色素に様々な波長の光をあてたときの吸光度ををグラフ化したものをなんという",
                             "answer": [
                                 "吸収スペクトル"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOqVOVnVoEwQEcxdDS6TVvCwT4Ux3-9-RhvA&s\n\n各波長wave lengthの光に対する光合成効率のグラフをなんという？→作用スペクトル",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-15"
                         }
                     ]
                 },
@@ -8854,7 +8854,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "分類問題において、あるクラスのサンプル数が他のクラスに比べて極端に少ない状態をなんという",
@@ -8872,7 +8872,7 @@
                             ],
                             "memo": "K平均法は、互いに近いデータを同一のクラスタに分類するという原則に基づいて、データセットをk個のクラスタに分ける手法",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "機械学習におけるバリアンスとは",
@@ -8898,8 +8898,8 @@
                                 "自動機械学習"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "来月売れるギフトカードの数を予測するために、どの種類の機械学習を使用すべきですか？",
@@ -9864,8 +9864,8 @@
                                 "Isoelectric Point\n"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-13"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "amphoteric substance",
@@ -11153,7 +11153,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "しかめつらをする",
@@ -11578,8 +11578,8 @@
                                 "水飲み場攻撃"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "サイバー攻撃の一連のステップを体系的にモデル化した枠組みで、主に攻撃者が攻撃を完了するためにたどる段階を理解・検出・防御するために使われるものは",
@@ -11711,6 +11711,15 @@
                             "problem": "GET /cgi-bin/submit.cgi?user=;cat%20/etc/passwd HTTP/1.1　\n攻撃者が悪用しようとしていた可能性が高い脆弱性は",
                             "answer": [
                                 "OSコマンドインジェクション"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-16"
+                        },
+                        {
+                            "problem": "OAuthは「認証」「認可」のどちらの役割を果たすか",
+                            "answer": [
+                                "認可　Authrization"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -11888,8 +11897,8 @@
                                 "主記憶装置"
                             ],
                             "memo": "\n",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-14"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "CPUがキャッシュメモリと主記憶装置を同時に書き換える方式はライトスルー方式？ライトバック方式？",
@@ -12132,8 +12141,8 @@
                                 "投機実行とは、分岐命令（if文など）で結果がまだ確定していない段階でも、その後に実行されるであろう命令を予測して先に実行してしまう技術です。予測が当たれば高速化され、外れた場合はその投機的な実行結果は破棄されます。"
                             ],
                             "memo": "投機：不確実だが当たれば利益の大きい事をねらってする行為\nif (x > 0) {\n    doSomething();\n}\nCPUは x > 0 の条件が評価される前に、「たぶん x > 0 だろう」と予測して doSomething() を先に実行し始めます。\n条件が合っていれば → 実行結果はそのまま使われる（高速化成功）\n条件が違っていれば → 実行結果を捨ててやり直す（無駄になるけど問題はない）",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "命令フェッチでは（A）から（B）に命令を読み込む",
@@ -12674,7 +12683,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "物体を回転させる力を何という？",
@@ -12710,7 +12719,7 @@
                             ],
                             "memo": "円運動の加速度は円の中心方向",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "円運動において、角速度がπ(rad/s)のとき周期（T）は？",
@@ -13031,7 +13040,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-03-28"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "EVMにおいてEVとは",
@@ -14953,8 +14962,8 @@
                                 "16->アパラチア山脈"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "アコンカグアはどこにある",
@@ -15322,7 +15331,7 @@
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "ニュージーランドおよび日付変更線以東なのはポリネシア、ミクロネシア？",
@@ -15702,7 +15711,7 @@
                             ],
                             "memo": "https://www.takasaki-foundation.or.jp/hosttown/common/img/hosttown/pl-01-2x.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "カスピ海の下にある国",
@@ -16526,8 +16535,8 @@
                                 "リマ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "ブータンの人口は？",
@@ -16892,8 +16901,8 @@
                                 "冬を越す小麦と覚える。→秋に種をまいて、冬をこす。→冬をこすことができるということは気候は比較的あたたかい。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "熱帯の農業方式といえば",
@@ -17383,9 +17392,9 @@
                             "answer": [
                                 "地中海性気候"
                             ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-09"
+                            "memo": "サンフランシスコ海流という寒流が\n湾に流れ込み、その上を強い西風が吹いていることが多い\n\nイギリスに似ている",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "チリの海岸沿いはケッペンの何に分類される",
@@ -18372,16 +18381,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-11"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "インダス川とガンジス川はどちらが西にあるか",
                             "answer": [
                                 "インダス川"
                             ],
-                            "memo": "",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfvuVY-flcf4xrSA3V6G14f_gp9D_LaJjHg&s",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "河川の侵食によってできたV字谷に海水が入り込んでできた入江をなんという",
@@ -19087,8 +19096,8 @@
                                 "長い"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-14"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "脱毛サロンで使用されているIPLの波長はおよそどれくらいか",
@@ -19566,8 +19575,8 @@
                                 "App Service"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "Log Analytics workspaceで使用できるクエリ言語は何という",
@@ -19694,7 +19703,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "大量のセンターからデータを処理するAzureサービスは",
@@ -19889,7 +19898,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "Azure の画像認識サービスを使用して、画像内の特定のオブジェクトを検出する場合、どのサービスを使用するべきですか？",
@@ -19906,8 +19915,8 @@
                                 "Normalize Data"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": " Azureにおいて自然言語処理（NLP）を使用して、テキストデータから感情を分析する場合、どのサービスを使用するべきですか？",
@@ -19961,7 +19970,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-11"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "AzureにおいてSQL Server の高可用性および災害復旧（HA/DR）**のための機能は？",
@@ -19978,13 +19987,13 @@
                     "name": "Network",
                     "questions": [
                         {
-                            "problem": "In Azure, the smaller logical sections created by dividing the IP address range of a Virtual Network (VNet) are called subnets.\nAzureにおいてVNetのIPアドレス範囲を分割した、より小さな論理的なセクションをなんという",
+                            "problem": "In Azure, What is the smaller logical sections created by dividing the IP address range of a Virtual Network (VNet) \nAzureにおいてVNetのIPアドレス範囲を分割した、より小さな論理的なセクションをなんという",
                             "answer": [
                                 "Subnet"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "azureでawsのVPCに該当するものは何",
@@ -20032,14 +20041,14 @@
                             "last_answered_date": "2025-06-11"
                         },
                         {
-                            "problem": "Azure NSGと同じく、トラフィックを制御する機能としてAzure Firewallがあるが、これらの違いは",
+                            "problem": "Azure NSGと同じく、トラフィックを制御する機能としてAzure Firewallがあるが、これらの動作対象の違いは",
                             "answer": [
                                 "NsG→サブネットもしくは仮想マシンのNIC（Network Interface Card）上で機能する",
                                 "FirewallはVNetとインターネットの境界で機能する。つまり、Azure Firewallの保護範囲は仮想ネットワーク全体"
                             ],
                             "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "Azure NSGは無料か有料か",
@@ -20099,8 +20108,8 @@
                                 "Azure Monitor Diagnostic Settings"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-15"
                         }
                     ]
                 },
@@ -20294,7 +20303,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "RBACの対象がAzure リソースなのに対して、Microsoft Entra Roleの対象はなんですか",
