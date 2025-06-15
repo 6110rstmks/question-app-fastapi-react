@@ -29,7 +29,16 @@ export const useSubcategoryPage = (
 ) => {
     const [subcategoryName, setSubcategoryName] = useState<string>('')
     const [questions, setQuestions] = useState<Question[]>([])
-    const [uncorrectedQuestionCount, setUncorrectedQuestionCount] = useState<number | null>(null)
+    const [
+        uncorrectedQuestionCount,
+        setUncorrectedQuestionCount
+    ] = useState<number | null>(null)
+
+    const [
+        questionCount,
+        setQuestionCount
+    ] = useState<number | null>(null)
+
     const location = useLocation()
     const [
         modalIsOpen, 
@@ -60,7 +69,7 @@ export const useSubcategoryPage = (
             setIsEditing(false);
             await updateSubcategoryName(subcategoryId, subcategoryName);
         }
-    };
+    }
 
     const handleSetTemporaryProblem = async () => {
         const response = await fetchProblem('subcategory', 'temporary', 4, [], [subcategoryId]);
@@ -94,8 +103,6 @@ export const useSubcategoryPage = (
             }
         });
     }
-
-    // const 
 
     //「削除」と入力してクリックすることで削除が実行される。
     const handleDeleteSubcategory = async () => {
@@ -157,14 +164,16 @@ export const useSubcategoryPage = (
         window.scrollTo(0, 0);
 
         (async () => {
-            const questions_data = await fetchQuestionsBySubcategoryId(subcategoryId);
-            setQuestions(questions_data);
+            const questions_data = await fetchQuestionsBySubcategoryId(subcategoryId)
+            setQuestions(questions_data)
 
-            const subcategory_data = await fetchSubcategory(subcategoryId);
+            const subcategory_data = await fetchSubcategory(subcategoryId)
             setSubcategoryName(subcategory_data.name)
 
-            const uncorrectedQuestionCount = await fetchUncorrectedQuestionCountBySubcategoryId(subcategoryId);
-            setUncorrectedQuestionCount(uncorrectedQuestionCount);
+            const uncorrectedQuestionCount = await fetchUncorrectedQuestionCountBySubcategoryId(subcategoryId)
+            setUncorrectedQuestionCount(uncorrectedQuestionCount)
+
+            setQuestionCount(questions_data.length)
         })();
 
         // これなくてもいい気がする。
@@ -189,6 +198,7 @@ export const useSubcategoryPage = (
         setShowAnswer,
         isEditing,
         setIsEditing,
+        questionCount,
         uncorrectedQuestionCount,
         handleKeyPress,
         handleSetUnsolvedProblem,

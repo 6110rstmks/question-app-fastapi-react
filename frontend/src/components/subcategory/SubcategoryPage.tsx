@@ -30,6 +30,7 @@ const SubcategoryPage: React.FC = () => {
         setShowAnswer,
         isEditing,
         setIsEditing,
+        questionCount,
         uncorrectedQuestionCount,
         handleKeyPress,
         handleSetUnsolvedProblem,
@@ -103,7 +104,8 @@ const SubcategoryPage: React.FC = () => {
             <div>
 
             </div>
-            <h2>未正当の問題の数：{uncorrectedQuestionCount}</h2>
+            <h3>問題の数：{questionCount}</h3>
+            <h3>未正当の問題の数：{uncorrectedQuestionCount}</h3>
             <Modal
                 isOpen={modalIsOpen}
                 contentLabel="Example Modal"
@@ -157,7 +159,7 @@ const SubcategoryPage: React.FC = () => {
             </div>
 
         </div>
-    );
-};
+    )
+}
 
-export default SubcategoryPage;
+export default SubcategoryPage
