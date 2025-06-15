@@ -36,7 +36,7 @@ export const HomePage: React.FC = () => {
         questionCount,
         uncorrectedQuestionCount,
         correctedQuestionCount,
-        temporaryQuestionCount
+        temporaryQuestionCount,
     } = useCategories(
         page,
         limit,
@@ -57,7 +57,7 @@ export const HomePage: React.FC = () => {
                     <h3>The total number of corrected Questions：{correctedQuestionCount}</h3>
                 </div>
 
-                <button>カテゴリのブラックリスト一覧のページに移動</button>
+                <Link to="/categorylist">カテゴリの一覧のページに移動</Link>
             </div>
 
             <h1>ctr i でsetproblempageにとべる</h1>

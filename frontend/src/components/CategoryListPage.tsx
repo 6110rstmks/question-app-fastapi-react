@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { fetchAllCategories } from '../api/CategoryAPI'
 import { Category } from '../types/Category'
-import { set } from 'date-fns'
-import styles from "./CategoryBlackList.module.css"
+import styles from "./CategoryList.module.css"
 
-const CategoryBlackListPage = () => {
+const CategoryListPage = () => {
     const [categories, setCategories] = useState<Category[]>([])
 
     useEffect(() => {
@@ -30,4 +29,4 @@ const CategoryBlackListPage = () => {
   )
 }
 
-export default CategoryBlackListPage
+export default CategoryListPage
