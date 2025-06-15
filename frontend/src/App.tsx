@@ -53,7 +53,6 @@ const App: React.FC = () => {
         <Route path="/report_page" element={<ReportPage />}/>
         <Route path="/question_list" element={<QuestionListPage />}/>
         <Route path="*" element={<NoMatchPage />} />
-
         <Route path="/today" element={<Today />}/>
       </Routes>
     </Router>

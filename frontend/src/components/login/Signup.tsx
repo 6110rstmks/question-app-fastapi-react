@@ -9,7 +9,7 @@ const Signup: React.FC = () => {
     const [form, setForm] = useState<SignupForm>({
         username: '',
         password: ''
-    });
+    })
 
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState<string | null>(null);
@@ -41,10 +41,10 @@ const Signup: React.FC = () => {
             throw new Error('Failed to sign up. Please try again.');
         }
 
-        const data = await response.json();
-        setSuccess('Signup successful!');
+        const data = await response.json()
+        setSuccess('Signup successful!')
 
-    };
+    }
 
   return (
     <div style={{ maxWidth: '400px', margin: '0 auto' }}>

@@ -8,33 +8,32 @@ interface LoginProps {
 }
 
 const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
-    const [username, setUsername] = useState<string>('');
-    const [password, setPassword] = useState<string>('');
-    const [error, setError] = useState<string>('');
-    const navigate = useNavigate();
-
+    const [username, setUsername] = useState<string>('')
+    const [password, setPassword] = useState<string>('')
+    const [error, setError] = useState<string>('')
+    const navigate = useNavigate()
 
     // 既にログインしている場合は、ホーム画面にリダイレクト
     useEffect(() => {
         const token = localStorage.getItem('access_token');
         if (token) {
-            navigate('/categories/home');
+            navigate('/categories/home')
         }
-    }, [navigate]);
+    }, [navigate])
 
     // googleAuthでログイン
     const handleLoginInWithGoogle = (): void => {
         signInWithPopup(auth, provider).then((result) => {
-            localStorage.setItem("isAuth", "true");
-            setIsAuth(true);
-            navigate("/categories/home");
-        });
-    };
+            localStorage.setItem("isAuth", "true")
+            setIsAuth(true)
+            navigate("/categories/home")
+        })
+    }
 
     // ユーザネームとパスワードでログイン
     const handleLogin = async (e: FormEvent): Promise<void> => {
-        e.preventDefault();
-        setError('');
+        e.preventDefault()
+        setError('')
 
         const response = await fetch('http://localhost:8000/auth/login', {
             method: 'POST',
@@ -42,8 +41,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ username, password }),
-        });
-
+        })
 
         if (!response.ok) {
             throw new Error('Incorrect username or password');
@@ -88,4 +86,4 @@ const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
     );
 };
 
-export default Login;
+export default Login
