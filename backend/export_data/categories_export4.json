@@ -5231,7 +5231,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-25"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "アルカリ金属は原子番号が大きくなるほど、塩基の力が強くなる。その理由を答えて",
@@ -6201,8 +6201,8 @@
                                 "whale"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "刺胞動物の例1",
@@ -7135,7 +7135,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "cDNAのcはどういう意味ですか？",
@@ -7255,8 +7255,8 @@
                                 "真皮"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "キク科の植物語呂合わせ",
@@ -7553,8 +7553,8 @@
                                 "Pfr"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "（A）が作用することでセルロース繊維間の多糖の切断が促され植物細胞の細胞壁が緩むのでその分だけ植物細胞内に水が入ってきて吸水でき細胞が成長する。",
@@ -7792,7 +7792,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-29"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "細胞周期の間期を英語で何という？",
@@ -8119,7 +8119,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "ルビスコのワードを分解するとどのような意味をとれる？",
@@ -8665,7 +8665,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "what is the SMB(server message block) protocol primary function?``",
@@ -8885,7 +8885,7 @@
                             "answer": [
                                 "バリアンスは、モデルがトレーニングデータにめっちゃ過剰に反応している状態"
                             ],
-                            "memo": "",
+                            "memo": "もうひとつがバイアス",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-14"
                         },
@@ -8896,7 +8896,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "機械学習のプロセスを効率化し、専門知識を持たない人々でも活用できる技術のことを何という",
@@ -8922,8 +8922,93 @@
                                 "回帰"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "機械学習のバリアンスの他にもうひとつなにがあったか",
+                            "answer": [
+                                "バイアス\n"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "KNNというアルゴリズムについて",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-16"
+                        },
+                        {
+                            "problem": "KNNは教師あり学習か教師なし学習のどちらか",
+                            "answer": [
+                                "教師あり学習"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-16"
+                        }
+                    ]
+                },
+                {
+                    "name": "RAG",
+                    "questions": [
+                        {
+                            "problem": "RAGの正式名称は",
+                            "answer": [
+                                "Retrieval-Augmented Generation"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
+                        }
+                    ]
+                },
+                {
+                    "name": "自然言語処理",
+                    "questions": [
+                        {
+                            "problem": "自然言語処理において、文章を単語に分割していく処理をなんという",
+                            "answer": [
+                                "形態素解析（トークン化）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "形態素解析の身近でのユースケース",
+                            "answer": [
+                                "検索エンジン"
+                            ],
+                            "memo": "東京のラーメン屋　助詞の「の」を除いて検索",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "ベクトルデータベースの代表的なライブラリを2つ挙げて",
+                            "answer": [
+                                "Elasticsearch",
+                                "faiss",
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-17"
+                        },
+                        {
+                            "problem": "言語モデルのハルシネーションに対する解決策２",
+                            "answer": [
+                                "RAG",
+                                "ファインチューニング"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-16"
                         }
                     ]
                 }
@@ -11069,7 +11154,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "The mountain's apex was covered in snow.",
@@ -11086,8 +11171,8 @@
                                 "生態系"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "Give me a call when you will wake up.　どこが間違えているか",
@@ -11420,7 +11505,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "The detective probed the crime scene for clues",
@@ -11429,7 +11514,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "三角形 合同 英語でなんという",
@@ -11454,9 +11539,27 @@
                             "answer": [
                                 "絶え間ない水の流れが、その建物の基礎を掘り崩した。\n"
                             ],
-                            "memo": "",
+                            "memo": "undermine: 弱体化",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-16"
+                        },
+                        {
+                            "problem": "This book aims to demystify quantum physics for a layperson.",
+                            "answer": [
+                                "この本は、一般の人にとって量子物理学を解読することを目指しています。\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "I had to run to keep up with friend.",
+                            "answer": [
+                                "友達についていくために走っていた。\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-17"
                         }
                     ]
                 },
@@ -11523,8 +11626,8 @@
                                 "最も重要なポイントは、部門間のコミュニケーションを改善する必要があるということです。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-17"
                         }
                     ]
                 }
@@ -11621,7 +11724,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "OSコマンドインジェクションの対策は",
@@ -11639,7 +11742,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "ブルートフォース攻撃が攻撃対象IDを固定してパスワードを総当たりで試すのとは逆に、パスワードを1つに固定し、利用者IDを総当りで試していくことで不正ログインを試みるパスワードクラック手法をなんという",
@@ -11765,7 +11868,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "OAuthは「認証」「認可」のどちらの役割を果たすか",
@@ -13147,7 +13250,7 @@
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-17"
                         }
                     ]
                 }
@@ -13362,8 +13465,8 @@
                                 "カルデラ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "外来河川は、（A）から（B）に流れる河川。",
@@ -13631,8 +13734,8 @@
                                 "局地風"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "面積が世界で一番大きい国",
@@ -13925,8 +14028,8 @@
                                 "陸繋島"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "一日中太陽が出てこない現象を何という？",
@@ -13934,8 +14037,8 @@
                                 "極夜polar night"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-07"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "アメリカの乾燥地帯で行われている農業の方法を何という？",
@@ -14450,7 +14553,7 @@
                             ],
                             "memo": "https://www.ryoko.info/Temperature/india/map/kolkata.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "南アジアといえばどんな国がある",
@@ -15186,7 +15289,7 @@
                             ],
                             "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -15516,7 +15619,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA1-iPfL2xV2ipce6XJ0CnCW18flEOEPicnw&s\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "ギアナ高地の場所は",
@@ -16354,7 +16457,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "ナスカの地上絵はどこの国",
@@ -16476,8 +16579,8 @@
                                 "スプロール現象"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "人口増減の要因2",
@@ -17137,7 +17240,7 @@
                             ],
                             "memo": "大麦側が寒い、小麦側が暖かい",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "コーヒーの原産国は",
@@ -17461,8 +17564,8 @@
                                 "輪作　Crop rotation"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "輪作で毎回違う作物を育てる理由",
@@ -17534,7 +17637,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
@@ -17588,7 +17691,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "砂漠気候(BW)の条件：降水量：概ね年降水量が（A）",
@@ -18229,7 +18332,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "カシミール地方はどの国の領土なのか、インド・パキスタン・中国が争っている領土問題をなんという",
@@ -18681,7 +18784,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "レグールは何色",
@@ -18810,7 +18913,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk0XFLz2UN8JqbWstN9tJtX8IoYuiF45Tkdg&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "ブラジルの公用語はなんですか",
@@ -18883,7 +18986,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "ニュージーランドの公用語は2",
@@ -19434,8 +19537,8 @@
                                 "血管腫"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "保湿剤は作用機構から二つに分類される。答えて",
@@ -19801,13 +19904,13 @@
                             "last_answered_date": "2025-04-19"
                         },
                         {
-                            "problem": "azureにおいてリソースに対して、どのようなアクションがあったかを記録するログは？",
+                            "problem": "Azureにおいてリソースに対して、どのようなアクションがあったかを記録するログは？",
                             "answer": [
                                 "activity log"
                             ],
                             "memo": "「Application Insights」とは異なり、アプリケーション内部のログではなく、Azure ポータルやリソースレベルの操作ログ\n\nAWSでのCloudtrail",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "azure でのサービスプリンシパルについて",
@@ -19815,8 +19918,8 @@
                                 "外部アプリケーションから認証が必要なときに利用する"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "In Azure, virtual machines and other service components are called 'resources.' What is the container that holds these resources called?\"",
@@ -19824,8 +19927,8 @@
                                 "Resource Group."
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "What is 'sku' in Azure",
@@ -19888,7 +19991,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "Azure Activity Logは保存期間が90日のため、長期に保存したい場合はどうすればよいか。",
@@ -19897,7 +20000,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "オンプレミス環境とAzure環境の接続方法を3つ答えてください",
@@ -19926,7 +20029,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "Azure Cognitive ServiceとAzure Machine Learningのうち学習済みのモデルをAPIで利用できるのはどちらか",
@@ -20060,7 +20163,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-06-15"
                         }
                     ]
                 },
@@ -20083,7 +20186,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "Azure Machine Learning でデータの前処理を行うために使用できるモジュールはどれですか？",
@@ -20101,7 +20204,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "Azure Machine Learning でモデルをトレーニングする際に、過学習を防ぐための一般的な方法はどれですか？",
@@ -20140,7 +20243,7 @@
                             "last_answered_date": "2025-06-15"
                         },
                         {
-                            "problem": "Azure SQL Database で使用できるストレージ上のデータの暗号化",
+                            "problem": "Azure SQL Database で使用できるストレージ上のデータの暗号化をなんという？",
                             "answer": [
                                 "TDE Transparent Data Encryption"
                             ],
@@ -20243,7 +20346,35 @@
                 },
                 {
                     "name": "AI Search",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "Azure AI Search のインデクサーとは",
+                            "answer": [
+                                "検索サービスで使用するデータをインデックス化するためのツールです"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-17"
+                        },
+                        {
+                            "problem": "Azure AI Searchでのインデックスのドキュメントのファイル形式は",
+                            "answer": [
+                                "json"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-16"
+                        },
+                        {
+                            "problem": "Azure AI Searchのアナライザーとは",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-16"
+                        }
+                    ]
                 },
                 {
                     "name": "Monitor",
@@ -20299,7 +20430,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-06-16"
                         },
                         {
                             "problem": "Microsoft Entra ID で作成または構成する必要がある基本コンポーネント はなんですか3",
@@ -20377,9 +20508,9 @@
                             "answer": [
                                 "Secret ManagerとKMS"
                             ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "memo": "session manager がkey vault secretns",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-16"
                         }
                     ]
                 },
@@ -20410,7 +20541,7 @@
                     "name": "Azure Load Balancer",
                     "questions": [
                         {
-                            "problem": "Azure Load BalancerのHealth Probeがサポートしているプロトコルは",
+                            "problem": "Azure Load BalancerのHealth Probeがサポートしているプロトコルは3",
                             "answer": [
                                 "TCP",
                                 "HTTP",
@@ -20418,7 +20549,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "last_answered_date": "2025-06-15"
                         }
                     ]
                 },
@@ -20470,7 +20601,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-06-18"
                         },
                         {
                             "problem": "Azure Roleの正式名称は",
@@ -20610,7 +20741,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-12"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "インドで成立した祭式至上主義の宗教",
@@ -20655,7 +20786,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-18"
                         },
                         {
                             "problem": "オリエント世界におけるメソポタミアからシリア・パレスチナにいたる地域の名称をなんという",
@@ -20664,7 +20795,7 @@
                             ],
                             "memo": "https://www.y-history.net/map/0101/orient-iseki.jpg\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-15"
                         },
                         {
                             "problem": "誰が「出エジプト」を行なったか",
@@ -20690,8 +20821,8 @@
                                 "ルネサンス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "ルネサンスはどこの国で始まったか",
@@ -20718,7 +20849,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-17"
                         },
                         {
                             "problem": "ササン朝ペルシアで国教とされていた宗教は",
@@ -20836,7 +20967,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-06-15"
                         }
                     ]
                 }
