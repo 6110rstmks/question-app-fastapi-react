@@ -1,12 +1,14 @@
 from datetime import timedelta
 from typing import Annotated
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import auth_crud as auth_cruds
 from schemas.auth import UserCreate, UserResponse, Token, UserSignIn
 from database import get_db
+from fastapi.requests import Request
+from cruds import auth_crud
 
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
@@ -22,7 +24,7 @@ async def create_user(db: DbDependency, user_create: UserCreate):
         raise HTTPException(status_code=400, detail="User already exists")
     return auth_cruds.create_user(db, user_create)
 
-# 使用していない。
+
 @router.get(
     "/me",
     response_model=UserResponse,
@@ -32,15 +34,14 @@ async def read_users_me(current_user: UserResponse = Depends(auth_cruds.get_curr
     return current_user
 
 
-@router.post("/login", status_code=status.HTTP_200_OK, response_model=Token)
-async def login(db: DbDependency, user_signin: UserSignIn):
-    user = auth_cruds.authenticate_user(db, user_signin.username, user_signin.password)
-    if not user:
-        raise HTTPException(status_code=401, detail="Incorrect username or password")
-
-    token = auth_cruds.create_access_token(
-        user.username, user.id, timedelta(minutes=20)
+@router.post("/login", status_code=status.HTTP_200_OK)
+async def login(request: Request, db: DbDependency, user_signin: UserSignIn):
+    return auth_crud.authenticate_user(
+        db, user_signin.username, user_signin.password, request
     )
-    return {"access_token": token, "token_type": "bearer"}
 
+@router.post("/logout", status_code=status.HTTP_200_OK)
+def logout(request: Request):
+    request.session.clear()
+    return {"message": "Logged out"}
 

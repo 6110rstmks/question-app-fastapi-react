@@ -1,5 +1,9 @@
 # 将来実装予定の案
 
+
+jwt認証からsession認証に切り替える。
+
+
 Correct, Temporary, Incorrectの定義をしっかり定める。
 ここにさらに　OnHoldのようなタイプも追加したい。→今はよくわからないのでこの問題は解かない。
 

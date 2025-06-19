@@ -2,9 +2,10 @@ import time
 from fastapi import FastAPI, Request, status
 from routers import category_router, question_router, subcategory_router, problem_router, auth_router, subcategory_question_router, category_question_router, question_count_router
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi_pagination import Page, add_pagination, paginate
+from fastapi_pagination import add_pagination, paginate
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse, RedirectResponse
+from fastapi.responses import JSONResponse
+from starlette.middleware.sessions import SessionMiddleware
 
 app = FastAPI()
 
@@ -13,7 +14,11 @@ app.add_middleware(
     allow_origins=["http://localhost:3000"],
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_credentials=True,
 )
+
+app.add_middleware(SessionMiddleware, secret_key="your-secret-key")
+
 
 @app.exception_handler(RequestValidationError)
 async def handler(request:Request, exc:RequestValidationError):

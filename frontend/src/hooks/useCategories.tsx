@@ -1,7 +1,6 @@
 import { useEffect, useState, useCallback } from "react"
 import { Category } from "../types/Category"
 import { fetchCategories, fetchPageCount } from "../api/CategoryAPI"
-import { isAuthenticated } from "../utils/auth_function"
 import { useNavigate } from "react-router"
 import { 
     fetchQuestionCount, 
@@ -71,11 +70,7 @@ export const useCategories = (
     }, [handleKeyDown])
 
     useEffect(() => {
-        // 未ログイン時にリダイレクト
-        if (!isAuthenticated()) {
-            navigate('/login')
-            return
-        }
+
         const loadPageCount = async () => {
             const count = await fetchPageCount();
             setPageCount(count)

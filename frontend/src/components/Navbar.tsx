@@ -1,95 +1,63 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import styles from "./Navbar.module.css";
+import { useNavbar } from "./useNavbar";
+import { useAuth } from "../context/AuthContext"
 
-interface NavbarProps {
-    isAuth: boolean;
-}
 
-const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
+const Navbar: React.FC = () => {
+    // const [isAuth, setIsAuth] = useState<boolean>(false);
+    const { handleJsonExport, handleCSVExport } = useNavbar();
 
-    const handleJsonExport = async () => {    
-        try {
-            const response = await fetch("http://localhost:8000/categories/export/json", {
-                method: "GET",
-            });
-    
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+    const { isAuth, setIsAuth } = useAuth();
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            try {
+                const response = await fetch("http://localhost:8000/auth/me", {
+                    method: "GET",
+                    credentials: "include",
+                });
+
+                console.log(response)
+
+                if (response.ok) {
+                    console.log("認証確認成功");
+                    setIsAuth(true);
+                } else {
+                    console.log("認証確認失敗");
+                    setIsAuth(false);
+                }
+            } catch (error) {
+                console.error("認証確認エラー:", error);
+                setIsAuth(false);
             }
-    
-            // Blobオブジェクトを作成
-            const blob = await response.blob();
-    
-            // ダウンロードリンクを作成
-            const url = window.URL.createObjectURL(blob);
-            const link = document.createElement("a");
-            link.href = url;
-    
-            // ファイル名を設定（バックエンド側で指定した名前と一致させる）
-            // link.download = "categories.csv";
-            // link.download = "backup_self_made_app.zip";
-            link.download = "categories_export4.json";
-    
-            // ダウンロードをトリガー
-            document.body.appendChild(link);
-            link.click();
-    
-            // リンクをクリーンアップ
-            link.remove();
-            window.URL.revokeObjectURL(url);
-    
-        } catch (error) {
-            console.error("Error exporting file:", error);
-        }
-    };
+        };
 
-    const handleCSVExport = async () => {    
-        const response = await fetch("http://localhost:8000/categories/export/csv", {
-            method: "GET",
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        // Blobオブジェクトを作成
-        const blob = await response.blob();
-
-        // ダウンロードリンクを作成
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-
-        // ファイル名を設定（バックエンド側で指定した名前と一致させる）
-        // link.download = "categories.csv";
-        // link.download = "backup_self_made_app.zip";
-        link.download = "backup_self_made_app.zip";
-
-        // ダウンロードをトリガー
-        document.body.appendChild(link);
-        link.click();
-
-        // リンクをクリーンアップ
-        link.remove();
-        window.URL.revokeObjectURL(url);
-    };
+        checkAuth();
+    }, []);
 
     return (
         <nav>
-            <Link to="/" className={styles.clickable}>
-                <FontAwesomeIcon icon={faHouse} />
-                HOME
-            </Link>
             {!isAuth ? (
-                <Link to="/login" className={styles.clickable}>
-                    <FontAwesomeIcon icon={faArrowRightToBracket} />
-                    SignIn
-                </Link>
+                <>
+                    <Link to="/" className={styles.clickable}>
+                        <FontAwesomeIcon icon={faHouse} />
+                        HOME
+                    </Link>
+                    <Link to="/login" className={styles.clickable}>
+                        <FontAwesomeIcon icon={faArrowRightToBracket} />
+                        SignIn
+                    </Link>
+                </>
             ) : (
                 <>
+                    <Link to="/categories/home" className={styles.clickable}>
+                        <FontAwesomeIcon icon={faHouse} />
+                        HOME
+                    </Link>
                     <Link to="/logout" className={styles.clickable}>
                         <FontAwesomeIcon icon={faArrowRightToBracket} />
                         SignOut
@@ -99,17 +67,16 @@ const Navbar: React.FC<NavbarProps> = ({ isAuth }) => {
                         Data Import
                         <div className={styles.tooltip}>システム特有のjsonファイルをインポートすることでデータの引き継ぎができます。</div>
                     </Link>
-                    <div className={styles.clickable} >
+                    <div className={styles.clickable}>
                         Data Export to Local & Github
                         <div className={styles.tooltip} onClick={handleJsonExport}>JSONでexport</div>
                         <div className={styles.tooltip2} onClick={handleCSVExport}>CSVでexport</div>
-
                     </div>
                     <Link to="/report_page">回答レポートを表示</Link>
                 </>
             )}
         </nav>
     );
-}
+};
 
-export default Navbar
+export default Navbar;

@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { createCategory } from "../../api/CategoryAPI";
-interface CategoryCreateProps {
-    isAuth: boolean;
-}
 
-const CategoryCreate: React.FC<CategoryCreateProps> = ({isAuth }) => {
+const CategoryCreate: React.FC = () => {
     const [categoryName, setCategoryName] = useState<string>("");
     const [errMessage, setErrorMessage] = useState<string>("");
     const navigate = useNavigate();
@@ -19,12 +16,6 @@ const CategoryCreate: React.FC<CategoryCreateProps> = ({isAuth }) => {
             navigate("/");
         }
     }
-
-    useEffect(() => {
-        if (!isAuth) {
-            navigate("/login");
-        }
-    }, [isAuth, navigate]);
 
     return (
         <div className="createPostPage">

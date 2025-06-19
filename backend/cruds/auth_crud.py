@@ -1,27 +1,31 @@
-from datetime import datetime, timedelta
 import hashlib
 import base64
 import os
-from typing import Annotated
-from fastapi import Depends
-from fastapi.security import OAuth2PasswordBearer
-from jose import jwt, JWTError
 from sqlalchemy.orm import Session
 from schemas import auth
 from models2 import User
 from config import get_settings
 from sqlalchemy import select
-
+from fastapi import Depends, HTTPException, status
+from fastapi.requests import Request
+from schemas.auth import UserResponse
+from database import get_db
+from fastapi.responses import JSONResponse
 
 ALGORITHM = "HS256"
 SECRET_KEY = get_settings().secret_key
 
-oauth2_schema = OAuth2PasswordBearer(tokenUrl="/auth/login")
+# oauth2_schema = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
 def create_user(db: Session, user_create: auth.UserCreate):
+    # salt_bytes = os.urandom(32)
+    # salt = base64.b64encode(salt_bytes).decode()  # 保存用に文字列化
     salt = base64.b64encode(os.urandom(32))
     hashed_password = hashlib.pbkdf2_hmac(
-        "sha256", user_create.password.encode(), salt, 1000
+        "sha256",
+        user_create.password.encode(),
+        salt,
+        1000
     ).hex()
 
     new_user = User(
@@ -29,10 +33,12 @@ def create_user(db: Session, user_create: auth.UserCreate):
         password=hashed_password,
         salt=salt.decode()
     )
+    print(hashed_password)
     db.add(new_user)
     db.commit()
-
+    db.refresh(new_user)
     return new_user
+
 
 def check_user_already_exists(db: Session, user_create: auth.UserCreate):
     query = select(User).where(User.username == user_create.username)
@@ -41,34 +47,53 @@ def check_user_already_exists(db: Session, user_create: auth.UserCreate):
         return True
     return False
 
-# 処理概要
 # フロントからきたパスワードをハッシュ化して、ユーザーを認証する
-def authenticate_user(db: Session, username: str, password: str):
+def authenticate_user(
+    db: Session, 
+    username: str, 
+    password: str,
+    request: Request
+):
+
+    print(f"Authenticating user: {username}")
     user = db.query(User).filter(User.username == username).first()
     if not user:
         return None
-
+    
     hashed_password = hashlib.pbkdf2_hmac(
-        "sha256", password.encode(), user.salt.encode(), 1000
+        "sha256", 
+        password.encode(), 
+        user.salt.encode(), 
+        1000
     ).hex()
+    
+    print(hashed_password)
     if user.password != hashed_password:
-        return None
-    return user
+        print('dame')
+        return HTTPException(status_code=401, detail="パスワードが間違っています。")
+
+    request.session["user"] = {
+        "id": user.id,
+        "username": user.username,
+    }
+    return JSONResponse({"message": "Login successful"})
 
 
-def create_access_token(username: str, user_id: int, expires_delta: timedelta):
-    expires = datetime.now() + expires_delta
-    payload = {"sub": username, "id": user_id, "exp": expires}
-    return jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+async def get_current_user(
+    request: Request,
+    db: Session = Depends(get_db),  # ここが重要！
+) -> UserResponse:
+    user_session = request.session.get("user")
+    if not user_session:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Not authenticated")
+    
+    user_id = user_session.get("id")
+    if not user_id:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Not authenticated")
 
+    user = db.query(User).filter(User.id == user_id).first()
 
-def get_current_user(token: Annotated[str, Depends(oauth2_schema)]):
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username = payload.get("sub")
-        user_id = payload.get("id")
-        if username is None or user_id is None:
-            return None
-        return auth.DecodedToken(username=username, user_id=user_id)
-    except JWTError:
-        raise JWTError
+    if not user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
+
+    return UserResponse.from_orm(user)

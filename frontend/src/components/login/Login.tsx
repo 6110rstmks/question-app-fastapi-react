@@ -2,30 +2,29 @@ import React, { useState, FormEvent, ChangeEvent, useEffect } from "react";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase";
 import { useNavigate, Link } from "react-router";
+import { useAuth } from "../../context/AuthContext";
 
-interface LoginProps {
-    setIsAuth: (isAuth: boolean) => void;
-}
-
-const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
+const Login: React.FC = () => {
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const [error, setError] = useState<string>('')
     const navigate = useNavigate()
+    // const [isAuth, setIsAuth] = useState<boolean>(false);
+    const { setIsAuth } = useAuth();
+    
 
-    // 既にログインしている場合は、ホーム画面にリダイレクト
-    useEffect(() => {
-        const token = localStorage.getItem('access_token');
-        if (token) {
-            navigate('/categories/home')
-        }
-    }, [navigate])
+    // // 既にログインしている場合は、ホーム画面にリダイレクト
+    // useEffect(() => {
+    //     const token = localStorage.getItem('access_token')
+    //     if (token) {
+    //         navigate('/categories/home')
+    //     }
+    // }, [navigate])
 
     // googleAuthでログイン
     const handleLoginInWithGoogle = (): void => {
         signInWithPopup(auth, provider).then((result) => {
             localStorage.setItem("isAuth", "true")
-            setIsAuth(true)
             navigate("/categories/home")
         })
     }
@@ -40,18 +39,19 @@ const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
             headers: {
                 'Content-Type': 'application/json',
             },
+            credentials: 'include',
             body: JSON.stringify({ username, password }),
         })
 
+        const data = await response.json()
+
         if (!response.ok) {
-            throw new Error('Incorrect username or password');
+            setError(data.detail);
         }
 
-        const data = await response.json();
-        const { access_token } = data;
-        localStorage.setItem('access_token', access_token);
-        localStorage.setItem("isAuth", "true");
+        console.log(9827298)
         setIsAuth(true);
+
         navigate("/categories/home")
     }
 

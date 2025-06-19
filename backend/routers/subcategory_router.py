@@ -10,7 +10,7 @@ from cruds import category_crud, subcategory_crud
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
-UserDependency = Annotated[DecodedToken, Depends(auth_cruds.get_current_user)]
+# UserDependency = Annotated[DecodedToken, Depends(auth_cruds.get_current_user)]
 
 router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
 

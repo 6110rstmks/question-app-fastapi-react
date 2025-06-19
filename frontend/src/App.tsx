@@ -3,9 +3,9 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router';
 import { HomePage } from './components/HomePage'
 import Login from './components/login/Login'
-import Logout from './components/login/Logout'
 import Signup from './components/login/Signup'
 import Navbar from './components/Navbar'
+import Logout from './components/login/Logout'
 import KeyboardShortcuts from './components/KeyboardShortcuts'
 import QuestionPage from './components/question/QuestionPage'
 import CategoryCreate from './components/category/CategoryCreate'
@@ -20,13 +20,15 @@ import NoMatchPage from './components/NoMatchPage'
 import CategoryBlackListPage from './components/CategoryListPage'
 import Today from './components/Today'
 import 'katex/dist/katex.min.css'
+import { AuthProvider } from './context/AuthContext'
 
 const App: React.FC = () => {
-    const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"))
 
   return (
+    <AuthProvider>
+
     <Router>
-      <Navbar isAuth={isAuth} />
+      <Navbar />
       <KeyboardShortcuts /> 
       <Routes>
         {/* 最初の画面 */}
@@ -35,13 +37,12 @@ const App: React.FC = () => {
         <Route path="/categories/home" element={<HomePage />} />
 
         {/* カテゴリ作成画面 */}
-        <Route path="/createcategory" element={<CategoryCreate isAuth={isAuth} />} />
+        <Route path="/createcategory" element={<CategoryCreate />} />
 
         {/* 問題出題画面 */}
         <Route path="/set_question" element={<SetProblem />} />
-
-        <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
-        <Route path="/logout" element={<Logout setIsAuth={setIsAuth} />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/categorylist" element={<CategoryBlackListPage />} />
 
@@ -56,6 +57,8 @@ const App: React.FC = () => {
         <Route path="/today" element={<Today />}/>
       </Routes>
     </Router>
+    </AuthProvider>
+
   );
 }
 
