@@ -4738,8 +4738,8 @@
                                 "立体異性体"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-20"
                         },
                         {
                             "problem": "分子式が同じで、構造が異なる物質同士を何という",
@@ -6740,7 +6740,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-22"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -7800,8 +7800,8 @@
                                 "interphase"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-17"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-18"
                         }
                     ]
                 },
@@ -8346,7 +8346,7 @@
                             ],
                             "memo": "(キャベツ、ダイコン、ブロッコリー、コマツナ、ナズナ、アブラナ)",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-16"
+                            "last_answered_date": "2025-06-19"
                         },
                         {
                             "problem": "セリ科の植物の例4",
@@ -8787,6 +8787,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "identifier functions in snowflake の役割",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-20"
                         }
                     ]
                 }
@@ -8885,7 +8894,7 @@
                             "answer": [
                                 "バリアンスは、モデルがトレーニングデータにめっちゃ過剰に反応している状態"
                             ],
-                            "memo": "もうひとつがバイアス",
+                            "memo": "もうひとつがバイアス\n\nvariance→ばらつき→まとのどこかにあたっているがばらばら→過学習",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-14"
                         },
@@ -11672,8 +11681,8 @@
                                 "LDAP"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-20"
                         }
                     ]
                 },
@@ -11857,8 +11866,8 @@
                                 "認可→Authorization"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-20"
                         },
                         {
                             "problem": "認証について一言で説明して",
@@ -11986,6 +11995,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-16"
+                        },
+                        {
+                            "problem": "Webアプリケーションのセッションが攻撃者に乗っ取られ，攻撃者が乗っ取ったセッションを利用してアクセスした場合でも，個人情報の漏えいなどの被害が拡大しないようにするために，Webアプリケーションが重要な情報をWebブラウザに送信する直前に行う対策は",
+                            "answer": [
+                                "パスワードによる認証をする。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-18"
                         }
                     ]
                 },
@@ -12092,9 +12110,9 @@
                             "answer": [
                                 "認可"
                             ],
-                            "memo": "",
+                            "memo": "ユーザーが「他のアプリに自分のデータへのアクセスを許可する」\n\n主に使われる場面：LINEログイン、Googleログイン、Twitterの連携アプリなど",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-22"
                         }
                     ]
                 },
@@ -12906,8 +12924,8 @@
                                 "インバーターinverter"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-19"
                         },
                         {
                             "problem": "力 x 距離 = ?",
@@ -13007,7 +13025,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=Iqqd5PPuS2E&list=PLtdcmqO4ps6WjlJp8b3ZATi2VL_-fniLL&index=34",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-22"
                         }
                     ]
                 },
@@ -14954,6 +14972,27 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-17"
+                        },
+                        {
+                            "problem": "天然ゴムの１番の使い道として多いのは",
+                            "answer": [
+                                "自動車のタイヤ"
+                            ],
+                            "memo": "タイやインドネシアが生産量1,2位\n→自動車産業が盛ん",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-18"
+                        },
+                        {
+                            "problem": "社会主義の国4",
+                            "answer": [
+                                "中国",
+                                "キューバ",
+                                "ベトナム",
+                                "ラオス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-23"
                         }
                     ]
                 },
@@ -15989,8 +16028,8 @@
                                 ""
                             ],
                             "memo": "https://www.takasaki-foundation.or.jp/hosttown/common/img/hosttown/pl-01-2x.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-19"
                         },
                         {
                             "problem": "カスピ海の下にある国",
@@ -16008,7 +16047,7 @@
                             ],
                             "memo": "https://p.potaufeu.asahi.com/6eab-p/picture/23957942/c0371a1149cb5e426b9a08cac458a5dd.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-19"
                         },
                         {
                             "problem": "https://juken-geography.com/wp-content/uploads/2020/07/mountains-kantaiheiyou-e1594197143889.png 8,9を答えてください",
@@ -16159,11 +16198,12 @@
                         {
                             "problem": "アフガニスタンの上にある国は",
                             "answer": [
-                                "トルクメニスタン"
+                                "トルクメニスタン",
+                                "ウズベキスタン"
                             ],
-                            "memo": "",
+                            "memo": "https://imidas.jp/library/img/genre/z-D-123-001_sp.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-21"
                         },
                         {
                             "problem": "アマゾン盆地とブラジル高原ではどちらが北にあるか",
@@ -16598,7 +16638,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-22"
                         },
                         {
                             "problem": "人口増減の要因2",
@@ -17691,7 +17731,7 @@
                             ],
                             "memo": "サンフランシスコ海流という寒流が\n湾に流れ込み、その上を強い西風が吹いていることが多い\n\nイギリスに似ている",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "チリの海岸沿いはケッペンの何に分類される",
@@ -18213,7 +18253,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
+                            "last_answered_date": "2025-06-19"
                         }
                     ]
                 },
@@ -19080,9 +19120,9 @@
                             "answer": [
                                 "離水海岸"
                             ],
-                            "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n離水海岸は沈水海岸には含まれない",
+                            "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n\n沈水海岸\n海面が上昇したり、陸地が沈降したりすることで、　海岸付近の陸地が水の中に沈んでできた海岸地形\n\n離水海岸\n海面が下降したり、陸地が隆起したりすることで、　浅い海底が陸の上に現れてできた海岸地形",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-20"
                         },
                         {
                             "problem": "沈水海岸を英語で",
@@ -19546,8 +19586,8 @@
                                 "UV-A"
                             ],
                             "memo": "UV-Aの方が真皮層まで届くと言う知識と紐づける",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-19"
                         },
                         {
                             "problem": "https://www.nihonbashi-f-laser.com/asset/IMG_0668.jpg このような画像の疾患をなんという",
@@ -19592,8 +19632,8 @@
                                 "非ステロイド"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-20"
                         },
                         {
                             "problem": "線維芽細胞は表皮、真皮、皮下組織のどこにある",
@@ -19672,7 +19712,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-19"
                         }
                     ]
                 }
@@ -19746,8 +19786,8 @@
                                 "キャッシュフロー計算書"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-19"
                         }
                     ]
                 }
@@ -19954,8 +19994,8 @@
                                 "Stock Keeping Unitの略で最小管理単位を示す"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-19"
                         },
                         {
                             "problem": "AzureにおいてApache Sparkベースの分析サービスは？",
@@ -20028,8 +20068,8 @@
                                 "VPN接続（サイト間）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-22"
                         },
                         {
                             "problem": "VNet内のリソース（仮想マシンなど）から、Azure の PaaS サービス（Azure Storage、Azure SQL Database など）へ、安全かつ直接的に通信できるようにするネットワーク機能は",
@@ -20064,8 +20104,8 @@
                                 "環境、システムごと"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-20"
                         },
                         {
                             "problem": "AzureにおいてResource GroupとSubscriptionについてどちらがどちらの配下に存在するか",
@@ -20073,8 +20113,8 @@
                                 "Resource GroupはSubscriptionの配下に存在します。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-18"
                         },
                         {
                             "problem": "Azureリソースを論理的に分離し、課金とアクセス制御を行う単位は？",
@@ -20102,6 +20142,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "誰がVMを停止させたかわかるAzureリソースは",
+                            "answer": [
+                                "Azure Activity Log"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-24"
                         }
                     ]
                 },
@@ -20317,7 +20366,7 @@
                             ],
                             "memo": "VNetからAzureサービスへのトラフィックを最適化する",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-20"
                         },
                         {
                             "problem": "VNet内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
@@ -20386,9 +20435,9 @@
                         {
                             "problem": "Azure AI Searchのアナライザーとは",
                             "answer": [
-                                ""
+                                "インデックス作成時やクエリ時にテキストをトークン（単語など）に分割し、正規化（正規表現やステミングなど）するための処理ロジック"
                             ],
-                            "memo": "",
+                            "memo": "簡単に言えば、**「検索しやすくするために、テキストを加工・分解する仕組み」**です。",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-16"
                         }
@@ -20540,9 +20589,9 @@
                             "answer": [
                                 "バックアップポリシー"
                             ],
-                            "memo": "",
+                            "memo": "Recovery Service Containerも作成する必要がある。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-19"
                         },
                         {
                             "problem": "Azure Backup を使用してVMのバックアップが定期的に取得されるようにする。VMを定期的にバックアップを保存する場所は",
@@ -20608,7 +20657,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "Microsoft Entraロールの種類 3つだけあげて",
@@ -20652,6 +20701,42 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-15"
+                        }
+                    ]
+                },
+                {
+                    "name": "application gateway",
+                    "questions": []
+                },
+                {
+                    "name": "ARM",
+                    "questions": [
+                        {
+                            "problem": "VMのグルーピングによる NSG 管理の簡素化するためのAzureリソースは？",
+                            "answer": [
+                                "ASG"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-23"
+                        },
+                        {
+                            "problem": "ASG を単体で使ってトラフィック制御を行うことはできますか？",
+                            "answer": [
+                                "できない。NSGと併用する必要がある。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-23"
+                        },
+                        {
+                            "problem": "従来のNSGのやり方に対してASGを使用することでどのように便利になったか。",
+                            "answer": [
+                                "IPアドレスが変更された際にルールの修正が必要だったが、不要になった。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-23"
                         }
                     ]
                 }
@@ -20707,7 +20792,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-22"
                         },
                         {
                             "problem": "一つ以上のコンテナをグループ化し、共有の実行環境を提供するKubernetesの最小単位をなんという",
