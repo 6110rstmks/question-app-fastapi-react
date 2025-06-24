@@ -3,23 +3,39 @@ import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase";
 import { useNavigate, Link } from "react-router";
 import { useAuth } from "../../context/AuthContext";
+import styles from "./Login.module.css"; // CSS モジュールをインポート
 
 const Login: React.FC = () => {
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const [error, setError] = useState<string>('')
     const navigate = useNavigate()
-    // const [isAuth, setIsAuth] = useState<boolean>(false);
     const { setIsAuth } = useAuth();
-    
 
     // // 既にログインしている場合は、ホーム画面にリダイレクト
-    // useEffect(() => {
-    //     const token = localStorage.getItem('access_token')
-    //     if (token) {
-    //         navigate('/categories/home')
-    //     }
-    // }, [navigate])
+    useEffect(() => {
+        const checkAuth = async () => {
+            try {
+                const response = await fetch("http://localhost:8000/auth/me", {
+                    method: "GET",
+                    credentials: "include", // ← セッションCookieを送るために必要
+                });
+    
+                if (response.ok) {
+                    console.log("既にログインしているためホームへリダイレクト");
+                    setIsAuth(true); // Context を更新
+                    navigate("/categories/home");
+                } else {
+                    console.log("未認証（ログイン画面に留まる）");
+                }
+            } catch (err) {
+                console.error("認証確認エラー:", err);
+            }
+        };
+    
+        checkAuth();
+    }, [navigate, setIsAuth]);
+    
 
     // googleAuthでログイン
     const handleLoginInWithGoogle = (): void => {
@@ -45,8 +61,15 @@ const Login: React.FC = () => {
 
         const data = await response.json()
 
+        console.log(response.ok)
+
         if (!response.ok) {
             setError(data.detail);
+            return
+        }
+
+        if (response.ok) {
+            console.log("ログイン成功:", data);
         }
 
         console.log(9827298)
@@ -65,7 +88,6 @@ const Login: React.FC = () => {
 
             <hr />
             <form onSubmit={handleLogin}>
-                {error && <p style={{ color: 'red' }}>{error}</p>}
                 <label htmlFor="username">Username</label>
                 <input
                     id="username"
@@ -82,6 +104,7 @@ const Login: React.FC = () => {
                 />
                 <button type="submit">Sign in</button>
             </form>
+            <p className={styles.errMsg}>{error}</p>
         </div>
     );
 };

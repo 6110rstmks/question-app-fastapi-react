@@ -5,10 +5,34 @@ import Pagination from "./Pagination"
 import { Link } from "react-router"
 import styles from "./HomePage.module.css"
 import Search from "./Search"
+import { useAuth } from "../context/AuthContext"
+import { useEffect } from "react"
+import { checkAuth } from "../api/AuthAPI"
+import { useNavigate } from "react-router"
 
 export const HomePage: React.FC = () => {
     const [page, setPage] = useState<number>(1)
     const [limit] = useState<number>(3)
+    const { setIsAuth } = useAuth()
+    const navigate = useNavigate()
+
+    useEffect(()  => {
+        (async () => {
+            const response = await checkAuth();
+            console.log("認証確認結果:", response);
+            if (response.ok) {
+                console.log("認証確認成功");
+                setIsAuth(true);
+            }
+            else {
+                console.log("認証確認失敗");
+                setIsAuth(false);
+                navigate("/login")
+            }
+        })()
+
+    }, []);
+
 
     const [
         searchCategoryWord, 

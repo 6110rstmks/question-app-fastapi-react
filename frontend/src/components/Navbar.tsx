@@ -5,38 +5,27 @@ import { faHouse, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icon
 import styles from "./Navbar.module.css";
 import { useNavbar } from "./useNavbar";
 import { useAuth } from "../context/AuthContext"
-
+import { checkAuth } from "../api/AuthAPI"
 
 const Navbar: React.FC = () => {
-    // const [isAuth, setIsAuth] = useState<boolean>(false);
     const { handleJsonExport, handleCSVExport } = useNavbar();
 
     const { isAuth, setIsAuth } = useAuth();
 
-    useEffect(() => {
-        const checkAuth = async () => {
-            try {
-                const response = await fetch("http://localhost:8000/auth/me", {
-                    method: "GET",
-                    credentials: "include",
-                });
-
-                console.log(response)
-
-                if (response.ok) {
-                    console.log("認証確認成功");
-                    setIsAuth(true);
-                } else {
-                    console.log("認証確認失敗");
-                    setIsAuth(false);
-                }
-            } catch (error) {
-                console.error("認証確認エラー:", error);
+    useEffect(()  => {
+        (async () => {
+            const response = await checkAuth();
+            console.log("認証確認結果:", response);
+            if (response.ok) {
+                console.log("認証確認成功");
+                setIsAuth(true);
+            }
+            else {
+                console.log("認証確認失敗");
                 setIsAuth(false);
             }
-        };
+        })()
 
-        checkAuth();
     }, []);
 
     return (

@@ -67,10 +67,8 @@ def authenticate_user(
         1000
     ).hex()
     
-    print(hashed_password)
     if user.password != hashed_password:
-        print('dame')
-        return HTTPException(status_code=401, detail="パスワードが間違っています。")
+        raise HTTPException(status_code=401, detail="パスワードが間違っています。")
 
     request.session["user"] = {
         "id": user.id,

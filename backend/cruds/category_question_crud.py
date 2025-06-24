@@ -7,6 +7,8 @@ def find_all(db: Session):
 
 def find_categoryquestion_by_question_id(db: Session, id: int):
     query = select(CategoryQuestion).where(CategoryQuestion.question_id == id)
+    print(444029)
+    print(db.execute(query).all())
     return db.execute(query).scalars().first()
 
 def find_categoriesquestions_by_question_id(db: Session, id: int):

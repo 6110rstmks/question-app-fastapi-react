@@ -10,7 +10,11 @@ import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestion
 import { useNavigate } from "react-router"
 
 export const useQuestionListPage = () => {
-    const [searchProblemWord, setSearchProblemWord] = useState<string>("")
+    const [
+        searchProblemWord, 
+        setSearchProblemWord
+    ] = useState<string>("")
+    
     const [searchAnswerWord, setSearchAnswerWord] = useState<string>("")
     const [questions , setQuestions] = useState<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]>([])
     const navigate = useNavigate()
