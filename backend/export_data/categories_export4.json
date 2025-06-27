@@ -191,6 +191,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-05"
+                        },
+                        {
+                            "problem": "subnetを作成時にpublic subnet にするかprivate subnetにするか選択することは可能ですか",
+                            "answer": [
+                                "不可能。\n"
+                            ],
+                            "memo": "インターネットゲートウェイ（IGW）を作成し、VPC にアタッチする\nルートテーブルを作成し、「0.0.0.0/0 → IGW」のルートを追加\n\nこれでpublicになる",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-24"
                         }
                     ]
                 },
@@ -5511,8 +5520,8 @@
                                 "硬水（Ca2＋やMg2＋などを多く含む水）中では、次の反応が起こって沈殿が生成し、洗浄作用が低下する。\n\\mathrm{2R-COO^{-} + Ca^{2+} ⇄ (R-COO)_{2}Ca}"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "不飽和脂肪酸は飽和脂肪酸に比べて融点が低い。その理由は",
@@ -8346,7 +8355,7 @@
                             ],
                             "memo": "(キャベツ、ダイコン、ブロッコリー、コマツナ、ナズナ、アブラナ)",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-19"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "セリ科の植物の例4",
@@ -8791,11 +8800,11 @@
                         {
                             "problem": "identifier functions in snowflake の役割",
                             "answer": [
-                                ""
+                                "動的に識別しを指定する"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-20"
+                            "last_answered_date": "2025-06-24"
                         }
                     ]
                 }
@@ -8896,7 +8905,7 @@
                             ],
                             "memo": "もうひとつがバイアス\n\nvariance→ばらつき→まとのどこかにあたっているがばらばら→過学習",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "教師あり学習を用いて機械学習モデルを構築することを検討しています。どのアルゴリズムを選択すべきでしょうか。",
@@ -11541,7 +11550,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-16"
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "The constant water flow undermined the foundation of the building.",
@@ -11550,7 +11559,7 @@
                             ],
                             "memo": "undermine: 弱体化",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-16"
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "This book aims to demystify quantum physics for a layperson.",
@@ -11577,7 +11586,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-18"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "The realisation of his dream finally came true.",
@@ -12003,7 +12012,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-18"
+                            "last_answered_date": "2025-06-24"
                         }
                     ]
                 },
@@ -12053,7 +12062,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-16"
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "SSLの流れにおいて、クライアントからのSSLの要求に対して、（A）は証明書をクライアントに送付する。",
@@ -12112,7 +12121,7 @@
                             ],
                             "memo": "ユーザーが「他のアプリに自分のデータへのアクセスを許可する」\n\n主に使われる場面：LINEログイン、Googleログイン、Twitterの連携アプリなど",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-22"
+                            "last_answered_date": "2025-06-24"
                         }
                     ]
                 },
@@ -14980,7 +14989,7 @@
                             ],
                             "memo": "タイやインドネシアが生産量1,2位\n→自動車産業が盛ん",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-18"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "社会主義の国4",
@@ -15513,7 +15522,7 @@
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/DLAdaJvMCx_o-c3cQ1wq0kj6gEpyINWJRD7w5Ac2_bsDbLZ7SMWVjFYO5t7F5rljGuYXko8MPA9cZbKzJHDkfWZRcv6lu4AKlkRW0_xAVI_8iIY6EjZ99z8xkqZIXBbuvw2qzT_V\n\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "ウズベキスタンの下には何がある？ちかくに何の湖がある？",
@@ -15558,8 +15567,8 @@
                                 "ベネズエラ"
                             ],
                             "memo": "https://pbs.twimg.com/media/EalgXWyU0ActhIQ?format=jpg&name=large",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "ナミビアの下には何の国がある？",
@@ -16046,8 +16055,8 @@
                                 ""
                             ],
                             "memo": "https://p.potaufeu.asahi.com/6eab-p/picture/23957942/c0371a1149cb5e426b9a08cac458a5dd.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-19"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "https://juken-geography.com/wp-content/uploads/2020/07/mountains-kantaiheiyou-e1594197143889.png 8,9を答えてください",
@@ -16203,7 +16212,7 @@
                             ],
                             "memo": "https://imidas.jp/library/img/genre/z-D-123-001_sp.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-21"
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "アマゾン盆地とブラジル高原ではどちらが北にあるか",
@@ -16637,8 +16646,8 @@
                                 "スプロール現象"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "人口増減の要因2",
@@ -16700,7 +16709,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7B-Ao2wVLCCOQND02ReTQSsnXFuyPD5pH_A&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "複数の都市がつながって一つの巨大な都市圏を形成したものを何という？",
@@ -16900,7 +16909,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-18"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -17730,8 +17739,8 @@
                                 "地中海性気候"
                             ],
                             "memo": "サンフランシスコ海流という寒流が\n湾に流れ込み、その上を強い西風が吹いていることが多い\n\nイギリスに似ている",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "チリの海岸沿いはケッペンの何に分類される",
@@ -18019,7 +18028,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUfLodDQXM7fC9dJQKslH6tS_SnpH2kmVTmw&s\n\nまぎわらしいのがコルカタ",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-23"
                         },
                         {
                             "problem": "イギリスは国全体でどの気候区分に属するか？",
@@ -19122,7 +19131,7 @@
                             ],
                             "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n\n沈水海岸\n海面が上昇したり、陸地が沈降したりすることで、　海岸付近の陸地が水の中に沈んでできた海岸地形\n\n離水海岸\n海面が下降したり、陸地が隆起したりすることで、　浅い海底が陸の上に現れてできた海岸地形",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-20"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "沈水海岸を英語で",
@@ -19712,7 +19721,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-19"
+                            "last_answered_date": "2025-06-24"
                         }
                     ]
                 }
@@ -19977,7 +19986,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "In Azure, virtual machines and other service components are called 'resources.' What is the container that holds these resources called?\"",
@@ -20147,6 +20156,24 @@
                             "problem": "誰がVMを停止させたかわかるAzureリソースは",
                             "answer": [
                                 "Azure Activity Log"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-24"
+                        },
+                        {
+                            "problem": "アプリケーションコードのバージョン管理機能を提供するAzureサービスは",
+                            "answer": [
+                                "Azure Repos"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-24"
+                        },
+                        {
+                            "problem": "コードのデプロイメントのためのソリューションであるAzure サービスは",
+                            "answer": [
+                                "Azure Devops"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -20366,7 +20393,7 @@
                             ],
                             "memo": "VNetからAzureサービスへのトラフィックを最適化する",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-20"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "VNet内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
@@ -20395,15 +20422,6 @@
                             "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-16"
-                        },
-                        {
-                            "problem": "Azure NSGは無料か有料か",
-                            "answer": [
-                                "無料"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
                         }
                     ]
                 },
@@ -20591,7 +20609,7 @@
                             ],
                             "memo": "Recovery Service Containerも作成する必要がある。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-19"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "Azure Backup を使用してVMのバックアップが定期的に取得されるようにする。VMを定期的にバックアップを保存する場所は",
@@ -20600,7 +20618,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         }
                     ]
                 },
@@ -20730,13 +20748,43 @@
                             "last_answered_date": "2025-06-23"
                         },
                         {
-                            "problem": "従来のNSGのやり方に対してASGを使用することでどのように便利になったか。",
+                            "problem": "Azureにおいて従来のNSGのやり方に対してASGを使用することでどのように便利になったか。",
                             "answer": [
                                 "IPアドレスが変更された際にルールの修正が必要だったが、不要になった。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-23"
+                            "last_answered_date": "2025-06-25"
+                        }
+                    ]
+                },
+                {
+                    "name": "NSG",
+                    "questions": [
+                        {
+                            "problem": "Azure NSGは無料か有料か",
+                            "answer": [
+                                "無料"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-15"
+                        }
+                    ]
+                },
+                {
+                    "name": "Blueprint",
+                    "questions": [
+                        {
+                            "problem": "Azure Blueprintsでテンプレート化できる機能は？",
+                            "answer": [
+                                "RBAC",
+                                "Azure Policy",
+                                "ARM テンプレート"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-24"
                         }
                     ]
                 }
@@ -20756,6 +20804,24 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-06-14"
+                        },
+                        {
+                            "problem": "npm initでなにができる？",
+                            "answer": [
+                                "package.jsonを生成する。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-27"
+                        },
+                        {
+                            "problem": "グローバルやローカルにインストールしていないモジュールを実行できるのはnpmかnpxのどちらか",
+                            "answer": [
+                                "npx"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-27"
                         }
                     ]
                 }
@@ -20844,7 +20910,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-25"
                         },
                         {
                             "problem": "インドで成立した祭式至上主義の宗教",
@@ -20852,8 +20918,8 @@
                                 "バラモン教"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "スペイン王カルロス1世の命で世界一周をした人物",
@@ -20880,7 +20946,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "のちにアルファベットへ発展するセム語系の表音文字は",
@@ -20889,7 +20955,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-18"
+                            "last_answered_date": "2025-06-25"
                         },
                         {
                             "problem": "オリエント世界におけるメソポタミアからシリア・パレスチナにいたる地域の名称をなんという",
@@ -20898,7 +20964,7 @@
                             ],
                             "memo": "https://www.y-history.net/map/0101/orient-iseki.jpg\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "誰が「出エジプト」を行なったか",
@@ -20906,8 +20972,8 @@
                                 "モーセ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "仏の第一帝政の成立に対抗するため、英のピットが提唱して結成された同盟は何か。",
@@ -20925,7 +20991,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-17"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "ルネサンスはどこの国で始まったか",
@@ -20933,8 +20999,8 @@
                                 "イタリア"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-25"
                         },
                         {
                             "problem": "ササン朝ペルシアの首都はどこか",
@@ -20952,7 +21018,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-17"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "ササン朝ペルシアで国教とされていた宗教は",
@@ -20961,7 +21027,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "サラミスの海戦でペルシア艦隊を破るなどして活躍した、アテネの軍人・政治家は誰か。",
@@ -20970,7 +21036,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "古代ギリシア人が異民族に対して用いた蔑称を何というか",
@@ -20979,7 +21045,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-25"
                         },
                         {
                             "problem": "ティグリス川 と ユーフラテス川 にはさまれた地域のことを何という",
@@ -20988,7 +21054,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "ウル、ウルク、ラガシュといった国家都市を建設した民族は",
@@ -20997,7 +21063,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "世界で初めて鉄を使用した民族は",
@@ -21020,7 +21086,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "アレクサンドロス大王がダイオレス三世に勝利した前333年の戦いをなんというか",
@@ -21038,7 +21104,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
                         },
                         {
                             "problem": "古代ギリシアにおける、市民の投票によって僭主の出現を防止する制度を何と言うか。",
@@ -21056,7 +21122,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-06-24"
+                        },
+                        {
+                            "problem": "フラン ス皇帝ナポレオン 1 世が 1806 年にヨーロッパ諸国とイギリスとの貿易を禁止した法令をなんという",
+                            "answer": [
+                                "大陸封鎖令"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-06-25"
                         }
                     ]
                 },
