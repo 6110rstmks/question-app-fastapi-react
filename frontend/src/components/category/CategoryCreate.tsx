@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { createCategory } from "../../api/CategoryAPIA";
+import { createCategory } from "../../api/CategoryAPI";
 
 const CategoryCreate: React.FC = () => {
     const [categoryName, setCategoryName] = useState<string>("");

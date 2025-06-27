@@ -4,7 +4,7 @@ import {
     fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord, 
     fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord 
 } from '../../../api/QuestionAPI'
-import { fetchCategory } from '../../../api/CategoryAPIA'
+import { fetchCategory } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI'
 import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI'
 import { useNavigate } from "react-router"

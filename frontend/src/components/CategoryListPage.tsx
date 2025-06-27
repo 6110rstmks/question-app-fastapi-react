@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { fetchAllCategories } from '../api/CategoryAPIA'
+import { fetchAllCategories } from '../api/CategoryAPI'
 import { Category } from '../types/Category'
 import styles from "./CategoryList.module.css"
 

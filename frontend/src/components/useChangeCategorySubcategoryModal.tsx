@@ -3,7 +3,7 @@ import { Category } from '../types/Category'
 import { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
 import { Question } from '../types/Question'
 import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
-import { fetchCategoriesBySearchWord } from '../api/CategoryAPIA'
+import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
 import { fetchSubcategoriesWithCategoryNameByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 
