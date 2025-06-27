@@ -4,7 +4,7 @@ import {
     fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord, 
     fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord 
 } from '../../../api/QuestionAPI'
-import { fetchCategory } from '../../../api/CategoryAPI'
+import { fetchCategory } from '../../../api/CategoryAPIA'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI'
 import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI'
 import { useNavigate } from "react-router"
@@ -14,7 +14,7 @@ export const useQuestionListPage = () => {
         searchProblemWord, 
         setSearchProblemWord
     ] = useState<string>("")
-    
+
     const [searchAnswerWord, setSearchAnswerWord] = useState<string>("")
     const [questions , setQuestions] = useState<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]>([])
     const navigate = useNavigate()
