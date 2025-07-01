@@ -3,7 +3,7 @@ import base64
 import os
 from sqlalchemy.orm import Session
 from schemas import auth
-from models2 import User
+from models import User
 from config import get_settings
 from sqlalchemy import select
 from fastapi import Depends, HTTPException, status

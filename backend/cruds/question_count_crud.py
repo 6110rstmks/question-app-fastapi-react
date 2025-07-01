@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, func
-from models2 import Question, SubcategoryQuestion, CategoryQuestion
+from models import Question, SubcategoryQuestion, CategoryQuestion
 from datetime import date
 from config import SolutionStatus
-from models2 import CategoryBlacklist
+from models import CategoryBlacklist
 
 def get_question_count(db: Session):
     count = db.scalar(

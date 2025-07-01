@@ -1,11 +1,11 @@
 from sqlalchemy.orm import Session
 from schemas.problem import ProblemFetch
 from sqlalchemy import select, func
-from models2 import Question, CategoryQuestion, SubcategoryQuestion
+from models import Question, CategoryQuestion, SubcategoryQuestion
 from fastapi import HTTPException
 from config import SolutionStatus
 from datetime import datetime, timedelta
-from models2 import CategoryBlacklist
+from models import CategoryBlacklist
 
 # ブラックリストカテゴリの問題IDを取得
 def get_blacklisted_question_ids(db: Session):

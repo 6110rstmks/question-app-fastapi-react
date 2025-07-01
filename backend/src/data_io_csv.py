@@ -5,7 +5,7 @@ import json
 import zipfile
 import tempfile
 from fastapi import UploadFile, HTTPException
-from models2 import Category, Subcategory, Question, CategoryQuestion, SubcategoryQuestion
+from models import Category, Subcategory, Question, CategoryQuestion, SubcategoryQuestion
 from cruds import category_crud as category_cruds
 
 
