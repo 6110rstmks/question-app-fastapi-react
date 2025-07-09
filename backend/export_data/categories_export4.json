@@ -315,6 +315,15 @@
                             "memo": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"AllowLambdaToSend\",\n      \"Effect\": \"Allow\",\n      \"Principal\": {\n        \"Service\": \"lambda.amazonaws.com\"\n      },\n      \"Action\": \"sqs:SendMessage\",\n      \"Resource\": \"arn:aws:sqs:ap-northeast-1:123456789012:MyQueue\"\n    }\n  ]\n}",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-05"
+                        },
+                        {
+                            "problem": "SQSはデフォルトではインターネットを経由する構成になっているか、なっていないか",
+                            "answer": [
+                                "なっている。"
+                            ],
+                            "memo": "インターネットを経由しないようにしたいのであればInterface型のVPC Endpointを使用する",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-07"
                         }
                     ]
                 },
@@ -1900,6 +1909,15 @@
                             "memo": "AWS Cost Explorer→コスト・使用量の分析と可視化",
                             "is_correct": 0,
                             "last_answered_date": "2025-06-12"
+                        },
+                        {
+                            "problem": "AWSにおいてENIはどこに設定するのか",
+                            "answer": [
+                                "サブネット"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-09"
                         }
                     ]
                 },
@@ -11985,7 +12003,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-17"
+                            "last_answered_date": "2025-07-08"
                         },
                         {
                             "problem": "電子メールの送信元を検証するための仕組みの「SPF（Sender Policy Framework）」では、受信メールの送信元の（A）をDNSに登録されているメールサーバの（A）と照合する。",
@@ -16984,7 +17002,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-24"
+                            "last_answered_date": "2025-07-08"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -19965,6 +19983,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "terraform の公式ドキュメント　data sourceにおける  argumentとattributeの違い",
+                            "answer": [
+                                "Argument（引数）：data ブロックの中で ユーザーが入力する値（設定値）\nAttribute（属性）定義：データソースから 取得される値（出力値）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-08"
                         }
                     ]
                 },
@@ -20346,7 +20373,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-17"
+                            "last_answered_date": "2025-07-08"
                         },
                         {
                             "problem": "Azure の画像認識サービスを使用して、画像内の特定のオブジェクトを検出する場合、どのサービスを使用するべきですか？",
@@ -20860,6 +20887,20 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-05"
+                        }
+                    ]
+                },
+                {
+                    "name": "Azure Front Door",
+                    "questions": [
+                        {
+                            "problem": "Azure Front Doorは、AWSでいうところの なに",
+                            "answer": [
+                                "Cloudfront"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-10"
                         }
                     ]
                 }
