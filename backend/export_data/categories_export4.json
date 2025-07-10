@@ -5897,7 +5897,7 @@
                                 "形態形成"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-06-15"
                         },
                         {
@@ -6009,7 +6009,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-17"
+                            "last_answered_date": "2025-07-11"
                         },
                         {
                             "problem": "ノギンNogginやコーディンChordinはどこから分泌されるのか？",
@@ -6055,6 +6055,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-26"
+                        },
+                        {
+                            "problem": "減数分裂において、第二分裂が終わった後の細胞あたりのDNA量を１とした時、間期の細胞分裂の最初の細胞あたりのDNA量は？",
+                            "answer": [
+                                "1"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-10"
                         }
                     ]
                 },
@@ -7171,7 +7180,7 @@
                             ],
                             "memo": "サンガー法は　DNAの塩基配列を調べる手法",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-06"
+                            "last_answered_date": "2025-07-10"
                         },
                         {
                             "problem": "cDNAのcはどういう意味ですか？",
@@ -8210,8 +8219,8 @@
                                 "吸収スペクトル"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOqVOVnVoEwQEcxdDS6TVvCwT4Ux3-9-RhvA&s\n\n各波長wave lengthの光に対する光合成効率のグラフをなんという？→作用スペクトル",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-10"
                         }
                     ]
                 },
@@ -8840,7 +8849,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-24"
+                            "last_answered_date": "2025-07-11"
                         }
                     ]
                 }
@@ -9072,6 +9081,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-05"
+                        },
+                        {
+                            "problem": "TF（Term Frequency）とは何を意味しますか？",
+                            "answer": [
+                                "単語が文書内で出現する頻度"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-10"
+                        },
+                        {
+                            "problem": "IDFはどのように暗記すると理解しやすい？",
+                            "answer": [
+                                "レア度\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-10"
                         }
                     ]
                 }
@@ -11612,8 +11639,8 @@
                                 "この本は、一般の人にとって量子物理学を解読することを目指しています。\n\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-10"
                         },
                         {
                             "problem": "I had to run to keep up with friend.",
@@ -12003,7 +12030,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-08"
+                            "last_answered_date": "2025-07-11"
                         },
                         {
                             "problem": "電子メールの送信元を検証するための仕組みの「SPF（Sender Policy Framework）」では、受信メールの送信元の（A）をDNSに登録されているメールサーバの（A）と照合する。",
@@ -12116,7 +12143,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-10"
                         },
                         {
                             "problem": "SSLの流れにおいて、クライアントからのSSLの要求に対して、（A）は証明書をクライアントに送付する。",
@@ -13388,7 +13415,7 @@
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-17"
+                            "last_answered_date": "2025-07-10"
                         }
                     ]
                 }
@@ -15295,7 +15322,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-07-10"
                         },
                         {
                             "problem": "グレートディバイディング山脈の場所は",
@@ -15922,7 +15949,7 @@
                             ],
                             "memo": "https://www.travel-zentech.jp/world/map/italy/image/Map_of_Italy_and_neighboring_countries.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-07-10"
                         },
                         {
                             "problem": "ラプラタ川の場所は",
@@ -17001,8 +17028,8 @@
                                 "レイキャビク"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-10"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -17851,7 +17878,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-17"
+                            "last_answered_date": "2025-07-11"
                         },
                         {
                             "problem": "砂漠気候(BW)の条件：降水量：概ね年降水量が（A）",
@@ -18838,7 +18865,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX_wM0L4_FSVme2SHNUU_qrtaTmYkk9SMAuw&s\n\n志摩半島　https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Et1JUMNwMuYdhnvEH1PNI21_4gkz8YYRZQ&s\n\n三陸海岸　https://assets.st-note.com/production/uploads/images/7315865/rectangle_large_type_2_8cb56091121a513db4c72cd80e6cea01.jpg?fit=bounds&quality=85&width=1280",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-17"
+                            "last_answered_date": "2025-07-11"
                         }
                     ]
                 },
@@ -19842,7 +19869,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZp_aSN7ySpH9thCskdWFxKfVXy_vOv6s52A&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-07-11"
                         },
                         {
                             "problem": "ROEの公式",
@@ -19990,8 +20017,8 @@
                                 "Argument（引数）：data ブロックの中で ユーザーが入力する値（設定値）\nAttribute（属性）定義：データソースから 取得される値（出力値）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-10"
                         }
                     ]
                 },
@@ -20003,9 +20030,9 @@
                             "answer": [
                                 "既存リソースの参照"
                             ],
-                            "memo": "参照←これが大事\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-10"
                         }
                     ]
                 }
@@ -20198,7 +20225,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-06"
+                            "last_answered_date": "2025-07-11"
                         },
                         {
                             "problem": "Azure Cognitive ServiceとAzure Machine Learningのうち学習済みのモデルをAPIで利用できるのはどちらか",
@@ -20373,7 +20400,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-08"
+                            "last_answered_date": "2025-07-10"
                         },
                         {
                             "problem": "Azure の画像認識サービスを使用して、画像内の特定のオブジェクトを検出する場合、どのサービスを使用するべきですか？",
@@ -20409,7 +20436,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-07-10"
                         }
                     ]
                 },
@@ -20436,7 +20463,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-07-10"
                         },
                         {
                             "problem": "Azure SQL Database で使用できるストレージ上のデータの暗号化をなんという？",
@@ -20820,7 +20847,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-07-11"
                         }
                     ]
                 },
@@ -21071,7 +21098,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-06"
+                            "last_answered_date": "2025-07-11"
                         },
                         {
                             "problem": "のちにアルファベットへ発展するセム語系の表音文字は",
@@ -21197,7 +21224,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-07-10"
                         },
                         {
                             "problem": "世界史の大まかな時代区分を答えて",
@@ -21257,6 +21284,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-06"
+                        },
+                        {
+                            "problem": "ポリスの平民が武器を自分で購入して参加した国防を担う歩兵部隊をなんという",
+                            "answer": [
+                                "重装歩兵"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-10"
+                        },
+                        {
+                            "problem": "アテネを衆愚政治におちいらせた扇動政治家たちをなんと呼ぶ",
+                            "answer": [
+                                "デマゴーゴス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-11"
                         }
                     ]
                 },
