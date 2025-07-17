@@ -9050,7 +9050,7 @@
                             ],
                             "memo": "東京のラーメン屋　助詞の「の」を除いて検索",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ベクトルデータベースの代表的なライブラリを2つ挙げて",
@@ -9092,13 +9092,13 @@
                             "last_answered_date": "2025-07-11"
                         },
                         {
-                            "problem": "IDFはどのように暗記すると理解しやすい？",
+                            "problem": "自然言語処理におけるIDFはどのように暗記すると理解しやすい？",
                             "answer": [
                                 "レア度\n"
                             ],
-                            "memo": "",
+                            "memo": "Inverse Document Frequency",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 }
@@ -12220,8 +12220,8 @@
                                 "認可"
                             ],
                             "memo": "ユーザーが「他のアプリに自分のデータへのアクセスを許可する」\n\n主に使われる場面：LINEログイン、Googleログイン、Twitterの連携アプリなど",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 },
@@ -13196,7 +13196,7 @@
                             ],
                             "memo": "円運動の加速度は円の中心方向",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "円運動において、角速度がπ(rad/s)のとき周期（T）は？",
@@ -13215,15 +13215,6 @@
                             "memo": "https://www.youtube.com/watch?v=Iqqd5PPuS2E&list=PLtdcmqO4ps6WjlJp8b3ZATi2VL_-fniLL&index=34",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-12"
-                        },
-                        {
-                            "problem": "運動方程式においては",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
                         }
                     ]
                 },
@@ -13445,7 +13436,7 @@
                                 "ラウンドロビン方式"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 0,
                             "last_answered_date": "2025-04-04"
                         },
                         {
@@ -19320,7 +19311,7 @@
                             ],
                             "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n\n沈水海岸\n海面が上昇したり、陸地が沈降したりすることで、　海岸付近の陸地が水の中に沈んでできた海岸地形\n\n離水海岸\n海面が下降したり、陸地が隆起したりすることで、　浅い海底が陸の上に現れてできた海岸地形",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "沈水海岸を英語で",
@@ -20523,7 +20514,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "Azure Machine Learning でモデルをトレーニングする際に、過学習を防ぐための一般的な方法はどれですか？",
@@ -20949,7 +20940,26 @@
                 },
                 {
                     "name": "application gateway",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "Application gatewayはL7のロードバランサかもしくはL4のロードバランサか",
+                            "answer": [
+                                "L7"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-17"
+                        },
+                        {
+                            "problem": "Application Gatewayは何らかの異常が発生したバックエンドを振り分け対象から外す機能は",
+                            "answer": [
+                                "正常性プローブ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-17"
+                        }
+                    ]
                 },
                 {
                     "name": "ARM",
@@ -21194,7 +21204,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-17"
                         },
                         {
                             "problem": "のちにアルファベットへ発展するセム語系の表音文字は",
@@ -21334,7 +21344,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "アレクサンドロス大王がダイオレス三世に勝利した前333年の戦いをなんというか",
@@ -21514,7 +21524,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-17"
                         },
                         {
                             "problem": "アラム人の最大の拠点は？",
@@ -21631,7 +21641,25 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-17"
+                        },
+                        {
+                            "problem": "ペルシア人の民族宗教は",
+                            "answer": [
+                                "ゾロアスター教"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-17"
+                        },
+                        {
+                            "problem": "メソポタミア文明や中国では太陰暦（厳密には太陰太陽暦）が行われていたのに対して、エジプト文明では（A）が行われていた",
+                            "answer": [
+                                "太陽暦"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-17"
                         }
                     ]
                 },
