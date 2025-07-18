@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useParams, useNavigate } from 'react-router'
 import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreateModal'

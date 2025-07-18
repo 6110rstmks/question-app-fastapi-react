@@ -7,13 +7,13 @@ interface SignupForm {
 }
 
 const Signup: React.FC = () => {
-  const [form, setForm] = useState<SignupForm>({ username: '', password: '' });
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<string | null>(null);
+  const [form, setForm] = useState<SignupForm>({ username: '', password: '' })
+  const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    setForm((prev) => ({ ...prev, [name]: value }))
   };
   console.log('Signup form:', form);
 
