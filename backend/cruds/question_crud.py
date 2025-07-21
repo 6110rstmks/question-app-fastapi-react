@@ -244,8 +244,7 @@ def update_last_answered_date(
         )
     db.execute(stmt)
     db.commit()
-    return find_question_by_id(db, question_id)
-        
+    return find_question_by_id(db, question_id) 
 
 def increment_answer_count(
     db: Session, 

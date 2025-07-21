@@ -118,6 +118,7 @@ export const incrementAnswerCount = async (
     });
 }
 
+// Questionのlast_answered_dateを更新するAPI
 export const updateLastAnsweredDate = async (
     question_id: number
 ): Promise<void> => {

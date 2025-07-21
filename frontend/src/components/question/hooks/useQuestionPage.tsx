@@ -7,7 +7,8 @@ import {
     deleteQuestion,
     incrementAnswerCount, 
     fetchQuestion, 
-    updateQuestionIsCorrect 
+    updateQuestionIsCorrect,
+    updateLastAnsweredDate
 } from '../../../api/QuestionAPI'
 import { handleKeyDownForShowAnswer } from '../../../utils/function'
 import { handleNavigateToSubcategoryPage } from '../../../utils/navigate_function'
@@ -33,9 +34,9 @@ export const useQuestionPage = (
         if (confirmation !== '削除') {
             return;
         }
-        await deleteQuestion(questionId); // API コール
+        await deleteQuestion(questionId)
 
-        const categoryForNavigation: Category = { id: categoryId, name: categoryName, userId: 1 };
+        const categoryForNavigation: Category = { id: categoryId, name: categoryName, userId: 1 }
 
         handleNavigateToSubcategoryPage(
             navigate,
@@ -45,13 +46,18 @@ export const useQuestionPage = (
     }
 
     const handleAnswerQuestion = () => {
-        incrementAnswerCount(question!.id) // API コール
-        // 表示するquestion.answer_countの数も更新
+        incrementAnswerCount(question!.id) 
+
+        // 回答の最終更新日時を更新
+        updateLastAnsweredDate(question!.id)
+
+        // 表示するquestion.answer_count,question.last_answered_dateの数も更新
         setQuestion((prev) => {
             if (prev) {
                 return {
                     ...prev,
                     answer_count: prev.answer_count + 1,
+                    last_answered_date: new Date().toISOString().slice(0, 10) // YYYY-MM-DD形式で更新
                 }
             }
             return prev
@@ -62,6 +68,8 @@ export const useQuestionPage = (
     const handleUpdateIsCorrect = async () => {
         await incrementAnswerCount(question!.id)
         await updateQuestionIsCorrect(question!) 
+        await updateLastAnsweredDate(question!.id)
+
         const data = await fetchQuestion(question!.id)
         setQuestion(data)
     }
