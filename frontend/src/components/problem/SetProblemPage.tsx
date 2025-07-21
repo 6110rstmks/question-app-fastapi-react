@@ -5,7 +5,6 @@ import Calendar from '../Calendar'
 import { SolutionStatus } from '../../types/SolutionStatus';
 
 const SetProblemPage: React.FC = () => {
-    // const [toggleQuestionCount, setToggleQuestionCount] = useState<boolean>(false)
     const [isDisplayCalendar, setIsDisplayCalendar] = useState<boolean>(false)
 
     const toggleCalendar = () => {
