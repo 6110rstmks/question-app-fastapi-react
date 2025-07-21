@@ -80,7 +80,6 @@ export const HomePage: React.FC = () => {
 
                 <Link to="/categorylist">カテゴリの一覧のページに移動</Link>
             </div>
-
             <h1>ctr i でsetproblempageにとべる</h1>
             <div className={styles.searchContainer}>
                 <Search 
