@@ -19,13 +19,10 @@ export const HomePage: React.FC = () => {
     useEffect(()  => {
         (async () => {
             const response = await checkAuth();
-            console.log("認証確認結果:", response);
             if (response.ok) {
-                console.log("認証確認成功");
                 setIsAuth(true);
             }
             else {
-                console.log("認証確認失敗");
                 setIsAuth(false);
                 navigate("/login")
             }
