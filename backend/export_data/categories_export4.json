@@ -1244,8 +1244,8 @@
                                 "DBインスタンスクラス"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-03"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "db.c6gd.2xlargeにおいてc6gdを何という",
@@ -1952,12 +1952,12 @@
                             "last_answered_date": "2025-06-04"
                         },
                         {
-                            "problem": "インスタンスストアは揮発性か不揮発性か",
+                            "problem": "AWSのインスタンスストアは揮発性か不揮発性か",
                             "answer": [
                                 "揮発性"
                             ],
                             "memo": "インスタンスをstop するとデータが消えてしまいます",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-06-05"
                         },
                         {
@@ -3484,8 +3484,8 @@
                                 "lambda"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-05"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "ACMとlambdaやELB、Cloudfront、API gatewayを使用する際にACMとの統合を行わずにサードパーティの証明書発行機関（CA）からSSL/TLS証明書を取得する場合はどのようなデメリットがあるか",
@@ -3966,7 +3966,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "1の3乗根でつかう方程式",
@@ -4379,8 +4379,8 @@
                                 "H2SO4 → SO2"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-04"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "金属単体が水溶液中で陽イオンになる性質を何という",
@@ -4552,8 +4552,8 @@
                                 "エネルギー準位が低い"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-04"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "過酸化水素の分解によって発生した酸素を，水上置換でメスシリンダー内に捕集する。メスシリンダー内の気体の体積が 27℃，1.013 × 10⁵ Pa で 150 mL であるとき，酸素の物質量は何 mol か。過酸化水素の分解によって発生した酸素を，水上置換でメスシリンダー内に捕集する。メスシリンダー内の気体の体積が 27℃，1.013 × 10⁵ Pa で 150 mL であるとき，酸素の物質量は何 mol か。27℃ における水の飽和蒸気圧は 3.6 × 10³ Pa",
@@ -4851,7 +4851,7 @@
                             ],
                             "memo": "https://kimika.net/wp-content/uploads/2019/10/y1fenol4.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-26"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "アルデヒドの還元性を確認する方法を二つ答えて",
@@ -6063,7 +6063,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 },
@@ -6323,7 +6323,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "こん虫がものの形や色を見分けるために使う目を何といいますか。",
@@ -6785,7 +6785,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -7263,8 +7263,8 @@
                                 "できない"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 },
@@ -7466,8 +7466,8 @@
                                 "薬事承認"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "バラ科　語呂",
@@ -8182,7 +8182,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "C4植物における光合成は二種類の細胞で行われる。答えて",
@@ -8265,8 +8265,8 @@
                                 "カシ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "光合成曲線の縦軸と横軸は？",
@@ -8323,7 +8323,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "陽樹と陰樹の光合成曲線を書いてください",
@@ -8343,7 +8343,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-08"
+                            "last_answered_date": "2025-07-19"
                         }
                     ]
                 },
@@ -8923,7 +8923,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "分類問題において、あるクラスのサンプル数が他のクラスに比べて極端に少ない状態をなんという",
@@ -9004,7 +9004,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "KNNは教師あり学習か教師なし学習のどちらか",
@@ -9050,7 +9050,7 @@
                             ],
                             "memo": "東京のラーメン屋　助詞の「の」を除いて検索",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-07-19"
                         },
                         {
                             "problem": "ベクトルデータベースの代表的なライブラリを2つ挙げて",
@@ -9080,7 +9080,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-19"
                         },
                         {
                             "problem": "TF（Term Frequency）とは何を意味しますか？",
@@ -9098,7 +9098,7 @@
                             ],
                             "memo": "Inverse Document Frequency",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-07-19"
                         }
                     ]
                 }
@@ -11333,8 +11333,8 @@
                                 "彼女は優しく猫の毛をなでました。\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "しかめつらをする",
@@ -11676,7 +11676,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-20"
                         }
                     ]
                 },
@@ -11868,7 +11868,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "GET /cgi-bin/submit.cgi?user=;cat%20/etc/passwd HTTP/1.1　\n攻撃者が悪用しようとしていた可能性が高い脆弱性は",
@@ -11985,7 +11985,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "OAuthは「認証」「認可」のどちらの役割を果たすか",
@@ -12003,7 +12003,7 @@
                             ],
                             "memo": "FE出題\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "OAuth 2.0には**「認証」が欠けている**ため、OAuthに「認証機能」を追加したものをなんという",
@@ -12011,8 +12011,8 @@
                                 "OpenID Connect（OIDC）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "システムが被害を受けるリスクを想定して，保険を掛けることをなんという",
@@ -12057,7 +12057,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-21"
                         },
                         {
                             "problem": "権限付与に関する基本的な考え方",
@@ -12075,7 +12075,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "利用者が入力したパスワードと，サーバから受け取ったランダムなデータとをクライアントで演算し，その結果をサーバに送信する認証方式をなんという",
@@ -12096,14 +12096,14 @@
                             "last_answered_date": "2025-07-12"
                         },
                         {
-                            "problem": "GPGの主な機能は",
+                            "problem": "GPGの主な機能は2",
                             "answer": [
                                 "暗号化（復号化）",
                                 "署名（署名の検証）"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "GPGは公開鍵暗号方式か共通鍵暗号方式のどちらか",
@@ -12112,7 +12112,7 @@
                             ],
                             "memo": "GPGは公開鍵暗号方式を「表向き」に使い、実際の暗号処理には共通鍵方式を使う「ハイブリッド型」です。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 },
@@ -12125,8 +12125,8 @@
                                 "共通鍵暗号方式"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-10"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "100人の送受信者が共通鍵暗号方式でそれぞれ秘密に通信を行うとき、必要な共通鍵の数は",
@@ -12243,7 +12243,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=S5jJJAGC5vs",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "一般的にハッシュ関数によって得られた値をハッシュ値とよぶのだが、デジタル署名においてはは文書から得られたハッシュ値のことをなんという",
@@ -12252,7 +12252,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "デジタル署名においてハッシュ関数で文書から要約文を取得した後は何をする",
@@ -12261,7 +12261,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "デジタル署名において、送信側と受け取り側において共通で行う処理は何か",
@@ -12270,7 +12270,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-19"
                         },
                         {
                             "problem": "デジタル署名と電子認証は同じ技術か、異なる技術か",
@@ -12278,8 +12278,8 @@
                                 "異なる技術"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 }
@@ -12803,13 +12803,13 @@
                     "name": "SoC",
                     "questions": [
                         {
-                            "problem": "SoCのメリットは？",
+                            "problem": "hardwareのSoCのメリットは？",
                             "answer": [
                                 "電子機器を小型・軽量化"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "SoCのメリットをあらわす2つのフレーズ2",
@@ -13437,7 +13437,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "タスクの状態遷移の状態は3つある。答えて",
@@ -13474,8 +13474,8 @@
                                 "到着順方式"
                             ],
                             "memo": "タスクが自分から終わらない限り、次のタスクに切り替えない方法\nつまりスケジューリング方式の例として、到着順方式がある。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 }
@@ -13851,8 +13851,8 @@
                                 "低緯度から高緯度"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "暖流の例として、ヨーロッパの西側を北上する（A）が挙げられます。",
@@ -13968,8 +13968,8 @@
                                 "ロシア"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "高潮では熱帯低気圧が接近すると、気圧が低下するため、海面が（A）",
@@ -14481,8 +14481,8 @@
                                 "とうもろこし"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ラプラタ川流域に広がる小麦やとうもろこしの栽培が盛んな温帯の草原は？",
@@ -14778,7 +14778,7 @@
                             ],
                             "memo": "https://www.ryoko.info/Temperature/india/map/kolkata.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "南アジアといえばどんな国がある",
@@ -15106,7 +15106,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "大きな山脈の風下側にできる 砂漠をなんという",
@@ -15151,7 +15151,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ジュートはなんという植物から作られる繊維か",
@@ -15380,9 +15380,9 @@
                             "answer": [
                                 "香港"
                             ],
-                            "memo": "",
+                            "memo": "https://cdn-cloudflare.meidianbang.cn/comdata/102969/202210/2022103100280799173b.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "グレートディバイディング山脈の場所は",
@@ -15834,11 +15834,12 @@
                         {
                             "problem": "https://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　55.56.57答えて",
                             "answer": [
-                                ""
+                                "55 キューバ",
+                                "56 ジャマイカ"
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ニュージーランドおよび日付変更線以東なのはポリネシア、ミクロネシア？",
@@ -15891,8 +15892,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXj-S34IQd57iee_ynSseqa6AOhWXBm7hRA&s\nムンバイの場所も合わせて抑えrう",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "イランの左にある国は",
@@ -16135,8 +16136,8 @@
                                 "イラン"
                             ],
                             "memo": "https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXMZO4605511013062019I00004-2.jpg?ixlib=js-3.8.0&w=696&h=696&auto=format%2Ccompress&fit=crop&bg=FFFFFF&s=32aeb379be32462dc8c071093bbbe751\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-19"
                         },
                         {
                             "problem": "オーストリアの下にはなにがある2",
@@ -16468,8 +16469,8 @@
                                 "イタリア最長の高速道路"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-04"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ベルギー南部のワロン地域の公用語は？",
@@ -17255,8 +17256,8 @@
                                 "サウジアラビア"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ダイヤモンドの輸出の上位top3",
@@ -18056,8 +18057,8 @@
                                 "偏西風によって海の水蒸気が陸地まで運ばれてくるから。偏西風というのは恒常風なので季節を問わず吹いてくるためどの季節でも雨がしっかり降る"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ケッペンの気候区分、Df, Dwの違いは",
@@ -18066,7 +18067,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "亜寒帯冬季少雨気候をアルファベットで表すと",
@@ -18104,7 +18105,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "西岸海洋性気候は二つの要因に注意する？それはなにとなにか",
@@ -18113,8 +18114,8 @@
                                 "偏西風Westerlies"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ツンドラ気候(ET)の定義　ついでにEFの定義も思い出して",
@@ -18150,8 +18151,8 @@
                                 "乾季はある"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "熱帯とは、最寒月平均気温が（B）度以上という場所",
@@ -18225,8 +18226,8 @@
                                 "褐色森林土"
                             ],
                             "memo": "温暖冬季少雨気候 (Cw)の土壌は黄色土",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "なぜサバナ気候は雨季と乾季がはっきりしているのか",
@@ -19150,8 +19151,8 @@
                                 "アスワンハイダムAswan Dam"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "南アメリカのベネズエラのオリノコ川流域でみられるサバナを何と言う",
@@ -19310,8 +19311,8 @@
                                 "離水海岸"
                             ],
                             "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n\n沈水海岸\n海面が上昇したり、陸地が沈降したりすることで、　海岸付近の陸地が水の中に沈んでできた海岸地形\n\n離水海岸\n海面が下降したり、陸地が隆起したりすることで、　浅い海底が陸の上に現れてできた海岸地形",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-19"
                         },
                         {
                             "problem": "沈水海岸を英語で",
@@ -19697,8 +19698,8 @@
                                 "755nm"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "IPLとレーザーではどちらが炎症後色素沈着の発生確率が低いか",
@@ -19984,8 +19985,8 @@
                                 "キャッシュフロー計算書"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-19"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 }
@@ -20383,8 +20384,8 @@
                                 "Azure RBAC"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "Azureにおいてテキストファイルや画像、動画のバイナリデータなどあらゆる種類の大量のデータを格納するのに適しているサービスは",
@@ -20393,7 +20394,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 },
@@ -20472,8 +20473,17 @@
                                 "7"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "Azure StorageにはEncryption Scopeというものがある。",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-20"
                         }
                     ]
                 },
@@ -20487,7 +20497,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "Azure の画像認識サービスを使用して、画像内の特定のオブジェクトを検出する場合、どのサービスを使用するべきですか？",
@@ -20514,7 +20524,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-07-19"
                         },
                         {
                             "problem": "Azure Machine Learning でモデルをトレーニングする際に、過学習を防ぐための一般的な方法はどれですか？",
@@ -20523,7 +20533,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-19"
                         }
                     ]
                 },
@@ -20550,7 +20560,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "Azure SQL Database で使用できるストレージ上のデータの暗号化をなんという？",
@@ -20655,7 +20665,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "Azure AI Searchでのインデックスのドキュメントのファイル形式は",
@@ -20663,8 +20673,8 @@
                                 "json"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-19"
                         },
                         {
                             "problem": "Azure AI Searchのアナライザーとは",
@@ -20850,7 +20860,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-20"
                         }
                     ]
                 },
@@ -20891,7 +20901,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "Microsoft Entraロールの種類 3つだけあげて",
@@ -20948,7 +20958,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "Application Gatewayは何らかの異常が発生したバックエンドを振り分け対象から外す機能は",
@@ -20957,7 +20967,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 },
@@ -20989,7 +20999,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 },
@@ -21019,7 +21029,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 },
@@ -21036,6 +21046,10 @@
                             "last_answered_date": "2025-07-12"
                         }
                     ]
+                },
+                {
+                    "name": "Azure Document Intelligence",
+                    "questions": []
                 }
             ]
         },
@@ -21148,8 +21162,8 @@
                                 "本番環境にどのコミットIDをデプロイしたのかわかりづらい；"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 }
@@ -21185,8 +21199,8 @@
                                 "マゼラン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "前14世紀にエジプトで栄えた写実的美術をなんという",
@@ -21204,7 +21218,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "のちにアルファベットへ発展するセム語系の表音文字は",
@@ -21213,7 +21227,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUPGVSpVZKJRNJ9vSnbvLf4RNwrijvkoV7kg&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "オリエント世界におけるメソポタミアからシリア・パレスチナにいたる地域の名称をなんという",
@@ -21221,8 +21235,8 @@
                                 "肥沃な三日月地帯"
                             ],
                             "memo": "https://www.y-history.net/map/0101/orient-iseki.jpg\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "誰が「出エジプト」を行なったか",
@@ -21240,7 +21254,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "14~16世紀にかけてイタリアで始まり西欧各地に広まった芸術・思想上の新しい動きは？",
@@ -21248,8 +21262,8 @@
                                 "ルネサンス"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-24"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "ルネサンスはどこの国で始まったか",
@@ -21257,22 +21271,13 @@
                                 "イタリア"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-25"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ササン朝ペルシアの首都はどこか",
                             "answer": [
                                 "クテシフォン\n"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
-                        },
-                        {
-                            "problem": "ササン朝最盛期の王で、突厥と同盟を組んでエフタルを滅ぼした人物は誰か",
-                            "answer": [
-                                "ホスロー一世"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -21294,7 +21299,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "古代ギリシア人が異民族に対して用いた蔑称を何というか",
@@ -21321,7 +21326,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "世界で初めて鉄を使用した民族は",
@@ -21330,7 +21335,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "世界史の大まかな時代区分を答えて",
@@ -21344,7 +21349,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-07-19"
                         },
                         {
                             "problem": "アレクサンドロス大王がダイオレス三世に勝利した前333年の戦いをなんというか",
@@ -21362,7 +21367,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "古代ギリシアにおける、市民の投票によって僭主の出現を防止する制度を何と言うか。",
@@ -21371,7 +21376,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-21"
                         },
                         {
                             "problem": "『神統記』 『労働と日々』を記した ギリシアの叙事詩人は誰か。",
@@ -21389,7 +21394,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "ポリスの平民が武器を自分で購入して参加した国防を担う歩兵部隊をなんという",
@@ -21407,7 +21412,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "スパルタに軍国主義的な政治・軍事体制をもたらした伝説的な指導者は誰か",
@@ -21443,7 +21448,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "古代エジプト人がミイラと共に副葬した死後の世界への案内書を何というか。",
@@ -21451,8 +21456,8 @@
                                 "死者の書"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "神聖文字（ヒエログリフ）解読のきっかけとなったナポレオンのエジプト遠征中に発見された石碑を何というか。",
@@ -21470,7 +21475,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "ヒッタイトの首都は",
@@ -21509,22 +21514,13 @@
                             "last_answered_date": "2025-07-12"
                         },
                         {
-                            "problem": "紀元前13世紀末〜紀元前12世紀初めに東地中海全域で活動し、ヒッタイトを滅ぼしてエジプトを衰退させた諸民族の集団を何というか。",
-                            "answer": [
-                                "海の民"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
-                        },
-                        {
                             "problem": "ユダ王国が新バビロニアに征服されて、住民の多くがバビロンに連れ去られた出来事を何というか。",
                             "answer": [
                                 "バビロン捕囚"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "アラム人の最大の拠点は？",
@@ -21532,8 +21528,8 @@
                                 "ダマスクス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "オリエント統一を最初にしたのはどこか",
@@ -21542,7 +21538,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "アッカド人の民族系統は語族的には何に属するか",
@@ -21578,7 +21574,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "アッシリア最盛期の王はだれか？",
@@ -21597,15 +21593,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-12"
-                        },
-                        {
-                            "problem": "前6世紀にアテネで僭主となった人物は？",
-                            "answer": [
-                                "ペイシストラトス"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
                         },
                         {
                             "problem": "プルタルコスがギリシア語で著したギリシア・ローマの英雄伝は？",
@@ -21641,7 +21628,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-19"
                         },
                         {
                             "problem": "ペルシア人の民族宗教は",
@@ -21650,7 +21637,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-18"
                         },
                         {
                             "problem": "メソポタミア文明や中国では太陰暦（厳密には太陰太陽暦）が行われていたのに対して、エジプト文明では（A）が行われていた",
@@ -21659,7 +21646,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-17"
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "イギリスのジョン王から大陸領の大半を奪ったフランス王は？",
+                            "answer": [
+                                "フィリップ二世"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
                         }
                     ]
                 },
@@ -21672,14 +21668,250 @@
                                 "殷いん"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "洛陽を都とした王朝である後漢の初代皇帝は誰か",
+                            "answer": [
+                                "劉秀"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-10"
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "周の王朝がおこなった統治制度を何というか。",
+                            "answer": [
+                                "封建制度"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "春秋時代中期以降に農業生産力を高めた生産用具は何か。",
+                            "answer": [
+                                "鉄製農具"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "戦国時代に流通した斉・燕の国で使用された貨幣、韓・魏・趙の国で使用された貨幣はそれぞれ何というか。",
+                            "answer": [
+                                "刀銭・布銭"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "儒家の思想を人為的な虚礼を説くものだとして退け、無為自然を説いた学派を何というか。",
+                            "answer": [
+                                "道家"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "始皇帝によって実施された、全国に郡や県を置き、皇帝が中央から派遣した官僚に治めさせるような統治制度を何というか。",
+                            "answer": [
+                                "郡県制"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "中央集権体制を確立した、前漢第7代の皇帝は誰か。",
+                            "answer": [
+                                "武帝"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "農民出身で楚の軍勢を破って中国を再統一した人物は誰か。",
+                            "answer": [
+                                "劉邦"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "武帝はたび重なる外征の結果、財政難になったために専売を行ったが、この専売を行った3つの商品をあげよ。",
+                            "answer": [
+                                "塩、鉄、酒"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "前漢の皇帝の外戚で、前漢を奪い、新王朝をたてたのは誰か",
+                            "answer": [
+                                "王莽"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "洛陽を都とした王朝である後漢の初代皇帝は誰か",
+                            "answer": [
+                                "劉秀（光武帝）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "184年に後漢滅亡のきっかけになった農民反乱を何というか。",
+                            "answer": [
+                                "黄巾の乱"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "班固の弟で紀元前1世紀にカスピ海以東、50余りの国を服属させた人物は誰か。",
+                            "answer": [
+                                "班超"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "前漢の歴史家で、将軍李陵を弁護したために武帝により宮刑に処せられたのは誰か。",
+                            "answer": [
+                                "司馬遷\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
                         }
                     ]
                 },
                 {
                     "name": "古代オリエント",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "アケメネス朝ペルシアが各州に置いたサトラップを 監視するため中央から派遣した監察官を何というか。",
+                            "answer": [
+                                "王の目・王の耳"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "パルティアを倒し、イラン系農耕民が建てた王朝を何というか。",
+                            "answer": [
+                                "ササン朝"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "紀元前13世紀末〜紀元前12世紀初めに東地中海全域で活動し、ヒッタイトを滅ぼしてエジプトを衰退させた諸民族の集団を何というか。",
+                            "answer": [
+                                "海の民"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        }
+                    ]
+                },
+                {
+                    "name": "古代ギリシア",
+                    "questions": [
+                        {
+                            "problem": "スパルタに征服された奴隷農民は",
+                            "answer": [
+                                "ヘイロータイ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "ペルシア戦争勃発のきっかけとなったアケメネス朝ペルシアに対する反乱は？",
+                            "answer": [
+                                "イオニア植民市の反乱"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "トスカーナ地方を中心に定住していた系統不明の先住民族は",
+                            "answer": [
+                                "エトルリア人"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "ギリシアの覇権はアテネ→スパルタと移り、その後どこにうつったか",
+                            "answer": [
+                                "テーベ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "フィリッポス2世を王とするマケドニア王国が、アテネ・テーベの連合軍を撃破し、全ギリシアを制圧した戦いを何というか。",
+                            "answer": [
+                                "カイロネイアの戦い"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "前6世紀にアテネで僭主となった人物は？",
+                            "answer": [
+                                "ペイシストラトス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-16"
+                        }
+                    ]
+                },
+                {
+                    "name": "イラン",
+                    "questions": [
+                        {
+                            "problem": "ササン朝最盛期の王で、突厥と同盟を組んでエフタルを滅ぼした人物は誰か",
+                            "answer": [
+                                "ホスロー一世"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "ササン朝のときに、中央アジア西部から侵入した遊牧民は？",
+                            "answer": [
+                                "エフタル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-20"
+                        }
+                    ]
                 }
             ]
         },
@@ -21701,7 +21933,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-20"
                         },
                         {
                             "problem": "GitHub Actions において アクション（uses を使うステップ）に引数を渡すための構文は何か",
@@ -21719,7 +21951,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-18"
                         }
                     ]
                 }
