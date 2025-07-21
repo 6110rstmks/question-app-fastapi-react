@@ -14,22 +14,34 @@ const Pagination: React.FC<PaginationProps> = ({
     onPageChange 
 }) => {
     const handlePrevious = () => {
-        if (currentPage > 1) onPageChange(currentPage - 1);
+        if (currentPage > 1) {
+            onPageChange(currentPage - 1);
+        } else if (currentPage === 1) {
+            onPageChange(totalPages || 1);
+        }
         window.scrollTo(0, 0)
     };
 
     const handleNext = () => {
-        if (totalPages === null || currentPage < totalPages) onPageChange(currentPage + 1);
+        if (totalPages === null || currentPage < totalPages) {
+            onPageChange(currentPage + 1);
+        } else if (currentPage === totalPages) {
+            onPageChange(1);
+        }
         window.scrollTo(0, 0)
     };
 
     return (
         <div className={styles.paginationContainer}>
-            <button className={styles.paginationBtn} onClick={handlePrevious}>
+            <button 
+                className={styles.paginationBtn} 
+                onClick={handlePrevious}>
                 Previous
             </button>
             <span className={styles.pageInfo}>{currentPage} / { totalPages }</span>
-            <button className={`${styles.paginationBtn} ${styles.left_btn}`} onClick={handleNext}>
+            <button 
+                className={`${styles.paginationBtn} ${styles.left_btn}`} 
+                onClick={handleNext}>
                 Next
             </button>
         </div>

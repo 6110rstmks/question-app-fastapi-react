@@ -30,7 +30,6 @@ export const HomePage: React.FC = () => {
 
     }, []);
 
-
     const [
         searchCategoryWord, 
         setSearchCategoryWord
