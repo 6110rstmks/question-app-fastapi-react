@@ -50,10 +50,28 @@ async def get_question_count_by_last_answered_date(
 ):
     return question_count_crud.get_question_count_by_last_answered_date(db, question_get_count_by_answered_date.days_array)
 
+# ------------------------------------------------------------------------ #
+# Corrected
+# ------------------------------------------------------------------------ #
+
+# 正解のQuestion数を取得するエンドポイント
 @router.get("/count/corrected/", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_corrected_count(db: DbDependency):
     return question_count_crud.get_question_corrected_count(db)
 
+@router.get("/count/corrected/category_id/${category_id}/order_than_x_days/${x_days}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_corrected_count_in_category_order_than_x_days(
+    db: DbDependency,
+    category_id: int = Path(gt=0),
+    x_days: int = Path(gt=0)
+):
+    found_category = category_crud.find_category_by_id(db, category_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    
+    return question_count_crud.get_question_corrected_count_in_category_older_than_x_days(db, category_id, x_days)
+
+# 特定のカテゴリ内の正解のQuestion数を取得するエンドポイント
 @router.get("/count/corrected/category_id/{category_id}/order_than_one_month", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_corrected_count_in_category_order_than_one_month(
     db: DbDependency,
@@ -65,12 +83,32 @@ async def get_question_corrected_count_in_category_order_than_one_month(
     
     return question_count_crud.get_question_corrected_count_in_category_older_than_one_month(db, category_id)
 
+# ------------------------------------------------------------------------ #
+# Temporary
+# ------------------------------------------------------------------------ #
 
 @router.get("/count/temporary/", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_temporary_count(
     db: DbDependency
 ):
     return question_count_crud.get_question_temporary_count(db)
+
+@router.get("/count/temporary/category_id/{category_id}/order_than_x_days/{x_days}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_corrected_count_in_category_order_than_x_days(
+    db: DbDependency,
+    category_id: int = Path(gt=0),
+    x_days: int = Path(gt=0)
+):
+    found_category = category_crud.find_category_by_id(db, category_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    
+    return question_count_crud.get_question_temporary_count_in_category_older_than_x_days(db, category_id, x_days)
+
+
+# ------------------------------------------------------------------------ #
+# Uncorrected
+# ------------------------------------------------------------------------ #
 
 # 不正解のQuestion数を取得するエンドポイント
 @router.get("/count/uncorrected/", response_model=int, status_code=status.HTTP_200_OK)

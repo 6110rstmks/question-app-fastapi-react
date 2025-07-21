@@ -13,6 +13,7 @@ const CategoryPage: React.FC = () => {
         subcategories,
         subcategoryName,
         uncorrectedQuestionCount,
+        temporaryQuestionCountFifteenDaysAgo,
         correctedQuestionCountOrderThanOneMonth,
         questionCount,
         setSubcategoryName,
@@ -39,7 +40,7 @@ const CategoryPage: React.FC = () => {
                 className={styles.displayIncorrectedQuestionBtn}
                 onClick={handleSetTemporaryProblem}
             >
-                15日より前のTemporaryの問題から出題する。15日前がなければすべてのTemporaryから取得する（{}）。
+                15日より前のTemporaryの問題から出題する。15日前がなければすべてのTemporaryから取得する（{temporaryQuestionCountFifteenDaysAgo}）。
             </button>
             <button 
                 className={styles.displayIncorrectedQuestionBtn}

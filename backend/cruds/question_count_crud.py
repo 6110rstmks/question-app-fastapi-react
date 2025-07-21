@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, func
 from models import Question, SubcategoryQuestion, CategoryQuestion
-from datetime import date
+from datetime import date, timedelta
 from config import SolutionStatus
 from models import CategoryBlacklist
 
@@ -70,6 +70,29 @@ def get_question_count_by_last_answered_date(
 
     return return_days_count_array
 
+
+# ------------------------------------------------------------------------ #
+# Corrected
+# ------------------------------------------------------------------------ #
+
+def get_question_corrected_count_in_category_older_than_x_days(
+    db: Session,
+    category_id: int,
+    x_days: int
+):
+    # x_days前の日付を取得
+    x_days_ago = date.today() - timedelta(days=x_days)
+    
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(CategoryQuestion).
+                    where(Question.is_correct == SolutionStatus.Correct).
+                    where(CategoryQuestion.category_id == category_id).
+                    where(Question.last_answered_date < x_days_ago)
+                )
+    return int(count)
+
 # last_answered_dateが1ヶ月より前のの正解のQuestionの数を取得する。
 def get_question_corrected_count_in_category_older_than_one_month(
     db: Session,
@@ -95,6 +118,41 @@ def get_question_corrected_count(db: Session):
                 )
     return int(count)
 
+
+# ------------------------------------------------------------------------ #
+# Temporary
+# ------------------------------------------------------------------------ #
+
+def get_question_temporary_count(db: Session):
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    where(Question.is_correct == SolutionStatus.Temporary)
+                )
+    return int(count)
+
+def get_question_temporary_count_in_category_older_than_x_days(
+    db: Session,
+    category_id: int,
+    x_days: int
+):
+    # x_days前の日付を取得
+    x_days_ago = date.today() - timedelta(days=x_days)
+    
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(CategoryQuestion).
+                    where(Question.is_correct == SolutionStatus.Temporary).
+                    where(CategoryQuestion.category_id == category_id).
+                    where(Question.last_answered_date < x_days_ago)
+                )
+    return int(count)
+
+
+# ------------------------------------------------------------------------ #
+# Uncorrected
+# ------------------------------------------------------------------------ #
 
 def get_question_uncorrected_count(db: Session):
     count = db.scalar(
@@ -132,10 +190,3 @@ def get_question_uncorrected_count_in_subcategory(
                 )
     return int(count)
 
-def get_question_temporary_count(db: Session):
-    count = db.scalar(
-                    select(func.count()).
-                    select_from(Question).
-                    where(Question.is_correct == SolutionStatus.Temporary)
-                )
-    return int(count)

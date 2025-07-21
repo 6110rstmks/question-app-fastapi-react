@@ -8,7 +8,8 @@ import { useNavigate } from "react-router"
 import { 
     fetchUncorrectedQuestionCountByCategoryId,
     fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth,
-    fetchQuestionCountByCategoryId
+    fetchQuestionCountByCategoryId,
+    fetchTemporaryQuestionCountByCategoryIdOrderThanXDays
 } from '../../../api/QuestionCountAPI'
 
 
@@ -35,6 +36,11 @@ export const useCategoryPage = (categoryId: number) => {
     const [
         uncorrectedQuestionCount,
         setUncorrectedQuestionCount
+    ] = useState<number | null>(null)
+
+    const [
+        temporaryQuestionCountFifteenDaysAgo,
+        setTemporaryQuestionCountFifteenDaysAgo
     ] = useState<number | null>(null)
 
     const [
@@ -130,6 +136,10 @@ export const useCategoryPage = (categoryId: number) => {
             const uncorrectedQuestionCount = await fetchUncorrectedQuestionCountByCategoryId(categoryId)
             setUncorrectedQuestionCount(uncorrectedQuestionCount)
 
+            const temporaryQuestionCount = await fetchTemporaryQuestionCountByCategoryIdOrderThanXDays(categoryId, 15)
+            console.log(temporaryQuestionCount)
+            setTemporaryQuestionCountFifteenDaysAgo(temporaryQuestionCount)
+
             const correctedQuestionCount = await fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth(categoryId)
             setCorrectedQuestionCountOrderThanOneMonth(correctedQuestionCount)
         })()
@@ -147,6 +157,7 @@ export const useCategoryPage = (categoryId: number) => {
         subcategories,
         subcategoryName,
         uncorrectedQuestionCount,
+        temporaryQuestionCountFifteenDaysAgo,
         correctedQuestionCountOrderThanOneMonth,
         questionCount,
         setSubcategoryName,

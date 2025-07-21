@@ -54,6 +54,22 @@ export const fetchCorrectedQuestionCount = async (): Promise<number> => {
     return await response.json()
 }
 
+// 特定のカテゴリ内のx日前より前に解いた正解のQuestionの数を取得するAPI
+export const fetchCorrectedQuestionCountByCategoryIdOrderThanXDays = async (
+    category_id: number,
+    x_days: number
+): Promise<number> => {
+    const url = `http://localhost:8000/question_count/count/corrected/category_id/${category_id}/order_than_x_days/${x_days}`;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+
+    return await response.json()
+}
+
 // 特定のカテゴリ内の1ヶ月前より前に解いた正解のQuestionの数を取得するAPI
 export const fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth = async (
     category_id: number
@@ -114,10 +130,23 @@ export const fetchTemporaryQuestionCountByCategoryId = async (
     return await response.json();
 }
 
+export const fetchTemporaryQuestionCountByCategoryIdOrderThanXDays = async (
+    category_id: number,
+    x_days: number
+): Promise<number> => {
+    const url = `http://localhost:8000/question_count/count/temporary/category_id/${category_id}/order_than_x_days/${x_days}`;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json();
+}
+
 // ------------------------------------------------------------------------ #
     // Uncorrected
 // ------------------------------------------------------------------------ #
-
 
 
 export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
