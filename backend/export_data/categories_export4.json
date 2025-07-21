@@ -19773,6 +19773,33 @@
                             "memo": "1983年に確立",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "Qスイッチルビーレーザーの欠点",
+                            "answer": [
+                                "炎症後色素沈着（PIH）が出る可能性"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "アビクリアの波長は",
+                            "answer": [
+                                "1726nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "1726nmのレーザーであるアビクリアは何をターゲットとしているか",
+                            "answer": [
+                                "ニキビの原因となる皮脂腺"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
                         }
                     ]
                 },
@@ -20367,7 +20394,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-22"
                         },
                         {
                             "problem": "Azureにおいて誰がVMを停止させたかわかるリソースは",
@@ -20515,7 +20542,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-07-22"
                         },
                         {
                             "problem": "Azure の画像認識サービスを使用して、画像内の特定のオブジェクトを検出する場合、どのサービスを使用するべきですか？",
@@ -21221,15 +21248,6 @@
                             "last_answered_date": "2025-07-20"
                         },
                         {
-                            "problem": "前14世紀にエジプトで栄えた写実的美術をなんという",
-                            "answer": [
-                                "アマルナ美術"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-12"
-                        },
-                        {
                             "problem": "ロゼッタストーンに刻まれた神聖文字の解読に成功したフランスのエジプト学者は誰か",
                             "answer": [
                                 "シャンポリオン"
@@ -21385,7 +21403,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "last_answered_date": "2025-07-22"
                         },
                         {
                             "problem": "古代ギリシアにおける、市民の投票によって僭主の出現を防止する制度を何と言うか。",
@@ -21593,15 +21611,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-20"
-                        },
-                        {
-                            "problem": "アッシリア最盛期の王はだれか？",
-                            "answer": [
-                                "アッシュルバニパル"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
                         },
                         {
                             "problem": "最大のソフィストと言われたのは",
@@ -21846,6 +21855,69 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-20"
+                        },
+                        {
+                            "problem": "前14世紀にエジプトで栄えた写実的美術をなんという",
+                            "answer": [
+                                "アマルナ美術"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-12"
+                        },
+                        {
+                            "problem": "前14世紀にアマルナ美術はどこの国で栄えたか",
+                            "answer": [
+                                "エジプト"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-22"
+                        },
+                        {
+                            "problem": "アッシリア最盛期の王はだれか？",
+                            "answer": [
+                                "アッシュルバニパル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-12"
+                        },
+                        {
+                            "problem": "ニネヴェ図書館を作った王は？",
+                            "answer": [
+                                "アッシュル=バニパル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-22"
+                        },
+                        {
+                            "problem": "ダレイオス1世は、中央集権体制を確立し、帝国を約20州にわけ何に任命して統治させた。",
+                            "answer": [
+                                "サトラップ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-22"
+                        },
+                        {
+                            "problem": "クノッソス宮殿を発掘し、線文字の刻まれた粘土板を発見したイギリスの考古学者は",
+                            "answer": [
+                                "エヴァンズ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-22"
+                        },
+                        {
+                            "problem": "イラン系農耕民はどの国を倒してササン王朝を建設したか",
+                            "answer": [
+                                "パルティア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-22"
                         }
                     ]
                 },
