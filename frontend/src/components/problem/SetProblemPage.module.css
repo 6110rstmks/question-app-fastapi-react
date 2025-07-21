@@ -1,3 +1,9 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .problemSelector {
     max-width: 644px;
     margin: 0 auto;

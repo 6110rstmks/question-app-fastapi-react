@@ -96,7 +96,7 @@ const SubcategoryPage: React.FC = () => {
                         className={styles.changeCategoryBtn}
                         // onClick={()}
                     >
-                            カテゴリを付け替える。
+                            このサブカテゴリを別のカテゴリを付け替える。
                     </button>
                 </div>
             </div>
