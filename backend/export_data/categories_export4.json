@@ -9373,7 +9373,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-21"
                         },
                         {
                             "problem": "RAID1は、同じデータを（A）ハードディスクに書き込みすることで耐障害性を高めた構成です。",
@@ -16461,7 +16461,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-21"
                         },
                         {
                             "problem": "アウトストラーダ・デル・ソーレとは？",
@@ -19540,7 +19540,7 @@
                                 "595nm"
                             ],
                             "memo": "",
-                            "is_correct": 2,
+                            "is_correct": 1,
                             "last_answered_date": "2025-05-24"
                         },
                         {
@@ -19576,8 +19576,8 @@
                                 "ピコレーザー"
                             ],
                             "memo": "https://www.cynosure.co.jp/blog/4",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-21"
                         },
                         {
                             "problem": "Qスイッチレーザーは三種類ある。答えて",
@@ -19605,7 +19605,7 @@
                                 "1064nm"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-05-22"
                         },
                         {
@@ -19662,17 +19662,8 @@
                                 "しみ、くすみ、そばかす"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-22"
-                        },
-                        {
-                            "problem": "表在性色素疾患はなんのことを指す",
-                            "answer": [
-                                "しみ、そばかす、くすみ"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
                         },
                         {
                             "problem": "ピコレーザーの照射時間は？",
@@ -19689,7 +19680,7 @@
                                 "シミ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-06-14"
                         },
                         {
@@ -19738,7 +19729,7 @@
                             "last_answered_date": "2025-05-15"
                         },
                         {
-                            "problem": "皮膚の赤みに効果のあるIPLはなんですか？",
+                            "problem": "皮膚の赤みに効果のあるIPLはなんですか？（レーザーではなくてIPL）",
                             "answer": [
                                 "ノーリス"
                             ],
@@ -19755,6 +19746,33 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-25"
+                        },
+                        {
+                            "problem": "Qスイッチルビーレーザーの波長は",
+                            "answer": [
+                                "694nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "Qスイッチルビーレーザーとは、発振媒質に何を用いている？",
+                            "answer": [
+                                "ルビー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "特定の色素（クロモフォア）に選択的に吸収される波長のレーザー光を適切な短パルスで照射することで、周囲組織への損傷を最小限に抑えつつ標的組織のみを熱破壊できる理論",
+                            "answer": [
+                                "選択的光熱分解理論（Selective Photothermolysis）"
+                            ],
+                            "memo": "1983年に確立",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
                         }
                     ]
                 },
@@ -19867,8 +19885,8 @@
                                 "UV-B"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-21"
                         },
                         {
                             "problem": "エモリエントの代表的なものは",
@@ -19877,22 +19895,22 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-07-21"
+                        },
+                        {
+                            "problem": "表在性色素疾患はなんのことを指す",
+                            "answer": [
+                                "しみ、そばかす、くすみ"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-24"
                         }
                     ]
                 },
                 {
                     "name": "Chinese medicine",
                     "questions": [
-                        {
-                            "problem": "当帰芍薬散の副作用　一つ挙げて",
-                            "answer": [
-                                "ASTやALTの上昇"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-28"
-                        },
                         {
                             "problem": "漢方には副作用があるかないか",
                             "answer": [
@@ -21565,7 +21583,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-21"
                         },
                         {
                             "problem": "新王国時代にシリア・ヌビアに遠征し、そこを征服した王は？",
@@ -21601,7 +21619,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-16"
+                            "last_answered_date": "2025-07-21"
                         },
                         {
                             "problem": "前13世期頃よりシリアのダマスクスを中心に内陸交易に活躍したセム語系遊牧民は",
