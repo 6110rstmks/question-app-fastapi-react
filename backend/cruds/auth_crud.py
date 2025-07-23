@@ -17,7 +17,10 @@ SECRET_KEY = get_settings().secret_key
 
 # oauth2_schema = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
-def create_user(db: Session, user_create: auth.UserCreate):
+def create_user(
+    db: Session, 
+    user_create: auth.UserCreate
+    ):
     # salt_bytes = os.urandom(32)
     # salt = base64.b64encode(salt_bytes).decode()  # 保存用に文字列化
     salt = base64.b64encode(os.urandom(32))
@@ -40,7 +43,10 @@ def create_user(db: Session, user_create: auth.UserCreate):
     return new_user
 
 
-def check_user_already_exists(db: Session, user_create: auth.UserCreate):
+def check_user_already_exists(
+    db: Session, 
+    user_create: auth.UserCreate
+):
     query = select(User).where(User.username == user_create.username)
     user = db.execute(query).scalars().first()
     if user:
@@ -79,7 +85,7 @@ def authenticate_user(
 
 async def get_current_user(
     request: Request,
-    db: Session = Depends(get_db),  # ここが重要！
+    db: Session = Depends(get_db),
 ) -> UserResponse:
     user_session = request.session.get("user")
     if not user_session:
