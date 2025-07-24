@@ -22490,7 +22490,26 @@
                 },
                 {
                     "name": "sqlalchemy",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "sqlalchemyにおいてsession.refresh()をする意味",
+                            "answer": [
+                                "SQLAlchemy で session.refresh(instance) を呼び出すと、その instance（Python オブジェクト）に対して データベースに再クエリを発行して再読み込み を行います。これにより、そのインスタンスに紐づくカラムの値は、 現在のデータベース上の正確な状態 に更新されます。"
+                            ],
+                            "memo": "session.refresh() は 即座に SELECT クエリを実行 します（キャッシュなどは使わず、DBアクセスが発生）。",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-24"
+                        },
+                        {
+                            "problem": "Session = sessionmaker(engine,class_=AsyncSession)\n\nasync def main():\n    async with Session() as session:\n        user = Chat()\n        user.name = \"Sato Taro\"\n        user.age = 30\n        session.add(user)\n        \n        print(f\"user1: {user}\")\n        await session.commit()\n        print(f\"user2: {user}\")\n        \n        await session.refresh(user)\n        print(f\"user3: {user}\")\n        \n        \nif __name__ == \"__main__\":\n    import asyncio\n    asyncio.run(main())\n\n\nsession.commit()の実行後、userオブジェクトの中身はどうなりますか？",
+                            "answer": [
+                                "空になる\n"
+                            ],
+                            "memo": "session.commit()は現在のトランザクションによる変更をデータベースに反映し、永続化する効果があります。\nこの際、トランザクションで用いられていたオブジェクトが失効し、消去されます。\nそのため、session.commit()の実行後に、そのトランザクションで用いられていたオブジェクト(user)の要素にアクセスしようとした場合などにエラーが発生する。",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-24"
+                        }
+                    ]
                 },
                 {
                     "name": "pytest",
