@@ -28,12 +28,16 @@ export const useQuestionCreateModal = (
     }
 
     const createQuestion = async () => {
-        console.log(problem)
         // 問題文が空の場合はエラーを表示
         if (!problem) {
             alert('問題文を入力してください')
             return
         } 
+
+        if (inputMemoValue.length > 1000) {
+            alert('メモは1000文字以内で入力してください')
+            return
+        }
 
         const response = await fetch('http://localhost:8000/questions', {
             method: 'POST',
@@ -50,9 +54,6 @@ export const useQuestionCreateModal = (
             }),
         })
 
-        if (!response.ok) {
-            throw new Error('Failed to create question')
-        }
         const data = await fetchQuestionsBySubcategoryId(subcategoryId)
         setQuestions(data)
         setModalIsOpen(false)
