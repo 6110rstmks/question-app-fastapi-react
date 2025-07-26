@@ -62,7 +62,6 @@ export const useQuestionPage = (
             }
             return prev
         })
-        alert('回答数を更新しました')
     }
 
     const handleUpdateIsCorrect = async () => {
