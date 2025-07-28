@@ -22,7 +22,9 @@ const ProblemPage: React.FC = () => {
         currentReviewProblemIndex2,
         totalReviewProblemIndex,
         editModalIsOpen,
+        changeSubcategoryModalIsOpen,
         setEditModalIsOpen,
+        setChangeSubcategoryModalIsOpen,
         setShowAnswer,
         handleAnswerSolved,
         handleAnswerUnsolved,
@@ -78,6 +80,8 @@ const ProblemPage: React.FC = () => {
                 }
                 editModalIsOpen={editModalIsOpen}
                 setEditModalIsOpen={setEditModalIsOpen}
+                changeSubcategoryModalIsOpen={changeSubcategoryModalIsOpen}
+                setChangeSubcategoryModalIsOpen={setChangeSubcategoryModalIsOpen}
             />
         </div>
     );

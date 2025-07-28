@@ -22,6 +22,11 @@ export const useProblemPage = (
     ] = useState<boolean>(false)
 
     const [
+        changeSubcategoryModalIsOpen,
+        setChangeSubcategoryModalIsOpen
+    ] = useState<boolean>(false)
+
+    const [
         unsolvedProblems,
         setUnsolvedProblems
     ] = useState<Question[]>([])
@@ -133,7 +138,9 @@ export const useProblemPage = (
         currentReviewProblemIndex2,
         totalReviewProblemIndex,
         editModalIsOpen,
+        changeSubcategoryModalIsOpen,
         setEditModalIsOpen,
+        setChangeSubcategoryModalIsOpen,
         setShowAnswer,
         handleAnswerSolved,
         handleAnswerUnsolved,

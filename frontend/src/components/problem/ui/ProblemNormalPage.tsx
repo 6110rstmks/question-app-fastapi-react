@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router';
+import { data, Link } from 'react-router';
 import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
 import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI"
@@ -11,6 +11,7 @@ import styles from './ProblemNormal.module.css'
 import { BlockMath } from "react-katex"
 import Modal from 'react-modal'
 import QuestionEditModal from "../../question/QuestionEditModal"
+import ChangeCategorySubcategory from "../../ChangeCategorySubcategoryModal"
 import RenderMemoWithLinks from '../../RenderMemoWithlinks'
 import { SolutionStatus } from "../../../types/SolutionStatus"
 
@@ -25,6 +26,8 @@ interface Props {
     onUnsolved: () => void
     editModalIsOpen: boolean
     setEditModalIsOpen: (isOpen: boolean) => void
+    changeSubcategoryModalIsOpen: boolean
+    setChangeSubcategoryModalIsOpen: (isOpen: boolean) => void
 }
 
 export const ProblemNormalPage: React.FC<Props> = ({
@@ -37,7 +40,9 @@ export const ProblemNormalPage: React.FC<Props> = ({
     onSolved,
     onUnsolved,
     editModalIsOpen,
-    setEditModalIsOpen
+    setEditModalIsOpen,
+    changeSubcategoryModalIsOpen,
+    setChangeSubcategoryModalIsOpen,
 }) => {
     const [
         subcategoriesWithCategoryName,
@@ -67,6 +72,7 @@ export const ProblemNormalPage: React.FC<Props> = ({
 
         const fetchData = async () => {
             const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
+            console.log('data_subcategories_with_category_name', data_subcategories_with_category_name)
             setSubcategoriesWithCategoryName(data_subcategories_with_category_name)
         };
     
@@ -125,6 +131,10 @@ export const ProblemNormalPage: React.FC<Props> = ({
                             localProblem?.is_correct === SolutionStatus.Temporary ? 'temp correct' :
                             'correct'}
                         </button>
+                        <button
+                            className={styles.changeCategoryButton}
+                            onClick={() => setChangeSubcategoryModalIsOpen(true)}
+                            >Change Category or Subcategory</button>
                         {/* やりかけ↓ */}
                         {/* <select
                             className={`${styles.statusDropdown} ${
@@ -151,7 +161,18 @@ export const ProblemNormalPage: React.FC<Props> = ({
                         setQuestion={setLocalProblem}
                     />
                 </Modal>
-                
+                <Modal 
+                    isOpen={changeSubcategoryModalIsOpen} 
+                    contentLabel="カテゴリ変更モーダル">
+                    <ChangeCategorySubcategory
+                        categoryId={subcategoriesWithCategoryName[0]?.category_id || 0}
+                        defaultCategoryName={subcategoriesWithCategoryName[0]?.category_name || ''}
+                        question={localProblem}
+                        setModalIsOpen={setChangeSubcategoryModalIsOpen as (isOpen: boolean) => void}
+                        setSubcategoriesRelatedToQuestion={setSubcategoriesWithCategoryName}
+                    />
+                </Modal>
+                    
                 <div className={styles.questionContent}>
                     {RenderMemoWithLinks(localProblem.problem)}
                 </div>
