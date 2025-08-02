@@ -8348,11 +8348,11 @@
                         {
                             "problem": "ルビスコのワードを分解するとどのような意味をとれる？",
                             "answer": [
-                                "Rubis:RuBP\nC: カルボキシラーぜ\nO: おきしげなーぜ（酸素添加酵素）\nカルボキシラーぜ→CO2をくっつける。\nオキシゲラーぜ→酸素をつける\n\n\n二酸化炭素をつけるときと、酸素をつけるときの二パターンある。\nOxygenase"
+                                "Rubis:RuBP\nC: カルボキシラーぜ\nO: おきしげなーぜ（酸素添加酵素）\nカルボキシラーぜ→CO2をくっつける。\nオキシゲナーぜ→酸素をつける\n\n\n二酸化炭素をつけるときと、酸素をつけるときの二パターンある。\nOxygenase"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "C4植物における光合成は二種類の細胞で行われる。答えて",
@@ -8911,8 +8911,8 @@
                                 "NFV（network functions virtualication）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-30"
                         }
                     ]
                 },
@@ -12305,7 +12305,7 @@
                             ],
                             "memo": "GPGは公開鍵暗号方式を「表向き」に使い、実際の暗号処理には共通鍵方式を使う「ハイブリッド型」です。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-07-29"
                         }
                     ]
                 },
@@ -17296,8 +17296,8 @@
                                 "オークランド"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "ペルーの首都は",
@@ -17370,6 +17370,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-10"
+                        },
+                        {
+                            "problem": "アディスアベバはどこの国の首都",
+                            "answer": [
+                                "エチオピア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-29"
                         }
                     ]
                 },
@@ -19536,7 +19545,7 @@
                                 "エスチュアリー"
                             ],
                             "memo": "南アフリカの時点で　フィヨルドはなさげ　フィヨルドはひょうがから　",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-07-25"
                         },
                         {
@@ -20785,7 +20794,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "last_answered_date": "2025-07-30"
                         },
                         {
                             "problem": "Azure の画像認識サービスを使用して、画像内の特定のオブジェクトを検出する場合、どのサービスを使用するべきですか？",
@@ -21140,8 +21149,8 @@
                                 "Recovery Services Container"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-31"
                         }
                     ]
                 },
@@ -21555,7 +21564,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "last_answered_date": "2025-07-30"
                         },
                         {
                             "problem": "git rebase を使う際にコンフリクトが発生することがあります。 この場合、開発者はどのような手順でコンフリクトを解決し、rebase を完了すべきでしょうか？",
@@ -21583,7 +21592,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "インドで成立した祭式至上主義の宗教",
@@ -21637,7 +21646,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-06-24"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "仏の第一帝政の成立に対抗するため、英のピットが提唱して結成された同盟は何か。",
@@ -21645,8 +21654,8 @@
                                 "第3回対仏大同盟"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-29"
                         },
                         {
                             "problem": "14~16世紀にかけてイタリアで始まり西欧各地に広まった芸術・思想上の新しい動きは？",
@@ -21681,8 +21690,8 @@
                                 "ゾロアスター教"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-12"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "サラミスの海戦でペルシア艦隊を破るなどして活躍した、アテネの軍人・政治家は誰か。",
@@ -21690,8 +21699,8 @@
                                 "テミストクレス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "古代ギリシア人が異民族に対して用いた蔑称を何というか",
@@ -21699,8 +21708,8 @@
                                 "バルバロイ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "ティグリス川 と ユーフラテス川 にはさまれた地域のことを何という",
@@ -21709,7 +21718,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-25"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "ウル、ウルク、ラガシュといった国家都市を建設した民族は",
@@ -21746,11 +21755,11 @@
                         {
                             "problem": "古代ギリシアにおける、市民の投票によって僭主の出現を防止する制度を何と言うか。",
                             "answer": [
-                                "陶片追放（オストラシズム）"
+                                "陶片追放（とうへんついほう）（オストラシズム）"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-21"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "『神統記』 『労働と日々』を記した ギリシアの叙事詩人は誰か。",
@@ -21759,7 +21768,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "フラン ス皇帝ナポレオン 1 世が 1806 年にヨーロッパ諸国とイギリスとの貿易を禁止した法令をなんという",
@@ -21795,7 +21804,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "突厥　なんとよむ",
@@ -21830,8 +21839,8 @@
                                 "ロゼッタ・ストーン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "出エジプトでどこへ移ったか",
@@ -21867,7 +21876,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "エジプト古王国の首都は",
@@ -21876,7 +21885,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "アラム人の最大の拠点は？",
@@ -21912,7 +21921,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-27"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "中王国の首都は",
@@ -21930,7 +21939,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-24"
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "プルタルコスがギリシア語で著したギリシア・ローマの英雄伝は？",
@@ -21984,7 +21993,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "イギリスのジョン王から大陸領の大半を奪ったフランス王は？",
@@ -22011,7 +22020,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-26"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "ガリア北部に拡大したのは何人か。",
@@ -22020,7 +22029,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-26"
+                            "last_answered_date": "2025-07-31"
+                        },
+                        {
+                            "problem": "イギリスの哲学者で、経験論を確立し、『統治二論（市民政府二論）』で自然権、社会契約説、抵抗権（革命権）を唱え、名誉革命を擁護し、後の市民革命に大きな影響を与えたのは誰でしょう？",
+                            "answer": [
+                                "ロック"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-01"
                         }
                     ]
                 },
@@ -22138,11 +22156,11 @@
                         {
                             "problem": "184年に後漢滅亡のきっかけになった農民反乱を何というか。",
                             "answer": [
-                                "黄巾の乱こうきんのらん"
+                                "黄巾の乱（こうきんのらん"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "班固の弟で紀元前1世紀にカスピ海以東、50余りの国を服属させた人物は誰か。",
@@ -22217,7 +22235,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-26"
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "新が滅びるきっかけとなった反乱は？",
@@ -22256,13 +22274,13 @@
                             "last_answered_date": "2025-07-26"
                         },
                         {
-                            "problem": "晋の国の建国者は誰か",
+                            "problem": "晋（西晋（中国王朝）\t）の国の建国者は誰か",
                             "answer": [
                                 "司馬炎"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-27"
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "晋の国が衰退するきっかけとなった反乱をなんというか",
@@ -22276,11 +22294,11 @@
                         {
                             "problem": "八王の乱の反乱以降蜂起した遊牧諸民族(五胡)を全て答えよ",
                             "answer": [
-                                "匈奴、羯（）、鮮卑（せんぴ）、氐、羌"
+                                "匈奴（きょうど）、羯（）、鮮卑（せんぴ）、氐、羌"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-26"
+                            "last_answered_date": "2025-07-31"
                         }
                     ]
                 },
@@ -22293,8 +22311,8 @@
                                 "アマルナ美術"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "紀元前13世紀末〜紀元前12世紀初めに東地中海全域で活動し、ヒッタイトを滅ぼしてエジプトを衰退させた諸民族の集団を何というか。",
@@ -22320,8 +22338,8 @@
                                 "アッシュルバニパル"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "アケメネス朝ペルシアが各州に置いたサトラップを 監視するため中央から派遣した監察官を何というか。",
@@ -22347,8 +22365,8 @@
                                 "アッシュル=バニパル"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-30"
                         },
                         {
                             "problem": "ダレイオス1世は、中央集権体制を確立し、帝国を約20州にわけ何に任命して統治させたか？",
@@ -22364,9 +22382,9 @@
                             "answer": [
                                 "エヴァンズ"
                             ],
-                            "memo": "",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEICiHIFbs4CfZYT3IEcmkPDjmoqNF28jAlA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "オリエント世界を初めて統一し、中央集権的な支配体制を築いたが、その過酷な支配で知られる帝国は何でしょう？",
@@ -22375,7 +22393,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-30"
+                            "last_answered_date": "2025-07-31"
+                        },
+                        {
+                            "problem": "古代バビロニアの王で、「目には目を、歯には歯を」の原則で知られる法典を制定したのは誰でしょう？",
+                            "answer": [
+                                "ハンムラビ"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-31"
                         }
                     ]
                 },
@@ -22397,8 +22424,8 @@
                                 "コリントス同盟"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "スパルタに軍国主義的な政治・軍事体制をもたらした伝説的な指導者は誰か",
@@ -22415,8 +22442,8 @@
                                 "ペイシストラトス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "スパルタに征服された奴隷農民は",
@@ -22434,7 +22461,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-21"
+                            "last_answered_date": "2025-07-29"
                         },
                         {
                             "problem": "トスカーナ地方を中心に定住していた系統不明の先住民族は",
@@ -22452,7 +22479,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-30"
+                            "last_answered_date": "2025-07-29"
                         },
                         {
                             "problem": "フィリッポス2世を王とするマケドニア王国が、アテネ・テーベの連合軍を撃破し、全ギリシアを制圧した戦いを何というか。",
@@ -22470,16 +22497,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-30"
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "上中下3段に並んだ漕ぎ手が櫂を使って動かす軍船を何というか。",
                             "answer": [
-                                "三段櫂船"
+                                "三段櫂船 さんだんかいせん"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "平民会での決議は、元老院の承認を得ずとも国法になるとした古代ローマの法律の名称を何というか。",
@@ -22497,7 +22524,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-26"
+                            "last_answered_date": "2025-07-29"
                         },
                         {
                             "problem": "「雲」「女の平和」という喜劇で知られる作家は誰か",
@@ -22515,7 +22542,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "ペルシア戦争は何年に始まったか。",
@@ -22524,7 +22551,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-30"
+                            "last_answered_date": "2025-08-01"
                         },
                         {
                             "problem": "コリントス同盟はほとんどのギリシア諸ポリスは参加したがある国は不参加。どこの国",
@@ -22532,8 +22559,44 @@
                                 "スパルタ"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-30"
+                        },
+                        {
+                            "problem": "共和政ローマにおいて、土地改革を試みたが、元老院保守派に反対され、兄弟ともに暗殺された護民官は誰でしょう？",
+                            "answer": [
+                                "グラックス兄弟"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "last_answered_date": "2025-07-31"
+                        },
+                        {
+                            "problem": "イッソスの戦いは何年に起こったか",
+                            "answer": [
+                                "BC333年"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-31"
+                        },
+                        {
+                            "problem": "イオニア植民市の反乱のイオニアとは何を表す",
+                            "answer": [
+                                "地方"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-31"
+                        },
+                        {
+                            "problem": "ストア派の創始者はだれか",
+                            "answer": [
+                                "ゼノン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
                         }
                     ]
                 },
@@ -22547,7 +22610,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "新王国時代にシリア・ヌビアに遠征し、そこを征服した王は？",
@@ -22574,7 +22637,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-30"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "イラン系農耕民はどの国を倒してササン王朝を建設したか",
@@ -22592,7 +22655,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-30"
+                            "last_answered_date": "2025-07-29"
                         }
                     ]
                 },
@@ -22616,6 +22679,34 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-25"
+                        }
+                    ]
+                },
+                {
+                    "name": "現代",
+                    "questions": [
+                        {
+                            "problem": "1954年、南アジア地域の首相がスリランカで開いた会議は？",
+                            "answer": [
+                                "コロンボ会議"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
+                        }
+                    ]
+                },
+                {
+                    "name": "日本",
+                    "questions": [
+                        {
+                            "problem": "明治政府とロシアの間で成立した領域画定に関する条約をなんという",
+                            "answer": [
+                                "樺太・千島交換条約"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
                         }
                     ]
                 }
@@ -22755,11 +22846,11 @@
                         {
                             "problem": "pythonのtyping libraryのGenericは何？",
                             "answer": [
-                                ""
+                                "クラスに型パラメータTを受け入れる  Generic[T]\t"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "last_answered_date": "2025-07-31"
                         },
                         {
                             "problem": "from typing import Generic, TypeVar\n\nT = TypeVar('T')  # 型変数 T を定義\n\nclass Box(Generic[T]):\n    def __init__(self, content: T):\n        self.content = content\n\n    def get_content(self) -> T:\n        return self.content\n\nこうすることでboxクラスはどのような型が扱えるようになるか？",
@@ -22832,6 +22923,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-26"
+                        },
+                        {
+                            "problem": "標準出力（print()などの出力）をコンソールに表示するためのpytestコマンドは",
+                            "answer": [
+                                "pytest -s "
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-31"
                         }
                     ]
                 },
