@@ -36,13 +36,23 @@ async def read_users_me(current_user: UserResponse = Depends(auth_cruds.get_curr
     return current_user
 
 
-@router.post("/login", status_code=status.HTTP_200_OK)
-async def login(request: Request, db: DbDependency, user_signin: UserSignIn):
+@router.post(
+    "/login", 
+    status_code=status.HTTP_200_OK
+)
+async def login(
+    request: Request, 
+    db: DbDependency, 
+    user_signin: UserSignIn
+):
     return auth_crud.authenticate_user(
         db, user_signin.username, user_signin.password, request
     )
 
-@router.post("/logout", status_code=status.HTTP_200_OK)
+@router.post(
+    "/logout", 
+    status_code=status.HTTP_200_OK
+)
 def logout(request: Request):
     request.session.clear()
     return {"message": "Logged out"}
