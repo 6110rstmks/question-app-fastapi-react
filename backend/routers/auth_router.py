@@ -17,7 +17,9 @@ DbDependency = Annotated[Session, Depends(get_db)]
 FormDependency = Annotated[OAuth2PasswordRequestForm, Depends()]
 
 @router.post(
-    "/signup", response_model=UserResponse, status_code=status.HTTP_201_CREATED
+    "/signup", 
+    response_model=UserResponse, 
+    status_code=status.HTTP_201_CREATED
 )
 async def create_user(db: DbDependency, user_create: UserCreate):
     if auth_cruds.check_user_already_exists(db, user_create):
