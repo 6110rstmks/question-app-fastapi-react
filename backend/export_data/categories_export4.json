@@ -14860,7 +14860,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "カナダは何の発電が割合を占めているか",
@@ -17315,7 +17315,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-27"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "世界一位の人口の国は",
@@ -17438,7 +17438,7 @@
                             ],
                             "memo": "だいじょうぶ、あめあるぜ",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-24"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "世界の米の生産量top3",
@@ -20645,8 +20645,8 @@
                                 "Azure Files"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "Azureにおいて誰がVMを停止させたかわかるリソースは",
@@ -20780,7 +20780,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-24"
+                            "last_answered_date": "2025-08-02"
                         }
                     ]
                 },
@@ -21498,7 +21498,7 @@
                             ],
                             "memo": "CREATE TABLE \"_CategoryToPost\" (\n    \"A\" integer NOT NULL REFERENCES \"Category\"(id) ,\n    \"B\" integer NOT NULL REFERENCES \"Post\"(id)\n);\nCREATE UNIQUE INDEX \"_CategoryToPost_AB_unique\" ON \"_CategoryToPost\"(\"A\" int4_ops,\"B\" int4_ops);\nCREATE INDEX \"_CategoryToPost_B_index\" ON \"_CategoryToPost\"(\"B\" int4_ops);\n\nCREATE TABLE \"Category\" (\n    id integer SERIAL PRIMARY KEY\n);\n\nCREATE TABLE \"Post\" (\n    id integer SERIAL PRIMARY KEY\n)",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-24"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "Prisma schemaにおいて、@mapはどのようなケースで使用するか。",
@@ -21691,7 +21691,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-07-31"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "サラミスの海戦でペルシア艦隊を破るなどして活躍した、アテネの軍人・政治家は誰か。",
@@ -21867,7 +21867,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "「死者の書」に描かれている冥界の神は？",
@@ -21903,7 +21903,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "紀元前18世紀頃、メソポタミアを征服し、 バビロン第1王朝に最盛期をもたらした6代目国王は誰か。",
@@ -21974,8 +21974,8 @@
                                 "古代ギリシャ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "ペルシア人の民族宗教は",
@@ -22039,6 +22039,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-01"
+                        },
+                        {
+                            "problem": "ドン・キホーテの作者は",
+                            "answer": [
+                                "セルバンテス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
                         }
                     ]
                 },
@@ -22064,13 +22073,13 @@
                             "last_answered_date": "2025-07-22"
                         },
                         {
-                            "problem": "周の王朝がおこなった統治制度を何というか。",
+                            "problem": "周の王朝が領土を有力な一族や功臣に分け与え、地方の統治を任せることで支配をおこなった制度を何というか？",
                             "answer": [
                                 "封建制度"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "春秋時代中期以降に農業生産力を高めた生産用具は何か。",
@@ -22078,8 +22087,8 @@
                                 "鉄製農具"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "戦国時代に流通した斉・燕の国で使用された貨幣、韓・魏・趙の国で使用された貨幣はそれぞれ何というか。",
@@ -22120,7 +22129,7 @@
                         {
                             "problem": "農民出身で楚の軍勢を破って中国を再統一した人物は誰か。",
                             "answer": [
-                                "劉邦"
+                                "劉邦（りゅうほう）"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -22160,7 +22169,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-01"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "班固の弟で紀元前1世紀にカスピ海以東、50余りの国を服属させた人物は誰か。",
@@ -22187,7 +22196,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "第1回三頭政治に登場する政治家を3名答えよ。",
@@ -22235,16 +22244,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-01"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
-                            "problem": "新が滅びるきっかけとなった反乱は？",
+                            "problem": "前漢と後漢の間に成立した「新」が滅びるきっかけとなった、農民による大規模な反乱を何というか？",
                             "answer": [
                                 "赤眉の乱"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-26"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "前漢で当初行われた、周の封建制度と秦の郡県制度を併用した制度をなんというか",
@@ -22294,11 +22303,74 @@
                         {
                             "problem": "八王の乱の反乱以降蜂起した遊牧諸民族(五胡)を全て答えよ",
                             "answer": [
-                                "匈奴（きょうど）、羯（）、鮮卑（せんぴ）、氐、羌"
+                                "匈奴（きょうど）、羯（けつ）、鮮卑（せんぴ）、氐、羌"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-31"
+                            "last_answered_date": "2025-08-02"
+                        },
+                        {
+                            "problem": "BC11頃に渭水盆地からおこり、殷に変わって華北を支配した王朝は何か",
+                            "answer": [
+                                "周"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
+                        },
+                        {
+                            "problem": "秦が定めた統一貨幣の名称は何か",
+                            "answer": [
+                                "半両銭"
+                            ],
+                            "memo": "https://www.y-history.net/gazo/0203/hanryosen.gif",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "晋から自立した三国のうち、もっとも北方に位置した国はどこか。",
+                            "answer": [
+                                "趙 ちょう"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "中国史上、220年から280年までん分裂時代を何と呼ぶか",
+                            "answer": [
+                                "三国時代"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
+                        },
+                        {
+                            "problem": "後漢末の混乱期に華北の実権を握って全国統一をめざし、216年に後漢の献帝から王に封ぜられた人物は",
+                            "answer": [
+                                "曹操"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
+                        },
+                        {
+                            "problem": "中央から派遣された官吏が治める「郡」と、諸侯が治める「国」を併存させる制度である「郡国制」は、どの王朝で採用されたか？",
+                            "answer": [
+                                "前漢\n\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
+                        },
+                        {
+                            "problem": "西晋滅亡後、江南に逃れて東晋を建てた人物は",
+                            "answer": [
+                                "司馬睿\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
                         }
                     ]
                 },
@@ -22308,11 +22380,11 @@
                         {
                             "problem": "前14世紀にエジプトで栄えた写実的美術をなんという",
                             "answer": [
-                                "アマルナ美術"
+                                "アマルナ美術Amarna art"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-31"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "紀元前13世紀末〜紀元前12世紀初めに東地中海全域で活動し、ヒッタイトを滅ぼしてエジプトを衰退させた諸民族の集団を何というか。",
@@ -22321,7 +22393,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "アッカド人の民族系統は語族的には何に属するか",
@@ -22330,7 +22402,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "アッシリア最盛期の王はだれか？",
@@ -22348,7 +22420,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "前14世紀にアマルナ美術はどこの国で栄えたか",
@@ -22403,6 +22475,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-31"
+                        },
+                        {
+                            "problem": "古代エジプトの行政単位である集落をなんという",
+                            "answer": [
+                                "ノモス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "ダレイオス1世はどこの国の王",
+                            "answer": [
+                                "アケメネス朝ペルシア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
                         }
                     ]
                 },
@@ -22452,7 +22542,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "ペルシア戦争勃発のきっかけとなったアケメネス朝ペルシアに対する反乱は？",
@@ -22478,8 +22568,8 @@
                                 "テーベ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "フィリッポス2世を王とするマケドニア王国が、アテネ・テーベの連合軍を撃破し、全ギリシアを制圧した戦いを何というか。",
@@ -22504,9 +22594,9 @@
                             "answer": [
                                 "三段櫂船 さんだんかいせん"
                             ],
-                            "memo": "",
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqvMabK5-ru_QsNgez2VaW4ZQYxfmjZHe4DQ&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-31"
+                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "平民会での決議は、元老院の承認を得ずとも国法になるとした古代ローマの法律の名称を何というか。",
@@ -22597,6 +22687,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "東方遠征をおこない、広大な帝国を築いたアレクサンドロス大王は、どこの国の王だったか？",
+                            "answer": [
+                                "マケドニア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
                         }
                     ]
                 },
@@ -22679,6 +22778,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-25"
+                        },
+                        {
+                            "problem": "ルイ14世がカトリック重視政策として1685年に廃止したものは何か",
+                            "answer": [
+                                "ナントの王令"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
                         }
                     ]
                 },
@@ -22703,6 +22811,29 @@
                             "problem": "明治政府とロシアの間で成立した領域画定に関する条約をなんという",
                             "answer": [
                                 "樺太・千島交換条約"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
+                        }
+                    ]
+                },
+                {
+                    "name": "Korea",
+                    "questions": [
+                        {
+                            "problem": "918年に建てられ936年に朝鮮半島を統一した国は",
+                            "answer": [
+                                "高麗"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-02"
+                        },
+                        {
+                            "problem": "朝鮮半島の国である高麗の首都は",
+                            "answer": [
+                                "開城"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -22875,7 +23006,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "last_answered_date": "2025-08-02"
                         }
                     ]
                 },
