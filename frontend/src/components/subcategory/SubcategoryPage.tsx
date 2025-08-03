@@ -67,6 +67,14 @@ const SubcategoryPage: React.FC = () => {
                     >15日より前のincorrectの問題に絞って表示する
                 </button>
             </div>
+            <div>
+                <div>ワードで検索する</div>
+                <input 
+                    type="text" 
+                    placeholder="問題文を入力してください"
+                    className={styles.searchInput}
+                />              
+            </div>
             <div className={styles.btnContainer}>
                 <div>
                     <button 

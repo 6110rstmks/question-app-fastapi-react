@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select, update, func, text
+from sqlalchemy import select, update, func, text, delete
 from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
-from models import Subcategory, Question, SubcategoryQuestion, CategoryQuestion
+from models import Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
@@ -140,8 +140,6 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
             db.delete(existing_record)
             db.commit()
         
-    query_a = db.query(SubcategoryQuestion).where(SubcategoryQuestion.question_id ==changeSubcategoryUpdate.question_id)
-
     # ------------------------------------------------------------------------ #
     # チェックボックスにチェックがついた場合のSubcategory追加処理
     # ------------------------------------------------------------------------ #
@@ -161,9 +159,7 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
             )
             db.add(new_subcategory_question)
             db.commit()
-            
-    query_b = db.query(SubcategoryQuestion).where(SubcategoryQuestion.question_id ==changeSubcategoryUpdate.question_id)
-            
+                        
     # ------------------------------------------------------------------------ #
     # チェックボックスが外された場合のCategory削除処理
     # ------------------------------------------------------------------------ #
@@ -190,8 +186,6 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
             db.delete(existing_category_question_record)
             db.commit()
             
-    results33 = db.execute(query).scalars().all()
-
     
     # ------------------------------------------------------------------------ #
     # チェックボックスにチェックがついた場合のCategory追加処理
@@ -212,7 +206,6 @@ def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: Questi
             )
             db.add(new_category_question)
             db.commit()
-
 
     return changeSubcategoryUpdate.subcategory_ids
 

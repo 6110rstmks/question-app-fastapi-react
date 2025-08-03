@@ -38,7 +38,7 @@ const CategoryListPage = () => {
                 <tr>
                     <th>ID</th>
                     <th>カテゴリ名</th>
-                    <th>ブラックチェっく</th>
+                    <th>ブラックリストかどうか</th>
                 </tr>
             </thead>
         </table>

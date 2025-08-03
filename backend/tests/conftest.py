@@ -15,7 +15,6 @@ from main import app
 from database import get_db
 from backend.cruds.auth_crud import get_current_user
 
-
 @pytest.fixture()
 def session_fixture():
     engine = create_engine(
@@ -43,7 +42,6 @@ def session_fixture():
 @pytest.fixture()
 def user_fixture():
     return DecodedToken(username="user1", user_id=1)
-
 
 @pytest.fixture()
 def client_fixture(session_fixture: Session, user_fixture: DecodedToken):

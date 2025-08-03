@@ -19,7 +19,7 @@ async def change_belongs_to_subcategoryId(
     db: DbDependency,
     changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate
 ):
-    return question_crud.change_belongs_to_subcategoryId(db, changeSubcategoryUpdate)
+    return question_crud.change_belongs_to_subcategoryId2(db, changeSubcategoryUpdate)
 
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
@@ -88,9 +88,6 @@ async def find_all_questions(
     searchProblemWord: str = None,
     searchAnswerWord: str = None
 ):
-    print(28220909)
-    print(question_crud.find_all_questions(db, search_problem_word=searchProblemWord, search_answer_word=searchAnswerWord))
-    print(111166666)
     return question_crud.find_all_questions(db, search_problem_word=searchProblemWord, search_answer_word=searchAnswerWord)
 
 # Question IDからQuestionを取得するエンドポイント

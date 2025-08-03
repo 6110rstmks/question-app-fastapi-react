@@ -1,6 +1,4 @@
 from datetime import datetime
-from enum import Enum
-from typing import Optional
 from pydantic import BaseModel, Field, ConfigDict
 
 class UserSignIn(BaseModel):
@@ -18,7 +16,6 @@ class UserResponse(BaseModel):
     updated_at: datetime
 
     model_config = ConfigDict(from_attributes=True)
-
 
 class Token(BaseModel):
     access_token: str
