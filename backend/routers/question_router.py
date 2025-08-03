@@ -19,7 +19,7 @@ async def change_belongs_to_subcategoryId(
     db: DbDependency,
     changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate
 ):
-    return question_crud.change_belongs_to_subcategoryId2(db, changeSubcategoryUpdate)
+    return question_crud.change_belongs_to_subcategoryId(db, changeSubcategoryUpdate)
 
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
@@ -92,7 +92,10 @@ async def find_all_questions(
 
 # Question IDからQuestionを取得するエンドポイント
 @router.get("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
-async def find_question_by_id(db: DbDependency, id: int = Path(gt=0)):
+async def find_question_by_id(
+    db: DbDependency, 
+    id: int = Path(gt=0)
+):
     found_question = question_crud.find_question_by_id(db, id)
     if not found_question:
         raise HTTPException(status_code=404, detail="Question not found")
@@ -100,7 +103,10 @@ async def find_question_by_id(db: DbDependency, id: int = Path(gt=0)):
 
 # Category IDに紐づくQuestionsを取得するエンドポイント
 @router.get("/category_id/{category_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
-async def find_all_questions_in_category(db: DbDependency, category_id: int = Path(gt=0)):
+async def find_all_questions_in_category(
+    db: DbDependency, 
+    category_id: int = Path(gt=0)
+):
     return question_crud.find_all_questions_in_category(db, category_id)
 
 @router.get("/subcategory_id/{subcategory_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
@@ -110,7 +116,8 @@ async def find_all_questions_in_subcategory(db: DbDependency, subcategory_id: in
 # Questionを削除するエンドポイント
 @router.delete("/{question_id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def delete(
-    db: DbDependency, question_id: int = Path(gt=0)
+    db: DbDependency, 
+    question_id: int = Path(gt=0)
 ):
     # deleted_item = question_cruds.delete(db, id, user.user_id)
     deleted_item = question_crud.delete_question(db, question_id)
