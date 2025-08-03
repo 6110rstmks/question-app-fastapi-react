@@ -6558,7 +6558,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "酸素解離度曲線の横軸と縦軸について答えて、",
@@ -7957,7 +7957,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "インターロイキンを主に産生するのはどの細胞ですか？",
@@ -9708,6 +9708,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-27"
+                        },
+                        {
+                            "problem": "住宅地に設置してある飲料の自動販売機に組み込まれた通信機器と、遠隔で自動販売機を監視しているコンピュータが、ネットワークを介してデータを送受信することによって在庫管理を実現するような仕組みがある。このように、機械同士がネットワークを介して互いに情報をやり取りすることによって、自律的に高度な制御や動作を行う仕組みはどれか。",
+                            "answer": [
+                                "m2m"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
                         }
                     ]
                 }
@@ -11868,8 +11877,17 @@
                                 "仕立て屋に行った"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "make the most of 意味",
+                            "answer": [
+                                "活用する。"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "last_answered_date": "2025-08-03"
                         }
                     ]
                 },
@@ -12112,7 +12130,7 @@
                             ],
                             "memo": "FE出題",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "企業・組織においてセキュリティインシデントに対して調査・対応を行う組織を何という？",
@@ -12129,8 +12147,8 @@
                                 "WindowsのActive Directory"
                             ],
                             "memo": "kerberosは認証プロトコルであって、SSOではない",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-04"
                         },
                         {
                             "problem": "cookieとsessionの保管場所の観点から違いを答えて",
@@ -12199,22 +12217,13 @@
                             "last_answered_date": "2025-07-23"
                         },
                         {
-                            "problem": "OAuth 2.0には**「認証」が欠けている**ため、OAuthに「認証機能」を追加したものをなんという",
-                            "answer": [
-                                "OpenID Connect（OIDC）"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-18"
-                        },
-                        {
                             "problem": "システムが被害を受けるリスクを想定して，保険を掛けることをなんという",
                             "answer": [
                                 "リスクファイナンシング"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "ソフトウェアに，問題を引き起こしそうな多様なデータを入力し，挙動を監視して，脆弱性を見つけ出す。というソフトウェアテスト技法を何という",
@@ -12232,7 +12241,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "OSI基本参照モデルのネットワーク層で動作し，\"認証ヘッダー(AH)\"と\"暗号ペイロード(ESP)\"の二つのプロトコルを含むのは",
@@ -12253,13 +12262,13 @@
                             "last_answered_date": "2025-07-21"
                         },
                         {
-                            "problem": "権限付与に関する基本的な考え方",
+                            "problem": "権限付与に関する基本的な考え方はなにがある？",
                             "answer": [
                                 "最小権限の原則（Principle of Least Privilege"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "入室時と退室時にIDカードを用いて認証を行い，入退室を管理する。このとき，入室時の認証に用いられなかったIDカードでの退室を許可しない，又は退室時の認証に用いられなかったIDカードでの再入室を許可しないコントロールを行う仕組みをなんという",
@@ -12268,7 +12277,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-08-04"
                         },
                         {
                             "problem": "利用者が入力したパスワードと，サーバから受け取ったランダムなデータとをクライアントで演算し，その結果をサーバに送信する認証方式をなんという",
@@ -12286,17 +12295,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
-                        },
-                        {
-                            "problem": "GPGの主な機能は2",
-                            "answer": [
-                                "暗号化（復号化）",
-                                "署名（署名の検証）"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "GPGは公開鍵暗号方式か共通鍵暗号方式のどちらか",
@@ -12305,7 +12304,16 @@
                             ],
                             "memo": "GPGは公開鍵暗号方式を「表向き」に使い、実際の暗号処理には共通鍵方式を使う「ハイブリッド型」です。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-29"
+                            "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "主にインターネットVPNを実現するためのプロトコルは",
+                            "answer": [
+                                "IPsec"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
                         }
                     ]
                 },
@@ -12436,7 +12444,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=S5jJJAGC5vs",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "一般的にハッシュ関数によって得られた値をハッシュ値とよぶのだが、デジタル署名においてはは文書から得られたハッシュ値のことをなんという",
@@ -12473,6 +12481,59 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-18"
+                        }
+                    ]
+                },
+                {
+                    "name": "GPG",
+                    "questions": [
+                        {
+                            "problem": "GPGの主な機能は2",
+                            "answer": [
+                                "暗号化（復号化）",
+                                "署名（署名の検証）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-18"
+                        }
+                    ]
+                },
+                {
+                    "name": "OAuth",
+                    "questions": [
+                        {
+                            "problem": "OAuth 2.0には**「認証」が欠けている**ため、OAuthに「認証機能」を追加したものをなんという",
+                            "answer": [
+                                "OpenID Connect（OIDC）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-04"
+                        }
+                    ]
+                },
+                {
+                    "name": "IPsec",
+                    "questions": [
+                        {
+                            "problem": "IPsecのトンネルモードは拠点間VPNかリモートアクセスVPNのどちらで使用されるか？",
+                            "answer": [
+                                "拠点間VPN"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "IPsecには二つのモードがある。答えて",
+                            "answer": [
+                                "トンネルモード",
+                                "トランスポートモード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
                         }
                     ]
                 }
@@ -12947,7 +13008,7 @@
                             "last_answered_date": "2025-04-04"
                         },
                         {
-                            "problem": "プログラムが実行される際、メモリは主に4つの領域に分かれます",
+                            "problem": "プログラムが実行される際、メモリは主に4つの領域に分かれます。答えて",
                             "answer": [
                                 "ヒープ領域",
                                 "スタック領域",
@@ -12956,7 +13017,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-25"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "プログラマが明示的にメモリの確保（mallocなど）と解放（freeなど）を行う 必要があるのはスタック領域かヒープ領域かどちらか？",
@@ -13682,7 +13743,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-03"
                         }
                     ]
                 }
@@ -13912,7 +13973,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-04-04"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "メサと同じ原理でできた地形で、メサよりも小規模な地形を何という？",
@@ -15188,8 +15249,8 @@
                                 "夏にふく季節風と暖流の日本海流の影響"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "砂漠ができる理由は4種類ある。答えて",
@@ -15201,7 +15262,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "大きな山脈の風下側にできる 砂漠をなんという",
@@ -15922,7 +15983,7 @@
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-28"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "メコン川の場所は",
@@ -17594,8 +17655,8 @@
                                 "冬を越す小麦と覚える。→秋に種をまいて、冬をこす。→冬をこすことができるということは気候は比較的あたたかい。"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "米の栽培条件　年間降水量の目安は",
@@ -19837,8 +19898,8 @@
                                 "595nm"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-04"
                         },
                         {
                             "problem": "有名なIPL4つのべて",
@@ -19858,8 +19919,8 @@
                                 "しみ、くすみ、そばかす"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "皮膚の赤みに効果のあるIPLはなんですか？（レーザーではなくてIPL）",
@@ -19894,8 +19955,8 @@
                             "answer": [
                                 "755nm"
                             ],
-                            "memo": "",
-                            "is_correct": 0,
+                            "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToGUcMm55HURbaeB0Ckulox9YAiDfo1qH-nA&s",
+                            "is_correct": 1,
                             "last_answered_date": "2025-07-29"
                         },
                         {
@@ -19931,8 +19992,8 @@
                                 "ピコレーザー"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "Qスイッチレーザーは何に対して効果があるか",
@@ -19969,8 +20030,8 @@
                                 "694nm"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "Qスイッチルビーレーザーとは、発振媒質に何を用いている？",
@@ -19997,7 +20058,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "アビクリアの波長は",
@@ -20935,7 +20996,7 @@
                             ],
                             "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "azureでawsのVPCに該当するものは何",
@@ -21166,7 +21227,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "last_answered_date": "2025-08-03"
                         }
                     ]
                 },
@@ -21789,15 +21850,6 @@
                             "last_answered_date": "2025-07-27"
                         },
                         {
-                            "problem": "アテネを衆愚政治におちいらせた扇動政治家たちをなんと呼ぶ",
-                            "answer": [
-                                "デマゴーゴス"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-24"
-                        },
-                        {
                             "problem": "シュメール人が粘土板に刻んで使用した文字を何というか。",
                             "answer": [
                                 "楔形文字（"
@@ -21897,15 +21949,6 @@
                             "last_answered_date": "2025-07-20"
                         },
                         {
-                            "problem": "オリエント統一を最初にしたのはどこか",
-                            "answer": [
-                                "アッシリア"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-02"
-                        },
-                        {
                             "problem": "紀元前18世紀頃、メソポタミアを征服し、 バビロン第1王朝に最盛期をもたらした6代目国王は誰か。",
                             "answer": [
                                 "ハンムラビ王"
@@ -21917,11 +21960,11 @@
                         {
                             "problem": "メソポタタミアにうまれた世界最古の文学作品とは",
                             "answer": [
-                                "ギルガメシュ物語"
+                                "ギルガメシュ叙事詩\nEpic of Gilgamesh"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "中王国の首都は",
@@ -21948,7 +21991,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-21"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "前13世期頃よりシリアのダマスクスを中心に内陸交易に活躍したセム語系遊牧民は",
@@ -22020,7 +22063,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-31"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "ガリア北部に拡大したのは何人か。",
@@ -22105,8 +22148,8 @@
                                 "道家"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "始皇帝によって実施された、全国に郡や県を置き、皇帝が中央から派遣した官僚に治めさせるような統治制度を何というか。",
@@ -22114,8 +22157,8 @@
                                 "郡県制"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "中央集権体制を確立した、前漢第7代の皇帝は誰か。",
@@ -22133,7 +22176,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "武帝はたび重なる外征の結果、財政難になったために専売を行ったが、この専売を行った3つの商品をあげよ。",
@@ -22178,7 +22221,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-21"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "前漢の歴史家で、将軍李陵を弁護したために武帝により宮刑に処せられたのは誰か。",
@@ -22267,7 +22310,7 @@
                         {
                             "problem": "周(西周)の都はどこか",
                             "answer": [
-                                "鎬京"
+                                "鎬京こうけい"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -22383,13 +22426,22 @@
                                 "アマルナ美術Amarna art"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "紀元前13世紀末〜紀元前12世紀初めに東地中海全域で活動し、ヒッタイトを滅ぼしてエジプトを衰退させた諸民族の集団を何というか。",
                             "answer": [
                                 "海の民"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "オリエント統一を最初にしたのはどこか",
+                            "answer": [
+                                "アッシリア"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -22412,15 +22464,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-31"
-                        },
-                        {
-                            "problem": "アケメネス朝ペルシアが各州に置いたサトラップを 監視するため中央から派遣した監察官を何というか。",
-                            "answer": [
-                                "王の目・王の耳"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-02"
                         },
                         {
                             "problem": "前14世紀にアマルナ美術はどこの国で栄えたか",
@@ -22518,6 +22561,15 @@
                             "last_answered_date": "2025-07-31"
                         },
                         {
+                            "problem": "アテネを衆愚政治におちいらせた扇動政治家たちをなんと呼ぶ",
+                            "answer": [
+                                "デマゴーゴス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-07-24"
+                        },
+                        {
                             "problem": "スパルタに軍国主義的な政治・軍事体制をもたらした伝説的な指導者は誰か",
                             "answer": [
                                 "リュクルゴス"
@@ -22578,7 +22630,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-20"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "アテネ最古の成文法は",
@@ -22686,7 +22738,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-03"
+                            "last_answered_date": "2025-08-04"
                         },
                         {
                             "problem": "東方遠征をおこない、広大な帝国を築いたアレクサンドロス大王は、どこの国の王だったか？",
@@ -22730,13 +22782,22 @@
                             "last_answered_date": "2025-07-30"
                         },
                         {
-                            "problem": "パルティアを倒し、イラン系農耕民が建てた王朝を何というか。",
+                            "problem": "アケメネス朝ペルシアが各州に置いたサトラップを 監視するため中央から派遣した監察官を何というか。",
                             "answer": [
-                                "ササン朝"
+                                "王の目・王の耳"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-31"
+                            "last_answered_date": "2025-08-02"
+                        },
+                        {
+                            "problem": "パルティアを倒し、イラン系農耕民が建てた王朝を何というか。",
+                            "answer": [
+                                "ササン朝ペルシア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "イラン系農耕民はどの国を倒してササン王朝を建設したか",
@@ -22755,6 +22816,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-29"
+                        },
+                        {
+                            "problem": "「王の目・王の耳」は、どの国で設けられた制度ですか？",
+                            "answer": [
+                                "アケメネス朝ペルシア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-03"
                         }
                     ]
                 },
@@ -22861,7 +22931,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "last_answered_date": "2025-08-03"
                         },
                         {
                             "problem": "GitHub Actions において アクション（uses を使うステップ）に引数を渡すための構文は何か",
@@ -23006,7 +23076,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-02"
+                            "last_answered_date": "2025-08-03"
                         }
                     ]
                 },
@@ -23079,9 +23149,10 @@
                             "last_answered_date": "2025-07-24"
                         },
                         {
-                            "problem": "pydanticライブラリのBaseModelは何をするためのもの？",
+                            "problem": "pydanticライブラリのBaseModelとはクラスで何を簡単に行うためのものか？2",
                             "answer": [
-                                "データの検証（バリデーション）と変換（シリアライズ／デシリアライズ）を簡単かつ型安全に行うためのクラス"
+                                "データの検証（バリデーション）",
+                                "変換（シリアライズ／デシリアライズ）"
                             ],
                             "memo": "",
                             "is_correct": 0,
