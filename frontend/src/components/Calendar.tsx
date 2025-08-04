@@ -15,13 +15,15 @@ const Calendar: React.FC = () => {
     const endDate = endOfWeek(endMonth)
 
     const days = eachDayOfInterval({ start: startDate, end: endDate })
+    // console.log("days", days)
 
     const navigate = useNavigate()
 
     const prevMonth = () => setCurrentDate(subMonths(currentDate, 1))
     const nextMonth = () => setCurrentDate(addMonths(currentDate, 1))
 
-    const handleSetProblemByDay = async (day: string) => {
+    // const handleSetProblemByDay = async (day: string) => {
+    const handleSetProblemByDay = async (day: Date) => {
         const problemData = await fetchProblemByDay(day)
         navigate('/problem', { 
             state: {
@@ -67,15 +69,20 @@ const Calendar: React.FC = () => {
             {/* 日付 */}
                 <div className={styles.calendar_grid}>
                     {days.map(day => {
+                        // console.log("day", day)
+                        // const today = new Date();
+                        // console.log("today", today)
                         const dateStr = format(day, "yyyy-MM-dd");
+                        console.log("dateStr", dateStr)
                         const questionCount = questionCounts[dateStr];
                         return (
                             <div
-                                key={dateStr}
+                                // key={dateStr}
+                                key={day.toISOString()}
                                 className={`${styles.calendar_day} 
                                             ${format(day, "MM") !== format(currentDate, "MM") ? styles.other_month : ""}
-                                            ${dateStr === format(new Date(), "yyyy-MM-dd") ? styles.today : ""}`}
-                                onClick={() => handleSetProblemByDay(dateStr)}
+                                            ${format(day, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd") ? styles.today : ""}`}
+                                onClick={() => handleSetProblemByDay(day)}
                             >
                                 <div>{format(day, "d")}</div>
                                 {questionCount > 0 && <div className={styles.question_count}>{questionCount}件</div>}

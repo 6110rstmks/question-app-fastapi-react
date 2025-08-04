@@ -2,10 +2,14 @@
 
 バックエンドの単体テストコードを書く。
 
+それをgithub actionsでbackend-ciを走らせる。（無料）
+
 今日出題した解いた問題から出題をクリックすると
 →本日の日付で出題。なければ翌日の日付で出題
 
-それをgithub actionsでbackend-ciを走らせる。（無料）
+
+https://ankimaker.com/dash/workbooks/4b02ab7e-ad60-4d24-bd55-e47c8a8274db
+暗記メーカーのこのUIを参考にする。
 
 
 また

@@ -23,6 +23,7 @@ const SetProblemPage: React.FC = () => {
         subcategories,
         handleSetProblem,
         handleCheckboxChange,
+        handleTodayReview,
         solutionStatusNumber,
         setSolutionStatusNumber,
     } = useSetProblemPage()
@@ -44,6 +45,8 @@ const SetProblemPage: React.FC = () => {
                     </div>
                 </div>
             )}
+
+            <button onClick={handleTodayReview}>今日といた問題を復習</button>
 
             <div className={styles.problemSelector}>
                 <h2>Select Problem</h2>

@@ -1,3 +1,5 @@
+import { format } from 'date-fns'
+
 export const fetchProblem = async (
     selectedType: string,
     solvedStatus: string,
@@ -23,9 +25,12 @@ export const fetchProblem = async (
 }
 
 export const fetchProblemByDay = async (
-    day: string
+    // day: string
+    day: Date
 ) => {
-    const url = `http://localhost:8000/problems/day/${day}`
+    const dateStr = format(day, 'yyyy-MM-dd');
+
+    const url = `http://localhost:8000/problems/day/${dateStr}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {

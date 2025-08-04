@@ -5,7 +5,7 @@ import { CategoryWithQuestionCount } from '../../../types/Category'
 import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesWithQuestionCountByCategoryId } from '../../../api/SubcategoryAPI'
 import { fetchQuestionCount } from '../../../api/QuestionCountAPI'
-import { fetchProblem } from '../../../api/ProblemAPI'
+import { fetchProblem, fetchProblemByDay } from '../../../api/ProblemAPI'
 import { SolutionStatus } from '../../../types/SolutionStatus'
 
 const useSetProblemPage = () => {
@@ -73,7 +73,6 @@ const useSetProblemPage = () => {
 
     // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
     const handleSetProblem = async () => {
-        console.log(SolutionStatus[solutionStatusNumber])
         if (selectedType === 'category' && 
             selectedCategoryIds.length === 0
         ) {
@@ -94,6 +93,24 @@ const useSetProblemPage = () => {
                 from: 'setProblemPage' 
             }
         })
+    }
+
+    const handleTodayReview = async () => {
+        // const today = new Date()
+        // const problemData = await fetchProblemByDay(day)
+        // navigate('/problem', { 
+        //     state: {
+        //         problemData, 
+        //         from: 'setProblemPage',
+        //     }
+        // })
+        // navigate('/problem', {
+        //     state: {
+        //         problemData, 
+        //         from: 'setProblemPage',
+        //         backToId: null // 今日のレビューは戻る必要がないのでnull
+        //     }
+        // })
     }
 
     useEffect(() => {
@@ -118,6 +135,7 @@ const useSetProblemPage = () => {
         subcategories,
         handleSetProblem,
         handleCheckboxChange,
+        handleTodayReview,
         solutionStatusNumber,
         setSolutionStatusNumber
     }
