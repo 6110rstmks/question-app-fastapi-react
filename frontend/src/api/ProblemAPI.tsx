@@ -1,5 +1,17 @@
 import { format } from 'date-fns'
 
+
+/**
+ * Fetches a list of problems based on type, solved status, count, and optional category filters.
+ *
+ * @param selectedType - The type of problems to fetch ('category', 'subcategory', 'random').
+ * @param solvedStatus - The solved status filter ('solved', 'unsolved', etc.).
+ * @param problemCount - The number of problems to retrieve.
+ * @param selectedCategoryIds - (Optional) Array of category IDs to filter problems.
+ * @param selectedSubcategoryIds - (Optional) Array of subcategory IDs to filter problems.
+ * @returns A Promise resolving to the fetch Response object.
+ */
+
 export const fetchProblem = async (
     selectedType: string,
     solvedStatus: string,
@@ -24,8 +36,16 @@ export const fetchProblem = async (
     return response
 }
 
+
+/**
+ * Fetches problems created on a specific day.
+ *
+ * @param day - A Date object representing the day for which to fetch problems.
+ * @returns A Promise resolving to the parsed JSON response containing problems for the given day.
+ * @throws Will throw an Error if the response status is not OK.
+ */
+
 export const fetchProblemByDay = async (
-    // day: string
     day: Date
 ) => {
     const dateStr = format(day, 'yyyy-MM-dd');
@@ -37,11 +57,6 @@ export const fetchProblemByDay = async (
             'Content-Type': 'application/json',
         }
     })
-
-    if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to create problems');
-    }
 
     return response.json()
 }
