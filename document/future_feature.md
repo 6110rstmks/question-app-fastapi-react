@@ -11,6 +11,10 @@
 https://ankimaker.com/dash/workbooks/4b02ab7e-ad60-4d24-bd55-e47c8a8274db
 暗記メーカーのこのUIを参考にする。
 
+dropboxに対して画像を投稿するapiがあり、それをpythonから実行する。
+https://chatgpt.com/c/6890e510-ff8c-800d-9b96-7bdeaba5c120
+
+
 
 また
 問題が例えば4だい、出題されてときおわって、

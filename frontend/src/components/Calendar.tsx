@@ -15,14 +15,12 @@ const Calendar: React.FC = () => {
     const endDate = endOfWeek(endMonth)
 
     const days = eachDayOfInterval({ start: startDate, end: endDate })
-    // console.log("days", days)
 
     const navigate = useNavigate()
 
     const prevMonth = () => setCurrentDate(subMonths(currentDate, 1))
     const nextMonth = () => setCurrentDate(addMonths(currentDate, 1))
 
-    // const handleSetProblemByDay = async (day: string) => {
     const handleSetProblemByDay = async (day: Date) => {
         const problemData = await fetchProblemByDay(day)
         navigate('/problem', { 

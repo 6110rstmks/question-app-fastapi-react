@@ -95,22 +95,25 @@ const useSetProblemPage = () => {
         })
     }
 
+
     const handleTodayReview = async () => {
-        // const today = new Date()
-        // const problemData = await fetchProblemByDay(day)
-        // navigate('/problem', { 
-        //     state: {
-        //         problemData, 
-        //         from: 'setProblemPage',
-        //     }
-        // })
-        // navigate('/problem', {
-        //     state: {
-        //         problemData, 
-        //         from: 'setProblemPage',
-        //         backToId: null // 今日のレビューは戻る必要がないのでnull
-        //     }
-        // })
+        const today = new Date()
+        let problemData = await fetchProblemByDay(today)
+
+        // problemDataが空であれば、明日の問題を取得する
+        if (!problemData || Object.keys(problemData).length === 0) {
+            const tomorrow = new Date(today)
+            tomorrow.setDate(tomorrow.getDate() + 1)
+            problemData = await fetchProblemByDay(tomorrow)
+        }
+
+        navigate('/problem', { 
+            state: {
+                problemData, 
+                from: 'setProblemPage',
+            }
+        })
+
     }
 
     useEffect(() => {
