@@ -4,9 +4,14 @@
 
 それをgithub actionsでbackend-ciを走らせる。（無料）
 
-今日出題した解いた問題から出題をクリックすると
-→本日の日付で出題。なければ翌日の日付で出題
 
+今日といた問題を復習を押して、表示させたときは、
+この問題は本日は表示しない。
+とさせる。
+
+その後、日付が翌日になったら、
+
+questionpage一覧において、incorrect, correct,temporaryの状態を変化させると回答した回数がインクリメントされるが、
 
 https://ankimaker.com/dash/workbooks/4b02ab7e-ad60-4d24-bd55-e47c8a8274db
 暗記メーカーのこのUIを参考にする。
