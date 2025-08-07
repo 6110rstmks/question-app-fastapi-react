@@ -100,6 +100,14 @@ const useSetProblemPage = () => {
         const today = new Date()
         let problemData = await fetchProblemByDay(today)
 
+        // 本日の問題はすべて回答済みでした。その翌日のデータを取得しますか？というポップアップを表示する
+        if (problemData && Object.keys(problemData).length === 0) {
+            const confirmNextDay = window.confirm('本日の問題はすべて回答済みです。翌日の問題を取得しますか？')
+            if (!confirmNextDay) {
+                return
+            }
+        }
+
         // problemDataが空であれば、明日の問題を取得する
         if (!problemData || Object.keys(problemData).length === 0) {
             const tomorrow = new Date(today)
