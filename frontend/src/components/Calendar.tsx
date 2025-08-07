@@ -3,12 +3,19 @@ import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, su
 import styles from "./Calendar.module.css"
 import { fetchQuestionCountsByLastAnsweredDate } from "../api/QuestionAPI"
 import { fetchProblemByDay } from "../api/ProblemAPI"
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router'
 
 const Calendar: React.FC = () => {
-    const [currentDate, setCurrentDate] = useState(new Date());
+    const [
+        currentDate, 
+        setCurrentDate
+    ] = useState(new Date())
 
-    const [questionCounts, setQuestionCounts] = useState<Record<string, number>>({})
+    const [
+        questionCounts, 
+        setQuestionCounts
+    ] = useState<Record<string, number>>({})
+
     const startMonth = startOfMonth(currentDate)
     const endMonth = endOfMonth(currentDate)
     const startDate = startOfWeek(startMonth)
@@ -26,7 +33,7 @@ const Calendar: React.FC = () => {
         navigate('/problem', { 
             state: {
                 problemData, 
-                from: 'setProblemPage',
+                from: 'setProblemPage'
             }
         })
     }
