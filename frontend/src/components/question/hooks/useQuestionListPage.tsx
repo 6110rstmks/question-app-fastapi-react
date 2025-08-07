@@ -1,9 +1,6 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
-import { 
-    fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord, 
-    fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord 
-} from '../../../api/QuestionAPI'
+import { fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord } from '../../../api/QuestionAPI'
 import { fetchCategory } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI'
 import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI'
@@ -11,11 +8,10 @@ import { useNavigate } from "react-router"
 
 export const useQuestionListPage = () => {
     const [
-        searchProblemWord, 
-        setSearchProblemWord
+        searchWord, 
+        setSearchWord
     ] = useState<string>("")
 
-    const [searchAnswerWord, setSearchAnswerWord] = useState<string>("")
     const [questions , setQuestions] = useState<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]>([])
     const navigate = useNavigate()
 
@@ -38,16 +34,13 @@ export const useQuestionListPage = () => {
     }, [handleKeyDown])
 
     const handleProblemSearchClick = async () => {
-        if (searchProblemWord.trim() === "") return
+        if (searchWord.trim() === "") return
 
         const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] =
         await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord(
-          searchProblemWord
+          searchWord
         )
 
-        // 利便性向上のため、解答ワードにも検索ワードを設定
-        setSearchAnswerWord(searchProblemWord)
-
         for (let i = 0; i < questions_data.length; i++) {
             const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
             const category = await fetchCategory(category_id)
@@ -59,31 +52,30 @@ export const useQuestionListPage = () => {
         setQuestions(questions_data)
     }
 
-    const handleAnswerSearchClick = async () => {
-        if (searchAnswerWord.trim() === "") return;
-        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = 
-        await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord(searchAnswerWord)
+    // const handleAnswerSearchClick = async () => {
+    //     if (searchAnswerWord.trim() === "") return;
+    //     const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = 
+    //     await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord(searchAnswerWord)
 
-        for (let i = 0; i < questions_data.length; i++) {
-            const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
-            const category = await fetchCategory(category_id)
-            const subcategory_id = (await fetchSubcategoriesQuestionsByQuestionId(questions_data[i].id))[0].subcategory_id
-            questions_data[i].category_name = category.name
-            questions_data[i].categoryId = category_id
-            questions_data[i].subcategoryId = subcategory_id
-        }
-        setQuestions(questions_data)
+    //     for (let i = 0; i < questions_data.length; i++) {
+    //         const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
+    //         const category = await fetchCategory(category_id)
+    //         const subcategory_id = (await fetchSubcategoriesQuestionsByQuestionId(questions_data[i].id))[0].subcategory_id
+    //         questions_data[i].category_name = category.name
+    //         questions_data[i].categoryId = category_id
+    //         questions_data[i].subcategoryId = subcategory_id
+    //     }
+    //     setQuestions(questions_data)
 
-        const params = new URLSearchParams({ answer: searchAnswerWord });
-        navigate(`/question_list?${params.toString()}`);
-    }
+    //     const params = new URLSearchParams({ answer: searchAnswerWord });
+    //     navigate(`/question_list?${params.toString()}`);
+    // }
     
     return {
         questions,
-        searchAnswerWord,
-        setSearchProblemWord,
-        setSearchAnswerWord,
+        setQuestions,
+        searchWord,
+        setSearchWord,
         handleProblemSearchClick,
-        handleAnswerSearchClick
     }
 }

@@ -1,19 +1,26 @@
-import { Question, QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../types/Question';
-import { SolutionStatus } from '../types/SolutionStatus';
+import { 
+    Question, 
+    QuestionWithCategoryIdAndCategoryNameAndSubcategoryId 
+} from '../types/Question'
+import { SolutionStatus } from '../types/SolutionStatus'
 
-export const fetchQuestion = async (question_id: number): Promise<Question> => {
-    const url = `http://localhost:8000/questions/${question_id}`;
+export const fetchQuestion = async (
+    question_id: number
+): Promise<Question> => {
+    const url = `http://localhost:8000/questions/${question_id}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 // 特定のサブカテゴリに紐づくQuestionを取得するAPI
-export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {
+export const fetchQuestionsBySubcategoryId = async (
+    subcategory_id: number
+) => {
     const url = `http://localhost:8000/questions/subcategory_id/${subcategory_id}`
     const response = await fetch(url, {
         method: 'GET',
@@ -21,36 +28,36 @@ export const fetchQuestionsBySubcategoryId = async (subcategory_id: number) => {
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 };
 
-// 問題文を部分検索することでカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
+// 問題文または解答を部分検索することでカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
 export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord = async (
-    searchProblemWord: string
+    searchWord: string
 ): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
-    const url = `http://localhost:8000/questions/?searchProblemWord=${searchProblemWord}`;
+    const url = `http://localhost:8000/questions/?searchWord=${searchWord}`;
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 // 解答を部分検索することでカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
-export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord = async (
-    searchAnswerWord: string
-): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
-    const url = `http://localhost:8000/questions/?searchAnswerWord=${searchAnswerWord}`;
-    const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    })
-    return await response.json();
-}
+// export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord = async (
+//     searchAnswerWord: string
+// ): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
+//     const url = `http://localhost:8000/questions/?searchAnswerWord=${searchAnswerWord}`;
+//     const response = await fetch(url, {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         }
+//     })
+//     return await response.json();
+// }
 
 // Questionのis_correctを更新するAPI
 export const updateQuestionIsCorrect = async (question: Question): Promise<void> => {
@@ -80,6 +87,7 @@ export const deleteQuestion = async (question_id: number): Promise<void> => {
     });
 }
 
+// Calendar.tsxで使用する
 // 日付ごとの問題数を取得するAPI
 export const fetchQuestionCountsByLastAnsweredDate = async (
     days_array: string[]
@@ -118,6 +126,7 @@ export const incrementAnswerCount = async (
     });
 }
 
+// Problem_pageにて問題を解いた際に使用する。
 // Questionのlast_answered_dateを更新するAPI
 export const updateLastAnsweredDate = async (
     question_id: number
