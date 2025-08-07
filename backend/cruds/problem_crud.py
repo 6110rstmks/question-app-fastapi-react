@@ -157,11 +157,6 @@ def _fetch_questions(
     if blacklist:
         filters.append(Question.id.notin_(blacklist))
         
-    print(filters)
-    print("doiu2987")
-    print(threshold)
-    print(blacklist)
-
     stmt = (
         select(Question)
         .where(*filters)

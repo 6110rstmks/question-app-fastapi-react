@@ -95,7 +95,9 @@ export const fetchPageCount = async (): Promise<number> => {
     return response.json();
 };
 
-export const fetchCategory = async (category_id: number): Promise<Category> => {
+export const fetchCategory = async (
+    category_id: number
+): Promise<Category> => {
     const url = `http://localhost:8000/categories/category_id/${category_id}`
     const response = await fetch(url, {
         method: 'GET',
@@ -107,9 +109,11 @@ export const fetchCategory = async (category_id: number): Promise<Category> => {
     return await response.json();
 }
 
-export const createCategory = async (categoryName: string): Promise<Response> => {
+export const createCategory = async (
+    categoryName: string
+): Promise<Response> => {
     const url = 'http://localhost:8000/categories'
-    const response = await fetch('http://localhost:8000/categories', {
+    const response = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -36,7 +36,6 @@ def create_user(
         password=hashed_password,
         salt=salt.decode()
     )
-    print(hashed_password)
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
@@ -61,7 +60,6 @@ def authenticate_user(
     request: Request
 ):
 
-    print(f"Authenticating user: {username}")
     user = db.query(User).filter(User.username == username).first()
     if not user:
         return None

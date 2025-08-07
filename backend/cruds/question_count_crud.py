@@ -107,7 +107,6 @@ def get_question_corrected_count_in_category_older_than_one_month(
                     where(CategoryQuestion.category_id == category_id).
                     where(Question.last_answered_date < one_month_ago)
                 )
-    print("count", count)
     return int(count)
 
 def get_question_corrected_count(db: Session):
