@@ -6,26 +6,31 @@ from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 from datetime import date
-from config import SolutionStatus
 
 def find_all_questions(
     db: Session,
-    search_problem_word: str = None,
-    search_answer_word: str = None
+    search_word: str = None,
 ):
-    if search_problem_word:
-        return db.query(Question).filter(Question.problem.like(f"%{search_problem_word}%")).all()
+    result = []
+    
+    result = db.query(Question).all()
 
-    if search_answer_word:
-        
+    if search_word:
+        # 問題文で検索
+        result = db.query(Question).filter(Question.problem.ilike(f"%{search_word}%")).all()
+
+    if search_word and not result:
         query = select(Question).where(
-            func.array_to_string(Question.answer, ',').ilike(f"%{search_answer_word}%")
+            func.array_to_string(Question.answer, ',').ilike(f"%{search_word}%")
         )
-        return db.execute(query).scalars().all()
-    return db.query(Question).all()
+        result = db.execute(query).scalars().all()
+
+    return result
+
 
 def find_all_questions_in_category(db: Session, category_id: int):
     query = select(Question).where(CategoryQuestion.category_id == category_id)
+
     return db.execute(query).scalars().all()
 
 def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
