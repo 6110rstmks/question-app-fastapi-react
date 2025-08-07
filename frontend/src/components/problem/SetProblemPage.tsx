@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import useSetProblemPage from './hooks/useSetProblemPage'
 import styles from './SetProblemPage.module.css'
 import Calendar from '../Calendar'
-import { SolutionStatus } from '../../types/SolutionStatus';
+import { SolutionStatus } from '../../types/SolutionStatus'
 
 const SetProblemPage: React.FC = () => {
     const [isDisplayCalendar, setIsDisplayCalendar] = useState<boolean>(false)
@@ -10,6 +10,18 @@ const SetProblemPage: React.FC = () => {
     const toggleCalendar = () => {
         setIsDisplayCalendar(prev => !prev);
     }
+
+    const today = new Date();
+
+    // 翌日を取得
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+  
+    // 月/日形式でフォーマット（例: 8/5）
+    const formatMonthDay = (date: Date) =>
+      `${date.getMonth() + 1}/${date.getDate()}`;
+  
+
 
     const {
         categories,
@@ -46,7 +58,11 @@ const SetProblemPage: React.FC = () => {
                 </div>
             )}
 
-            <button onClick={handleTodayReview}>今日といた問題を復習</button>
+            <div>
+                <button onClick={handleTodayReview}>今日といた問題を復習</button>
+                <div>本日の日付: {formatMonthDay(today)}</div>
+                <div>翌日の日付: {formatMonthDay(tomorrow)}</div>
+            </div>
 
             <div className={styles.problemSelector}>
                 <h2>Select Problem</h2>

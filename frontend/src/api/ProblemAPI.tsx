@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-
+import { Question } from '../types/Question'
 
 /**
  * Fetches a list of problems based on type, solved status, count, and optional category filters.
@@ -36,7 +36,6 @@ export const fetchProblem = async (
     return response
 }
 
-
 /**
  * Fetches problems created on a specific day.
  *
@@ -47,7 +46,7 @@ export const fetchProblem = async (
 
 export const fetchProblemByDay = async (
     day: Date
-) => {
+):Promise<Question[]> => {
     const dateStr = format(day, 'yyyy-MM-dd');
 
     const url = `http://localhost:8000/problems/day/${dateStr}`

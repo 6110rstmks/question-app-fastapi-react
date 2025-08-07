@@ -67,15 +67,11 @@ const Calendar: React.FC = () => {
             {/* 日付 */}
                 <div className={styles.calendar_grid}>
                     {days.map(day => {
-                        // console.log("day", day)
-                        // const today = new Date();
-                        // console.log("today", today)
                         const dateStr = format(day, "yyyy-MM-dd");
                         console.log("dateStr", dateStr)
                         const questionCount = questionCounts[dateStr];
                         return (
                             <div
-                                // key={dateStr}
                                 key={day.toISOString()}
                                 className={`${styles.calendar_day} 
                                             ${format(day, "MM") !== format(currentDate, "MM") ? styles.other_month : ""}

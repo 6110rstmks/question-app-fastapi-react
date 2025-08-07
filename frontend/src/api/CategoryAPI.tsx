@@ -59,7 +59,9 @@ export const fetchCategoriesBySearchWord = async (
 
 // Questionに紐づくCategoryを取得するAPI
 // 問題出題画面にて使用する。
-export const fetchCategoryByQuestionId = async (question_id: number): Promise<Category> => {
+export const fetchCategoryByQuestionId = async (
+    question_id: number
+): Promise<Category> => {
     const url = `http://localhost:8000/categories/question_id/${question_id}`
     const response = await fetch(url, {
         method: 'GET',
@@ -106,7 +108,7 @@ export const fetchCategory = async (
         }
     })
 
-    return await response.json();
+    return await response.json()
 }
 
 export const createCategory = async (
