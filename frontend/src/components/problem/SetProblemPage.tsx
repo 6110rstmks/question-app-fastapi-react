@@ -20,8 +20,6 @@ const SetProblemPage: React.FC = () => {
     // 月/日形式でフォーマット（例: 8/5）
     const formatMonthDay = (date: Date) =>
       `${date.getMonth() + 1}/${date.getDate()}`;
-  
-
 
     const {
         categories,

@@ -56,7 +56,8 @@ const Calendar: React.FC = () => {
                 <input type="checkbox" name="" id="" />
                 temporaryのみを表示する
             </div>
-        {/* ヘッダー */}
+
+            {/* ヘッダー */}
             <div className={styles.calendar_header}>
                 <button onClick={prevMonth} className={styles.nav_button}>◀</button>
                 <h2 className={styles.calendar_title}>{format(currentDate, "yyyy年 MM月")}</h2>
@@ -70,29 +71,29 @@ const Calendar: React.FC = () => {
                 ))}
             </div>
 
-
             {/* 日付 */}
-                <div className={styles.calendar_grid}>
-                    {days.map(day => {
-                        const dateStr = format(day, "yyyy-MM-dd");
-                        console.log("dateStr", dateStr)
-                        const questionCount = questionCounts[dateStr];
-                        return (
-                            <div
-                                key={day.toISOString()}
-                                className={`${styles.calendar_day} 
-                                            ${format(day, "MM") !== format(currentDate, "MM") ? styles.other_month : ""}
-                                            ${format(day, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd") ? styles.today : ""}`}
-                                onClick={() => handleSetProblemByDay(day)}
-                            >
-                                <div>{format(day, "d")}</div>
-                                {questionCount > 0 && <div className={styles.question_count}>{questionCount}件</div>}
-                            </div>
-                        );
-                    })}
-                </div>
+            <div className={styles.calendar_grid}>
+                {days.map(day => {
+                    const dateStr = format(day, "yyyy-MM-dd");
+                    console.log("dateStr", dateStr)
+                    const questionCount = questionCounts[dateStr];
+                    return (
+                        <div
+                            key={day.toISOString()}
+                            className={`${styles.calendar_day} 
+                                        ${format(day, "MM") !== format(currentDate, "MM") ? styles.other_month : ""}
+                                        ${format(day, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd") ? styles.today : ""}`}
+                            onClick={() => handleSetProblemByDay(day)}
+                        >
+                            <div>{format(day, "d")}</div>
+                            {questionCount > 0 && <div className={styles.question_count}>{questionCount}件</div>}
+                        </div>
+                    );
+                })}
             </div>
+
+        </div>
     );
 };
 
-export default Calendar;
+export default Calendar

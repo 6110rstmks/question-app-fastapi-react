@@ -1,18 +1,18 @@
-import React from 'react';
-import styles from './Search.module.css';
+import React from 'react'
+import styles from './Search.module.css'
 
 interface SearchProps {
-    type: 'category' | 'subcategory' | 'question' | 'answer';
-    searchCategoryWord?: string;
-    searchSubcategoryWord?: string;
-    searchQuestionWord?: string;
-    searchAnswerWord?: string;
-    setSearchCategoryWord: (word: string) => void;
-    setSearchSubcategoryWord: (word: string) => void;
-    setSearchQuestionWord: (word: string) => void;
-    setSearchAnswerWord: (word: string) => void;
-    page: number;
-    setPage: (page: number) => void;
+    type: 'category' | 'subcategory' | 'question' | 'answer'
+    searchCategoryWord?: string
+    searchSubcategoryWord?: string
+    searchQuestionWord?: string
+    searchAnswerWord?: string
+    setSearchCategoryWord: (word: string) => void
+    setSearchSubcategoryWord: (word: string) => void
+    setSearchQuestionWord: (word: string) => void
+    setSearchAnswerWord: (word: string) => void
+    page: number
+    setPage: (page: number) => void
     autoFocus?: boolean
 }
 
@@ -31,36 +31,36 @@ const Search: React.FC<SearchProps> = ({
 }) => {
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (type === 'category') {
-            setSearchCategoryWord(e.target.value);
-            setSearchSubcategoryWord('');
-            setSearchQuestionWord('');
-            setSearchAnswerWord('');
+            setSearchCategoryWord(e.target.value)
+            setSearchSubcategoryWord('')
+            setSearchQuestionWord('')
+            setSearchAnswerWord('')
         } else if (type === 'subcategory') {
-            setSearchCategoryWord('');
-            setSearchSubcategoryWord(e.target.value);
-            setSearchQuestionWord('');
-            setSearchAnswerWord('');
+            setSearchCategoryWord('')
+            setSearchSubcategoryWord(e.target.value)
+            setSearchQuestionWord('')
+            setSearchAnswerWord('')
         } else if (type === 'question') {
-            setSearchCategoryWord('');
-            setSearchSubcategoryWord('');
-            setSearchQuestionWord(e.target.value);
-            setSearchAnswerWord('');
+            setSearchCategoryWord('')
+            setSearchSubcategoryWord('')
+            setSearchQuestionWord(e.target.value)
+            setSearchAnswerWord('')
         }
         else {
-            setSearchCategoryWord('');
-            setSearchSubcategoryWord('');
-            setSearchQuestionWord('');
-            setSearchAnswerWord(e.target.value);
+            setSearchCategoryWord('')
+            setSearchSubcategoryWord('')
+            setSearchQuestionWord('')
+            setSearchAnswerWord(e.target.value)
         }
-        setPage(1);
-    };
+        setPage(1)
+    }
 
     const handleEnter = () => {
     }
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
-            handleEnter();
+            handleEnter()
         }
     }
 
@@ -94,7 +94,7 @@ const Search: React.FC<SearchProps> = ({
             />
           </div>
         </div>
-    );
-};
+    )
+}
 
-export default Search;
+export default Search
