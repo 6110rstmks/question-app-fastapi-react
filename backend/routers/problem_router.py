@@ -1,12 +1,12 @@
 from fastapi import APIRouter, status, Request, FastAPI
 from fastapi import Depends
 from sqlalchemy.orm import Session
-from schemas.problem import ProblemFetch
-from schemas.question import QuestionResponse
-from database import get_db
+from backend.schemas.problem import ProblemFetch
+from backend.schemas.question import QuestionResponse
+from backend.database import get_db
 from typing import Annotated
 from fastapi.responses import JSONResponse
-from cruds import problem_crud
+from backend.cruds import problem_crud
 
 class TypeException(Exception):
     def __init__(self, type: str):

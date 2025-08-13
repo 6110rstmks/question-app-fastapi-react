@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func
-from schemas.subcategory import SubcategoryCreate, SubcategoryUpdate
-from models import Subcategory, SubcategoryQuestion, Question, Category
+from backend.schemas.subcategory import SubcategoryCreate, SubcategoryUpdate
+from backend.models import Subcategory, SubcategoryQuestion, Question, Category
 from . import question_crud as question_cruds
 from fastapi import HTTPException
 

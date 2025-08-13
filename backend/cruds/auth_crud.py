@@ -2,14 +2,14 @@ import hashlib
 import base64
 import os
 from sqlalchemy.orm import Session
-from schemas import auth
-from models import User
-from config import get_settings
+from backend.schemas import auth
+from backend.models import User
+from backend.config import get_settings
 from sqlalchemy import select
 from fastapi import Depends, HTTPException, status
 from fastapi.requests import Request
-from schemas.auth import UserResponse
-from database import get_db
+from backend.schemas.auth import UserResponse
+from backend.database import get_db
 from fastapi.responses import JSONResponse
 
 ALGORITHM = "HS256"

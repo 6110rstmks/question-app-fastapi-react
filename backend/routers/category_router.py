@@ -2,15 +2,15 @@ from typing import Annotated, Optional
 from fastapi import APIRouter, Path, Query, Depends, UploadFile, HTTPException
 from sqlalchemy.orm import Session
 from starlette import status
-from cruds import category_crud as category_cruds
-from schemas.category import CategoryResponse, CategoryCreate, CategoryResponseWithQuestionCount
-from database import get_db
+from backend.cruds import category_crud as category_cruds
+from backend.schemas.category import CategoryResponse, CategoryCreate, CategoryResponseWithQuestionCount
+from backend.database import get_db
 from fastapi import Query
-from config import PAGE_SIZE
+from backend.config import PAGE_SIZE
 from fastapi.responses import FileResponse
 import os
 from git import Repo
-from src import data_io_json, data_io_csv
+from backend.src import data_io_json, data_io_csv
 import zipfile
 
 

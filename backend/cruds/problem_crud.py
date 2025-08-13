@@ -1,11 +1,11 @@
 from sqlalchemy.orm import Session
-from schemas.problem import ProblemFetch
+from backend.schemas.problem import ProblemFetch
 from sqlalchemy import select, func
-from models import Question, CategoryQuestion, SubcategoryQuestion
+from backend.models import Question, CategoryQuestion, SubcategoryQuestion
 from fastapi import HTTPException
-from config import SolutionStatus
+from backend.config import SolutionStatus
 from datetime import datetime, timedelta
-from models import CategoryBlacklist
+from backend.models import CategoryBlacklist
 from typing import Optional, List
 
 def generate_problems(db: Session, problem_fetch: ProblemFetch)-> List[Question]:

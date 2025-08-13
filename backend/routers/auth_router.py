@@ -1,14 +1,12 @@
-from datetime import timedelta
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from starlette import status
-from cruds import auth_crud as auth_cruds
-from schemas.auth import UserCreate, UserResponse, Token, UserSignIn
-from database import get_db
+from backend.cruds import auth_crud as auth_cruds
+from backend.schemas.auth import UserCreate, UserResponse, Token, UserSignIn
+from backend.database import get_db
 from fastapi.requests import Request
-from cruds import auth_crud
 
 
 router = APIRouter(prefix="/auth", tags=["Auth"])

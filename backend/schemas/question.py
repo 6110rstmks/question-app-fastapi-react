@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field, ConfigDict
 from pydantic import BaseModel, Field
 from typing import List
 from datetime import datetime
-from config import SolutionStatus
+from backend.config import SolutionStatus
 
 class QuestionCreate(BaseModel):
     problem: str = Field(min_length=2, max_length=999, examples=["列志向データベースの強みを説明せよ"])

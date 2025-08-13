@@ -2,11 +2,11 @@ from typing import Annotated, Optional
 from fastapi import APIRouter, Path, Query, HTTPException, Depends
 from sqlalchemy.orm import Session
 from starlette import status
-from cruds import auth_crud as auth_cruds
-from schemas.subcategory import SubcategoryResponse, SubcategoryUpdate, SubcategoryCreate, SubcategoryResponseWithQuestionCount, SubcategoryWithCategoryNameResponse
-from schemas.auth import DecodedToken
-from database import get_db
-from cruds import category_crud, subcategory_crud
+from backend.cruds import auth_crud as auth_cruds
+from backend.schemas.subcategory import SubcategoryResponse, SubcategoryUpdate, SubcategoryCreate, SubcategoryResponseWithQuestionCount, SubcategoryWithCategoryNameResponse
+from backend.schemas.auth import DecodedToken
+from backend.database import get_db
+from backend.cruds import category_crud, subcategory_crud
 
 DbDependency = Annotated[Session, Depends(get_db)]
 

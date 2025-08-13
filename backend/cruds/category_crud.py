@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, func
-from schemas.category import CategoryCreate
-from models import Category, CategoryQuestion, Subcategory, Question
-from config import PAGE_SIZE
+from backend.schemas.category import CategoryCreate
+from backend.models import Category, CategoryQuestion, Subcategory, Question
+from backend.config import PAGE_SIZE
 from fastapi import HTTPException
 
 def find_all_categories(db: Session):

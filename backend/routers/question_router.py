@@ -2,10 +2,10 @@ from typing import Annotated
 from fastapi import APIRouter, Path, HTTPException, Depends, FastAPI
 from sqlalchemy.orm import Session
 from starlette import status
-from cruds import category_crud, question_crud
-from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate, QuestionBelongsToSubcategoryIdUpdate, QuestionGetCountByLastAnsweredDate
-from database import get_db
-from cruds import subcategory_crud as subcategory_cruds
+from backend.cruds import category_crud, question_crud
+from backend.schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate, QuestionBelongsToSubcategoryIdUpdate, QuestionGetCountByLastAnsweredDate
+from backend.database import get_db
+from backend.cruds import subcategory_crud as subcategory_cruds
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
