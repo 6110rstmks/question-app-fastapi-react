@@ -4,7 +4,7 @@ pip install -r requirements.txt
 ```
 
 [step1]
-uvicorn main:app --reload
+uvicorn backend.main:app --reload
 
 [step2]
 localhost:8000/docs

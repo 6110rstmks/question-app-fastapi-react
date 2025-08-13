@@ -1,13 +1,10 @@
 ## Pathのルールについて統一する。
 
-常に /self-madeapp-sakamoto のルートで実行する
+相対パスではなくて、絶対パスでインポートを行う。
 
-コマンド例：
+常に self-madeapp-sakamoto のルートで実行する
 
-bash
-コピーする
-編集する
-# アプリ起動
+# バックエンド起動
 uvicorn backend.main:app --reload
 
 # テスト実行
