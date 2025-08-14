@@ -6068,9 +6068,9 @@
                         {
                             "problem": "減数分裂において、第二分裂が終わった後の細胞あたりのDNA量を１とした時、間期の細胞分裂の最初の細胞あたりのDNA量は？",
                             "answer": [
-                                "1"
+                                "2"
                             ],
-                            "memo": "",
+                            "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png\n\n",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-18"
                         }
@@ -8908,11 +8908,11 @@
                         {
                             "problem": "データ転送と経路制御の機能を論理的に分離し，データ転送に特化したネットワーク 機器とソフトウェアによる経路制御の組合せで実現するネットワーク技術は",
                             "answer": [
-                                "SDN"
+                                "SDN　Software-Defined Networking"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-04"
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -9529,7 +9529,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "where column_name is not nullという条件においてcolumn_nameがnullの行はどうなりますか",
@@ -12755,7 +12755,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -13520,7 +13520,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=Iqqd5PPuS2E&list=PLtdcmqO4ps6WjlJp8b3ZATi2VL_-fniLL&index=34",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "円運動において動径ベクトルが1秒間に回転する角度をなんという",
@@ -16577,7 +16577,7 @@
                             ],
                             "memo": "https://img.freepik.com/premium-vector/guinea-map-africa-icons-showing-guinea-location-flags_404487-577.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "カラハリ砂漠の場所",
@@ -17623,7 +17623,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "ダイヤモンドの輸出の上位top3",
@@ -20100,7 +20100,7 @@
                                 "ＱスイッチYAGレーザー",
                                 "Q-スイッチアレキサンドライトレーザー"
                             ],
-                            "memo": "",
+                            "memo": "https://www.saginomiya-hifuka.com/img/img_laser4.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-28"
                         },
@@ -20171,7 +20171,7 @@
                             "problem": "選択的光熱分解理論において重要な3つの要素を答えて",
                             "answer": [
                                 "波長",
-                                "照射時間",
+                                "照射時間（パルス幅）",
                                 "照射エネルギー"
                             ],
                             "memo": "",
@@ -20182,6 +20182,15 @@
                             "problem": "ダイオードレーザの波長は",
                             "answer": [
                                 "808nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "Qスイッチレーザーの正式名称は",
+                            "answer": [
+                                "Quality-switched Laser"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -21081,7 +21090,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "Azure SQL Database で使用できるストレージ上のデータの暗号化をなんという？",
@@ -21906,7 +21915,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "ササン朝ペルシアで国教とされていた宗教は",
@@ -22312,7 +22321,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-04"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "春秋時代中期以降に農業生産力を高めた生産用具は何か。",
@@ -22716,7 +22725,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEICiHIFbs4CfZYT3IEcmkPDjmoqNF28jAlA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-09"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "オリエント世界を初めて統一し、中央集権的な支配体制を築いたが、その過酷な支配で知られる帝国は何でしょう？",
@@ -23100,11 +23109,11 @@
                         {
                             "problem": "サトラップはどこの国におかれたか",
                             "answer": [
-                                "アケメネス朝"
+                                "アケメネス朝ペルシア"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-08"
+                            "last_answered_date": "2025-08-15"
                         }
                     ]
                 },
@@ -23241,13 +23250,13 @@
                             "last_answered_date": "2025-07-05"
                         },
                         {
-                            "problem": "Actionsワークフローにおいてon:   workflow_call:の利用用途は",
+                            "problem": "GitHub Actionsワークフローにおいてon:   workflow_call:の利用用途は",
                             "answer": [
                                 "共通処理をモジュール化して再利用する際に使用する"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "GitHub Actions のself-hosted runner ",
@@ -23390,8 +23399,8 @@
                                 "Unlike the return keyword which stops further execution of the function, the yield keyword continues to the end of the function."
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
