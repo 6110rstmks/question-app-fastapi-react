@@ -9287,7 +9287,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-14"
+                            "last_answered_date": "2025-08-15"
                         }
                     ]
                 }
@@ -9422,6 +9422,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-12"
+                        },
+                        {
+                            "problem": "connection poolingとは",
+                            "answer": [
+                                "データベースとアプリケーションの接続（コネクション）を再利用する仕組みのこと。\n新しい接続を毎回作成・破棄するのではなく、接続をあらかじめプール（Pool）に確保しておき、使い回すことで効率を上げる。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-14"
                         }
                     ]
                 },
@@ -9520,7 +9529,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-14"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "where column_name is not nullという条件においてcolumn_nameがnullの行はどうなりますか",
@@ -22917,7 +22926,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-14"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "イオニア植民市の反乱のイオニアとは何を表す",
@@ -23462,11 +23471,11 @@
                         {
                             "problem": "pythonの\nassert 222 \nもしくは\nassert \"hello\"\nはAssertionErrorにならずに通過しますか？",
                             "answer": [
-                                "AssertionErrorにならない。"
+                                "AssertionErrorにならずに通過する。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-14"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "pytestのconftest.pyには何を定義しますか",
@@ -23599,6 +23608,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "PC1",
+            "subcategories": []
+        },
+        {
+            "name": "PC2",
+            "subcategories": []
+        },
+        {
+            "name": "PC1",
+            "subcategories": []
+        },
+        {
+            "name": "PC2",
+            "subcategories": []
         }
     ]
 }
