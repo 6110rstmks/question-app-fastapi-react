@@ -4,6 +4,7 @@ pip install -r requirements.txt
 ```
 
 [step1]
+self-madeapp-sakamotoにて
 uvicorn backend.main:app --reload
 
 [step2]
@@ -26,12 +27,19 @@ $ psql -U fastapiuser -d fleamarket
 
 psql -h localhost -p 5432 -U sorasakamoto -d fleamarket
 
+（テストコード用）
+psql -h localhost -p 5432 -U sorasakamoto -d for_test_code
+
 $ \c fleamarket
 
 テーブルに付与されている権限を確認。
 $ SELECT grantee, privilege_type 
 FROM information_schema.role_table_grants 
 WHERE table_name = 'users';
+
+$ GRANT  ON SCHEMA public TO sorasakamoto;
+
+$ GRANT USAGE, CREATE ON SCHEMA public TO sorasakamoto;
 
 $ GRANT INSERT, UPDATE, DELETE, SELECT ON users TO sorasakamoto;
 

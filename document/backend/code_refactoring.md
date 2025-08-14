@@ -29,12 +29,8 @@ Increment -> increment
 ex) name
 -> ByName
 
-- 取得したモデルにプラスなにかのデータキーが付属している
+- 取得したモデルにプラスなにかのカラムが付属している
 ex) QuestionWithCategoryId
-
-
-
-
 
 
 ## 変数名命名規則

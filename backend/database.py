@@ -4,6 +4,8 @@ from backend.config import get_settings
 
 SQLALCHEMY_DATABASE_URL = get_settings().sqlalchemy_database_url
 
+print(SQLALCHEMY_DATABASE_URL)
+print("やあ")
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

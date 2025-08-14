@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 
-def test_find_all(client_fixture: TestClient):
+def test_find_all_questions(client_fixture: TestClient):
     response = client_fixture.get("/questions")
     assert response.status_code == 200
     questions = response.json()
@@ -9,3 +9,33 @@ def test_find_all(client_fixture: TestClient):
     for question in questions:
         assert "id" in question
         assert "problem" in question
+        
+def test_find_question_by_id_正常系(client_fixture: TestClient):
+    response = client_fixture.get("/questions/1")
+    assert response.status_code == 200
+    question = response.json()
+    assert question["id"] == 1
+    assert "problem" in question
+    
+def test_find_question_by_id_異常系(client_fixture: TestClient):
+    response = client_fixture.get("/questions/9999") 
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Question not found"}
+    
+def test_create_question(client_fixture: TestClient):
+    new_question = {
+        "problem": "What is the capital of France?",
+        "answer": ["Paris"],
+        "memo": "Capital city of France",
+        "category_id": 2,
+        "subcategory_id": 95
+    }
+    response = client_fixture.post("/questions", json=new_question)
+    assert response.status_code == 201
+    question = response.json()
+    assert question["problem"] == new_question["problem"]
+    assert question["answer"] == new_question["answer"]
+    assert question["memo"] == new_question["memo"]
+    
+    client_fixture.delete(f"/questions/{question['id']}")
+

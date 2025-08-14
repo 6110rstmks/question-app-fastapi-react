@@ -1,12 +1,10 @@
 import os
 import sys
 
-import os
-
 # テスト用の最低限の環境変数をセット（app import より前！）
 os.environ.setdefault("SECRET_KEY", "test-secret")
 # 例: SQLite を使う（依存注入で後から別DBに差し替えるなら何でもOK）
-os.environ.setdefault("SQLALCHEMY_DATABASE_URL", "sqlite:///./test.db")
+os.environ.setdefault("SQLALCHEMY_DATABASE_URL", "postgresql://sorasakamoto:password@localhost:5432/fleamarket")
 
 app_dir = os.path.join(os.path.dirname(__file__), "..")
 sys.path.append(app_dir)
@@ -16,8 +14,8 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.pool import StaticPool
 from sqlalchemy.orm import Session, sessionmaker
-from backend.models import Base, Question
-# from backend.schemas import DecodedToken
+from backend.models import Base, Category
+from backend.schemas.auth import DecodedToken
 from backend.main import app
 from database import get_db
 from backend.cruds.auth_crud import get_current_user
@@ -25,7 +23,9 @@ from backend.cruds.auth_crud import get_current_user
 @pytest.fixture()
 def session_fixture():
     engine = create_engine(
-        url="sqlite://", connect_args={"check_same_thread": False}, poolclass=StaticPool
+        url="postgresql://sorasakamoto:password@localhost:5432/fleamarket",
+        # connect_args={"check_same_thread": False}, 
+        poolclass=StaticPool
     )
     Base.metadata.create_all(engine)
 
@@ -33,19 +33,19 @@ def session_fixture():
     db = SessionLocal()
 
     try:
-        item1 = Question(name="PC1", price=10000, description="test1", user_id="1")
-        item2 = Question(name="PC2", price=10000, description="test2", user_id="2")
-        db.add(item1)
-        db.add(item2)
-        db.commit()
+        # item1 = Category(name="PC1", user_id=1)
+        # item2 = Category(name="PC2", user_id=1)
+        # db.add(item1)
+        # db.add(item2)
+        # db.commit()
         yield db
     finally:
         db.close()
 
 
-# @pytest.fixture()
-# def user_fixture():
-#     return DecodedToken(username="user1", user_id=1)
+@pytest.fixture()
+def user_fixture():
+    return DecodedToken(username="user1", user_id=1)
 
 @pytest.fixture()
 def client_fixture(session_fixture: Session, user_fixture: DecodedToken):
@@ -61,4 +61,5 @@ def client_fixture(session_fixture: Session, user_fixture: DecodedToken):
     client = TestClient(app)
     yield client
 
+    print(app)
     app.dependency_overrides.clear()
