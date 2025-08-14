@@ -8127,12 +8127,12 @@
                         {
                             "problem": "ATPは筋肉中に貯蔵できる量が限られているため、貯蔵を超えて合成された分は（A）や（B）という形態で蓄えられる",
                             "answer": [
-                                "クレアチンリン酸",
+                                "クレアチンリン酸 Phosphocreatine",
                                 "グリコーゲン"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "僧帽筋どこにある？",
@@ -16605,7 +16605,7 @@
                             ],
                             "memo": "https://cdn.mainichi.jp/vol1/2017/06/16/20170616biz00m010018000p/8.jpg?2",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "アルゼンチンの場所は",
@@ -19763,13 +19763,13 @@
                             "last_answered_date": "2025-07-12"
                         },
                         {
-                            "problem": "南半球にある有名なリアス海岸は？",
+                            "problem": "南半球にある有名なリアス海岸である都市は？",
                             "answer": [
                                 "シドニー"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_LXf_ZdowHwhfbgmRxJedz5IwOylBspeOmQ&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "浅い海底が隆起または海面の低下した海岸を何と言う",
@@ -20945,7 +20945,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "Azure Storageの冗長オプションを4つ答えて",
@@ -21253,7 +21253,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-14"
                         }
                     ]
                 },
@@ -23608,6 +23608,54 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "PC1",
+            "subcategories": []
+        },
+        {
+            "name": "PC2",
+            "subcategories": []
+        },
+        {
+            "name": "PC1",
+            "subcategories": []
+        },
+        {
+            "name": "PC2",
+            "subcategories": []
+        },
+        {
+            "name": "PC1",
+            "subcategories": []
+        },
+        {
+            "name": "PC2",
+            "subcategories": []
+        },
+        {
+            "name": "PC1",
+            "subcategories": []
+        },
+        {
+            "name": "PC2",
+            "subcategories": []
+        },
+        {
+            "name": "PC1",
+            "subcategories": []
+        },
+        {
+            "name": "PC2",
+            "subcategories": []
+        },
+        {
+            "name": "PC1",
+            "subcategories": []
+        },
+        {
+            "name": "PC2",
+            "subcategories": []
         },
         {
             "name": "PC1",
