@@ -8052,7 +8052,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-26"
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "アトピー性皮膚炎の重症度を評価する指標の一つは",
@@ -9287,7 +9287,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-04"
+                            "last_answered_date": "2025-08-14"
                         }
                     ]
                 }
@@ -9309,10 +9309,6 @@
                             "last_answered_date": "2025-07-22"
                         }
                     ]
-                },
-                {
-                    "name": "3値論理",
-                    "questions": []
                 },
                 {
                     "name": "key",
@@ -9511,6 +9507,39 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-08"
+                        }
+                    ]
+                },
+                {
+                    "name": "Three-valued logic ",
+                    "questions": [
+                        {
+                            "problem": "3値論理においてtrue or unknownはどうなるか",
+                            "answer": [
+                                "true"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-14"
+                        },
+                        {
+                            "problem": "where column_name is not nullという条件においてcolumn_nameがnullの行はどうなりますか",
+                            "answer": [
+                                "column_nameがnullの行はselectから除外される。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-14"
+                        },
+                        {
+                            "problem": "3値論理において3つの真理値の間に次のような優先順位があると暗記する andの場合falseの場合\n強い方が弱い方を打ち消す",
+                            "answer": [
+                                "false ＞ unknown ＞ true",
+                                " true ＞ unknown ＞ false"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-14"
                         }
                     ]
                 }
@@ -12466,8 +12495,8 @@
                                 "公開鍵暗号"
                             ],
                             "memo": "https://www.youtube.com/watch?v=S5jJJAGC5vs",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "一般的にハッシュ関数によって得られた値をハッシュ値とよぶのだが、デジタル署名においてはは文書から得られたハッシュ値のことをなんという",
@@ -13776,6 +13805,16 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "テストコードを書くメリット2",
+                            "answer": [
+                                "コード修正により既存機能が壊れていないか即座に検証できる",
+                                "手動テストの手間削減"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-14"
                         }
                     ]
                 }
@@ -17539,8 +17578,8 @@
                                 "アルゼンチン"
                             ],
                             "memo": "だいじょうぶ、あめあるぜ",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "世界の米の生産量top3",
@@ -22878,7 +22917,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-09"
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "イオニア植民市の反乱のイオニアとは何を表す",
@@ -23279,6 +23318,33 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-13"
+                        },
+                        {
+                            "problem": "WSGIは並列処理が可能か",
+                            "answer": [
+                                "不可能"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-14"
+                        },
+                        {
+                            "problem": "os.pathとの代替機能ライブラリ",
+                            "answer": [
+                                "pathlib"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-14"
+                        },
+                        {
+                            "problem": "in python, yeild vs return keyword",
+                            "answer": [
+                                "Unlike the return keyword which stops further execution of the function, the yield keyword continues to the end of the function."
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-14"
                         }
                     ]
                 },
@@ -23292,7 +23358,7 @@
                             ],
                             "memo": "from typing import TypeVar\n\nT = TypeVar(\"T\")  # なんでも取れる\nS = TypeVar(\"S\", str, int)  # strかintを取れる\nIntT = TypeVar(\"IntT\", bound=int)  # intかintのサブクラスを取れる",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-04"
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "pythonのtyping libraryのGenericは何？",
