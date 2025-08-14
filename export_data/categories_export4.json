@@ -5681,7 +5681,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "1molの物質を単体から生成するときのΔHをなんという",
@@ -7939,7 +7939,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-28"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": " サイトカインの過剰な産生により引き起こされる現象は何ですか？",
@@ -8052,7 +8052,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-14"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "アトピー性皮膚炎の重症度を評価する指標の一つは",
@@ -8132,7 +8132,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-14"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "僧帽筋どこにある？",
@@ -9286,8 +9286,8 @@
                                 "二点間のユークリッド距離を求める。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 }
@@ -12727,8 +12727,8 @@
                                 "TFT液晶"
                             ],
                             "memo": "galax A21 SC42aにも使用されている。",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "LCD(liquid-crystal-display) do not emit light directory. How LCD emit light?",
@@ -12736,8 +12736,8 @@
                                 "using a backlight"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "自発光型で，発光ダイオードの一種に分類される表示装置はなにか",
@@ -12745,8 +12745,8 @@
                                 "有機ELディスプレイ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "液晶ディスプレイなどの表示装置において，傾いた直線の境界を滑らかに表示する手法を何という？",
@@ -12754,8 +12754,8 @@
                                 "Anti-aliasing"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         }
                     ]
                 },
@@ -16767,8 +16767,8 @@
                                 ""
                             ],
                             "memo": "https://hugkum.sho.jp/wp-content/uploads/2024/08/26101170-1024x889.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
                         }
                     ]
                 },
@@ -19021,13 +19021,13 @@
                             "last_answered_date": "2025-05-24"
                         },
                         {
-                            "problem": "シンシャンウイグル自治区では何を栽培している",
+                            "problem": "新疆ウイグル自治区では何を栽培している",
                             "answer": [
                                 "綿花"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-23"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-14"
                         }
                     ]
                 },
@@ -19765,11 +19765,11 @@
                         {
                             "problem": "南半球にある有名なリアス海岸である都市は？",
                             "answer": [
-                                "シドニー"
+                                "Sydney"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_LXf_ZdowHwhfbgmRxJedz5IwOylBspeOmQ&s",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-14"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "浅い海底が隆起または海面の低下した海岸を何と言う",
@@ -19867,15 +19867,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-16"
-                        },
-                        {
-                            "problem": "ニキビの正式名称",
-                            "answer": [
-                                "尋常性ざしょう"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
                         },
                         {
                             "problem": "シミの正式名称",
@@ -20107,7 +20098,7 @@
                             "answer": [
                                 "Ｑスイッチルビーレーザー",
                                 "ＱスイッチYAGレーザー",
-                                "アレキサンドライトレーザー"
+                                "Q-スイッチアレキサンドライトレーザー"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -20137,8 +20128,8 @@
                                 "ルビー"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-23"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "特定の色素（クロモフォア）に選択的に吸収される波長のレーザー光を適切な短パルスで照射することで、周囲組織への損傷を最小限に抑えつつ標的組織のみを熱破壊できる理論",
@@ -20175,6 +20166,26 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-23"
+                        },
+                        {
+                            "problem": "選択的光熱分解理論において重要な3つの要素を答えて",
+                            "answer": [
+                                "波長",
+                                "照射時間",
+                                "照射エネルギー"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "ダイオードレーザの波長は",
+                            "answer": [
+                                "808nm"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         }
                     ]
                 },
@@ -20198,6 +20209,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-24"
+                        },
+                        {
+                            "problem": "ニキビの正式名称",
+                            "answer": [
+                                "尋常性ざしょう"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-17"
                         },
                         {
                             "problem": "線維芽細胞は表皮、真皮、皮下組織のどこにある",
@@ -20361,6 +20381,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-07"
+                        },
+                        {
+                            "problem": "太田母斑とはどのようなものか",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://www.google.com/search?sca_esv=bbe24cb31649d4ed&rlz=1C5GCCM_en&sxsrf=AE3TifNr7N8rLm2R27Tx1sK3toRplVHdcA:1755189997470&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeiAkWG4OlBE2zyCTMjPbGmMU8EWskMk2JSE__efdUJ3x-dd8PyEzi5Y9BtPQcYyUv-qqGBKcZRAt6t3qPZ3-iSZ6GtBRrUomyC2rUgS4TDygQfIaiWCtBi0gw2eDDygE9ZsO235rUXAUX4XMOSF0AZ0oNb07blcuzshZNivp14ZK7ZppxA&q=%E5%A4%AA%E7%94%B0%E6%AF%8D%E6%96%91&sa=X&ved=2ahUKEwit47-i4IqPAxXIslYBHb5nFrwQtKgLegQIFRAB&biw=1512&bih=823&dpr=2",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         }
                     ]
                 },
@@ -21877,7 +21906,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "ササン朝ペルシアで国教とされていた宗教は",
@@ -22264,8 +22293,8 @@
                                 "殷いん"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-20"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "洛陽を都とした王朝である後漢の初代皇帝は誰か",
@@ -22429,8 +22458,8 @@
                                 "神権政治"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-25"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-14"
                         },
                         {
                             "problem": "中国における伝説上の最初の王朝をなんというか",
@@ -22492,8 +22521,8 @@
                                 "司馬炎"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-07"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "晋の国が衰退するきっかけとなった反乱をなんというか",
@@ -22925,8 +22954,8 @@
                                 "BC333年"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "イオニア植民市の反乱のイオニアとは何を表す",
@@ -22963,6 +22992,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-08"
+                        },
+                        {
+                            "problem": "エトルリア人は現在のどの国の地域に住んでいた民族でしょうか？",
+                            "answer": [
+                                "イタリア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         }
                     ]
                 },
@@ -23298,8 +23336,8 @@
                                 "uv"
                             ],
                             "memo": "uvはrust製",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "pythonにおいて__init__.py の役割とは",
@@ -23307,8 +23345,8 @@
                                 ""
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "pythonの絶対インポートとsys.pathの関係性",
@@ -23320,13 +23358,13 @@
                             "last_answered_date": "2025-08-13"
                         },
                         {
-                            "problem": "PYTHONPATH 環境変数で指定したディレクトリはどのライブラリの何に追加されるか",
+                            "problem": "pythonにおいてPYTHONPATH 環境変数で指定したディレクトリはどのライブラリの何に追加されるか",
                             "answer": [
                                 "sys.path"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-13"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "WSGIは並列処理が可能か",
@@ -23353,7 +23391,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-14"
+                            "last_answered_date": "2025-08-15"
                         }
                     ]
                 },
@@ -23460,13 +23498,13 @@
                             "last_answered_date": "2025-07-31"
                         },
                         {
-                            "problem": "MagicMockにおいてspecとspec_setを指定することでどうなるか",
+                            "problem": "pytestのMagicMockにおいてspecとspec_setを指定することでどうなるか",
                             "answer": [
                                 "存在しないメソッドを呼ぶと AttributeError になる。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-13"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "pythonの\nassert 222 \nもしくは\nassert \"hello\"\nはAssertionErrorにならずに通過しますか？",
@@ -23474,8 +23512,8 @@
                                 "AssertionErrorにならずに通過する。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "pytestのconftest.pyには何を定義しますか",
@@ -23495,6 +23533,16 @@
                             "memo": "@pytest.fixture\ndef sample_user():\n    return {\"name\": \"Alice\", \"age\": 30}\n\n# test_example.py\ndef test_user_age(sample_user):\n    assert sample_user[\"age\"] == 30",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-13"
+                        },
+                        {
+                            "problem": "fastapi.testclientライブラリのTestClientとhttpx.AsyncClientではどちらが同期でどちらが非同期か",
+                            "answer": [
+                                "fastapi.testclientライブラリのTestClient→同期",
+                                "httpx.AsyncClient→非同期"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-14"
                         }
                     ]
                 },
@@ -23608,70 +23656,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "name": "PC1",
-            "subcategories": []
-        },
-        {
-            "name": "PC2",
-            "subcategories": []
-        },
-        {
-            "name": "PC1",
-            "subcategories": []
-        },
-        {
-            "name": "PC2",
-            "subcategories": []
-        },
-        {
-            "name": "PC1",
-            "subcategories": []
-        },
-        {
-            "name": "PC2",
-            "subcategories": []
-        },
-        {
-            "name": "PC1",
-            "subcategories": []
-        },
-        {
-            "name": "PC2",
-            "subcategories": []
-        },
-        {
-            "name": "PC1",
-            "subcategories": []
-        },
-        {
-            "name": "PC2",
-            "subcategories": []
-        },
-        {
-            "name": "PC1",
-            "subcategories": []
-        },
-        {
-            "name": "PC2",
-            "subcategories": []
-        },
-        {
-            "name": "PC1",
-            "subcategories": []
-        },
-        {
-            "name": "PC2",
-            "subcategories": []
-        },
-        {
-            "name": "PC1",
-            "subcategories": []
-        },
-        {
-            "name": "PC2",
-            "subcategories": []
         }
     ]
 }
