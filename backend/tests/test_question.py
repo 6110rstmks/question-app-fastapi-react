@@ -38,4 +38,29 @@ def test_create_question(client_fixture: TestClient):
     assert question["memo"] == new_question["memo"]
     
     client_fixture.delete(f"/questions/{question['id']}")
+    
+def test_update_question(client_fixture: TestClient):
+    # update_data = {
+    #     "problem": "Updated problem",
+    #     "answer": ["Updated answer"],
+    #     "memo": "Updated memo"
+    # }
+    # response = client_fixture.put("/questions/1", json=update_data)
+    # assert response.status_code == 200
+    # question = response.json()
+    # assert question["problem"] == update_data["problem"]
+    # assert question["answer"] == update_data["answer"]
+    # assert question["memo"] == update_data["memo"]
+    pass
 
+def test_delete_question(client_fixture: TestClient):
+    # response = client_fixture.delete("/questions/1")
+    # assert response.status_code == 200
+    # deleted_question = response.json()
+    # assert deleted_question["id"] == 1
+    
+    # # Check if the question is actually deleted
+    # response = client_fixture.get("/questions/1")
+    # assert response.status_code == 404
+    # assert response.json() == {"detail": "Question not found"}
+    pass
