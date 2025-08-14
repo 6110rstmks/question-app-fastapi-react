@@ -14,8 +14,10 @@ const SetProblemPage: React.FC = () => {
     const today = new Date();
 
     // 翌日を取得
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
+
+    const tomorrow = new Date(new Date().setDate(new Date().getDate() + 1));
+
+
   
     // 月/日形式でフォーマット（例: 8/5）
     const formatMonthDay = (date: Date) =>
@@ -58,8 +60,8 @@ const SetProblemPage: React.FC = () => {
 
             <div>
                 <button onClick={handleTodayReview}>今日といた問題を復習</button>
-                <div>本日の日付: {formatMonthDay(today)}</div>
-                <div>翌日の日付: {formatMonthDay(tomorrow)}</div>
+                <div>本日の日付: {formatMonthDay(new Date())}（）</div>
+                <div>翌日の日付: {formatMonthDay(new Date(new Date().setDate(new Date().getDate() + 1)))}</div>
             </div>
 
             <div className={styles.problemSelector}>

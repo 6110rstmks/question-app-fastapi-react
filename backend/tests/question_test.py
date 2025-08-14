@@ -21,7 +21,7 @@ from backend.models import Question
 def mock_db():
     return MagicMock()
 
-def test_find_all_questions_all(mock_db):
+def test_find_all_questions(mock_db):
     # 準備
     expected_questions = [Question(problem="Q1"), Question(problem="Q2")]
     print("Expected Questions:", expected_questions)
