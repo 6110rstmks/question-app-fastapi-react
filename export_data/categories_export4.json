@@ -5921,7 +5921,8 @@
                         {
                             "problem": "カエルの前後軸の決定とショウジョウバエの前後軸の決定はそれぞれいつか。",
                             "answer": [
-                                "カエルの前後軸の決定→ 受精時\nショウジョウバエの前後軸の決定→受精前"
+                                "カエルの前後軸の決定→ 受精直後\n",
+                                "ショウジョウバエの前後軸の決定→受精前"
                             ],
                             "memo": "",
                             "is_correct": 2,
@@ -6026,8 +6027,8 @@
                                 "原口背唇"
                             ],
                             "memo": "https://en.wikipedia.org/wiki/Spemann%E2%80%93Mangold_organizer\n",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "卵割を英語で",
@@ -6062,8 +6063,8 @@
                                 "受容体に結合"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "減数分裂において、第二分裂が終わった後の細胞あたりのDNA量を１とした時、間期の細胞分裂の最初の細胞あたりのDNA量は？",
@@ -6073,6 +6074,33 @@
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/4_1_2_3/k_sci_bio_4_1_2_3_image02.png\n\n",
                             "is_correct": 0,
                             "last_answered_date": "2025-07-18"
+                        },
+                        {
+                            "problem": "神経板を英語でなんという",
+                            "answer": [
+                                "neural plate"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "ventralの意味",
+                            "answer": [
+                                "胚や動物の体の 腹側・お腹側の方向 を指す用語"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "dorsal lip of blastopore意味",
+                            "answer": [
+                                "日本語でいう原口背唇"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         }
                     ]
                 },
