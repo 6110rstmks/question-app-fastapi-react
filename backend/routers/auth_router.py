@@ -19,7 +19,10 @@ FormDependency = Annotated[OAuth2PasswordRequestForm, Depends()]
     response_model=UserResponse, 
     status_code=status.HTTP_201_CREATED
 )
-async def create_user(db: DbDependency, user_create: UserCreate):
+async def create_user(
+    db: DbDependency, 
+    user_create: UserCreate
+):
     if auth_cruds.check_user_already_exists(db, user_create):
         raise HTTPException(status_code=400, detail="User already exists")
     return auth_cruds.create_user(db, user_create)
@@ -30,7 +33,9 @@ async def create_user(db: DbDependency, user_create: UserCreate):
     response_model=UserResponse,
     status_code=status.HTTP_200_OK
 )
-async def read_users_me(current_user: UserResponse = Depends(auth_cruds.get_current_user)):
+async def read_users_me(
+    current_user: UserResponse = Depends(auth_cruds.get_current_user)
+):
     return current_user
 
 
@@ -43,8 +48,10 @@ async def login(
     db: DbDependency, 
     user_signin: UserSignIn
 ):
-    return auth_crud.authenticate_user(
-        db, user_signin.username, user_signin.password, request
+    return auth_cruds.authenticate_user(
+        db, user_signin.username, 
+        user_signin.password, 
+        request
     )
 
 @router.post(

@@ -32,7 +32,15 @@ async def find_all(
     questionWord: str = None,
     answerWord: str = None
 ):
-    return category_cruds.find_all(db, skip=skip, limit=limit, category_word=categoryWord, subcategory_word=subcategoryWord, question_word=questionWord, answer_word=answerWord)
+    return category_cruds.find_all(
+        db, 
+        skip=skip, 
+        limit=limit, 
+        category_word=categoryWord, 
+        subcategory_word=subcategoryWord, 
+        question_word=questionWord, 
+        answer_word=answerWord
+    )
 
 @router.get("/search", response_model=Optional[list[CategoryResponse]], status_code=status.HTTP_200_OK)
 async def find_category_by_name(
@@ -43,7 +51,10 @@ async def find_category_by_name(
 
 # question_idからQuestionに紐づくCategoryを取得するエンドポイント
 @router.get("/question_id/{question_id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
-async def find_category_by_question_id(db: DbDependency, question_id: int = Path(gt=0)):
+async def find_category_by_question_id(
+    db: DbDependency, 
+    question_id: int = Path(gt=0)
+):
     found_category = category_cruds.find_category_by_question_id(db, question_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
@@ -85,7 +96,10 @@ async def find_category_by_id(
     return category_cruds.find_category_by_id(db, id)
 
 @router.post("", response_model=CategoryResponse, status_code=status.HTTP_201_CREATED)
-async def create(db: DbDependency, category_create: CategoryCreate):
+async def create(
+    db: DbDependency, 
+    category_create: CategoryCreate
+):
     return category_cruds.create(db, category_create)
 
 @router.get("/export/json", response_class=FileResponse)
@@ -198,8 +212,8 @@ async def upload_json(
 
 def git_push_json_file():
     EXPORT_DIR = os.path.abspath("export_data")
-
-    REPO_DIR = os.path.abspath(os.path.join(os.path.abspath(""), ".."))
+    
+    REPO_DIR = os.path.abspath("")
     INDEX_ADD_FILE_PATH = os.path.join(EXPORT_DIR, "categories_export4.json")
     repo = Repo(REPO_DIR)
     repo.index.add([INDEX_ADD_FILE_PATH])

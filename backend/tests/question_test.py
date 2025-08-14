@@ -3,6 +3,7 @@ import pytest
 from unittest.mock import MagicMock
 from backend.cruds import question_crud
 from backend.models import Question
+
 # @pytest.mark.asyncio
 # def test_get_questions(client_fixture: AsyncClient):
 #     response = client_fixture.get("/questions")
@@ -23,6 +24,7 @@ def mock_db():
 def test_find_all_questions_all(mock_db):
     # 準備
     expected_questions = [Question(problem="Q1"), Question(problem="Q2")]
+    print("Expected Questions:", expected_questions)
     mock_db.query.return_value.all.return_value = expected_questions
 
     # 実行
