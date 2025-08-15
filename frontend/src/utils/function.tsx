@@ -17,7 +17,7 @@ export const handleKeyDownForShowAnswer = (
         event.preventDefault()
         setShowAnswer(prev => !prev)
     }
-};
+}
 
 export const handleUpdateIsCorrect = async (
     question: Question,
