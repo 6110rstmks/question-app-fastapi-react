@@ -8,20 +8,12 @@ const SetProblemPage: React.FC = () => {
     const [isDisplayCalendar, setIsDisplayCalendar] = useState<boolean>(false)
 
     const toggleCalendar = () => {
-        setIsDisplayCalendar(prev => !prev);
+        setIsDisplayCalendar(prev => !prev)
     }
 
-    const today = new Date();
-
-    // 翌日を取得
-
-    const tomorrow = new Date(new Date().setDate(new Date().getDate() + 1));
-
-
-  
     // 月/日形式でフォーマット（例: 8/5）
     const formatMonthDay = (date: Date) =>
-      `${date.getMonth() + 1}/${date.getDate()}`;
+      `${date.getMonth() + 1}/${date.getDate()}`
 
     const {
         categories,

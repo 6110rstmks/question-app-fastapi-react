@@ -14,10 +14,10 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.pool import StaticPool
 from sqlalchemy.orm import Session, sessionmaker
-from backend.models import Base, Category
+from backend.models import Base
 from backend.schemas.auth import DecodedToken
 from backend.main import app
-from database import get_db
+from backend.database import get_db
 from backend.cruds.auth_crud import get_current_user
 
 @pytest.fixture()

@@ -1,5 +1,10 @@
 from fastapi.testclient import TestClient
 
+from unittest.mock import MagicMock
+
+from backend.cruds import question_crud
+
+# エンドポイントの疎通確認と最低限のレスポンス構造検証にとどまっている
 def test_find_all_questions(client_fixture: TestClient):
     response = client_fixture.get("/questions")
     assert response.status_code == 200
