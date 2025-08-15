@@ -68,7 +68,8 @@ export const useQuestionEditModal = (
         })
 
         if (!response.ok) {
-            throw new Error('Failed to update the question.')
+            alert('問題の更新に失敗しました。')
+            return
         }
         
         const data = await fetchQuestion(question!.id)
