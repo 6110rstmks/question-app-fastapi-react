@@ -4487,8 +4487,8 @@
                                 "チオカルバミドthiocarbamide"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "元素記号のSeは？",
@@ -4589,7 +4589,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-05-28"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "イオン化傾向のどこまでが熱水と反応する？",
@@ -4701,13 +4701,13 @@
                             "last_answered_date": "2025-04-18"
                         },
                         {
-                            "problem": "オゾンの匂いは無臭か",
+                            "problem": "ozoneの匂いは無臭か",
                             "answer": [
                                 "No. 特異臭"
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "フェノール樹脂を合成する際、触媒として酸を用いた場合に生じる中間体を（A）、塩基を用いた際に生じる中間体を（B）という。",
@@ -4825,8 +4825,8 @@
                         {
                             "problem": "熱硬化性樹脂の例2",
                             "answer": [
-                                "フェノール樹脂",
-                                "尿素樹脂"
+                                "フェノール樹脂Phenol formaldehyde resin",
+                                "尿素樹脂Urea Formaldehyde Resin"
                             ],
                             "memo": "",
                             "is_correct": 2,
@@ -4851,7 +4851,7 @@
                             ],
                             "memo": "https://kimika.net/wp-content/uploads/2019/10/y1fenol4.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "アルデヒドの還元性を確認する方法を二つ答えて",
@@ -5054,11 +5054,11 @@
                         {
                             "problem": "HCLOはなんの化学式",
                             "answer": [
-                                "次亜塩素酸"
+                                "次亜塩素酸Hypochlorous acid"
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-23"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "鉄の精錬において鉄鉱石（酸化鉄）の還元に一酸化炭素を利用しているが、それは一酸化炭素のどのような性質を利用している。",
@@ -5473,13 +5473,13 @@
                             "last_answered_date": "2025-05-06"
                         },
                         {
-                            "problem": "オキソ酸の酸としての強さは含まれる酸素O原子の数が増えるほど強くなる？弱くなる？",
+                            "problem": "オキソ酸Oxyacidの酸としての強さは含まれる酸素O原子の数が増えるほど強くなる？弱くなる？",
                             "answer": [
                                 "強くなる"
                             ],
                             "memo": "https://kimika.net/wp-content/uploads/2017/08/m2harogen18.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -5645,65 +5645,6 @@
                     ]
                 },
                 {
-                    "name": "熱化学",
-                    "questions": [
-                        {
-                            "problem": "エンタルピーとは",
-                            "answer": [
-                                "物質が蓄えているエネルギー"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-30"
-                        },
-                        {
-                            "problem": "反応エンタルピーとは",
-                            "answer": [
-                                "反応前後のエンタルピー変化（低圧条件）"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "黒鉛の燃焼熱は394kjの発熱する。このときΔHはどのように表す",
-                            "answer": [
-                                "-394"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-12"
-                        },
-                        {
-                            "problem": "1molの物質が完全燃焼するときのΔHをなんという",
-                            "answer": [
-                                "燃焼エンタルピー"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-13"
-                        },
-                        {
-                            "problem": "1molの物質を単体から生成するときのΔHをなんという",
-                            "answer": [
-                                "生成エンタルピー"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-11"
-                        },
-                        {
-                            "problem": "反応エンタルピーは反応の経路によって変わらない。この法則をなんという",
-                            "answer": [
-                                "ヘスの法則"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-05-23"
-                        }
-                    ]
-                },
-                {
                     "name": "気体",
                     "questions": [
                         {
@@ -5786,8 +5727,8 @@
                                 ""
                             ],
                             "memo": "https://受験理系特化プログラム.xyz/wp-content/uploads/2016/07/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2016-07-26-22.40.10.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "中和滴定で共洗いする理由と共洗いしてはいけない理由は？",
@@ -5833,11 +5774,11 @@
                         {
                             "problem": "アンモニアの工業的製法は",
                             "answer": [
-                                "ハーバボッシュ法"
+                                "Haber–Bosch processハーバボッシュ法"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-22"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "オストワルト法で使用する触媒は？",
@@ -5888,6 +5829,73 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-19"
+                        }
+                    ]
+                },
+                {
+                    "name": "organic chemistry alchol",
+                    "questions": []
+                },
+                {
+                    "name": "高分子 樹脂",
+                    "questions": []
+                },
+                {
+                    "name": "理論化学 熱化学",
+                    "questions": [
+                        {
+                            "problem": "エンタルピーとは",
+                            "answer": [
+                                "物質が蓄えているエネルギー"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-30"
+                        },
+                        {
+                            "problem": "反応エンタルピーとは",
+                            "answer": [
+                                "反応前後のエンタルピー変化（低圧条件）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-17"
+                        },
+                        {
+                            "problem": "黒鉛の燃焼熱は394kjの発熱する。このときΔHはどのように表す",
+                            "answer": [
+                                "-394"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "1molの物質が完全燃焼するときのΔHをなんという",
+                            "answer": [
+                                "燃焼エンタルピー"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-13"
+                        },
+                        {
+                            "problem": "1molの物質を単体から生成するときのΔHをなんという",
+                            "answer": [
+                                "生成エンタルピー"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-11"
+                        },
+                        {
+                            "problem": "反応エンタルピーは反応の経路によって変わらない。この法則をなんという",
+                            "answer": [
+                                "ヘスの法則"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-23"
                         }
                     ]
                 }
@@ -19936,8 +19944,8 @@
                                 "595nm"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-04"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "IPLとレーザーではパルス幅はどちらが長いか",
@@ -20004,7 +20012,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "ヤグレーザーの波長は？",
@@ -20013,7 +20021,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "レーザー脱毛の中で最も波長の長いものは？",
@@ -20031,7 +20039,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-18"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "レーザー治療では波長が長いほど、もしくは短いのどちらがやけどのリスクがあるか",
@@ -20105,8 +20113,8 @@
                                 "IPL"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "タトゥーの除去に有効なレーザーは",
@@ -20124,7 +20132,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-24"
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "フォトフェイシャルは誰向けに開発された？",
@@ -20132,8 +20140,8 @@
                                 "白人"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "皮膚の赤みに効果のあるIPLはなんですか？（レーザーではなくてIPL）",
@@ -20173,13 +20181,77 @@
                             "last_answered_date": "2025-08-16"
                         },
                         {
+                            "problem": "レーザーは単一波長の光の集まりでプリズムを通すとどうなるか",
+                            "answer": [
+                                "1本の光線のまま曲がるだけで、分光されない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "ノーリスによって皮脂腺が萎縮するかそれとも拡大するか",
+                            "answer": [
+                                "萎縮する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "ノーリスには冷却機能が存在するか",
+                            "answer": [
+                                "存在しない"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "YAGの正式名称",
+                            "answer": [
+                                "Yttrium aluminium garnet"
+                            ],
+                            "memo": "これも決勝",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "ノーリスには冷却機能が存在しないがそれによりどのようなメリットがあるか",
+                            "answer": [
+                                "施術時の血管収縮が起こらない)ため「赤みに効果が高い"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "ノーリスは二つのモードを設定できる",
+                            "answer": [
+                                "デフォルト照射設定",
+                                "エキスパートモード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "シミを治療しようとする時、シミを作っている過剰なメラニン顆粒を壊して、取り除くことが必要。そのためにメラニン顆粒がよく吸収する、もしくは吸収しない波長のどちらのレーザーを選ぶ必要があるか",
+                            "answer": [
+                                "吸収する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
                             "problem": "Qスイッチルビーレーザーの波長は",
                             "answer": [
                                 "694nm"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "Qスイッチルビーレーザーとは、発振媒質に何を用いている？",
@@ -20205,8 +20277,8 @@
                                 "炎症後色素沈着（PIH）が出る可能性"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "アビクリアの波長は",
@@ -20393,6 +20465,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-22"
+                        },
+                        {
+                            "problem": "肌の毛穴内に存在するアクネ菌の代謝産物は何？",
+                            "answer": [
+                                "ポルフィリン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-15"
                         },
                         {
                             "problem": "コレクチム軟膏は手発疹に対して有効か",
