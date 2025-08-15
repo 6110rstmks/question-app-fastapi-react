@@ -33,9 +33,9 @@ const QuestionPage: React.FC = () => {
     ] = useState<boolean>(false);
 
     // location.stateがnullの場合にlocalStorageから取得
-    const storedCategoryInfo = localStorage.getItem('categorySubcategoryInfo');
-    const parsedCategoryInfo = storedCategoryInfo ? JSON.parse(storedCategoryInfo) : {};
-    const state: QuestionPageNavigationParams = location.state || parsedCategoryInfo;
+    const storedCategoryInfo = localStorage.getItem('categorySubcategoryInfo')
+    const parsedCategoryInfo = storedCategoryInfo ? JSON.parse(storedCategoryInfo) : {}
+    const state: QuestionPageNavigationParams = location.state || parsedCategoryInfo
     
 
     const { 

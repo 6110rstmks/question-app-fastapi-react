@@ -59,10 +59,20 @@ export const ProblemNormalPage: React.FC<Props> = ({
     //     setEditModalIsOpen
     // ] = useState<boolean>(false)
 
-    const handleUpdateIsCorrect = async () => {
-        await updateQuestionIsCorrect(localProblem!)
-        const updatedProblem = await fetchQuestion(localProblem.id)
-        setLocalProblem(updatedProblem)
+    // const handleUpdateIsCorrect = async () => {
+    //     await updateQuestionIsCorrect(localProblem!)
+    //     const updatedProblem = await fetchQuestion(localProblem.id)
+    //     setLocalProblem(updatedProblem)
+    // }
+
+    // 引数ありにして他のコンポーネントからも使えるようにする
+    const handleUpdateIsCorrect = async (
+        problem: Question,
+        setLocalProblem?: (q: Question) => void
+    ) => {
+        await updateQuestionIsCorrect(problem)
+        const updatedProblem = await fetchQuestion(problem.id)
+        setLocalProblem?.(updatedProblem) // setLocalProblem がある場合だけ呼ぶ
     }
 
     useEffect(() => {
@@ -123,7 +133,8 @@ export const ProblemNormalPage: React.FC<Props> = ({
                                 localProblem?.is_correct === SolutionStatus.Temporary ? styles.temporary : 
                                 styles.incorrect
                             }`}
-                            onClick={handleUpdateIsCorrect}
+                            onClick={() => handleUpdateIsCorrect(localProblem, setLocalProblem)}
+
                         >
                             {localProblem?.is_correct === SolutionStatus.Incorrect ? 'incorrect' :
                             localProblem?.is_correct === SolutionStatus.Temporary ? 'temp correct' :
