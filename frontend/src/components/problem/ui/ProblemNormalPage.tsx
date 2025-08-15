@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 import { Link } from 'react-router';
 import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
 import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI"
-import { 
-    updateQuestionIsCorrect,
-    fetchQuestion 
-} from "../../../api/QuestionAPI"
 import styles from './ProblemNormal.module.css'
 import { BlockMath } from "react-katex"
 import Modal from 'react-modal'
@@ -15,6 +11,7 @@ import ChangeCategorySubcategory from "../../ChangeCategorySubcategoryModal"
 import RenderMemoWithLinks from '../../RenderMemoWithlinks'
 import { SolutionStatus } from "../../../types/SolutionStatus"
 import { isLatex } from "../../../utils/function"
+import { handleUpdateIsCorrect } from "../../../utils/function"
 interface Props {
     reviewFlg: boolean
     problem: Question
@@ -58,22 +55,6 @@ export const ProblemNormalPage: React.FC<Props> = ({
     //     editModalIsOpen,
     //     setEditModalIsOpen
     // ] = useState<boolean>(false)
-
-    // const handleUpdateIsCorrect = async () => {
-    //     await updateQuestionIsCorrect(localProblem!)
-    //     const updatedProblem = await fetchQuestion(localProblem.id)
-    //     setLocalProblem(updatedProblem)
-    // }
-
-    // 引数ありにして他のコンポーネントからも使えるようにする
-    const handleUpdateIsCorrect = async (
-        problem: Question,
-        setLocalProblem?: (q: Question) => void
-    ) => {
-        await updateQuestionIsCorrect(problem)
-        const updatedProblem = await fetchQuestion(problem.id)
-        setLocalProblem?.(updatedProblem) // setLocalProblem がある場合だけ呼ぶ
-    }
 
     useEffect(() => {
         setLocalProblem(problem)

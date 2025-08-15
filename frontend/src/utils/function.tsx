@@ -21,7 +21,7 @@ export const handleKeyDownForShowAnswer = (
 
 export const handleUpdateIsCorrect = async (
     question: Question,
-    setQuestion: React.Dispatch<React.SetStateAction<Question | null>>
+    setQuestion: React.Dispatch<React.SetStateAction<Question>>
 ) => {
     await updateQuestionIsCorrect(question!)
     const data = await fetchQuestion(question!.id)
