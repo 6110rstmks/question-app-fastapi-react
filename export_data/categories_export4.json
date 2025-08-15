@@ -5323,8 +5323,8 @@
                                 "どうもぎんこにあえんCu Ag Co Ni Zn"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "molten salt electrolysisを使って生成されるmetalの特徴は？",
@@ -5645,48 +5645,6 @@
                     ]
                 },
                 {
-                    "name": "気体",
-                    "questions": [
-                        {
-                            "problem": "混合気体の中で、 個々の気体の圧力P(A)、P(B)のとき、全圧は？",
-                            "answer": [
-                                "P=P(A)+P(B)"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-12"
-                        },
-                        {
-                            "problem": "ヘンリーの法則が成り立たないgasを二つ答えて",
-                            "answer": [
-                                "NH3",
-                                "HCl"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
-                        },
-                        {
-                            "problem": "混合気体の中で、 個々の気体の圧力PA、PBのことをなんという",
-                            "answer": [
-                                "分圧"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-05-24"
-                        },
-                        {
-                            "problem": "Standard Temperature and Pressureを略してなんと書く",
-                            "answer": [
-                                "STP"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-19"
-                        }
-                    ]
-                },
-                {
                     "name": "inorganic chemistry ハロゲン",
                     "questions": [
                         {
@@ -5896,6 +5854,48 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-05-23"
+                        }
+                    ]
+                },
+                {
+                    "name": "理論化学 気体",
+                    "questions": [
+                        {
+                            "problem": "混合気体の中で、 個々の気体の圧力P(A)、P(B)のとき、全圧は？",
+                            "answer": [
+                                "P=P(A)+P(B)"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-12"
+                        },
+                        {
+                            "problem": "ヘンリーの法則が成り立たないgasを二つ答えて",
+                            "answer": [
+                                "NH3",
+                                "HCl"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "混合気体の中で、 個々の気体の圧力PA、PBのことをなんという",
+                            "answer": [
+                                "分圧"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-24"
+                        },
+                        {
+                            "problem": "Standard Temperature and Pressureを略してなんと書く",
+                            "answer": [
+                                "STP"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-05-19"
                         }
                     ]
                 }
@@ -13422,8 +13422,8 @@
                                 "周期 T (秒) \n振動数が高いほど周期は短くなり、振動数が低いほど周期は長くなります。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-08"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "振動数fの定義は？また周期の定義は",
@@ -13879,7 +13879,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-03"
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 }
@@ -15268,9 +15268,10 @@
                             "last_answered_date": "2025-05-14"
                         },
                         {
-                            "problem": "日本の太平洋側は夏に高温多雨になる、それはなぜか",
+                            "problem": "日本の太平洋側は夏に高温多雨になる、それはなぜか要因2つ",
                             "answer": [
-                                "夏にふく季節風と暖流の日本海流の影響"
+                                "夏にふく季節風の影響",
+                                "暖流の日本海流の影響"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -22886,7 +22887,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "エトルリア人はどこの地方に定住していたか",
@@ -23156,7 +23157,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -23274,7 +23275,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "十分の一税はローマ＝カトリック教会が何から徴収した税であるか",
