@@ -13,8 +13,8 @@ export const useProblemPage = (
         setCurrentProblemIndex
     ] = useState<number>(0)
 
-    const [reviewFlg, setReviewFlg] = useState(false)
-    const [showAnswer, setShowAnswer] = useState(false)
+    const [reviewFlg, setReviewFlg] = useState<boolean>(false)
+    const [showAnswer, setShowAnswer] = useState<boolean>(false)
 
     const [
         editModalIsOpen,
@@ -72,7 +72,7 @@ export const useProblemPage = (
         updateLastAnsweredDate(problemData[currentProblemIndex].id)
     };
 
-    // 再度出題した用の関数
+    // 再出題用の関数
     const handleAnswerUnsolvedReview = () => {
         setCurrentReviewProblemIndex((prev) => prev + 1)
         setCurrentReviewProblemIndex2((prev) => prev + 1)
@@ -118,6 +118,7 @@ export const useProblemPage = (
 
     useEffect(() => {
         if (!editModalIsOpen) {
+            // editModalが開いている時はショートカットを無効にする。
             window.addEventListener('keydown', handleKeyDown)
         }
         return () => {

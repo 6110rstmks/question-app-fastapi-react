@@ -33,8 +33,11 @@ const ProblemPage: React.FC = () => {
         handleNavigateToProblemReviewPage,
     } = useProblemPage(problemData);
 
-    const isNormalFinished = currentProblemIndex >= problemData.length;
-    const isReviewFinished = reviewFlg && currentReviewProblemIndex >= unsolvedProblems.length;
+    const isNormalFinished = 
+        currentProblemIndex >= problemData.length
+        
+    const isReviewFinished = 
+        reviewFlg && currentReviewProblemIndex >= unsolvedProblems.length
 
     if (isNormalFinished || isReviewFinished) {
         return (
@@ -44,7 +47,7 @@ const ProblemPage: React.FC = () => {
                 from={from}
                 backToId={backToId}
             />
-        );
+        )
     }
 
     return (

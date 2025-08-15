@@ -59,26 +59,21 @@ export const useQuestionEditModal = (
             is_correct: isCorrect
         }
 
-        try {
-            const response = await fetch(`http://localhost:8000/questions/${question?.id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(updatedQuestion),
-            })
+        const response = await fetch(`http://localhost:8000/questions/${question?.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedQuestion),
+        })
 
-            if (!response.ok) {
-                throw new Error('Failed to update the question.')
-            }
-            
-            const data = await fetchQuestion(question!.id)
-            setQuestion(data)
-            setModalIsOpen(false)
-        } catch (error) {
-            console.error(error)
-            alert('質問の更新に失敗しました。')
+        if (!response.ok) {
+            throw new Error('Failed to update the question.')
         }
+        
+        const data = await fetchQuestion(question!.id)
+        setQuestion(data)
+        setModalIsOpen(false)
     }
 
     // サイト内ショートカットキーの設定

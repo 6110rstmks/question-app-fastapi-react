@@ -12,6 +12,7 @@ import RenderMemoWithLinks from '../../RenderMemoWithlinks'
 import { SolutionStatus } from "../../../types/SolutionStatus"
 import { isLatex } from "../../../utils/function"
 import { handleUpdateIsCorrect } from "../../../utils/function"
+
 interface Props {
     reviewFlg: boolean
     problem: Question
@@ -41,14 +42,16 @@ export const ProblemNormalPage: React.FC<Props> = ({
     changeSubcategoryModalIsOpen,
     setChangeSubcategoryModalIsOpen,
 }) => {
+
+    // Questionに関連するぱんくずリスト用
     const [
         subcategoriesWithCategoryName,
         setSubcategoriesWithCategoryName
-    ] = useState<SubcategoryWithCategoryName[]>([]) // Questionに関連するぱんくずリスト用
+    ] = useState<SubcategoryWithCategoryName[]>([]) 
 
     const [
         localProblem,
-         setLocalProblem
+        setLocalProblem
     ] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
 
     // const [
@@ -125,20 +128,6 @@ export const ProblemNormalPage: React.FC<Props> = ({
                             className={styles.changeCategoryButton}
                             onClick={() => setChangeSubcategoryModalIsOpen(true)}
                             >Change Category or Subcategory</button>
-                        {/* やりかけ↓ */}
-                        {/* <select
-                            className={`${styles.statusDropdown} ${
-                                localProblem?.is_correct === SolutionStatus.Correct ? styles.correct : 
-                                localProblem?.is_correct === SolutionStatus.Temporary ? styles.temporary : 
-                                styles.incorrect
-                            }`}
-                            value={localProblem?.is_correct}
-                            onChange={(e) => handleUpdateIsCorrect(Number(e.target.value) as SolutionStatus)}
-                        >
-                            <option value={SolutionStatus.Incorrect}>incorrect</option>
-                            <option value={SolutionStatus.Temporary}>temp correct</option>
-                            <option value={SolutionStatus.Correct}>correct</option>
-                        </select> */}
                     </div>
                 </div>
 
