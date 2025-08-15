@@ -27,3 +27,5 @@ export const handleUpdateIsCorrect = async (
     const data = await fetchQuestion(question!.id)
     setQuestion(data)
 }
+
+export const isLatex = (text: string) => text.includes('\\')

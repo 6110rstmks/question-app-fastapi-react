@@ -8,7 +8,7 @@ import { useQuestionPage } from './hooks/useQuestionPage'
 import { BlockMath } from 'react-katex'
 import RenderMemoWithLinks from '../RenderMemoWithlinks';
 import { SolutionStatus } from '../../types/SolutionStatus';
-
+import { isLatex } from '../../utils/function';
 
 interface QuestionPageNavigationParams {
     categoryId: number,
@@ -37,7 +37,6 @@ const QuestionPage: React.FC = () => {
     const parsedCategoryInfo = storedCategoryInfo ? JSON.parse(storedCategoryInfo) : {};
     const state: QuestionPageNavigationParams = location.state || parsedCategoryInfo;
     
-    const isLatex = (text: string) => text.includes('\\')
 
     const { 
         categoryId,

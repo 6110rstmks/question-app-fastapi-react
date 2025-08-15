@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { data, Link } from 'react-router';
+import { Link } from 'react-router';
 import { SubcategoryWithCategoryName } from "../../../types/Subcategory";
 import { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI"
@@ -14,7 +14,7 @@ import QuestionEditModal from "../../question/QuestionEditModal"
 import ChangeCategorySubcategory from "../../ChangeCategorySubcategoryModal"
 import RenderMemoWithLinks from '../../RenderMemoWithlinks'
 import { SolutionStatus } from "../../../types/SolutionStatus"
-
+import { isLatex } from "../../../utils/function"
 interface Props {
     reviewFlg: boolean
     problem: Question
@@ -58,8 +58,6 @@ export const ProblemNormalPage: React.FC<Props> = ({
     //     editModalIsOpen,
     //     setEditModalIsOpen
     // ] = useState<boolean>(false)
-
-    const isLatex = (text: string) => text.includes('\\')
 
     const handleUpdateIsCorrect = async () => {
         await updateQuestionIsCorrect(localProblem!)

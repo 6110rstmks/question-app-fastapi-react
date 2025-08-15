@@ -11,7 +11,7 @@ const ProblemPage: React.FC = () => {
         problemData: Question[]
         from: string
         backToId: number // 戻る先のID(カテゴリIDまたはサブカテゴリIDが入る)
-    };
+    }
 
     const {
         currentProblemIndex, // 現在の問題番号
@@ -84,7 +84,7 @@ const ProblemPage: React.FC = () => {
                 setChangeSubcategoryModalIsOpen={setChangeSubcategoryModalIsOpen}
             />
         </div>
-    );
-};
+    )
+}
 
-export default ProblemPage;
+export default ProblemPage

@@ -10,13 +10,13 @@ import {
 } from '../../utils/navigate_function'
 import { BlockMath } from 'react-katex'
 import { SolutionStatus } from '../../types/SolutionStatus'
+import { isLatex } from '../../utils/function'
 
 const SubcategoryPage: React.FC = () => {
     const navigate = useNavigate()
 
     const { subcategoryId: subcategoryIdStr } = useParams<{ subcategoryId: string }>()
     const subcategoryId = Number(subcategoryIdStr)
-    const isLatex = (text: string) => text.includes('\\')
 
     const { 
         modalIsOpen, 
