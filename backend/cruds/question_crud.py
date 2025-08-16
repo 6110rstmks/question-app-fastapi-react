@@ -99,7 +99,8 @@ def update_is_correct(
     db: Session, 
     id: int, 
     question_is_correct_update: QuestionIsCorrectUpdate
-) -> Question | None:
+# ) -> Question | None:
+):
     question = find_question_by_id(db, id)
     if question is None:
         return None
@@ -113,7 +114,11 @@ def update_is_correct(
     db.commit()
     return question
 
-def delete_question(db: Session, question_id: int) -> Question | None:
+def delete_question(
+    db: Session,
+    question_id: int
+# ) -> Question | None:
+):
     question = find_question_by_id(db, question_id)
     if question is None:
         return None
