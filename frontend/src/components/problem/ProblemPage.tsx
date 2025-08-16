@@ -35,7 +35,7 @@ const ProblemPage: React.FC = () => {
 
     const isNormalFinished = 
         currentProblemIndex >= problemData.length
-        
+
     const isReviewFinished = 
         reviewFlg && currentReviewProblemIndex >= unsolvedProblems.length
 
@@ -58,6 +58,11 @@ const ProblemPage: React.FC = () => {
                     reviewFlg 
                         ? unsolvedProblems[currentReviewProblemIndex] 
                         : problemData[currentProblemIndex]
+                }
+                problemData={
+                    reviewFlg 
+                        ? unsolvedProblems 
+                        : problemData
                 }
                 currentProblemIndex={
                     reviewFlg 

@@ -16,6 +16,7 @@ import { handleUpdateIsCorrect } from "../../../utils/function"
 interface Props {
     reviewFlg: boolean
     problem: Question
+    problemData: Question[]
     currentProblemIndex: number
     problemLength: number
     showAnswer: boolean
@@ -31,6 +32,7 @@ interface Props {
 export const ProblemNormalPage: React.FC<Props> = ({
     reviewFlg,
     problem,
+    problemData,
     currentProblemIndex,
     problemLength,
     showAnswer,
@@ -49,10 +51,11 @@ export const ProblemNormalPage: React.FC<Props> = ({
         setSubcategoriesWithCategoryName
     ] = useState<SubcategoryWithCategoryName[]>([]) 
 
+    // ローカル状態を追加(画面で表示する用)
     const [
         localProblem,
         setLocalProblem
-    ] = useState<Question>(problem) // ローカル状態を追加(画面で表示する用)
+    ] = useState<Question>(problem) 
 
     // const [
     //     editModalIsOpen,
@@ -61,6 +64,11 @@ export const ProblemNormalPage: React.FC<Props> = ({
 
     useEffect(() => {
         setLocalProblem(problem)
+
+        // problemDataも更新したい
+        const updatedProblemData = problemData.map((p) => 
+            p.id === problem.id ? { ...p, ...problem } : p
+        )
 
         const fetchData = async () => {
             const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
@@ -105,7 +113,8 @@ export const ProblemNormalPage: React.FC<Props> = ({
             )}
             <div className={styles.questionCard}>
                 <div className={styles.questionHeader}>
-                    <div className={styles.questionLabel}>問題：{problem.last_answered_date.slice(0, 10)}</div>
+                    {/* <div className={styles.questionLabel}>問題：{problem.last_answered_date.slice(0, 10)}</div> */}
+                    <div className={styles.questionLabel}>問題：{localProblem.last_answered_date.slice(0, 10)}</div>
                     <div className={styles.correctnessToggle}>
                         <button 
                             className={styles.editButton}

@@ -1,6 +1,11 @@
 import { SubcategoryWithQuestionCount } from "../types/Subcategory";
 import { Question } from "../types/Question";
-import { updateQuestionIsCorrect, fetchQuestion } from "../api/QuestionAPI";
+import { 
+    updateQuestionIsCorrect, 
+    fetchQuestion, 
+    incrementAnswerCount,
+    updateLastAnsweredDate
+} from "../api/QuestionAPI";
 
 export const addSubcategory = (
     setSubcategories: React.Dispatch<React.SetStateAction<SubcategoryWithQuestionCount[]>>,
@@ -19,13 +24,19 @@ export const handleKeyDownForShowAnswer = (
     }
 }
 
-export const handleUpdateIsCorrect = async (
-    question: Question,
-    setQuestion: React.Dispatch<React.SetStateAction<Question>>
+// ジェネリクスにした理由はquestionPageではundefinedをとるが、
+// questionEditModalではundefinedをとらない形式でエラーがでるため
+export const handleUpdateIsCorrect = async<T extends Question | undefined> (
+    // question: Question | undefined,
+    question: T,
+    // setQuestion: React.Dispatch<React.SetStateAction<Question | undefined>>
+    setQuestion: React.Dispatch<React.SetStateAction<T>>
 ) => {
     await updateQuestionIsCorrect(question!)
+    await incrementAnswerCount(question!.id)
+    await updateLastAnsweredDate(question!.id)
     const data = await fetchQuestion(question!.id)
-    setQuestion(data)
+    setQuestion(data as T)
 }
 
 export const isLatex = (text: string) => text.includes('\\')

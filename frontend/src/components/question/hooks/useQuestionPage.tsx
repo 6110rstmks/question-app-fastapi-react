@@ -7,10 +7,11 @@ import {
     deleteQuestion,
     incrementAnswerCount, 
     fetchQuestion, 
-    updateQuestionIsCorrect,
     updateLastAnsweredDate
 } from '../../../api/QuestionAPI'
-import { handleKeyDownForShowAnswer } from '../../../utils/function'
+import { 
+    handleKeyDownForShowAnswer 
+} from '../../../utils/function'
 import { handleNavigateToSubcategoryPage } from '../../../utils/navigate_function'
 import { Category } from '../../../types/Category'
 
@@ -23,8 +24,13 @@ export const useQuestionPage = (
     changeSubcategoryModalIsOpen: boolean,
     editModalIsOpen: boolean,
 ) => {
-    const [question, setQuestion] = useState<Question>()
-    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([])
+    const [question, setQuestion] = useState<Question | undefined>()
+
+    const [
+        subcategoriesWithCategoryName, 
+        setSubcategoriesWithCategoryName
+    ] = useState<SubcategoryWithCategoryName[]>([])
+    
     const [showAnswer, setShowAnswer] = useState<boolean>(false)
 
     const navigate = useNavigate()
@@ -64,14 +70,14 @@ export const useQuestionPage = (
         })
     }
 
-    const handleUpdateIsCorrect = async () => {
-        await incrementAnswerCount(question!.id)
-        await updateQuestionIsCorrect(question!) 
-        await updateLastAnsweredDate(question!.id)
+    // const handleUpdateIsCorrect = async () => {
+    //     await incrementAnswerCount(question!.id)
+    //     await updateQuestionIsCorrect(question!) 
+    //     await updateLastAnsweredDate(question!.id)
 
-        const data = await fetchQuestion(question!.id)
-        setQuestion(data)
-    }
+    //     const data = await fetchQuestion(question!.id)
+    //     setQuestion(data)
+    // }
 
     useEffect(() => {
         const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer)
@@ -110,6 +116,5 @@ export const useQuestionPage = (
         setShowAnswer,
         handleDeleteQuestion,
         handleAnswerQuestion,
-        handleUpdateIsCorrect,
     }
 }

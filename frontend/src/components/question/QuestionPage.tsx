@@ -9,7 +9,7 @@ import { BlockMath } from 'react-katex'
 import RenderMemoWithLinks from '../RenderMemoWithlinks';
 import { SolutionStatus } from '../../types/SolutionStatus';
 import { isLatex } from '../../utils/function';
-
+import { handleUpdateIsCorrect } from '../../utils/function';
 interface QuestionPageNavigationParams {
     categoryId: number,
     subcategoryId: number,
@@ -19,24 +19,23 @@ interface QuestionPageNavigationParams {
 
 const QuestionPage: React.FC = () => {
     const location = useLocation()
-    const { questionId: questionIdStr } = useParams<{ questionId: string }>();
+    const { questionId: questionIdStr } = useParams<{ questionId: string }>()
     const questionId = Number(questionIdStr)
 
     const [
         editModalIsOpen,
         setEditModalIsOpen
-    ] = useState<boolean>(false);
+    ] = useState<boolean>(false)
 
     const [
         changeSubcategoryModalIsOpen,
         setChangeSubcategoryModalIsOpen
-    ] = useState<boolean>(false);
+    ] = useState<boolean>(false)
 
     // location.stateがnullの場合にlocalStorageから取得
     const storedCategoryInfo = localStorage.getItem('categorySubcategoryInfo')
     const parsedCategoryInfo = storedCategoryInfo ? JSON.parse(storedCategoryInfo) : {}
     const state: QuestionPageNavigationParams = location.state || parsedCategoryInfo
-    
 
     const { 
         categoryId,
@@ -54,7 +53,6 @@ const QuestionPage: React.FC = () => {
         setShowAnswer,
         handleDeleteQuestion,
         handleAnswerQuestion,
-        handleUpdateIsCorrect,
     } = useQuestionPage(
         categoryId,
         subcategoryId,
@@ -104,7 +102,7 @@ const QuestionPage: React.FC = () => {
                                 question?.is_correct === SolutionStatus.Temporary ? styles.temporary : 
                                 styles.incorrect
                             }`}
-                            onClick={handleUpdateIsCorrect}
+                            onClick={() => handleUpdateIsCorrect(question, setQuestion)}
                         >
                             {question?.is_correct === SolutionStatus.Incorrect ? 'incorrect' :
                             question?.is_correct === SolutionStatus.Temporary ? 'temp correct' :
