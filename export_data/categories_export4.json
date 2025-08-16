@@ -49,8 +49,8 @@
                                 "ECS on EC2"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -76,13 +76,13 @@
                             "last_answered_date": "2025-06-01"
                         },
                         {
-                            "problem": "複数のEC2から同時アクセス可能なのはEBS、EFSのどちらか",
+                            "problem": "AWSにおいて複数のEC2から同時アクセス可能なのはEBS、EFSのどちらか",
                             "answer": [
                                 "EFS"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-01"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "数TB〜数PB規模のデータをオンプレミス環境からAWSへ移行する場合どのサービスを利用する？",
@@ -3743,7 +3743,7 @@
                             ],
                             "memo": "∫(x^3 +x)cosxdx を計算せよ。 ←瞬間部分積分が適用できる例",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-17"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "sinxの積分漸化式の解法の流れ",
@@ -3767,7 +3767,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "4次方程式の複素数解の武器2",
@@ -3909,7 +3909,7 @@
                             ],
                             "memo": "S→side\nA→angle",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "二重絶対値は内と外、どっちから外す？",
@@ -4095,7 +4095,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "斜軸回転体の初手　",
@@ -4288,7 +4288,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -4407,7 +4407,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "27℃、1.0 × 10⁵ Pa の N₂ と O₂ の混合気体が水 1.0 L に接している。それぞれが水に何 mol 溶けているか求めよ。ただし、水 1.0 L に対する 27℃ での 1.0 × 10⁵ Pa の気体の溶解度は、N₂ が 6.0 × 10⁻⁴ mol、O₂ が 1.2 × 10⁻³ mol とする。また、混合気体の物質量比は N₂ : O₂ = 3 : 2 とする。",
@@ -4484,11 +4484,11 @@
                         {
                             "problem": "尿素の酸素原子を硫黄原子で置換した構造の化合物を何という？",
                             "answer": [
-                                "チオカルバミドthiocarbamide"
+                                "thiocarbamide"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-17"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "元素記号のSeは？",
@@ -4535,7 +4535,7 @@
                             ],
                             "memo": "ドルトンの分圧の法則とは異なるね\n\n",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "木炭を燃やすと、「ほのおをあげて燃える」と「ほのおを出さずにもえる」のどちらですか。",
@@ -4635,24 +4635,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-28"
-                        },
-                        {
-                            "problem": "温度と溶媒の量が一定であるとき溶媒に溶ける気体の物質量は圧力に比例するという法則のことをなんという",
-                            "answer": [
-                                "ヘンリーの法則"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-10"
-                        },
-                        {
-                            "problem": "石油の分留は沸点が高いもの、低いもの、どちらから取り除いていくか",
-                            "answer": [
-                                "高いもの"
-                            ],
-                            "memo": "350℃でも気体になれない沸点が高すぎるやつがいます。それが重油です。\n重油から取り除く",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-16"
                         },
                         {
                             "problem": "混合物を温度による溶解度の違いを利用して固体物質の精製する方法のことをなんという",
@@ -4770,12 +4752,12 @@
                         {
                             "problem": "異性体は大きく二つに分けることができる。答えて",
                             "answer": [
-                                "構造異性体",
-                                "立体異性体"
+                                "構造異性体Structural isomer",
+                                "立体異性体stereoisomer"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-20"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "分子式が同じで、構造が異なる物質同士を何という",
@@ -4810,8 +4792,8 @@
                                 "天然ガスや石油を分留する。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "fat hydrogenation",
@@ -4935,15 +4917,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-19"
-                        },
-                        {
-                            "problem": "第1級アルコールの酸化によりなにが生じるか",
-                            "answer": [
-                                "アルデヒド"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-05-28"
                         },
                         {
                             "problem": "ジメチルケトンは慣用名で何と呼ばれている",
@@ -5469,8 +5442,8 @@
                                 "銀Agの生PbはげHg"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-06"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "オキソ酸Oxyacidの酸としての強さは含まれる酸素O原子の数が増えるほど強くなる？弱くなる？",
@@ -5533,10 +5506,6 @@
                             "last_answered_date": "2025-05-12"
                         }
                     ]
-                },
-                {
-                    "name": "繊維",
-                    "questions": []
                 },
                 {
                     "name": "油脂・せっけん",
@@ -5641,6 +5610,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-03"
+                        },
+                        {
+                            "problem": "温度と溶媒の量が一定であるとき溶媒に溶ける気体の物質量は圧力に比例するという法則のことをなんという",
+                            "answer": [
+                                "Henry's lawヘンリーの法則"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-17"
                         }
                     ]
                 },
@@ -5759,11 +5737,11 @@
                         {
                             "problem": "Nitoric Acidを作成する工業的製法を何という",
                             "answer": [
-                                "オストワルト法"
+                                "Ostwald process\nオストワルト法"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-14"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "オストワルト法において一酸化窒素NOと空気の混合気体を140℃以下に冷却すると、NOはO2と反応して自動的にNO2に酸化される。2NO + O2 ->2NO2 このように、化合物がO2により触媒を使わずに自動的に酸化される反応を何と言う",
@@ -5787,12 +5765,31 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-19"
+                        },
+                        {
+                            "problem": "石油の分留は沸点が高いもの、低いもの、どちらから取り除いていくか",
+                            "answer": [
+                                "高いもの"
+                            ],
+                            "memo": "350℃でも気体になれない沸点が高すぎるやつがいます。それが重油です。\n重油から取り除く",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
                 {
                     "name": "organic chemistry alchol",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "第1級アルコールの酸化によりなにが生じるか",
+                            "answer": [
+                                "アルデヒド"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-28"
+                        }
+                    ]
                 },
                 {
                     "name": "高分子 樹脂",
@@ -5898,6 +5895,10 @@
                             "last_answered_date": "2025-05-19"
                         }
                     ]
+                },
+                {
+                    "name": "高分子 繊維",
+                    "questions": []
                 }
             ]
         },
@@ -7475,8 +7476,8 @@
                                 "700nm"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-05"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "毛の毛根は表皮、真皮、皮下組織のどこにあるか",
@@ -7946,8 +7947,8 @@
                                 "IL-4、IL-5、IL-13\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "アトピー性皮膚炎の重症度を評価する指標の一つは",
@@ -7965,7 +7966,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-26"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "デュピクセントはアトピー性皮膚炎の発症に関与しているIL-4、IL-5、IL-13のうちどれを抑えるものか",
@@ -8000,8 +8001,8 @@
                                 "骨髄bone marrow"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "化合物（化学的に合成された物質）とは異なり、生物が産生する蛋白質などを医薬品として利用するものをなんという",
@@ -8010,7 +8011,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "単一の抗体産生細胞に由来するクローンから作られている抗体をなんという",
@@ -8028,7 +8029,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "IL-13に高親和性で結合するヒト化抗ヒトIL-13モノクローナル抗体として機能するアトピー性皮膚炎の新薬は？",
@@ -8048,7 +8049,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-03"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "サイトカインの種類2",
@@ -8085,7 +8086,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "インターロイキンの異常な分泌が関与するとされる疾患はどれですか？",
@@ -8106,7 +8107,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "チロシンキナーゼファミリー2",
@@ -8127,6 +8128,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "制御性T細胞",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -8471,8 +8481,8 @@
                                 "カシ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-22"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "光合成曲線の縦軸と横軸は？",
@@ -9322,8 +9332,8 @@
                                 "分類・回帰"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "KNNはすべての訓練データに対してどうするか",
@@ -11994,6 +12004,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-03"
+                        },
+                        {
+                            "problem": "側鎖を英語で",
+                            "answer": [
+                                "side chain"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -12628,8 +12647,8 @@
                                 "拠点間VPN"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "IPsecには二つのモードがある。答えて",
@@ -13583,7 +13602,7 @@
                             ],
                             "memo": "https://www.youtube.com/watch?v=Iqqd5PPuS2E&list=PLtdcmqO4ps6WjlJp8b3ZATi2VL_-fniLL&index=34",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         }
                     ]
                 },
@@ -13879,7 +13898,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         }
                     ]
                 }
@@ -15275,7 +15294,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-03"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "カスピ海は中東か南アジアでいうとどちらにあるか？",
@@ -15813,17 +15832,17 @@
                                 "オーストリア"
                             ],
                             "memo": "https://i0.wp.com/worldwalking.net/wp-content/uploads/IMG_5041.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-23"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
-                            "problem": "カスピ海と黒海ではどちらが西側にあるか",
+                            "problem": "Which is located further west, the Caspian Sea or the Black Sea?",
                             "answer": [
-                                "黒海"
+                                "black sea"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-14"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "カラハリ砂漠の場所",
@@ -15949,7 +15968,7 @@
                             ],
                             "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -15957,8 +15976,8 @@
                                 "ウラル山脈のすぐ東側を流れ、北極海に注ぎ込む川です。\n"
                             ],
                             "memo": "\nhttps://chiri-tabi.com/img/reverlake.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-01"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "ヴォルタ川はどこにありますか？",
@@ -16012,8 +16031,8 @@
                                 "ロシア"
                             ],
                             "memo": "https://keynoters.co.jp/images/sample/kazakhstan_map.gif",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "アドリア海はどこにある？どの国に面している？5つ答えて",
@@ -16091,12 +16110,11 @@
                         {
                             "problem": "ピレネー山脈どこにある？どことどこの国の堺にある？",
                             "answer": [
-                                "https://lh4.googleusercontent.com/proxy/yPIv85nrUDnRTj-zKOyiJAz8V6SNVD69aoHlnMeFt2uDRQqf2l6lZ4Ea8D6I8EHnURueVM063PCRbpAozE7HN8QjYDweOSmnLSxur29cRwo_GA",
                                 "フランス、スペイン"
                             ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-08"
+                            "memo": "https://lh4.googleusercontent.com/proxy/yPIv85nrUDnRTj-zKOyiJAz8V6SNVD69aoHlnMeFt2uDRQqf2l6lZ4Ea8D6I8EHnURueVM063PCRbpAozE7HN8QjYDweOSmnLSxur29cRwo_GA",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "ベルギーはどの3つの国に囲まれているか？",
@@ -16288,8 +16306,8 @@
                                 ""
                             ],
                             "memo": "https://chitonitose.com/geo/img/Latin_America_terrain.webp",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "アイスランドの場所は",
@@ -16357,11 +16375,11 @@
                         {
                             "problem": "アルゼンチンの左にある国は",
                             "answer": [
-                                "チリ"
+                                "チリChile"
                             ],
                             "memo": "https://hugkum.sho.jp/wp-content/uploads/2024/05/18548.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "アンデス山脈の場所は",
@@ -16397,7 +16415,7 @@
                             ],
                             "memo": "https://exam.fukuumedia.com/wp-content/uploads/2019/11/greatprenzuprean.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "カラクム砂漠はどこの国にある？",
@@ -16450,8 +16468,8 @@
                                 "中国の右上"
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/yMyi4m-DP1H6RQZ294-RNQz8Xr4-C8WLIFFf3ZsYcnLnL1qbkpZEyIChFCtxjYmjZOIaYS0FKuHUs-v4IkU9bgtZAF14OBswvHdq_Jt1LeDnB_qfmVW46fM1PKw5kf0",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-06"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "アメリカのテキサス州の場所",
@@ -16477,8 +16495,8 @@
                                 ""
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2021/01/intrazonal-soil-map.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-24"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "中国の深圳どこ",
@@ -16522,8 +16540,8 @@
                                 ""
                             ],
                             "memo": "https://tabijo-bp.com/wp-content/uploads/images/2017111821262189e.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "ウズベキスタンの上にはなんの国がある？",
@@ -16579,7 +16597,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "スウェーデンの左にある国は",
@@ -16706,7 +16724,7 @@
                             ],
                             "memo": "https://www.kaijipr.or.jp/assets/img/mamejiten/nature/shizen18.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "黒海の下にはなんの国がある",
@@ -16816,7 +16834,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "フィンランドの場所",
@@ -17846,13 +17864,13 @@
                             "last_answered_date": "2025-05-26"
                         },
                         {
-                            "problem": "冬小麦Winter wheatのおぼえかたは？",
+                            "problem": "冬小麦Winter wheatのいつタネを撒いて、いつ収穫するかについての覚え方は",
                             "answer": [
                                 "冬を越す小麦と覚える。→秋に種をまいて、冬をこす。→冬をこすことができるということは気候は比較的あたたかい。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-03"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "熱帯の農業方式といえば",
@@ -18079,8 +18097,8 @@
                                 "アマゾン盆地"
                             ],
                             "memo": "https://asmira.jp/wp-content/uploads/2020/01/south-america-terrain-3-213x300.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "園芸農業のうち、都市から近い地域で新鮮な野菜などを栽培し、都市に販売する農業を漢字4文字で何というか。",
@@ -18632,7 +18650,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUfLodDQXM7fC9dJQKslH6tS_SnpH2kmVTmw&s\n\nまぎわらしいのがコルカタ",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-06"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "イギリスは国全体でどの気候区分に属するか？",
@@ -19020,8 +19038,8 @@
                                 "東北"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-11"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "中国で年間降水量1000mmのラインをイメージして",
@@ -19348,8 +19366,8 @@
                                 "リアス海岸"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX_wM0L4_FSVme2SHNUU_qrtaTmYkk9SMAuw&s\n\n志摩半島　https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Et1JUMNwMuYdhnvEH1PNI21_4gkz8YYRZQ&s\n\n三陸海岸　https://assets.st-note.com/production/uploads/images/7315865/rectangle_large_type_2_8cb56091121a513db4c72cd80e6cea01.jpg?fit=bounds&quality=85&width=1280",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-06"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "リアス海岸は何に海水が入り込んでできた入江か",
@@ -20187,7 +20205,7 @@
                                 "1本の光線のまま曲がるだけで、分光されない"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-08-15"
                         },
                         {
@@ -20607,7 +20625,7 @@
                                 "損益計算書（P/L）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-08-04"
                         },
                         {
@@ -21270,7 +21288,7 @@
                             ],
                             "memo": "VNetからAzureサービスへのトラフィックを最適化する",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "VNet内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
@@ -21519,8 +21537,8 @@
                                 "HTTPS"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
                         }
                     ]
                 },
@@ -21572,7 +21590,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-27"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "Azure Roleの正式名称は",
@@ -21689,7 +21707,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-08"
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -21761,6 +21779,15 @@
                     "name": "react",
                     "questions": [
                         {
+                            "problem": "reactの状態管理の原則「props から渡せるものは state に持たない」の例外",
+                            "answer": [
+                                "props を「初期値」として使い、その後は内部で管理する必要がある場合。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
                             "problem": "ReactのuseSWRについて",
                             "answer": [
                                 ""
@@ -21768,6 +21795,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "reactの状態管理の原則を一つ述べて",
+                            "answer": [
+                                "props から渡せるものは state に持たない"
+                            ],
+                            "memo": "不要に state を増やさず、データの “唯一の情報源 (Single Source of Truth)” を維持する ための考え方",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 }
@@ -22329,7 +22365,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         }
                     ]
                 },
@@ -22405,7 +22441,7 @@
                                 "前漢\n\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-08-16"
                         },
                         {
@@ -22549,7 +22585,7 @@
                                 "刀銭・布銭"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-08-16"
                         },
                         {
@@ -22738,7 +22774,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-08"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "オリエント世界を初めて統一し、中央集権的な支配体制を築いたが、その過酷な支配で知られる帝国は何でしょう？",
@@ -22759,13 +22795,13 @@
                             "last_answered_date": "2025-08-09"
                         },
                         {
-                            "problem": "アケメネス朝の建国者は",
+                            "problem": "アケメネス朝ペルシアの建国者は",
                             "answer": [
                                 "キュロス二世"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-08"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "古代バビロニアの王で、「目には目を、歯には歯を」の原則で知られる法典を制定したのは誰でしょう？",
@@ -22855,7 +22891,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "クノッソス宮殿を発掘し、線文字の刻まれた粘土板を発見したイギリスの考古学者は",
@@ -22931,8 +22967,8 @@
                                 "デマゴーゴス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "プルタルコスがギリシア語で著したギリシア・ローマの英雄伝は？",
@@ -22995,7 +23031,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-08"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "イッソスの戦いは何年に起こったか",
@@ -23102,8 +23138,8 @@
                                 "イッソスの戦い"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "上中下3段に並んだ漕ぎ手が櫂を使って動かす軍船を何というか。",
@@ -23111,8 +23147,8 @@
                                 "三段櫂船 さんだんかいせん"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqvMabK5-ru_QsNgez2VaW4ZQYxfmjZHe4DQ&s",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "平民会での決議は、元老院の承認を得ずとも国法になるとした古代ローマの法律の名称を何というか。",
@@ -23148,7 +23184,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "スパルタに軍国主義的な政治・軍事体制をもたらした伝説的な指導者は誰か",
@@ -23156,8 +23192,8 @@
                                 "リュクルゴス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
                         }
                     ]
                 },
@@ -23413,6 +23449,17 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "三国同盟の3つの国を答えtえ",
+                            "answer": [
+                                "ドイツ",
+                                "オーストリア",
+                                "イタリア"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 },
@@ -23468,7 +23515,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "GitHub Actions のself-hosted runner ",
@@ -23510,7 +23557,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-16"
                         },
                         {
                             "problem": "Dockerfile 内での作業ディレクトリを指定する命令は",
@@ -23519,7 +23566,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-07-22"
+                            "last_answered_date": "2025-08-16"
                         }
                     ]
                 }
@@ -23635,7 +23682,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "from typing import Generic, TypeVar\n\nT = TypeVar('T')  # 型変数 T を定義\n\nclass Box(Generic[T]):\n    def __init__(self, content: T):\n        self.content = content\n\n    def get_content(self) -> T:\n        return self.content\n\nこうすることでboxクラスはどのような型が扱えるようになるか？",
@@ -23865,8 +23912,8 @@
                                 "target配下に作成されたsqlコードをsnowflakeに貼り付けて、cte句ごとに実行してどのようなデータが入っているか確認する。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
                         },
                         {
                             "problem": "dbt_project.ymlの中のclean-targetsは何を表す。",
@@ -23903,6 +23950,19 @@
                             "last_answered_date": "2025-08-16"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Typescript",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": []
+                },
+                {
+                    "name": "generics",
+                    "questions": []
                 }
             ]
         }
