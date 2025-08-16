@@ -39,7 +39,10 @@ def find_all_questions_in_category(
 
     return db.execute(query).scalars().all()
 
-def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
+def find_all_questions_in_subcategory(
+    db: Session, 
+    subcategory_id: int
+) -> list[Question]:
 
     query1 = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
     subcategoriesquestions = db.execute(query1).scalars().all()
@@ -51,7 +54,7 @@ def find_all_questions_in_subcategory(db: Session, subcategory_id: int):
         
     return questions
 
-def find_question_by_id(db: Session, id: int):
+def find_question_by_id(db: Session, id: int) -> Question:
     query = select(Question).where(Question.id == id)
     return db.execute(query).scalars().first()
 
@@ -99,8 +102,8 @@ def update_is_correct(
     db: Session, 
     id: int, 
     question_is_correct_update: QuestionIsCorrectUpdate
-# ) -> Question | None:
-):
+) -> Question:
+# ):
     question = find_question_by_id(db, id)
     if question is None:
         return None
@@ -233,7 +236,7 @@ def change_belongs_to_subcategoryId(
 def update_last_answered_date(
     db: Session, 
     question_id: int
-):
+) -> Question:
     query1 = select(Question).where(Question.id == question_id)
     question = db.execute(query1).scalars().first()
     # last_answered_dateが現在日付の場合は、
@@ -263,7 +266,7 @@ def update_last_answered_date(
 def increment_answer_count(
     db: Session, 
     question_id: int
-):
+) -> Question:
     stmt = (
         update(Question).
         where(Question.id == question_id).
