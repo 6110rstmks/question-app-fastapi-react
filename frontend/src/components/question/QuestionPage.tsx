@@ -42,7 +42,7 @@ const QuestionPage: React.FC = () => {
         subcategoryId,
         categoryName,
         subcategoryName
-    } = state;
+    } = state
 
     const { 
         subcategoriesWithCategoryName,
@@ -54,11 +54,7 @@ const QuestionPage: React.FC = () => {
         handleDeleteQuestion,
         handleAnswerQuestion,
     } = useQuestionPage(
-        categoryId,
-        subcategoryId,
         questionId,
-        categoryName,
-        subcategoryName,
         changeSubcategoryModalIsOpen,
         editModalIsOpen
     );
@@ -145,10 +141,10 @@ const QuestionPage: React.FC = () => {
             </div>
             </div>
             <div className={styles.questionActions}>
-                <button onClick={handleDeleteQuestion} className={styles.delete}>
+                <button onClick={(() => handleDeleteQuestion(categoryId, subcategoryId, questionId, categoryName))} className={styles.delete}>
                     DELETE
                 </button>
-                <button onClick={handleAnswerQuestion}>この問題を回答した！</button>
+                <button onClick={() => handleAnswerQuestion(question!)}>この問題を回答した！</button>
                 <button onClick={() => setEditModalIsOpen(true)}>Edit</button>
                 <button onClick={() => setChangeSubcategoryModalIsOpen(true)}>Change subcategory or category</button>
             </div>

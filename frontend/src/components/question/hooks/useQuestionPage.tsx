@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
+import { Category } from '../../../types/Category'
 import { SubcategoryWithCategoryName } from '../../../types/Subcategory'
 import { Question } from '../../../types/Question'
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from '../../../api/SubcategoryAPI'
@@ -13,14 +14,9 @@ import {
     handleKeyDownForShowAnswer 
 } from '../../../utils/function'
 import { handleNavigateToSubcategoryPage } from '../../../utils/navigate_function'
-import { Category } from '../../../types/Category'
 
 export const useQuestionPage = (
-    categoryId: number,
-    subcategoryId: number,
     questionId: number,
-    categoryName: string,
-    subcategoryName: string,
     changeSubcategoryModalIsOpen: boolean,
     editModalIsOpen: boolean,
 ) => {
@@ -30,12 +26,17 @@ export const useQuestionPage = (
         subcategoriesWithCategoryName, 
         setSubcategoriesWithCategoryName
     ] = useState<SubcategoryWithCategoryName[]>([])
-    
+
     const [showAnswer, setShowAnswer] = useState<boolean>(false)
 
     const navigate = useNavigate()
 
-    const handleDeleteQuestion = async () => {
+    const handleDeleteQuestion = async (
+        categoryId: number,
+        subcategoryId: number,
+        questionId: number,
+        categoryName: string
+    ) => {
         let confirmation = prompt("削除を実行するには、「削除」と入力してください:")
         if (confirmation !== '削除') {
             return;
@@ -51,7 +52,8 @@ export const useQuestionPage = (
         )
     }
 
-    const handleAnswerQuestion = () => {
+    // 「この問題に回答した」をクリックしたときの処理
+    const handleAnswerQuestion = (question: Question) => {
         incrementAnswerCount(question!.id) 
 
         // 回答の最終更新日時を更新
@@ -69,16 +71,7 @@ export const useQuestionPage = (
             return prev
         })
     }
-
-    // const handleUpdateIsCorrect = async () => {
-    //     await incrementAnswerCount(question!.id)
-    //     await updateQuestionIsCorrect(question!) 
-    //     await updateLastAnsweredDate(question!.id)
-
-    //     const data = await fetchQuestion(question!.id)
-    //     setQuestion(data)
-    // }
-
+    
     useEffect(() => {
         const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer)
 
@@ -93,8 +86,8 @@ export const useQuestionPage = (
     useEffect(() => {
         // 質問データを取得して設定
         (async () => {
-            const data: Question = await fetchQuestion(questionId)
-            setQuestion(data)
+            const questionData: Question = await fetchQuestion(questionId)
+            setQuestion(questionData)
 
             // 所属するサブカテゴリを変更する際に使用する。
             const data2: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByQuestionId(questionId);
