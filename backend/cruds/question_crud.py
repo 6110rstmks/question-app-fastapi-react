@@ -58,7 +58,7 @@ def find_question_by_id(db: Session, id: int) -> Question:
     query = select(Question).where(Question.id == id)
     return db.execute(query).scalars().first()
 
-def find_by_name(db: Session, name: str):
+def find_by_name(db: Session, name: str) -> list[Question]:
     return db.query(Question).filter(Question.name.like(f"%{name}%")).all()
 
 def create(db: Session, question_create: QuestionCreate):
@@ -103,7 +103,6 @@ def update_is_correct(
     id: int, 
     question_is_correct_update: QuestionIsCorrectUpdate
 ) -> Question:
-# ):
     question = find_question_by_id(db, id)
     if question is None:
         return None
@@ -120,8 +119,7 @@ def update_is_correct(
 def delete_question(
     db: Session,
     question_id: int
-# ) -> Question | None:
-):
+) -> Question:
     question = find_question_by_id(db, question_id)
     if question is None:
         return None
