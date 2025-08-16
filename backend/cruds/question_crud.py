@@ -10,25 +10,31 @@ from datetime import date
 def find_all_questions(
     db: Session,
     search_word: str = None,
-):
+) -> list[Question]:
     result = []
     
     result = db.query(Question).all()
 
     if search_word:
         # 問題文で検索
-        result = db.query(Question).filter(Question.problem.ilike(f"%{search_word}%")).all()
+        result_a = db.query(Question).filter(
+            Question.problem.ilike(f"%{search_word}%")
+        ).all()
 
-    if search_word and not result:
-        query = select(Question).where(
+        query1 = select(Question).where(
             func.array_to_string(Question.answer, ',').ilike(f"%{search_word}%")
         )
-        result = db.execute(query).scalars().all()
+        result_b = db.execute(query1).scalars().all()
+        
+        result = list({q.id: q for q in (result_a + result_b)}.values())
 
     return result
 
 
-def find_all_questions_in_category(db: Session, category_id: int):
+def find_all_questions_in_category(
+    db: Session, 
+    category_id: int
+) -> list[Question]:
     query = select(Question).where(CategoryQuestion.category_id == category_id)
 
     return db.execute(query).scalars().all()
@@ -89,7 +95,11 @@ def update2(db: Session, id: int, question_update: QuestionUpdate):
     updated_subcategory = find_question_by_id(db, id)
     return updated_subcategory
 
-def update_is_correct(db: Session, id: int, question_is_correct_update: QuestionIsCorrectUpdate):
+def update_is_correct(
+    db: Session, 
+    id: int, 
+    question_is_correct_update: QuestionIsCorrectUpdate
+) -> Question | None:
     question = find_question_by_id(db, id)
     if question is None:
         return None
@@ -103,7 +113,7 @@ def update_is_correct(db: Session, id: int, question_is_correct_update: Question
     db.commit()
     return question
 
-def delete_question(db: Session, question_id: int):
+def delete_question(db: Session, question_id: int) -> Question | None:
     question = find_question_by_id(db, question_id)
     if question is None:
         return None
@@ -114,9 +124,10 @@ def delete_question(db: Session, question_id: int):
     db.commit()
     return question
 
-
-
-def change_belongs_to_subcategoryId(db: Session, changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate):
+def change_belongs_to_subcategoryId(
+    db: Session, 
+    changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate
+) -> list[int]:
 
     # ------------------------------------------------------------------------ #
     # チェックボックスが外された場合のSubcategory削除処理
