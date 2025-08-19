@@ -99,20 +99,26 @@ const useSetProblemPage = () => {
     const handleTodayReview = async () => {
         const today = new Date()
         let problemData = await fetchProblemByDay(today)
+        let problemDataTomorrow = null
 
         // 本日の問題はすべて回答済みでした。その翌日のデータを取得しますか？というポップアップを表示する
-        if (problemData && Object.keys(problemData).length === 0) {
-            const confirmNextDay = window.confirm('本日の問題はすべて回答済みです。翌日の問題を取得しますか？')
+        if (problemData && problemData.length === 0) {
+            const confirmNextDay = window.confirm('today\'s problems are all answered. Do you want to fetch tomorrow\'s problems?')
             if (!confirmNextDay) {
                 return
             }
         }
 
         // problemDataが空であれば、明日の問題を取得する
-        if (!problemData || Object.keys(problemData).length === 0) {
+        if (!problemData ||problemData.length === 0) {
             const tomorrow = new Date(today)
             tomorrow.setDate(tomorrow.getDate() + 1)
-            problemData = await fetchProblemByDay(tomorrow)
+            problemDataTomorrow = await fetchProblemByDay(tomorrow)
+        }
+
+        if (!problemDataTomorrow || Object.keys(problemDataTomorrow).length === 0) {
+            alert('No problems available for today or tomorrow.')
+            return
         }
 
         navigate('/problem', { 

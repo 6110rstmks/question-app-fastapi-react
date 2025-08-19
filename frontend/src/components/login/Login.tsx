@@ -38,12 +38,12 @@ const Login: React.FC = () => {
     
 
     // googleAuthでログイン
-    const handleLoginInWithGoogle = (): void => {
-        signInWithPopup(auth, provider).then((result) => {
-            localStorage.setItem("isAuth", "true")
-            navigate("/categories/home")
-        })
-    }
+    // const handleLoginInWithGoogle = (): void => {
+    //     signInWithPopup(auth, provider).then((result) => {
+    //         localStorage.setItem("isAuth", "true")
+    //         navigate("/categories/home")
+    //     })
+    // }
 
     // ユーザネームとパスワードでログイン
     const handleLogin = async (e: FormEvent): Promise<void> => {
@@ -84,7 +84,7 @@ const Login: React.FC = () => {
                 SignIn
             </Link> 
             <p>ログインして始める</p>
-            <button onClick={handleLoginInWithGoogle}>Google でログイン（開発中は使用しないで。後でまた実装する。）</button>
+            {/* <button onClick={handleLoginInWithGoogle}>Google でログイン（開発中は使用しないで。後でまた実装する。）</button> */}
 
             <hr />
             <form onSubmit={handleLogin}>

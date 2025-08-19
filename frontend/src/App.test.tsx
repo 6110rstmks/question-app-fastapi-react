@@ -1,8 +1,12 @@
-// import { render, screen } from '@testing-library/react';
-// import App from './App';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router';
+import App from './App';
 
-// test('renders the home page', () => {
-//   render(<App />);
-//   const homeElement = screen.getByText(/Home Page/i);
-//   expect(homeElement).toBeInTheDocument();
-// })
+// smoke test: Appコンポーネントがレンダリングできるか
+test('renders without crashing', () => {
+  render(
+      <App />
+  );
+  // Loginページがデフォルト表示されるはず
+  expect(screen.getByText(/ログインして始める/)).toBeInTheDocument();
+});
