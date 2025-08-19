@@ -116,6 +116,32 @@ def update_is_correct(
     db.commit()
     return question
 
+# あるサブカテゴリのis_correctをすべて更新する関数
+def update_is_correct_by_subcategory(
+    db: Session,
+    subcategory_id: int,
+    question_is_correct_update: QuestionIsCorrectUpdate
+) -> list[Question]:
+    # サブカテゴリに属するすべての質問を取得
+    query = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
+    subcategoriesquestions = db.execute(query).scalars().all()
+    
+    updated_questions = []
+    
+    for subcategoryquestion in subcategoriesquestions:
+        question = find_question_by_id(db, subcategoryquestion.question_id)
+        if question is not None:
+            stmt = (
+                update(Question).
+                where(Question.id == question.id).
+                values(is_correct=question_is_correct_update.is_correct)
+            )
+            db.execute(stmt)
+            db.commit()
+            updated_questions.append(question)
+
+    return updated_questions
+
 def delete_question(
     db: Session,
     question_id: int

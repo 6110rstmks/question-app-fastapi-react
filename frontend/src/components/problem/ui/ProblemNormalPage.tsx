@@ -136,7 +136,11 @@ export const ProblemNormalPage: React.FC<Props> = ({
                         <button
                             className={styles.changeCategoryButton}
                             onClick={() => setChangeSubcategoryModalIsOpen(true)}
-                            >Change Category or Subcategory</button>
+                            >Change Category</button>
+                        <button
+                            className={styles.changeCategoryButton}
+                            onClick={() => setChangeSubcategoryModalIsOpen(true)}
+                            >本日はもう表示しない</button>
                     </div>
                 </div>
 
@@ -222,17 +226,13 @@ export const ProblemNormalPage: React.FC<Props> = ({
                         ${styles.solvedButton}
                     `} 
                     onClick={onSolved}
-                >
-                    解けた
-                </button>
+                >解けた</button>
                 <button 
                     className={`${styles.actionButton} ${styles.unsolvedButton}`} 
                     onClick={onUnsolved}
-                >
-                    解けなかった
-                </button>
+                >解けなかった</button>
             </div>
         </div>
-    );
-};
+    )
+}
 
