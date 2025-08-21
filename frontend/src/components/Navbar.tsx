@@ -6,11 +6,13 @@ import styles from "./Navbar.module.css";
 import { useNavbar } from "./useNavbar";
 import { useAuth } from "../context/AuthContext"
 import { checkAuth } from "../api/AuthAPI"
+import { useTheme } from "../context/ThemeContext"
 
 const Navbar: React.FC = () => {
     const { handleJsonExport, handleCSVExport } = useNavbar();
 
-    const { isAuth, setIsAuth } = useAuth();
+    const { isAuth, setIsAuth } = useAuth()
+    const { theme, toggleTheme } = useTheme()
 
     useEffect(()  => {
         (async () => {
@@ -62,6 +64,11 @@ const Navbar: React.FC = () => {
                         <div className={styles.tooltip2} onClick={handleCSVExport}>CSVでexport</div>
                     </div>
                     <Link to="/report_page">回答レポートを表示</Link>
+                    <button onClick={toggleTheme}>
+                        {theme === "light" ? "🌙 ダークモード" : "☀️ ライトモード"}
+                    </button>
+
+                    
                 </>
             )}
         </nav>

@@ -75,7 +75,6 @@ export const useCategories = (
             const count = await fetchPageCount();
             setPageCount(count)
 
-
             const questionCount = await fetchQuestionCount()
             setQuestionCount(questionCount)
             const uncorrectedQuestionCount = await fetchUncorrectedQuestionCount()
