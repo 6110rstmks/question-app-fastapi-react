@@ -66,6 +66,7 @@ class Question(Base):
     # solved_status = Column(Enum(SolutionStatus), nullable=False, default=SolutionStatus.Incorrect)
     answer_count = Column(Integer, nullable=False, default=0)
     last_answered_date = Column(Date, default=func.current_date())
+    # deleted_at = Column(Date, nullable=True)
     
     subcategories = relationship("SubcategoryQuestion", back_populates="question")
     categories = relationship("CategoryQuestion", back_populates="question")
