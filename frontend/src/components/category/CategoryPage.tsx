@@ -79,7 +79,7 @@ const CategoryPage: React.FC = () => {
                 </div>
             </div>
 
-            <div className={styles.searchSection}>
+            <search className={styles.searchSection}>
                 <div className={styles.searchContainer}>
                     <input
                     type="text"
@@ -90,7 +90,9 @@ const CategoryPage: React.FC = () => {
                     autoFocus
                     />
                 </div>
-            </div>
+            </search>
+
+
             <div className={styles.topContainer}>     
                 <div>
                     {subcategories.map((subcategory: SubcategoryWithQuestionCount) => (

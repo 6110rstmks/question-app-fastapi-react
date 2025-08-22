@@ -51,7 +51,9 @@ const SetProblemPage: React.FC = () => {
             )}
 
             <div>
+                <button onClick={handleTodayReview}>前日といた問題を復習</button>
                 <button onClick={handleTodayReview}>今日といた問題を復習</button>
+                <div>前日の日付: {formatMonthDay(new Date(new Date().setDate(new Date().getDate() - 1)))}（）</div>
                 <div>本日の日付: {formatMonthDay(new Date())}（）</div>
                 <div>翌日の日付: {formatMonthDay(new Date(new Date().setDate(new Date().getDate() + 1)))}</div>
             </div>

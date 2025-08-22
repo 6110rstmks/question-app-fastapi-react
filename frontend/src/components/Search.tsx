@@ -65,7 +65,7 @@ const Search: React.FC<SearchProps> = ({
     }
 
     return (
-        <div className={styles.searchSection}>
+        <search className={styles.searchSection}>
           <div className={styles.searchContainer}>
             <input
                 type="text"
@@ -80,7 +80,7 @@ const Search: React.FC<SearchProps> = ({
                         : searchAnswerWord
                 }
                 onChange={handleSearch}
-                onKeyDown={handleKeyDown}  // ← Enter検知用
+                onKeyDown={handleKeyDown}
                 placeholder={`${
                     type === 'category'
                     ? 'カテゴリ'
@@ -93,7 +93,7 @@ const Search: React.FC<SearchProps> = ({
                 autoFocus={autoFocus}
             />
           </div>
-        </div>
+        </search>
     )
 }
 
