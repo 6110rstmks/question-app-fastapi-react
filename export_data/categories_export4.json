@@ -22501,7 +22501,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "殷後期の都の遺跡をなんというか",
@@ -22609,7 +22609,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "唐は征服地に何をおいたか　",
@@ -22645,7 +22645,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "八王の乱はどの国の反乱か",
@@ -22711,6 +22711,15 @@
                             "last_answered_date": "2025-08-21"
                         },
                         {
+                            "problem": "明の建国者が台頭するきっかけとなった、元末におこった白蓮教徒を中心とする反乱はなにか",
+                            "answer": [
+                                "紅巾の乱"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-23"
+                        },
+                        {
                             "problem": "秦が定めた統一貨幣の名称は何か",
                             "answer": [
                                 "半両銭"
@@ -22727,6 +22736,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "朱元璋が明を建国した後の皇帝としての尊号は",
+                            "answer": [
+                                "洪武帝"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "晋から自立した三国のうち、もっとも北方に位置した国はどこか。",
@@ -22753,16 +22771,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
-                        },
-                        {
-                            "problem": "洛陽を都とした王朝である後漢の初代皇帝は誰か",
-                            "answer": [
-                                "劉秀"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-20"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "周の王朝が領土を有力な一族や功臣に分け与え、地方の統治を任せることで支配をおこなった制度を何というか？",
@@ -22889,17 +22898,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-03"
-                        },
-                        {
-                            "problem": "第1回三頭政治に登場する政治家を3名答えよ。",
-                            "answer": [
-                                "カエサル",
-                                "ポンペイウス",
-                                "クラッスス"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
                         },
                         {
                             "problem": "黄河文明　文化二つ",
@@ -23271,6 +23269,17 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "第1回三頭政治に登場する政治家を3名答えよ。",
+                            "answer": [
+                                "カエサル",
+                                "ポンペイウス",
+                                "クラッスス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-21"
                         },
                         {
                             "problem": "スパルタに征服された奴隷農民は",
@@ -23704,6 +23713,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "エジプト新王国の滅亡後、前10世紀後半から後4世紀頃にかけて、ナイル川上流に続いた黒人王国はなに",
+                            "answer": [
+                                "クシュ王国"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
                         }
                     ]
                 }
@@ -23911,6 +23929,15 @@
                                 ""
                             ],
                             "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
+                        },
+                        {
+                            "problem": "from typing import TypeVar, List\n\nT_co = TypeVar('T_co', covariant=True)\nT_contra = TypeVar('T_contra', contravariant=True)\n\nclass Animal:\n    def make_sound(self):\n        return \"Some sound\"\n\nclass Dog(Animal):\n    def make_sound(self):\n        return \"Woof!\"\n\nclass Cat(Animal):\n    def make_sound(self):\n        return \"Meow!\"\n\ndef print_animal_sounds(animals: List[T_co]) -> List[str]:\n    return [animal.make_sound() for animal in animals]\n\ndef feed_animals(feeder: callable[[T_contra], None], animals: List[T_contra]) -> None:\n    for animal in animals:\n        feeder(animal)\n\n# 使用例\ndogs = [Dog(), Dog()]\ncats = [Cat(), Cat()]\nanimals = [Dog(), Cat()]\n\nprint(\"犬の鳴き声:\", print_animal_sounds(dogs))\nprint(\"猫の鳴き声:\", print_animal_sounds(cats))\nprint(\"動物の鳴き声:\", print_animal_sounds(animals))\n\ndef feed_dog(dog: Dog):\n    print(\"犬にエサをあげました\")\n\nfeed_animals(feed_dog, dogs)\n# feed_animals(feed_dog, cats)  # これは型エラーになります\nfeed_animals(feed_dog, animals)  # これは許可されます（反変性により）",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "https://jp-seemore.com/iot/python/29414/",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-22"
                         },
