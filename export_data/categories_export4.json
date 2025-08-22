@@ -8134,7 +8134,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "チロシンキナーゼファミリー2",
@@ -9056,7 +9056,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "インターネット上のドメイン名はどこに管理されている",
@@ -9609,7 +9609,7 @@
                             "answer": [
                                 ""
                             ],
-                            "memo": "",
+                            "memo": "SELECT\n    COUNT(CASE WHEN status = 'completed' THEN 1 END) AS completed_count,\n    COUNT(CASE WHEN status = 'pending' THEN 1 END)   AS pending_count\nFROM orders;\n",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-08"
                         }
@@ -12245,7 +12245,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-08"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "ブルートフォース攻撃が攻撃対象IDを固定してパスワードを総当たりで試すのとは逆に、パスワードを1つに固定し、利用者IDを総当りで試していくことで不正ログインを試みるパスワードクラック手法をなんという",
@@ -20356,7 +20356,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-08"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "1726nmのレーザーであるアビクリアは何をターゲットとしているか",
@@ -21366,7 +21366,7 @@
                             ],
                             "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         }
                     ]
                 },
@@ -22062,6 +22062,15 @@
                             "last_answered_date": "2025-08-20"
                         },
                         {
+                            "problem": "イスラーム神秘主義を表す語",
+                            "answer": [
+                                "スーフィズム"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-21"
+                        },
+                        {
                             "problem": "ベトナム北部にて元の侵攻撃退を退けた国",
                             "answer": [
                                 "陳朝　ちんちょう"
@@ -22346,6 +22355,15 @@
                             "last_answered_date": "2025-08-16"
                         },
                         {
+                            "problem": "迫害を逃れたム ハンマドがイスラーム教徒(ムスリム)の共同体 (ウンマ)を建設した都市は",
+                            "answer": [
+                                "メディナ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-21"
+                        },
+                        {
                             "problem": "ユダ王国が新バビロニアに征服されて、住民の多くがバビロンに連れ去られた出来事を何というか。",
                             "answer": [
                                 "バビロン捕囚"
@@ -22510,7 +22528,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "匈奴に追われてイリ地方に移り、さらに烏孫に追われてバクトリア地方に映った月氏が建てた国名は",
@@ -22555,7 +22573,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "唐は征服地に何をおいたか　",
@@ -22564,7 +22582,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-21"
                         },
                         {
                             "problem": "反乱軍から唐に降った節度使の（A）により907年に唐は滅ぼされた。",
@@ -22573,7 +22591,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "西晋滅亡後、江南に逃れて東晋を建てた人物は",
@@ -22591,7 +22609,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "八王の乱はどの国の反乱か",
@@ -22601,6 +22619,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-20"
+                        },
+                        {
+                            "problem": "楊炎は中国のどの時代（国）の人物か",
+                            "answer": [
+                                "唐"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "たび重なる外征の結果、財政難になったために塩・鉄・酒の専売を行なったが、それは誰か",
@@ -22619,6 +22646,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-17"
+                        },
+                        {
+                            "problem": "前漢の初代皇帝は",
+                            "answer": [
+                                "劉邦"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "中国最古の王朝",
@@ -22753,7 +22789,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "武帝はたび重なる外征の結果、財政難になったために専売を行ったが、この専売を行った3つの商品をあげよ。",
@@ -22797,7 +22833,7 @@
                                 "班超はんちょう"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-08-21"
                         },
                         {
@@ -23374,7 +23410,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "エジプト古王国の首都は",
@@ -23497,20 +23533,20 @@
                         {
                             "problem": " エジプトがイスラエルにシナイ半島を占領された戦争は",
                             "answer": [
-                                "第3次中東戦争で、"
+                                "第3次中東戦争"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
-                            "problem": "19世紀末から20世紀にかけて、（A）という国はロシアとの再保障条約を破棄して、海軍を増強し、積極的な海外膨張策をとった",
+                            "problem": "19世紀末から20世紀にかけて、（A）はロシアとの再保障条約を破棄して、海軍を増強し、積極的な海外膨張策をとった",
                             "answer": [
                                 "ドイツ"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "1954年、南アジア地域の首相がスリランカで開いた会議は？",
