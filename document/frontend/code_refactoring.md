@@ -50,3 +50,7 @@ ex. firstDispTime
 ## 変数、関数名の命名規則
 countはcntと略さず、countとする。
 buttonはbtnと略さず、buttonとする。
+
+
+## 無理に共通化をしない方が自然な関数
+handleAddSubcategory

@@ -43,7 +43,6 @@ export const useCategoryBox = ({
         }
 
         const response = await createSubcategory(inputSubcategoryName, categoryId)
-
         const data = await response.json() as SubcategoryWithQuestionCount
 
         if (subcategoriesWithQuestionCount.length < 6) {

@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
-import { createCategory } from "../../api/CategoryAPI";
+import React, { useState } from "react"
+import { useNavigate } from "react-router"
+import { createCategory } from "../../api/CategoryAPI"
 
 const CategoryCreate: React.FC = () => {
-    const [categoryName, setCategoryName] = useState<string>("");
-    const [errMessage, setErrorMessage] = useState<string>("");
+    const [categoryName, setCategoryName] = useState<string>("")
+    const [errMessage, setErrorMessage] = useState<string>("")
     const navigate = useNavigate();
 
     const handleAddCategory = async () => {
-        const response = await createCategory(categoryName);
+        if (!categoryName.trim()) {
+            setErrorMessage("カテゴリー名を入力してください")
+            return
+        }
+        const response = await createCategory(categoryName)
         if (!response.ok) {
-            const data = await response.json();
-            setErrorMessage(data.detail);
+            const data = await response.json()
+            setErrorMessage(data.detail)
         } else {
-            navigate("/");
+            navigate("/")
         }
     }
 
