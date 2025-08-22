@@ -3897,8 +3897,8 @@
                                 "二点間の距離公式にピタゴラスの定理を利用した距離"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-06"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "triangle similarity criteriaを答えて3",
@@ -7331,6 +7331,24 @@
                             "last_answered_date": "2025-04-08"
                         },
                         {
+                            "problem": "細胞と細胞外基質（ECM: extracellular matrix）との接着を仲介するタンパク質は",
+                            "answer": [
+                                "integrin"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
+                        },
+                        {
+                            "problem": "細胞外基質（ECM）を構成する糖タンパク質をひとつあげて",
+                            "answer": [
+                                "ラミニン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
+                        },
+                        {
                             "problem": "電荷をもつ分子やイオンはは細胞膜を通過できるか？",
                             "answer": [
                                 "できない"
@@ -7475,7 +7493,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "ラメラ構造は表皮、真皮、皮下組織のどこにあるか",
@@ -8134,7 +8152,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "チロシンキナーゼファミリー2",
@@ -8757,7 +8775,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU1JiS1suZRmy5N0bG_woS0G-uvEwz4KnaVg&s",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "1996年以降の金融政策の手段になっている、債券の売買などを通して通貨量の調整を図る方法を何というか。",
@@ -13597,8 +13615,8 @@
                                 "自由落下"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "物体を回転させる力を何という？",
@@ -14423,8 +14441,8 @@
                                 "気候因子は原因で気候要素は結果\nつまり因果\n\n緯度や高度、地形や海流などを気候因子という。"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-13"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "特殊な名前が付けられている地域性の強いかぜのことを何という",
@@ -14809,8 +14827,8 @@
                                 "乾燥地帯にあるため、水がどんどん蒸発して、塩分濃度が高い。"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "シベリア南部にある三日月型の断層湖はなんですか？",
@@ -15580,7 +15598,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-20"
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "大きな山脈の風下側にできる 砂漠をなんという",
@@ -15617,6 +15635,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-01"
+                        },
+                        {
+                            "problem": "中国の桂林では何がみられるか",
+                            "answer": [
+                                "カルスト地形"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "「世界の屋根」と呼ばれる中央アジアの高原は",
@@ -16482,8 +16509,8 @@
                                 "エニセイ川"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "イタリアの左には何の国がある？",
@@ -16738,7 +16765,7 @@
                             ],
                             "memo": "https://healthy-live.jp/guilin/image/map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-17"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "ホワイ川の上にはなんの川がある？",
@@ -16894,6 +16921,15 @@
                             "memo": "https://hugkum.sho.jp/wp-content/uploads/2024/08/26101170-1024x889.jpg",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "エニセイ川の左にある川は",
+                            "answer": [
+                                "オビ川"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
                         }
                     ]
                 },
@@ -17029,11 +17065,11 @@
                         {
                             "problem": "オランダの首都アムステルダムAmsterdamはなにの加工で有名？",
                             "answer": [
-                                "ダイアモンド"
+                                "diamond"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "ターチンは何の資源で有名か",
@@ -17359,7 +17395,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "プライメートシティの例5",
@@ -17791,8 +17827,8 @@
                                 "1"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-14"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "村落の分類2",
@@ -18953,7 +18989,7 @@
                         {
                             "problem": "自由の女神はアメリカのどの都市にある",
                             "answer": [
-                                "ニューヨーク"
+                                "New York\n"
                             ],
                             "memo": "",
                             "is_correct": 2,
@@ -18993,7 +19029,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "ブラジルでは大土地所有制のことをなんとよぶ",
@@ -19080,7 +19116,7 @@
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/c/c/350/img_cc04eee1c0eec0151bb3f4c1f75a0b06128465.jpg",
                             "is_correct": 2,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "かつて満州国があったのは東北、華北、華中、華南のどこか",
@@ -19364,13 +19400,13 @@
                             "last_answered_date": "2025-05-25"
                         },
                         {
-                            "problem": "ヴォルタ川とエニセイ川とレナ川はどこに注ぎ込むか",
+                            "problem": "オビ川とエニセイ川とレナ川はどこに注ぎ込むか",
                             "answer": [
                                 "北極海"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "世界最大の湖は？",
@@ -19811,8 +19847,8 @@
                                 "離水海岸"
                             ],
                             "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n\n沈水海岸\n海面が上昇したり、陸地が沈降したりすることで、　海岸付近の陸地が水の中に沈んでできた海岸地形\n\n離水海岸\n海面が下降したり、陸地が隆起したりすることで、　浅い海底が陸の上に現れてできた海岸地形",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "沈水海岸を英語で",
@@ -20301,7 +20337,7 @@
                                 "エキスパートモード"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-08-22"
                         },
                         {
@@ -20355,7 +20391,7 @@
                                 "1726nm"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-08-22"
                         },
                         {
@@ -20885,8 +20921,8 @@
                                 "MMK"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "Azureにおいてリソースに対して、どのようなアクションがあったかを記録するログは？",
@@ -21359,14 +21395,14 @@
                             "last_answered_date": "2025-07-05"
                         },
                         {
-                            "problem": "Azure NSGと同じく、トラフィックを制御する機能としてAzure Firewallがあるが、これらの動作対象の違いは",
+                            "problem": "トラフィックを制御する機能としてAzure NSGとトAzure Firewallがあるが、これらの動作対象の違いは",
                             "answer": [
                                 "NsG→サブネットもしくは仮想マシンのNIC（Network Interface Card）上で機能する",
                                 "FirewallはVNetとインターネットの境界で機能する。つまり、Azure Firewallの保護範囲は仮想ネットワーク全体"
                             ],
                             "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-23"
                         }
                     ]
                 },
@@ -22050,7 +22086,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-15"
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "対比列伝は誰が書いた",
@@ -22068,7 +22104,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "ベトナム北部にて元の侵攻撃退を退けた国",
@@ -22361,7 +22397,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "ユダ王国が新バビロニアに征服されて、住民の多くがバビロンに連れ去られた出来事を何というか。",
@@ -22591,7 +22627,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "西晋滅亡後、江南に逃れて東晋を建てた人物は",
@@ -22635,8 +22671,8 @@
                                 "武帝"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "班超はどこの国の武将か",
@@ -22873,7 +22909,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "殷では何政治が行われた",
@@ -23117,7 +23153,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-22"
                         },
                         {
                             "problem": "コリントス同盟はほとんどのギリシア諸ポリスは参加したがある国は不参加。どこの国",
@@ -23410,7 +23446,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-23"
                         },
                         {
                             "problem": "エジプト古王国の首都は",
@@ -23543,6 +23579,15 @@
                             "problem": "19世紀末から20世紀にかけて、（A）はロシアとの再保障条約を破棄して、海軍を増強し、積極的な海外膨張策をとった",
                             "answer": [
                                 "ドイツ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
+                        },
+                        {
+                            "problem": "1940年、フランスはドイツに降伏し、フランスの北半はドイツが占領、南半には（A）を首都とする対ドイツ協力政府が成立した。",
+                            "answer": [
+                                "ヴィシー"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -23852,6 +23897,24 @@
                     "name": "typing",
                     "questions": [
                         {
+                            "problem": "pythonのtypingライブラリのTypeVarはどういう場合に用いるか",
+                            "answer": [
+                                "処理は同じで引数や戻り値の型のみが異なる場合"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
+                        },
+                        {
+                            "problem": "typingライブラリのUnionはpython3.10以降も使用されている？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
+                        },
+                        {
                             "problem": "pythonのtyping libraryのTypevarはなに",
                             "answer": [
                                 "型を入れる変数、型変数です。\nこれを引数の型に指定することで呼び出し時に型が決まる汎用的(＝ジェネリック)な関数/クラスを作ることができます。"
@@ -23877,6 +23940,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "from typing import TypeVar\n\nT = TypeVar(\"T\", int, float)\n\n\ndef add_one_to_t_arg(arg: T) -> T:\n    return arg + 1\n\n関数add_one_to_tg_argの引数と返り値の型には何が保証されるか",
+                            "answer": [
+                                "arg の型が int のときの返り値の型は int、 arg の型が float のときの返り値の型は float である。\nつまり引数のデータ型と返り値のデータ型が同じであることが保証される。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
                         }
                     ]
                 },
