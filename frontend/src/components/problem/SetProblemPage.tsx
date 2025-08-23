@@ -5,11 +5,10 @@ import Calendar from '../Calendar'
 import { SolutionStatus } from '../../types/SolutionStatus'
 
 const SetProblemPage: React.FC = () => {
-    const [isDisplayCalendar, setIsDisplayCalendar] = useState<boolean>(false)
-
-    const toggleCalendar = () => {
-        setIsDisplayCalendar(prev => !prev)
-    }
+    const [
+        isDisplayCalendar, 
+        setIsDisplayCalendar
+    ] = useState<boolean>(false)
 
     // 月/日形式でフォーマット（例: 8/5）
     const formatMonthDay = (date: Date) =>
@@ -34,15 +33,18 @@ const SetProblemPage: React.FC = () => {
 
     return (
         <div>
-            <div className={styles.header}>
-                <button onClick={toggleCalendar}>カレンダーから問題を復習</button>
-            </div>
+        <div className={styles.header}>
+            <button onClick={() => setIsDisplayCalendar(prev => !prev)}>
+                カレンダーから問題を復習
+            </button>
+        </div>
+
 
             {/* Calendar Modal */}
             {isDisplayCalendar && (
                 <div className={styles.modalOverlay}>
                     <div className={styles.modalContent}>
-                        <button className={styles.closeButton} onClick={toggleCalendar}>
+                        <button className={styles.closeButton} onClick={() => setIsDisplayCalendar(prev => !prev)}>
                             ✕
                         </button>
                         <Calendar />
