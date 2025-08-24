@@ -4,7 +4,10 @@ import styles from "./CategoryBox.module.css"
 import { Category } from "../../types/Category"
 import { SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
-import { handleNavigateToCategoryPage, handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
+import { 
+    handleNavigateToCategoryPage, 
+    handleNavigateToSubcategoryPage 
+} from '../../utils/navigate_function'
 // import { TiPinOutline, TiPin } from "react-icons/ti";
 
 interface CategoryBoxProps {
@@ -20,8 +23,8 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     searchQuestionWord,
     searchAnswerWord
 }) => {
-    const [showForm, setShowForm] = useState<boolean>(false);
-    const [isPinned, setIsPinned] = useState(false);
+    const [showForm, setShowForm] = useState<boolean>(false)
+    const [isPinned, setIsPinned] = useState<boolean>(false)
 
     const { 
         subcategoriesWithQuestionCount,
@@ -36,9 +39,9 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         searchSubcategoryWord,
         searchQuestionWord,
         searchAnswerWord
-    });
+    })
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     return (
         <div className={styles.categoryBox} key={category.id} ref={categoryBoxRef}>
