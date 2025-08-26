@@ -5296,8 +5296,8 @@
                                 "どうもぎんこにあえんCu Ag Co Ni Zn"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "molten salt electrolysisを使って生成されるmetalの特徴は？",
@@ -6072,8 +6072,8 @@
                                 "受容体に結合"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "神経板を英語でなんという",
@@ -6109,7 +6109,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-19"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "減数分裂において、第二分裂が終わった後の細胞あたりのDNA量を１とした時、間期の細胞分裂の最初の細胞あたりのDNA量は？",
@@ -7362,11 +7362,11 @@
                         {
                             "problem": "ホルモンや神経伝達物質などの細胞外情報物質が細胞膜に存在する受容体と結合することによって細胞内で新たに生成される別種の細胞内情報物質をなんという",
                             "answer": [
-                                "セカンドメッセンジャー"
+                                "Second messenger"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "細胞外基質（ECM）を構成する糖タンパク質をひとつあげて",
@@ -8049,7 +8049,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-19"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "TNFとは腫瘍壊死因子（Tumor Necrosis Factor）で何の一種か",
@@ -8118,11 +8118,11 @@
                         {
                             "problem": "単一の抗体産生細胞に由来するクローンから作られている抗体をなんという",
                             "answer": [
-                                "モノクローナル抗体Monoclonal antibody\n"
+                                "Monoclonal antibody\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "プロトピック軟膏の有効成分は",
@@ -8151,7 +8151,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "サイトカインの種類2",
@@ -8316,8 +8316,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpywUUQH89rBWlt7amEnBHlozUY74EbBp-WQ&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "大臀筋（だいでんきん）どこにあるか",
@@ -8382,6 +8382,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-23"
+                        },
+                        {
+                            "problem": "収縮速度の速く、大きな力を短時間に発揮することができ、瞬発力やパワーが必要な運動を行うときに活躍するのは速筋かそれとも遅筋か",
+                            "answer": [
+                                "速筋"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 },
@@ -8837,7 +8846,7 @@
                             "last_answered_date": "2025-08-23"
                         },
                         {
-                            "problem": "個体群の分布様式",
+                            "problem": "個体群の分布様式3",
                             "answer": [
                                 "集中分布",
                                 "一様分布",
@@ -8845,7 +8854,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "個体数の推定方法2つ",
@@ -9394,7 +9403,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "機械学習のプロセスを効率化し、専門知識を持たない人々でも活用できる技術のことを何という",
@@ -9500,13 +9509,13 @@
                             "last_answered_date": "2025-08-25"
                         },
                         {
-                            "problem": "ファインチューニングとは",
+                            "problem": "fine-tuningとは",
                             "answer": [
                                 "既に学習済のモデルを、新たなデータを使って追加学習を行うというもの"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "TF（Term Frequency）とは何を意味しますか？",
@@ -9682,8 +9691,8 @@
                                 "トランザクション内の処理がすべて実行されるか、または全く実行されないことを保証する特性。トランザクションはコミットまたはロールバックのいずれかで終了することで確保する"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "スループットとは。時間あたりの（A）",
@@ -9711,6 +9720,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-24"
+                        },
+                        {
+                            "problem": "データベースとアプリケーションの接続（コネクション）を再利用する仕組みのことをなんという",
+                            "answer": [
+                                "connection pooling"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 },
@@ -10039,7 +10057,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "pay-as-you-go 日本語に訳すと",
@@ -12114,6 +12132,24 @@
                             "last_answered_date": "2025-05-14"
                         },
                         {
+                            "problem": "fine gold",
+                            "answer": [
+                                "純金"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
+                        },
+                        {
+                            "problem": "fine adjacetment",
+                            "answer": [
+                                "微調整"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
+                        },
+                        {
                             "problem": "Please expedite the delivery as soon as possible",
                             "answer": [
                                 "できるだけ早く迅速な配達をお願い\n"
@@ -12256,6 +12292,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-24"
+                        },
+                        {
+                            "problem": "The beach has fine white sand.",
+                            "answer": [
+                                "細かい白い砂がある。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 },
@@ -12492,15 +12537,6 @@
                             "last_answered_date": "2025-06-15"
                         },
                         {
-                            "problem": "securityにおいてIPS( Intrusion Prevention System)とはなにか",
-                            "answer": [
-                                "サーバやネットワークへの侵入を防ぐために不正な通信を検知して遮断する装置"
-                            ],
-                            "memo": "FE出題",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
-                        },
-                        {
                             "problem": "主にインターネットVPNを実現するためのプロトコルは",
                             "answer": [
                                 "IPsec"
@@ -12527,6 +12563,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-05"
+                        },
+                        {
+                            "problem": "securityにおいてサーバやネットワークへの侵入を防ぐために不正な通信を検知して遮断する装置はなんですか",
+                            "answer": [
+                                "IPS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "kerberos認証の代表例は",
@@ -12855,6 +12900,15 @@
                 {
                     "name": "GPG",
                     "questions": [
+                        {
+                            "problem": "コマンドラインで新しい RSA 鍵ペア（鍵長 4096 ビット）を作成するコマンドを示",
+                            "answer": [
+                                "gpg --full-generate-key\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
+                        },
                         {
                             "problem": "GPGの主な機能は2",
                             "answer": [
@@ -14406,15 +14460,15 @@
                             "last_answered_date": "2025-03-10"
                         },
                         {
-                            "problem": "恒常風3つ",
+                            "problem": "恒常風3",
                             "answer": [
                                 "貿易風Trade winds",
                                 "極東風",
                                 "偏西風"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-03-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "季節風が起きる要因として覚えるフレーズとして「陸地は（A）しやすく、（B）しやすい」",
@@ -16030,8 +16084,8 @@
                                 ""
                             ],
                             "memo": "https://oke-files.s3.amazonaws.com/uploads/qMtw0JquiE9sl/a64389c45c9b44349086926c289c6566.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-20"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "フィリピンのミンダナオ島はどこか",
@@ -16229,7 +16283,7 @@
                             ],
                             "memo": "\nhttps://chiri-tabi.com/img/reverlake.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "ヴォルタ川はどこにありますか？",
@@ -16320,7 +16374,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWhvexMmnRyW8EQwS1dfp9GD3T40xRiF7HDw&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "エジプトの左と下はなんですか",
@@ -16472,11 +16526,11 @@
                         {
                             "problem": "ペルシャ湾の左には何の国がある？",
                             "answer": [
-                                "サウジアラビアSaudi Arabia\n"
+                                "Saudi Arabia\n"
                             ],
                             "memo": "https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXMZO4605511013062019I00004-2.jpg?ixlib=js-3.8.0&w=696&h=696&auto=format%2Ccompress&fit=crop&bg=FFFFFF&s=32aeb379be32462dc8c071093bbbe751\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg　",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "ガーナの左にはなんの国がある？",
@@ -16522,7 +16576,7 @@
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "ニュージーランドおよび日付変更線以東なのはポリネシア、ミクロネシア？",
@@ -16629,8 +16683,8 @@
                                 "チリChile"
                             ],
                             "memo": "https://hugkum.sho.jp/wp-content/uploads/2024/05/18548.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "アンデス山脈の場所は",
@@ -16665,8 +16719,8 @@
                                 ""
                             ],
                             "memo": "https://exam.fukuumedia.com/wp-content/uploads/2019/11/greatprenzuprean.png",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "カラクム砂漠はどこの国にある？",
@@ -16844,11 +16898,11 @@
                         {
                             "problem": "ペニン山脈はどこの国にあるか",
                             "answer": [
-                                "イギリス"
+                                "United Kingdom\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "スウェーデンの左にある国は",
@@ -17076,7 +17130,7 @@
                             ],
                             "memo": "https://imidas.jp/library/img/genre/z-D-123-001_sp.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "アマゾン盆地とブラジル高原ではどちらが北にあるか",
@@ -17095,6 +17149,24 @@
                             "memo": "https://hugkum.sho.jp/wp-content/uploads/2024/08/26101170-1024x889.jpg",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "ウラル山脈とオビ川ではどちらが東側にあるか",
+                            "answer": [
+                                "オビ川"
+                            ],
+                            "memo": "https://satoru-world.net/wp-content/uploads/2023/04/russiageo.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-27"
+                        },
+                        {
+                            "problem": "イベリア半島はどこか",
+                            "answer": [
+                                "https://www.icruises.jp/area/uploads/202410/iberianpeninsula-map.jpg"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "エニセイ川の左にある川は",
@@ -17682,7 +17754,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "ベトナムの首都は",
@@ -17700,7 +17772,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "カナダにおいてフランス系住民が多い州はどこ？",
@@ -17708,8 +17780,8 @@
                                 "Québec City\n"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-02"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "ロシアの首都",
@@ -17799,8 +17871,8 @@
                                 "アネクメーネ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "アメリカの首都",
@@ -17863,7 +17935,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 },
@@ -17969,7 +18041,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 },
@@ -18586,7 +18658,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "低緯度の山地で見られる、赤道地帯の特徴を持ちながら全体的に気温が下がった気候のことを何という？",
@@ -19636,7 +19708,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 },
@@ -20018,11 +20090,11 @@
                         {
                             "problem": "浅い海底が隆起または海面の低下した海岸を何と言う",
                             "answer": [
-                                "離水海岸"
+                                "離水海岸Emergent coastline"
                             ],
                             "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n\n沈水海岸\n海面が上昇したり、陸地が沈降したりすることで、　海岸付近の陸地が水の中に沈んでできた海岸地形\n\n離水海岸\n海面が下降したり、陸地が隆起したりすることで、　浅い海底が陸の上に現れてできた海岸地形",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "沈水海岸を英語で",
@@ -20214,8 +20286,8 @@
                                 "レーザー"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-12"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "Vビームの波長は",
@@ -20501,8 +20573,8 @@
                                 "施術時の血管収縮が起こらない)ため「赤みに効果が高い"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "ノーリスは二つのモードを設定できる",
@@ -20634,8 +20706,8 @@
                                 "真皮"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-07"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "ベピオウォッシュゲル5％は何に対する薬か",
@@ -20679,8 +20751,8 @@
                                 "真皮"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "日焼け止めに書いてあるPAはUV-A、UV-B、UV-Cのうちどれに対して効果があるのか",
@@ -20697,8 +20769,8 @@
                                 "問題ない"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-27"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "SPFはUV-A、UV-B、UV-Cのうちどれに対する防止効果があるか",
@@ -20706,8 +20778,8 @@
                                 "UV-B"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "エモリエントの代表的なものは",
@@ -20733,8 +20805,8 @@
                                 "尋常性ざしょう"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "シミの正式名称",
@@ -20742,8 +20814,8 @@
                                 "老人性色素斑"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-22"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "肌の毛穴内に存在するアクネ菌の代謝産物は何？",
@@ -21097,6 +21169,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-22"
+                        },
+                        {
+                            "problem": "Azure で提供される AI サービスを 1 つの開発環境にまとめたものをなんという",
+                            "answer": [
+                                "AI foundry"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "Azureにおいてリソースに対して、どのようなアクションがあったかを記録するログは？",
@@ -21604,8 +21685,8 @@
                                 "検索サービスで使用するデータをインデックス化するためのツールです"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "Azure AI Searchでのインデックスのドキュメントのファイル形式は",
@@ -21632,7 +21713,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "AI Searchに対しての接続方法2",
@@ -21659,8 +21740,8 @@
                                 "エンリッチメント"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         }
                     ]
                 },
@@ -21770,8 +21851,8 @@
                                 "A/B テストの実施"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "App1 という名前の App Service を含む Azure サブスクリプションを持っています。App1 は S1 プランの App Service プラン上にホストされています。  あなたは、App1 に www.contoso.com というカスタムドメインを追加する予定です。最初に何をすべきですか？",
@@ -22102,7 +22183,7 @@
                             ],
                             "memo": "不要に state を増やさず、データの “唯一の情報源 (Single Source of Truth)” を維持する ための考え方",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 }
@@ -22292,7 +22373,575 @@
             ]
         },
         {
-            "name": "World History",
+            "name": "GitHub Actions",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "GitHub Actionsのワークフローのトップレベルを構成するキーは？5",
+                            "answer": [
+                                "name",
+                                "on",
+                                "env",
+                                "permission",
+                                "jobs",
+                                "concurrency"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "GitHub Actions において アクション（uses を使うステップ）に引数を渡すための構文は何か",
+                            "answer": [
+                                "with"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-05"
+                        },
+                        {
+                            "problem": "GitHub Actionsワークフローにおいてon:   workflow_call:の利用用途は",
+                            "answer": [
+                                "共通処理をモジュール化して再利用する際に使用する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "GitHub Actions のself-hosted runner ",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Docker",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "docker buildも含めたdocker composeの起動コマンドは？",
+                            "answer": [
+                                "docker-compose up -d --build"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dockerfile",
+                    "questions": [
+                        {
+                            "problem": "DOCKERFILEのマルチステージビルド",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
+                        },
+                        {
+                            "problem": "Dockerfileの命令であるRUN and ENTRYPOINT違い",
+                            "answer": [
+                                "ENTRYPOINT：コンテナ起動時に実行されるデフォルトコマンドを定義する。\nRUN：イメージ作成時に一度だけコマンドを実行し、結果をイメージに保存する。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "Dockerfile 内での作業ディレクトリを指定する命令は",
+                            "answer": [
+                                "WORKDIR"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-24"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "python",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "pythonにおいてPYTHONPATH 環境変数で指定したディレクトリはどのライブラリの何に追加されるか",
+                            "answer": [
+                                "sys.path"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-21"
+                        },
+                        {
+                            "problem": "WSGIは並列処理が可能か",
+                            "answer": [
+                                "不可能"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "pythonにおいて絶対インポートは（A）にあるディレクトリを起点にモジュールを探す",
+                            "answer": [
+                                "sys.path"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-20"
+                        },
+                        {
+                            "problem": "os.pathとの代替機能ライブラリ",
+                            "answer": [
+                                "pathlib"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "in python, yeild vs return keyword",
+                            "answer": [
+                                "Unlike the return keyword which stops further execution of the function, the yield keyword continues to the end of the function."
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "python のパッケージマネージャー3つ",
+                            "answer": [
+                                "pip",
+                                "poetry",
+                                "uv"
+                            ],
+                            "memo": "uvはrust製",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "pythonにおいて__init__.py の役割とは",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "nums = [48, 6, 9, 21, 1]\n\nsquare_all = map(lambda num: num ** 2, nums)\n\nprint(square_all)\n\n出力値はどうなる\nlambda expression",
+                            "answer": [
+                                "[2304, 36, 81, 441, 1]\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-07"
+                        },
+                        {
+                            "problem": "raise_to_power = lambda x, y: x ** y\n\nraise_to_power(2, 3)\n\nどうなる出力値",
+                            "answer": [
+                                "2 ** 3（= 8）を返します。"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-26"
+                        }
+                    ]
+                },
+                {
+                    "name": "typing",
+                    "questions": [
+                        {
+                            "problem": "typingライブラリのUnionはpython3.10以降も使用されている？",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
+                        },
+                        {
+                            "problem": "pythonのtyping libraryのGenericは何？",
+                            "answer": [
+                                "クラスに型パラメータTを受け入れる  Generic[T]\t"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "from typing import Generic, TypeVar\n\nT = TypeVar('T')  # 型変数 T を定義\n\nclass Box(Generic[T]):\n    def __init__(self, content: T):\n        self.content = content\n\n    def get_content(self) -> T:\n        return self.content\n\nこうすることでboxクラスはどのような型が扱えるようになるか？",
+                            "answer": [
+                                "どのような型でも扱える"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "from typing import TypeVar\n\nT = TypeVar(\"T\", int, float)\n\n\ndef add_one_to_t_arg(arg: T) -> T:\n    return arg + 1\n\n関数add_one_to_tg_argの引数と返り値の型には何が保証されるか",
+                            "answer": [
+                                "arg の型が int のときの返り値の型は int、 arg の型が float のときの返り値の型は float である。\nつまり引数のデータ型と返り値のデータ型が同じであることが保証される。"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-23"
+                        }
+                    ]
+                },
+                {
+                    "name": "OOP",
+                    "questions": [
+                        {
+                            "problem": "OOPにおけるクラスの継承、拡張、オーバーライドの違い",
+                            "answer": [
+                                "継承→クラスの定義、機能をそのまま引き継ぐ",
+                                "拡張→親クラスを継承した上で、新しい属性、メソッドを追加",
+                                "オーバーライド→すでにあるメソッドを同じ名前で再定義して振る舞いを上書きする"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-21"
+                        }
+                    ]
+                },
+                {
+                    "name": "sqlalchemy",
+                    "questions": [
+                        {
+                            "problem": "sqlalchemyにおいてsession.refresh()をする意味",
+                            "answer": [
+                                "SQLAlchemy で session.refresh(instance) を呼び出すと、その instance（Python オブジェクト）に対して データベースに再クエリを発行して再読み込み を行います。これにより、そのインスタンスに紐づくカラムの値は、 現在のデータベース上の正確な状態 に更新されます。"
+                            ],
+                            "memo": "session.refresh() は 即座に SELECT クエリを実行 します（キャッシュなどは使わず、DBアクセスが発生）。",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-21"
+                        },
+                        {
+                            "problem": "sqlalchemyについてです。\n```\nSession = sessionmaker(engine,class_=AsyncSession)\n\nasync def main():\n    async with Session() as session:\n        user = Chat()\n        user.name = \"Sato Taro\"\n        user.age = 30\n        session.add(user)\n        \n        print(f\"user1: {user}\")\n        await session.commit()\n        print(f\"user2: {user}\")\n        \n        await session.refresh(user)\n        print(f\"user3: {user}\")\n        \n        \nif __name__ == \"__main__\":\n    import asyncio\n    asyncio.run(main())\n\n\nsession.commit()の実行後、userオブジェクトの中身はどうなりますか？",
+                            "answer": [
+                                "空になる\n"
+                            ],
+                            "memo": "session.commit()は現在のトランザクションによる変更をデータベースに反映し、永続化する効果があります。\nこの際、トランザクションで用いられていたオブジェクトが失効し、消去されます。\nそのため、session.commit()の実行後に、そのトランザクションで用いられていたオブジェクト(user)の要素にアクセスしようとした場合などにエラーが発生する。",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-19"
+                        },
+                        {
+                            "problem": "async with session.begin():\n        # ここがトランザクション中\n        session.add(obj)\n        ...\n\n上記のsqlalchemyのセッションにおいてトランザクションはどうしたら終了しますか2",
+                            "answer": [
+                                "async with session.begin() ブロックを抜けたとき",
+                                "明示的に await session.commit() または await session.rollback() を呼び出したとき"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
+                        }
+                    ]
+                },
+                {
+                    "name": "pytest",
+                    "questions": [
+                        {
+                            "problem": "@pytest.fixture(autouse=True)のautouseの意味",
+                            "answer": [
+                                "通常のfixtureは明示的に引数として渡す必要があるが、autuse=trueとするとテスト関数に書かなくても自動で有効になるのが特徴"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "pytestのconftest.pyには何を定義しますか",
+                            "answer": [
+                                "共通のfixtureを定義する。",
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "@pytest.fixture を定義すると、どうなるか",
+                            "answer": [
+                                "全テストからインポート不要で使える。"
+                            ],
+                            "memo": "@pytest.fixture\ndef sample_user():\n    return {\"name\": \"Alice\", \"age\": 30}\n\n# test_example.py\ndef test_user_age(sample_user):\n    assert sample_user[\"age\"] == 30",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "標準出力（print()などの出力）をコンソールに表示するためのpytestコマンドは",
+                            "answer": [
+                                "pytest -s "
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-31"
+                        },
+                        {
+                            "problem": "from unittest.mock import Mock\n\n# モックオブジェクトを作成\nmock_func = Mock()\n\n# 呼び出すと、自動的に何かが返る（デフォルトはまたモック）\nresult = mock_func()\n\n# 呼び出されたか確認\nprint(mock_func.called)         \nprint(mock_func.call_count)  \nprintのそれぞれの結果を教えて",
+                            "answer": [
+                                "called->true",
+                                "call_count->1"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "pytestのMagicMockにおいてspecとspec_setを指定することでどうなるか",
+                            "answer": [
+                                "存在しないメソッドを呼ぶと AttributeError になる。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "fastapi.testclientライブラリのTestClientとhttpx.AsyncClientではどちらが同期でどちらが非同期か",
+                            "answer": [
+                                "fastapi.testclientライブラリのTestClient→同期",
+                                "httpx.AsyncClient→非同期"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "unittest -MagicMock()はサードパーティ製のライブラリかそれとも標準ライブラリか",
+                            "answer": [
+                                "標準ライブラリ"
+                            ],
+                            "memo": "反対にpytest- mocker.Mock()←がサードパーティ製ライブラリ",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "pythonの\nassert 222 \nもしくは\nassert \"hello\"\nはAssertionErrorにならずに通過しますか？",
+                            "answer": [
+                                "AssertionErrorにならずに通過する。"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "pytestにおいて@pytest.mark.name_of_the_mark decorator これは何を表す",
+                            "answer": [
+                                "マークにより、実行の制御や分類が可能"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-07-26"
+                        }
+                    ]
+                },
+                {
+                    "name": "pydantic",
+                    "questions": [
+                        {
+                            "problem": "pydanticライブラリのBaseModelとはクラスで何を簡単に行うためのものか？2",
+                            "answer": [
+                                "データの検証（バリデーション）",
+                                "変換（シリアライズ／デシリアライズ）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
+                        },
+                        {
+                            "problem": "pydanticのmodel_validateメソッドの働き",
+                            "answer": [
+                                "モデルのバリデーションとインスタンス化 を行うためのクラスメソッド\n\n辞書などの入力データから Pydantic モデルのインスタンスを生成できる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-19"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "fastapi",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "fastapiにおけるpath operationとは",
+                            "answer": [
+                                "@app.get(\"/items/{item_id}\")\ndef read_item(item_id: int):\n    return {\"item_id\": item_id}\n\nこんなやつ"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "skin",
+            "subcategories": []
+        },
+        {
+            "name": "statistics",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": []
+                }
+            ]
+        },
+        {
+            "name": "dbt",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "複雑なdbtコードを各cte句づつデバッグしていくためのチップスをおしえてください",
+                            "answer": [
+                                "target配下に作成されたsqlコードをsnowflakeに貼り付けて、cte句ごとに実行してどのようなデータが入っているか確認する。"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-17"
+                        },
+                        {
+                            "problem": "dbt_project.ymlの中のclean-targetsは何を表す。",
+                            "answer": [
+                                "dbt clean コマンドを実行したときに削除されるディレクトリのリストを定義するものです。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-19"
+                        },
+                        {
+                            "problem": "dbtのincremental modelのデータはtable? view?",
+                            "answer": [
+                                "データはテーブルになる。　"
+                            ],
+                            "memo": "マテリアライゼーションのテーブルと違う点としては　差分で　データをinsert, updateするため",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-25"
+                        }
+                    ]
+                },
+                {
+                    "name": "test",
+                    "questions": [
+                        {
+                            "problem": "dbt testの種類内訳3",
+                            "answer": [
+                                "generic test",
+                                "singular test",
+                                "dbt unit test"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-16"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Typescript",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": []
+                },
+                {
+                    "name": "generics",
+                    "questions": []
+                }
+            ]
+        },
+        {
+            "name": "react",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": []
+                },
+                {
+                    "name": "hooks",
+                    "questions": []
+                },
+                {
+                    "name": "storybook",
+                    "questions": []
+                }
+            ]
+        },
+        {
+            "name": "統計",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "期待値の加法性・線形性",
+                            "answer": [
+                                "E[X + Y] = E[X] + E[Y]"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-21"
+                        },
+                        {
+                            "problem": "さいころを2つ振った時に出る目の総和の期待値",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-21"
+                        },
+                        {
+                            "problem": "1枚の硬貨を5回投げたときの表が出る回数の期待値を求めよ．",
+                            "answer": [
+                                "\\begin{align*} E(X)  &= 0 \\times \\left(\\tfrac{1}{2}\\right)^{5}  + 1 \\times \\binom{5}{1} \\left(\\tfrac{1}{2}\\right)^{1} \\left(\\tfrac{1}{2}\\right)^{4} \\\\ &\\quad + 2 \\times \\binom{5}{2} \\left(\\tfrac{1}{2}\\right)^{2} \\left(\\tfrac{1}{2}\\right)^{3}  + 3 \\times \\binom{5}{3} \\left(\\tfrac{1}{2}\\right)^{3} \\left(\\tfrac{1}{2}\\right)^{2} \\tfrac{1}{2} \\\\ &\\quad + 4 \\times \\binom{5}{4} \\left(\\tfrac{1}{2}\\right)^{4} \\tfrac{1}{2}  + 5 \\times \\left(\\tfrac{1}{2}\\right)^{5} \\\\ &= \\tfrac{5}{2} \\end{align*}"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-22"
+                        },
+                        {
+                            "problem": "1個のサイコロを投げ、出た目の2乗を得点とするとき、得点の期待値を求めよ。",
+                            "answer": [
+                                "E[X^2] = \\frac{1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2}{6}\n= \\frac{91}{6} \\approx 15.17\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-27"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "history",
             "subcategories": [
                 {
                     "name": "m",
@@ -22331,7 +22980,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "イスラーム神秘主義を表す語",
@@ -22704,8 +23353,8 @@
                                 "フランク人\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         }
                     ]
                 },
@@ -22719,7 +23368,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "殷後期の都の遺跡をなんというか",
@@ -22769,11 +23418,15 @@
                         {
                             "problem": "八王の乱の反乱以降蜂起した遊牧諸民族(五胡)を全て答えよ",
                             "answer": [
-                                "匈奴（きょうど）、羯（けつ）、鮮卑（せんぴ）、氐、羌"
+                                "匈奴（きょうど）、",
+                                "氐",
+                                "羌",
+                                "鮮卑（せんぴ）",
+                                "羯（けつ）"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "中央から派遣された官吏が治める「郡」と、諸侯が治める「国」を併存させる制度である「郡国制」は、どの王朝で採用されたか？",
@@ -22791,7 +23444,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-20"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "晋（西晋（中国王朝）\t）の国の建国者は誰か",
@@ -22818,7 +23471,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "ヌルハチが後金を建国したのはいつか",
@@ -22836,7 +23489,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "反乱軍から唐に降った節度使の（A）により907年に唐は滅ぼされた。",
@@ -22846,6 +23499,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-23"
+                        },
+                        {
+                            "problem": "7世紀末、病身の高宗に変わって政権を握った、中国史上で唯一の女帝は",
+                            "answer": [
+                                "則天武后 そくてんぶこう"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "西晋滅亡後、江南に逃れて東晋を建てた人物は",
@@ -22872,7 +23534,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-20"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "楊炎は中国のどの時代（国）の人物か",
@@ -22881,7 +23543,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "たび重なる外征の結果、財政難になったために塩・鉄・酒の専売を行なったが、それは誰か",
@@ -22911,6 +23573,15 @@
                             "last_answered_date": "2025-08-23"
                         },
                         {
+                            "problem": "タングード人国家を宋はなんとよんだか",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
+                        },
+                        {
                             "problem": "中国最古の王朝",
                             "answer": [
                                 "殷いん"
@@ -22926,7 +23597,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "明の建国者が台頭するきっかけとなった、元末におこった白蓮教徒を中心とする反乱はなにか",
@@ -22936,6 +23607,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-24"
+                        },
+                        {
+                            "problem": "劉邦が項羽を破った戦いは",
+                            "answer": [
+                                "垓下の戦い\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "秦が定めた統一貨幣の名称は何か",
@@ -22962,7 +23642,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "晋から自立した三国のうち、もっとも北方に位置した国はどこか。",
@@ -23070,7 +23750,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "洛陽を都とした王朝である後漢の初代皇帝は誰か",
@@ -23079,7 +23759,7 @@
                             ],
                             "memo": "前漢の初代皇帝は劉邦",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "184年に後漢滅亡のきっかけになった農民反乱を何というか。",
@@ -23106,7 +23786,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "明の初代皇帝は誰か。",
@@ -23153,6 +23833,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-22"
+                        },
+                        {
+                            "problem": "大月氏を建てたのは",
+                            "answer": [
+                                "月氏"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-27"
                         }
                     ]
                 },
@@ -23202,7 +23891,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "オリエント世界を初めて統一し、中央集権的な支配体制を築いたが、その過酷な支配で知られる帝国は何でしょう？",
@@ -23229,7 +23918,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "前10世紀前半、第2代の国王としてヘブライ王国（イスラエル王国）の全盛期を築き上げたのは誰か",
@@ -23346,7 +24035,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEICiHIFbs4CfZYT3IEcmkPDjmoqNF28jAlA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 },
@@ -23431,8 +24120,8 @@
                                 "重装歩兵"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
                         },
                         {
                             "problem": "イッソスの戦いでアレクサンドロス大王と戦ったペルシア帝国の王は誰ですか？",
@@ -23485,8 +24174,17 @@
                                 "フィリッポス2世"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-27"
+                        },
+                        {
+                            "problem": "プロタゴラスが残した名言は",
+                            "answer": [
+                                "人間は万物の尺度"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "イッソスの戦いは何年に起こったか",
@@ -23496,6 +24194,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-16"
+                        },
+                        {
+                            "problem": "歴史の父と呼ばれたのは誰か",
+                            "answer": [
+                                "ヘロドトス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
+                        },
+                        {
+                            "problem": "浮体の原理を発見した物理学者は",
+                            "answer": [
+                                "アルキメデス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "イオニア植民市の反乱のイオニアとは何を表す",
@@ -23714,11 +24430,11 @@
                         {
                             "problem": "ササン朝ペルシアの首都はどこか",
                             "answer": [
-                                "クテシフォン\n"
+                                "Ctesiphonクテシフォン\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "エジプト古王国の首都は",
@@ -23727,7 +24443,7 @@
                             ],
                             "memo": "エジプト中王国の首都はテーベ\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "ササン朝ペルシア最盛期の王で、突厥と同盟を組んでエフタルを滅ぼした人物は誰か",
@@ -23917,7 +24633,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-26"
                         },
                         {
                             "problem": "1954年、南アジア地域の首相がスリランカで開いた会議は？",
@@ -23963,7 +24679,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-08-26"
+                        },
+                        {
+                            "problem": "中国からの亡命者で衛氏朝鮮（えいし）の建国者はだれか",
+                            "answer": [
+                                "衛満"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 },
@@ -24044,7 +24769,26 @@
                 },
                 {
                     "name": "古代イスラエル",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "622年んのムハンマドの移住はのいちにイスラーム歴の紀元元年とされた。この出来事をなんという",
+                            "answer": [
+                                "ヒジュラ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
+                        },
+                        {
+                            "problem": "9世紀以降、イスラーム諸王朝の軍事力の中心となったトルコ人などの白人系奴隷をなんというか",
+                            "answer": [
+                                "マムルーク"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-26"
+                        }
+                    ]
                 },
                 {
                     "name": "近世",
@@ -24068,572 +24812,18 @@
                             "last_answered_date": "2025-08-25"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "GitHub Actions",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": [
-                        {
-                            "problem": "GitHub Actionsのワークフローのトップレベルを構成するキーは？5",
-                            "answer": [
-                                "name",
-                                "on",
-                                "env",
-                                "permission",
-                                "jobs",
-                                "concurrency"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-15"
-                        },
-                        {
-                            "problem": "GitHub Actions において アクション（uses を使うステップ）に引数を渡すための構文は何か",
-                            "answer": [
-                                "with"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-05"
-                        },
-                        {
-                            "problem": "GitHub Actionsワークフローにおいてon:   workflow_call:の利用用途は",
-                            "answer": [
-                                "共通処理をモジュール化して再利用する際に使用する"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "GitHub Actions のself-hosted runner ",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Docker",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": [
-                        {
-                            "problem": "docker buildも含めたdocker composeの起動コマンドは？",
-                            "answer": [
-                                "docker-compose up -d --build"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
-                        }
-                    ]
                 },
                 {
-                    "name": "Dockerfile",
+                    "name": "古代ローマ",
                     "questions": [
                         {
-                            "problem": "DOCKERFILEのマルチステージビルド",
+                            "problem": "「友情論」「国家論」などの著者で、ローマ最大の文章家といわれるのはだれか",
                             "answer": [
-                                ""
+                                "キケロ"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
-                        },
-                        {
-                            "problem": "Dockerfileの命令であるRUN and ENTRYPOINT違い",
-                            "answer": [
-                                "ENTRYPOINT：コンテナ起動時に実行されるデフォルトコマンドを定義する。\nRUN：イメージ作成時に一度だけコマンドを実行し、結果をイメージに保存する。"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "Dockerfile 内での作業ディレクトリを指定する命令は",
-                            "answer": [
-                                "WORKDIR"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "python",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": [
-                        {
-                            "problem": "pythonにおいてPYTHONPATH 環境変数で指定したディレクトリはどのライブラリの何に追加されるか",
-                            "answer": [
-                                "sys.path"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-21"
-                        },
-                        {
-                            "problem": "WSGIは並列処理が可能か",
-                            "answer": [
-                                "不可能"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "pythonにおいて絶対インポートは（A）にあるディレクトリを起点にモジュールを探す",
-                            "answer": [
-                                "sys.path"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-20"
-                        },
-                        {
-                            "problem": "os.pathとの代替機能ライブラリ",
-                            "answer": [
-                                "pathlib"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-15"
-                        },
-                        {
-                            "problem": "in python, yeild vs return keyword",
-                            "answer": [
-                                "Unlike the return keyword which stops further execution of the function, the yield keyword continues to the end of the function."
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "python のパッケージマネージャー3つ",
-                            "answer": [
-                                "pip",
-                                "poetry",
-                                "uv"
-                            ],
-                            "memo": "uvはrust製",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-15"
-                        },
-                        {
-                            "problem": "pythonにおいて__init__.py の役割とは",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-15"
-                        },
-                        {
-                            "problem": "nums = [48, 6, 9, 21, 1]\n\nsquare_all = map(lambda num: num ** 2, nums)\n\nprint(square_all)\n\n出力値はどうなる\nlambda expression",
-                            "answer": [
-                                "[2304, 36, 81, 441, 1]\n"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-07"
-                        },
-                        {
-                            "problem": "raise_to_power = lambda x, y: x ** y\n\nraise_to_power(2, 3)\n\nどうなる出力値",
-                            "answer": [
-                                "2 ** 3（= 8）を返します。"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-26"
-                        }
-                    ]
-                },
-                {
-                    "name": "typing",
-                    "questions": [
-                        {
-                            "problem": "typingライブラリのUnionはpython3.10以降も使用されている？",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
-                        },
-                        {
-                            "problem": "from typing import TypeVar, List\n\nT_co = TypeVar('T_co', covariant=True)\nT_contra = TypeVar('T_contra', contravariant=True)\n\nclass Animal:\n    def make_sound(self):\n        return \"Some sound\"\n\nclass Dog(Animal):\n    def make_sound(self):\n        return \"Woof!\"\n\nclass Cat(Animal):\n    def make_sound(self):\n        return \"Meow!\"\n\ndef print_animal_sounds(animals: List[T_co]) -> List[str]:\n    return [animal.make_sound() for animal in animals]\n\ndef feed_animals(feeder: callable[[T_contra], None], animals: List[T_contra]) -> None:\n    for animal in animals:\n        feeder(animal)\n\n# 使用例\ndogs = [Dog(), Dog()]\ncats = [Cat(), Cat()]\nanimals = [Dog(), Cat()]\n\nprint(\"犬の鳴き声:\", print_animal_sounds(dogs))\nprint(\"猫の鳴き声:\", print_animal_sounds(cats))\nprint(\"動物の鳴き声:\", print_animal_sounds(animals))\n\ndef feed_dog(dog: Dog):\n    print(\"犬にエサをあげました\")\n\nfeed_animals(feed_dog, dogs)\n# feed_animals(feed_dog, cats)  # これは型エラーになります\nfeed_animals(feed_dog, animals)  # これは許可されます（反変性により）",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "https://jp-seemore.com/iot/python/29414/",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
-                        },
-                        {
-                            "problem": "pythonのtyping libraryのGenericは何？",
-                            "answer": [
-                                "クラスに型パラメータTを受け入れる  Generic[T]\t"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "from typing import Generic, TypeVar\n\nT = TypeVar('T')  # 型変数 T を定義\n\nclass Box(Generic[T]):\n    def __init__(self, content: T):\n        self.content = content\n\n    def get_content(self) -> T:\n        return self.content\n\nこうすることでboxクラスはどのような型が扱えるようになるか？",
-                            "answer": [
-                                "どのような型でも扱える"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "from typing import TypeVar\n\nT = TypeVar(\"T\", int, float)\n\n\ndef add_one_to_t_arg(arg: T) -> T:\n    return arg + 1\n\n関数add_one_to_tg_argの引数と返り値の型には何が保証されるか",
-                            "answer": [
-                                "arg の型が int のときの返り値の型は int、 arg の型が float のときの返り値の型は float である。\nつまり引数のデータ型と返り値のデータ型が同じであることが保証される。"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-23"
-                        }
-                    ]
-                },
-                {
-                    "name": "OOP",
-                    "questions": [
-                        {
-                            "problem": "OOPにおけるクラスの継承、拡張、オーバーライドの違い",
-                            "answer": [
-                                "継承→クラスの定義、機能をそのまま引き継ぐ",
-                                "拡張→親クラスを継承した上で、新しい属性、メソッドを追加",
-                                "オーバーライド→すでにあるメソッドを同じ名前で再定義して振る舞いを上書きする"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
-                        }
-                    ]
-                },
-                {
-                    "name": "sqlalchemy",
-                    "questions": [
-                        {
-                            "problem": "sqlalchemyにおいてsession.refresh()をする意味",
-                            "answer": [
-                                "SQLAlchemy で session.refresh(instance) を呼び出すと、その instance（Python オブジェクト）に対して データベースに再クエリを発行して再読み込み を行います。これにより、そのインスタンスに紐づくカラムの値は、 現在のデータベース上の正確な状態 に更新されます。"
-                            ],
-                            "memo": "session.refresh() は 即座に SELECT クエリを実行 します（キャッシュなどは使わず、DBアクセスが発生）。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
-                        },
-                        {
-                            "problem": "sqlalchemyについてです。\n```\nSession = sessionmaker(engine,class_=AsyncSession)\n\nasync def main():\n    async with Session() as session:\n        user = Chat()\n        user.name = \"Sato Taro\"\n        user.age = 30\n        session.add(user)\n        \n        print(f\"user1: {user}\")\n        await session.commit()\n        print(f\"user2: {user}\")\n        \n        await session.refresh(user)\n        print(f\"user3: {user}\")\n        \n        \nif __name__ == \"__main__\":\n    import asyncio\n    asyncio.run(main())\n\n\nsession.commit()の実行後、userオブジェクトの中身はどうなりますか？",
-                            "answer": [
-                                "空になる\n"
-                            ],
-                            "memo": "session.commit()は現在のトランザクションによる変更をデータベースに反映し、永続化する効果があります。\nこの際、トランザクションで用いられていたオブジェクトが失効し、消去されます。\nそのため、session.commit()の実行後に、そのトランザクションで用いられていたオブジェクト(user)の要素にアクセスしようとした場合などにエラーが発生する。",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-19"
-                        },
-                        {
-                            "problem": "async with session.begin():\n        # ここがトランザクション中\n        session.add(obj)\n        ...\n\n上記のsqlalchemyのセッションにおいてトランザクションはどうしたら終了しますか2",
-                            "answer": [
-                                "async with session.begin() ブロックを抜けたとき",
-                                "明示的に await session.commit() または await session.rollback() を呼び出したとき"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
-                        }
-                    ]
-                },
-                {
-                    "name": "pytest",
-                    "questions": [
-                        {
-                            "problem": "@pytest.fixture(autouse=True)のautouseの意味",
-                            "answer": [
-                                "通常のfixtureは明示的に引数として渡す必要があるが、autuse=trueとするとテスト関数に書かなくても自動で有効になるのが特徴"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "pytestのconftest.pyには何を定義しますか",
-                            "answer": [
-                                "共通のfixtureを定義する。",
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-15"
-                        },
-                        {
-                            "problem": "@pytest.fixture を定義すると、どうなるか",
-                            "answer": [
-                                "全テストからインポート不要で使える。"
-                            ],
-                            "memo": "@pytest.fixture\ndef sample_user():\n    return {\"name\": \"Alice\", \"age\": 30}\n\n# test_example.py\ndef test_user_age(sample_user):\n    assert sample_user[\"age\"] == 30",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-15"
-                        },
-                        {
-                            "problem": "標準出力（print()などの出力）をコンソールに表示するためのpytestコマンドは",
-                            "answer": [
-                                "pytest -s "
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-31"
-                        },
-                        {
-                            "problem": "from unittest.mock import Mock\n\n# モックオブジェクトを作成\nmock_func = Mock()\n\n# 呼び出すと、自動的に何かが返る（デフォルトはまたモック）\nresult = mock_func()\n\n# 呼び出されたか確認\nprint(mock_func.called)         \nprint(mock_func.call_count)  \nprintのそれぞれの結果を教えて",
-                            "answer": [
-                                "called->true",
-                                "call_count->1"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "pytestのMagicMockにおいてspecとspec_setを指定することでどうなるか",
-                            "answer": [
-                                "存在しないメソッドを呼ぶと AttributeError になる。"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "fastapi.testclientライブラリのTestClientとhttpx.AsyncClientではどちらが同期でどちらが非同期か",
-                            "answer": [
-                                "fastapi.testclientライブラリのTestClient→同期",
-                                "httpx.AsyncClient→非同期"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "unittest -MagicMock()はサードパーティ製のライブラリかそれとも標準ライブラリか",
-                            "answer": [
-                                "標準ライブラリ"
-                            ],
-                            "memo": "反対にpytest- mocker.Mock()←がサードパーティ製ライブラリ",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "pythonの\nassert 222 \nもしくは\nassert \"hello\"\nはAssertionErrorにならずに通過しますか？",
-                            "answer": [
-                                "AssertionErrorにならずに通過する。"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "pytestにおいて@pytest.mark.name_of_the_mark decorator これは何を表す",
-                            "answer": [
-                                "マークにより、実行の制御や分類が可能"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-26"
-                        }
-                    ]
-                },
-                {
-                    "name": "pydantic",
-                    "questions": [
-                        {
-                            "problem": "pydanticライブラリのBaseModelとはクラスで何を簡単に行うためのものか？2",
-                            "answer": [
-                                "データの検証（バリデーション）",
-                                "変換（シリアライズ／デシリアライズ）"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
-                        },
-                        {
-                            "problem": "pydanticのmodel_validateメソッドの働き",
-                            "answer": [
-                                "モデルのバリデーションとインスタンス化 を行うためのクラスメソッド\n\n辞書などの入力データから Pydantic モデルのインスタンスを生成できる"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-19"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "fastapi",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": [
-                        {
-                            "problem": "fastapiにおけるpath operationとは",
-                            "answer": [
-                                "@app.get(\"/items/{item_id}\")\ndef read_item(item_id: int):\n    return {\"item_id\": item_id}\n\nこんなやつ"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-17"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "skin",
-            "subcategories": []
-        },
-        {
-            "name": "statistics",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": []
-                }
-            ]
-        },
-        {
-            "name": "dbt",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": [
-                        {
-                            "problem": "複雑なdbtコードを各cte句づつデバッグしていくためのチップスをおしえてください",
-                            "answer": [
-                                "target配下に作成されたsqlコードをsnowflakeに貼り付けて、cte句ごとに実行してどのようなデータが入っているか確認する。"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-17"
-                        },
-                        {
-                            "problem": "dbt_project.ymlの中のclean-targetsは何を表す。",
-                            "answer": [
-                                "dbt clean コマンドを実行したときに削除されるディレクトリのリストを定義するものです。"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-19"
-                        },
-                        {
-                            "problem": "dbtのincremental modelのデータはtable? view?",
-                            "answer": [
-                                "データはテーブルになる。　"
-                            ],
-                            "memo": "マテリアライゼーションのテーブルと違う点としては　差分で　データをinsert, updateするため",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
-                        }
-                    ]
-                },
-                {
-                    "name": "test",
-                    "questions": [
-                        {
-                            "problem": "dbt testの種類内訳3",
-                            "answer": [
-                                "generic test",
-                                "singular test",
-                                "dbt unit test"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Typescript",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": []
-                },
-                {
-                    "name": "generics",
-                    "questions": []
-                }
-            ]
-        },
-        {
-            "name": "react",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": []
-                },
-                {
-                    "name": "hooks",
-                    "questions": []
-                },
-                {
-                    "name": "storybook",
-                    "questions": []
-                }
-            ]
-        },
-        {
-            "name": "統計",
-            "subcategories": [
-                {
-                    "name": "m",
-                    "questions": [
-                        {
-                            "problem": "期待値の加法性・線形性",
-                            "answer": [
-                                "E[X + Y] = E[X] + E[Y]"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
-                        },
-                        {
-                            "problem": "さいころを2つ振った時に出る目の総和の期待値",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
-                        },
-                        {
-                            "problem": "1枚の硬貨を5回投げたときの表が出る回数の期待値を求めよ．",
-                            "answer": [
-                                "\\begin{align*} E(X)  &= 0 \\times \\left(\\tfrac{1}{2}\\right)^{5}  + 1 \\times \\binom{5}{1} \\left(\\tfrac{1}{2}\\right)^{1} \\left(\\tfrac{1}{2}\\right)^{4} \\\\ &\\quad + 2 \\times \\binom{5}{2} \\left(\\tfrac{1}{2}\\right)^{2} \\left(\\tfrac{1}{2}\\right)^{3}  + 3 \\times \\binom{5}{3} \\left(\\tfrac{1}{2}\\right)^{3} \\left(\\tfrac{1}{2}\\right)^{2} \\tfrac{1}{2} \\\\ &\\quad + 4 \\times \\binom{5}{4} \\left(\\tfrac{1}{2}\\right)^{4} \\tfrac{1}{2}  + 5 \\times \\left(\\tfrac{1}{2}\\right)^{5} \\\\ &= \\tfrac{5}{2} \\end{align*}"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-08-26"
                         }
                     ]
                 }
