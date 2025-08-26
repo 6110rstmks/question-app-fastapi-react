@@ -5,14 +5,14 @@ import { createCategory } from "../../api/CategoryAPI"
 const CategoryCreate: React.FC = () => {
     const [categoryName, setCategoryName] = useState<string>("")
     const [errMessage, setErrorMessage] = useState<string>("")
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
-    const handleAddCategory = async () => {
-        if (!categoryName.trim()) {
+    const handleAddCategory = async (name: string) => {
+        if (!name.trim()) {
             setErrorMessage("カテゴリー名を入力してください")
             return
         }
-        const response = await createCategory(categoryName)
+        const response = await createCategory(name)
         if (!response.ok) {
             const data = await response.json()
             setErrorMessage(data.detail)
@@ -35,7 +35,7 @@ const CategoryCreate: React.FC = () => {
                         autoFocus
                     />
                 </div>
-                <button className="categoryButton" onClick={handleAddCategory}>
+                <button className="categoryButton" onClick={() =>handleAddCategory(categoryName)}>
                     Create
                 </button>
                 <div>{errMessage && <p>{errMessage}</p>}</div>

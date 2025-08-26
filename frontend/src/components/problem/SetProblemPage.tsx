@@ -33,12 +33,11 @@ const SetProblemPage: React.FC = () => {
 
     return (
         <div>
-        <div className={styles.header}>
-            <button onClick={() => setIsDisplayCalendar(prev => !prev)}>
+            <button
+                className={styles.openCalendarButton}
+                onClick={() => setIsDisplayCalendar(prev => !prev)}>
                 カレンダーから問題を復習
             </button>
-        </div>
-
 
             {/* Calendar Modal */}
             {isDisplayCalendar && (
