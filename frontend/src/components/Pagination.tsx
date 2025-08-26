@@ -1,6 +1,5 @@
-// Pagination.tsx
-import React from "react";
-import styles from "./Pagination.module.css";
+import React from "react"
+import styles from "./Pagination.module.css"
 
 interface PaginationProps {
     currentPage: number
@@ -15,37 +14,38 @@ const Pagination: React.FC<PaginationProps> = ({
 }) => {
     const handlePrevious = () => {
         if (currentPage > 1) {
-            onPageChange(currentPage - 1);
+            onPageChange(currentPage - 1)
         } else if (currentPage === 1) {
-            onPageChange(totalPages || 1);
+            onPageChange(totalPages || 1)
         }
         window.scrollTo(0, 0)
     };
 
     const handleNext = () => {
         if (totalPages === null || currentPage < totalPages) {
-            onPageChange(currentPage + 1);
+            onPageChange(currentPage + 1)
         } else if (currentPage === totalPages) {
-            onPageChange(1);
+            onPageChange(1)
         }
         window.scrollTo(0, 0)
     };
 
     return (
-        <div className={styles.paginationContainer}>
-            <button 
-                className={styles.paginationBtn} 
-                onClick={handlePrevious}>
-                Previous
-            </button>
-            <span className={styles.pageInfo}>{currentPage} / { totalPages }</span>
-            <button 
-                className={`${styles.paginationBtn} ${styles.left_btn}`} 
-                onClick={handleNext}>
-                Next
-            </button>
-        </div>
-        
+        <div className="block w-48 ml-24">
+            <div className="flex items-center gap-3 text-sm">
+                <button 
+                    className="px-4 py-2 rounded-2xl bg-black/20 text-white/90 border border-white/10 cursor-pointer transition-colors duration-200 backdrop-blur-sm hover:bg-black/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                    onClick={handlePrevious}>
+                    Previous
+                </button>
+                <span className="text-white/80">{currentPage} / {totalPages}</span>
+                <button 
+                    className="px-4 py-2 rounded-2xl bg-black/20 text-white/90 border border-white/10 cursor-pointer transition-colors duration-200 backdrop-blur-sm hover:bg-black/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                    onClick={handleNext}>
+                    Next
+                </button>
+            </div>
+        </div>        
     );
 };
 
