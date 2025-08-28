@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { fetchSubcategory } from '../../../api/SubcategoryAPI'
-import { useLocation, useNavigate } from 'react-router'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { 
     fetchQuestionsBySubcategoryId,
 } from '../../../api/QuestionAPI'

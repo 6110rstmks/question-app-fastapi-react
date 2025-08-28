@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router-dom';
 
 interface SignupForm {
-  username: string;
-  password: string;
+  username: string
+  password: string
 }
 
 const Signup: React.FC = () => {
@@ -14,35 +14,34 @@ const Signup: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }))
-  };
-  console.log('Signup form:', form);
-
+  }
+  console.log('Signup form:', form)
+  
   const handleSubmit = async (e: React.FormEvent) => {
     if (form.password.length < 8) {
       setError('Password must be at least 8 characters long.');
-      return;
+      return
     }
 
-    e.preventDefault();
-    setError(null);
-    setSuccess(null);
+    e.preventDefault()
+    setError(null)
+    setSuccess(null)
     const response = await fetch('http://localhost:8000/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include', // ← セッション維持に必須
       body: JSON.stringify(form),
-    });
+    })
 
 
-    const data = await response.json();
+    const data = await response.json()
 
     if (!response.ok) {
       setError(data.detail || 'Failed to sign up. Please try again.');
-      return;
+      return
     }
-    setSuccess('Signup successful!');
-
-  };
+    setSuccess('Signup successful!')
+  }
 
   return (
     <div style={{ maxWidth: '400px', margin: '0 auto' }}>

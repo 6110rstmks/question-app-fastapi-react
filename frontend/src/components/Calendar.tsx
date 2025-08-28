@@ -3,7 +3,7 @@ import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, su
 import styles from "./Calendar.module.css"
 import { fetchQuestionCountsByLastAnsweredDate } from "../api/QuestionAPI"
 import { fetchProblemByDay } from "../api/ProblemAPI"
-import { useNavigate } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 
 const Calendar: React.FC = () => {
     const [

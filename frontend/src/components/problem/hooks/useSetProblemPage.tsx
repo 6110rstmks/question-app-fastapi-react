@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { useNavigate } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 import type { Subcategory } from '../../../types/Subcategory'
 import type { CategoryWithQuestionCount } from '../../../types/Category'
 import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'

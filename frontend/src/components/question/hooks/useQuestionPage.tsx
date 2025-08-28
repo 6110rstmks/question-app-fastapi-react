@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 import type { Category } from '../../../types/Category'
 import type { SubcategoryWithCategoryName } from '../../../types/Subcategory'
 import type { Question } from '../../../types/Question'

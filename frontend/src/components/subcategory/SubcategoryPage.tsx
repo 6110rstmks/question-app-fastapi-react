@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, useNavigate } from 'react-router'
+import { useParams, useNavigate } from 'react-router-dom'
 import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreateModal'
 import styles from "./SubcategoryPage.module.css"

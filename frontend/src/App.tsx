@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.css'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HomePage } from './components/HomePage'
 import Login from './components/login/Login'
 import Signup from './components/login/Signup'
@@ -19,7 +18,6 @@ import QuestionListPage from './components/question/QuestionListPage'
 import NoMatchPage from './components/NoMatchPage'
 import CategoryBlackListPage from './components/CategoryListPage'
 import Today from './components/Today'
-import 'katex/dist/katex.min.css'
 import { AuthProvider } from './context/AuthContext'
 import { ThemeProvider } from './context/ThemeContext'
 

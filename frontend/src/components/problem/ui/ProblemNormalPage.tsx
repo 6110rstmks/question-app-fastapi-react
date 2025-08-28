@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import type { SubcategoryWithCategoryName } from "../../../types/Subcategory";
 import type { Question } from "../../../types/Question";
 import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI"

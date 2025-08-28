@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 const KeyboardShortcuts: React.FC = () => {
     const navigate = useNavigate();
