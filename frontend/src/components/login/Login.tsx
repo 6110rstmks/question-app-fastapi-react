@@ -1,6 +1,6 @@
 import React, { useState, FormEvent, ChangeEvent, useEffect } from "react";
-import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "../../firebase";
+// import { signInWithPopup } from "firebase/auth";
+// import { auth, provider } from "../../firebase";
 import { useNavigate, Link } from "react-router";
 import { useAuth } from "../../context/AuthContext";
 import styles from "./Login.module.css"; // CSS モジュールをインポート

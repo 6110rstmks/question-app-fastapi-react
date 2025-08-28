@@ -61,7 +61,7 @@ const App: React.FC = () => {
       </ThemeProvider>
     </AuthProvider>
 
-  );
+  )
 }
 
-export default App;
+export default App
