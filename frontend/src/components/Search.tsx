@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './Search.module.css'
 
 interface SearchProps {
     type: 'category' | 'subcategory' | 'question' | 'answer'
@@ -65,35 +64,35 @@ const Search: React.FC<SearchProps> = ({
     }
 
     return (
-        <search className={styles.searchSection}>
-          <div className={styles.searchContainer}>
-            <input
-                type="text"
-                className={styles.searchBox}
-                value={
-                    type === 'category'
-                        ? searchCategoryWord
+        <div className="flex justify-center">
+            <div className="mx-2.5">
+                <input
+                    type="text"
+                    className="px-5 py-3 w-80 border-2 border-green-500 rounded-full text-base outline-none transition-all duration-300 ease-in-out focus:border-green-600 focus:shadow-lg focus:shadow-green-200/30 placeholder-gray-400"
+                    value={
+                        type === 'category'
+                            ? searchCategoryWord
+                            : type === 'subcategory'
+                            ? searchSubcategoryWord
+                            : type === 'question'
+                            ? searchQuestionWord
+                            : searchAnswerWord
+                    }
+                    onChange={handleSearch}
+                    onKeyDown={handleKeyDown}
+                    placeholder={`${
+                        type === 'category'
+                        ? 'カテゴリ'
                         : type === 'subcategory'
-                        ? searchSubcategoryWord
+                        ? 'サブカテゴリ'
                         : type === 'question'
-                        ? searchQuestionWord
-                        : searchAnswerWord
-                }
-                onChange={handleSearch}
-                onKeyDown={handleKeyDown}
-                placeholder={`${
-                    type === 'category'
-                    ? 'カテゴリ'
-                    : type === 'subcategory'
-                    ? 'サブカテゴリ'
-                    : type === 'question'
-                    ? '質問'
-                    : '解答'
-                }検索`}
-                autoFocus={autoFocus}
-            />
-          </div>
-        </search>
+                        ? '質問'
+                        : '解答'
+                    }検索`}
+                    autoFocus={autoFocus}
+                />
+            </div>
+        </div>
     )
 }
 

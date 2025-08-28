@@ -1,11 +1,7 @@
-import React from 'react'
-import styles from './ReportPage.module.css'
-
-
 const ReportPage = () => {
   return (
     <div>
-        <div className={styles.selectionType}>
+        <div>
             <div>
                 <input type="checkbox" name="" id="" />
                 <span>今日のレポート</span>
@@ -24,9 +20,9 @@ const ReportPage = () => {
             </div>
         </div>
 
-        <button className={styles.createReportBtn}>レポートを生成</button>
+        <button>レポートを生成</button>
 
-        <div className={styles.reportBox}>レポートがここに表示される</div>
+        <div>レポートがここに表示される</div>
     </div>
   )
 }

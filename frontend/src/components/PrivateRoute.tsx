@@ -8,7 +8,7 @@ interface PrivateRouteProps {
 }
 
 const PrivateRoute: React.FC<PrivateRouteProps> = ({ isAuth, children }) => {
-    return isAuth ? children : <Link to="/login" />;
+    return isAuth ? children : <Link to="/login" />
 }
 
 export default PrivateRoute

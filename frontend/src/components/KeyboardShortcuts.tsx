@@ -1,22 +1,22 @@
-import { useEffect, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const KeyboardShortcuts: React.FC = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
         if (event.key.toLowerCase() === 'i' && event.metaKey) {
         event.preventDefault();
-        navigate('/set_question');
+        navigate('/set_question')
         }
-    }, [navigate]);
+    }, [navigate])
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [handleKeyDown]);
+    }, [handleKeyDown])
 
     return null
 };
 
-export default KeyboardShortcuts;
+export default KeyboardShortcuts

@@ -1,13 +1,11 @@
-import React from "react";
+import React from "react"
 import { Link } from "react-router-dom"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
-import styles from "./Navbar.module.css";
-import { useNavbar } from "./useNavbar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
+import { useNavbar } from "./useNavbar"
 
 const Navbar: React.FC = () => {
-    const { handleJsonExport, handleCSVExport } = useNavbar();
-
+    const { handleJsonExport, handleCSVExport } = useNavbar()
 
     return (
         <nav>
@@ -36,4 +34,4 @@ const Navbar: React.FC = () => {
     );
 };
 
-export default Navbar;
+export default Navbar

@@ -2,7 +2,6 @@ import React from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Modal from 'react-modal'
 import QuestionCreate from '../question/QuestionCreateModal'
-import styles from "./SubcategoryPage.module.css"
 import { useSubcategoryPage } from './hooks/useSubcategoryPage'
 import { 
     handleNavigateToCategoryPage,
@@ -38,11 +37,11 @@ const SubcategoryPage: React.FC = () => {
     } = useSubcategoryPage(subcategoryId)
 
     return (
-        <div className={styles.subcategoryPage}>
-            <div className={styles.subcategoryBox}>
+        <div className="p-4">
+            <div className="w-1/4 flex justify-between items-center mb-4">
                 <div 
                     onClick={() => handleNavigateToCategoryPage(navigate, categoryInfo)}
-                    className={styles.categoryName}
+                    className="cursor-pointer text-blue-600 hover:text-blue-800"
                 >
                     {categoryInfo.name}＞
                 </div>
@@ -52,68 +51,82 @@ const SubcategoryPage: React.FC = () => {
                         value={subcategoryName}
                         onChange={(e) => setSubcategoryName(e.target.value)}
                         onKeyPress={handleKeyPress}
-                        onBlur={() => setIsEditing(false)} // フォーカスを外すと編集モードを終了
+                        onBlur={() => setIsEditing(false)}
                         autoFocus
+                        className="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                 ) : (
                     <h1 
                         onDoubleClick={() => setIsEditing(true)}
-                        className={styles.subcategoryName}
+                        className="cursor-pointer text-2xl font-bold hover:text-gray-600"
                     >{subcategoryName}</h1>
                 )}                
-                <button className={styles.deleteBtn} onClick={handleDeleteSubcategory}>Delete</button>
                 <button 
-                    className={styles.displayIncorrectedQuestionBtn}
-                    >15日より前のincorrectの問題に絞って表示する
+                    className="w-22 h-22 text-white bg-yellow-green rounded-full cursor-pointer text-sm break-words hover:bg-opacity-80 transition-colors"
+                    onClick={handleDeleteSubcategory}
+                >
+                    Delete
+                </button>
+                <button 
+                    className="w-30 h-22 text-white bg-yellow-green rounded-full cursor-pointer text-xs break-words hover:bg-opacity-80 transition-colors"
+                >
+                    15日より前のincorrectの問題に絞って表示する
                 </button>
             </div>
-            <div>
-                <div>ワードで検索する</div>
+            
+            <div className="mb-4">
+                <div className="mb-2 text-gray-700">ワードで検索する</div>
                 <input 
                     type="text" 
                     placeholder="問題文を入力してください"
-                    className={styles.searchInput}
+                    className="w-full max-w-md px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />              
             </div>
-            <div className={styles.btnContainer}>
-                <div>
+            
+            <div className="flex justify-between mt-5 mb-6">
+                <div className="flex gap-4">
                     <button 
-                        className={`${styles.createQuestionBtn} ${showAnswer ? styles.on : styles.off}`} 
+                        className={`w-22 h-22 text-white rounded-full text-sm break-words transition-colors ${
+                            showAnswer 
+                                ? 'bg-yellow-green hover:bg-opacity-80' 
+                                : 'bg-gray-400 hover:bg-gray-500'
+                        }`}
                         onClick={() => setShowAnswer((prev) => !prev)}
                     >
                         {showAnswer ? "答えを一括非表示" : "答えを一括表示"}
                     </button>
                     <button 
-                        className={styles.displayIncorrectedQuestionBtn}
-                        onClick={handleSetUnsolvedProblem}>
+                        className="w-30 h-22 text-white bg-yellow-green rounded-full cursor-pointer text-xs break-words hover:bg-opacity-80 transition-colors"
+                        onClick={handleSetUnsolvedProblem}
+                    >
                         incorrectから問題を出題する。
                     </button>
                     <button 
-                        className={styles.displayIncorrectedQuestionBtn}
+                        className="w-30 h-22 text-white bg-yellow-green rounded-full cursor-pointer text-xs break-words hover:bg-opacity-80 transition-colors"
                         onClick={handleSetTemporaryProblem}
-                        >temporaryの問題を出題数する
+                    >
+                        temporaryの問題を出題数する
                     </button>
                     <button 
-                        className={styles.createQuestionBtn}
-                        onClick={() => setModalIsOpen(true)}>
-                            Create Question
+                        className="w-22 h-22 text-white bg-yellow-green rounded-full text-sm break-words hover:bg-opacity-80 transition-colors"
+                        onClick={() => setModalIsOpen(true)}
+                    >
+                        Create Question
                     </button>
                 </div>
                 <div>
                     <button
-                        className={styles.changeCategoryBtn}
+                        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors text-sm"
                         // onClick={()}
                     >
-                            このサブカテゴリを別のカテゴリを付け替える。
+                        このサブカテゴリを別のカテゴリを付け替える。
                     </button>
                 </div>
             </div>
 
-            <div>
-
-            </div>
-            <h3>問題の数：{questionCount}</h3>
-            <h3>未正当の問題の数：{uncorrectedQuestionCount}</h3>
+            <h3 className="text-lg font-semibold mb-2">問題の数：{questionCount}</h3>
+            <h3 className="text-lg font-semibold mb-6">未正当の問題の数：{uncorrectedQuestionCount}</h3>
+            
             <Modal
                 isOpen={modalIsOpen}
                 contentLabel="Example Modal"
@@ -125,47 +138,58 @@ const SubcategoryPage: React.FC = () => {
                     setQuestions={setQuestions}
                 />
             </Modal>
-            <div className={styles.questionContainer}>
+            
+            <div className="flex flex-wrap -mx-2">
                 {questions.map((question) => (
                     <div 
                         className={`
-                            ${styles.questionBox} ${
-                                question?.is_correct === SolutionStatus.Correct ? styles.correct : 
-                                question?.is_correct === SolutionStatus.Temporary ? styles.temporary : 
-                                styles.incorrect
-                            }`} 
-                        key={question.id}>
-                        <h3 className={styles.problemText} 
-                            onClick={() => handleNavigateToQuestionPage(
-                                            navigate,
-                                            question.id,
-                                            categoryInfo.id,
-                                            categoryInfo.name,
-                                            subcategoryId,
-                                            subcategoryName)}>
-                            {question.problem}
-                        </h3>
-                        
-                        {showAnswer && question.answer.map((answer, index) => (
-                            <div key={index}>
-                                {answer.split('\n').map((line, i) => (
-                                <React.Fragment key={i}>
-                                    {isLatex(line) ? (
-                                        <BlockMath math={line} />
-                                    ) : (
-                                        <>
-                                        {line}
-                                        <br />
-                                        </>
-                                    )}
-                                </React.Fragment>
-                                ))}
-                            </div>
-                        ))}
+                            w-1/4 px-2 mb-6
+                        `}
+                        key={question.id}
+                    >
+                        <div className={`
+                            pt-4 px-8 pb-4 rounded-2xl shadow-lg transition-transform hover:scale-105 ${
+                                question?.is_correct === SolutionStatus.Correct 
+                                    ? 'bg-green-200' 
+                                    : question?.is_correct === SolutionStatus.Temporary 
+                                    ? 'bg-yellow-600' 
+                                    : 'bg-red-300'
+                            }
+                        `}>
+                            <h3 
+                                className="cursor-pointer underline text-gray-700 text-base mb-3 break-words hover:text-gray-900 transition-colors"
+                                onClick={() => handleNavigateToQuestionPage(
+                                    navigate,
+                                    question.id,
+                                    categoryInfo.id,
+                                    categoryInfo.name,
+                                    subcategoryId,
+                                    subcategoryName
+                                )}
+                            >
+                                {question.problem}
+                            </h3>
+                            
+                            {showAnswer && question.answer.map((answer, index) => (
+                                <div key={index} className="text-black text-sm">
+                                    {answer.split('\n').map((line, i) => (
+                                    <React.Fragment key={i}>
+                                        {isLatex(line) ? (
+                                            <BlockMath math={line} />
+                                        ) : (
+                                            <>
+                                            {line}
+                                            <br />
+                                            </>
+                                        )}
+                                    </React.Fragment>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 ))}
             </div>
-
         </div>
     )
 }

@@ -3,7 +3,6 @@ import { useCategories } from "../hooks/useCategories"
 import { CategoryList } from "./category/CategoryList"
 import Pagination from "./Pagination"
 import { Link } from "react-router"
-import styles from "./HomePage.module.css"
 import Search from "./Search"
 import { useAuth } from "../context/AuthContext"
 import { useEffect } from "react"
@@ -67,9 +66,15 @@ export const HomePage: React.FC = () => {
     )
 
     return (
-        <>
-            <Link to="/createcategory" className={styles.createCategoryBtn}>Create Category</Link>
-            <div className={styles.middleBox}>
+       <div className="min-h-screen">
+            <Link 
+                to="/createcategory" 
+                className="inline-flex items-center justify-center w-22 h-22 text-white bg-yellow-green-500 rounded-full cursor-pointer no-underline break-words"
+            >
+                Create Category
+            </Link>
+            
+            <div className="flex mt-4">
                 <div>
                     <h3>The total number of Questions：{questionCount}</h3>
                     <h3>The total number of uncorrected Questions：{uncorrectedQuestionCount}</h3>
@@ -79,8 +84,10 @@ export const HomePage: React.FC = () => {
 
                 <Link to="/categorylist">カテゴリの一覧のページに移動</Link>
             </div>
+            
             <h1>ctr i でsetproblempageにとべる</h1>
-            <div className={styles.searchContainer}>
+            
+            <div className="flex mt-4">
                 <Search 
                     type="category"
                     searchCategoryWord={searchCategoryWord}
@@ -102,7 +109,12 @@ export const HomePage: React.FC = () => {
                     page={page} 
                     setPage={setPage} 
                 />
-                <Link to="/question_list" className={styles.moreBtn}>Question一覧検索ページ</Link>
+                <Link 
+                    to="/question_list" 
+                    className="w-full px-2 py-2 bg-transparent border border-green-700 text-green-700 rounded-md cursor-pointer transition-all duration-150 hover:bg-green-700 hover:text-white"
+                >
+                    Question一覧検索ページ
+                </Link>
                 <Search 
                     type="question"
                     searchQuestionWord={searchQuestionWord}
@@ -124,12 +136,19 @@ export const HomePage: React.FC = () => {
                     setPage={setPage} 
                 /> 
             </div>
+            
             <Pagination
-                    currentPage={page}
-                    totalPages={pageCount}
-                    onPageChange={(newPage) => setPage(newPage)}
+                currentPage={page}
+                totalPages={pageCount}
+                onPageChange={(newPage) => setPage(newPage)}
             />
-            <CategoryList categories={categories} searchSubcategoryWord={searchSubcategoryWord} searchQuestionWord={searchQuestionWord} searchAnswerWord={searchAnswerWord}/>
-        </>
+            
+            <CategoryList 
+                categories={categories} 
+                searchSubcategoryWord={searchSubcategoryWord} 
+                searchQuestionWord={searchQuestionWord} 
+                searchAnswerWord={searchAnswerWord}
+            />
+        </div>
     );
 };
