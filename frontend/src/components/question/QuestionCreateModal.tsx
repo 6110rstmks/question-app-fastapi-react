@@ -3,10 +3,10 @@ import styles from "./QuestionCreateModal.module.css"
 import { Question } from '../../types/Question'
 import { useQuestionCreateModal } from './hooks/useQuestionCreateModal'
 interface QuestionCreateProps {
-    categoryId: number;
-    subcategoryId: number;
-    setModalIsOpen: (isOpen: boolean) => void;
-    setQuestions: (questions: Question[]) => void;
+    categoryId: number
+    subcategoryId: number
+    setModalIsOpen: (isOpen: boolean) => void
+    setQuestions: (questions: Question[]) => void
 }
 
 const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
@@ -41,15 +41,13 @@ const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
             <div className={styles.content}>
                 <div className={styles.formGroup}>
                     <label className={styles.label}>Problem:</label>
-                    <input
-                            type="text"
-                            placeholder="問題文を入力"
-                            value={problem}
-                            className={styles.textInput}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => setProblem(e.target.value)}
-                            autoFocus
-                        />
-                    </div>
+                    <textarea
+                        placeholder="問題文を入力"
+                        value={problem}
+                        className={styles.textInput}
+                        onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setProblem(e.target.value)}
+                        autoFocus
+                        ></textarea>
 
                 <div className={styles.answerContainer}>
                     <div className={styles.answerHeader}>
@@ -81,33 +79,33 @@ const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
                         </div>
                     ))}
                 </div>
+                <div className={styles.formGroup}>
+                        <label className={styles.label}>Memo:</label>
+                        <textarea
+                            value={inputMemoValue}
+                            onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setInputMemoValue(e.target.value)}
+                            className={styles.memoInput}
+                        />
+                </div>
 
-                    <div className={styles.formGroup}>
-                            <label className={styles.label}>Memo:</label>
-                            <textarea
-                                value={inputMemoValue}
-                                onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setInputMemoValue(e.target.value)}
-                                className={styles.memoInput}
-                            />
-                    </div>
-
-                    <div className={styles.footer}>
-                        <button 
-                            onClick={createQuestion} 
-                            className={styles.primaryButton}
-                        >
-                            Save
-                        </button>
-                    </div>   
-                    <div>                        
-                        <button 
-                            onClick={() => setModalIsOpen(false)}
-                        >
-                            Close
-                        </button>
-                    </div> 
-                </div>        
-            </div>
+                <div className={styles.footer}>
+                    <button 
+                        onClick={createQuestion} 
+                        className={styles.primaryButton}
+                    >
+                        Save
+                    </button>
+                </div>   
+                <div>                        
+                    <button 
+                        onClick={() => setModalIsOpen(false)}
+                    >
+                        Close
+                    </button>
+                </div> 
+            </div>        
+        </div>
+        </div>
     );
 };
 
