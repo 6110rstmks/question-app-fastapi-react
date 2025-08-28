@@ -6,17 +6,17 @@ import {
 } from '../../../api/QuestionAPI'
 import { fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
 
-import { Question } from '../../../types/Question'
+import type { Question } from '../../../types/Question'
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI'
 import { handleKeyDownForShowAnswer } from '../../../utils/function'
 import { fetchProblem } from '../../../api/ProblemAPI'
 import { handleNavigateToCategoryPage } from '../../../utils/navigate_function'
-interface locationState {
-    categoryId: number
-    categoryName: string
-    subcategoryId: number
-    subcategoryName: string
-}
+// interface locationState {
+//     categoryId: number
+//     categoryName: string
+//     subcategoryId: number
+//     subcategoryName: string
+// }
 
 interface categoryInfo {
     id: number;

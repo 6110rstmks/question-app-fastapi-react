@@ -1,4 +1,4 @@
-import { 
+import type { 
     Question, 
     QuestionWithCategoryIdAndCategoryNameAndSubcategoryId 
 } from '../types/Question'

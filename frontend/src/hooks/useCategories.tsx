@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react"
-import { Category } from "../types/Category"
+import type { Category } from "../types/Category"
 import { fetchCategories, fetchPageCount } from "../api/CategoryAPI"
 import { useNavigate } from "react-router"
 import { 

@@ -1,6 +1,7 @@
-import React, { useState, ChangeEvent } from 'react';
+import React from 'react'
 import styles from "./QuestionCreateModal.module.css"
-import { Question } from '../../types/Question'
+import type { ChangeEvent } from 'react'
+import type { Question } from '../../types/Question'
 import { useQuestionCreateModal } from './hooks/useQuestionCreateModal'
 interface QuestionCreateProps {
     categoryId: number

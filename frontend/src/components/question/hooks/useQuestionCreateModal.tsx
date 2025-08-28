@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
-import { Question } from '../../../types/Question'
+import type { Question } from '../../../types/Question'
 
 export const useQuestionCreateModal = (
     categoryId: number,

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { SubcategoryWithQuestionCount } from "../../../types/Subcategory"
+import type { SubcategoryWithQuestionCount } from "../../../types/Subcategory"
 import { fetchSubcategoriesWithQuestionCountByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI"
 import { fetchCategory } from "../../../api/CategoryAPI"
-import { Category } from "../../../types/Category"
+import type { Category } from "../../../types/Category"
 import { fetchProblem } from '../../../api/ProblemAPI'
 import { useNavigate } from "react-router"
 import { 

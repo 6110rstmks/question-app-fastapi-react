@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryBox from "./CategoryBox";
 import styles from "./CategoryList.module.css";
-import { Category } from "../../types/Category";
+import type { Category } from "../../types/Category";
 
 interface CategoryListProps {
     categories: Category[]

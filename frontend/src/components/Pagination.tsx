@@ -1,5 +1,4 @@
 import React from "react"
-import styles from "./Pagination.module.css"
 
 interface PaginationProps {
     currentPage: number
@@ -19,7 +18,7 @@ const Pagination: React.FC<PaginationProps> = ({
             onPageChange(totalPages || 1)
         }
         window.scrollTo(0, 0)
-    };
+    }
 
     const handleNext = () => {
         if (totalPages === null || currentPage < totalPages) {
@@ -28,7 +27,7 @@ const Pagination: React.FC<PaginationProps> = ({
             onPageChange(1)
         }
         window.scrollTo(0, 0)
-    };
+    }
 
     return (
         <div className="block w-48 ml-24">
@@ -46,7 +45,7 @@ const Pagination: React.FC<PaginationProps> = ({
                 </button>
             </div>
         </div>        
-    );
-};
+    )
+}
 
 export default Pagination;

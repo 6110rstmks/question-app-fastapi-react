@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Category } from '../types/Category'
-import { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
-import { Question } from '../types/Question'
-import { SubcategoryQuestion } from '../types/SubcategoryQuestion'
+import type { Category } from '../types/Category'
+import type { SubcategoryWithCategoryName  } from '../types/Subcategory'
+import type { Question } from '../types/Question'
+import type { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
 import { fetchSubcategoriesWithCategoryNameByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'

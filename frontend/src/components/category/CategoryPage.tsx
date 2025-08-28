@@ -1,7 +1,7 @@
 import { useParams } from 'react-router';
 import { useNavigate } from "react-router"
 import styles from "./CategoryPage.module.css"
-import { SubcategoryWithQuestionCount } from '../../types/Subcategory';
+import type { SubcategoryWithQuestionCount } from '../../types/Subcategory';
 import { useCategoryPage } from "./hooks/useCategoryPage";
 import { handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
 

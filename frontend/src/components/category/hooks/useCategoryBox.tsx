@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
+import type { SubcategoryWithQuestionCount } from "../../../types/Subcategory";
 import { fetchSubcategoriesForHomePage, createSubcategory } from "../../../api/SubcategoryAPI";
 
 interface useCategoryBoxProps {

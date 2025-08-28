@@ -1,6 +1,7 @@
 import styles from './QuestionEdit.module.css'
-import React,{ ChangeEvent } from 'react'
-import { Question } from '../../types/Question'
+import React from 'react'
+import type { ChangeEvent } from 'react'
+import type { Question } from '../../types/Question'
 import { useQuestionEditModal } from './hooks/useQuestionEditModal'
 import { SolutionStatus } from '../../types/SolutionStatus'
 

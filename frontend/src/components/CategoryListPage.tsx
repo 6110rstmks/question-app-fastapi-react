@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { fetchAllCategories } from '../api/CategoryAPI'
-import { Category } from '../types/Category'
+import type { Category } from '../types/Category'
 import styles from "./CategoryList.module.css"
 
 const CategoryListPage = () => {

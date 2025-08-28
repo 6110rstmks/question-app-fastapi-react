@@ -1,6 +1,6 @@
 import React from 'react'
-import { SubcategoryWithCategoryName } from '../types/Subcategory'
-import { Question } from '../types/Question'
+import type { SubcategoryWithCategoryName } from '../types/Subcategory'
+import type { Question } from '../types/Question'
 import { SolutionStatus } from '../types/SolutionStatus'
 
 import styles from './ChangeCategorySubcategoryModal.module.css'

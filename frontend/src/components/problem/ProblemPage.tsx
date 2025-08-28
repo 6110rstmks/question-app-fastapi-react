@@ -1,6 +1,6 @@
 import React from "react"
 import { useLocation } from "react-router"
-import { Question } from "../../types/Question"
+import type { Question } from "../../types/Question"
 import { useProblemPage } from "./hooks/useProblemPage"
 import { ProblemNormalPage } from "./ui/ProblemNormalPage"
 import { ProblemCompletePage } from "./ui/ProblemCompletePage"

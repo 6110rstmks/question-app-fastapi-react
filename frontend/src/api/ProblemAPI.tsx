@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-import { Question } from '../types/Question'
+import type { Question } from '../types/Question'
 
 /**
  * Fetches a list of problems based on type, solved status, count, and optional category filters.

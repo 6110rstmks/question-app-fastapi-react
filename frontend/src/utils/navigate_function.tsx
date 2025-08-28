@@ -1,10 +1,10 @@
-import { NavigateFunction } from "react-router"
-import { Category } from "../types/Category"
+import type { NavigateFunction } from "react-router"
+import type { Category } from "../types/Category"
 
-interface categoryInfo {
-    id: number;
-    name: string;
-}
+// interface categoryInfo {
+//     id: number;
+//     name: string;
+// }
 
 export const handleNavigateToSubcategoryPage = (navigate: NavigateFunction, category: Category, subcategoryId: number) => {
     navigate(`/subcategory/${subcategoryId}`, {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router"
 import styles from "./CategoryBox.module.css"
-import { Category } from "../../types/Category"
-import { SubcategoryWithQuestionCount } from "../../types/Subcategory"
+import type { Category } from "../../types/Category"
+import type { SubcategoryWithQuestionCount } from "../../types/Subcategory"
 import { useCategoryBox } from "./hooks/useCategoryBox"
 import { 
     handleNavigateToCategoryPage, 

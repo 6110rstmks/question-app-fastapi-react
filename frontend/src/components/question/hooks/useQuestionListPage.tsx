@@ -4,7 +4,7 @@ import {
     useEffect 
 } from 'react';
 import { useNavigate } from "react-router"
-import { QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
+import type { QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
 import { fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord } from '../../../api/QuestionAPI'
 import { fetchCategory } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI'

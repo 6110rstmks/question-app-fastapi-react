@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react"
-import { Question } from "../../../types/Question"
+import type { Question } from "../../../types/Question"
 import { 
     incrementAnswerCount,
     updateLastAnsweredDate 
