@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, subMonths, eachDayOfInterval } from "date-fns"
-import styles from "./Calendar.module.css"
 import { fetchQuestionCountsByLastAnsweredDate } from "../api/QuestionAPI"
 import { fetchProblemByDay } from "../api/ProblemAPI"
 import { useNavigate } from 'react-router-dom'
@@ -50,48 +49,65 @@ const Calendar: React.FC = () => {
     , [currentDate])
 
     return (
-        
-        <div className={styles.calendar_container}>
-            <div>
-                <input type="checkbox" name="" id="" />
+        <div className="w-[860px] h-[658px] mx-auto my-10 p-4 bg-white shadow-lg rounded-lg">
+            <div className="mb-3">
+                <input type="checkbox" name="" id="" className="mr-2" />
                 temporaryのみを表示する
             </div>
 
             {/* ヘッダー */}
-            <div className={styles.calendar_header}>
-                <button onClick={prevMonth} className={styles.nav_button}>◀</button>
-                <h2 className={styles.calendar_title}>{format(currentDate, "yyyy年 MM月")}</h2>
-                <button onClick={nextMonth} className={styles.nav_button}>▶</button>
+            <div className="flex justify-between items-center mb-3">
+                <button 
+                    onClick={prevMonth} 
+                    className="bg-transparent border-none text-xl cursor-pointer hover:bg-gray-100 p-2 rounded"
+                >
+                    ◀
+                </button>
+                <h2 className="text-lg font-bold">{format(currentDate, "yyyy年 MM月")}</h2>
+                <button 
+                    onClick={nextMonth} 
+                    className="bg-transparent border-none text-xl cursor-pointer hover:bg-gray-100 p-2 rounded"
+                >
+                    ▶
+                </button>
             </div>
 
             {/* 曜日 */}
-            <div className={styles.calendar_weekdays}>
+            <div className="grid grid-cols-7 text-center font-bold mb-1">
                 {["日", "月", "火", "水", "木", "金", "土"].map(day => (
-                <div key={day} className={styles.weekday}>{day}</div>
+                    <div key={day} className="py-2">{day}</div>
                 ))}
             </div>
 
             {/* 日付 */}
-            <div className={styles.calendar_grid}>
+            <div className="grid grid-cols-7 gap-11 cursor-pointer">
                 {days.map(day => {
                     const dateStr = format(day, "yyyy-MM-dd");
                     console.log("dateStr", dateStr)
                     const questionCount = questionCounts[dateStr];
+                    const isOtherMonth = format(day, "MM") !== format(currentDate, "MM");
+                    const isToday = format(day, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd");
+                    
                     return (
                         <div
                             key={day.toISOString()}
-                            className={`${styles.calendar_day} 
-                                        ${format(day, "MM") !== format(currentDate, "MM") ? styles.other_month : ""}
-                                        ${format(day, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd") ? styles.today : ""}`}
+                            className={`text-center p-2.5 rounded text-sm hover:bg-gray-50 transition-colors ${
+                                isOtherMonth ? "text-gray-300" : ""
+                            } ${
+                                isToday ? "bg-blue-500 text-white font-bold rounded-full" : ""
+                            }`}
                             onClick={() => handleSetProblemByDay(day)}
                         >
                             <div>{format(day, "d")}</div>
-                            {questionCount > 0 && <div className={styles.question_count}>{questionCount}件</div>}
+                            {questionCount > 0 && (
+                                <div className="text-xs mt-1">
+                                    {questionCount}件
+                                </div>
+                            )}
                         </div>
                     );
                 })}
             </div>
-
         </div>
     );
 };

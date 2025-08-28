@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
 
 interface SignupForm {
   username: string
@@ -15,7 +14,6 @@ const Signup: React.FC = () => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }))
   }
-  console.log('Signup form:', form)
   
   const handleSubmit = async (e: React.FormEvent) => {
     if (form.password.length < 8) {
@@ -32,7 +30,6 @@ const Signup: React.FC = () => {
       credentials: 'include', // ← セッション維持に必須
       body: JSON.stringify(form),
     })
-
 
     const data = await response.json()
 
@@ -77,7 +74,7 @@ const Signup: React.FC = () => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {success && <p style={{ color: 'green' }}>{success}</p>}
     </div>
-  );
-};
+  )
+}
 
-export default Signup;
+export default Signup
