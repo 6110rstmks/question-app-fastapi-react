@@ -1,5 +1,5 @@
-import { SubcategoryWithQuestionCount } from "../types/Subcategory";
-import { Question } from "../types/Question";
+import type { SubcategoryWithQuestionCount } from "../types/Subcategory";
+import type { Question } from "../types/Question";
 import { 
     updateQuestionIsCorrect, 
     fetchQuestion, 
