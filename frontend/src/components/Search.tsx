@@ -64,7 +64,7 @@ const Search: React.FC<SearchProps> = ({
     }
 
     return (
-        <div className="flex justify-center">
+        <search>
             <div className="mx-2.5">
                 <input
                     type="text"
@@ -92,7 +92,7 @@ const Search: React.FC<SearchProps> = ({
                     autoFocus={autoFocus}
                 />
             </div>
-        </div>
+        </search>
     )
 }
 
