@@ -72,6 +72,5 @@ export const ProblemCompletePage: React.FC<Props> = ({
 
             </div>
         </div>
-    );
-};
-
+    )
+}

@@ -107,11 +107,8 @@ const ChangeCategorySubcategoryModal: React.FC<ChangeCategorySubcategoryProps> =
                     >
                         Change
                     </button>
-            </div>
-                    
+            </div>          
         </div>
-
-
     )
 }
 

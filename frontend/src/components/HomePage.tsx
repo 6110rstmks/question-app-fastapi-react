@@ -69,7 +69,13 @@ export const HomePage: React.FC = () => {
        <div className="min-h-screen">
             <Link 
                 to="/createcategory" 
-                className="inline-flex items-center justify-center w-22 h-22 text-white bg-yellow-green-500 rounded-full cursor-pointer no-underline break-words"
+                className={`
+                    inline-flex items-center 
+                    justify-center w-22 h-22 
+                    text-white bg-yellow-green-500 
+                    rounded-full cursor-pointer 
+                    no-underline break-words
+                `}
             >
                 Create Category
             </Link>

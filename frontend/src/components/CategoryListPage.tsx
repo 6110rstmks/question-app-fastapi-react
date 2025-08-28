@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { fetchAllCategories } from '../api/CategoryAPI'
 import type { Category } from '../types/Category'
-import styles from "./CategoryList.module.css"
 
 const CategoryListPage = () => {
     const [categories, setCategories] = useState<Category[]>([])
@@ -45,7 +44,7 @@ const CategoryListPage = () => {
         <div>
             {categories.map((category) => (
                 // チェックボックスを表示する
-                <div key={category.id} className={styles.categoryBox}>
+                <div key={category.id}>
                     <input type="checkbox" name="" id="" />
                     <h2>{category.name}</h2>
                 </div>
