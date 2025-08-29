@@ -11,13 +11,14 @@ import {
 
 export const useCategories = (
     page: number,
-    limit: number,
     searchCategoryWord: string,
     searchSubcategoryWord: string,
     searchQuestionWord: string,
     searchAnswerWord: string
 ) => {
     const [categories, setCategories] = useState<Category[]>([])
+
+    const limit =3
 
     // アプリの初期状態の場合はカテゴリがまだ作成されていないためpageCount,questionCountはnull
     const [

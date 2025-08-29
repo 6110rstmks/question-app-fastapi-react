@@ -11,7 +11,6 @@ import { useNavigate } from "react-router"
 
 export const HomePage: React.FC = () => {
     const [page, setPage] = useState<number>(1)
-    const [limit] = useState<number>(3)
     const { setIsAuth } = useAuth()
     const navigate = useNavigate()
 
@@ -58,7 +57,6 @@ export const HomePage: React.FC = () => {
         temporaryQuestionCount,
     } = useCategories(
         page,
-        limit,
         searchCategoryWord,
         searchSubcategoryWord,
         searchQuestionWord,
