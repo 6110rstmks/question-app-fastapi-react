@@ -30,6 +30,6 @@ export const CategoryList: React.FC<CategoryListProps> = ({
                 ))}
             </div>
         </div>
-    );
-};
+    )
+}
 
