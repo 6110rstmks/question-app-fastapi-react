@@ -6,9 +6,12 @@ from fastapi import HTTPException
 from backend.config import SolutionStatus
 from datetime import datetime, timedelta
 from backend.models import CategoryBlacklist
-from typing import Optional, List
+from typing import Optional
 
-def generate_problems(db: Session, problem_fetch: ProblemFetch)-> List[Question]:
+def generate_problems(
+    db: Session, 
+    problem_fetch: ProblemFetch
+)-> list[Question]:
     """
     Generate a list of questions
     """
@@ -42,7 +45,10 @@ def generate_problems(db: Session, problem_fetch: ProblemFetch)-> List[Question]
         raise HTTPException(status_code=400, detail="出題する問題がありませんでした。")
     return results
 
-def generate_problems_by_day(db: Session, day: str):
+def generate_problems_by_day(
+    db: Session, 
+    day: str
+)-> list[Question]:
     # ブラックリストカテゴリの問題IDを取得
     blacklisted_question_ids = _get_blacklisted_question_ids(db)
 
@@ -59,7 +65,7 @@ def generate_problems_by_day(db: Session, day: str):
 
     return db.execute(query).scalars().all()
 
-def get_today_problems(db: Session) -> List[Question]:
+def get_today_problems(db: Session) -> list[Question]:
     """
     Get today's problems that have been answered today.
     """
@@ -92,7 +98,10 @@ def get_today_problems(db: Session) -> List[Question]:
         )
     return db.execute(query).scalars().all()
 
-def _get_question_ids_by_type(db: Session, fetch: ProblemFetch) -> Optional[List[int]]:
+def _get_question_ids_by_type(
+    db: Session, 
+    fetch: ProblemFetch
+) -> Optional[list[int]]:
     """
     Return a list of question IDs based on the fetch type.
     None means 'random' (no filtering by ID list).
@@ -111,7 +120,7 @@ def _get_question_ids_by_type(db: Session, fetch: ProblemFetch) -> Optional[List
         raise HTTPException(status_code=400, detail="不明なタイプが入力されました。")
     return db.execute(stmt).scalars().all()
 
-def _get_blacklisted_question_ids(db: Session)-> List[int]:
+def _get_blacklisted_question_ids(db: Session)-> list[int]:
     blacklisted_category_ids = db.execute(
         select(CategoryBlacklist.category_id)
     ).scalars().all()
@@ -136,12 +145,12 @@ def _get_threshold(solved_status: str) -> Optional[datetime]:
 
 def _fetch_questions(
     db: Session,
-    question_ids: Optional[List[int]],
+    question_ids: Optional[list[int]],
     status_enum,
     threshold: Optional[datetime],
-    blacklist: List[int],
+    blacklist: list[int],
     limit: int,
-) -> List[Question]:
+) -> list[Question]:
     """
     Build and execute the query to fetch questions with optional filters:
     - question_ids: filter by specific IDs if provided

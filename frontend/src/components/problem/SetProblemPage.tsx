@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import useSetProblemPage from './hooks/useSetProblemPage'
-import Calendar from '../Calendar'
+import CalendarModal from '../CalendarModal'
 import { SolutionStatus } from '../../types/SolutionStatus'
 import { 
     X, 
+    Calendar,
     Target, 
     Clock, 
-    Users, 
     CheckCircle2, 
     AlertCircle, 
     Shuffle, 
@@ -51,26 +51,9 @@ const SetProblemPage: React.FC = () => {
         );
     };
 
-    // const categories: Category[] = [
-    //     { id: 1, name: 'JavaScript基礎', incorrected_answered_question_count: 15, temporary_answered_question_count: 8 },
-    //     { id: 2, name: 'React開発', incorrected_answered_question_count: 23, temporary_answered_question_count: 12 },
-    //     { id: 3, name: 'TypeScript', incorrected_answered_question_count: 9, temporary_answered_question_count: 5 },
-    //     { id: 4, name: 'Node.js', incorrected_answered_question_count: 18, temporary_answered_question_count: 7 },
-    // ];
-
-    // const subcategories: Subcategory[] = [
-    //     { id: 1, name: 'Variables & Functions', categoryId: 1 },
-    //     { id: 2, name: 'Async/Await', categoryId: 1 },
-    //     { id: 3, name: 'Hooks', categoryId: 2 },
-    //     { id: 4, name: 'State Management', categoryId: 2 },
-    //     { id: 5, name: 'Types & Interfaces', categoryId: 3 },
-    //     { id: 6, name: 'Express.js', categoryId: 4 },
-    // ];
-
     const {
         categories,
         questionCount,
-        showAll,
         selectedType,
         setSelectedType,
         problemCount,
@@ -103,7 +86,7 @@ const SetProblemPage: React.FC = () => {
                 {/* Calendar Section */}
                 <div className="bg-white rounded-2xl shadow-xl p-6 mb-8">
                     <div className="flex items-center gap-3 mb-6">
-                        {/* <Calendar className="h-6 w-6 text-blue-600" /> */}
+                        <Calendar className="h-6 w-6 text-blue-600" />
                         <h2 className="text-xl font-semibold text-gray-900">カレンダー復習</h2>
                     </div>
                     
@@ -128,7 +111,7 @@ const SetProblemPage: React.FC = () => {
                                         <X className="h-5 w-5 text-gray-500" />
                                     </button>
                                 </div>
-                                <Calendar />
+                                <CalendarModal />
                             </div>
                         </div>
                     )}
@@ -196,9 +179,6 @@ const SetProblemPage: React.FC = () => {
                             <div>
                                 <p className="text-purple-700 font-medium">総問題数</p>
                                 <p className="text-3xl font-bold text-purple-800">{questionCount}</p>
-                            </div>
-                            <div className="p-3 bg-purple-100 rounded-full">
-                                <Users className="h-8 w-8 text-purple-600" />
                             </div>
                         </div>
                     </div>

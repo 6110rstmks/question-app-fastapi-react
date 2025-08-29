@@ -4,7 +4,7 @@ import { fetchQuestionCountsByLastAnsweredDate } from "../api/QuestionAPI"
 import { fetchProblemByDay } from "../api/ProblemAPI"
 import { useNavigate } from 'react-router-dom'
 
-const Calendar: React.FC = () => {
+const CalendarModal: React.FC = () => {
     const [
         currentDate, 
         setCurrentDate
@@ -112,4 +112,4 @@ const Calendar: React.FC = () => {
     );
 };
 
-export default Calendar
+export default CalendarModal
