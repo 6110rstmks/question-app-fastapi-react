@@ -2,24 +2,7 @@ import React, { useState } from 'react'
 import useSetProblemPage from './hooks/useSetProblemPage'
 import CalendarModal from '../CalendarModal'
 import { SolutionStatus } from '../../types/SolutionStatus'
-import { 
-    X, 
-    Calendar,
-    Target, 
-    Clock, 
-    CheckCircle2, 
-    AlertCircle, 
-    Shuffle, 
-    Filter, 
-    Plus, 
-    Minus,
-    ChevronDown,
-    ChevronUp,
-    Play,
-    RotateCcw,
-    BookOpen
-} from 'lucide-react';
-
+import { X, Calendar,Target, Clock, CheckCircle2, AlertCircle, Shuffle, Filter, Plus, Minus,ChevronDown,ChevronUp,Play,RotateCcw,BookOpen } from 'lucide-react'
 
 const SetProblemPage: React.FC = () => {
     const [
@@ -30,7 +13,7 @@ const SetProblemPage: React.FC = () => {
     const [
         expandedCategories, 
         setExpandedCategories
-    ] = useState<number[]>([]);
+    ] = useState<number[]>([])
 
 
     // 月/日形式でフォーマット（例: 8/5）
@@ -179,37 +162,6 @@ const SetProblemPage: React.FC = () => {
                             <div>
                                 <p className="text-purple-700 font-medium">総問題数</p>
                                 <p className="text-3xl font-bold text-purple-800">{questionCount}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Problem Count Selector */}
-                    <div className="mb-8">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="p-2 bg-blue-100 rounded-lg">
-                                <Target className="h-5 w-5 text-blue-600" />
-                            </div>
-                            <h3 className="text-lg font-semibold text-gray-900">出題数設定</h3>
-                        </div>
-                        
-                        <div className="flex items-center gap-4 bg-gray-50 rounded-xl p-4">
-                            <span className="text-gray-700 font-medium">出題数：</span>
-                            <div className="flex items-center gap-3">
-                                <button 
-                                    onClick={() => setProblemCount(prev => Math.max(1, prev - 1))}
-                                    className="p-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-                                >
-                                    <Minus className="h-4 w-4 text-gray-600" />
-                                </button>
-                                <span className="bg-white border border-gray-300 rounded-lg px-6 py-2 font-bold text-lg min-w-[80px] text-center">
-                                    {problemCount}
-                                </span>
-                                <button 
-                                    onClick={() => setProblemCount(prev => prev + 1)}
-                                    className="p-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-                                >
-                                    <Plus className="h-4 w-4 text-gray-600" />
-                                </button>
                             </div>
                         </div>
                     </div>
