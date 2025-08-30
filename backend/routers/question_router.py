@@ -121,7 +121,10 @@ async def delete(
     db: DbDependency, 
     question_id: int = Path(gt=0)
 ):
-    # deleted_item = question_cruds.delete(db, id, user.user_id)
+    found_question = question_crud.find_question_by_id(db, question_id)
+    if not found_question:
+        raise HTTPException(status_code=404, detail="Question not found")
+    
     deleted_item = question_crud.delete_question(db, question_id)
     if not deleted_item:
         raise HTTPException(status_code=404, detail="Item not deleted")

@@ -1,7 +1,9 @@
-from pydantic import BaseModel, Field, ConfigDict, field_validator
+from pydantic import BaseModel, Field, ConfigDict, validator
 from typing import List
 from datetime import datetime
 from backend.config import SolutionStatus
+from fastapi import HTTPException
+
 
 class QuestionCreate(BaseModel):
     problem: str = Field(min_length=2, max_length=9999, examples=["列志向データベースの強みを説明せよ"])
@@ -9,6 +11,12 @@ class QuestionCreate(BaseModel):
     memo: str = Field(max_length=300, examples=["ここにquestionに関するメモを記入できます。"])
     category_id: int = Field(gt=0, example=1)
     subcategory_id: int = Field(gt=0, example=1)
+    
+    @validator("problem")
+    def problem_min_length(cls, v):
+        if len(v) < 2:
+            raise HTTPException(status_code=400, detail="Problem is too short")
+        return v
     
 class QuestionUpdate(BaseModel):
     problem: str = Field(min_length=2, max_length=9999, examples=["列志向データベースの強みを説明せよ"])

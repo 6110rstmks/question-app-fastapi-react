@@ -3,10 +3,11 @@ from sqlalchemy import select, update, func, text, delete
 from backend.schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
 from backend.models import Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
-from . import category_question_crud as category_question_cruds
-from . import subcategory_question_crud as subcategory_question_cruds
+from backend.cruds import category_question_crud as category_question_cruds
+from backend.cruds import subcategory_question_crud as subcategory_question_cruds
 from datetime import date
 from backend.schemas.question import QuestionResponse
+from fastapi import HTTPException
 
 def find_all_questions(
     db: Session,
@@ -66,6 +67,7 @@ def create(
     db: Session, 
     question_create: QuestionCreate
 ) -> QuestionResponse:
+    
     try:
         question_data = question_create.model_dump(exclude={"category_id", "subcategory_id"})
         new_question = Question(
@@ -87,7 +89,10 @@ def create(
         raise e
 
 def update2(
-    db: Session, id: int, question_update: QuestionUpdate):
+    db: Session, 
+    id: int, 
+    question_update: QuestionUpdate
+) -> QuestionResponse:
     stmt = (
         update(Question).
         where(Question.id == id).
@@ -126,7 +131,7 @@ def update_is_correct_by_subcategory(
     db: Session,
     subcategory_id: int,
     question_is_correct_update: QuestionIsCorrectUpdate
-) -> list[Question]:
+) -> list[QuestionResponse]:
     # サブカテゴリに属するすべての質問を取得
     query = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
     subcategoriesquestions = db.execute(query).scalars().all()

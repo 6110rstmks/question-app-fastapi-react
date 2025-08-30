@@ -49,16 +49,16 @@ def test_create_question(client_fixture: TestClient):
     client_fixture.delete(f"/questions/{question['id']}")
     
 def test_create_question_異常系_problemが短すぎる(client_fixture: TestClient):
-#     invalid_question = {
-#         "problem": "A", 
-#         "answer": ["Answer"],
-#         "memo": "Memo",
-#         "category_id": 2,
-#         "subcategory_id": 95
-#     }
-#     response = client_fixture.post("/questions", json=invalid_question)
-#     assert response.status_code == 422 
-#     assert {} == response.json()
+    invalid_question = {
+        "problem": "A", 
+        "answer": ["Answer"],
+        "memo": "Memo",
+        "category_id": 2,
+        "subcategory_id": 95
+    }
+    response = client_fixture.post("/questions", json=invalid_question)
+    assert response.status_code == 422 
+    assert {} == response.json()
     
 # def test_update_question(client_fixture: TestClient):
     
@@ -95,5 +95,27 @@ def test_create_question_異常系_problemが短すぎる(client_fixture: TestCl
     pass
 
 def test_delete_question(client_fixture: TestClient):
+    new_question = {
+        "problem": "What is the capital of France?",
+        "answer": ["Paris"],
+        "memo": "Capital city of France",
+        "category_id": 2,
+        "subcategory_id": 95
+    }
+    response = client_fixture.post("/questions", json=new_question)
+    
+    print((response.json())['id'])
+    
+    question_id = (response.json())['id']
+    print(f"Created question ID: {question_id}")
+    
+    response = client_fixture.delete(f"/questions/{question_id}")
+    assert response.status_code == 200
+    deleted_question = response.json()
+    assert deleted_question["id"] == question_id
+    
+    # 本当に削除されたか確認する
+    response = client_fixture.get(f"/questions/{question_id}")
+    assert response.status_code == 404
 
     pass
