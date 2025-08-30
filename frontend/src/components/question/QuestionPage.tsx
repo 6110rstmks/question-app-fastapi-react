@@ -6,7 +6,7 @@ import QuestionEditModal from './QuestionEditModal';
 import ChangeCategorySubcategory from '../ChangeCategorySubcategoryModal';
 import { useQuestionPage } from './hooks/useQuestionPage'
 import { BlockMath } from 'react-katex'
-import RenderMemoWithLinks from '../RenderMemoWithLinks';
+import RenderMemoWithLinks from '../RenderMemoWithlinks';
 import { SolutionStatus } from '../../types/SolutionStatus';
 import { isLatex } from '../../utils/function';
 import { handleUpdateIsCorrect } from '../../utils/function';

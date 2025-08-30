@@ -3,8 +3,14 @@ import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, su
 import { fetchQuestionCountsByLastAnsweredDate } from "../api/QuestionAPI"
 import { fetchProblemByDay } from "../api/ProblemAPI"
 import { useNavigate } from 'react-router-dom'
+import { X } from "lucide-react"
 
-const CalendarModal: React.FC = () => {
+interface CalendarModalProps {
+    setIsDisplayCalendar: (isDisplayCalendar: boolean) => void
+}
+const CalendarModal: React.FC<CalendarModalProps> = ({
+    setIsDisplayCalendar
+}) => {
     const [
         currentDate, 
         setCurrentDate
@@ -49,64 +55,79 @@ const CalendarModal: React.FC = () => {
     , [currentDate])
 
     return (
-        <div className="w-[860px] h-[658px] mx-auto my-10 p-4 bg-white shadow-lg rounded-lg">
-            <div className="mb-3">
-                <input type="checkbox" name="" id="" className="mr-2" />
-                temporaryのみを表示する
-            </div>
+        <div className="fixed inset-0 bg-black/50 flex justify-center z-50 p-4">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-5xl w-full h-full overflow-hidden">
+                <div className="justify-between pt-5 pl-4 border-b border-gray-200">
+                    <button 
+                        className="p-2 hover:bg-gray-100 rounded-full transition-colors" 
+                        onClick={() => setIsDisplayCalendar(false)}
+                    >
+                        <X className="h-5 w-5 text-gray-500" />
+                    </button>
+                </div>
+                <div className="w-[860px] h-[658px] mx-auto bg-white shadow-lg rounded-lg">
+                    <div className="mb-3">
+                        <input type="checkbox" name="" id="" className="mr-2" />
+                        temporaryのみを表示する
+                    </div>
 
-            {/* ヘッダー */}
-            <div className="flex justify-between items-center mb-3">
-                <button 
-                    onClick={prevMonth} 
-                    className="bg-transparent border-none text-xl cursor-pointer hover:bg-gray-100 p-2 rounded"
-                >
-                    ◀
-                </button>
-                <h2 className="text-lg font-bold">{format(currentDate, "yyyy年 MM月")}</h2>
-                <button 
-                    onClick={nextMonth} 
-                    className="bg-transparent border-none text-xl cursor-pointer hover:bg-gray-100 p-2 rounded"
-                >
-                    ▶
-                </button>
-            </div>
-
-            {/* 曜日 */}
-            <div className="grid grid-cols-7 text-center font-bold mb-1">
-                {["日", "月", "火", "水", "木", "金", "土"].map(day => (
-                    <div key={day} className="py-2">{day}</div>
-                ))}
-            </div>
-
-            {/* 日付 */}
-            <div className="grid grid-cols-7 gap-11 cursor-pointer">
-                {days.map(day => {
-                    const dateStr = format(day, "yyyy-MM-dd");
-                    console.log("dateStr", dateStr)
-                    const questionCount = questionCounts[dateStr];
-                    const isOtherMonth = format(day, "MM") !== format(currentDate, "MM");
-                    const isToday = format(day, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd");
-                    
-                    return (
-                        <div
-                            key={day.toISOString()}
-                            className={`text-center p-2.5 rounded text-sm hover:bg-gray-50 transition-colors ${
-                                isOtherMonth ? "text-gray-300" : ""
-                            } ${
-                                isToday ? "bg-blue-500 text-white font-bold rounded-full" : ""
-                            }`}
-                            onClick={() => handleSetProblemByDay(day)}
+                    {/* ヘッダー */}
+                    <div className="flex justify-between items-center mb-3">
+                        <button 
+                            onClick={prevMonth} 
+                            className="bg-transparent border-none text-xl cursor-pointer hover:bg-gray-100 p-2 rounded"
                         >
-                            <div>{format(day, "d")}</div>
-                            {questionCount > 0 && (
-                                <div className="text-xs mt-1">
-                                    {questionCount}件
+                            ◀
+                        </button>
+                        <h2 className="text-lg font-bold">{format(currentDate, "yyyy年 MM月")}</h2>
+                        <button 
+                            onClick={nextMonth} 
+                            className="bg-transparent border-none text-xl cursor-pointer hover:bg-gray-100 p-2 rounded"
+                        >
+                            ▶
+                        </button>
+                    </div>
+
+                    {/* 曜日 */}
+                    <div className="grid grid-cols-7 text-center font-bold mb-1">
+                        {["日", "月", "火", "水", "木", "金", "土"].map(day => (
+                            <div key={day} className="py-2">{day}</div>
+                        ))}
+                    </div>
+
+                    {/* 日付 */}
+                    <div className="grid grid-cols-7 gap-9 cursor-pointer">
+                        {days.map(day => {
+                            const dateStr = format(day, "yyyy-MM-dd")
+                            const questionCount = questionCounts[dateStr]
+                            const isOtherMonth = format(day, "MM") !== format(currentDate, "MM")
+                            const isToday = format(day, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd")
+                            
+                            return (
+                                <div
+                                    key={day.toISOString()}
+                                    className={`text-center p-2.5 rounded text-sm hover:bg-gray-50 transition-colors ${
+                                        isOtherMonth ? "text-gray-300" : ""
+                                    } ${
+                                        isToday ? "bg-blue-500 text-white font-bold rounded-full" : ""
+                                    }`}
+                                    onClick={() => handleSetProblemByDay(day)}
+                                >
+                                    <div
+                                        className={questionCount > 0 ? "text-green-500" : ""}
+                                    >
+                                        {format(day, "d")}
+                                    </div>
+                                    {questionCount > 0 && (
+                                        <div className="text-xs mt-1">
+                                            {questionCount}件
+                                        </div>
+                                    )}
                                 </div>
-                            )}
-                        </div>
-                    );
-                })}
+                            );
+                        })}
+                    </div>
+                </div>
             </div>
         </div>
     );
