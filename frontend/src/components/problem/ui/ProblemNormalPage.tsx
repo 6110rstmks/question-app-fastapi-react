@@ -8,7 +8,7 @@ import { BlockMath } from "react-katex"
 import Modal from 'react-modal'
 import QuestionEditModal from "../../question/QuestionEditModal"
 import ChangeCategorySubcategory from "../../ChangeCategorySubcategoryModal"
-import RenderMemoWithLinks from '../../RenderMemoWithlinks'
+import RenderMemoWithLinks from '../../RenderMemoWithLinks'
 import { SolutionStatus } from "../../../types/SolutionStatus"
 import { isLatex } from "../../../utils/function"
 import { handleUpdateIsCorrect } from "../../../utils/function"
@@ -32,7 +32,7 @@ interface Props {
 export const ProblemNormalPage: React.FC<Props> = ({
     reviewFlg,
     problem,
-    problemData,
+    // problemData,
     currentProblemIndex,
     problemLength,
     showAnswer,
@@ -57,18 +57,13 @@ export const ProblemNormalPage: React.FC<Props> = ({
         setLocalProblem
     ] = useState<Question>(problem) 
 
-    // const [
-    //     editModalIsOpen,
-    //     setEditModalIsOpen
-    // ] = useState<boolean>(false)
-
     useEffect(() => {
         setLocalProblem(problem)
 
-        // problemDataも更新したい
-        const updatedProblemData = problemData.map((p) => 
-            p.id === problem.id ? { ...p, ...problem } : p
-        )
+        // // problemDataも更新したい
+        // const updatedProblemData = problemData.map((p) => 
+        //     p.id === problem.id ? { ...p, ...problem } : p
+        // )
 
         const fetchData = async () => {
             const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)

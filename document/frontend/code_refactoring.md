@@ -53,4 +53,4 @@ buttonはbtnと略さず、buttonとする。
 
 
 ## 無理に共通化をしない方が自然な関数
-handleAddSubcategory
+handleAddSubcategory(CategoryBox.tsx, CategoryPage.tsx)

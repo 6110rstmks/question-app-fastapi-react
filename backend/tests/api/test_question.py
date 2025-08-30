@@ -1,3 +1,8 @@
+"""
+backendディレクトリの一つ上のディレクトリで実行する。
+pytest -s backend/tests/api/test_question.py
+"""
+
 from fastapi.testclient import TestClient
 
 from unittest.mock import MagicMock
@@ -40,7 +45,20 @@ def test_create_question(client_fixture: TestClient):
     assert question["answer"] == new_question["answer"]
     assert question["memo"] == new_question["memo"]
     
+    # 冪等性のために作成したデータを削除する
     client_fixture.delete(f"/questions/{question['id']}")
+    
+def test_create_question_異常系_problemが短すぎる(client_fixture: TestClient):
+    invalid_question = {
+        "problem": "A", 
+        "answer": ["Answer"],
+        "memo": "Memo",
+        "category_id": 2,
+        "subcategory_id": 95
+    }
+    response = client_fixture.post("/questions", json=invalid_question)
+    assert response.status_code == 422 
+    assert {} == response.json()
     
 def test_update_question(client_fixture: TestClient):
     # update_data = {

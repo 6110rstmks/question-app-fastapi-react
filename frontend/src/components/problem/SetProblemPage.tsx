@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import useSetProblemPage from './hooks/useSetProblemPage'
 import CalendarModal from '../CalendarModal'
 import { SolutionStatus } from '../../types/SolutionStatus'
-import { X, Calendar,Target, Clock, CheckCircle2, AlertCircle, Shuffle, Filter, Plus, Minus,ChevronDown,ChevronUp,Play,RotateCcw,BookOpen } from 'lucide-react'
+import { X, Calendar,Target, Clock, CheckCircle2, AlertCircle, Shuffle, Filter ,ChevronDown,ChevronUp,Play,RotateCcw,BookOpen } from 'lucide-react'
 
 const SetProblemPage: React.FC = () => {
     const [
@@ -39,8 +39,6 @@ const SetProblemPage: React.FC = () => {
         questionCount,
         selectedType,
         setSelectedType,
-        problemCount,
-        setProblemCount,
         selectedCategoryIds,
         subcategories,
         handleSetProblem,
@@ -77,7 +75,7 @@ const SetProblemPage: React.FC = () => {
                         className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-4 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-200 transform hover:scale-[1.02] shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
                         onClick={() => setIsDisplayCalendar(prev => !prev)}
                     >
-                        {/* <Calendar className="h-5 w-5" /> */}
+                        <Calendar className="h-5 w-5" />
                         カレンダーから問題を復習
                     </button>
 
@@ -85,7 +83,7 @@ const SetProblemPage: React.FC = () => {
                     {isDisplayCalendar && (
                         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
                             <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-hidden">
-                                <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                                <div className="justify-between p-6 border-b border-gray-200">
                                     <h3 className="text-lg font-semibold text-gray-900">カレンダー選択</h3>
                                     <button 
                                         className="p-2 hover:bg-gray-100 rounded-full transition-colors" 
@@ -98,6 +96,7 @@ const SetProblemPage: React.FC = () => {
                             </div>
                         </div>
                     )}
+
                 </div>
 
                 {/* Daily Review Section */}

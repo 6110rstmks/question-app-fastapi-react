@@ -39,7 +39,7 @@ export const useQuestionCreateModal = (
             return
         }
 
-        const response = await fetch('http://localhost:8000/questions', {
+        await fetch('http://localhost:8000/questions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

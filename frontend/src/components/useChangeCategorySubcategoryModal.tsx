@@ -12,10 +12,6 @@ interface OriginalData {
     question_id: number;
 }
 
-interface OriginalData2 {
-    category_id: number;
-    question_id: number;
-}
 
 export const useCategoryPage = (
     categoryId: number,

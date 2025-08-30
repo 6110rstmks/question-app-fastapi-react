@@ -66,7 +66,7 @@ export const HomePage: React.FC = () => {
     return (
        <div className="min-h-screen">
             <Link 
-                to="/createcategory" 
+                to="/create_category" 
                 className={`
                     inline-flex items-center 
                     justify-center w-22 h-22 
@@ -86,10 +86,10 @@ export const HomePage: React.FC = () => {
                     <h3>The total number of corrected Questions：{correctedQuestionCount}</h3>
                 </div>
 
-                <Link to="/categorylist">カテゴリの一覧のページに移動</Link>
+                <Link to="/category_list">カテゴリの一覧のページに移動</Link>
             </div>
             
-            <h1>ctr i でsetproblempageにとべる</h1>
+            <h1>ctr i でsetProblemPageにとべる</h1>
             
             <div className="flex mt-4">
                 <Search 

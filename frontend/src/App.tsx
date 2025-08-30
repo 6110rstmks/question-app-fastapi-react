@@ -36,14 +36,14 @@ const App: React.FC = () => {
             <Route path="/categories/home" element={<HomePage />} />
 
             {/* カテゴリ作成画面 */}
-            <Route path="/createcategory" element={<CategoryCreate />} />
+            <Route path="/create_category" element={<CategoryCreate />} />
 
             {/* 問題出題画面 */}
             <Route path="/set_question" element={<SetProblem />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/categorylist" element={<CategoryBlackListPage />} />
+            <Route path="/category_list" element={<CategoryBlackListPage />} />
 
             <Route path="/category/:categoryId" element={<CategoryPage />} />
             <Route path="/subcategory/:subcategoryId" element={<SubcategoryPage />} />

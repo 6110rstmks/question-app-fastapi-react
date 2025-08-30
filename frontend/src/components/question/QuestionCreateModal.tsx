@@ -3,6 +3,7 @@ import styles from "./QuestionCreateModal.module.css"
 import type { ChangeEvent } from 'react'
 import type { Question } from '../../types/Question'
 import { useQuestionCreateModal } from './hooks/useQuestionCreateModal'
+
 interface QuestionCreateProps {
     categoryId: number
     subcategoryId: number
@@ -31,7 +32,7 @@ const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
         subcategoryId,
         setQuestions,
         setModalIsOpen
-    );
+    )
 
     return (
         <div className={styles.container}>
@@ -107,8 +108,8 @@ const QuestionCreateModal: React.FC<QuestionCreateProps> = ({
             </div>        
         </div>
         </div>
-    );
-};
+    )
+}
 
-export default QuestionCreateModal;
+export default QuestionCreateModal
 
