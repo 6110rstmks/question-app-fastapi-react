@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field, ConfigDict, field_validator
 from typing import List
 from datetime import datetime
 from backend.config import SolutionStatus
@@ -9,6 +9,13 @@ class QuestionCreate(BaseModel):
     memo: str = Field(max_length=300, examples=["ここにquestionに関するメモを記入できます。"])
     category_id: int = Field(gt=0, example=1)
     subcategory_id: int = Field(gt=0, example=1)
+    
+    # 2文字以上のバリデーション
+    @field_validator('problem')
+    def problem_length(v):
+        if len(v) < 2:
+            raise ValueError('Problem must be at least 2 characters long')
+        return v
     
 class QuestionUpdate(BaseModel):
     problem: str = Field(min_length=2, max_length=9999, examples=["列志向データベースの強みを説明せよ"])

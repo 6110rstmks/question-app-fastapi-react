@@ -4,15 +4,24 @@ from backend.schemas.category import CategoryCreate
 from backend.models import Category, CategoryQuestion, Subcategory, Question
 from backend.config import PAGE_SIZE
 from fastapi import HTTPException
+from typing import Optional
 
-def find_all_categories(db: Session):
+def find_all_categories(db: Session)-> list[Category]:
     """
     全てのカテゴリを取得する。
     """
     query = select(Category)
     return db.execute(query).scalars().all()
 
-def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None, subcategory_word: str = None, question_word: str = None, answer_word: str = None):
+def find_all(
+    db: Session, 
+    limit: int, 
+    skip: int = 0,  
+    category_word: str = None, 
+    subcategory_word: str = None, 
+    question_word: str = None, 
+    answer_word: str = None
+) -> list[Category]:
 
     # カテゴリテーブルがそんざいするかどうかの確認。
     # テーブルの存在確認を行う理由はデフォルトでは。
@@ -67,25 +76,35 @@ def find_all(db: Session, limit: int, skip: int = 0,  category_word: str = None,
     result = db.execute(query_stmt).scalars().all()
     return result[skip: skip + limit]
 
-def find_pagination(db: Session):
-    query = select(Category)
-    return db.execute(query).scalars().all()
 
-def find_category_by_id(db: Session, id: int):
+def find_category_by_id(
+    db: Session, 
+    id: int
+) -> Optional["Category"]:
     query = select(Category).where(Category.id == id)
     return db.execute(query).scalars().first()
 
-def find_category_by_name(db: Session, search_word: str):
+# あいまい検索
+def find_category_by_name(
+    db: Session, 
+    search_word: str
+) -> list[Category]:
     query = select(Category).where(Category.name.ilike(f"%{search_word}%"))
     return db.execute(query).scalars().all()
 
-def find_category_by_question_id(db: Session, question_id: int):
+def find_category_by_question_id(
+    db: Session, 
+    question_id: int
+) -> Optional["Category"]:
     query = select(CategoryQuestion).where(CategoryQuestion.question_id == question_id)
     categoryquestion = db.execute(query).scalars().first()
     query2 = select(Category).where(Category.id == categoryquestion.category_id) 
     return db.execute(query2).scalars().first()
 
-def create(db: Session, category_create: CategoryCreate):
+def create(
+    db: Session, 
+    category_create: CategoryCreate
+) -> Category:
     
     # case insensitiveとする。
     existing_category = (
@@ -104,8 +123,7 @@ def create(db: Session, category_create: CategoryCreate):
     return new_category
 
 # ページネーション
-# def get_page_count(db: Session) -> int: 
-def get_page_count(db: Session): 
+def get_page_count(db: Session) -> int: 
 
     count_page = db.scalar(
                     select(func.count()).
@@ -116,7 +134,7 @@ def get_page_count(db: Session):
 
 # Questionを一つでも持つCategoryをすべて取得する。
 # SetProblem画面にて、Categoryを選択する際に使用する。
-def find_all_categories_with_questions(db: Session):
+def find_all_categories_with_questions(db: Session) -> list[Category]:
     query1 = select(CategoryQuestion.category_id).distinct()
     category_ids = db.execute(query1).scalars().all()
     

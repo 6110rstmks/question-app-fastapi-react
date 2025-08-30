@@ -6,11 +6,12 @@ from sqlalchemy.exc import SQLAlchemyError
 from . import category_question_crud as category_question_cruds
 from . import subcategory_question_crud as subcategory_question_cruds
 from datetime import date
+from backend.schemas.question import QuestionResponse
 
 def find_all_questions(
     db: Session,
     search_word: str = None,
-) -> list[Question]:
+) -> list[QuestionResponse]:
     result = []
     
     result = db.query(Question).all()
@@ -34,7 +35,7 @@ def find_all_questions(
 def find_all_questions_in_category(
     db: Session, 
     category_id: int
-) -> list[Question]:
+) -> list[QuestionResponse]:
     query = select(Question).where(CategoryQuestion.category_id == category_id)
 
     return db.execute(query).scalars().all()
@@ -61,7 +62,10 @@ def find_question_by_id(db: Session, id: int) -> Question:
 def find_by_name(db: Session, name: str) -> list[Question]:
     return db.query(Question).filter(Question.name.like(f"%{name}%")).all()
 
-def create(db: Session, question_create: QuestionCreate):
+def create(
+    db: Session, 
+    question_create: QuestionCreate
+) -> QuestionResponse:
     try:
         question_data = question_create.model_dump(exclude={"category_id", "subcategory_id"})
         new_question = Question(
@@ -82,7 +86,8 @@ def create(db: Session, question_create: QuestionCreate):
         db.rollback()
         raise e
 
-def update2(db: Session, id: int, question_update: QuestionUpdate):
+def update2(
+    db: Session, id: int, question_update: QuestionUpdate):
     stmt = (
         update(Question).
         where(Question.id == id).
