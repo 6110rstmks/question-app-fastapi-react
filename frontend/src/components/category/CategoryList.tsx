@@ -1,6 +1,5 @@
 import React from "react";
 import CategoryBox from "./CategoryBox";
-import styles from "./CategoryList.module.css";
 import type { Category } from "../../types/Category";
 
 interface CategoryListProps {
@@ -17,8 +16,8 @@ export const CategoryList: React.FC<CategoryListProps> = ({
     searchAnswerWord 
 }) => {
     return (
-        <div className={styles.container}>
-            <div className={styles.category_container}>
+        <div className="p-4 md:p-6">
+            <div className="grid grid-cols-3 gap-4 md:gap-6">
                 {categories.map((category) => (
                     <CategoryBox 
                         category={category} 

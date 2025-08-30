@@ -7,8 +7,7 @@ import {
     handleNavigateToCategoryPage, 
     handleNavigateToSubcategoryPage 
 } from '../../utils/navigate_function'
-// import { TiPinOutline, TiPin } from "react-icons/ti";
-import { Plus, Pin, PinOff, ChevronRight, Folder, Hash, Eye } from 'lucide-react';
+import { Plus, Pin, PinOff, ChevronRight, Folder, Hash, Eye } from 'lucide-react'
 
 
 interface CategoryBoxProps {
