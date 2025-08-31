@@ -33,7 +33,7 @@ async def create(
     
     found_subcategory = subcategory_cruds.find_subcategory_by_id(db, question_create.subcategory_id)
     if not found_subcategory:
-        raise HTTPException(status_code=404, detail="Category not found")
+        raise HTTPException(status_code=404, detail="Subcategory not found")
     return question_crud.create(db, question_create)
     
 # Questionを更新するエンドポイント
@@ -76,6 +76,10 @@ async def update_correct_flg(
     question_update: QuestionIsCorrectUpdate,
     id: int = Path(gt=0),
 ):
+    found_question = question_crud.find_question_by_id(db, id)
+    if not found_question:
+        raise HTTPException(status_code=404, detail="Question not found")
+    
     updated_item = question_crud.update_is_correct(db, id, question_update)
     if not updated_item:
         raise HTTPException(status_code=404, detail="Question not updated")
@@ -106,6 +110,9 @@ async def find_all_questions_in_category(
     db: DbDependency, 
     category_id: int = Path(gt=0)
 ):
+    found_category = category_crud.find_category_by_id(db, category_id)
+    if not found_category:
+        raise HTTPException(status_code=404, detail="Category not found")
     return question_crud.find_all_questions_in_category(db, category_id)
 
 @router.get("/subcategory_id/{subcategory_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
