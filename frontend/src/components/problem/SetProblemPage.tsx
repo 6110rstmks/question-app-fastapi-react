@@ -10,10 +10,10 @@ const SetProblemPage: React.FC = () => {
         setIsDisplayCalendar
     ] = useState<boolean>(false)
 
-    const [
-        expandedCategories, 
-        setExpandedCategories
-    ] = useState<number[]>([])
+    // const [
+    //     expandedCategories, 
+    //     setExpandedCategories
+    // ] = useState<number[]>([])
 
 
     // 月/日形式でフォーマット（例: 8/5）
@@ -26,23 +26,17 @@ const SetProblemPage: React.FC = () => {
         return days[date.getDay()]
     };
 
-    const toggleCategoryExpansion = (categoryId: number) => {
-        setExpandedCategories(prev =>
-            prev.includes(categoryId)
-                ? prev.filter(id => id !== categoryId)
-                : [...prev, categoryId]
-        );
-    };
+    // const toggleCategoryExpansion = (categoryId: number) => {
+    //     setExpandedCategories(prev =>
+    //         prev.includes(categoryId)
+    //             ? prev.filter(id => id !== categoryId)
+    //             : [...prev, categoryId]
+    //     );
+    // };
 
     const {
-        categories,
         questionCount,
-        selectedType,
-        setSelectedType,
-        selectedCategoryIds,
-        subcategories,
         handleSetProblem,
-        handleCheckboxChange,
         handleTodayReview,
         solutionStatusNumber,
         setSolutionStatusNumber,
@@ -51,15 +45,20 @@ const SetProblemPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4">
             <div className="max-w-4xl mx-auto">
-                {/* Header */}
+
                 <div className="text-center mb-8">
-                    <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-6 py-4 shadow-lg mb-4">
-                        <div className="p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl shadow-md">
-                            <Target className="h-8 w-8 text-white" />
-                        </div>
+                    <div className="flex items-center gap-3 mb-6 px-6 py-3 inline-flex items-center">
+                            <Target className="h-6 w-6 text-purple-600" />
+                            <h2 className="text-xl font-semibold text-gray-900">問題を出題する。</h2>
+                    </div>
+                </div>
+
+                {/* Question Count Display */}
+                <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-4 mb-6">
+                    <div className="flex items-center justify-between">
                         <div>
-                            <h1 className="text-2xl font-bold text-gray-900">問題設定</h1>
-                            <p className="text-gray-600">学習する問題を選択してください</p>
+                            <p className="text-purple-700 font-medium">総問題数</p>
+                            <p className="text-3xl font-bold text-purple-800">{questionCount}</p>
                         </div>
                     </div>
                 </div>
@@ -139,20 +138,7 @@ const SetProblemPage: React.FC = () => {
 
                 {/* Main Problem Selector */}
                 <div className="bg-white rounded-2xl shadow-xl p-6">
-                    <div className="flex items-center gap-3 mb-6">
-                        <Target className="h-6 w-6 text-purple-600" />
-                        <h2 className="text-xl font-semibold text-gray-900">問題選択</h2>
-                    </div>
-
-                    {/* Question Count Display */}
-                    <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-4 mb-6">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <p className="text-purple-700 font-medium">総問題数</p>
-                                <p className="text-3xl font-bold text-purple-800">{questionCount}</p>
-                            </div>
-                        </div>
-                    </div>
+  
 
                     {/* Solution Status Selection */}
                     <div className="mb-8">
@@ -160,7 +146,7 @@ const SetProblemPage: React.FC = () => {
                             <div className="p-2 bg-yellow-100 rounded-lg">
                                 <AlertCircle className="h-5 w-5 text-yellow-600" />
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-900">解答状態選択</h3>
+                            <h3 className="text-lg font-semibold text-gray-900">回答状態選択</h3>
                         </div>
                         
                         <div className="space-y-3">
@@ -193,130 +179,6 @@ const SetProblemPage: React.FC = () => {
                             </label>
                         </div>
                     </div>
-
-                    {/* Selection Type */}
-                    <div className="mb-8">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="p-2 bg-indigo-100 rounded-lg">
-                                <Filter className="h-5 w-5 text-indigo-600" />
-                            </div>
-                            <h3 className="text-lg font-semibold text-gray-900">選択方法</h3>
-                        </div>
-                        
-                        <div className="grid md:grid-cols-2 gap-4">
-                            <label className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl hover:bg-green-100 cursor-pointer transition-colors">
-                                <input
-                                    type="radio"
-                                    name="type"
-                                    value="random"
-                                    checked={selectedType === 'random'}
-                                    onChange={(e) => setSelectedType(e.target.value as 'random' | 'category')}
-                                    className="w-5 h-5 text-green-600"
-                                />
-                                <div className="flex items-center gap-2">
-                                    <Shuffle className="h-5 w-5 text-green-600" />
-                                    <span className="font-medium text-green-800">ランダム選択</span>
-                                </div>
-                            </label>
-                            
-                            <label className="flex items-center gap-3 p-4 bg-blue-50 border border-blue-200 rounded-xl hover:bg-blue-100 cursor-pointer transition-colors">
-                                <input
-                                    type="radio"
-                                    name="type"
-                                    value="category"
-                                    checked={selectedType === 'category'}
-                                    onChange={(e) => setSelectedType(e.target.value as 'random' | 'category')}
-                                    className="w-5 h-5 text-blue-600"
-                                />
-                                <div className="flex items-center gap-2">
-                                    <Filter className="h-5 w-5 text-blue-600" />
-                                    <span className="font-medium text-blue-800">カテゴリ選択</span>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-
-                    {/* Category Selection */}
-                    {selectedType === 'category' && (
-                        <div className="mb-8">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="p-2 bg-purple-100 rounded-lg">
-                                    <CheckCircle2 className="h-5 w-5 text-purple-600" />
-                                </div>
-                                <h3 className="text-lg font-semibold text-gray-900">カテゴリを選択</h3>
-                            </div>
-                            
-                            <div className="space-y-4">
-                                {categories.map((category) => (
-                                    <div key={category.id} className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
-                                        <div className="p-4">
-                                            <div className="flex items-center justify-between">
-                                                <label className="flex items-center gap-3 cursor-pointer">
-                                                    <input
-                                                        type="checkbox"
-                                                        checked={selectedCategoryIds.includes(category.id)}
-                                                        onChange={() => handleCheckboxChange(category.id)}
-                                                        className="w-5 h-5 text-purple-600"
-                                                    />
-                                                    <span className="font-semibold text-gray-900">{category.name}</span>
-                                                    <div className="flex items-center gap-2">
-                                                        <span className="bg-red-100 text-red-700 text-xs px-2 py-1 rounded-full">
-                                                            間違い: {category.incorrected_answered_question_count || 0}
-                                                        </span>
-                                                        <span className="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded-full">
-                                                            {/* 一時的: {category.temporary_answered_question_count || 0} */}
-                                                            一時的: 0
-                                                        </span>
-                                                    </div>
-                                                </label>
-                                                
-                                                <button
-                                                    onClick={() => toggleCategoryExpansion(category.id)}
-                                                    className="p-2 hover:bg-gray-200 rounded-lg transition-colors"
-                                                >
-                                                    {expandedCategories.includes(category.id) ? 
-                                                        <ChevronUp className="h-4 w-4 text-gray-600" /> : 
-                                                        <ChevronDown className="h-4 w-4 text-gray-600" />
-                                                    }
-                                                </button>
-                                            </div>
-
-                                            {/* Subcategories */}
-                                            {expandedCategories.includes(category.id) && (
-                                                <div className="mt-4 pl-8 space-y-2">
-                                                    <label className="flex items-center gap-3 cursor-pointer">
-                                                        <input
-                                                            type="checkbox"
-                                                            defaultChecked
-                                                            className="w-4 h-4 text-purple-600"
-                                                        />
-                                                        <span className="text-sm font-medium text-gray-700">すべて</span>
-                                                    </label>
-                                                    
-                                                    {subcategories
-                                                        .filter((subcategory) => subcategory.categoryId === category.id)
-                                                        .map((subcategory) => (
-                                                            <label key={subcategory.id} className="flex items-center gap-3 cursor-pointer">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    className="w-4 h-4 text-purple-600"
-                                                                />
-                                                                <span className="text-sm text-gray-600">{subcategory.name}</span>
-                                                            </label>
-                                                        ))
-                                                    }
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                ))}
-                                
-                                <div className="text-center text-sm text-gray-500 mt-4">
-                                    《 》内の数字は問題数を表します
-                                </div>
-                            </div>
-                        </div>
-                    )}
 
                     {/* Submit Button */}
                     <div className="pt-6 border-t border-gray-200">
