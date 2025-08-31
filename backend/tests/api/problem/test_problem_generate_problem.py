@@ -10,8 +10,6 @@ from backend.database import get_db
 from fastapi import Depends
 import random
 
-DbDependency = Annotated[Session, Depends(get_db)]
-
 
 def select_random_category_ids_exclude_blacklist(
     session_fixture: Session,
@@ -24,17 +22,17 @@ def select_random_category_ids_exclude_blacklist(
     two_picked_category_ids = random.sample(available_categories, select_count)
     return two_picked_category_ids
 
-def select_random_subcategory_ids_exclude_blacklist(
-    session_fixture: Session,
-    select_count: int
-) -> set[int]:
-    category_blacklist = find_all_category_blacklist(session_fixture)
-    category_blacklist_ids = [cb.category_id for cb in category_blacklist]
+# def select_random_subcategory_ids_exclude_blacklist(
+#     session_fixture: Session,
+#     select_count: int
+# ) -> set[int]:
+#     category_blacklist = find_all_category_blacklist(session_fixture)
+#     category_blacklist_ids = [cb.category_id for cb in category_blacklist]
     
-    subcategory_ids = [sc.id for sc in find_all_subcategories(session_fixture) if sc.id not in category_blacklist_ids]
-    available_subcategories = set(subcategory_ids) - set(category_blacklist_ids)
-    two_picked_subcategory_ids = random.sample(available_subcategories, select_count)
-    return two_picked_subcategory_ids
+#     subcategory_ids = [sc.id for sc in find_all_subcategories(session_fixture) if sc.id not in category_blacklist_ids]
+#     available_subcategories = set(subcategory_ids) - set(category_blacklist_ids)
+#     two_picked_subcategory_ids = random.sample(available_subcategories, select_count)
+#     return two_picked_subcategory_ids
 
 
 def test_generate_problem_正常系_typeがrandom(

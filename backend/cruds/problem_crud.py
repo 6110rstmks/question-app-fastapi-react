@@ -1,11 +1,14 @@
+from __future__ import annotations
 from sqlalchemy.orm import Session
 from backend.schemas.problem import ProblemFetch
+from backend.schemas.question import QuestionResponse
+from backend.schemas.category_question import CategoryQuestionResponse
+from backend.schemas.subcategory_question import SubcategoryQuestionResponse
 from sqlalchemy import select, func
-from backend.models import Question, CategoryQuestion, SubcategoryQuestion
+from backend.models import Question, CategoryQuestion, SubcategoryQuestion, CategoryBlacklist
 from fastapi import HTTPException
 from backend.config import SolutionStatus
 from datetime import datetime, timedelta
-from backend.models import CategoryBlacklist
 from typing import Optional
 
 def generate_problems(
@@ -48,7 +51,7 @@ def generate_problems(
 def generate_problems_by_day(
     db: Session, 
     day: str
-)-> list[Question]:
+)-> list[QuestionResponse]:
     # ブラックリストカテゴリの問題IDを取得
     blacklisted_question_ids = _get_blacklisted_question_ids(db)
 
@@ -63,9 +66,14 @@ def generate_problems_by_day(
         .limit(5)
     )
 
+    data = db.execute(query).scalars().all()
+    
+    if not data:
+        raise HTTPException(status_code=404, detail="出題する問題がありませんでした。")
+
     return db.execute(query).scalars().all()
 
-def get_today_problems(db: Session) -> list[Question]:
+def get_today_problems(db: Session) -> list[QuestionResponse]:
     """
     Get today's problems that have been answered today.
     """
@@ -101,7 +109,7 @@ def get_today_problems(db: Session) -> list[Question]:
 def _get_question_ids_by_type(
     db: Session, 
     fetch: ProblemFetch
-) -> Optional[list[int]]:
+) -> Optional[CategoryQuestionResponse | SubcategoryQuestionResponse]:
     """
     Return a list of question IDs based on the fetch type.
     None means 'random' (no filtering by ID list).
@@ -135,7 +143,9 @@ def _get_blacklisted_question_ids(db: Session)-> list[int]:
         
     return blacklisted_question_ids
 
-def _get_threshold(solved_status: str) -> Optional[datetime]:
+def _get_threshold(
+    solved_status: str
+) -> Optional[datetime]:
     now = datetime.now()
     if solved_status == "temporary":
         return now - timedelta(days=15)
@@ -150,7 +160,7 @@ def _fetch_questions(
     threshold: Optional[datetime],
     blacklist: list[int],
     limit: int,
-) -> list[Question]:
+) -> list[QuestionResponse]:
     """
     Build and execute the query to fetch questions with optional filters:
     - question_ids: filter by specific IDs if provided
