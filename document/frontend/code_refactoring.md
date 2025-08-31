@@ -12,10 +12,15 @@ https://buildersbox.corp-sansan.com/entry/2023/12/10/000000
 
 ### 分割粒度について
 Atomic designを参考にすべきか。
+https://zenn.dev/tenta_shiratori/articles/8e368a916b418a
+↑atomic design は使われなくなったらしい。
 
 単一責任の原則
 
 債務分離
+
+# ディレクトリ構成について考える
+https://zenn.dev/tenta_shiratori/articles/9be477249f8d80
 
 # 関数について
 引数に指定するid(category_id, subcategory_id)のデータ型は全てnumberに統一
@@ -41,11 +46,7 @@ handleDeleteCategory
 - idからモデル全体（Category,Subcategory,Question）を取得するAPIを叩く関数<br>
 fetchCategory, fetchSubcategory
 
-## HTMLのクラス名の命名規則
 
-ローワーキャメルケースで統一
-
-ex. firstDispTime
 
 ## 変数、関数名の命名規則
 countはcntと略さず、countとする。

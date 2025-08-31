@@ -104,6 +104,20 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                         </div>
                     </div>
 
+                    {/* メモセクション */}
+                    <div className="space-y-2">
+                        <label className="block text-sm font-semibold text-gray-700">
+                            Memo:
+                        </label>
+                        <textarea
+                            value={inputMemoValue}
+                            onChange={(e) => setInputMemoValue(e.target.value)}
+                            placeholder="メモを入力..."
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 resize-vertical min-h-[100px]"
+                            rows={4}
+                        />
+                    </div>
+
                     {/* 判定セクション */}
                     <div className="space-y-3">
                         <label className="block text-sm font-semibold text-gray-700">
@@ -152,20 +166,6 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                                 </div>
                             </label>
                         </div>
-                    </div>
-
-                    {/* メモセクション */}
-                    <div className="space-y-2">
-                        <label className="block text-sm font-semibold text-gray-700">
-                            Memo:
-                        </label>
-                        <textarea
-                            value={inputMemoValue}
-                            onChange={(e) => setInputMemoValue(e.target.value)}
-                            placeholder="メモを入力..."
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 resize-vertical min-h-[100px]"
-                            rows={4}
-                        />
                     </div>
 
                     {/* フッターボタン */}

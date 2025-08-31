@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom'
 import styles from './QuestionPage.module.css'
 import Modal from 'react-modal'
-import QuestionEditModal from './QuestionEditModal';
-import ChangeCategorySubcategory from '../ChangeCategorySubcategoryModal';
+import QuestionEditModal from './QuestionEditModal'
+import ChangeCategorySubcategory from '../ChangeCategorySubcategoryModal'
 import { useQuestionPage } from './hooks/useQuestionPage'
 import { BlockMath } from 'react-katex'
-import RenderMemoWithLinks from '../RenderMemoWithlinks';
-import { SolutionStatus } from '../../types/SolutionStatus';
-import { isLatex } from '../../utils/function';
-import { handleUpdateIsCorrect } from '../../utils/function';
+import RenderMemoWithLinks from '../RenderMemoWithLinks'
+import { SolutionStatus } from '../../types/SolutionStatus'
+import { isLatex } from '../../utils/function'
+import { handleUpdateIsCorrect } from '../../utils/function'
+
 interface QuestionPageNavigationParams {
     categoryId: number,
     subcategoryId: number,
@@ -57,14 +58,14 @@ const QuestionPage: React.FC = () => {
         questionId,
         changeSubcategoryModalIsOpen,
         editModalIsOpen
-    );
+    )
 
     // ページ遷移時にカテゴリ情報をローカルストレージに保存
     useEffect(() => {
       if (location.state) {
             localStorage.setItem('categorySubcategoryInfo', JSON.stringify(location.state));
       }
-    }, [location.state]);
+    }, [location.state])
 
   return (
       <>
