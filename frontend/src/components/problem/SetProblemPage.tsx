@@ -40,14 +40,14 @@ const SetProblemPage: React.FC = () => {
                 </div>
 
                 {/* Question Count Display */}
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-4 mb-6">
+                {/* <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-4 mb-6">
                     <div className="flex items-center justify-between">
                         <div>
                             <p className="text-purple-700 font-medium">総問題数</p>
                             <p className="text-3xl font-bold text-purple-800">{questionCount}</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Calendar Section */}
                 <div className="bg-white rounded-2xl shadow-xl p-6 mb-8">

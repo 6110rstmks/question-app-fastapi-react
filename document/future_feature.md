@@ -1,7 +1,6 @@
 ### 将来実装予定の案
 
-backend
-question_crudのテスト書く。
+react hook form 導入しや
 
 tailwindでdarkscale対応
 
@@ -19,7 +18,9 @@ backend/utils/s3.py
 せっかくデータがあるのでRAGとか導入したいな。
 
 frontendテストコードを網羅する。
-patchを使用してbackendコードをする。
+
+
+patchを使用してbackendコードをmockする。
 
 問題が例えば4だい、出題されてときおわって、
 再度問題を解きなおすボタンを押した時に、correct,inccorectの変更などが反映されるようにする。
@@ -116,7 +117,7 @@ urlに表示されるようにしたい
 
 ===========
 
-cssの色を共通のところからとってくる。
+tailwindcssの色を共通のところからとってくる。
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
