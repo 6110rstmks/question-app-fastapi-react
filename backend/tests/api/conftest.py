@@ -55,5 +55,4 @@ def client_fixture(session_fixture: Session, user_fixture: DecodedToken):
     client = TestClient(app)
     yield client
 
-    print(app)
     app.dependency_overrides.clear()

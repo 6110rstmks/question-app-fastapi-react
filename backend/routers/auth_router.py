@@ -1,17 +1,15 @@
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Request
-from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from starlette import status
 from backend.cruds import auth_crud as auth_cruds
-from backend.schemas.auth import UserCreate, UserResponse, Token, UserSignIn
+from backend.schemas.auth import UserCreate, UserResponse, UserSignIn
 from backend.database import get_db
 from fastapi.requests import Request
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
 DbDependency = Annotated[Session, Depends(get_db)]
-# FormDependency = Annotated[OAuth2PasswordRequestForm, Depends()]
 
 @router.post(
     "/signup", 

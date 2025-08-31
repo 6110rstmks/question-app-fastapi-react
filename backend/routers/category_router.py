@@ -20,9 +20,11 @@ DbDependency = Annotated[Session, Depends(get_db)]
 
 router = APIRouter(prefix="/categories", tags=["Categories"])
 
-# tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
-
-@router.get("/home", response_model=Optional[list[CategoryResponse]], status_code=status.HTTP_200_OK)
+@router.get(
+    "/home", 
+    response_model=Optional[list[CategoryResponse]], 
+    status_code=status.HTTP_200_OK
+)
 async def find_all(
     db: DbDependency,
     limit: int = PAGE_SIZE,
@@ -79,14 +81,15 @@ async def find_all_categories(
 ):
     return (category_cruds.find_all_categories(db))
 
-@router.get("/all_categories_with_questions", response_model=list[CategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
+@router.get(
+    "/all_categories_with_questions", 
+    response_model=list[CategoryResponseWithQuestionCount], 
+    status_code=status.HTTP_200_OK
+)
 async def find_all(
     db: DbDependency,
-    # skip: int = Query(0, ge=0),
-    # limit: int = 7
-    ):
+):
     return (category_cruds.find_all_categories_with_questions(db))
-    # return (category_cruds.find_all_categories_with_questions(db))[skip : skip + limit]
 
 @router.get("/category_id/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
 async def find_category_by_id(
