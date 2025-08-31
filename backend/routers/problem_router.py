@@ -31,8 +31,8 @@ async def generate_problems(
     db: DbDependency, 
     problem_create: ProblemFetch
 ):
-    if problem_create.type not in {"category", "random", "subcategory"}:
-        raise TypeException(problem_create.type)
+    # if problem_create.type not in {"category", "random", "subcategory"}:
+    #     raise TypeException(problem_create.type)
     return problem_crud.generate_problems(db, problem_create)
 
 # 特定の日に出題する問題を取得する。

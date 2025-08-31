@@ -56,3 +56,8 @@ def client_fixture(session_fixture: Session, user_fixture: DecodedToken):
     yield client
 
     app.dependency_overrides.clear()
+    
+SQLALCHEMY_DATABASE_URL = "sqlite:///./test.db"  # テスト用DB
+engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    
