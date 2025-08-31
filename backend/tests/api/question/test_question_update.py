@@ -64,3 +64,12 @@ def test_update_is_correct(client_fixture: TestClient):
     
     # 冪等性のために作成したデータを削除する
     client_fixture.delete(f"/questions/{question_id}")
+    
+def test_update_is_correct_異常系_存在しないid(client_fixture: TestClient):
+    update_data = {
+        "is_correct": 1  
+    }
+    response = client_fixture.put("/questions/edit_flg/9999", json=update_data) 
+    assert response.status_code == 404  
+    assert response.json() == {"detail": "Question not updated"}
+
