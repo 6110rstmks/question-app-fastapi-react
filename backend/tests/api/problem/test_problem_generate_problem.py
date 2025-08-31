@@ -1,5 +1,6 @@
 from fastapi.testclient import TestClient
 from backend.cruds.category_crud import find_all_categories
+from backend.cruds.subcategory_crud import find_
 from backend.cruds.category_question_crud import find_categoriesquestions_by_question_id
 from backend.cruds.subcategory_question_crud import find_subcategoriesquestions_by_question_id
 from backend.cruds.category_blacklist_crud import find_all_category_blacklist
@@ -22,6 +23,18 @@ def select_random_category_ids_exclude_blacklist(
     available_categories = set(category_ids) - set(category_blacklist_ids)
     two_picked_category_ids = random.sample(available_categories, select_count)
     return two_picked_category_ids
+
+def select_random_subcategory_ids_exclude_blacklist(
+    session_fixture: Session,
+    select_count: int
+) -> set[int]:
+    category_blacklist = find_all_category_blacklist(session_fixture)
+    category_blacklist_ids = [cb.category_id for cb in category_blacklist]
+    
+    subcategory_ids = [sc.id for sc in find_all_subcategories(session_fixture) if sc.id not in category_blacklist_ids]
+    available_subcategories = set(subcategory_ids) - set(category_blacklist_ids)
+    two_picked_subcategory_ids = random.sample(available_subcategories, select_count)
+    return two_picked_subcategory_ids
 
 
 def test_generate_problem_正常系_typeがrandom(
@@ -79,16 +92,16 @@ def test_generate_problem_正常系_typeがsubcategory(
     session_fixture
 ):
     
-    # problem_fetch = {
-    #     'type': 'subcategory',
-    #     'solved_status': 'incorrect',
-    #     'problem_count': 5,
-    #     'subcategory_ids': [11, 12],
-    # }
-    # response = client_fixture.post("/problems/", json=problem_fetch)
-    # print(response.json())
-    # data = response.json()
-    # assert response.status_code == 200
+    problem_fetch = {
+        'type': 'subcategory',
+        'solved_status': 'incorrect',
+        'problem_count': 5,
+        'subcategory_ids': [11, 12],
+    }
+    response = client_fixture.post("/problems/", json=problem_fetch)
+    print(response.json())
+    data = response.json()
+    assert response.status_code == 200
     
     
 
