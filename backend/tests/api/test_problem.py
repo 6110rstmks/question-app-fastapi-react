@@ -9,8 +9,6 @@ from backend.database import get_db
 from fastapi import Depends
 import random
 
-
-
 DbDependency = Annotated[Session, Depends(get_db)]
 
 def to_dict(obj):
@@ -101,13 +99,21 @@ def test_generate_problem_正常系_typeがsubcategory(
     pass
 
 def test_generate_problem_異常系_problem_countが0(
-    client_fixture: TestClient
+    client_fixture: TestClient,
+    session_fixture
 ):
+    
+    category_blacklist = find_all_category_blacklist(session_fixture)
+    category_blacklist_ids = [cb.category_id for cb in category_blacklist]
+    category_ids = [c.id for c in find_all_categories(session_fixture) if c.id not in category_blacklist_ids]
+    available_categories = set(category_ids) - set(category_blacklist_ids)
+    two_picked_category_ids = random.sample(available_categories, 10)
+    
     problem_fetch = {
         'type': 'category',
         'solved_status': 'incorrect',
         'problem_count': 0,
-        'category_ids': [38, 40],
+        'category_ids': two_picked_category_ids,
     }
     response = client_fixture.post("/problems/", json=problem_fetch)
     assert response.status_code == 422
