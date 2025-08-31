@@ -21,8 +21,6 @@ def create_user(
     db: Session, 
     user_create: auth.UserCreate
     ):
-    # salt_bytes = os.urandom(32)
-    # salt = base64.b64encode(salt_bytes).decode()  # 保存用に文字列化
     salt = base64.b64encode(os.urandom(32))
     hashed_password = hashlib.pbkdf2_hmac(
         "sha256",
