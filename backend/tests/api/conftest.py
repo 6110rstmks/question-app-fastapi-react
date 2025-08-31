@@ -24,7 +24,6 @@ from backend.cruds.auth_crud import get_current_user
 def session_fixture():
     engine = create_engine(
         url="postgresql://sorasakamoto:password@localhost:5432/fleamarket",
-        # connect_args={"check_same_thread": False}, 
         poolclass=StaticPool
     )
     Base.metadata.create_all(engine)
@@ -33,11 +32,6 @@ def session_fixture():
     db = SessionLocal()
 
     try:
-        # item1 = Category(name="PC1", user_id=1)
-        # item2 = Category(name="PC2", user_id=1)
-        # db.add(item1)
-        # db.add(item2)
-        # db.commit()
         yield db
     finally:
         db.close()
