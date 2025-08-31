@@ -11,8 +11,6 @@ import random
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
-def to_dict(obj):
-    return {c.name: getattr(obj, c.name) for c in obj.__table__.columns}
 
 def test_generate_problem_正常系_typeがrandom(
     client_fixture: TestClient,

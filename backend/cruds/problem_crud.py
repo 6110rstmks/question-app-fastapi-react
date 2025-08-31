@@ -26,11 +26,11 @@ def generate_problems(
         question_ids,
         status_enum,
         threshold,
-        blacklist,
-        problem_fetch.problem_count,
+        blacklist=blacklist,
+        limit=problem_fetch.problem_count,
     )
 
-    # フォールバック: 閾値条件なし
+    # フォールバック: 日付閾値なし
     if not results:
         results = _fetch_questions(
             db,
@@ -116,7 +116,7 @@ def _get_question_ids_by_type(
         stmt = select(SubcategoryQuestion.question_id).where(
             SubcategoryQuestion.subcategory_id.in_(fetch.subcategory_ids)
         )
-    else:
+    elif fetch.type not in ["random", "category", "subcategory"]:
         raise HTTPException(status_code=400, detail="不明なタイプが入力されました。")
     return db.execute(stmt).scalars().all()
 
