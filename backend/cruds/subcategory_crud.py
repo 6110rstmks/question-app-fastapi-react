@@ -51,7 +51,10 @@ def find_subcategories_in_categorybox(
     # 6件(limit)まで表示
     return result[0: 0 + limit]
 
-def find_subcategory_by_id(db: Session, id: int) -> SubcategoryResponse | None:
+def find_subcategory_by_id(
+    db: Session, 
+    id: int
+) -> Optional[SubcategoryResponse]:
     query = select(Subcategory).where(Subcategory.id == id)
     return db.execute(query).scalars().first()
 

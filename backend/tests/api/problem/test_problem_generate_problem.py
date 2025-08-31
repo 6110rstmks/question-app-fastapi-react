@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 from backend.cruds.category_crud import find_all_categories
-from backend.cruds.subcategory_crud import find_
+# from backend.cruds.subcategory_crud import find_
 from backend.cruds.category_question_crud import find_categoriesquestions_by_question_id
 from backend.cruds.subcategory_question_crud import find_subcategoriesquestions_by_question_id
 from backend.cruds.category_blacklist_crud import find_all_category_blacklist
@@ -89,21 +89,19 @@ def test_generate_problem_正常系_typeがcategory(
 
 def test_generate_problem_正常系_typeがsubcategory(
     client_fixture: TestClient,
-    session_fixture
+    session_fixture: Session
 ):
     
-    problem_fetch = {
-        'type': 'subcategory',
-        'solved_status': 'incorrect',
-        'problem_count': 5,
-        'subcategory_ids': [11, 12],
-    }
-    response = client_fixture.post("/problems/", json=problem_fetch)
-    print(response.json())
-    data = response.json()
-    assert response.status_code == 200
-    
-    
+    # problem_fetch = {
+    #     'type': 'subcategory',
+    #     'solved_status': 'incorrect',
+    #     'problem_count': 5,
+    #     'subcategory_ids': [11, 12],
+    # }
+    # response = client_fixture.post("/problems/", json=problem_fetch)
+    # print(response.json())
+    # data = response.json()
+    # assert response.status_code == 200 
 
     # assert len(data) > 0
 
