@@ -11,16 +11,15 @@ from fastapi.requests import Request
 from backend.schemas.auth import UserResponse
 from backend.database import get_db
 from fastapi.responses import JSONResponse
+from typing import Optional
 
 ALGORITHM = "HS256"
 SECRET_KEY = get_settings().secret_key
 
-# oauth2_schema = OAuth2PasswordBearer(tokenUrl="/auth/login")
-
 def create_user(
     db: Session, 
     user_create: auth.UserCreate
-    ):
+) -> list[UserResponse]:
     salt = base64.b64encode(os.urandom(32))
     hashed_password = hashlib.pbkdf2_hmac(
         "sha256",
@@ -43,7 +42,7 @@ def create_user(
 def check_user_already_exists(
     db: Session, 
     user_create: auth.UserCreate
-):
+) -> bool:
     query = select(User).where(User.username == user_create.username)
     user = db.execute(query).scalars().first()
     if user:
@@ -56,7 +55,7 @@ def authenticate_user(
     username: str, 
     password: str,
     request: Request
-):
+) -> Optional[JSONResponse]:
 
     user = db.query(User).filter(User.username == username).first()
     if not user:
