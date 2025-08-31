@@ -7,15 +7,15 @@ const ImportPage = () => {
         if (event.target.files && event.target.files.length > 0) {
           setFile(event.target.files[0])
         }
-    };
+    }
 
       // フォーム送信時のイベントハンドラ
     const handleJsonFileSubmit = async (event: React.FormEvent) => {
-        event.preventDefault();
+        event.preventDefault()
 
         if (!file) {
-        setMessage("ファイルを選択してください");
-        return;
+            setMessage("ファイルを選択してください")
+            return;
         }
 
         const formData = new FormData();
@@ -63,7 +63,6 @@ const ImportPage = () => {
             }
 
     }
-
 
     const [file, setFile] = useState<File | null>(null)
     const [message, setMessage] = useState<string>("")
