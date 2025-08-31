@@ -38,6 +38,12 @@ class CategoryBlacklist(Base):
     )
     category = relationship("Category")
     
+    def toDict(self):
+        return {
+            'id': self.id,
+            'category_id': self.category_id
+        }
+    
 class Subcategory(Base):
     __tablename__ = "subcategories"
 
