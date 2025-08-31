@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 // memo内のURLのみを<a>タグに変換する関数
 // これを使うことで、memo内のURLをクリック可能にする
@@ -8,7 +8,7 @@ const RenderMemoWithLinks = (memo: string) => {
     // memo内の各行に対してリンクを処理
     return memo.split('\n').map((line, index) => {
       // URLを検出して<a>タグに変換
-      const parts = line.split(urlRegex);
+      const parts = line.split(urlRegex)
       return (
         <React.Fragment key={index}>
           {parts.map((part, i) => {
@@ -20,12 +20,12 @@ const RenderMemoWithLinks = (memo: string) => {
                 </a>
               );
             }
-            return part;
+            return part
           })}
           <br />
         </React.Fragment>
-      );
-    });
-};
+      )
+    })
+}
 
-export default RenderMemoWithLinks;
+export default RenderMemoWithLinks

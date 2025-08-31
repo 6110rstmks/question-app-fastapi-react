@@ -2,19 +2,13 @@ import React, { useState } from 'react'
 import useSetProblemPage from './hooks/useSetProblemPage'
 import CalendarModal from '../CalendarModal'
 import { SolutionStatus } from '../../types/SolutionStatus'
-import { Calendar,Target, Clock, CheckCircle2, AlertCircle, Shuffle, Filter ,ChevronDown,ChevronUp,Play,RotateCcw,BookOpen } from 'lucide-react'
+import { Calendar,Target, Clock, AlertCircle, Play, RotateCcw,BookOpen } from 'lucide-react'
 
 const SetProblemPage: React.FC = () => {
     const [
         isDisplayCalendar, 
         setIsDisplayCalendar
     ] = useState<boolean>(false)
-
-    // const [
-    //     expandedCategories, 
-    //     setExpandedCategories
-    // ] = useState<number[]>([])
-
 
     // 月/日形式でフォーマット（例: 8/5）
     const formatMonthDay = (date: Date) =>
@@ -24,15 +18,7 @@ const SetProblemPage: React.FC = () => {
     const getDayOfWeek = (date: Date) => {
         const days = ['日', '月', '火', '水', '木', '金', '土'];
         return days[date.getDay()]
-    };
-
-    // const toggleCategoryExpansion = (categoryId: number) => {
-    //     setExpandedCategories(prev =>
-    //         prev.includes(categoryId)
-    //             ? prev.filter(id => id !== categoryId)
-    //             : [...prev, categoryId]
-    //     );
-    // };
+    }
 
     const {
         questionCount,

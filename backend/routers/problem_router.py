@@ -15,6 +15,7 @@ class TypeException(Exception):
 DbDependency = Annotated[Session, Depends(get_db)]
 
 router = APIRouter(prefix="/problems", tags=["Problems"])
+
 app = FastAPI()
 
 @app.exception_handler(TypeException)
