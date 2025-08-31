@@ -7,7 +7,6 @@ from backend.cruds import category_question_crud as category_question_cruds
 from backend.cruds import subcategory_question_crud as subcategory_question_cruds
 from datetime import date
 from backend.schemas.question import QuestionResponse
-from fastapi import HTTPException
 
 def find_all_questions(
     db: Session,
@@ -112,7 +111,7 @@ def update_is_correct(
     db: Session, 
     id: int, 
     question_is_correct_update: QuestionIsCorrectUpdate
-) -> Question:
+) -> QuestionResponse:
     question = find_question_by_id(db, id)
     if question is None:
         return None
@@ -155,7 +154,7 @@ def update_is_correct_by_subcategory(
 def delete_question(
     db: Session,
     question_id: int
-) -> Question:
+) -> QuestionResponse:
     question = find_question_by_id(db, question_id)
     if question is None:
         return None
@@ -270,7 +269,7 @@ def change_belongs_to_subcategoryId(
 def update_last_answered_date(
     db: Session, 
     question_id: int
-) -> Question:
+) -> QuestionResponse:
     query1 = select(Question).where(Question.id == question_id)
     question = db.execute(query1).scalars().first()
     # last_answered_dateが現在日付の場合は、
@@ -300,7 +299,7 @@ def update_last_answered_date(
 def increment_answer_count(
     db: Session, 
     question_id: int
-) -> Question:
+) -> QuestionResponse:
     stmt = (
         update(Question).
         where(Question.id == question_id).

@@ -76,9 +76,6 @@ async def update_correct_flg(
     question_update: QuestionIsCorrectUpdate,
     id: int = Path(gt=0),
 ):
-    found_question = question_crud.find_question_by_id(db, id)
-    if not found_question:
-        raise HTTPException(status_code=404, detail="Question not found")
     
     updated_item = question_crud.update_is_correct(db, id, question_update)
     if not updated_item:
@@ -128,12 +125,9 @@ async def delete(
     db: DbDependency, 
     question_id: int = Path(gt=0)
 ):
-    found_question = question_crud.find_question_by_id(db, question_id)
-    if not found_question:
-        raise HTTPException(status_code=404, detail="Question not found")
     
     deleted_item = question_crud.delete_question(db, question_id)
     if not deleted_item:
-        raise HTTPException(status_code=404, detail="Item not deleted")
+        raise HTTPException(status_code=404, detail="Question not deleted")
     return deleted_item
 
