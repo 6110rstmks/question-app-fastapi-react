@@ -4,7 +4,6 @@ from pydantic import BaseModel, Field, ConfigDict
 
 class CategoryCreate(BaseModel):
     name: str = Field(min_length=2, examples=["PC"])
-    # user_id: int = Field(gt=0, examples=[1])
 
 class CategoryResponse(BaseModel):
     id: int = Field(gt=0, examples=[1])

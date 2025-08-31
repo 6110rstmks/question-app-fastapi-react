@@ -216,7 +216,11 @@ def test_increment_answer_count_異常系_存在しないid(client_fixture: Test
     assert response.status_code == 404  
     assert response.json() == {"detail": "Question not updated"}
     
-    
+
+def test_update_last_answered_date(client_fixture: TestClient):
+    pass
+
+
 
 def test_delete_question(client_fixture: TestClient):
     new_question = {

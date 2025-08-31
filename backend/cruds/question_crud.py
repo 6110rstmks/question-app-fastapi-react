@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import select, update, func, text, delete
+from sqlalchemy import select, update, func, text
 from backend.schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
 from backend.models import Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
