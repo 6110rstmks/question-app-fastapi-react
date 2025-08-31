@@ -1,9 +1,11 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func
-from backend.schemas.subcategory import SubcategoryCreate, SubcategoryUpdate
+from backend.schemas.subcategory import SubcategoryCreate, SubcategoryUpdate, SubcategoryResponse
 from backend.models import Subcategory, SubcategoryQuestion, Question, Category
 from backend.cruds import question_crud as question_cruds
 from fastapi import HTTPException
+from typing import Optional
+
 
 # カテゴリbox内で表示するサブカテゴリを取得
 def find_subcategories_in_categorybox(
@@ -13,7 +15,7 @@ def find_subcategories_in_categorybox(
     searchSubcategoryWord: str, 
     searchQuestionWord: str, 
     searchAnswerWord: str
-):
+) -> list[SubcategoryResponse]:
     if searchSubcategoryWord:
         query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.name.istartswith(f"%{searchSubcategoryWord}%"))
 
@@ -49,11 +51,14 @@ def find_subcategories_in_categorybox(
     # 6件(limit)まで表示
     return result[0: 0 + limit]
 
-def find_subcategory_by_id(db: Session, id: int):
+def find_subcategory_by_id(db: Session, id: int) -> SubcategoryResponse | None:
     query = select(Subcategory).where(Subcategory.id == id)
     return db.execute(query).scalars().first()
 
-def find_subcategories_by_question_id(db: Session, question_id: int):
+def find_subcategories_by_question_id(
+    db: Session, 
+    question_id: int
+) -> list[SubcategoryResponse]:
     # query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
     query = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id == question_id)
     # results = db.execute(query).scalars().all()
@@ -67,20 +72,26 @@ def find_subcategories_by_question_id(db: Session, question_id: int):
         
     return db.execute(query2).scalars().all()
 
-def find_subcategories_with_category_name_by_category_id(db: Session, category_id: int):
+def find_subcategories_with_category_name_by_category_id(
+    db: Session, 
+    category_id: int
+) -> list[SubcategoryResponse]:
 
     query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(Category, Subcategory.category_id == Category.id).where(Subcategory.category_id == category_id)
 
     return db.execute(query1).fetchall()
 
-def find_subcategories_with_category_name_by_question_id(db: Session, question_id: int):
+def find_subcategories_with_category_name_by_question_id(
+    db: Session, 
+    question_id: int
+) -> list[SubcategoryResponse]:
     query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(SubcategoryQuestion, Subcategory.id == SubcategoryQuestion.subcategory_id).join(Category, Subcategory.category_id == Category.id).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query1).fetchall()
 
 def find_subcategory_by_name(
     db: Session, 
     name: str
-):
+) -> list[SubcategoryResponse]:
     return (
         db.query(Subcategory)
         .filter(Subcategory.name.like(f"%{name}%"))
@@ -95,7 +106,10 @@ def find_subcategories_with_category_name_by_id(db: Session, id: int):
     )
     return db.execute(query).fetchone()
 
-def create_subcategory(db: Session, subcategory_create: SubcategoryCreate):
+def create_subcategory(
+    db: Session, 
+    subcategory_create: SubcategoryCreate
+) -> SubcategoryResponse:
 
     existing_subcategory = (
         db.query(Subcategory)
@@ -129,7 +143,10 @@ def update2(db: Session, id: int, subcategory_update: SubcategoryUpdate):
     updated_subcategory = find_subcategory_by_id(db, id)
     return updated_subcategory
 
-def delete_subcategory(db: Session, id: int):
+def delete_subcategory(
+    db: Session, 
+    id: int
+) -> Optional[SubcategoryResponse]:
     subcategory = find_subcategory_by_id(db, id)
     if subcategory is None:
         return None
