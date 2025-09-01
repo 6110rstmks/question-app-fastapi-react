@@ -9411,8 +9411,8 @@
                                 "バリアンスは、モデルがトレーニングデータにめっちゃ過剰に反応している状態"
                             ],
                             "memo": "もうひとつがバイアス\n\nvariance→ばらつき→まとのどこかにあたっているがばらばら→過学習",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "教師あり学習を用いて機械学習モデルを構築することを検討しています。どのアルゴリズムを選択すべきでしょうか。",
@@ -17203,11 +17203,11 @@
                         {
                             "problem": "イベリア半島はどこか",
                             "answer": [
-                                "https://www.icruises.jp/area/uploads/202410/iberianpeninsula-map.jpg"
+                                ""
                             ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "memo": "https://www.icruises.jp/area/uploads/202410/iberianpeninsula-map.jpg",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "エニセイ川の左にある川は",
@@ -22415,7 +22415,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-08-31"
                         }
                     ]
                 }
@@ -23220,15 +23220,6 @@
                             "last_answered_date": "2025-07-24"
                         },
                         {
-                            "problem": "スペイン王カルロス1世の命で世界一周をした人物",
-                            "answer": [
-                                "マゼラン"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-07-20"
-                        },
-                        {
                             "problem": "ロゼッタストーンに刻まれた神聖文字の解読に成功したフランスのエジプト学者は誰か",
                             "answer": [
                                 "シャンポリオン"
@@ -23604,8 +23595,8 @@
                                 "周"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-31"
                         },
                         {
                             "problem": "中国史上、220年から280年までの分裂時代を何と呼ぶか",
@@ -23623,7 +23614,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "八王の乱の反乱以降蜂起した遊牧諸民族(五胡)を全て答えよ",
@@ -23636,7 +23627,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "中央から派遣された官吏が治める「郡」と、諸侯が治める「国」を併存させる制度である「郡国制」は、どの王朝で採用されたか？",
@@ -23708,7 +23699,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "7世紀末、病身の高宗に変わって政権を握った、中国史上で唯一の女帝は",
@@ -23807,7 +23798,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-08-31"
                         },
                         {
                             "problem": "明の建国者が台頭するきっかけとなった、元末におこった白蓮教徒を中心とする反乱はなにか",
@@ -23825,7 +23816,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-08-31"
                         },
                         {
                             "problem": "秦が定めた統一貨幣の名称は何か",
@@ -23852,7 +23843,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-08-31"
                         },
                         {
                             "problem": "晋から自立した三国のうち、もっとも北方に位置した国はどこか。",
@@ -24065,7 +24056,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "「陸のアラム」に対して海上交易で活躍したのは？",
@@ -24074,7 +24065,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-08-31"
                         },
                         {
                             "problem": "オリエント統一を最初にしたのはどこか",
@@ -24100,8 +24091,8 @@
                                 "ヒッタイトHittites"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-31"
                         },
                         {
                             "problem": "オリエント世界を初めて統一し、中央集権的な支配体制を築いたが、その過酷な支配で知られる帝国は何でしょう？",
@@ -24137,7 +24128,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-09-01"
+                        },
+                        {
+                            "problem": "ハンムラビ王はどこの国の王様か",
+                            "answer": [
+                                "バビロン第一王朝"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "古代バビロニアの王で、「目には目を、歯には歯を」の原則で知られる法典を制定したのは誰でしょう？",
@@ -24155,7 +24155,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-08-31"
                         },
                         {
                             "problem": "ポリス社会の枠を超えたより普遍的かつ個人主義的な傾向をもつヘレニズム時代の考え方を何と呼ぶ",
@@ -24173,7 +24173,7 @@
                             ],
                             "memo": "アケメネス朝 → パルティア → ササン朝の順",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-08-31"
                         },
                         {
                             "problem": "前13世期頃よりシリアのダマスクスを中心に内陸交易に活躍したセム語系遊牧民は",
@@ -24394,7 +24394,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "イッソスの戦いは何年に起こったか",
@@ -24448,7 +24448,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "第1回三頭政治に登場する政治家を3名答えよ。",
@@ -24477,7 +24477,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "トスカーナ地方を中心に定住していた系統不明の先住民族は",
@@ -24721,7 +24721,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "革命前のフランスで、特権身分のうち聖職者身分を何とよんだか",
@@ -24760,6 +24760,15 @@
                             "last_answered_date": "2025-08-26"
                         },
                         {
+                            "problem": "スペイン王カルロス1世の命で世界一周をした人物",
+                            "answer": [
+                                "マゼラン"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-07-20"
+                        },
+                        {
                             "problem": "十分の一税はローマ＝カトリック教会が何から徴収した税であるか",
                             "answer": [
                                 "農民"
@@ -24767,6 +24776,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-24"
+                        },
+                        {
+                            "problem": "マゼランは誰の命令を受けて世界一周をしたか",
+                            "answer": [
+                                "スペイン国王カルロス1世"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-31"
                         },
                         {
                             "problem": "ルイ14世がカトリック重視政策として1685年に廃止したものは何か",
@@ -24828,6 +24846,15 @@
                             "last_answered_date": "2025-08-30"
                         },
                         {
+                            "problem": "第3次中東戦争は別名何と呼ばれていますか。\n",
+                            "answer": [
+                                "六日戦争"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-01"
+                        },
+                        {
                             "problem": "19世紀末から20世紀にかけて、（A）はロシアとの再保障条約を破棄して、海軍を増強し、積極的な海外膨張策をとった",
                             "answer": [
                                 "ドイツ"
@@ -24851,8 +24878,8 @@
                                 "コロンボ会議"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         }
                     ]
                 },
