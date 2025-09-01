@@ -14,7 +14,7 @@ from typing import Optional
 def generate_problems(
     db: Session, 
     problem_fetch: ProblemFetch
-)-> list[Question]:
+) -> list[QuestionResponse]:
     """
     Generate a list of questions
     """
@@ -73,7 +73,9 @@ def generate_problems_by_day(
 
     return db.execute(query).scalars().all()
 
-def get_today_problems(db: Session) -> list[QuestionResponse]:
+def get_today_problems(
+    db: Session
+) -> list[QuestionResponse]:
     """
     Get today's problems that have been answered today.
     """

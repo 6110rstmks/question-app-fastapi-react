@@ -7,6 +7,7 @@ from backend.cruds import category_question_crud as category_question_cruds
 from backend.cruds import subcategory_question_crud as subcategory_question_cruds
 from datetime import date
 from backend.schemas.question import QuestionResponse
+from typing import Optional
 
 def find_all_questions(
     db: Session,
@@ -111,7 +112,7 @@ def update_is_correct(
     db: Session, 
     id: int, 
     question_is_correct_update: QuestionIsCorrectUpdate
-) -> QuestionResponse:
+) -> Optional[QuestionResponse]:
     question = find_question_by_id(db, id)
     if question is None:
         return None

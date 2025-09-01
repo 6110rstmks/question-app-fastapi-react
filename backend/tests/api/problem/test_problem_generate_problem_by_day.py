@@ -8,7 +8,6 @@ from typing import Annotated
 from sqlalchemy.orm import Session
 from backend.database import get_db
 from fastapi import Depends
-import random
 
 def test_generate_problem_by_day_正常系(
     client_fixture: TestClient,
