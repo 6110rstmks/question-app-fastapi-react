@@ -5443,7 +5443,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "オキソ酸Oxyacidの酸としての強さは含まれる酸素O原子の数が増えるほど強くなる？弱くなる？",
@@ -8247,7 +8247,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "TYK2阻害剤は何の治療にしようされますか",
@@ -8256,7 +8256,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         }
                     ]
                 },
@@ -8353,7 +8353,7 @@
                             ],
                             "memo": "https://refle-tbc.com/images/massage/muscle/erector.webp",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "横紋筋の例は？２",
@@ -9059,7 +9059,7 @@
                             ],
                             "memo": "https://chu.benesse.co.jp/qat/img/3519s_s.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-09-01"
                         }
                     ]
                 }
@@ -9166,13 +9166,22 @@
                             "last_answered_date": "2025-08-22"
                         },
                         {
+                            "problem": "企業や組織の内部でのみ利用されるネットワークをなんという",
+                            "answer": [
+                                "イントラネット"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-01"
+                        },
+                        {
                             "problem": "無線LANのアクセスポイントやIP電話機などに，LANケーブルを利用して給電も行う仕組み",
                             "answer": [
                                 "PoE Power over Ethernet"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "What is \"payload\" in network?",
@@ -9750,8 +9759,8 @@
                                 "connection pooling"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         }
                     ]
                 },
@@ -9794,13 +9803,13 @@
                         {
                             "problem": "SQLのwindow functionは3つに分類できる。こたえよ",
                             "answer": [
-                                "⚫︎Aggregate window functions　集約関数\n",
+                                "Aggregate window functions　集約関数\n",
                                 "Ranking window functions\n",
                                 "Value window functions"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "sqlにおいて内部結合と外部結合ではどちらが高速ですか.またその理由",
@@ -14266,7 +14275,17 @@
             "subcategories": [
                 {
                     "name": "m",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "プロジェクトそのものの実現可能性を調査・検証するものをなんという",
+                            "answer": [
+                                "フィジビリティスタディ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-01"
+                        }
+                    ]
                 },
                 {
                     "name": "EVM",
@@ -16259,7 +16278,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "ハドソン湾はどこにある？",
@@ -17912,8 +17931,8 @@
                                 "アネクメーネ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "アメリカの首都",
@@ -18082,7 +18101,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "last_answered_date": "2025-09-01"
                         }
                     ]
                 },
@@ -19748,8 +19767,8 @@
                                 "V字谷"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         }
                     ]
                 },
@@ -20604,9 +20623,9 @@
                             "answer": [
                                 "Yttrium aluminium garnet"
                             ],
-                            "memo": "これも決勝",
+                            "memo": "これも結晶",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "ノーリスには冷却機能が存在しないがそれによりどのようなメリットがあるか",
@@ -21856,11 +21875,11 @@
                             "answer": [
                                 "OpenID Connect",
                                 "OAuth 2.0",
-                                "アプリ登録（App registration）\n"
+                                "App registration\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-09-01"
                         }
                     ]
                 },
@@ -22052,7 +22071,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         }
                     ]
                 },
@@ -22650,8 +22669,8 @@
                                 "クラスに型パラメータTを受け入れる  Generic[T]\t"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "from typing import Generic, TypeVar\n\nT = TypeVar('T')  # 型変数 T を定義\n\nclass Box(Generic[T]):\n    def __init__(self, content: T):\n        self.content = content\n\n    def get_content(self) -> T:\n        return self.content\n\nこうすることでboxクラスはどのような型が扱えるようになるか？",
@@ -22721,7 +22740,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "pythonには3つのメソッドがある。答えて",
@@ -22746,7 +22765,7 @@
                             ],
                             "memo": "session.refresh() は 即座に SELECT クエリを実行 します（キャッシュなどは使わず、DBアクセスが発生）。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "sqlalchemyについてです。\n```\nSession = sessionmaker(engine,class_=AsyncSession)\n\nasync def main():\n    async with Session() as session:\n        user = Chat()\n        user.name = \"Sato Taro\"\n        user.age = 30\n        session.add(user)\n        \n        print(f\"user1: {user}\")\n        await session.commit()\n        print(f\"user2: {user}\")\n        \n        await session.refresh(user)\n        print(f\"user3: {user}\")\n        \n        \nif __name__ == \"__main__\":\n    import asyncio\n    asyncio.run(main())\n\n\nsession.commit()の実行後、userオブジェクトの中身はどうなりますか？",
@@ -22936,12 +22955,12 @@
                         {
                             "problem": "pydanticライブラリのBaseModelとはクラスで何を簡単に行うためのものか？2",
                             "answer": [
-                                "データの検証（バリデーション）",
+                                "データのバリデーション",
                                 "変換（シリアライズ／デシリアライズ）"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "pydanticのmodel_validateメソッドの働き",
@@ -23120,15 +23139,6 @@
                             "last_answered_date": "2025-08-30"
                         },
                         {
-                            "problem": "さいころを2つ振った時に出る目の総和の期待値",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
-                        },
-                        {
                             "problem": "1枚の硬貨を5回投げたときの表が出る回数の期待値を求めよ．",
                             "answer": [
                                 "\\begin{align*} E(X)  &= 0 \\times \\left(\\tfrac{1}{2}\\right)^{5}  + 1 \\times \\binom{5}{1} \\left(\\tfrac{1}{2}\\right)^{1} \\left(\\tfrac{1}{2}\\right)^{4} \\\\ &\\quad + 2 \\times \\binom{5}{2} \\left(\\tfrac{1}{2}\\right)^{2} \\left(\\tfrac{1}{2}\\right)^{3}  + 3 \\times \\binom{5}{3} \\left(\\tfrac{1}{2}\\right)^{3} \\left(\\tfrac{1}{2}\\right)^{2} \\tfrac{1}{2} \\\\ &\\quad + 4 \\times \\binom{5}{4} \\left(\\tfrac{1}{2}\\right)^{4} \\tfrac{1}{2}  + 5 \\times \\left(\\tfrac{1}{2}\\right)^{5} \\\\ &= \\tfrac{5}{2} \\end{align*}"
@@ -23162,8 +23172,8 @@
                                 "ビルマ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "イギリスの哲学者で、経験論を確立し、『統治二論（市民政府二論）』で自然権、社会契約説、抵抗権（革命権）を唱え、名誉革命を擁護し、後の市民革命に大きな影響を与えたのは誰でしょう？",
@@ -23199,7 +23209,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "ベトナム北部にて元の侵攻撃退を退けた国",
@@ -23450,15 +23460,6 @@
                             "last_answered_date": "2025-08-05"
                         },
                         {
-                            "problem": "紀元前18世紀頃、メソポタミアを征服し、 バビロン第1王朝に最盛期をもたらした6代目国王は誰か。",
-                            "answer": [
-                                "ハンムラビ王"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
-                        },
-                        {
                             "problem": "ドン・キホーテの作者は",
                             "answer": [
                                 "セルバンテス"
@@ -23474,7 +23475,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "ユダ王国が新バビロニアに征服されて、住民の多くがバビロンに連れ去られた出来事を何というか。",
@@ -23501,7 +23502,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "メソポタタミアにうまれた世界最古の文学作品とは",
@@ -23614,7 +23615,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "八王の乱の反乱以降蜂起した遊牧諸民族(五胡)を全て答えよ",
@@ -23627,7 +23628,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "中央から派遣された官吏が治める「郡」と、諸侯が治める「国」を併存させる制度である「郡国制」は、どの王朝で採用されたか？",
@@ -23672,7 +23673,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "ヌルハチが後金を建国したのはいつか",
@@ -23690,7 +23691,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "反乱軍から唐に降った節度使の（A）により907年に唐は滅ぼされた。",
@@ -23708,7 +23709,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "西晋滅亡後、江南に逃れて東晋を建てた人物は",
@@ -23717,7 +23718,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "ヌルハチはどこの国に対して宣戦布告したか",
@@ -23735,7 +23736,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "楊炎は中国のどの時代（国）の人物か",
@@ -23783,6 +23784,15 @@
                             "last_answered_date": "2025-08-31"
                         },
                         {
+                            "problem": "司馬遷はん愛を編纂したか",
+                            "answer": [
+                                "史記"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-01"
+                        },
+                        {
                             "problem": "中国最古の王朝",
                             "answer": [
                                 "殷いん"
@@ -23798,7 +23808,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "明の建国者が台頭するきっかけとなった、元末におこった白蓮教徒を中心とする反乱はなにか",
@@ -23816,7 +23826,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "秦が定めた統一貨幣の名称は何か",
@@ -23843,7 +23853,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "晋から自立した三国のうち、もっとも北方に位置した国はどこか。",
@@ -23924,7 +23934,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "農民出身で楚の軍勢を破って中国を再統一した人物は誰か。",
@@ -24042,7 +24052,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-01"
                         }
                     ]
                 },
@@ -24055,8 +24065,8 @@
                                 "セム語系"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "「陸のアラム」に対して海上交易で活躍したのは？",
@@ -24110,7 +24120,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "アケメネス朝ペルシアの建国者は",
@@ -24119,7 +24129,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "前10世紀前半、第2代の国王としてヘブライ王国（イスラエル王国）の全盛期を築き上げたのは誰か",
@@ -24128,7 +24138,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "ハンムラビ王はどこの国の王様か",
@@ -24155,7 +24165,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "ポリス社会の枠を超えたより普遍的かつ個人主義的な傾向をもつヘレニズム時代の考え方を何と呼ぶ",
@@ -24164,7 +24174,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "アケメネス朝ペルシアとササン朝ペルシアではどちらが先",
@@ -24173,7 +24183,16 @@
                             ],
                             "memo": "アケメネス朝 → パルティア → ササン朝の順",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "last_answered_date": "2025-09-01"
+                        },
+                        {
+                            "problem": "紀元前18世紀頃、メソポタミアを征服し、 バビロン第1王朝に最盛期をもたらした6代目国王は誰か。",
+                            "answer": [
+                                "ハンムラビ王"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "前13世期頃よりシリアのダマスクスを中心に内陸交易に活躍したセム語系遊牧民は",
@@ -24245,7 +24264,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEICiHIFbs4CfZYT3IEcmkPDjmoqNF28jAlA&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         }
                     ]
                 },
@@ -24267,8 +24286,8 @@
                                 "イタリア"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "エトルリア人はどこの地方に定住していたか",
@@ -24276,8 +24295,8 @@
                                 "トスカーナ地方"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "最大のソフィストと言われたのは",
@@ -24295,7 +24314,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "コリントス同盟はほとんどのギリシア諸ポリスは参加したがある国は不参加。どこの国",
@@ -24367,7 +24386,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "ペルシア戦争は何年に始まったか。",
@@ -24394,7 +24413,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "イッソスの戦いは何年に起こったか",
@@ -24412,7 +24431,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "浮体の原理を発見した物理学者は",
@@ -24447,19 +24466,19 @@
                                 "サラミスの戦い"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "第1回三頭政治に登場する政治家を3名答えよ。",
                             "answer": [
                                 "カエサル",
-                                "ポンペイウス",
-                                "クラッスス"
+                                "クラッスス",
+                                "ポンペイウス"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "スパルタに征服された奴隷農民は",
@@ -24477,7 +24496,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "トスカーナ地方を中心に定住していた系統不明の先住民族は",
@@ -24486,7 +24505,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "ギリシアの覇権はアテネ→スパルタと移り、その後どこにうつったか",
@@ -24599,7 +24618,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "アケメネス朝ペルシアが各州に置いたサトラップを 監視するため中央から派遣した監察官を何というか。",
@@ -24635,7 +24654,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "ササン朝ペルシアの首都はどこか",
@@ -24671,7 +24690,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "パルティア王国を倒し、イラン系農耕民が建てた王朝を何というか。",
@@ -24689,7 +24708,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "新王国時代にシリア・ヌビアに遠征し、そこを征服した王は？",
@@ -24802,7 +24821,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "ルイ14世の異称は",
@@ -24814,13 +24833,22 @@
                             "last_answered_date": "2025-08-27"
                         },
                         {
+                            "problem": "南ネーデルラント継承戦争はどことどこの国の戦争か",
+                            "answer": [
+                                "フランス、スペイン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-01"
+                        },
+                        {
                             "problem": "中世紀末にヨーロッパ諸国で成立した、身分別の代表が国政を審議する議会をなんとよぶ",
                             "answer": [
                                 "身分制議会"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "カペー朝の断絶で1328年に成立したフランスの新王朝は",
@@ -24829,7 +24857,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-01"
                         }
                     ]
                 },
@@ -24843,7 +24871,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "第3次中東戦争は別名何と呼ばれていますか。\n",
@@ -24966,7 +24994,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "三国同盟の3つの国を答えて",
@@ -25000,7 +25028,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-02"
                         }
                     ]
                 },
@@ -25014,7 +25042,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "9世紀以降、イスラーム諸王朝の軍事力の中心となったトルコ人などの白人系奴隷をなんというか",
@@ -25023,7 +25051,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-02"
                         }
                     ]
                 },
@@ -25037,7 +25065,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-01"
                         },
                         {
                             "problem": "マルコ＝ポーロがアジアでの経験や伝聞を口述した旅行記をなんという",
@@ -25060,7 +25088,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-01"
                         }
                     ]
                 }
