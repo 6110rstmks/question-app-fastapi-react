@@ -7,8 +7,6 @@ def test_get_today_problems_正常系(
     today = date.today()
     tomorrow = today + timedelta(days=1)
 
-    print(today)
-    print("あい")
     response = client_fixture.get("/problems/today")
     assert response.status_code == 200
     questions = response.json()
