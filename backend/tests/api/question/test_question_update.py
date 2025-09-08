@@ -72,4 +72,7 @@ def test_update_is_correct_異常系_存在しないid(client_fixture: TestClien
     response = client_fixture.put("/questions/edit_flg/9999", json=update_data) 
     assert response.status_code == 404  
     assert response.json() == {"detail": "Question not updated"}
+    
+def test_update_last_answered_date(client_fixture: TestClient):
+    pass
 

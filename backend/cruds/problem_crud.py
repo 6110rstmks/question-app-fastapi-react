@@ -51,7 +51,7 @@ def generate_problems(
 def generate_problems_by_day(
     db: Session, 
     day: str
-)-> list[QuestionResponse]:
+)-> Optional[list[QuestionResponse]]:
     # ブラックリストカテゴリの問題IDを取得
     blacklisted_question_ids = _get_blacklisted_question_ids(db)
 
@@ -65,11 +65,6 @@ def generate_problems_by_day(
         .order_by(func.random())
         .limit(5)
     )
-
-    data = db.execute(query).scalars().all()
-    
-    if not data:
-        raise HTTPException(status_code=404, detail="出題する問題がありませんでした。")
 
     return db.execute(query).scalars().all()
 

@@ -15,7 +15,7 @@ s3に接続するためのaws libraryをラッパーしたファイルを作成�
 backend/utils/s3.py
 
 
-せっかくデータがあるのでRAGとか導入したいな。
+せっかくデータがあるのでRAGとか導入したいな。それより先にandroid作成
 
 frontendテストコードを網羅する。
 
