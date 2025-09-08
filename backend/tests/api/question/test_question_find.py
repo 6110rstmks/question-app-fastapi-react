@@ -5,7 +5,7 @@ pytest -s backend/tests/api/test_question.py
 
 from fastapi.testclient import TestClient
 
-def test_find_all_questions(client_fixture: TestClient):
+def test_find_all_questions_正常系(client_fixture: TestClient):
     response = client_fixture.get("/questions")
     assert response.status_code == 200
     questions = response.json()
