@@ -41,20 +41,6 @@
             "name": "aws",
             "subcategories": [
                 {
-                    "name": "fargate",
-                    "questions": [
-                        {
-                            "problem": "ECS on EC2 とECS on Fargateおいてインフラ管理を行う必要があるのはどちらか",
-                            "answer": [
-                                "ECS on EC2"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-08-16"
-                        }
-                    ]
-                },
-                {
                     "name": "storage",
                     "questions": [
                         {
@@ -20662,7 +20648,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-16"
+                            "last_answered_date": "2025-09-10"
                         },
                         {
                             "problem": "Qスイッチルビーレーザーとは、発振媒質に何を用いている？",
