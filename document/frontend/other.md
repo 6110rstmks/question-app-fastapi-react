@@ -1,0 +1,3 @@
+erasableSyntaxOnlyがtrueとなっているので
+
+enumは使用しない。その代わりにtypeを使用した。
