@@ -1,10 +1,10 @@
 // Logout.tsx
-import { useAuth } from "../../context/AuthContext";
-import { useNavigate } from "react-router";
+import { useAuth } from "../../context/AuthContext"
+import { useNavigate } from "react-router"
 
 const Logout: React.FC = () => {
-  const navigate = useNavigate();
-  const { setIsAuth } = useAuth();
+  const navigate = useNavigate()
+  const { setIsAuth } = useAuth()
 
   const logout = async () => {
     try {
@@ -14,22 +14,22 @@ const Logout: React.FC = () => {
       });
 
       if (res.ok) {
-        setIsAuth(false);
-        navigate("/login");
+        setIsAuth(false)
+        navigate("/login")
       } else {
         console.error("Logout failed:", await res.text());
       }
     } catch (err) {
       console.error("Logout error:", err);
     }
-  };
+  }
 
   return (
     <div>
       <p>ログアウトする</p>
       <button onClick={logout}>ログアウト</button>
     </div>
-  );
-};
+  )
+}
 
-export default Logout;
+export default Logout
