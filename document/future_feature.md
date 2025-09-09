@@ -2,7 +2,9 @@
 
 react hook form 導入しや
 
-tailwindでdarkscale対応
+本日はもう出題しない。機能を実装
+
+tailwindでdarkscale対応→claudeにやらせる。
 
 問題出題画面でeditをして編集し終わった後にページのリロードをするとエラーが発生する。
 1. 原因とくてい

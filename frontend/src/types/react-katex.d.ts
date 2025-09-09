@@ -1,5 +1,5 @@
 declare module 'react-katex' {
-    import * as React from 'react';
+    import * as React from 'react'
   
     export interface BlockMathProps {
       math: string;
@@ -13,7 +13,7 @@ declare module 'react-katex' {
       errorColor?: string;
     }
   
-    export const BlockMath: React.FC<BlockMathProps>;
-    export const InlineMath: React.FC<InlineMathProps>;
+    export const BlockMath: React.FC<BlockMathProps>
+    export const InlineMath: React.FC<InlineMathProps>
   }
   
