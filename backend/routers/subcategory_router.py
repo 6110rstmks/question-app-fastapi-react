@@ -2,19 +2,13 @@ from typing import Annotated, Optional
 from fastapi import APIRouter, Path, Query, HTTPException, Depends
 from sqlalchemy.orm import Session
 from starlette import status
-from backend.cruds import auth_crud as auth_cruds
-from backend.schemas.subcategory import SubcategoryResponse, SubcategoryUpdate, SubcategoryCreate, SubcategoryResponseWithQuestionCount, SubcategoryWithCategoryNameResponse
-from backend.schemas.auth import DecodedToken
+from backend.schemas.subcategory import SubcategoryResponse, SubcategoryUpdate, SubcategoryResponseWithQuestionCount, SubcategoryWithCategoryNameResponse, SubcategoryCreate
 from backend.database import get_db
-from backend.cruds import category_crud, subcategory_crud
+from backend.cruds import subcategory_crud, category_crud
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
-# UserDependency = Annotated[DecodedToken, Depends(auth_cruds.get_current_user)]
-
 router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
-
-# tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
 
 @router.post("/", response_model=SubcategoryResponse, status_code=status.HTTP_201_CREATED)
 # async def create(db: DbDependency, category_id: int, subcategory_create: SubcategoryCreate):
@@ -25,9 +19,10 @@ async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCr
     pass
     return subcategory_crud.create_subcategory(db, subcategory_create)
 
-@router.get("", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
-async def find_all(db: DbDependency):
-    return subcategory_crud.find_subcategories_in_categorybox(db)
+#
+# @router.get("", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
+# async def find_all(db: DbDependency):
+#     return subcategory_crud.find_subcategories_in_categorybox(db)
 
 # question_idからQuestionに紐づくSubcategoryを取得するエンドポイント
 @router.get("/question_id/{question_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
@@ -62,7 +57,6 @@ async def find_subcategories_with_category_name_by_question_id(
 @router.get("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def find_subcategory_by_id(
     db: DbDependency, 
-    # user: UserDependency, 
     id: int = Path(gt=0),
 ):
     found_subcategory = subcategory_crud.find_subcategory_by_id(db, id)
@@ -108,5 +102,5 @@ async def delete_subcategory(
 ):
     deleted_item = subcategory_crud.delete_subcategory(db, id)
     if not deleted_item:
-        raise HTTPException(status_code=404, detail="Item not deleted")
+        raise HTTPException(status_code=404, detail="Subcategory not deleted")
     return deleted_item

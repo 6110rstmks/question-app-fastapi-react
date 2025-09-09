@@ -10,10 +10,7 @@ def test_delete_question(client_fixture: TestClient):
     }
     response = client_fixture.post("/questions", json=new_question)
     
-    print((response.json())['id'])
-    
     question_id = (response.json())['id']
-    print(f"Created question ID: {question_id}")
     
     response = client_fixture.delete(f"/questions/{question_id}")
     assert response.status_code == 200

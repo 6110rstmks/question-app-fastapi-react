@@ -75,4 +75,3 @@ def test_update_is_correct_異常系_存在しないid(client_fixture: TestClien
     
 def test_update_last_answered_date(client_fixture: TestClient):
     pass
-

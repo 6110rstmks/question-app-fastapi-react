@@ -6,18 +6,18 @@ export const fetchSubcategoriesForHomePage = async (
                                                     searchQuestionWord?: string,
                                                     searchAnswerWord?: string
                                                 ) => {
-    const url = `http://localhost:8000/subcategories/category_id/${category_id}?limit=4&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}&searchAnswerWord=${searchAnswerWord}`;
-    const response = await fetch(url);
+    const url = `http://localhost:8000/subcategories/category_id/${category_id}?limit=4&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}&searchAnswerWord=${searchAnswerWord}`
+    const response = await fetch(url)
     if (response.ok) {
         return response.json()
     }
 }
 
 export const fetchSubcategoriesWithQuestionCountByCategoryId = async (category_id: number, searchSubcategoryWord?: string) => {
-    let url = `http://localhost:8000/subcategories/category_id/${category_id}`;
+    let url = `http://localhost:8000/subcategories/category_id/${category_id}`
     
     if (searchSubcategoryWord) {
-        url += `?searchSubcategoryWord=${searchSubcategoryWord}`;
+        url += `?searchSubcategoryWord=${searchSubcategoryWord}`
     }
     const response = await fetch(url);
 
@@ -71,14 +71,14 @@ export const createSubcategory = async (subcategoryName: string, categoryId: num
 }
 
 export const fetchSubcategoriesWithCategoryNameByCategoryId = async (category_id: number) => {
-    const response = await fetch(`http://localhost:8000/subcategories/WithCategoryName/category_id/${category_id}`);
+    const response = await fetch(`http://localhost:8000/subcategories/WithCategoryName/category_id/${category_id}`)
     if (response.ok) {
         return response.json()
     }
 }
 
 export const fetchSubcategoriesWithCategoryNameByQuestionId = async (question_id: number) => {
-    const response = await fetch(`http://localhost:8000/subcategories/WithCategoryName/question_id/${question_id}`);
+    const response = await fetch(`http://localhost:8000/subcategories/WithCategoryName/question_id/${question_id}`)
     if (response.ok) {
         return response.json()
     }
