@@ -29,9 +29,9 @@ def test_find_subcategories_by_question_id_正常系(
         assert "id" in subcategory
         assert "name" in subcategory
 
-    # def test_find_subcategories_by_question_id_異常系(
-    #     client_fixture: TestClient
-    # ):
-    #     response = client_fixture.get("/subcategories/question_id/999")
-    #     assert response.status_code == 404
-    #     assert response.json() == {"detail": "Subcategories not found"}
+def test_find_subcategories_by_question_id_異常系(
+    client_fixture: TestClient
+):
+    response = client_fixture.get("/subcategories/question_id/999")
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Subcategories not found"}
