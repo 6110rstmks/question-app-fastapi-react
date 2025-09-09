@@ -35,15 +35,6 @@ const Login: React.FC = () => {
         checkAuth();
     }, [navigate, setIsAuth]);
     
-
-    // googleAuthでログイン
-    // const handleLoginInWithGoogle = (): void => {
-    //     signInWithPopup(auth, provider).then((result) => {
-    //         localStorage.setItem("isAuth", "true")
-    //         navigate("/categories/home")
-    //     })
-    // }
-
     // ユーザネームとパスワードでログイン
     const handleLogin = async (e: FormEvent): Promise<void> => {
         e.preventDefault()
