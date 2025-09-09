@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import type { ChangeEvent, FormEvent } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
-import styles from "./Login.module.css"; // CSS モジュールをインポート
+import React, { useState, useEffect } from "react"
+import type { ChangeEvent, FormEvent } from "react"
+import { useNavigate, Link } from "react-router-dom"
+import { useAuth } from "../../context/AuthContext"
 
 const Login: React.FC = () => {
     const [username, setUsername] = useState<string>('')
@@ -18,7 +17,7 @@ const Login: React.FC = () => {
                 const response = await fetch("http://localhost:8000/auth/me", {
                     method: "GET",
                     credentials: "include", // ← セッションCookieを送るために必要
-                });
+                })
     
                 if (response.ok) {
                     console.log("既にログインしているためホームへリダイレクト");
@@ -33,7 +32,7 @@ const Login: React.FC = () => {
         };
     
         checkAuth();
-    }, [navigate, setIsAuth]);
+    }, [navigate, setIsAuth])
     
     // ユーザネームとパスワードでログイン
     const handleLogin = async (e: FormEvent): Promise<void> => {
@@ -51,19 +50,13 @@ const Login: React.FC = () => {
 
         const data = await response.json()
 
-        console.log(response.ok)
 
         if (!response.ok) {
-            setError(data.detail);
+            setError(data.detail)
             return
         }
 
-        if (response.ok) {
-            console.log("ログイン成功:", data);
-        }
-
-        console.log(9827298)
-        setIsAuth(true);
+        setIsAuth(true)
 
         navigate("/categories/home")
     }
@@ -94,7 +87,7 @@ const Login: React.FC = () => {
                 />
                 <button type="submit">Sign in</button>
             </form>
-            <p className={styles.errMsg}>{error}</p>
+            <p>{error}</p>
         </div>
     );
 };
