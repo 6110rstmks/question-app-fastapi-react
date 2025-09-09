@@ -17,7 +17,6 @@ import ReportPage from './components/ReportPage'
 import QuestionListPage from './components/question/QuestionListPage'
 import NoMatchPage from './components/NoMatchPage'
 import CategoryBlackListPage from './components/CategoryListPage'
-import Today from './components/Today'
 import { AuthProvider } from './context/AuthContext'
 import { ThemeProvider } from './context/ThemeContext'
 
@@ -53,7 +52,6 @@ const App: React.FC = () => {
             <Route path="/report_page" element={<ReportPage />}/>
             <Route path="/question_list" element={<QuestionListPage />}/>
             <Route path="*" element={<NoMatchPage />} />
-            <Route path="/today" element={<Today />}/>
           </Routes>
         </Router>
       </ThemeProvider>

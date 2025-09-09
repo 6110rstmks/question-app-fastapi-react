@@ -14,10 +14,13 @@ s3に接続するためのaws libraryをラッパーしたファイルを作成�
 画像を入れる。
 backend/utils/s3.py
 
+frontendテストコードを網羅する。
+- 
 
 せっかくデータがあるのでRAGとか導入したいな。それより先にandroid作成
 
-frontendテストコードを網羅する。
+
+pip install coverageできちんと関数に対してテストがあるか調べる。
 
 
 patchを使用してbackendコードをmockする。

@@ -77,14 +77,16 @@ export const updateQuestionIsCorrect = async (question: Question): Promise<void>
         body: JSON.stringify({ 
             is_correct: updatedStatus
         }),
-    });
+    })
+    return response.json()
 }
 
 // Questionを削除するAPI
 export const deleteQuestion = async (question_id: number): Promise<void> => {
     const response = await fetch(`http://localhost:8000/questions/${question_id}`, {
         method: 'DELETE',
-    });
+    })
+    return response.json()
 }
 
 // Calendar.tsxで使用する
@@ -123,7 +125,8 @@ export const incrementAnswerCount = async (
         headers: {
             'Content-Type': 'application/json',
         }
-    });
+    })
+    return response.json()
 }
 
 // Problem_pageにて問題を解いた際に使用する。
@@ -137,6 +140,7 @@ export const updateLastAnsweredDate = async (
         headers: {
             'Content-Type': 'application/json',
         }
-    });
+    })
+    return response.json()
 }
 

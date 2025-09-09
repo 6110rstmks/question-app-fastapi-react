@@ -1,4 +1,4 @@
 export interface CategoryQuestion {
-    categoryId: number;
-    questionId: number;
+    categoryId: number
+    questionId: number
 }

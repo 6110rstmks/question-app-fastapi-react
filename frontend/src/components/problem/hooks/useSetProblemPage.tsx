@@ -6,7 +6,8 @@ import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesWithQuestionCountByCategoryId } from '../../../api/SubcategoryAPI'
 import { fetchQuestionCount } from '../../../api/QuestionCountAPI'
 import { fetchProblem, fetchProblemByDay } from '../../../api/ProblemAPI'
-import { SolutionStatus } from '../../../types/SolutionStatus'
+import type { SolutionStatus } from '../../../types/SolutionStatus'
+import { SolutionStatusReverse } from '../../../types/SolutionStatus'
 
 const useSetProblemPage = () => {
     const [
@@ -82,7 +83,7 @@ const useSetProblemPage = () => {
 
         const response = await fetchProblem(
             selectedType,
-            toLowerFirst(SolutionStatus[solutionStatusNumber]),
+            toLowerFirst(SolutionStatusReverse[solutionStatusNumber]),
             problemCount, selectedCategoryIds,
             []
         )

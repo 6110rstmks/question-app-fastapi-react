@@ -88,12 +88,12 @@ export const useCategories = (
 
  
         };
-        loadPageCount();
-    }, []);
+        loadPageCount()
+    }, [])
 
     useEffect(() => {
         const loadCategories = async () => {
-            const skip = (page - 1) * limit;
+            const skip = (page - 1) * limit
             const categories: Category[] = await fetchCategories({
                 skip,
                 limit,
@@ -104,8 +104,8 @@ export const useCategories = (
             });
             setCategories(categories)
 
-        };
-        loadCategories();
+        }
+        loadCategories()
     }, [
         page,
         limit,
@@ -113,7 +113,7 @@ export const useCategories = (
         searchSubcategoryWord, 
         searchQuestionWord, 
         searchAnswerWord
-    ]);
+    ])
 
     return { 
         categories, 
