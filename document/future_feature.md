@@ -3,6 +3,7 @@
 react hook form 導入しや
 
 本日はもう出題しない。機能を実装
+questionsテーブルに列を追加
 
 tailwindでdarkscale対応→claudeにやらせる。
 
@@ -139,11 +140,6 @@ skin > IPL・レーザーに変更したい。
 
 ＝＝＝＝＝＝＝＝
 SolutionStatus　に保留」を追加したい。
-
-===============
-alertの部分を
-https://zenn.dev/chot/articles/react-router7-flash-message
-フラッシュメッセージを実装したいreact
 
 ===========
 問題詳細ページ(problemPage.tsx)からProblemを解くことができるようにする。

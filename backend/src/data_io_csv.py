@@ -9,7 +9,6 @@ from backend.models import Category, Subcategory, Question, CategoryQuestion, Su
 from backend.cruds import category_crud as category_cruds
 
 
-
 def export_data_to_csv(db: Session, output_dir: str):
     """
     各モデルを別々のCSVファイルにエクスポートする関数

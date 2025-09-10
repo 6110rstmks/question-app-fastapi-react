@@ -8,7 +8,7 @@ from backend.cruds import category_crud as category_cruds
 
 
 # 詳細はdocument/data_import_export.mdを参照
-def export_to_json(db: Session, file_path: str):
+def export_to_json(db: Session, file_path: str) -> None:
     query_stmt = select(Category)
     
     categories = db.execute(query_stmt).scalars().all()

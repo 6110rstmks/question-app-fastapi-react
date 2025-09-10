@@ -2,3 +2,8 @@ fleamarket
 __pycache__
 docker
 .venv
+categories.csv
+subcategories.csv
+questions.csv
+category_question.csv
+subcategory_question.csv
