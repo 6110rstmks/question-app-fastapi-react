@@ -118,55 +118,7 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
                         />
                     </div>
 
-                    {/* 判定セクション */}
-                    <div className="space-y-3">
-                        <label className="block text-sm font-semibold text-gray-700">
-                            判定:
-                        </label>
-                        <div className="grid grid-cols-3 gap-4">
-                            <label className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-200">
-                                <input
-                                    type="radio"
-                                    value={SolutionStatus.Correct.toString()} 
-                                    checked={isCorrect === SolutionStatus.Correct} 
-                                    onChange={handleIsCorrectChange}
-                                    className="w-4 h-4 text-green-600 border-gray-300 focus:ring-green-500"
-                                />
-                                <div className="flex items-center space-x-2">
-                                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    <span className="text-sm font-medium text-gray-700">Correct</span>
-                                </div>
-                            </label>
-                            
-                            <label className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-200">
-                                <input
-                                    type="radio"
-                                    value={SolutionStatus.Temporary.toString()}
-                                    checked={isCorrect === SolutionStatus.Temporary}
-                                    onChange={handleIsCorrectChange}
-                                    className="w-4 h-4 text-yellow-600 border-gray-300 focus:ring-yellow-500"
-                                />
-                                <div className="flex items-center space-x-2">
-                                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                    <span className="text-sm font-medium text-gray-700">Temporary</span>
-                                </div>
-                            </label>
-                            
-                            <label className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-200">
-                                <input
-                                    type="radio"
-                                    value={SolutionStatus.Incorrect.toString()} 
-                                    checked={isCorrect === SolutionStatus.Incorrect}
-                                    onChange={handleIsCorrectChange}
-                                    className="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500"
-                                />
-                                <div className="flex items-center space-x-2">
-                                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                                    <span className="text-sm font-medium text-gray-700">Incorrect</span>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
+                    
 
                     {/* フッターボタン */}
                     <div className="flex justify-end space-x-4 pt-6 border-t border-gray-200">
