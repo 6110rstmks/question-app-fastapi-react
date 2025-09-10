@@ -2,6 +2,8 @@
 
 react hook form 導入しや
 
+jestではなくて、vitestを導入
+
 本日はもう出題しない。機能を実装
 questionsテーブルに列を追加
 
