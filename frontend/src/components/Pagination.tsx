@@ -37,7 +37,11 @@ const Pagination: React.FC<PaginationProps> = ({
                     onClick={handlePrevious}>
                     Previous
                 </button>
-                <span className="text-white/80">{currentPage} / {totalPages}</span>
+                <span className="text-white/80">
+                {currentPage}
+                <span className="mx-1">/</span>
+                {totalPages}
+                </span>
                 <button 
                     className="px-4 py-2 rounded-2xl bg-black/20 text-white/90 border border-white/10 cursor-pointer transition-colors duration-200 backdrop-blur-sm hover:bg-black/30 disabled:opacity-50 disabled:cursor-not-allowed"
                     onClick={handleNext}>
