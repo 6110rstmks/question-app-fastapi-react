@@ -282,7 +282,6 @@ const SubcategoryPage: React.FC = () => {
                 
                 {/* Quick Actions - Always at bottom */}
                 <div className="flex justify-between items-center mt-4 pt-4 border-t border-slate-200 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
-                    <span className="text-xs text-slate-500 truncate mr-2">Question #{question.id}</span>
                     <div className="flex space-x-2 flex-shrink-0">
                         <button 
                             className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
