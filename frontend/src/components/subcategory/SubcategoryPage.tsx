@@ -134,7 +134,6 @@ const SubcategoryPage: React.FC = () => {
                 <p className="text-3xl font-bold text-slate-800">{questionCount}</p>
               </div>
               <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold">Q</span>
               </div>
             </div>
           </div>
@@ -146,7 +145,6 @@ const SubcategoryPage: React.FC = () => {
                 <p className="text-3xl font-bold text-amber-600">{uncorrectedQuestionCount}</p>
               </div>
               <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold">!</span>
               </div>
             </div>
           </div>
@@ -157,7 +155,6 @@ const SubcategoryPage: React.FC = () => {
                 <p className="text-3xl font-bold text-rose-600">{uncorrectedQuestionCount}</p>
               </div>
               <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-rose-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold">!</span>
               </div>
             </div>
           </div>
