@@ -217,90 +217,90 @@ const SubcategoryPage: React.FC = () => {
           </div>
         </div>
 
-  {/* Questions Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-    {questions.map((question) => (
-        <div 
-            key={question.id}
-            className="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col min-h-[300px]"
-        >
-            {/* Status Indicator */}
-            <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium border flex-shrink-0 ${getStatusBadge(question.is_correct)}`}>
-                <span className="truncate max-w-[80px]">{question.is_correct}</span>
-            </div>
-            
-            {/* Gradient Border Effect */}
-            <div className={`absolute inset-0 bg-gradient-to-r ${getStatusColor(question.is_correct)} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity`}></div>
-            
-            {/* Content */}
-            <div className="relative z-10 flex flex-col h-full">
-                {/* Title Section - Fixed height with overflow handling */}
-                <div className="flex-shrink-0 mb-4 pr-20"> {/* pr-20 to avoid overlap with status badge */}
-                    <h3 
-                        onClick={() => handleNavigateToQuestionPage(
-                            navigate,
-                            question.id,
-                            categoryInfo.id,
-                            categoryInfo.name,
-                            subcategoryId,
-                            subcategoryName
-                        )}
-                        className="text-slate-800 font-semibold line-clamp-4 group-hover:text-indigo-600 transition-colors leading-relaxed text-sm md:text-base overflow-hidden"
-                        title={question.problem} // Tooltip for full text
-                    >
-                        {question.problem}
-                    </h3>
-                </div>
-                
-                {/* Answer Section - Expandable area */}
-                {showAnswer && (
-                    <div className="flex-1 mt-auto">
-                        <div className="pt-4 border-t border-slate-200">
-                            {question.answer.map((answer, index) => (
-                                <div key={index} className="text-slate-600 text-sm leading-relaxed bg-slate-50/50 rounded-lg p-3 mb-2 last:mb-0">
-                                    <div className="max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent">
-                                        {answer.split('\n').map((line, i) => (
-                                            <React.Fragment key={i}>
-                                                {isLatex(line) ? (
-                                                    <div className="my-2 overflow-x-auto">
-                                                        <BlockMath math={line} />
-                                                    </div>
-                                                ) : (
-                                                    <>
-                                                        <span className="break-words">{line}</span>
-                                                        {i < answer.split('\n').length - 1 && <br />}
-                                                    </>
-                                                )}
-                                            </React.Fragment>
-                                        ))}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-                
-                {/* Quick Actions - Always at bottom */}
-                <div className="flex justify-between items-center mt-4 pt-4 border-t border-slate-200 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
-                    <div className="flex space-x-2 flex-shrink-0">
-                        <button 
-                            className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
-                            title="Edit question"
-                        >
-                            <Edit3 size={14} className="text-slate-400" />
-                        </button>
-                        <button 
-                            className="p-2 hover:bg-rose-100 rounded-lg transition-colors"
-                            title="Delete question"
-                        >
-                            <Trash2 size={14} className="text-rose-400" />
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    ))}
-</div>
+      {/* Questions Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {questions.map((question) => (
+              <div 
+                  key={question.id}
+                  className="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col min-h-[300px]"
+              >
+                  {/* Status Indicator */}
+                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium border flex-shrink-0 ${getStatusBadge(question.is_correct)}`}>
+                      <span className="truncate max-w-[80px]">{question.is_correct}</span>
+                  </div>
+                  
+                  {/* Gradient Border Effect */}
+                  <div className={`absolute inset-0 bg-gradient-to-r ${getStatusColor(question.is_correct)} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity`}></div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10 flex flex-col h-full">
+                      {/* Title Section - Fixed height with overflow handling */}
+                      <div className="flex-shrink-0 mb-4 pr-20"> {/* pr-20 to avoid overlap with status badge */}
+                          <h3 
+                              onClick={() => handleNavigateToQuestionPage(
+                                  navigate,
+                                  question.id,
+                                  categoryInfo.id,
+                                  categoryInfo.name,
+                                  subcategoryId,
+                                  subcategoryName
+                              )}
+                              className="text-slate-800 font-semibold line-clamp-4 group-hover:text-indigo-600 transition-colors leading-relaxed text-sm md:text-base overflow-hidden"
+                              title={question.problem} // Tooltip for full text
+                          >
+                              {question.problem}
+                          </h3>
+                      </div>
+                      
+                      {/* Answer Section - Expandable area */}
+                      {showAnswer && (
+                          <div className="flex-1 mt-auto">
+                              <div className="pt-4 border-t border-slate-200">
+                                  {question.answer.map((answer, index) => (
+                                      <div key={index} className="text-slate-600 text-sm leading-relaxed bg-slate-50/50 rounded-lg p-3 mb-2 last:mb-0">
+                                          <div className="max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent">
+                                              {answer.split('\n').map((line, i) => (
+                                                  <React.Fragment key={i}>
+                                                      {isLatex(line) ? (
+                                                          <div className="my-2 overflow-x-auto">
+                                                              <BlockMath math={line} />
+                                                          </div>
+                                                      ) : (
+                                                          <>
+                                                              <span className="break-words">{line}</span>
+                                                              {i < answer.split('\n').length - 1 && <br />}
+                                                          </>
+                                                      )}
+                                                  </React.Fragment>
+                                              ))}
+                                          </div>
+                                      </div>
+                                  ))}
+                              </div>
+                          </div>
+                      )}
+                      
+                      {/* Quick Actions - Always at bottom */}
+                      <div className="flex justify-between items-center mt-4 pt-4 border-t border-slate-200 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
+                          <div className="flex space-x-2 flex-shrink-0">
+                              <button 
+                                  className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+                                  title="Edit question"
+                              >
+                                  <Edit3 size={14} className="text-slate-400" />
+                              </button>
+                              <button 
+                                  className="p-2 hover:bg-rose-100 rounded-lg transition-colors"
+                                  title="Delete question"
+                              >
+                                  <Trash2 size={14} className="text-rose-400" />
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          ))}
+      </div>
 
         {/* Empty State or Load More */}
         {questions.length === 0 && (
