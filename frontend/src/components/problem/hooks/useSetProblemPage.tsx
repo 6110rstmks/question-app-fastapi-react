@@ -1,10 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import type { Subcategory } from '../../../types/Subcategory'
-import type { CategoryWithQuestionCount } from '../../../types/Category'
-import { fetchAllCategoriesWithQuestions } from '../../../api/CategoryAPI'
-import { fetchSubcategoriesWithQuestionCountByCategoryId } from '../../../api/SubcategoryAPI'
-import { fetchQuestionCount } from '../../../api/QuestionCountAPI'
 import { fetchProblem, fetchProblemByDay } from '../../../api/ProblemAPI'
 import type { SolutionStatus } from '../../../types/SolutionStatus'
 import { SolutionStatusReverse } from '../../../types/SolutionStatus'
@@ -14,17 +9,6 @@ const useSetProblemPage = () => {
         solutionStatusNumber,
         setSolutionStatusNumber
     ] = useState<SolutionStatus>(0)
-
-    const [subcategories, setSubcategories] = useState<Subcategory[]>([])
-    const [selectedType, setSelectedType] = useState<string>('random')
-    const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([])
-    const [categories, setCategories] = useState<CategoryWithQuestionCount[]>([])
-    const [problemCount, setProblemCount] = useState<number>(5)
-    const [showAll, setShowAll] = useState<boolean>(false)
-    const [
-        questionCount,
-        setQuestionCount
-    ] = useState<number | null>(null)
 
     const navigate = useNavigate()
 
@@ -53,38 +37,16 @@ const useSetProblemPage = () => {
         }
     }, [handleKeyDown])
 
-    // カテゴリのチェックボックスにチェックを入れたら
-    const handleCheckboxChange = async (categoryId: number) => {
 
-        setShowAll(true)
-        // カテゴリに紐づくサブカテゴリを取得する
-        const subcategories = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId)
-        setSubcategories(subcategories)
-
-        setSelectedCategoryIds((prevSelected) => {
-            // すでにカテゴリが選択されている場合は取り除き、選択されていない場合は追加する
-
-            if (prevSelected.includes(categoryId)) {
-                return prevSelected.filter((id) => id !== categoryId)
-            } else {
-                return [...prevSelected, categoryId]
-            }
-        })
-    }
 
     // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
     const handleSetProblem = async () => {
-        if (selectedType === 'category' && 
-            selectedCategoryIds.length === 0
-        ) {
-            alert('Please select at least one category')
-            return
-        }
 
         const response = await fetchProblem(
-            selectedType,
+            'random',
             toLowerFirst(SolutionStatusReverse[solutionStatusNumber]),
-            problemCount, selectedCategoryIds,
+            4, 
+            [],
             []
         )
         const problemData = await response.json()
@@ -126,28 +88,8 @@ const useSetProblemPage = () => {
         })
     }
 
-    useEffect(() => {
-        (async () => {
-            const response = await fetchAllCategoriesWithQuestions()
-            setCategories(response)
-
-            const questionCount = await fetchQuestionCount()
-            setQuestionCount(questionCount)
-        })()
-    }, [])
-
     return {
-        categories,
-        questionCount,
-        showAll,
-        selectedType,
-        setSelectedType,
-        problemCount,
-        setProblemCount,
-        selectedCategoryIds,
-        subcategories,
         handleSetProblem,
-        handleCheckboxChange,
         handleTodayReview,
         solutionStatusNumber,
         setSolutionStatusNumber

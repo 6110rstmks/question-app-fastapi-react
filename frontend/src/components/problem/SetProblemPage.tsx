@@ -21,7 +21,6 @@ const SetProblemPage: React.FC = () => {
     }
 
     const {
-        questionCount,
         handleSetProblem,
         handleTodayReview,
         solutionStatusNumber,
@@ -141,7 +140,7 @@ const SetProblemPage: React.FC = () => {
                                     type="radio"
                                     checked={solutionStatusNumber === SolutionStatus.Temporary}
                                     value={SolutionStatus.Temporary}
-                                    onChange={(e) => setSolutionStatusNumber(Number(e.target.value))}
+                                    onChange={(e) => setSolutionStatusNumber(Number(e.target.value) as SolutionStatus)}
                                     className="w-5 h-5 text-yellow-600"
                                 />
                                 <div className="flex items-center gap-2">
@@ -155,7 +154,7 @@ const SetProblemPage: React.FC = () => {
                                     type="radio"
                                     checked={solutionStatusNumber === SolutionStatus.Incorrect}
                                     value={SolutionStatus.Incorrect}
-                                    onChange={(e) => setSolutionStatusNumber(Number(e.target.value))}
+                                    onChange={(e) => setSolutionStatusNumber(Number(e.target.value) as SolutionStatus)}
                                     className="w-5 h-5 text-red-600"
                                 />
                                 <div className="flex items-center gap-2">
