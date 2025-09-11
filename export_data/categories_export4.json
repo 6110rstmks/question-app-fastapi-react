@@ -4222,11 +4222,11 @@
                         {
                             "problem": "確率での複合命題の解法　",
                             "answer": [
-                                "余事象　とって　ド・モルガン"
+                                "余事象とってド・モルガン"
                             ],
                             "memo": "例）\nサイコロを4回投げて、出る目の最小値が1,最大値が6の確率は？\n\n数学モンスター　北大",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-05"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "じゃんけんの確率問題　2パターン",
@@ -4634,29 +4634,6 @@
                     ]
                 },
                 {
-                    "name": "english",
-                    "questions": [
-                        {
-                            "problem": "silver bromide //日本語で",
-                            "answer": [
-                                "臭化銀"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-12"
-                        },
-                        {
-                            "problem": "接触法　英語で",
-                            "answer": [
-                                "contact process"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-05-29"
-                        }
-                    ]
-                },
-                {
                     "name": "organic chemistry",
                     "questions": [
                         {
@@ -4994,6 +4971,29 @@
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeXQrkwCEyGIX6ajxtZdJR9lB6Nt6IghA-mA&s",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-28"
+                        }
+                    ]
+                },
+                {
+                    "name": "english",
+                    "questions": [
+                        {
+                            "problem": "silver bromide //日本語で",
+                            "answer": [
+                                "臭化銀"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-02-12"
+                        },
+                        {
+                            "problem": "接触法　英語で",
+                            "answer": [
+                                "contact process"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-05-29"
                         }
                     ]
                 },
@@ -8126,7 +8126,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "IL-13に高親和性で結合するヒト化抗ヒトIL-13モノクローナル抗体として機能するアトピー性皮膚炎の新薬は？",
@@ -9603,7 +9603,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "あいまい検索とvector searchの違いを簡潔にいうと？",
@@ -16232,7 +16232,7 @@
                             ],
                             "memo": "https://i0.wp.com/worldwalking.net/wp-content/uploads/IMG_5041.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "Which is located further west, the Caspian Sea or the Black Sea?",
@@ -16668,8 +16668,8 @@
                                 "56 ジャマイカ"
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "ニュージーランドおよび日付変更線以東なのはポリネシア、ミクロネシア？",
@@ -18028,7 +18028,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 },
@@ -20186,8 +20186,8 @@
                                 "離水海岸Emergent coastline"
                             ],
                             "memo": "https://chitonitose.com/geo/img/submergent_emergent_coastline.webp\n\n\n沈水海岸\n海面が上昇したり、陸地が沈降したりすることで、　海岸付近の陸地が水の中に沈んでできた海岸地形\n\n離水海岸\n海面が下降したり、陸地が隆起したりすることで、　浅い海底が陸の上に現れてできた海岸地形",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "沈水海岸を英語で",
@@ -21278,8 +21278,8 @@
                                 "AI foundry"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "Azureにおいてリソースに対して、どのようなアクションがあったかを記録するログは？",
@@ -21288,7 +21288,7 @@
                             ],
                             "memo": "「Application Insights」とは異なり、アプリケーション内部のログではなく、Azure ポータルやリソースレベルの操作ログ\n\nAWSでのCloudtrail",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-18"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "azure でのサービスプリンシパルについて",
@@ -21325,6 +21325,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-15"
+                        },
+                        {
+                            "problem": "Azure VMのグループを自動的にスケールイン（削減）およびスケールアウト（拡張）することができる機能は",
+                            "answer": [
+                                "VMSS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "Azureで提供されているメッセージングサービスは",
@@ -21377,8 +21386,8 @@
                                 "Blob StorageやLog Analyticsにデータを保存する。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "オンプレミス環境とAzure環境の接続方法を3つ答えてください",
@@ -21433,8 +21442,8 @@
                                 "Resource GroupはSubscriptionの配下に存在します。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-18"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "Azureリソースを論理的に分離し、課金とアクセス制御を行う単位は？",
@@ -21618,7 +21627,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "Azure Machine Learning でデータの前処理を行うために使用できるモジュールはどれですか？",
@@ -21680,8 +21689,8 @@
                                 "TDE Transparent Data Encryption"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "AzureにおいてSQL Server の高可用性および災害復旧（HA/DR）**のための機能は？",
@@ -21820,11 +21829,12 @@
                         {
                             "problem": "Azure AI Searchのアナライザーは例えばどのようなことをする。例を一つあげて",
                             "answer": [
+                                "単語分割",
                                 "検索文字列から意味を持たない一般的な単語を削除する。\n\n例: \"the\", \"a\", \"is\" などを削除。"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "AI Searchに対しての接続方法2",
@@ -22121,13 +22131,31 @@
                     "name": "application gateway",
                     "questions": [
                         {
+                            "problem": "Application Gateway は、(A) メカニズムを使用して、各バックエンド プール内のサーバーに送信された要求を自動的に負荷分散します。",
+                            "answer": [
+                                "ラウンドロビン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
+                            "problem": "az network application-gateway probe create\n上記のコマンドは何をするためのコマンドであるか",
+                            "answer": [
+                                "正常性プローブを作成"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
                             "problem": "AzureのApplication gatewayはL7のロードバランサかもしくはL4のロードバランサか",
                             "answer": [
                                 "L7"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-24"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "AzureのApplication Gatewayは何らかの異常が発生したバックエンドを振り分け対象から外す機能は",
@@ -22136,7 +22164,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-27"
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 },
@@ -22447,15 +22475,6 @@
                             "last_answered_date": "2025-09-10"
                         },
                         {
-                            "problem": "git rebase コマンドの主な目的",
-                            "answer": [
-                                "ブランチの変更履歴を他のブランチの先頭に付け替える"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
-                        },
-                        {
                             "problem": "git rebase を使う際にコンフリクトが発生することがあります。 この場合、開発者はどのような手順でコンフリクトを解決し、rebase を完了すべきでしょうか？",
                             "answer": [
                                 "git rebase --continue を実行する"
@@ -22477,6 +22496,47 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-09"
+                        },
+                        {
+                            "problem": "git rebaseは親ブランチの変更を子ブランチに取り込むのか、それとも、子ブランチの内容を親ブランチに取り込むのかどちらですか？",
+                            "answer": [
+                                "親ブランチの変更を子ブランチに取り込む"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "チーム開発で一般的なものとして、git rebasegがOKなのは個人ブランチか、それとも共有ブランチか",
+                            "answer": [
+                                "個人ブランチ"
+                            ],
+                            "memo": "共有ブランチはmergeがOK",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "git rebase コマンドの主な目的",
+                            "answer": [
+                                "ブランチの変更履歴を他のブランチの先頭に付け替える"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-08-30"
+                        }
+                    ]
+                },
+                {
+                    "name": "reset",
+                    "questions": [
+                        {
+                            "problem": "git reset --softでは「ステージした状態」は維持されるか、それとも維持されないか",
+                            "answer": [
+                                "維持される"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 }
