@@ -2,7 +2,6 @@ import React from 'react'
 import type { ChangeEvent } from 'react'
 import type { Question } from '../../types/Question'
 import { useQuestionEditModal } from './hooks/useQuestionEditModal'
-import { SolutionStatus } from '../../types/SolutionStatus'
 
 interface QuestionEditProps {
     setModalIsOpen: (isOpen: boolean) => void
