@@ -4642,8 +4642,8 @@
                                 "トルエン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "ozoneの匂いは無臭か",
@@ -4756,7 +4756,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "fat hydrogenation",
@@ -5079,8 +5079,8 @@
                                 "CuO"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-23"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "Snの参加数は2種類ある。答えて、またどちらが安定",
@@ -5428,7 +5428,7 @@
                                 "銀Agの生PbはげHg"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-11"
                         },
                         {
@@ -6023,7 +6023,7 @@
                             ],
                             "memo": "https://en.wikipedia.org/wiki/Spemann%E2%80%93Mangold_organizer\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "卵割を英語で",
@@ -6844,7 +6844,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -8165,7 +8165,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": " サイトカインの過剰な産生により引き起こされる現象は何ですか？",
@@ -8376,7 +8376,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "収縮速度の速く、大きな力を短時間に発揮することができ、瞬発力やパワーが必要な運動を行うときに活躍するのは速筋かそれとも遅筋か",
@@ -8887,7 +8887,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-02-12"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "需要曲線と供給曲線が交わる点の価格を何という",
@@ -8915,7 +8915,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-04-01"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "経済を大きくふたつの市場の観点に分けたものをそれぞれ答えて",
@@ -9018,7 +9018,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "景気を測る指数は何？",
@@ -9028,6 +9028,98 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-04-19"
+                        },
+                        {
+                            "problem": "量的緩和（QE）の縮小はなんと呼ばれる",
+                            "answer": [
+                                "テーパリング"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-13"
+                        },
+                        {
+                            "problem": "金融緩和の　対義語は",
+                            "answer": [
+                                "金融引き締め"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
+                            "problem": "量的緩和（QE）の主な目的は中央銀行が国債や金融資産を大量に購入して市場に資金を（A）すること",
+                            "answer": [
+                                "供給"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
+                            "problem": "国際標準の物価の安定は年何％？",
+                            "answer": [
+                                "2"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "インフレの測定方法",
+                            "answer": [
+                                "消費者物価指数　CPI"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "interest rate は経済の何とたとえる？（経済ジャーナリストの後藤さん曰く））",
+                            "answer": [
+                                "体温"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "失業率とインフレーション率（物価上昇率）の間に経験的な関係があるとした理論は",
+                            "answer": [
+                                "フィリップス曲線"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "デフレーションの一般人観点のプラスの側面は2",
+                            "answer": [
+                                "ものが安く買える",
+                                "金融資産の実質価値が上がる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
+                            "problem": "金融緩和の具体的な方法は",
+                            "answer": [
+                                "政策金利の引き下げ",
+                                "量的緩和（Quantitative Easing, QE）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "量的緩和が行われた場合、一般的に期待される効果",
+                            "answer": [
+                                "銀行の貸し出し余力が増加する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
                         }
                     ]
                 },
@@ -9046,6 +9138,94 @@
                             "memo": "https://chu.benesse.co.jp/qat/img/3519s_s.jpg",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-09"
+                        }
+                    ]
+                },
+                {
+                    "name": "経済誌",
+                    "questions": [
+                        {
+                            "problem": "What is the agreement announced by G7 to stop too much weak dollar called? ",
+                            "answer": [
+                                "Louvre Accord"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "アベノミクス",
+                    "questions": [
+                        {
+                            "problem": "アベノミクスで結局インフレになったのか",
+                            "answer": [
+                                "一時的にインフレになった（初期の頃）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
+                            "problem": "アベノミクスの目標は",
+                            "answer": [
+                                "デフレスパイラルからの脱却"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "アベノミクスの最大の功績",
+                            "answer": [
+                                "円高を円安に転換して、この悪循環にくさびを打ち込んだこと"
+                            ],
+                            "memo": "https://www.resona-am.co.jp/labo/amdays/20220829.html",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "失業率unemployment",
+                    "questions": [
+                        {
+                            "problem": "政府が需要喚起する経済・金融対策で2％のインフレを起こすと、短期的にはA点からC点まで名目賃金は2％上昇し、失業率も低下します。しかし、いずれ人々はインフレを予想し、インフレ率と実質賃金の上昇率が均衡してしまうと、インフレ率上昇による失業率低下の効果はなくなり、長期的に失業率はA点と変わらないB点にシフトして、インフレだけが高止まりすることになります。これをなんとよぶ",
+                            "answer": [
+                                "自然失業率"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        }
+                    ]
+                },
+                {
+                    "name": "MMT",
+                    "questions": [
+                        {
+                            "problem": "Mmtによると自国の通過はいくらでもつくりだせる？だせない？",
+                            "answer": [
+                                "だせる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "bond",
+                    "questions": [
+                        {
+                            "problem": "bondにおけるdurationとは",
+                            "answer": [
+                                "投資の回収期間のこと"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 }
@@ -9076,8 +9256,8 @@
                                 "直接せつぞくされていない二つのネットワーク間について、中間のネットワークを経由して通信すること"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-02"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "ネットワークにおいてBGPとは一言でいうと",
@@ -9157,8 +9337,8 @@
                                 "イントラネット"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "無線LANのアクセスポイントやIP電話機などに，LANケーブルを利用して給電も行う仕組み",
@@ -9195,6 +9375,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-30"
+                        },
+                        {
+                            "problem": "networkにおいて1.1.1.1 とは",
+                            "answer": [
+                                "Cloudflareが運営している「パブリックDNSリゾルバー」"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 },
@@ -9317,6 +9506,34 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-10"
+                        }
+                    ]
+                },
+                {
+                    "name": "コマンド",
+                    "questions": [
+                        {
+                            "problem": "ncコマンドは何コマンドの略か",
+                            "answer": [
+                                "netstat\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "HSTS",
+                    "questions": [
+                        {
+                            "problem": "HSTSの主な目的は",
+                            "answer": [
+                                "HTTPをHTTPSに強制する"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 }
@@ -9462,8 +9679,8 @@
                                 "線形回帰"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "機械学習のプロセスを効率化し、専門知識を持たない人々でも活用できる技術のことを何という",
@@ -9904,14 +10121,14 @@
                             "last_answered_date": "2025-09-01"
                         },
                         {
-                            "problem": "3値論理において3つの真理値の間にどのような優先順位があると暗記すればよいか andの場合falseの場合\n強い方が弱い方を打ち消す",
+                            "problem": "3値論理において3つの真理値の間にどのような優先順位があると暗記すればよいか andの場合orの場合\n強い方が弱い方を打ち消す",
                             "answer": [
                                 "false ＞ unknown ＞ true",
                                 " true ＞ unknown ＞ false"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 }
@@ -10194,8 +10411,8 @@
                                 "[dɔYtʃ ドィチャ]"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "循環器疾患",
@@ -12350,6 +12567,15 @@
                             "last_answered_date": "2025-09-11"
                         },
                         {
+                            "problem": "A button had come off my coat.",
+                            "answer": [
+                                "コートからボタンが一つ外れてしまった。"
+                            ],
+                            "memo": "come off 剥がれる",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
                             "problem": "The surface of a mirror is planar",
                             "answer": [
                                 "鏡の表面は平面"
@@ -12443,6 +12669,65 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-06-17"
+                        }
+                    ]
+                },
+                {
+                    "name": "文法",
+                    "questions": [
+                        {
+                            "problem": "既出のa + 単数可算名詞のかわりに用いることのできる代名詞はなに？",
+                            "answer": [
+                                "one"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "準否定を6つあげて",
+                            "answer": [
+                                "hardly scarcely rarely seldom few little"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "the way SV訳し方",
+                            "answer": [
+                                "svする方法　、どのようにsvするか"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "light(verb)（火をつける）の過去形は",
+                            "answer": [
+                                "lit"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "it, oneの違いを理解するための合言葉",
+                            "answer": [
+                                "世界に一つのitと同じ種類のone\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "　Give me the pencil.\n　Give me a pencil　　　　　　　　　　　　ちがいをのべよ",
+                            "answer": [
+                                "特定のペンとどれでもいいからペン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 }
@@ -14269,7 +14554,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "Dependency injectionとは",
@@ -15581,8 +15866,8 @@
                                 "パンパ"
                             ],
                             "memo": "https://asmira.jp/wp-content/uploads/2020/01/south-america-terrain-4-214x300.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "北回帰線付近には亜熱帯高圧帯が分布しているため、その付近の気候は乾燥帯になりやすいにもかかわらず、インドのコルカタ付近は乾燥帯にならず、サバナ気候になっている理由",
@@ -18027,7 +18312,7 @@
                                 "エチオピア"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-11"
                         }
                     ]
@@ -19916,7 +20201,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "ラトソル、砂漠土、黒土などが属する土壌をなんという",
@@ -21191,7 +21476,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-28"
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 },
@@ -22447,6 +22732,15 @@
                             "last_answered_date": "2025-08-22"
                         },
                         {
+                            "problem": "ローカルでgit mergeをしてコンフリクトが発生した。\nやっぱり取り消したい。コマンドは？",
+                            "answer": [
+                                "git merge --abort"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
                             "problem": "git fetchとpullの違いは",
                             "answer": [
                                 "ローカルの更新をどこまで自動でやるか\n",
@@ -22482,6 +22776,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-09"
+                        },
+                        {
+                            "problem": "git push --force-with-lease originはgit push --force と何が違う？",
+                            "answer": [
+                                "自分が最後に取得したリモートの履歴から変わっていなければ強制 push。\nもし他の人がリモートに新しいコミットを push していたらエラーになる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 },
@@ -22530,9 +22833,45 @@
                     "name": "reset",
                     "questions": [
                         {
+                            "problem": "git resetにおいてHEAD・インデックス・作業ディレクトリすべて戻すのは--soft か--hardのどちらか",
+                            "answer": [
+                                "--hard"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
                             "problem": "git reset --softでは「ステージした状態」は維持されるか、それとも維持されないか",
                             "answer": [
                                 "維持される"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "git reset --hard b49ffe3^\nこれはどのような操作か",
+                            "answer": [
+                                "コミット b49ffe3 の 1つ前の状態 にリセットする"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "git reset --hard b49ffe3^^\nのコマンドの意味は",
+                            "answer": [
+                                "b49ffe3 の2つ前のコミットの状態にリセットする"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "git reset --hard HEAD~3",
+                            "answer": [
+                                "直前の3つのコミットを取り消す。\nそして--hardなので　HEAD・インデックス・作業ディレクトリすべて戻す"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -22813,7 +23152,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-28"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "class Animal:\n    def __init__(self, name):\n        self.name = name\n        print(\"Animal init called\")\n\nclass Dog(Animal):\n    def __init__(self, name, breed):\n        （A）\n        self.breed = breed\n        print(\"Dog init called\")\n\ndog = Dog(\"Pochi\", \"Shiba\")\n\n\n問題：\n(A) の位置に super().__init__(name) を追加した場合の出力結果を答えよ。\n",
@@ -22822,7 +23161,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-31"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "lass A(B): \n    # Omitted bulk of irrelevant code in the class\n\n    def __init__(self, uid=None):\n        self.uid = str(uid)\n\n    @classmethod\n    def get(cls, uid):\n        o = cls(uid)\n\n\n\nWhat does cls() function do inside a class method?",
@@ -22928,7 +23267,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "標準出力（print()などの出力）をコンソールに表示するためのpytestコマンドは",
@@ -23085,7 +23424,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-28"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "pythonの特殊メソッドである__call__について",
@@ -23784,7 +24123,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "ヌルハチが後金を建国したのはいつか",
@@ -23829,7 +24168,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "ヌルハチはどこの国に対して宣戦布告したか",
@@ -23900,8 +24239,8 @@
                                 "史記"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "紅巾の乱によって何の国の建国者が台頭するきっかけとなったか",
@@ -23937,7 +24276,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "劉邦が項羽を破った戦いは",
@@ -24747,7 +25086,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "アケメネス朝ペルシアが各州に置いたサトラップを 監視するため中央から派遣した監察官を何というか。",
@@ -24783,7 +25122,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "ササン朝ペルシアの首都はどこか",
@@ -24968,7 +25307,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "中世紀末にヨーロッパ諸国で成立した、身分別の代表が国政を審議する議会をなんとよぶ",
@@ -25180,7 +25519,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 },
@@ -25217,7 +25556,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-09-11"
                         }
                     ]
                 }
