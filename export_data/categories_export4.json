@@ -9036,7 +9036,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-13"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "金融緩和の　対義語は",
@@ -9045,7 +9045,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "量的緩和（QE）の主な目的は中央銀行が国債や金融資産を大量に購入して市場に資金を（A）すること",
@@ -9057,13 +9057,22 @@
                             "last_answered_date": "2025-09-12"
                         },
                         {
+                            "problem": "デフレ状態を脱却し、まだインフレにはならない程度の状態のことをなんという",
+                            "answer": [
+                                "リフレーション"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
                             "problem": "国際標準の物価の安定は年何％？",
                             "answer": [
                                 "2"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "インフレの測定方法",
@@ -9082,6 +9091,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "monetary expansion（金融拡張） と quantitative easing（量的緩和, QE）の違い",
+                            "answer": [
+                                "monetary expansion = 「金融拡張」＝通貨供給を増やす政策の総称でQEはその一部"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
+                            "problem": "日本銀行やFRBが量的緩和を実施する際に購入する金融資産として、最も一般的なものは",
+                            "answer": [
+                                "国債"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "失業率とインフレーション率（物価上昇率）の間に経験的な関係があるとした理論は",
