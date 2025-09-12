@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update, func, text
 from backend.schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
 from backend.models import Question, SubcategoryQuestion, CategoryQuestion
@@ -10,7 +10,7 @@ from backend.schemas.question import QuestionResponse
 from typing import Optional
 
 def find_all_questions(
-    db: Session,
+    db: AsyncSession,
     search_word: str = None,
 ) -> list[QuestionResponse]:
     result = []
@@ -34,7 +34,7 @@ def find_all_questions(
 
 
 def find_all_questions_in_category(
-    db: Session, 
+    db: AsyncSession, 
     category_id: int
 ) -> list[QuestionResponse]:
     query = select(Question).where(CategoryQuestion.category_id == category_id)
@@ -42,7 +42,7 @@ def find_all_questions_in_category(
     return db.execute(query).scalars().all()
 
 def find_all_questions_in_subcategory(
-    db: Session, 
+    db: AsyncSession, 
     subcategory_id: int
 ) -> list[Question]:
 
@@ -56,15 +56,15 @@ def find_all_questions_in_subcategory(
         
     return questions
 
-def find_question_by_id(db: Session, id: int) -> Question:
+def find_question_by_id(db: AsyncSession, id: int) -> Question:
     query = select(Question).where(Question.id == id)
     return db.execute(query).scalars().first()
 
-def find_by_name(db: Session, name: str) -> list[Question]:
+def find_by_name(db: AsyncSession, name: str) -> list[Question]:
     return db.query(Question).filter(Question.name.like(f"%{name}%")).all()
 
 def create(
-    db: Session, 
+    db: AsyncSession, 
     question_create: QuestionCreate
 ) -> QuestionResponse:
     
@@ -89,7 +89,7 @@ def create(
         raise e
 
 def update2(
-    db: Session, 
+    db: AsyncSession, 
     id: int, 
     question_update: QuestionUpdate
 ) -> QuestionResponse:
@@ -109,7 +109,7 @@ def update2(
     return updated_subcategory
 
 def update_is_correct(
-    db: Session, 
+    db: AsyncSession, 
     id: int, 
     question_is_correct_update: QuestionIsCorrectUpdate
 ) -> Optional[QuestionResponse]:
@@ -128,7 +128,7 @@ def update_is_correct(
 
 # あるサブカテゴリのis_correctをすべて更新する関数
 def update_is_correct_by_subcategory(
-    db: Session,
+    db: AsyncSession,
     subcategory_id: int,
     question_is_correct_update: QuestionIsCorrectUpdate
 ) -> list[QuestionResponse]:
@@ -153,7 +153,7 @@ def update_is_correct_by_subcategory(
     return updated_questions
 
 def delete_question(
-    db: Session,
+    db: AsyncSession,
     question_id: int
 ) -> QuestionResponse:
     question = find_question_by_id(db, question_id)
@@ -167,7 +167,7 @@ def delete_question(
     return question
 
 def change_belongs_to_subcategoryId(
-    db: Session, 
+    db: AsyncSession, 
     changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate
 ) -> list[int]:
 
@@ -268,7 +268,7 @@ def change_belongs_to_subcategoryId(
     return changeSubcategoryUpdate.subcategory_ids
 
 def update_last_answered_date(
-    db: Session, 
+    db: AsyncSession, 
     question_id: int
 ) -> QuestionResponse:
     query1 = select(Question).where(Question.id == question_id)
@@ -298,7 +298,7 @@ def update_last_answered_date(
     return find_question_by_id(db, question_id) 
 
 def increment_answer_count(
-    db: Session, 
+    db: AsyncSession, 
     question_id: int
 ) -> QuestionResponse:
     stmt = (
