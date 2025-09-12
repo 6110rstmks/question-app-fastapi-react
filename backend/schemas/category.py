@@ -17,14 +17,20 @@ class QuestionImport(BaseModel):
     problem: str
     answer: List[str]
     is_correct: bool
+    
+    
 class SubcategoryImport(BaseModel):
     id: int
     name: str
     questions: List[QuestionImport]
+    
+    
 class CategoryImport(BaseModel):
     id: int
     name: str = Field(min_length=2, max_length=50)
     subcategories: List[SubcategoryImport] = []
+    
+    
     
 class CategoryResponseWithQuestionCount(BaseModel):
     id: int

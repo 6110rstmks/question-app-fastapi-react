@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update, func
 from backend.schemas.subcategory import SubcategoryCreate, SubcategoryUpdate, SubcategoryResponse
 from backend.models import Subcategory, SubcategoryQuestion, Question, Category
@@ -9,7 +9,7 @@ from typing import Optional
 
 # カテゴリbox内で表示するサブカテゴリを取得
 def find_subcategories_in_categorybox(
-    db: Session, 
+    db: AsyncSession, 
     category_id: int, 
     limit: int, 
     searchSubcategoryWord: str, 
@@ -52,14 +52,14 @@ def find_subcategories_in_categorybox(
     return result[0: 0 + limit]
 
 def find_subcategory_by_id(
-    db: Session, 
+    db: AsyncSession, 
     id: int
 ) -> Optional[SubcategoryResponse]:
     query = select(Subcategory).where(Subcategory.id == id)
     return db.execute(query).scalars().first()
 
 def find_subcategories_by_question_id(
-    db: Session, 
+    db: AsyncSession, 
     question_id: int
 ) -> list[SubcategoryResponse]:
     # query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
@@ -76,7 +76,7 @@ def find_subcategories_by_question_id(
     return db.execute(query2).scalars().all()
 
 def find_subcategories_with_category_name_by_category_id(
-    db: Session, 
+    db: AsyncSession, 
     category_id: int
 ) -> list[SubcategoryResponse]:
 
@@ -85,14 +85,14 @@ def find_subcategories_with_category_name_by_category_id(
     return db.execute(query1).fetchall()
 
 def find_subcategories_with_category_name_by_question_id(
-    db: Session, 
+    db: AsyncSession, 
     question_id: int
 ) -> list[SubcategoryResponse]:
     query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(SubcategoryQuestion, Subcategory.id == SubcategoryQuestion.subcategory_id).join(Category, Subcategory.category_id == Category.id).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query1).fetchall()
 
 def find_subcategory_by_name(
-    db: Session, 
+    db: AsyncSession, 
     name: str
 ) -> list[SubcategoryResponse]:
     return (
@@ -102,7 +102,7 @@ def find_subcategory_by_name(
     )
 
 def find_subcategories_with_category_name_by_id(
-    db: Session, 
+    db: AsyncSession, 
     id: int
 ):
     query = (
@@ -113,7 +113,7 @@ def find_subcategories_with_category_name_by_id(
     return db.execute(query).fetchone()
 
 def create_subcategory(
-    db: Session, 
+    db: AsyncSession,
     subcategory_create: SubcategoryCreate
 ) -> SubcategoryResponse:
 
@@ -134,7 +134,7 @@ def create_subcategory(
     return new_subcategory
 
 def update2(
-    db: Session, 
+    db: AsyncSession, 
     id: int, 
     subcategory_update: SubcategoryUpdate
 ):
@@ -154,7 +154,7 @@ def update2(
     return updated_subcategory
 
 def delete_subcategory(
-    db: Session, 
+    db: AsyncSession, 
     id: int
 ) -> Optional[SubcategoryResponse]:
     subcategory = find_subcategory_by_id(db, id)
