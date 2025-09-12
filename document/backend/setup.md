@@ -1,3 +1,5 @@
+クリーンアーキテクチャを導入
+
 ```
 source venv3/bin/activate
 pip install -r requirements.txt

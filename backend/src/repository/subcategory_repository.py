@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.repository.base import IdSchema, BaseCreateDTO, BaseUpdateDTO, BaseReadDTO, BasicDao
+from backend.src.repository.base import IdSchema, BaseCreateDTO, BaseUpdateDTO, BaseReadDTO, BasicDao
 
 
 class SubcategorySchema(IdSchema):

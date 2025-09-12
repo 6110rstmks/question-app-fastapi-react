@@ -5,6 +5,7 @@ from backend.models import Subcategory, SubcategoryQuestion, Question, Category
 from backend.cruds import question_crud as question_cruds
 from fastapi import HTTPException
 from typing import Optional
+from backend.src.repository.subcategory_repository import SubcategoryRepository
 
 
 # カテゴリbox内で表示するサブカテゴリを取得
@@ -116,6 +117,8 @@ def create_subcategory(
     db: AsyncSession,
     subcategory_create: SubcategoryCreate
 ) -> SubcategoryResponse:
+
+    subcategory_repository = SubcategoryRepository(db)
 
     existing_subcategory = (
         db.query(Subcategory)

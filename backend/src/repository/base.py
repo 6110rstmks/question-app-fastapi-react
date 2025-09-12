@@ -9,8 +9,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import Mapped, mapped_column
 
-from src.lib.database import SqlAlchemyBase
-from src.util.datetime_helper import get_now
+from backend.src.lib.database import SqlAlchemyBase
+from backend.src.util.datetime_helper import get_now
 
 
 class BaseSchema(SqlAlchemyBase):
