@@ -52,12 +52,14 @@ def find_subcategories_in_categorybox(
     # 6件(limit)まで表示
     return result[0: 0 + limit]
 
+
 def find_subcategory_by_id(
     db: AsyncSession, 
     id: int
 ) -> Optional[SubcategoryResponse]:
     query = select(Subcategory).where(Subcategory.id == id)
     return db.execute(query).scalars().first()
+
 
 def find_subcategories_by_question_id(
     db: AsyncSession, 
@@ -76,6 +78,7 @@ def find_subcategories_by_question_id(
         
     return db.execute(query2).scalars().all()
 
+
 def find_subcategories_with_category_name_by_category_id(
     db: AsyncSession, 
     category_id: int
@@ -85,12 +88,14 @@ def find_subcategories_with_category_name_by_category_id(
 
     return db.execute(query1).fetchall()
 
+
 def find_subcategories_with_category_name_by_question_id(
     db: AsyncSession, 
     question_id: int
 ) -> list[SubcategoryResponse]:
     query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(SubcategoryQuestion, Subcategory.id == SubcategoryQuestion.subcategory_id).join(Category, Subcategory.category_id == Category.id).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query1).fetchall()
+
 
 def find_subcategory_by_name(
     db: AsyncSession, 
@@ -101,6 +106,7 @@ def find_subcategory_by_name(
         .filter(Subcategory.name.like(f"%{name}%"))
         .all()
     )
+    
 
 def find_subcategories_with_category_name_by_id(
     db: AsyncSession, 
@@ -112,6 +118,7 @@ def find_subcategories_with_category_name_by_id(
         .where(Subcategory.id == id)
     )
     return db.execute(query).fetchone()
+
 
 def create_subcategory(
     db: AsyncSession,
@@ -136,6 +143,7 @@ def create_subcategory(
     db.commit()
     return new_subcategory
 
+
 def update2(
     db: AsyncSession, 
     id: int, 
@@ -155,6 +163,7 @@ def update2(
     db.commit()
     updated_subcategory = find_subcategory_by_id(db, id)
     return updated_subcategory
+
 
 def delete_subcategory(
     db: AsyncSession, 
