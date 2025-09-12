@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import mapped_column
-from sqlalchemy import String, TIMESTAMP, Column
+from sqlalchemy import String, TIMESTAMP, Column, Integer
 
 from backend.src.repository.base import IdSchema, BaseCreateDTO, BaseUpdateDTO, BaseReadDTO, BasicDao
 from backend.src.util.datetime_helper import get_now
@@ -10,7 +10,7 @@ class SubcategorySchema(IdSchema):
     __tablename__ = "subcategories"
     
     name = mapped_column(String)
-    category_id = mapped_column(String)
+    category_id = mapped_column(Integer)
     updated_at = Column(TIMESTAMP(timezone=True), nullable=True, default=get_now)
 
 

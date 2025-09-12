@@ -2,7 +2,7 @@ from typing import Annotated, Optional
 from fastapi import APIRouter, Path, Query, HTTPException, Depends
 from sqlalchemy.orm import Session
 from starlette import status
-from backend.schemas.subcategory import SubcategoryResponse, SubcategoryUpdate, SubcategoryResponseWithQuestionCount, SubcategoryWithCategoryNameResponse, SubcategoryCreate
+from backend.schemas.subcategory import SubcategoryResponse, SubcategoryUpdateSchema, SubcategoryResponseWithQuestionCount, SubcategoryWithCategoryNameResponse, SubcategoryCreateSchema
 from backend.database import get_db
 from backend.cruds import subcategory_crud, category_crud
 
@@ -12,12 +12,12 @@ router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
 
 @router.post("/", response_model=SubcategoryResponse, status_code=status.HTTP_201_CREATED)
 # async def create(db: DbDependency, category_id: int, subcategory_create: SubcategoryCreate):
-async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCreate):
+async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCreateSchema):
     found_category = category_crud.find_category_by_id(db, subcategory_create.category_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
     pass
-    return subcategory_crud.create_subcategory(db, subcategory_create)
+    return await subcategory_crud.create_subcategory(db, subcategory_create)
 
 #
 # @router.get("", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
@@ -86,7 +86,7 @@ async def find_by_name(
 @router.put("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def update(
     db: DbDependency,
-    subcategory_update: SubcategoryUpdate,
+    subcategory_update: SubcategoryUpdateSchema,
     id: int = Path(gt=0),
 ):
     updated_item = subcategory_crud.update2(db, id, subcategory_update)

@@ -1,11 +1,11 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update, func
-from backend.schemas.subcategory import SubcategoryCreate, SubcategoryUpdate, SubcategoryResponse
+from backend.schemas.subcategory import SubcategoryCreateSchema, SubcategoryUpdateSchema, SubcategoryResponse
 from backend.models import Subcategory, SubcategoryQuestion, Question, Category
 from backend.cruds import question_crud as question_cruds
 from fastapi import HTTPException
 from typing import Optional
-from backend.src.repository.subcategory_repository import SubcategoryRepository
+from backend.src.repository.subcategory_repository import SubcategoryRepository, SubcategoryCreate
 
 
 # カテゴリbox内で表示するサブカテゴリを取得
@@ -120,12 +120,16 @@ def find_subcategories_with_category_name_by_id(
     return db.execute(query).fetchone()
 
 
-def create_subcategory(
+async def create_subcategory(
     db: AsyncSession,
-    subcategory_create: SubcategoryCreate
+    subcategory_create: SubcategoryCreateSchema
 ) -> SubcategoryResponse:
 
     subcategory_repository = SubcategoryRepository(db)
+
+
+
+
 
     existing_subcategory = (
         db.query(Subcategory)
@@ -138,16 +142,21 @@ def create_subcategory(
         if existing_subcategory.category_id == subcategory_create.category_id:
             raise HTTPException(status_code=400, detail="Subcategory already exists")
 
-    new_subcategory = Subcategory(**subcategory_create.model_dump())
-    db.add(new_subcategory)
-    db.commit()
+    # new_subcategory = Subcategory(**subcategory_create.model_dump())
+    # db.add(new_subcategory)
+    # db.commit()
+
+    new_subcategory = await subcategory_repository.create(
+        SubcategoryCreate(name=subcategory_create.name, category_id=subcategory_create.category_id)
+    )
+    
     return new_subcategory
 
 
 def update2(
     db: AsyncSession, 
     id: int, 
-    subcategory_update: SubcategoryUpdate
+    subcategory_update: SubcategoryUpdateSchema
 ):
     subcategory = find_subcategory_by_id(db, id)
 
