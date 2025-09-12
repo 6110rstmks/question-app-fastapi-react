@@ -1,6 +1,6 @@
 import time
 from fastapi import FastAPI, Request, status
-from backend.routers import category_router, question_router, subcategory_router, problem_router, auth_router, subcategory_question_router, category_question_router, question_count_router
+from backend.api import category_router, question_router, subcategory_router, problem_router, auth_router, subcategory_question_router, category_question_router, question_count_router
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_pagination import add_pagination
 from fastapi.exceptions import RequestValidationError
