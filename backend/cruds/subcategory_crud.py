@@ -101,7 +101,10 @@ def find_subcategory_by_name(
         .all()
     )
 
-def find_subcategories_with_category_name_by_id(db: Session, id: int):
+def find_subcategories_with_category_name_by_id(
+    db: Session, 
+    id: int
+):
     query = (
         select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name"))
         .join(Category, Subcategory.category_id == Category.id)
@@ -130,7 +133,11 @@ def create_subcategory(
     db.commit()
     return new_subcategory
 
-def update2(db: Session, id: int, subcategory_update: SubcategoryUpdate):
+def update2(
+    db: Session, 
+    id: int, 
+    subcategory_update: SubcategoryUpdate
+):
     subcategory = find_subcategory_by_id(db, id)
 
     if subcategory is None:
