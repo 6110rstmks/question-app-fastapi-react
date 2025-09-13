@@ -32,6 +32,56 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "音階を英語でいうと",
+                            "answer": [
+                                "scale"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-14"
+                        },
+                        {
+                            "problem": "長調を英語でいうと",
+                            "answer": [
+                                "major key"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-14"
+                        },
+                        {
+                            "problem": "国際的に標準として決められている「ラ（A）」の音の周波数は？",
+                            "answer": [
+                                "440Hz"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-14"
+                        },
+                        {
+                            "problem": "1オクターブ変わると、周波数はどうなる",
+                            "answer": [
+                                "2倍になる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-14"
+                        }
+                    ]
+                },
+                {
+                    "name": "overtone",
+                    "questions": [
+                        {
+                            "problem": "倍音の存在によって、同じ高さの音でも楽器ごとに何の違いが生じるか",
+                            "answer": [
+                                "音色"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-14"
                         }
                     ]
                 }
@@ -2314,7 +2364,7 @@
                             "last_answered_date": "2025-05-27"
                         },
                         {
-                            "problem": "インターフェース型のVPCエンドポイントは、何と呼ばれるサービスを使って、各サービスを接続させることができる？",
+                            "problem": "AWSのインターフェース型のVPCエンドポイントは、何と呼ばれるサービスを使って、各サービスを接続させることができる？",
                             "answer": [
                                 "PrivateLink"
                             ],
@@ -6017,13 +6067,13 @@
                             "last_answered_date": "2025-08-20"
                         },
                         {
-                            "problem": "ノギンNogginやコーディンChordinはどこから分泌されるのか？",
+                            "problem": "NogginやChordinはどこから分泌されるのか？",
                             "answer": [
                                 "原口背唇 dorsal lip of blastopore"
                             ],
                             "memo": "https://en.wikipedia.org/wiki/Spemann%E2%80%93Mangold_organizer\n",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "卵割を英語で",
@@ -8108,7 +8158,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "単一の抗体産生細胞に由来するクローンから作られている抗体をなんという",
@@ -8164,8 +8214,8 @@
                                 " IFN-γ（インターフェロン・ガンマ）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": " サイトカインの過剰な産生により引き起こされる現象は何ですか？",
@@ -8233,7 +8283,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "TYK2阻害剤は何の治療にしようされますか",
@@ -8242,7 +8292,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-12"
                         }
                     ]
                 },
@@ -8256,8 +8306,8 @@
                                 "遅筋"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "筋肉の明帯は（A）フィラメントからなる部分",
@@ -8321,7 +8371,7 @@
                             ],
                             "memo": "https://admin.melos.media/wp-content/uploads/2022/04/2153390.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "平滑筋（横縞なし）は随意筋か不随意筋か",
@@ -9036,6 +9086,15 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
+                            "last_answered_date": "2025-09-14"
+                        },
+                        {
+                            "problem": "外国為替相場の変動に対し、その効果が現れるまでタイムラグがあり、短期的には予想される方向とは逆の現象が起こることをなんという",
+                            "answer": [
+                                "Jカーブ効果"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
                             "last_answered_date": "2025-09-12"
                         },
                         {
@@ -9045,7 +9104,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-13"
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "量的緩和（QE）の主な目的は中央銀行が国債や金融資産を大量に購入して市場に資金を（A）すること",
@@ -9063,7 +9122,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "国際標準の物価の安定は年何％？",
@@ -9099,7 +9158,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "日本銀行やFRBが量的緩和を実施する際に購入する金融資産として、最も一般的なものは",
@@ -9126,8 +9185,8 @@
                                 "金融資産の実質価値が上がる"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "金融緩和の具体的な方法は",
@@ -9178,7 +9237,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-15"
                         }
                     ]
                 },
@@ -9192,7 +9251,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "アベノミクスの目標は",
@@ -9200,8 +9259,8 @@
                                 "デフレスパイラルからの脱却"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-15"
                         },
                         {
                             "problem": "アベノミクスの最大の功績",
@@ -9251,8 +9310,23 @@
                                 "投資の回収期間のこと"
                             ],
                             "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-15"
+                        }
+                    ]
+                },
+                {
+                    "name": "Jカーブ効果",
+                    "questions": [
+                        {
+                            "problem": "Jカーブ効果とは、為替レートが変化した際に、（①）の改善効果が（②）的には現れず、むしろ悪化した後に改善していく現象を指す。",
+                            "answer": [
+                                "①貿易収支",
+                                "②短期"
+                            ],
+                            "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-12"
                         }
                     ]
                 }
@@ -9348,6 +9422,33 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-04-02"
+                        },
+                        {
+                            "problem": "www.example.com\nどれがサブドメインにあたるか",
+                            "answer": [
+                                "www"
+                            ],
+                            "memo": "mail.google.com\n\nではmailがサブドメイン",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-14"
+                        },
+                        {
+                            "problem": "Strict-Transport-Security: max-age=<expire-time>; includeSubDomains これは何のHTTPレスポンスヘッダであるか",
+                            "answer": [
+                                "HSTS"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
+                            "problem": "HTTPレスポンスヘッダで有名なものは何がある",
+                            "answer": [
+                                "Content-Type"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "データ転送と経路制御の機能を論理的に分離し，データ転送に特化したネットワーク 機器とソフトウェアによる経路制御の組合せで実現するネットワーク技術は",
@@ -9467,7 +9568,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "ネームサーバが管理するドメイン情報の1レコードを何という？",
@@ -9486,6 +9587,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-07-24"
+                        },
+                        {
+                            "problem": "ドメインに対して権威を持つDNSサーバーを指定するDNSレコードは",
+                            "answer": [
+                                "NSレコード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "TXTレコードの種類は",
@@ -9600,6 +9710,10 @@
                             "last_answered_date": "2025-08-24"
                         }
                     ]
+                },
+                {
+                    "name": "snowflake cortex",
+                    "questions": []
                 }
             ]
         },
@@ -9857,7 +9971,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-09-12"
                         }
                     ]
                 },
@@ -13493,7 +13607,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "液晶ディスプレイなどの表示装置において，傾いた直線の境界を滑らかに表示する手法を何という？",
@@ -14584,6 +14698,15 @@
                             "last_answered_date": "2025-09-11"
                         },
                         {
+                            "problem": "クリーンアーキテクチャのDAOはデータベースなどのデータソースにどうする役割を持つか",
+                            "answer": [
+                                "アクセス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
                             "problem": "Dependency injectionとは",
                             "answer": [
                                 "クラス内で別クラスを利用するときにクラス内で直接newせず、外部から引数で渡してあげて利用する"
@@ -14628,7 +14751,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-13"
                         }
                     ]
                 },
@@ -15915,13 +16038,13 @@
                             "last_answered_date": "2025-05-14"
                         },
                         {
-                            "problem": "地球上で最も硬い物質",
+                            "problem": "the hardest substance on Earth",
                             "answer": [
-                                "ダイヤモンド"
+                                "diamond"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-09"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "中国とインドの国境らへんにある山脈はなにか",
@@ -16325,7 +16448,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-12"
                         }
                     ]
                 },
@@ -17143,7 +17266,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "イタリアの左には何の国がある？",
@@ -20960,8 +21083,8 @@
                                 "存在しない"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "YAGの正式名称",
@@ -21024,8 +21147,8 @@
                                 "選択的光熱分解理論（Selective Photothermolysis）"
                             ],
                             "memo": "1983年に確立",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "Qスイッチルビーレーザーの欠点",
@@ -21621,6 +21744,17 @@
                             "last_answered_date": "2025-06-17"
                         },
                         {
+                            "problem": "Azure で Public IP アドレスを付与できるリソースをいくつかあげて",
+                            "answer": [
+                                "Application Gateway",
+                                "VM",
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        },
+                        {
                             "problem": "What is 'sku' in Azure",
                             "answer": [
                                 "Stock Keeping Unitの略で最小管理単位を示す"
@@ -21645,7 +21779,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "Azureで提供されているメッセージングサービスは",
@@ -21671,8 +21805,8 @@
                                 "Azure Database Migration Service(DMS)"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-28"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "Azureにおいて規制の厳しい各地域の法規制に準拠するために特別な運用がされているリージョンをなんとよぶ",
@@ -21690,7 +21824,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "Azure Activity Logは保存期間が90日のため、長期に保存したい場合はどうすればよいか。",
@@ -21773,7 +21907,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-11"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "AzureでクラウドまたはオンプレミスのWindows, Linux, macOSからアクセスできるフルマネージドのファイル共有サービスは",
@@ -21791,7 +21925,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-12"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "Azureにおいてアプリケーションコードのバージョン管理機能を提供するサービスは",
@@ -21957,7 +22091,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "Azure Machine Learning でモデルをトレーニングする際に、過学習を防ぐための一般的な方法はどれですか？",
@@ -22089,7 +22223,7 @@
                             ],
                             "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "last_answered_date": "2025-09-12"
                         }
                     ]
                 },
@@ -22136,7 +22270,7 @@
                             ],
                             "memo": "簡単に言えば、**「検索しやすくするために、テキストを加工・分解する仕組み」**です。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-22"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "Azure AI Searchのアナライザーは例えばどのようなことをする。例を一つあげて",
@@ -22156,7 +22290,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "Azure AI Searchのインデックスの役割",
@@ -22209,7 +22343,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-01"
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "Azure のリソース（例：App Service、Storage Account、Key Vault など）からログやメトリックを収集し、それを Log Analytics、Event Hub、Storage Account に送信するための設定をするものをなんという",
@@ -22905,6 +23039,20 @@
                             "last_answered_date": "2025-09-11"
                         }
                     ]
+                },
+                {
+                    "name": "revert",
+                    "questions": [
+                        {
+                            "problem": "Gitにおいて特定のコミットのファイルの変更をなかったことにするにはどのコマンドを使えば良いか",
+                            "answer": [
+                                "git revert commit_id"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
+                        }
+                    ]
                 }
             ]
         },
@@ -23033,6 +23181,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-27"
+                        },
+                        {
+                            "problem": "pythonの@propertyこれは何",
+                            "answer": [
+                                "クラスのインスタンス変数を簡潔に呼び出せるようにするための、組み込みのデコレータ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "WSGIは並列処理が可能か",
@@ -23463,6 +23620,14 @@
                             "last_answered_date": "2025-08-30"
                         }
                     ]
+                },
+                {
+                    "name": "oiuououo",
+                    "questions": []
+                },
+                {
+                    "name": "oiuououo",
+                    "questions": []
                 }
             ]
         },
@@ -23933,8 +24098,8 @@
                                 "オシリス神"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-05"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "ドン・キホーテの作者は",
@@ -24091,8 +24256,8 @@
                                 "鎬京こうけい"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "八王の乱の反乱以降蜂起した遊牧諸民族(五胡)を全て答えよ",
@@ -24212,8 +24377,8 @@
                                 "晋"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "楊炎は中国のどの時代（国）の人物か",
@@ -24606,7 +24771,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "アケメネス朝ペルシアの建国者は",
@@ -24633,7 +24798,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "古代バビロニアの王で、「目には目を、歯には歯を」の原則で知られる法典を制定したのは誰でしょう？",
@@ -24650,8 +24815,8 @@
                                 "ノモス"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "ポリス社会の枠を超えたより普遍的かつ個人主義的な傾向をもつヘレニズム時代の考え方を何と呼ぶ",
@@ -24668,8 +24833,8 @@
                                 "アケメネス朝ペルシア"
                             ],
                             "memo": "アケメネス朝 → パルティア → ササン朝の順",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-13"
                         },
                         {
                             "problem": "紀元前18世紀頃、メソポタミアを征服し、 バビロン第1王朝に最盛期をもたらした6代目国王は誰か。",
@@ -24907,8 +25072,8 @@
                                 "人間は万物の尺度"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-14"
                         },
                         {
                             "problem": "イッソスの戦いは何年に起こったか",
@@ -25393,7 +25558,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-26"
+                            "last_answered_date": "2025-09-12"
                         },
                         {
                             "problem": "1954年、南アジア地域の首相がスリランカで開いた会議は？",
