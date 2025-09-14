@@ -70,7 +70,7 @@ class SubcategoryRepository(
         :param prefix: プレフィックス
         :return: 該当するSubcategoryのリスト
         """
-        return await self._find_by_fields_with_like(like_fields={"name": f"{prefix}%"})
+        return await self._find_by_fields(like_fields={"name": f"{prefix}%"})
 
     async def find_by_category_and_name_like(self, category_id: int, name_pattern: str) -> list[SubcategoryRead]:
         """
