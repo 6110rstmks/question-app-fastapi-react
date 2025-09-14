@@ -45,20 +45,6 @@ export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProble
     return await response.json()
 }
 
-// 解答を部分検索することでカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
-// export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByAnswerWord = async (
-//     searchAnswerWord: string
-// ): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
-//     const url = `http://localhost:8000/questions/?searchAnswerWord=${searchAnswerWord}`;
-//     const response = await fetch(url, {
-//         method: 'GET',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         }
-//     })
-//     return await response.json();
-// }
-
 // Questionのis_correctを更新するAPI
 export const updateQuestionIsCorrect = async (question: Question): Promise<void> => {
     const url = `http://localhost:8000/questions/edit_flg/${question.id}`;

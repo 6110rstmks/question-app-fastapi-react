@@ -308,6 +308,5 @@ def increment_answer_count(
             answer_count=Question.answer_count + 1
         )
     )
-    db.execute(stmt)
-    db.commit()
+ 
     return find_question_by_id(db, question_id)
