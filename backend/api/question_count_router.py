@@ -2,9 +2,9 @@ from typing import Annotated, Dict
 from fastapi import APIRouter, Path, HTTPException, Depends, FastAPI
 from sqlalchemy.orm import Session
 from starlette import status
-from backend.cruds import category_crud, question_count_crud, subcategory_crud
-from backend.schemas.question import QuestionGetCountByLastAnsweredDate
-from backend.database import get_db
+from cruds import category_crud, question_count_crud, subcategory_crud
+from schemas.question import QuestionGetCountByLastAnsweredDate
+from database import get_db
 
 DbDependency = Annotated[Session, Depends(get_db)]
 

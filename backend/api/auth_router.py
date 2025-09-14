@@ -3,9 +3,9 @@ from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
-from backend.cruds import auth_crud as auth_cruds
-from backend.schemas.auth import UserCreate, UserResponse, UserSignIn
-from backend.database import get_db, get_session
+from cruds import auth_crud as auth_cruds
+from schemas.auth import UserCreate, UserResponse, UserSignIn
+from database import get_db, get_session
 from fastapi.requests import Request
 
 router = APIRouter(prefix="/auth", tags=["Auth"])

@@ -1,4 +1,4 @@
-from backend.models import Category
+from models import Category
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from factory.alchemy import SQLAlchemyModelFactory
