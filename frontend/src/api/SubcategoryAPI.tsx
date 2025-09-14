@@ -13,7 +13,6 @@ export const fetchSubcategoriesForHomePage = async (
     }
 }
 
-
 export const fetchSubcategoriesByQuestionId = async (
     question_id: number
 ) => {
@@ -51,7 +50,7 @@ export const fetchSubcategoryByCategoryId = async (category_id: number) => {
 }
 
 export const fetchSubcategory = async (subcategory_id: number) => {
-    const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
+    const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`)
     if (response.ok) {
         return response.json()
     }
@@ -68,7 +67,7 @@ export const createSubcategory = async (
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ name: subcategoryName, category_id: categoryId }),
-    });
+    })
 
     return response
 }
@@ -78,7 +77,6 @@ export const fetchSubcategoriesByCategoryId = async (category_id: number) => {
     if (response.ok) {
         return response.json()
     }
-    throw new Error("Failed to fetch subcategory");
 }
 
 export const fetchSubcategoriesWithQuestionCountByCategoryId = async (
@@ -106,11 +104,4 @@ export const fetchSubcategoriesWithCategoryNameByQuestionId = async (
     }
 }
 
-export const fetchSubcategoryWithCategoryNameById = async (
-    subcategory_id: number
-) => {
-    const response = await fetch(`http://localhost:8000/subcategories/WithCategoryName/id/${subcategory_id}`);
-    if (response.ok) {
-        return response.json()
-    }
-}
+

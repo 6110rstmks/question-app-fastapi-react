@@ -1,4 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import Session
+
 from sqlalchemy import select, update, func
 from schemas.subcategory import SubcategoryCreateSchema, SubcategoryUpdateSchema, SubcategoryResponse
 from models import Subcategory, SubcategoryQuestion, Question, Category
@@ -77,45 +79,33 @@ async def find_subcategory_by_id(
 ) -> Optional[SubcategoryResponse]:
 
     subcategory_repository = SubcategoryRepository(db)
-    subcategory = await subcategory_repository.get(id)
-    return subcategory
+    return await subcategory_repository.get(id)
 
-# リポジトリパターンに置換済み
-async def find_subcategories_by_question_id(
-    db: AsyncSession, 
-    question_id: int
-) -> list[SubcategoryResponse]:
-
-    subcategory_question_repository = SubcategoryQuestionRepository(db)
-    subcategory_ids_and_question_ids = await subcategory_question_repository.find_by_question_id(question_id)
-    subcategory_ids = [subcategory_id_and_question_id.subcategory_id for subcategory_id_and_question_id in subcategory_ids_and_question_ids]
-    subcategory_repository = SubcategoryRepository(db)
-    return await subcategory_repository.find_by_ids(subcategory_ids)
 
 # リポジトリパターンに置換しない
-async def find_subcategories_with_category_name_by_category_id(
-    db: AsyncSession, 
-    category_id: int
-) -> list[SubcategoryResponse]:
+# async def find_subcategories_with_category_name_by_category_id(
+#     db: Session, 
+#     category_id: int
+# ) -> list[SubcategoryResponse]:
 
-    subcategory_repository = SubcategoryRepository(db)
+#     # subcategory_repository = SubcategoryRepository(db)
     
-    category_repository = CategoryRepository(db)
-    category = await category_repository.get(category_id)
+#     # category_repository = CategoryRepository(db)
+#     # category = await category_repository.get(category_id)
 
-    subcategories = await subcategory_repository.find_by_category_id(category_id)
+#     # subcategories = await subcategory_repository.find_by_category_id(category_id)
 
-    query1 = (
-        select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).
-        join(Category, Subcategory.category_id == Category.id).
-        where(Subcategory.category_id == category_id)
-    )
+#     query1 = (
+#         select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).
+#         join(Category, Subcategory.category_id == Category.id).
+#         where(Subcategory.category_id == category_id)
+#     )
     
-    return db.execute(query1).fetchall()
+#     return db.execute(query1).fetchall()
 
 # リポジトリパターンに置換しない
 async def find_subcategories_with_category_name_by_question_id(
-    db: AsyncSession, 
+    db: Session, 
     question_id: int
 ) -> list[SubcategoryResponse]:
     query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(SubcategoryQuestion, Subcategory.id == SubcategoryQuestion.subcategory_id).join(Category, Subcategory.category_id == Category.id).where(SubcategoryQuestion.question_id == question_id)
@@ -131,17 +121,25 @@ async def find_subcategory_by_name(
     return await subcategory_repository.find_by_name_contains(name)
 
 # リポジトリパターンに置換しない
-async def find_subcategories_with_category_name_by_id(
-    db: AsyncSession, 
-    id: int
-):
-    query = (
-        select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name"))
-        .join(Category, Subcategory.category_id == Category.id)
-        .where(Subcategory.id == id)
-    )
-    return db.execute(query).fetchone()
+# async def find_subcategories_with_category_name_by_id(
+#     db: Session, 
+#     id: int
+# ):
+#     query = (
+#         select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name"))
+#         .join(Category, Subcategory.category_id == Category.id)
+#         .where(Subcategory.id == id)
+#     )
+#     return db.execute(query).fetchone()
 
+# リポジトリパターンに置換済み
+async def find_subcategories_by_category_id(
+    db: AsyncSession,
+    category_id: int
+) -> list[SubcategoryResponse]:
+    
+    subcategory_repository = SubcategoryRepository(db)
+    return await subcategory_repository.find_by_category_id(category_id)
 
 # リポジトリパターンに置換済み
 async def create_subcategory(
