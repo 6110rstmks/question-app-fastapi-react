@@ -3,9 +3,17 @@ from fastapi import APIRouter, Path, Query, HTTPException, Depends
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
+
+
 from schemas.subcategory import SubcategoryResponse, SubcategoryUpdateSchema, SubcategoryResponseWithQuestionCount, SubcategoryWithCategoryNameResponse, SubcategoryCreateSchema
 from database import get_db, get_session
 from cruds import subcategory_crud, category_crud
+
+
+from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryCreate, SubcategoryUpdate
+from src.repository.subcategory_question_repository import SubcategoryQuestionRepository
+from src.repository.question_repository import QuestionRepository
+
 
 DbDependency = Annotated[Session, Depends(get_db)]
 AsyncDbDependency = Annotated[AsyncSession, Depends(get_session)]
@@ -93,10 +101,13 @@ async def update(
     subcategory_update: SubcategoryUpdateSchema,
     id: int = Path(gt=0),
 ):
-    updated_item = await subcategory_crud.update2_subcategory(db, id, subcategory_update)
-    if not updated_item:
-        raise HTTPException(status_code=404, detail="Subcategory not updated")
-    return updated_item
+    subcategory = await find_subcategory_by_id(db, id)
+    if subcategory is None:
+        raise HTTPException(status_code=404, detail="Subcategory not found")
+
+    subcategory_repository = SubcategoryRepository(db)
+    return await subcategory_repository.update(id, SubcategoryUpdate(name=subcategory_update.name))
+
 
 
 @router.delete("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
