@@ -24,9 +24,10 @@ async def find_subcategories_in_categorybox(
     subcategory_repository = SubcategoryRepository(db)
     question_repository = QuestionRepository(db)
     subcategory_question_repository = SubcategoryQuestionRepository(db)
+
     if searchSubcategoryWord:
         results = subcategory_repository.find_by_name_starts_with(searchSubcategoryWord)
-
+        print('それどうか')
 
     elif searchQuestionWord and len(searchQuestionWord) >= 3:
         # query2 = select(Question.id).where(Question.problem.istartswith(searchQuestionWord))
@@ -44,7 +45,7 @@ async def find_subcategories_in_categorybox(
             subcategory_questions = await subcategory_question_repository.find_by_question_ids(question_id)
             subcategory_ids.extend([sq.subcategory_id for sq in subcategory_questions])
 
-        query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.id.in_(subcategory_ids))
+        result = await subcategory_repository.find_by_category_id_and_ids(category_id, subcategory_ids)
 
     elif searchAnswerWord and len(searchAnswerWord) >= 3:
         query2 = select(Question.id).where(
@@ -56,6 +57,7 @@ async def find_subcategories_in_categorybox(
         subcategory_ids = db.execute(query3).scalars().all()
         
         query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.id.in_(subcategory_ids))
+        print('それどうな')
     else:
         # query = select(Subcategory).where(Subcategory.category_id == category_id)
         result = await subcategory_repository.find_by_category_id(category_id)
@@ -81,27 +83,6 @@ async def find_subcategory_by_id(
     subcategory_repository = SubcategoryRepository(db)
     return await subcategory_repository.get(id)
 
-
-# リポジトリパターンに置換しない
-# async def find_subcategories_with_category_name_by_category_id(
-#     db: Session, 
-#     category_id: int
-# ) -> list[SubcategoryResponse]:
-
-#     # subcategory_repository = SubcategoryRepository(db)
-    
-#     # category_repository = CategoryRepository(db)
-#     # category = await category_repository.get(category_id)
-
-#     # subcategories = await subcategory_repository.find_by_category_id(category_id)
-
-#     query1 = (
-#         select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).
-#         join(Category, Subcategory.category_id == Category.id).
-#         where(Subcategory.category_id == category_id)
-#     )
-    
-#     return db.execute(query1).fetchall()
 
 # リポジトリパターンに置換しない
 async def find_subcategories_with_category_name_by_question_id(
@@ -146,9 +127,7 @@ async def create_subcategory(
     db: AsyncSession,
     subcategory_create: SubcategoryCreateSchema
 ) -> SubcategoryResponse:
-
     subcategory_repository = SubcategoryRepository(db)
-
     return await subcategory_repository.create(SubcategoryCreate(name=subcategory_create.name, category_id=subcategory_create.category_id))
     
 

@@ -12,7 +12,6 @@ from cruds import subcategory_crud, category_crud
 
 from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryCreate, SubcategoryUpdate
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository
-from src.repository.question_repository import QuestionRepository
 
 
 DbDependency = Annotated[Session, Depends(get_db)]
@@ -21,9 +20,7 @@ AsyncDbDependency = Annotated[AsyncSession, Depends(get_session)]
 router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
 
 @router.post("/", response_model=SubcategoryResponse, status_code=status.HTTP_201_CREATED)
-# async def create_subcategory(db: DbDependency, subcategory_create: SubcategoryCreateSchema):
 async def create_subcategory(db: AsyncDbDependency, subcategory_create: SubcategoryCreateSchema):
-    # found_category = category_crud.find_category_by_id(db, subcategory_create.category_id)
     found_category = await category_crud.find_category_by_id(db, subcategory_create.category_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")

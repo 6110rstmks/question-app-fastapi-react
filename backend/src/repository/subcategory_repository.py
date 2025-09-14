@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import mapped_column
-from sqlalchemy import String, TIMESTAMP, Column, Integer
+from sqlalchemy import select, String, TIMESTAMP, Column, Integer
 
 from src.repository.base.LogicalDeleteDao import IdSchema, BaseCreateDTO, BaseUpdateDTO, BaseReadDTO, BasicDao
 from src.util.datetime_helper import get_now
@@ -37,10 +37,6 @@ class SubcategoryRepository(
 ):
     def __init__(self, db: AsyncSession):
         super().__init__(db, SubcategorySchema, SubcategoryRead)
-
-
-    async def find_by_name(self, name: str) -> list[SubcategoryRead] | None:
-        return await self._find_by_fields(name=name)
 
     async def find_by_category_id(self, category_id: int) -> list[SubcategoryRead] | None:
         return await self._find_by_fields(category_id=category_id)
@@ -84,3 +80,7 @@ class SubcategoryRepository(
             like_fields={"name": name_pattern},
             category_id=category_id
         )
+
+    async def find_by_category_id_and_ids(self, category_id: int, ids: list[int]) -> list[SubcategoryRead] | None:
+        query = select(self.model).where(self.model.category_id == category_id).where(self.model.id.in_(ids))
+        return await self.db.execute(query)
