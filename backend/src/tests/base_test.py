@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 
 import pytest
 
-from src.repository.base import BaseCreateDTO, BaseReadDTO, BaseUpdateDTO, BasicDao, LogicalDeleteDao
-from src.repository.composite_base import CompositeKeyDao
+from src.repository.base.LogicalDeleteDao import BaseCreateDTO, BaseReadDTO, BaseUpdateDTO, BasicDao, LogicalDeleteDao
+from src.repository.base.composite_base import CompositeKeyDao
 
 
 class BasicDaoTest:

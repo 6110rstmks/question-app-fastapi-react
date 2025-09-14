@@ -1,6 +1,7 @@
 
 // すべてのQuestionの数を取得するAPI
-export const fetchQuestionCount = async (): Promise<number> => {
+export const fetchQuestionCount = async (
+): Promise<number> => {
     const url = 'http://localhost:8000/question_count/count';
     const response = await fetch(url, {
         method: 'GET',

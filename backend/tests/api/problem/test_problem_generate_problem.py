@@ -1,12 +1,11 @@
 from fastapi.testclient import TestClient
-from backend.cruds.category_crud import find_all_categories
-# from backend.cruds.subcategory_crud import find_
-from backend.cruds.category_question_crud import find_categoriesquestions_by_question_id
-from backend.cruds.subcategory_question_crud import find_subcategoriesquestions_by_question_id
-from backend.cruds.category_blacklist_crud import find_all_category_blacklist
+from cruds.category_crud import find_all_categories
+from cruds.category_question_crud import find_categoriesquestions_by_question_id
+from cruds.subcategory_question_crud import find_subcategoriesquestions_by_question_id
+from cruds.category_blacklist_crud import find_all_category_blacklist
 from typing import Annotated
 from sqlalchemy.orm import Session
-from backend.database import get_db
+from database import get_db
 from fastapi import Depends
 import random
 

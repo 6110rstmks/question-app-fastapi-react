@@ -8,8 +8,8 @@ import { fetchSubcategoriesWithCategoryNameByQuestionId, fetchSubcategoriesWithC
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 
 interface OriginalData {
-    subcategory_id: number;
-    question_id: number;
+    subcategory_id: number
+    question_id: number
 }
 
 
@@ -22,15 +22,25 @@ export const useCategoryPage = (
 ) => {
 
 
-    const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([categoryId]);
-    const [selectedSubcategoryIds, setSelectedSubcategoryIds] = useState<number[]>([]);
+    const [
+        selectedCategoryIds, 
+        setSelectedCategoryIds
+    ] = useState<number[]>([categoryId])
+
+    const [
+        selectedSubcategoryIds, 
+        setSelectedSubcategoryIds
+    ] = useState<number[]>([])
 
 
-    const [searchWord, setSearchWord] = useState<string>("");
+    const [
+        searchWord, 
+        setSearchWord
+    ] = useState<string>("")
 
     // falseであればQuestionが現在所属しているCategoryNameが表示される。
     // trueであれば検索結果でクリックしたCategoryNameが表示される。
-    const [searchFlg, setSearchFlg] = useState<boolean>(false);
+    const [searchFlg, setSearchFlg] = useState<boolean>(false)
 
     // 初期はQuestionに紐づくCategoryに所属しているSubcategoriesを表示
     // また検索結果（CategoryName）をクリックした場合、そのCategoryに所属しているSubcategoriesに表示が変わる。
@@ -51,7 +61,6 @@ export const useCategoryPage = (
 
         const subcategoryId = parseInt(parsedValue.id, 10);
 
-        // const subcategoryData = await fetchSubcategory(subcategoryId)
         const categoryId = parseInt(parsedValue.category_id, 10)
 
         if (checked) {
@@ -106,9 +115,9 @@ export const useCategoryPage = (
     // 検索結果で表示されたcategoryの一つをクリックした時の処理
     const handleClickCategoryName = async (category: Category) => {
         setSearchWord(category.name)
-        const data: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(category.id);
-        setSearchFlg(true);
-        setDisplayedCategoryName(category.name);
+        const data: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(category.id)
+        setSearchFlg(true)
+        setDisplayedCategoryName(category.name)
         setSubcategoriesWithCategoryName(data)
     }
 
@@ -162,15 +171,15 @@ export const useCategoryPage = (
                 setCategories(categories_data);
             }
         }
-        loadCategories();
-    }, [searchWord]);
+        loadCategories()
+    }, [searchWord])
 
     // カテゴリ・サブカテゴリの変更を確定するボタンをクリックした時の処理
     const handleChangeBelongingToSubcategory = async () => {
         // チェックボックスが全て外れている場合、警告
         if (selectedSubcategoryIds.length === 0) {
-            alert('サブカテゴリを選択してください');
-            return;
+            alert('サブカテゴリを選択してください')
+            return
         }
 
         const response = await fetch(`http://localhost:8000/questions/change_belongs_to_subcategoryId`, {
@@ -183,18 +192,18 @@ export const useCategoryPage = (
                 subcategory_ids: selectedSubcategoryIds,
                 question_id: question?.id
             })
-        });
+        })
 
         if (!response.ok) {
-            alert('Failed to update the question.');
-            return;
+            alert('Failed to update the question.')
+            return
         }
 
         alert('所属するサブカテゴリが変更されました。')
-        setModalIsOpen(false);
+        setModalIsOpen(false)
         
         const data = await fetchSubcategoriesWithCategoryNameByQuestionId(question!.id);
-        setSubcategoriesRelatedToQuestion(data);
+        setSubcategoriesRelatedToQuestion(data)
     }
     return { 
         searchWord,
@@ -208,7 +217,7 @@ export const useCategoryPage = (
         handleClickCategoryName,
         handleSearch,
         handleChangeBelongingToSubcategory
-    };
-};
+    }
+}
 
-export default useCategoryPage;
+export default useCategoryPage

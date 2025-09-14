@@ -46,4 +46,5 @@ fastapi-pagination
 itsdangerous
 httpx
 asyncpg
+greenlet
 
