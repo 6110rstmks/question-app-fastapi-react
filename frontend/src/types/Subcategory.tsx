@@ -4,6 +4,12 @@ export interface Subcategory {
     categoryId: number;
 }
 
+export interface Subcategory2 {
+    id: number
+    name: string
+    category_id: number
+}
+
 // CategoryBox, CategoryPageで使用する型
 export interface SubcategoryWithQuestionCount extends Subcategory {
     // questionCount: number;

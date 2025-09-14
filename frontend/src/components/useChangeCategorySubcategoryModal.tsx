@@ -44,20 +44,23 @@ export const useCategoryPage = (
 
     // 初期はQuestionに紐づくCategoryに所属しているSubcategoriesを表示
     // また検索結果（CategoryName）をクリックした場合、そのCategoryに所属しているSubcategoriesに表示が変わる。
-    const [subcategoriesWithCategoryName, setSubcategoriesWithCategoryName] = useState<SubcategoryWithCategoryName[]>([]);
+    const [
+        subcategoriesWithCategoryName, 
+        setSubcategoriesWithCategoryName
+    ] = useState<SubcategoryWithCategoryName[]>([]);
 
-    const [categories, setCategories] = useState<Category[]>();
+    const [categories, setCategories] = useState<Category[]>()
 
     // searchFlgがtrueの時に表示されるCategoryName
-    const [displayedCategoryName, setDisplayedCategoryName] = useState<string>("");
+    const [displayedCategoryName, setDisplayedCategoryName] = useState<string>("")
+
 
     // 初期でチェックされているSubcategoryと追加でチェックされたSubcateogryの情報
-    const [linkedSubcategories, setLinkedSubcategories] = useState<SubcategoryWithCategoryName[]>()
+    const [linkedSubcategories, setLinkedSubcategories] = useState<SubcategoryWithCategoryName[]>([]);
 
     const handleCheckboxChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
-        
-        const { value, checked } = event.target;
-        const parsedValue = JSON.parse(value);
+        const { value, checked } = event.target
+        const parsedValue = JSON.parse(value)
 
         const subcategoryId = parseInt(parsedValue.id, 10);
 
@@ -73,10 +76,10 @@ export const useCategoryPage = (
 
             // チェックが外れた場合でかつすでに同じカテゴリのサブカテゴリにチェックが入っている場合、何もしない
             setSelectedCategoryIds((prev) => {
-                const index = prev.indexOf(categoryId);
+                const index = prev.indexOf(categoryId)
                 if (index === -1) return prev; // もしcategoryIdがなければそのまま返す
             
-                const updated = [...prev];
+                const updated = [...prev]
                 updated.splice(index, 1); // 最初に見つかったcategoryIdのみ削除   
                 return updated;
             });
@@ -121,7 +124,7 @@ export const useCategoryPage = (
         subcategories_data.map(sub => ({
             id: sub.id,
             name: sub.name,
-            category_id: sub.categoryId, // camelCase → snake_case
+            category_id: sub.categoryId,
             category_name: category.name,
         }))
         setSearchFlg(true)
@@ -148,7 +151,7 @@ export const useCategoryPage = (
             const transformedSubcategoryQuestionData: SubcategoryQuestion[] = subcategoriesquestionsData.map(({ subcategory_id, question_id }: OriginalData) => ({
                 subcategoryId: subcategory_id,
                 questionId: question_id
-            }));
+            }))
 
 
             const linkedSubcategories = []
@@ -165,10 +168,8 @@ export const useCategoryPage = (
                     category_id: subcategoryData.category_id,   // snake_case → camelCase
                     category_name: categoryData.name,         // category_name → categoryName
                 };
-                console.log(mergedData)
-                console.log('ばんごあん')
 
-                linkedSubcategories.push(mergedData);
+                linkedSubcategories.push(mergedData)
             }
             // 必要に応じて、更新した配列を状態にセット
             setLinkedSubcategories(linkedSubcategories)
@@ -176,7 +177,7 @@ export const useCategoryPage = (
             setSelectedSubcategoryIds(transformedSubcategoryQuestionData.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategoryId));
 
         })();
-      }, [categoryId]);
+      }, [categoryId])
 
     useEffect(() => {
         const loadCategories = async () => {
