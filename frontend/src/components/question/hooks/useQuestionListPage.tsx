@@ -41,15 +41,16 @@ export const useQuestionListPage = () => {
     }, [handleKeyDown])
 
     const handleSearchQuestionClick = async () => {
+        console.log(9898797)
         if (searchWord.trim() === "") return
-
+        console.log(123456)
         const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] =
         await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord(
           searchWord
         )
 
-        console.log("questions_data", questions_data)
-
+        console.log("questions_data(before for)", JSON.stringify(questions_data, null, 2))
+                
         for (let i = 0; i < questions_data.length; i++) {
             const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
             const category = await fetchCategory(category_id)
@@ -58,6 +59,8 @@ export const useQuestionListPage = () => {
             questions_data[i].categoryId = category_id
             questions_data[i].subcategoryId = subcategory_id
         }
+
+        console.log("questions_data after", questions_data)
         setQuestions(questions_data)
     }
     
