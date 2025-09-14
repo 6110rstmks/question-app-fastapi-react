@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import type { Category } from '../types/Category'
-import type { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
+import type { Subcategory, Subcategory2, SubcategoryWithCategoryName  } from '../types/Subcategory'
 import type { Question } from '../types/Question'
 import type { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchCategory, fetchCategoriesBySearchWord } from '../api/CategoryAPI'
-import { fetchSubcategoriesByCategoryId, fetchSubcategoriesWithCategoryNameByQuestionId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
+import { fetchSubcategory, fetchSubcategoriesByCategoryId, fetchSubcategoriesWithCategoryNameByQuestionId } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 
 interface OriginalData {
@@ -108,14 +108,13 @@ export const useCategoryPage = (
     // 検索ボックスでワードを入力している時の処理
     // 部分検索で一致したCategoryNameを表示する。
     const handleSearch = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchWord(e.target.value);
+        setSearchWord(e.target.value)
     }
 
 
     // 検索結果で表示されたcategoryの一つをクリックした時の処理
     const handleClickCategoryName = async (category: Category) => {
         setSearchWord(category.name)
-        // const data: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(category.id)
         const subcategories_data: Subcategory[] = await fetchSubcategoriesByCategoryId(category.id)
 
         const subcategories_with_category: SubcategoryWithCategoryName[] =
@@ -154,22 +153,25 @@ export const useCategoryPage = (
 
             const linkedSubcategories = []
 
-            for (const subcategoryquestion of transformedSubcategoryQuestionData) {            
-                const subcategoriesData = await fetchSubcategoryWithCategoryNameById(subcategoryquestion.subcategoryId);
-                linkedSubcategories.push(subcategoriesData);
-            }
+            for (const subcategoryquestion of transformedSubcategoryQuestionData) {
 
-            const updatedSubcategories = linkedSubcategories.map(subcategory => ({
-                ...subcategory, // 既存のキーと値を保持
-                categoryId: subcategory.category_id, // category_id を categoryId に変更
-                categoryName: subcategory.category_name, // category_name を categoryName に変更
-                // 元の category_id と category_name を削除
-                // 必要なら、元のキーを削除することもできます。
-                // 例: delete subcategory.category_id;
-            }));
-            
+                const subcategoryData: Subcategory2 = await fetchSubcategory(subcategoryquestion.subcategoryId)
+ 
+                const categoryData: Category = await fetchCategory(subcategoryData.category_id)
+
+                const mergedData = {
+                    id: subcategoryData.id,
+                    name: subcategoryData.name,
+                    category_id: subcategoryData.category_id,   // snake_case → camelCase
+                    category_name: categoryData.name,         // category_name → categoryName
+                };
+                console.log(mergedData)
+                console.log('ばんごあん')
+
+                linkedSubcategories.push(mergedData);
+            }
             // 必要に応じて、更新した配列を状態にセット
-            setLinkedSubcategories(updatedSubcategories);
+            setLinkedSubcategories(linkedSubcategories)
 
             setSelectedSubcategoryIds(transformedSubcategoryQuestionData.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategoryId));
 
