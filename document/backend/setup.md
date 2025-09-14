@@ -7,7 +7,7 @@ pip install -r requirements.txt
 
 [step1]
 self-madeapp-sakamotoにて
-uvicorn backend.main:app --reload
+uvicorn main:app --reload
 
 [step2]
 localhost:8000/docs

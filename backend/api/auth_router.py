@@ -1,15 +1,17 @@
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
 from backend.cruds import auth_crud as auth_cruds
 from backend.schemas.auth import UserCreate, UserResponse, UserSignIn
-from backend.database import get_db
+from backend.database import get_db, get_session
 from fastapi.requests import Request
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
 DbDependency = Annotated[Session, Depends(get_db)]
+AsyncDbDependency = Annotated[AsyncSession, Depends(get_session)]
 
 @router.post(
     "/signup", 

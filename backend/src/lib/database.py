@@ -6,4 +6,4 @@ class SqlAlchemyBase(DeclarativeBase):
 
 
 def add_sync_schema(url: str) -> str:
-    return url.replace("postgresql://", "postgresql+psycopg2://")
+    return url.replace("postgresql://", "postgresql+asyncpg://")

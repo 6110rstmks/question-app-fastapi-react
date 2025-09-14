@@ -1,16 +1,14 @@
-import uuid
 from collections import defaultdict
 from datetime import datetime
 from typing import Any, Callable, Generic, Iterable, List, Literal, Optional, Type, TypeVar
 
 from pydantic import BaseModel
-from sqlalchemy import TIMESTAMP, Uuid, asc, delete, desc, insert
+from sqlalchemy import TIMESTAMP, asc, delete, desc, insert, Integer, update
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import Mapped, mapped_column
 
-from backend.src.lib.database import SqlAlchemyBase
-from backend.src.util.datetime_helper import get_now
+from src.lib.database import SqlAlchemyBase
 
 
 class BaseSchema(SqlAlchemyBase):
@@ -20,8 +18,11 @@ class BaseSchema(SqlAlchemyBase):
 class IdSchema(BaseSchema):
     __abstract__ = True
 
-    id: Mapped[uuid.UUID] = mapped_column(Uuid(as_uuid=True), default=uuid.uuid4, primary_key=True)
-
+    id: Mapped[int] = mapped_column(
+        Integer,
+        primary_key=True,
+        autoincrement=True
+    )
 
 class LogicalDeleteSchema(IdSchema):
     __abstract__ = True
@@ -66,7 +67,7 @@ class BaseReadDTO(BaseModel):
         デフォルトはBaseModel#model_validate
         カスタム処理をしたい場合は各DTOで override する
         """
-        return cls.model_validate(entity)
+        return cls.model_validate(entity, from_attributes=True)
 
 
 ModelType = TypeVar("ModelType", bound=IdSchema)
@@ -93,7 +94,7 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
         self.model = model
         self.read_schema = read_schema
 
-    async def get(self, id: uuid.UUID) -> Optional[ReadSchemaType]:
+    async def get(self, id: int) -> Optional[ReadSchemaType]:
         """
         IDに基づいて1件のレコードを取得します。
 
@@ -113,7 +114,7 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
         """
         return await self._find_by_fields()
 
-    async def find_by_ids(self, ids: list[uuid.UUID]) -> list[ReadSchemaType]:
+    async def find_by_ids(self, ids: list[int]) -> list[ReadSchemaType]:
         """
         指定したIDのレコードを取得します。
 
@@ -123,7 +124,11 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
         return await self._find_by_fields(id=ids)
 
     async def _find_by_fields(
-        self, order_by: list[tuple[str, Literal["asc", "desc"]]] | None = None, limit: int | None = None, **kwargs: Any
+        self,
+        like_fields: dict[str, str] | None = None,
+        order_by: list[tuple[str, Literal["asc", "desc"]]] | None = None, 
+        limit: int | None = None, 
+        **kwargs: Any
     ) -> list[ReadSchemaType]:
         """
         任意のカラム値に基づいてレコードを検索します。
@@ -147,6 +152,12 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
                 col = getattr(self.model, col_name, None)
                 if col is not None:
                     stmt = stmt.order_by(desc(col) if direction == "desc" else asc(col))
+                    
+        if like_fields:
+            for field_name, pattern in like_fields.items():
+                column = getattr(self.model, field_name, None)
+                if column is not None:
+                    stmt = stmt.where(column.like(pattern))
 
         if limit is not None:
             stmt = stmt.limit(limit)
@@ -154,6 +165,7 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
         result = await self.db.execute(stmt)
         objs = result.scalars().all()
         return [self.read_schema.from_entity(obj) for obj in objs]
+    
 
     async def _find_grouped_by_fields(
         self, key: Callable[[ReadSchemaType], K], **kwargs: Any
@@ -208,7 +220,7 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
 
         return len(rows)
 
-    async def update(self, id: uuid.UUID, update_obj: UpdateSchemaType, autocommit=True) -> Optional[ReadSchemaType]:
+    async def update(self, id: int, update_obj: UpdateSchemaType, autocommit=True) -> Optional[ReadSchemaType]:
         """
         IDに基づいて既存レコードを更新します。
 
@@ -228,7 +240,7 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
         await self.db.refresh(db_obj)
         return self.read_schema.from_entity(db_obj)
 
-    async def delete(self, id: uuid.UUID, autocommit=True) -> bool:
+    async def delete(self, id: int, autocommit=True) -> bool:
         """
         指定IDのレコードを物理削除します。
 
@@ -259,89 +271,6 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
             await self.db.commit()
         return result.rowcount
 
-    async def _get(self, id: uuid.UUID) -> ModelType | None:
+    async def _get(self, id: int) -> ModelType | None:
         result = await self.db.execute(select(self.model).where(self.model.id == id))
-        return result.scalars().first()
-
-
-class LogicalDeleteDao(BasicDao[LogicalDeleteModelType, CreateSchemaType, UpdateSchemaType, ReadSchemaType]):
-    """
-    論理削除に対応した非同期のDB操作の基底クラス。
-    **継承したクラスで使いたいメソッドのテストを書くこと**
-
-    :param db: 非同期SQLAlchemyセッション
-    :param model: SQLAlchemyのモデルクラス（BaseSchemaを継承）
-    :param read_schema: レスポンス用のPydanticスキーマクラス
-    """
-
-    async def _find_by_fields(
-        self,
-        order_by: list[tuple[str, Literal["asc", "desc"]]] | None = None,
-        limit: int | None = None,
-        include_deleted: bool = False,
-        **kwargs: Any,
-    ) -> list[ReadSchemaType]:
-        """
-        任意のカラム値に基づいてレコードを検索します。
-        複数カラム指定可能。値に list/tuple/set を渡すと IN 条件になります。
-
-        :param include_deleted: 論理削除されたレコードも含めるか
-        :param kwargs: 検索対象のカラム名と値のマッピング
-        :return: 該当レコードのリスト（Pydanticスキーマ形式）
-        """
-        stmt = select(self.model)
-
-        for field_name, value in kwargs.items():
-            column = getattr(self.model, field_name, None)
-            if column is not None:
-                if isinstance(value, Iterable) and not isinstance(value, (str, bytes)):
-                    stmt = stmt.where(column.in_(value))
-                else:
-                    stmt = stmt.where(column == value)
-
-        if not include_deleted:
-            stmt = stmt.where(self.model.deleted_at.is_(None))
-
-        if order_by:
-            for col_name, direction in order_by:
-                col = getattr(self.model, col_name, None)
-                if col is not None:
-                    stmt = stmt.order_by(desc(col) if direction == "desc" else asc(col))
-
-        if limit is not None:
-            stmt = stmt.limit(limit)
-
-        result = await self.db.execute(stmt)
-        objs = result.scalars().all()
-        return [self.read_schema.from_entity(obj) for obj in objs]
-
-    async def soft_delete(self, id: uuid.UUID, autocommit=True) -> bool:
-        """
-        指定IDのレコードを論理削除します。
-
-        :param id: 対象レコードのUUID
-        :param autocommit: メソッド内でコミットするか
-        :return: 論理削除が成功したか
-        """
-        db_obj = await self._get(id)
-        if not db_obj:
-            return False
-
-        db_obj.deleted_at = get_now()
-        if autocommit:
-            await self.db.commit()
-        return True
-
-    async def hard_delete(self, id: uuid.UUID, autocommit=True) -> bool:
-        """
-        指定IDのレコードを物理削除します。
-
-        :param id: 対象レコードのUUID
-        :param autocommit: メソッド内でコミットするか
-        :return: 物理削除が成功したか
-        """
-        return await self.delete(id, autocommit)
-
-    async def _get(self, id: uuid.UUID) -> LogicalDeleteModelType | None:
-        result = await self.db.execute(select(self.model).where(self.model.id == id, self.model.deleted_at.is_(None)))
         return result.scalars().first()
