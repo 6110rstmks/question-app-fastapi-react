@@ -1,10 +1,12 @@
 from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
-from backend.schemas.category import CategoryCreate
-from backend.models import Category, CategoryQuestion, Subcategory, Question
-from backend.config import PAGE_SIZE
+from schemas.category import CategoryCreate
+from models import Category, CategoryQuestion, Subcategory, Question
+from config import PAGE_SIZE
 from fastapi import HTTPException
 from typing import Optional
+from src.repository.category_repository import CategoryRepository
 
 def find_all_categories(db: Session)-> list[Category]:
     """
@@ -77,12 +79,19 @@ def find_all(
     return result[skip: skip + limit]
 
 
-def find_category_by_id(
-    db: Session, 
+async def find_category_by_id(
+    db: AsyncSession, 
     id: int
 ) -> Optional["Category"]:
-    query = select(Category).where(Category.id == id)
-    return db.execute(query).scalars().first()
+    
+    category_repository = CategoryRepository(db)
+    
+    category = await category_repository.get(id)
+    
+    return category
+    
+    # query = select(Category).where(Category.id == id)
+    # return db.execute(query).scalars().first()
 
 # あいまい検索
 def find_category_by_name(
@@ -105,6 +114,7 @@ def create(
     db: Session, 
     category_create: CategoryCreate
 ) -> Category:
+    
     
     # case insensitiveとする。
     existing_category = (

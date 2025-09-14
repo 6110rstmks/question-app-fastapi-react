@@ -1,10 +1,10 @@
 from typing import Annotated
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Path, Query, Depends, UploadFile
-from backend.database import get_db
+from database import get_db
 from starlette import status
-from backend.cruds import subcategory_question_crud as subcategory_question_cruds
-from backend.schemas.subcategory_question import SubcategoryQuestionResponse
+from cruds import subcategory_question_crud as subcategory_question_cruds
+from schemas.subcategory_question import SubcategoryQuestionResponse
 
 DbDependency = Annotated[Session, Depends(get_db)]
 

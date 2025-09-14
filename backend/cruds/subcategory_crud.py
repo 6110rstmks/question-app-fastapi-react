@@ -1,15 +1,16 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update, func
-from backend.schemas.subcategory import SubcategoryCreateSchema, SubcategoryUpdateSchema, SubcategoryResponse
-from backend.models import Subcategory, SubcategoryQuestion, Question, Category
-from backend.cruds import question_crud as question_cruds
-from fastapi import HTTPException
+from schemas.subcategory import SubcategoryCreateSchema, SubcategoryUpdateSchema, SubcategoryResponse
+from models import Subcategory, SubcategoryQuestion, Question, Category
+from cruds import question_crud as question_cruds
 from typing import Optional
-from backend.src.repository.subcategory_repository import SubcategoryRepository, SubcategoryCreate
+from src.repository.category_repository import CategoryRepository
+from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryCreate, SubcategoryUpdate
+from src.repository.subcategory_question_repository import SubcategoryQuestionRepository
 
 
 # カテゴリbox内で表示するサブカテゴリを取得
-def find_subcategories_in_categorybox(
+async def find_subcategories_in_categorybox(
     db: AsyncSession, 
     category_id: int, 
     limit: int, 
@@ -53,62 +54,70 @@ def find_subcategories_in_categorybox(
     return result[0: 0 + limit]
 
 
-def find_subcategory_by_id(
+# リポジトリパターンに置換済み
+async def find_subcategory_by_id(
     db: AsyncSession, 
     id: int
 ) -> Optional[SubcategoryResponse]:
-    query = select(Subcategory).where(Subcategory.id == id)
-    return db.execute(query).scalars().first()
 
+    subcategory_repository = SubcategoryRepository(db)
+    subcategory = await subcategory_repository.get(id)
+    return subcategory
 
-def find_subcategories_by_question_id(
+# リポジトリパターンに置換済み
+async def find_subcategories_by_question_id(
     db: AsyncSession, 
     question_id: int
 ) -> list[SubcategoryResponse]:
-    # query = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id == question_id)
-    query = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id == question_id)
-    # results = db.execute(query).scalars().all()
-    subcategory_ids = db.execute(query).scalars().all()
-    
-    # subcategory_ids = []
-    # for result in results:
-    #     subcategory_ids.append(result.subcategory_id)
-        
-    query2 = select(Subcategory).where(Subcategory.id.in_(subcategory_ids))
-        
-    return db.execute(query2).scalars().all()
 
+    subcategory_question_repository = SubcategoryQuestionRepository(db)
+    subcategory_ids_and_question_ids = await subcategory_question_repository.find_by_question_id(question_id)
+    subcategory_ids = [subcategory_id_and_question_id.subcategory_id for subcategory_id_and_question_id in subcategory_ids_and_question_ids]
+    subcategory_repository = SubcategoryRepository(db)
+    return await subcategory_repository.find_by_ids(subcategory_ids)
 
-def find_subcategories_with_category_name_by_category_id(
+# リポジトリパターンに置換しない
+async def find_subcategories_with_category_name_by_category_id(
     db: AsyncSession, 
     category_id: int
 ) -> list[SubcategoryResponse]:
 
-    query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(Category, Subcategory.category_id == Category.id).where(Subcategory.category_id == category_id)
+    subcategory_repository = SubcategoryRepository(db)
+    
+    category_repository = CategoryRepository(db)
+    category = await category_repository.get(category_id)
+
+    subcategories = await subcategory_repository.find_by_category_id(category_id)
+
+    query1 = (
+        select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).
+        join(Category, Subcategory.category_id == Category.id).
+        where(Subcategory.category_id == category_id)
+    )
+    
+    print(db.execute(query1).fetchall())
 
     return db.execute(query1).fetchall()
 
-
-def find_subcategories_with_category_name_by_question_id(
+# リポジトリパターンに置換しない
+async def find_subcategories_with_category_name_by_question_id(
     db: AsyncSession, 
     question_id: int
 ) -> list[SubcategoryResponse]:
     query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(SubcategoryQuestion, Subcategory.id == SubcategoryQuestion.subcategory_id).join(Category, Subcategory.category_id == Category.id).where(SubcategoryQuestion.question_id == question_id)
     return db.execute(query1).fetchall()
 
-
-def find_subcategory_by_name(
+# リポジトリパターンに置換済み
+async def find_subcategory_by_name(
     db: AsyncSession, 
     name: str
 ) -> list[SubcategoryResponse]:
-    return (
-        db.query(Subcategory)
-        .filter(Subcategory.name.like(f"%{name}%"))
-        .all()
-    )
     
+    subcategory_repository = SubcategoryRepository(db)
+    return await subcategory_repository.find_by_name_like(name)
 
-def find_subcategories_with_category_name_by_id(
+# リポジトリパターンに置換しない
+async def find_subcategories_with_category_name_by_id(
     db: AsyncSession, 
     id: int
 ):
@@ -120,6 +129,7 @@ def find_subcategories_with_category_name_by_id(
     return db.execute(query).fetchone()
 
 
+# リポジトリパターンに置換済み
 async def create_subcategory(
     db: AsyncSession,
     subcategory_create: SubcategoryCreateSchema
@@ -127,66 +137,39 @@ async def create_subcategory(
 
     subcategory_repository = SubcategoryRepository(db)
 
-
-
-
-
-    existing_subcategory = (
-        db.query(Subcategory)
-        .filter(Subcategory.name == subcategory_create.name)
-        .first()
-    )
-        
-    # if文を入れ子にしている理由はexisting_subcategoryがNoneの場合にエラーが発生するため
-    if existing_subcategory:
-        if existing_subcategory.category_id == subcategory_create.category_id:
-            raise HTTPException(status_code=400, detail="Subcategory already exists")
-
-    # new_subcategory = Subcategory(**subcategory_create.model_dump())
-    # db.add(new_subcategory)
-    # db.commit()
-
-    new_subcategory = await subcategory_repository.create(
-        SubcategoryCreate(name=subcategory_create.name, category_id=subcategory_create.category_id)
-    )
+    return await subcategory_repository.create(SubcategoryCreate(name=subcategory_create.name, category_id=subcategory_create.category_id))
     
-    return new_subcategory
-
-
-def update2(
+# リポジトリパターンに置換済み
+async def update2_subcategory(
     db: AsyncSession, 
     id: int, 
     subcategory_update: SubcategoryUpdateSchema
 ):
-    subcategory = find_subcategory_by_id(db, id)
+    subcategory = await find_subcategory_by_id(db, id)
 
     if subcategory is None:
         return None
-    
-    stmt = (
-        update(Subcategory).
-        where(Subcategory.id == id).
-        values(name=subcategory_update.name)
-    )
-    db.execute(stmt)
-    db.commit()
-    updated_subcategory = find_subcategory_by_id(db, id)
+
+    subcategory_repository = SubcategoryRepository(db)
+
+    updated_subcategory = await subcategory_repository.update(id, SubcategoryUpdate(name=subcategory_update.name))
+
     return updated_subcategory
 
 
-def delete_subcategory(
+async def delete_subcategory(
     db: AsyncSession, 
     id: int
 ) -> Optional[SubcategoryResponse]:
-    subcategory = find_subcategory_by_id(db, id)
+    subcategory = await find_subcategory_by_id(db, id)
     if subcategory is None:
         return None
+    
+    subcategory_repository = SubcategoryRepository(db)
     
     questions = question_cruds.find_all_questions_in_subcategory(db, id)
     
     for question in questions:
         question_cruds.delete_question(db, question.id)
-        
-    db.delete(subcategory)
-    db.commit()
-    return subcategory
+    
+    return await subcategory_repository.delete(id)
