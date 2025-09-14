@@ -42,21 +42,26 @@ async def find_subcategories_by_question_id(
     db: AsyncDbDependency,
     question_id: int = Path(gt=0)
 ):
-    return await subcategory_crud.find_subcategories_by_question_id(db, question_id)
+    subcategory_question_repository = SubcategoryQuestionRepository(db)
+    subcategory_ids_and_question_ids = await subcategory_question_repository.find_by_question_id(question_id)
+    subcategory_ids = [subcategory_id_and_question_id.subcategory_id for subcategory_id_and_question_id in subcategory_ids_and_question_ids]
+    subcategory_repository = SubcategoryRepository(db)
+    return await subcategory_repository.find_by_ids(subcategory_ids)
 
-@router.get("/WithCategoryName/category_id/{category_id}", response_model=list[SubcategoryWithCategoryNameResponse], status_code=status.HTTP_200_OK)
-async def find_subcategories_with_category_name_by_category_id(
-    db: DbDependency,
-    category_id: int = Path(gt=0)
-):
-    return subcategory_crud.find_subcategories_with_category_name_by_category_id(db, category_id)
 
-@router.get("/WithCategoryName/id/{subcategory_id}", response_model=SubcategoryWithCategoryNameResponse, status_code=status.HTTP_200_OK)
-async def find_subcategories_with_category_name_by_id(
-    db: DbDependency,
-    subcategory_id: int = Path(gt=0)
-):
-    return subcategory_crud.find_subcategories_with_category_name_by_id(db, subcategory_id)
+# @router.get("/WithCategoryName/category_id/{category_id}", response_model=list[SubcategoryWithCategoryNameResponse], status_code=status.HTTP_200_OK)
+# async def find_subcategories_with_category_name_by_category_id(
+#     db: DbDependency,
+#     category_id: int = Path(gt=0)
+# ):
+#     return subcategory_crud.find_subcategories_with_category_name_by_category_id(db, category_id)
+
+# @router.get("/WithCategoryName/id/{subcategory_id}", response_model=SubcategoryWithCategoryNameResponse, status_code=status.HTTP_200_OK)
+# async def find_subcategories_with_category_name_by_id(
+#     db: DbDependency,
+#     subcategory_id: int = Path(gt=0)
+# ):
+#     return subcategory_crud.find_subcategories_with_category_name_by_id(db, subcategory_id)
 
 @router.get("/WithCategoryName/question_id/{question_id}", response_model=list[SubcategoryWithCategoryNameResponse], status_code=status.HTTP_200_OK)
 async def find_subcategories_with_category_name_by_question_id(
@@ -76,7 +81,7 @@ async def find_subcategory_by_id(
         raise HTTPException(status_code=404, detail="Subcategory not found")
     return found_subcategory
 
-@router.get("/category_id/{category_id}", response_model=list[SubcategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
+@router.get("/WithQuestionCount/category_id/{category_id}", response_model=list[SubcategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
 async def find_subcategories_with_question_count_in_category(
     db: AsyncDbDependency, 
     category_id: int = Path(gt=0),
@@ -94,6 +99,12 @@ async def find_by_name(
 ):
     return await subcategory_crud.find_subcategory_by_name(db, name)
 
+@router.get("/category_id/{category_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
+async def find_by_category_id(
+    db: AsyncDbDependency,
+    category_id: int = Path(gt=0)
+):
+    return await subcategory_crud.find_subcategories_by_category_id(db, category_id)
 
 @router.put("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def update(
