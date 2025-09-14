@@ -28,6 +28,8 @@ class SubcategoryRead(BaseReadDTO):
     id: int
     name: str
     category_id: int
+    question_count: int | None = None
+
 
 
 class SubcategoryRepository(
