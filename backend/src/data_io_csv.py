@@ -5,8 +5,8 @@ import json
 import zipfile
 import tempfile
 from fastapi import UploadFile, HTTPException
-from backend.models import Category, Subcategory, Question, CategoryQuestion, SubcategoryQuestion
-from backend.cruds import category_crud as category_cruds
+from models import Category, Subcategory, Question, CategoryQuestion, SubcategoryQuestion
+from cruds import category_crud as category_cruds
 
 
 def export_data_to_csv(db: Session, output_dir: str):

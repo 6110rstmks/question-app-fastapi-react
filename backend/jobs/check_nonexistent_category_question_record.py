@@ -2,13 +2,13 @@
 # で実行する
 
 from sqlalchemy.orm import Session
-from backend.models import CategoryQuestion, SubcategoryQuestion, Question, Subcategory
+from models import CategoryQuestion, SubcategoryQuestion, Question, Subcategory
 from sqlalchemy import select, exists
 from typing import Annotated
 from fastapi import Depends
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy import create_engine
-from backend.config import get_settings
+from config import get_settings
 
 SQLALCHEMY_DATABASE_URL = get_settings().sqlalchemy_database_url
 

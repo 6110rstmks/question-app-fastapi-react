@@ -2,7 +2,7 @@
 # で実行する
 
 from sqlalchemy.orm import Session
-from backend.models import CategoryQuestion, SubcategoryQuestion, Question, Subcategory
+from models import CategoryQuestion, SubcategoryQuestion, Question, Subcategory
 from sqlalchemy import select, exists
 from typing import Annotated
 from fastapi import Depends

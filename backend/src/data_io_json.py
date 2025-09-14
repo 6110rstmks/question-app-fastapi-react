@@ -1,10 +1,10 @@
 
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from backend.models import Category, CategoryQuestion, Subcategory, Question, SubcategoryQuestion
+from models import Category, CategoryQuestion, Subcategory, Question, SubcategoryQuestion
 import json
 from fastapi import HTTPException, UploadFile
-from backend.cruds import category_crud as category_cruds
+from cruds import category_crud as category_cruds
 
 
 # 詳細はdocument/data_import_export.mdを参照

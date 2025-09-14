@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field, ConfigDict
 from typing import List
 from datetime import datetime
-from backend.config import SolutionStatus
+from config import SolutionStatus
 from fastapi import HTTPException
 
 
