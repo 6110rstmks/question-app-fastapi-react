@@ -1,10 +1,11 @@
 from typing import Annotated, Optional
 from fastapi import APIRouter, Path, Query, Depends, UploadFile, HTTPException
 from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
 from cruds import category_crud as category_cruds
 from schemas.category import CategoryResponse, CategoryCreate, CategoryResponseWithQuestionCount
-from database import get_db
+from database import get_db, get_session
 from fastapi import Query
 from config import PAGE_SIZE
 from fastapi.responses import FileResponse
@@ -14,8 +15,7 @@ from src import data_io_json, data_io_csv
 import zipfile
 
 DbDependency = Annotated[Session, Depends(get_db)]
-
-# UserDependency = Annotated[auth.DecodedToken, Depends(auth_cruds.get_current_user)]
+AsyncDbDependency = Annotated[AsyncSession, Depends(get_session)]
 
 router = APIRouter(prefix="/categories", tags=["Categories"])
 
@@ -92,10 +92,10 @@ async def find_all(
 
 @router.get("/category_id/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
 async def find_category_by_id(
-    db: DbDependency,
+    db: AsyncDbDependency,
     id: int = Path(gt=0),
 ):
-    return category_cruds.find_category_by_id(db, id)
+    return await category_cruds.find_category_by_id(db, id)
 
 @router.post("", response_model=CategoryResponse, status_code=status.HTTP_201_CREATED)
 async def create(

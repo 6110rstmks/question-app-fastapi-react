@@ -22,7 +22,7 @@ export const fetchSubcategoriesWithQuestionCountByCategoryId = async (
     if (searchSubcategoryWord) {
         url += `?searchSubcategoryWord=${searchSubcategoryWord}`
     }
-    const response = await fetch(url);
+    const response = await fetch(url)
 
     if (response.ok) {
         return response.json()
@@ -63,7 +63,7 @@ export const fetchSubcategory = async (subcategory_id: number) => {
     if (response.ok) {
         return response.json()
     }
-};
+}
 
 export const createSubcategory = async (
     subcategoryName: string, 

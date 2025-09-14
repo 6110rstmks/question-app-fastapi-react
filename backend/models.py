@@ -1,14 +1,8 @@
 from __future__ import annotations
 from sqlalchemy import ForeignKey
 from sqlalchemy import Integer
-from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy.orm import relationship
-from sqlalchemy import Column
-from sqlalchemy import String, Enum
-from sqlalchemy import DateTime
-from sqlalchemy import Boolean
-from sqlalchemy import ARRAY
-from sqlalchemy import Date
+from sqlalchemy.orm import DeclarativeBase, relationship
+from sqlalchemy import Column, String, Enum, DateTime, Boolean, ARRAY, Date
 from datetime import datetime
 from sqlalchemy.sql import func
 from schemas.question import SolutionStatus
