@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import type { Category } from '../types/Category'
-import type { SubcategoryWithCategoryName  } from '../types/Subcategory'
+import type { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
 import type { Question } from '../types/Question'
 import type { SubcategoryQuestion } from '../types/SubcategoryQuestion'
-import { fetchCategoriesBySearchWord } from '../api/CategoryAPI'
-import { fetchSubcategoriesWithCategoryNameByQuestionId, fetchSubcategoriesWithCategoryNameByCategoryId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
+import { fetchCategory, fetchCategoriesBySearchWord } from '../api/CategoryAPI'
+import { fetchSubcategoriesByCategoryId, fetchSubcategoriesWithCategoryNameByQuestionId, fetchSubcategoryWithCategoryNameById } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 
 interface OriginalData {
@@ -115,17 +115,35 @@ export const useCategoryPage = (
     // 検索結果で表示されたcategoryの一つをクリックした時の処理
     const handleClickCategoryName = async (category: Category) => {
         setSearchWord(category.name)
-        const data: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(category.id)
+        // const data: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(category.id)
+        const subcategories_data: Subcategory[] = await fetchSubcategoriesByCategoryId(category.id)
+
+        const subcategories_with_category: SubcategoryWithCategoryName[] =
+        subcategories_data.map(sub => ({
+            id: sub.id,
+            name: sub.name,
+            category_id: sub.categoryId, // camelCase → snake_case
+            category_name: category.name,
+        }))
         setSearchFlg(true)
         setDisplayedCategoryName(category.name)
-        setSubcategoriesWithCategoryName(data)
+        setSubcategoriesWithCategoryName(subcategories_with_category)
     }
 
 
     useEffect(() => {
         (async () => {
-            const subcategoriesData: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByCategoryId(categoryId);
-            setSubcategoriesWithCategoryName(subcategoriesData)
+            const subcategories_data: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId)
+            const category_data: Category = await fetchCategory(categoryId)
+            const subcategories_with_category: SubcategoryWithCategoryName[] =
+            subcategories_data.map(sub => ({
+                id: sub.id,
+                name: sub.name,
+                category_id: sub.categoryId, // camelCase → snake_case
+                category_name: category_data.name,
+            }))
+
+            setSubcategoriesWithCategoryName(subcategories_with_category)
 
             const subcategoriesquestionsData = await fetchSubcategoriesQuestionsByQuestionId(question!.id)
             const transformedSubcategoryQuestionData: SubcategoryQuestion[] = subcategoriesquestionsData.map(({ subcategory_id, question_id }: OriginalData) => ({
