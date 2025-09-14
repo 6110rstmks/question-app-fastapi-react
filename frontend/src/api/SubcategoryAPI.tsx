@@ -13,21 +13,6 @@ export const fetchSubcategoriesForHomePage = async (
     }
 }
 
-export const fetchSubcategoriesWithQuestionCountByCategoryId = async (
-    category_id: number, 
-    searchSubcategoryWord?: string
-) => {
-    let url = `http://localhost:8000/subcategories/category_id/${category_id}`
-    
-    if (searchSubcategoryWord) {
-        url += `?searchSubcategoryWord=${searchSubcategoryWord}`
-    }
-    const response = await fetch(url)
-
-    if (response.ok) {
-        return response.json()
-    }
-}
 
 export const fetchSubcategoriesByQuestionId = async (
     question_id: number
@@ -58,6 +43,13 @@ export const updateSubcategoryName = async (
     }
 }
 
+export const fetchSubcategoryByCategoryId = async (category_id: number) => {
+    const response = await fetch(`http://localhost:8000/subcategories/category_id/${category_id}`);
+    if (response.ok) {
+        return response.json()
+    }
+}
+
 export const fetchSubcategory = async (subcategory_id: number) => {
     const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`);
     if (response.ok) {
@@ -81,10 +73,25 @@ export const createSubcategory = async (
     return response
 }
 
-export const fetchSubcategoriesWithCategoryNameByCategoryId = async (
-    category_id: number
+export const fetchSubcategoriesByCategoryId = async (category_id: number) => {
+    const response = await fetch(`http://localhost:8000/subcategories/category_id/${category_id}`);
+    if (response.ok) {
+        return response.json()
+    }
+    throw new Error("Failed to fetch subcategory");
+}
+
+export const fetchSubcategoriesWithQuestionCountByCategoryId = async (
+    category_id: number, 
+    searchSubcategoryWord?: string
 ) => {
-    const response = await fetch(`http://localhost:8000/subcategories/WithCategoryName/category_id/${category_id}`)
+    let url = `http://localhost:8000/subcategories/WithQuestionCount/category_id/${category_id}`
+
+    if (searchSubcategoryWord) {
+        url += `?searchSubcategoryWord=${searchSubcategoryWord}`
+    }
+    const response = await fetch(url)
+
     if (response.ok) {
         return response.json()
     }
