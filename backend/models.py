@@ -11,7 +11,7 @@ from sqlalchemy import ARRAY
 from sqlalchemy import Date
 from datetime import datetime
 from sqlalchemy.sql import func
-from backend.schemas.question import SolutionStatus
+from schemas.question import SolutionStatus
 
 class Base(DeclarativeBase):
     pass
