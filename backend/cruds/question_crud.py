@@ -1,12 +1,12 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update, func, text
-from backend.schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
-from backend.models import Question, SubcategoryQuestion, CategoryQuestion
+from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
+from models import Question, SubcategoryQuestion, CategoryQuestion
 from sqlalchemy.exc import SQLAlchemyError
-from backend.cruds import category_question_crud as category_question_cruds
-from backend.cruds import subcategory_question_crud as subcategory_question_cruds
+from cruds import category_question_crud as category_question_cruds
+from cruds import subcategory_question_crud as subcategory_question_cruds
 from datetime import date
-from backend.schemas.question import QuestionResponse
+from schemas.question import QuestionResponse
 from typing import Optional
 
 def find_all_questions(

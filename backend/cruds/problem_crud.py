@@ -1,13 +1,13 @@
 from __future__ import annotations
 from sqlalchemy.orm import Session
-from backend.schemas.problem import ProblemFetch
-from backend.schemas.question import QuestionResponse
-from backend.schemas.category_question import CategoryQuestionResponse
-from backend.schemas.subcategory_question import SubcategoryQuestionResponse
+from schemas.problem import ProblemFetch
+from schemas.question import QuestionResponse
+from schemas.category_question import CategoryQuestionResponse
+from schemas.subcategory_question import SubcategoryQuestionResponse
 from sqlalchemy import select, func
-from backend.models import Question, CategoryQuestion, SubcategoryQuestion, CategoryBlacklist
+from models import Question, CategoryQuestion, SubcategoryQuestion, CategoryBlacklist
 from fastapi import HTTPException
-from backend.config import SolutionStatus
+from config import SolutionStatus
 from datetime import datetime, timedelta
 from typing import Optional
 
