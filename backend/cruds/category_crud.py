@@ -8,12 +8,12 @@ from fastapi import HTTPException
 from typing import Optional
 from src.repository.category_repository import CategoryRepository
 
-def find_all_categories(db: Session)-> list[Category]:
+async def find_all_categories(db: AsyncSession)-> list[Category]:
     """
     全てのカテゴリを取得する。
     """
-    query = select(Category)
-    return db.execute(query).scalars().all()
+    category_repository = CategoryRepository(db)
+    return await category_repository.get_all()
 
 def find_all(
     db: Session, 
@@ -83,15 +83,9 @@ async def find_category_by_id(
     db: AsyncSession, 
     id: int
 ) -> Optional["Category"]:
-    
     category_repository = CategoryRepository(db)
-    
     category = await category_repository.get(id)
-    
     return category
-    
-    # query = select(Category).where(Category.id == id)
-    # return db.execute(query).scalars().first()
 
 # あいまい検索
 def find_category_by_name(

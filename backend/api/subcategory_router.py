@@ -17,7 +17,6 @@ router = APIRouter(prefix="/subcategories", tags=["SubCategories"])
 async def create_subcategory(db: AsyncDbDependency, subcategory_create: SubcategoryCreateSchema):
     # found_category = category_crud.find_category_by_id(db, subcategory_create.category_id)
     found_category = await category_crud.find_category_by_id(db, subcategory_create.category_id)
-    print(found_category)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
 
@@ -71,7 +70,7 @@ async def find_subcategory_by_id(
 
 @router.get("/category_id/{category_id}", response_model=list[SubcategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
 async def find_subcategories_with_question_count_in_category(
-    db: DbDependency, 
+    db: AsyncDbDependency, 
     category_id: int = Path(gt=0),
     limit: Optional[int] = None,
     searchSubcategoryWord: Optional[str] = None,
