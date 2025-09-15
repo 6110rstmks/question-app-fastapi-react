@@ -4,8 +4,8 @@ import {
     useEffect 
 } from 'react';
 import { useNavigate } from "react-router"
-import type { QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
-import { fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord } from '../../../api/QuestionAPI'
+import type { Question, QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
+import { fetchQuestionsByProblemWord } from '../../../api/QuestionAPI'
 import { fetchCategory } from '../../../api/CategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI'
 import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI'
@@ -43,25 +43,38 @@ export const useQuestionListPage = () => {
     const handleSearchQuestionClick = async () => {
         console.log(9898797)
         if (searchWord.trim() === "") return
-        console.log(123456)
-        const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] =
-        await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord(
-          searchWord
-        )
+        // const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] =
+        // await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord(
+        //   searchWord
+        // )
 
-        console.log("questions_data(before for)", JSON.stringify(questions_data, null, 2))
+        const question_data2: Question[] = await fetchQuestionsByProblemWord(searchWord) 
+
                 
-        for (let i = 0; i < questions_data.length; i++) {
-            const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
-            const category = await fetchCategory(category_id)
-            const subcategory_id = (await fetchSubcategoriesQuestionsByQuestionId(questions_data[i].id))[0].subcategory_id
-            questions_data[i].category_name = category.name
-            questions_data[i].categoryId = category_id
-            questions_data[i].subcategoryId = subcategory_id
-        }
+        // for (let i = 0; i < questions_data.length; i++) {
+        //     const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
+        //     const category = await fetchCategory(category_id)
+        //     const subcategory_id = (await fetchSubcategoriesQuestionsByQuestionId(questions_data[i].id))[0].subcategory_id
+        //     questions_data[i].category_name = category.name
+        //     questions_data[i].categoryId = category_id
+        //     questions_data[i].subcategoryId = subcategory_id
+        // }
+        const question_data3: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await Promise.all(
+            question_data2.map(async (q) => {
+                const { category_id } = await fetchCategoryQuestionByQuestionId(q.id);
+                const category = await fetchCategory(category_id);
+                const subcategory = await fetchSubcategoriesQuestionsByQuestionId(q.id);
 
-        console.log("questions_data after", questions_data)
-        setQuestions(questions_data)
+                return {
+                    ...q,
+                    category_name: category.name,
+                    categoryId: category_id,
+                    subcategoryId: subcategory[0].subcategory_id,
+                };
+            })
+        );
+
+        setQuestions(question_data3)
     }
     
     return {

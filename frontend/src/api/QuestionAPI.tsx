@@ -1,7 +1,4 @@
-import type { 
-    Question, 
-    QuestionWithCategoryIdAndCategoryNameAndSubcategoryId 
-} from '../types/Question'
+import type { Question } from '../types/Question'
 import { SolutionStatus } from '../types/SolutionStatus'
 
 export const fetchQuestion = async (
@@ -29,12 +26,11 @@ export const fetchQuestionsBySubcategoryId = async (
         }
     })
     return await response.json()
-};
+}
 
-// 問題文または解答を部分検索することでカテゴリID、カテゴリ名、サブカテゴリIDが付属したQuestionを取得するAPI
-export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord = async (
+export const fetchQuestionsByProblemWord = async (
     searchWord: string
-): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
+): Promise<Question[]> => {
     const url = `http://localhost:8000/questions/?searchWord=${searchWord}`
     const response = await fetch(url, {
         method: 'GET',
@@ -44,6 +40,7 @@ export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProble
     })
     return await response.json()
 }
+
 
 // Questionのis_correctを更新するAPI
 export const updateQuestionIsCorrect = async (question: Question): Promise<void> => {
