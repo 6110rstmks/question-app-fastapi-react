@@ -1,3 +1,5 @@
+import type { Subcategory, Subcategory2 } from '../types/Subcategory'
+
 // ホーム画面の初期状態にて、サブカテゴリー一覧を取得するためのAPI
 // 問題文検索を行った際も、以下のAPIでカテゴリー一覧を取得する
 export const fetchSubcategoriesForHomePage = async (
@@ -15,12 +17,12 @@ export const fetchSubcategoriesForHomePage = async (
 
 export const fetchSubcategoriesByQuestionId = async (
     question_id: number
-) => {
+): Promise<Subcategory2[]> => {
     const response = await fetch(`http://localhost:8000/subcategories/question_id/${question_id}`);
     if (response.ok) {
         return response.json()
     }
-    throw new Error("Failed to fetch subcategory");
+    throw new Error("Failed to fetch subcategory")
 }
 
 export const updateSubcategoryName = async (
@@ -42,14 +44,10 @@ export const updateSubcategoryName = async (
     }
 }
 
-export const fetchSubcategoryByCategoryId = async (category_id: number) => {
-    const response = await fetch(`http://localhost:8000/subcategories/category_id/${category_id}`);
-    if (response.ok) {
-        return response.json()
-    }
-}
 
-export const fetchSubcategory = async (subcategory_id: number) => {
+export const fetchSubcategory = async (
+    subcategory_id: number
+) => {
     const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`)
     if (response.ok) {
         return response.json()
@@ -59,7 +57,7 @@ export const fetchSubcategory = async (subcategory_id: number) => {
 export const createSubcategory = async (
     subcategoryName: string, 
     categoryId: number
-) => {
+): Promise<Response> => {
     const url = 'http://localhost:8000/subcategories/'
     const response = await fetch(url, {
         method: 'POST',

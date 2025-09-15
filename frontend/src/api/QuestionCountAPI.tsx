@@ -112,7 +112,6 @@ export const fetchTemporaryQuestionCount = async (): Promise<number> => {
             'Content-Type': 'application/json',
         }
     })
-    console.log('Temporary Question Count API Response:', response);
     const data = await response.json()
     return data
 }
