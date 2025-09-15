@@ -1,5 +1,5 @@
 from typing import Annotated, Optional
-from fastapi import APIRouter, Path, Query, Depends, UploadFile, HTTPException
+from fastapi import APIRouter, Query, Depends, UploadFile, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
@@ -9,8 +9,10 @@ from database import get_db, get_session
 from fastapi import Query
 from config import PAGE_SIZE
 from fastapi.responses import FileResponse
+from pathlib import Path
+
 import os
-from git import Repo
+from git import Repo, InvalidGitRepositoryError
 from src import data_io_json, data_io_csv
 import zipfile
 
@@ -113,10 +115,13 @@ async def get_exported_json(db: DbDependency):
     # ディレクトリが存在しない場合は作成
     os.makedirs(EXPORT_DIR, exist_ok=True)
     FILE_PATH = os.path.join(EXPORT_DIR, FILE_NAME)
+    export_dir = Path("export_data").resolve()
+    export_dir.mkdir(parents=True, exist_ok=True)
+    file_path = export_dir / "categories_export4.json"
     
     EXPORT_DIR = os.path.abspath("export_data")
     data_io_json.export_to_json(db, FILE_PATH)
-    git_push_json_file()
+    git_push_json_file(file_path)
     # Check if the file exists
     if not os.path.exists(FILE_PATH):
         return {"error": "File not found"}
@@ -212,14 +217,29 @@ async def upload_json(
 ):
     return await data_io_json.import_json_file(db, file)
 
-def git_push_json_file():
+def _get_repo(start: Path) -> Repo:
+    """
+    start から親に遡って .git を探索して Repo を返す
+    """
+    try:
+        return Repo(start, search_parent_directories=True)
+    except InvalidGitRepositoryError:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Git repository not found (start={start})",
+        )
+
+def git_push_json_file(file_path: Path):
     EXPORT_DIR = os.path.abspath("export_data")
     
     REPO_DIR = os.path.abspath("")
     INDEX_ADD_FILE_PATH = os.path.join(EXPORT_DIR, "categories_export4.json")
     print(INDEX_ADD_FILE_PATH)
     print('パン')
-    repo = Repo(REPO_DIR)
+    # repo = Repo(REPO_DIR)
+    repo = _get_repo(Path(__file__).resolve().parent)
+    wt = Path(repo.working_tree_dir).resolve()  # リポジトリのルート
+    rel = os.path.relpath(str(file_path.resolve()), str(wt))  # ルートからの相対
     repo.index.add([INDEX_ADD_FILE_PATH])
     is_untracked = INDEX_ADD_FILE_PATH not in repo.git.ls_files().splitlines()
     
