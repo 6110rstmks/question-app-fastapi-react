@@ -4,7 +4,7 @@ import type { Subcategory, Subcategory2, SubcategoryWithCategoryName  } from '..
 import type { Question } from '../types/Question'
 import type { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchCategory, fetchCategoriesBySearchWord } from '../api/CategoryAPI'
-import { fetchSubcategory, fetchSubcategoriesByCategoryId, fetchSubcategoriesWithCategoryNameByQuestionId } from '../api/SubcategoryAPI'
+import { fetchSubcategory, fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
 
 interface OriginalData {
@@ -62,27 +62,30 @@ export const useCategoryPage = (
         const { value, checked } = event.target
         const parsedValue = JSON.parse(value)
 
-        const subcategoryId = parseInt(parsedValue.id, 10);
+        console.log(23989, parsedValue)
+
+        const subcategoryId = parseInt(parsedValue.id, 10)
 
         const categoryId = parseInt(parsedValue.category_id, 10)
+        console.log(222111, parseInt(parsedValue.category_id, 10))
 
         if (checked) {
             setSelectedCategoryIds((prev) => {
                 const updated = [...prev, categoryId]
                 return updated
-            });
+            })
 
         } else if (!checked) {
 
             // チェックが外れた場合でかつすでに同じカテゴリのサブカテゴリにチェックが入っている場合、何もしない
             setSelectedCategoryIds((prev) => {
                 const index = prev.indexOf(categoryId)
-                if (index === -1) return prev; // もしcategoryIdがなければそのまま返す
+                if (index === -1) return prev // もしcategoryIdがなければそのまま返す
             
                 const updated = [...prev]
-                updated.splice(index, 1); // 最初に見つかったcategoryIdのみ削除   
-                return updated;
-            });
+                updated.splice(index, 1) // 最初に見つかったcategoryIdのみ削除   
+                return updated
+            })
 
         }
 
@@ -105,7 +108,7 @@ export const useCategoryPage = (
                     }
                 ]
                 : (prev || []).filter((subcategory) => subcategory.id !== subcategoryId) // チェックが外れた場合
-        );
+        )
     }
 
     // 検索ボックスでワードを入力している時の処理
@@ -137,11 +140,12 @@ export const useCategoryPage = (
         (async () => {
             const subcategories_data: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId)
             const category_data: Category = await fetchCategory(categoryId)
+
             const subcategories_with_category: SubcategoryWithCategoryName[] =
             subcategories_data.map(sub => ({
                 id: sub.id,
                 name: sub.name,
-                category_id: sub.categoryId, // camelCase → snake_case
+                category_id: category_data.id, // camelCase → snake_case
                 category_name: category_data.name,
             }))
 
@@ -176,20 +180,20 @@ export const useCategoryPage = (
 
             setSelectedSubcategoryIds(transformedSubcategoryQuestionData.map((subcategory_question: SubcategoryQuestion ) => subcategory_question.subcategoryId));
 
-        })();
+        })()
       }, [categoryId])
 
     useEffect(() => {
         const loadCategories = async () => {
-            if (!searchWord.trim()) return; // 空の場合はfetchしない
+            if (!searchWord.trim()) return // 空の場合はfetchしない
             const categories_data: Category[] = await fetchCategoriesBySearchWord(searchWord)
 
             // 初回検索でcategoryNameが表示されている時、categoryNameをsearch結果に表示させないようにする。表示結果に表示されたらだぶっているため。
             if (!searchFlg) {
                 const filteredCategories = categories_data.filter(category => category.name !== defaultCategoryName);
-                setCategories(filteredCategories);
+                setCategories(filteredCategories)
             } else {
-                setCategories(categories_data);
+                setCategories(categories_data)
             }
         }
         loadCategories()
@@ -202,6 +206,9 @@ export const useCategoryPage = (
             alert('サブカテゴリを選択してください')
             return
         }
+        console.log(66666, selectedCategoryIds)
+        console.log(77777, selectedSubcategoryIds)
+        console.log(88888, question?.id)
 
         const response = await fetch(`http://localhost:8000/questions/change_belongs_to_subcategoryId`, {
             method: 'PUT',
@@ -223,8 +230,22 @@ export const useCategoryPage = (
         alert('所属するサブカテゴリが変更されました。')
         setModalIsOpen(false)
         
-        const data = await fetchSubcategoriesWithCategoryNameByQuestionId(question!.id);
-        setSubcategoriesRelatedToQuestion(data)
+        const subcategories = await fetchSubcategoriesByQuestionId(question!.id)
+
+        const data2: SubcategoryWithCategoryName[] = await Promise.all(
+            subcategories.map(async (subcategory) => {
+                const category = await fetchCategory(subcategory.category_id)
+                return {
+                    id: subcategory.id,
+                    name: subcategory.name,
+                    category_id: category.id,
+                    category_name: category.name,
+                }
+            })
+        )
+
+
+        setSubcategoriesRelatedToQuestion(data2)
     }
     return { 
         searchWord,

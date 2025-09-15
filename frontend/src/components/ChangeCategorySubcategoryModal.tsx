@@ -149,6 +149,8 @@ const ChangeCategorySubcategoryModal: React.FC<ChangeCategorySubcategoryProps> =
                             <div className="flex-1 overflow-y-auto">
                                 <div className="space-y-3">
                                     {subcategoriesWithCategoryName.map((subcategoryWithCategoryName) => (
+                                        console.log("subcategoryWithCategoryName:", subcategoryWithCategoryName),
+
                                         <label 
                                             key={subcategoryWithCategoryName.id}
                                             className="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-300 cursor-pointer transition-all group"
