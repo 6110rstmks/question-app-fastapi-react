@@ -17,19 +17,26 @@ from sqlalchemy.orm import Session, sessionmaker
 from models import Base
 from schemas.auth import DecodedToken
 from main import app
-from database import get_db
+from database import get_db, add_sync_schema
 from cruds.auth_crud import get_current_user
+from config import get_settings
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
+
 
 @pytest.fixture()
 def session_fixture():
+    SQLALCHEMY_DATABASE_URL = get_settings().sqlalchemy_database_url
+
     engine = create_engine(
         url="postgresql://sorasakamoto:password@localhost:5432/fleamarket",
         poolclass=StaticPool
     )
+    async_engine = create_async_engine(add_sync_schema(SQLALCHEMY_DATABASE_URL))
     Base.metadata.create_all(engine)
 
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-    db = SessionLocal()
+    AsyncSessionLocal = async_sessionmaker(autocommit=False, autoflush=False, bind=async_engine)
+    db = AsyncSessionLocal()
 
     try:
         yield db

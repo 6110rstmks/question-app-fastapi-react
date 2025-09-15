@@ -217,6 +217,8 @@ def git_push_json_file():
     
     REPO_DIR = os.path.abspath("")
     INDEX_ADD_FILE_PATH = os.path.join(EXPORT_DIR, "categories_export4.json")
+    print(INDEX_ADD_FILE_PATH)
+    print('パン')
     repo = Repo(REPO_DIR)
     repo.index.add([INDEX_ADD_FILE_PATH])
     is_untracked = INDEX_ADD_FILE_PATH not in repo.git.ls_files().splitlines()

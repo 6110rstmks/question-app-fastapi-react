@@ -66,7 +66,6 @@ export const ProblemNormalPage: React.FC<Props> = ({
 
         const fetchData = async () => {
             const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
-            console.log('data_subcategories_with_category_name', data_subcategories_with_category_name)
             setSubcategoriesWithCategoryName(data_subcategories_with_category_name)
         };
     
