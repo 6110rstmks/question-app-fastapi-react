@@ -9,9 +9,6 @@ from typing import Optional
 from src.repository.category_repository import CategoryRepository
 
 async def find_all_categories(db: AsyncSession)-> list[Category]:
-    """
-    全てのカテゴリを取得する。
-    """
     category_repository = CategoryRepository(db)
     return await category_repository.get_all()
 
@@ -84,8 +81,7 @@ async def find_category_by_id(
     id: int
 ) -> Optional["Category"]:
     category_repository = CategoryRepository(db)
-    category = await category_repository.get(id)
-    return category
+    return await category_repository.get(id)
 
 # あいまい検索
 def find_category_by_name(
@@ -108,7 +104,6 @@ def create(
     db: Session, 
     category_create: CategoryCreate
 ) -> Category:
-    
     
     # case insensitiveとする。
     existing_category = (
