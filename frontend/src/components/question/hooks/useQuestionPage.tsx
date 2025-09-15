@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import type { Category } from '../../../types/Category'
-import type { SubcategoryWithCategoryName } from '../../../types/Subcategory'
+import type { Subcategory2, SubcategoryWithCategoryName } from '../../../types/Subcategory'
 import type { Question } from '../../../types/Question'
-import { fetchSubcategoriesWithCategoryNameByQuestionId } from '../../../api/SubcategoryAPI'
+
+import { fetchCategory } from '../../../api/CategoryAPI'
+import { fetchSubcategoriesByQuestionId } from '../../../api/SubcategoryAPI'
 import { 
     deleteQuestion,
     incrementAnswerCount, 
@@ -14,6 +17,7 @@ import {
     handleKeyDownForShowAnswer 
 } from '../../../utils/function'
 import { handleNavigateToSubcategoryPage } from '../../../utils/navigate_function'
+
 
 export const useQuestionPage = (
     questionId: number,
@@ -81,7 +85,7 @@ export const useQuestionPage = (
         return () => {
             window.removeEventListener('keydown', onKeyDown)
         }
-    }, [handleKeyDownForShowAnswer, changeSubcategoryModalIsOpen, editModalIsOpen]);
+    }, [handleKeyDownForShowAnswer, changeSubcategoryModalIsOpen, editModalIsOpen])
 
     useEffect(() => {
         // 質問データを取得して設定
@@ -90,7 +94,20 @@ export const useQuestionPage = (
             setQuestion(questionData)
 
             // 所属するサブカテゴリを変更する際に使用する。
-            const data2: SubcategoryWithCategoryName[] = await fetchSubcategoriesWithCategoryNameByQuestionId(questionId);
+            const subcategories: Subcategory2[] = await fetchSubcategoriesByQuestionId(questionId)
+
+            const data2: SubcategoryWithCategoryName[] = await Promise.all(
+                subcategories.map(async (subcategory) => {
+                    const category = await fetchCategory(subcategory.category_id)
+                    return {
+                        id: subcategory.id,
+                        name: subcategory.name,
+                        category_id: category.id,
+                        category_name: category.name,
+                    }
+                })
+            )
+
             setSubcategoriesWithCategoryName(data2)
         })()
 

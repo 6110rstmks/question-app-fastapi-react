@@ -50,15 +50,6 @@ export const useQuestionListPage = () => {
 
         const question_data2: Question[] = await fetchQuestionsByProblemWord(searchWord) 
 
-                
-        // for (let i = 0; i < questions_data.length; i++) {
-        //     const category_id = (await fetchCategoryQuestionByQuestionId(questions_data[i].id)).category_id
-        //     const category = await fetchCategory(category_id)
-        //     const subcategory_id = (await fetchSubcategoriesQuestionsByQuestionId(questions_data[i].id))[0].subcategory_id
-        //     questions_data[i].category_name = category.name
-        //     questions_data[i].categoryId = category_id
-        //     questions_data[i].subcategoryId = subcategory_id
-        // }
         const question_data3: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] = await Promise.all(
             question_data2.map(async (q) => {
                 const { category_id } = await fetchCategoryQuestionByQuestionId(q.id);

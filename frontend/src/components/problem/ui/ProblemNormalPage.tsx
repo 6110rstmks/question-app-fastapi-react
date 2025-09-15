@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
-import type { SubcategoryWithCategoryName } from "../../../types/Subcategory"
-import type { Question } from "../../../types/Question";
-import { fetchSubcategoriesWithCategoryNameByQuestionId } from "../../../api/SubcategoryAPI"
+
+import type { Subcategory2, SubcategoryWithCategoryName } from "../../../types/Subcategory"
+import type { Question } from "../../../types/Question"
+import { fetchCategory } from "../../../api/CategoryAPI"
+import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI"
 import { BlockMath } from "react-katex"
 import Modal from 'react-modal'
 import QuestionEditModal from "../../question/QuestionEditModal"
@@ -65,9 +67,22 @@ export const ProblemNormalPage: React.FC<Props> = ({
         // )
 
         const fetchData = async () => {
-            const data_subcategories_with_category_name = await fetchSubcategoriesWithCategoryNameByQuestionId(problem.id)
-            setSubcategoriesWithCategoryName(data_subcategories_with_category_name)
-        };
+            const subcategories: Subcategory2[] = await fetchSubcategoriesByQuestionId(problem.id)
+            
+            const data2: SubcategoryWithCategoryName[] = await Promise.all(
+                subcategories.map(async (subcategory) => {
+                    const category = await fetchCategory(subcategory.category_id)
+                    return {
+                        id: subcategory.id,
+                        name: subcategory.name,
+                        category_id: category.id,
+                        category_name: category.name,
+                    }
+                })
+            )
+
+            setSubcategoriesWithCategoryName(data2)
+        }
     
         fetchData()
     }, [problem])
