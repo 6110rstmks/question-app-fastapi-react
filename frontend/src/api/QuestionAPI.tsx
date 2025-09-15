@@ -35,7 +35,7 @@ export const fetchQuestionsBySubcategoryId = async (
 export const fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord = async (
     searchWord: string
 ): Promise<QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[]> => {
-    const url = `http://localhost:8000/questions/?searchWord=${searchWord}`;
+    const url = `http://localhost:8000/questions/?searchWord=${searchWord}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -98,8 +98,8 @@ export const fetchQuestionCountsByLastAnsweredDate = async (
 
     const data: Record<string, number> = await response.json();
     
-    return data;
-};
+    return data
+}
 
 // Questionのanswer_countをインクリメントするAPI
 export const incrementAnswerCount = async (

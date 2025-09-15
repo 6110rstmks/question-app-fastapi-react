@@ -1,4 +1,4 @@
-import { SolutionStatus } from './SolutionStatus';
+import { SolutionStatus } from './SolutionStatus'
 
 export interface Question {
     id: number
