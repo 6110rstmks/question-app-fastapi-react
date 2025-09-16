@@ -3,12 +3,12 @@ import { useNavigate } from "react-router"
 
 
 import type { Category } from "../../../types/Category"
-import type { SubcategoryWithQuestionCount } from "../../../types/Subcategory"
+import type { Subcategory2, SubcategoryWithQuestionCount } from "../../../types/Subcategory"
 import type { Question } from '../../../types/Question'
 
 
 import { fetchCategory } from "../../../api/CategoryAPI"
-import { fetchSubcategoriesWithQuestionCountByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI"
+import { createSubcategory, fetchSubcategoriesByCategoryId } from "../../../api/SubcategoryAPI"
 import { 
     fetchUncorrectedQuestionCountByCategoryId,
     fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth,
@@ -151,8 +151,21 @@ export const useCategoryPage = (categoryId: number) => {
 
     useEffect(() => {
         (async () => {
-            const subcategories: SubcategoryWithQuestionCount[] = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId, searchWord);
-            setSubcategories(subcategories)
+            // const subcategories: SubcategoryWithQuestionCount[] = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId, searchWord)
+            const subcategories: Subcategory2[] = await fetchSubcategoriesByCategoryId(categoryId)
+
+            const subcategoriesWithCount: SubcategoryWithQuestionCount[] = await Promise.all(
+                subcategories.map(async (subcategory) => {
+                    const questionCount = await fetchQuestionCountByCategoryId(subcategory.id)
+                    return {
+                        id: subcategory.id,
+                        name: subcategory.name,
+                        categoryId: subcategory.category_id,
+                        question_count: questionCount || 0
+                    }
+                })
+            )
+            setSubcategories(subcategoriesWithCount)
         })()
     }, [searchWord])
 

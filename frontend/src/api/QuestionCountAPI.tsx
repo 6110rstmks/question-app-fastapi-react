@@ -23,7 +23,7 @@ export const fetchQuestionCountByCategoryId = async (
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 //  サブカテゴリ内のQuestionの数を取得するAPI
