@@ -18,13 +18,11 @@ const QuestionEditModal: React.FC<QuestionEditProps> = ({
     const { 
         inputProblemValue,
         inputAnswerValue,
-        isCorrect,
         inputMemoValue,
         setInputMemoValue,
         setInputAnswerValue,
         updateQuestion,
         setInputProblemValue,
-        handleIsCorrectChange,
         handleCloseModal,
         handleAnswerChange
     } = useQuestionEditModal(
