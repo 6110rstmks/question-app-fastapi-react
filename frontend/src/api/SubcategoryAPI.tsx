@@ -94,13 +94,3 @@ export const fetchSubcategoriesWithQuestionCountByCategoryId = async (
     }
 }
 
-export const fetchSubcategoriesWithCategoryNameByQuestionId = async (
-    question_id: number
-) => {
-    const response = await fetch(`http://localhost:8000/subcategories/WithCategoryName/question_id/${question_id}`)
-    if (response.ok) {
-        return response.json()
-    }
-}
-
-

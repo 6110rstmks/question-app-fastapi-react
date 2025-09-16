@@ -55,13 +55,13 @@ export const useCategoryPage = (categoryId: number) => {
     }
 
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
-        setSubcategories((prev) => [...prev, subcategory]);
+        setSubcategories((prev) => [...prev, subcategory])
     }
 
     const handleSetUnsolvedProblem = async () => {
         const response = await fetchProblem('category', 'incorrect', 4, [categoryId], [])
         if (!response.ok) {
-            alert('出題する問題がありません。');
+            alert('出題する問題がありません。')
             return
         }
         const problemData = await response.json()
@@ -94,7 +94,7 @@ export const useCategoryPage = (categoryId: number) => {
     const handleSetSolvedProblem = async () => {
         const response = await fetchProblem('category', 'correct', 4, [categoryId], [])
         if (!response.ok) {
-            alert('出題する問題がありません。');
+            alert('出題する問題がありません。')
             return
         }
         const problemData = await response.json()
@@ -109,16 +109,18 @@ export const useCategoryPage = (categoryId: number) => {
 
     const handleAddSubcategory = async () => {
         if (!subcategoryName.trim()) {
-            alert('サブカテゴリー名を入力してください');
+            alert('サブカテゴリー名を入力してください')
             return
         }
-        const response = await createSubcategory(subcategoryName, categoryId);
+        const response = await createSubcategory(subcategoryName, categoryId)
         if (!response.ok) {
             const data = await response.json()
             alert(data.detail)
             return
         }
         const data = await response.json() as SubcategoryWithQuestionCount
+        console.log(data)
+        console.log('doudou')
         addSubcategory(data)
         setSubcategoryName("")
     }
@@ -127,8 +129,8 @@ export const useCategoryPage = (categoryId: number) => {
         window.scrollTo(0, 0);
 
         (async () => {
-            const category = await fetchCategory(categoryId);
-            setCategory(category);
+            const category = await fetchCategory(categoryId)
+            setCategory(category)
 
             const questionCount = await fetchQuestionCountByCategoryId(categoryId)
             setQuestionCount(questionCount)
@@ -149,7 +151,7 @@ export const useCategoryPage = (categoryId: number) => {
         (async () => {
             const subcategories: SubcategoryWithQuestionCount[] = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId, searchWord);
             setSubcategories(subcategories)
-        })();
+        })()
     }, [searchWord])
 
     return { 
@@ -167,5 +169,5 @@ export const useCategoryPage = (categoryId: number) => {
         handleSetUnsolvedProblem,
         handleSetTemporaryProblem,
         handleSetSolvedProblem
-    };
-};
+    }
+}
