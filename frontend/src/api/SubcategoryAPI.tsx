@@ -1,4 +1,4 @@
-import type { Subcategory, Subcategory2 } from '../types/Subcategory'
+import type { Subcategory, OriginalSubcategory } from '../types/Subcategory'
 
 // ホーム画面の初期状態にて、サブカテゴリー一覧を取得するためのAPI
 // 問題文検索を行った際も、以下のAPIでカテゴリー一覧を取得する
@@ -13,7 +13,7 @@ export const fetchSubcategoriesForHomePage = async (
     if (!response.ok) {
         throw new Error("Failed to fetch subcategories")
     }
-    const data: Subcategory2[] = await response.json()
+    const data: OriginalSubcategory[] = await response.json()
 
     return data.map(({ id, name, category_id }) => ({
         id,
@@ -29,7 +29,7 @@ export const fetchSubcategoriesByCategoryId = async (
     if (!response.ok) {
         throw new Error("Failed to fetch subcategories")
     }
-    const data: Subcategory2[] = await response.json()
+    const data: OriginalSubcategory[] = await response.json()
 
     return data.map(({ id, name, category_id }) => ({
         id,
@@ -45,7 +45,7 @@ export const fetchSubcategoriesByQuestionId = async (
     if (!response.ok) {
         return response.json()
     }
-    const data: Subcategory2[] = await response.json()
+    const data: OriginalSubcategory[] = await response.json()
 
     return data.map(({ id, name, category_id }) => ({
         id,
@@ -81,7 +81,7 @@ export const fetchSubcategory = async (
     if (!response.ok) {
         throw new Error("Failed to fetch subcategory")
     }
-    const data: Subcategory2 = await response.json()
+    const data: OriginalSubcategory = await response.json()
     return {
         id: data.id,
         name: data.name,
@@ -106,7 +106,7 @@ export const createSubcategory = async (
         throw new Error('Failed to create subcategory')
     }
 
-    const data: Subcategory2 = await response.json()
+    const data: OriginalSubcategory = await response.json()
 
     return {
         id: data.id,

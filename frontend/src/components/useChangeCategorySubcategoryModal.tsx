@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import type { Category } from '../types/Category'
-import type { Subcategory, Subcategory2, SubcategoryWithCategoryName  } from '../types/Subcategory'
+import type { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
 import type { Question } from '../types/Question'
 import type { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 import { fetchCategory, fetchCategoriesBySearchWord } from '../api/CategoryAPI'
@@ -162,15 +162,13 @@ export const useCategoryPage = (
 
             for (const subcategoryquestion of transformedSubcategoryQuestionData) {
 
-                const subcategoryData: Subcategory2 = await fetchSubcategory(subcategoryquestion.subcategoryId)
+                const subcategoryData: Subcategory = await fetchSubcategory(subcategoryquestion.subcategoryId)
  
-                const categoryData: Category = await fetchCategory(subcategoryData.category_id)
+                const categoryData: Category = await fetchCategory(subcategoryData.categoryId)
 
                 const mergedData = {
-                    id: subcategoryData.id,
-                    name: subcategoryData.name,
-                    categoryId: subcategoryData.category_id,   // snake_case → camelCase
-                    categoryName: categoryData.name,         // category_name → categoryName
+                    ...subcategoryData,
+                    categoryName: categoryData.name,
                 };
 
                 linkedSubcategories.push(mergedData)

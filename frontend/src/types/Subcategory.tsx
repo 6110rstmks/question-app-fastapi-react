@@ -4,7 +4,7 @@ export interface Subcategory {
     categoryId: number
 }
 
-export interface Subcategory2 {
+export interface OriginalSubcategory {
     id: number
     name: string
     category_id: number
