@@ -1,4 +1,4 @@
-import type { Subcategory, Subcategory2 } from '../types/Subcategory'
+import type { Subcategory2 } from '../types/Subcategory'
 
 // ホーム画面の初期状態にて、サブカテゴリー一覧を取得するためのAPI
 // 問題文検索を行った際も、以下のAPIでカテゴリー一覧を取得する
@@ -73,22 +73,6 @@ export const createSubcategory = async (
 
 export const fetchSubcategoriesByCategoryId = async (category_id: number) => {
     const response = await fetch(`http://localhost:8000/subcategories/category_id/${category_id}`);
-    if (response.ok) {
-        return response.json()
-    }
-}
-
-export const fetchSubcategoriesWithQuestionCountByCategoryId = async (
-    category_id: number, 
-    searchSubcategoryWord?: string
-) => {
-    let url = `http://localhost:8000/subcategories/WithQuestionCount/category_id/${category_id}`
-
-    if (searchSubcategoryWord) {
-        url += `?searchSubcategoryWord=${searchSubcategoryWord}`
-    }
-    const response = await fetch(url)
-
     if (response.ok) {
         return response.json()
     }
