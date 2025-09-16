@@ -18,7 +18,7 @@ export const fetchProblem = async (
     problemCount: number,
     selectedCategoryIds?: number[],
     selectedSubcategoryIds?: number[]
-) => {
+): Promise<Question[]> => {
     const url = 'http://localhost:8000/problems/'
     const response = await fetch(url, {
         method: 'POST',
@@ -33,7 +33,7 @@ export const fetchProblem = async (
             subcategory_ids: selectedSubcategoryIds
         }),
     })
-    return response
+    return response.json()
 }
 
 /**

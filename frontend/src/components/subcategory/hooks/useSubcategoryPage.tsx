@@ -72,13 +72,14 @@ export const useSubcategoryPage = (
     }
 
     const handleSetTemporaryProblem = async () => {
-        const response = await fetchProblem('subcategory', 'temporary', 4, [], [subcategoryId]);
-        if (!response.ok) {
+        const problemData: Question[] = await fetchProblem('subcategory', 'temporary', 4, [], [subcategoryId]);
+
+        if (problemData.length === 0) {
             alert('出題する問題がありません。');
-            return
+            return;
         }
-        const problemData = await response.json();
-        navigate('/problem', { 
+
+        navigate('/problem', {
             state: {
                 problemData, 
                 from: 'subcategoryPage',
@@ -88,14 +89,15 @@ export const useSubcategoryPage = (
     }
 
     const handleSetUnsolvedProblem = async () => {
-        const response = await fetchProblem('subcategory', 'incorrect', 4, [], [subcategoryId]);
-        if (!response.ok) {
+        const problemData: Question[] = await fetchProblem('subcategory', 'incorrect', 4, [], [subcategoryId]);
+
+
+        if (problemData.length === 0) {
             alert('出題する問題がありません。');
-            return 
+            return;
         }
 
-        const problemData = await response.json();
-        navigate('/problem', { 
+        navigate('/problem', {
             state: {
                 problemData, 
                 from: 'subcategoryPage',

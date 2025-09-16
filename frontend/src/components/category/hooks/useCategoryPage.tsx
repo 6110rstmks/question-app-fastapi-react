@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react'
-import type { SubcategoryWithQuestionCount } from "../../../types/Subcategory"
-import { fetchSubcategoriesWithQuestionCountByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI"
-import { fetchCategory } from "../../../api/CategoryAPI"
-import type { Category } from "../../../types/Category"
-import { fetchProblem } from '../../../api/ProblemAPI'
 import { useNavigate } from "react-router"
+
+
+import type { Category } from "../../../types/Category"
+import type { SubcategoryWithQuestionCount } from "../../../types/Subcategory"
+import type { Question } from '../../../types/Question'
+
+
+import { fetchCategory } from "../../../api/CategoryAPI"
+import { fetchSubcategoriesWithQuestionCountByCategoryId, createSubcategory } from "../../../api/SubcategoryAPI"
 import { 
     fetchUncorrectedQuestionCountByCategoryId,
     fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth,
     fetchQuestionCountByCategoryId,
     fetchTemporaryQuestionCountByCategoryIdOrderThanXDays
 } from '../../../api/QuestionCountAPI'
+import { fetchProblem } from '../../../api/ProblemAPI'
 
 
 export const useCategoryPage = (categoryId: number) => {
@@ -59,12 +64,12 @@ export const useCategoryPage = (categoryId: number) => {
     }
 
     const handleSetUnsolvedProblem = async () => {
-        const response = await fetchProblem('category', 'incorrect', 4, [categoryId], [])
-        if (!response.ok) {
+        const problemData = await fetchProblem('category', 'incorrect', 4, [categoryId], [])
+        if (problemData.length === 0) {
             alert('出題する問題がありません。')
             return
         }
-        const problemData = await response.json()
+
         navigate('/problem', { 
             state: {
                 problemData, 
@@ -75,29 +80,26 @@ export const useCategoryPage = (categoryId: number) => {
     }
 
     const handleSetTemporaryProblem = async () => {
-        const response = await fetchProblem('category', 'temporary', 4, [categoryId], [])
-        if (!response.ok) {
-            const data = await response.json()
-            alert(data.detail)
-        } else {
-            const problemData = await response.json()
-            navigate('/problem', { 
-                state: {
-                    problemData, 
-                    from: 'categoryPage',
-                    backToId: categoryId
-                }
-            })
-        }
-    }
-
-    const handleSetSolvedProblem = async () => {
-        const response = await fetchProblem('category', 'correct', 4, [categoryId], [])
-        if (!response.ok) {
+        const problemData: Question[] = await fetchProblem('category', 'temporary', 4, [categoryId], [])
+        if (problemData.length === 0) {
             alert('出題する問題がありません。')
             return
         }
-        const problemData = await response.json()
+        navigate('/problem', { 
+            state: {
+                problemData, 
+                from: 'categoryPage',
+                backToId: categoryId
+            }
+        })
+    }
+
+    const handleSetSolvedProblem = async () => {
+        const problemData: Question[] = await fetchProblem('category', 'correct', 4, [categoryId], [])
+        if (problemData.length === 0) {
+            alert('出題する問題がありません。')
+            return
+        }
         navigate('/problem', { 
             state: {
                 problemData, 
