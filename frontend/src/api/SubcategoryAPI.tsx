@@ -76,12 +76,17 @@ export const updateSubcategoryName = async (
 
 export const fetchSubcategory = async (
     subcategory_id: number
-): Promise<Subcategory2> => {
+): Promise<Subcategory> => {
     const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`)
-    if (response.ok) {
-        return response.json()
+    if (!response.ok) {
+        throw new Error("Failed to fetch subcategory")
     }
-    throw new Error("Failed to fetch subcategory")
+    const data: Subcategory2 = await response.json()
+    return {
+        id: data.id,
+        name: data.name,
+        categoryId: data.category_id,
+    }
 }
 
 export const createSubcategory = async (

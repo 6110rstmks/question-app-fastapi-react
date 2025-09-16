@@ -1,16 +1,17 @@
 import { useEffect, useState, useRef } from 'react'
 import { fetchSubcategory } from '../../../api/SubcategoryAPI'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { 
-    fetchQuestionsBySubcategoryId,
-} from '../../../api/QuestionAPI'
-import { fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
 
+import type { Subcategory } from '../../../types/Subcategory'
 import type { Question } from '../../../types/Question'
-import { updateSubcategoryName } from '../../../api/SubcategoryAPI'
+
 import { handleKeyDownForShowAnswer } from '../../../utils/function'
-import { fetchProblem } from '../../../api/ProblemAPI'
 import { handleNavigateToCategoryPage } from '../../../utils/navigate_function'
+
+import { updateSubcategoryName } from '../../../api/SubcategoryAPI'
+import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
+import { fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
+import { fetchProblem } from '../../../api/ProblemAPI'
 // interface locationState {
 //     categoryId: number
 //     categoryName: string
@@ -19,9 +20,9 @@ import { handleNavigateToCategoryPage } from '../../../utils/navigate_function'
 // }
 
 interface categoryInfo {
-    id: number;
-    name: string;
-    userId: number;
+    id: number
+    name: string
+    userId: number
 }
 
 export const useSubcategoryPage = (
@@ -67,15 +68,15 @@ export const useSubcategoryPage = (
     const handleKeyPress = async (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
             setIsEditing(false);
-            await updateSubcategoryName(subcategoryId, subcategoryName);
+            await updateSubcategoryName(subcategoryId, subcategoryName)
         }
     }
 
     const handleSetTemporaryProblem = async () => {
-        const problemData: Question[] = await fetchProblem('subcategory', 'temporary', 4, [], [subcategoryId]);
+        const problemData: Question[] = await fetchProblem('subcategory', 'temporary', 4, [], [subcategoryId])
 
         if (problemData.length === 0) {
-            alert('出題する問題がありません。');
+            alert('出題する問題がありません。')
             return;
         }
 
@@ -166,17 +167,17 @@ export const useSubcategoryPage = (
         window.scrollTo(0, 0);
 
         (async () => {
-            const questions_data = await fetchQuestionsBySubcategoryId(subcategoryId)
+            const questions_data: Question[] = await fetchQuestionsBySubcategoryId(subcategoryId)
             setQuestions(questions_data)
 
-            const subcategory_data = await fetchSubcategory(subcategoryId)
+            const subcategory_data: Subcategory = await fetchSubcategory(subcategoryId)
             setSubcategoryName(subcategory_data.name)
 
-            const uncorrectedQuestionCount = await fetchUncorrectedQuestionCountBySubcategoryId(subcategoryId)
+            const uncorrectedQuestionCount: number = await fetchUncorrectedQuestionCountBySubcategoryId(subcategoryId)
             setUncorrectedQuestionCount(uncorrectedQuestionCount)
 
             setQuestionCount(questions_data.length)
-        })();
+        })()
 
         // これなくてもいい気がする。
         // 単体テスト項目書を作成して手動で一通りテストする。

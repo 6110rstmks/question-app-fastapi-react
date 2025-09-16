@@ -78,7 +78,7 @@ const QuestionPage: React.FC = () => {
                             to={`/category/${categoryId}`}
                             className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200 hover:underline"
                         >
-                            {subcategoryWithCategoryName.category_name}
+                            {subcategoryWithCategoryName.categoryName}
                         </Link>
                         <span className="text-gray-400 select-none">›</span>
                         <Link
