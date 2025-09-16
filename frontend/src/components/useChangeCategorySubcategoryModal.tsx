@@ -127,8 +127,8 @@ export const useCategoryPage = (
         subcategories_data.map(sub => ({
             id: sub.id,
             name: sub.name,
-            category_id: sub.categoryId,
-            category_name: category.name,
+            categoryId: sub.categoryId,
+            categoryName: category.name,
         }))
         setSearchFlg(true)
         setDisplayedCategoryName(category.name)
@@ -145,8 +145,8 @@ export const useCategoryPage = (
             subcategories_data.map(sub => ({
                 id: sub.id,
                 name: sub.name,
-                category_id: category_data.id, // camelCase → snake_case
-                category_name: category_data.name,
+                categoryId: category_data.id, // camelCase → snake_case
+                categoryName: category_data.name,
             }))
 
             setSubcategoriesWithCategoryName(subcategories_with_category)
@@ -158,7 +158,7 @@ export const useCategoryPage = (
             }))
 
 
-            const linkedSubcategories = []
+            const linkedSubcategories: SubcategoryWithCategoryName[] = []
 
             for (const subcategoryquestion of transformedSubcategoryQuestionData) {
 
@@ -169,8 +169,8 @@ export const useCategoryPage = (
                 const mergedData = {
                     id: subcategoryData.id,
                     name: subcategoryData.name,
-                    category_id: subcategoryData.category_id,   // snake_case → camelCase
-                    category_name: categoryData.name,         // category_name → categoryName
+                    categoryId: subcategoryData.category_id,   // snake_case → camelCase
+                    categoryName: categoryData.name,         // category_name → categoryName
                 };
 
                 linkedSubcategories.push(mergedData)
@@ -229,17 +229,15 @@ export const useCategoryPage = (
 
         alert('所属するサブカテゴリが変更されました。')
         setModalIsOpen(false)
-        
-        const subcategories = await fetchSubcategoriesByQuestionId(question!.id)
+
+        const subcategories: Subcategory[] = await fetchSubcategoriesByQuestionId(question!.id)
 
         const data2: SubcategoryWithCategoryName[] = await Promise.all(
             subcategories.map(async (subcategory) => {
-                const category = await fetchCategory(subcategory.category_id)
+                const category = await fetchCategory(subcategory.categoryId)
                 return {
-                    id: subcategory.id,
-                    name: subcategory.name,
-                    category_id: category.id,
-                    category_name: category.name,
+                    ...subcategory,
+                    categoryName: category.name,
                 }
             })
         )

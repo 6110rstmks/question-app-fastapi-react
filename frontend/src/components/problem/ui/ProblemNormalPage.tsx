@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
 
-import type { Subcategory2, SubcategoryWithCategoryName } from "../../../types/Subcategory"
+import type { Subcategory, SubcategoryWithCategoryName } from "../../../types/Subcategory"
 import type { Question } from "../../../types/Question"
 import { fetchCategory } from "../../../api/CategoryAPI"
 import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI"
@@ -67,16 +67,16 @@ export const ProblemNormalPage: React.FC<Props> = ({
         // )
 
         const fetchData = async () => {
-            const subcategories: Subcategory2[] = await fetchSubcategoriesByQuestionId(problem.id)
+            const subcategories: Subcategory[] = await fetchSubcategoriesByQuestionId(problem.id)
             
             const data2: SubcategoryWithCategoryName[] = await Promise.all(
                 subcategories.map(async (subcategory) => {
-                    const category = await fetchCategory(subcategory.category_id)
+                    const category = await fetchCategory(subcategory.categoryId)
                     return {
                         id: subcategory.id,
                         name: subcategory.name,
-                        category_id: category.id,
-                        category_name: category.name,
+                        categoryId: category.id,
+                        categoryName: category.name,
                     }
                 })
             )
@@ -95,20 +95,20 @@ export const ProblemNormalPage: React.FC<Props> = ({
                     {currentProblemIndex + 1} / {problemLength}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                    {subcategoriesWithCategoryName.map((subcategoryWithCategoryName, index) => (         
+                    {subcategoriesWithCategoryName.map((subcategoryWithCategoryName: SubcategoryWithCategoryName, index) => (         
                         <div key={index} className="flex items-center text-sm">
                             <Link 
-                                to={`/category/${subcategoryWithCategoryName.category_id}`}
+                                to={`/category/${subcategoryWithCategoryName.categoryId}`}
                                 className="text-blue-600 hover:text-blue-800 underline"
                             >
-                                {subcategoryWithCategoryName.category_name}
+                                {subcategoryWithCategoryName.categoryName}
                             </Link>
                             <span className="mx-2 text-gray-400">＞</span>
                             <Link
                                 to={`/subcategory/${subcategoryWithCategoryName.id}`}
                                 state={{ 
-                                    id: subcategoryWithCategoryName.category_id, 
-                                    name: subcategoryWithCategoryName.category_name 
+                                    id: subcategoryWithCategoryName.categoryId, 
+                                    name: subcategoryWithCategoryName.categoryName 
                                 }}
                                 className="text-blue-600 hover:text-blue-800 underline"
                             >
@@ -183,8 +183,8 @@ export const ProblemNormalPage: React.FC<Props> = ({
                     contentLabel="カテゴリ変更モーダル"
                 >
                     <ChangeCategorySubcategory
-                        categoryId={subcategoriesWithCategoryName[0]?.category_id || 0}
-                        defaultCategoryName={subcategoriesWithCategoryName[0]?.category_name || ''}
+                        categoryId={subcategoriesWithCategoryName[0]?.categoryId || 0}
+                        defaultCategoryName={subcategoriesWithCategoryName[0]?.categoryName || ''}
                         question={localProblem}
                         setModalIsOpen={setChangeSubcategoryModalIsOpen}
                         setSubcategoriesRelatedToQuestion={setSubcategoriesWithCategoryName}

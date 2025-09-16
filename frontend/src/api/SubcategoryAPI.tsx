@@ -24,22 +24,28 @@ export const fetchSubcategoriesByCategoryId = async (
         throw new Error("Failed to fetch subcategories")
     }
     const data: Subcategory2[] = await response.json()
-    const subcategories: Subcategory[] = data.map((item) => ({
-        id: item.id,
-        name: item.name,
-        categoryId: item.category_id
+
+    return data.map(({ id, name, category_id }) => ({
+        id,
+        name,
+        categoryId: category_id,
     }))
-    return subcategories
 }
 
 export const fetchSubcategoriesByQuestionId = async (
     question_id: number
-): Promise<Subcategory2[]> => {
+): Promise<Subcategory[]> => {
     const response = await fetch(`http://localhost:8000/subcategories/question_id/${question_id}`)
-    if (response.ok) {
+    if (!response.ok) {
         return response.json()
     }
-    throw new Error("Failed to fetch subcategory")
+    const data: Subcategory2[] = await response.json()
+
+    return data.map(({ id, name, category_id }) => ({
+        id,
+        name,
+        categoryId: category_id,
+    }))
 }
 
 export const updateSubcategoryName = async (
