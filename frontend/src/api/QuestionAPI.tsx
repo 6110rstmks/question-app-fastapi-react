@@ -64,13 +64,7 @@ export const updateQuestionIsCorrect = async (question: Question): Promise<void>
     return response.json()
 }
 
-// Questionを削除するAPI
-export const deleteQuestion = async (question_id: number): Promise<void> => {
-    const response = await fetch(`http://localhost:8000/questions/${question_id}`, {
-        method: 'DELETE',
-    })
-    return response.json()
-}
+
 
 // Calendar.tsxで使用する
 // 日付ごとの問題数を取得するAPI
@@ -125,3 +119,10 @@ export const updateLastAnsweredDate = async (
     return response.json()
 }
 
+// Questionを削除するAPI
+export const deleteQuestion = async (question_id: number): Promise<void> => {
+    const response = await fetch(`http://localhost:8000/questions/${question_id}`, {
+        method: 'DELETE',
+    })
+    return response.json()
+}

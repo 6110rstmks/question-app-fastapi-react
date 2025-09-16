@@ -12,12 +12,6 @@ import { updateSubcategoryName } from '../../../api/SubcategoryAPI'
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
 import { fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
 import { fetchProblem } from '../../../api/ProblemAPI'
-// interface locationState {
-//     categoryId: number
-//     categoryName: string
-//     subcategoryId: number
-//     subcategoryName: string
-// }
 
 interface categoryInfo {
     id: number
@@ -55,13 +49,13 @@ export const useSubcategoryPage = (
     // サブカテゴリ名の編集モードの状態を管理
     const [isEditing, setIsEditing] = useState<boolean>(false)
     // 回答の表示非表示ボタンの状態を管理
-    const [showAnswer, setShowAnswer] = useState(false) 
+    const [showAnswer, setShowAnswer] = useState<boolean>(false) 
 
     // リロードした際はここから取得する
 
     const [categoryInfo, setCategoryInfo] = useState<categoryInfo>(() => {
-        const saved = localStorage.getItem('categoryInfo');
-        return saved ? JSON.parse(saved) : { id: 0, name: '', userId: 0 };
+        const saved = localStorage.getItem('categoryInfo')
+        return saved ? JSON.parse(saved) : { id: 0, name: '', userId: 0 }
     })
 
     // エンターキーで編集モードを終了し、サブカテゴリ名を更新
@@ -90,12 +84,11 @@ export const useSubcategoryPage = (
     }
 
     const handleSetUnsolvedProblem = async () => {
-        const problemData: Question[] = await fetchProblem('subcategory', 'incorrect', 4, [], [subcategoryId]);
-
+        const problemData: Question[] = await fetchProblem('subcategory', 'incorrect', 4, [], [subcategoryId])
 
         if (problemData.length === 0) {
-            alert('出題する問題がありません。');
-            return;
+            alert('出題する問題がありません。')
+            return
         }
 
         navigate('/problem', {
@@ -104,7 +97,7 @@ export const useSubcategoryPage = (
                 from: 'subcategoryPage',
                 backToId: subcategoryId
             }
-        });
+        })
     }
 
     //「削除」と入力してクリックすることで削除が実行される。
@@ -124,7 +117,7 @@ export const useSubcategoryPage = (
 
         const response = await fetch(`http://localhost:8000/subcategories/${subcategoryId}`, {
             method: 'DELETE',
-        });
+        })
         if (!response.ok) {
             prompt('Failed to delete subcategory')
         }
@@ -138,11 +131,11 @@ export const useSubcategoryPage = (
     
     useEffect(() => {
         if (isFirstRender.current) {
-            isFirstRender.current = false;
-            return;
+            isFirstRender.current = false
+            return
         }
 
-        const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer);
+        const onKeyDown = (event: KeyboardEvent) => handleKeyDownForShowAnswer(event, setShowAnswer)
 
         if (!modalIsOpen && !isEditing) {
             window.addEventListener('keydown', onKeyDown)

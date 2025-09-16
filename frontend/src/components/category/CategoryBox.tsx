@@ -40,7 +40,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         searchQuestionWord,
         searchAnswerWord
     })
-    const totalQuestions = subcategoriesWithQuestionCount.reduce((sum, sub) => sum + sub.question_count, 0);
+    const totalQuestions = subcategoriesWithQuestionCount.reduce((sum, sub) => sum + sub.questionCount, 0);
 
     const navigate = useNavigate()
 
@@ -161,7 +161,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
                                 <div className="flex items-center gap-2">
                                     <div className="flex items-center gap-1 bg-white px-2 py-1 rounded-md border border-gray-200 group-hover/item:border-blue-200 transition-colors">
                                         <span className="text-sm font-medium text-gray-600 group-hover/item:text-blue-600">
-                                            {subcategory.question_count || 0}
+                                            {subcategory.questionCount || 0}
                                         </span>
                                         <span className="text-xs text-gray-500">問</span>
                                     </div>

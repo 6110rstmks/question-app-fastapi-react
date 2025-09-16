@@ -145,7 +145,7 @@ const CategoryPage: React.FC = () => {
                                             </span>
                                         </div>
                                         <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-2 py-1 rounded-full shrink-0 ml-2">
-                                            {subcategory.question_count}
+                                            {subcategory.questionCount}
                                         </span>
                                     </div>
                                 </div>

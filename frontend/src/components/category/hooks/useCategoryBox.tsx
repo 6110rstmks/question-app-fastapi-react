@@ -49,7 +49,7 @@ export const useCategoryBox = ({
         if (subcategoriesWithQuestionCount.length < 6) {
             const subcategoryWithQuestionCount: SubcategoryWithQuestionCount = {
                 ...data,
-                question_count: 0 // 新規作成したサブカテゴリーの質問数は0で初期化
+                questionCount: 0 // 新規作成したサブカテゴリーの質問数は0で初期化
             }
             addSubcategory(subcategoryWithQuestionCount)
         }
@@ -84,7 +84,7 @@ export const useCategoryBox = ({
                     const questionCount = await fetchQuestionCountBySubcategoryId(subcategory.id)
                     return {
                         ...subcategory,
-                        question_count: questionCount
+                        questionCount: questionCount
                     }
                 })
             )

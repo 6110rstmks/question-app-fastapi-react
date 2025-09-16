@@ -114,16 +114,17 @@ export const useCategoryPage = (categoryId: number) => {
             alert('サブカテゴリー名を入力してください')
             return
         }
-        const response = await createSubcategory(subcategoryName, categoryId)
-        if (!response.ok) {
-            const data = await response.json()
-            alert(data.detail)
+        const subcategory: Subcategory = await createSubcategory(subcategoryName, categoryId)
+        if (!subcategory) {
+            alert('サブカテゴリーの作成に失敗しました')
             return
         }
-        const data = await response.json() as SubcategoryWithQuestionCount
-        console.log(data)
-        console.log('doudou')
-        addSubcategory(data)
+
+        const subcategoryWithQuestionCount: SubcategoryWithQuestionCount = {
+            ...subcategory,
+            questionCount: 0 // 新規作成したサブカテゴリーの質問数は0で初期化
+        }
+        addSubcategory(subcategoryWithQuestionCount)
         setSubcategoryName("")
     }
 
@@ -158,7 +159,7 @@ export const useCategoryPage = (categoryId: number) => {
                     const questionCount = await fetchQuestionCountByCategoryId(subcategory.id)
                     return {
                         ...subcategory,
-                        question_count: questionCount
+                        questionCount: questionCount
                     }
                 })
             )
