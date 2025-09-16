@@ -5,12 +5,12 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
 
 
-from schemas.subcategory import SubcategoryResponse, SubcategoryUpdateSchema, SubcategoryResponseWithQuestionCount, SubcategoryWithCategoryNameResponse, SubcategoryCreateSchema
+from schemas.subcategory import SubcategoryResponse, SubcategoryUpdateSchema, SubcategoryCreateSchema
 from database import get_db, get_session
 from cruds import subcategory_crud, category_crud
 
 
-from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryCreate, SubcategoryUpdate
+from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryUpdate
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository
 
 
@@ -42,13 +42,6 @@ async def find_subcategories_by_question_id(
     return await subcategory_repository.find_by_ids(subcategory_ids)
 
 
-@router.get("/WithCategoryName/question_id/{question_id}", response_model=list[SubcategoryWithCategoryNameResponse], status_code=status.HTTP_200_OK)
-async def find_subcategories_with_category_name_by_question_id(
-    db: DbDependency,
-    question_id: int = Path(gt=0)
-):
-    return subcategory_crud.find_subcategories_with_category_name_by_question_id(db, question_id)
-
 
 @router.get("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def find_subcategory_by_id(
@@ -60,16 +53,6 @@ async def find_subcategory_by_id(
         raise HTTPException(status_code=404, detail="Subcategory not found")
     return found_subcategory
 
-@router.get("/WithQuestionCount/category_id/{category_id}", response_model=list[SubcategoryResponseWithQuestionCount], status_code=status.HTTP_200_OK)
-async def find_subcategories_with_question_count_in_category(
-    db: AsyncDbDependency, 
-    category_id: int = Path(gt=0),
-    limit: Optional[int] = None,
-    searchSubcategoryWord: Optional[str] = None,
-    searchQuestionWord: Optional[str] = None,
-    searchAnswerWord: Optional[str] = None
-):
-    return await subcategory_crud.find_subcategories_in_categorybox(db, category_id, limit, searchSubcategoryWord, searchQuestionWord, searchAnswerWord)
 
 @router.get("/", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_by_name(
@@ -84,6 +67,7 @@ async def find_by_category_id(
     category_id: int = Path(gt=0)
 ):
     return await subcategory_crud.find_subcategories_by_category_id(db, category_id)
+
 
 @router.put("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
 async def update(
