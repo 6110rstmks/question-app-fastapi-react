@@ -87,7 +87,7 @@ export const fetchAllCategoriesWithQuestions = async (): Promise<CategoryWithQue
 
 // ページネーションのページ数を取得
 export const fetchPageCount = async (): Promise<number> => {
-    const url = `http://127.0.0.1:8000/categories/page_count`;
+    const url = `http://127.0.0.1:8000/categories/page_count`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -113,7 +113,7 @@ export const fetchCategory = async (
 
 export const createCategory = async (
     categoryName: string
-): Promise<Response> => {
+): Promise<Category> => {
     const url = 'http://localhost:8000/categories'
     const response = await fetch(url, {
         method: 'POST',
@@ -123,6 +123,6 @@ export const createCategory = async (
         body: JSON.stringify({ name: categoryName }),
     })
 
-    return response
+    return response.json()
 }
 
