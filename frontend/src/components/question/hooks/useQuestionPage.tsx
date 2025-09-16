@@ -100,9 +100,7 @@ export const useQuestionPage = (
                 subcategories.map(async (subcategory) => {
                     const category = await fetchCategory(subcategory.categoryId)
                     return {
-                        id: subcategory.id,
-                        name: subcategory.name,
-                        categoryId: category.id,
+                        ...subcategory,
                         categoryName: category.name,
                     }
                 })
