@@ -1,22 +1,22 @@
 import type { Category, CategoryWithQuestionCount } from '../types/Category';
 
 interface FetchCategoriesParams {
-    skip: number;
-    limit: number;
-    searchCategoryWord: string;
-    searchSubcategoryWord: string;
-    searchQuestionWord: string;
-    searchAnswerWord: string;
+    skip: number
+    limit: number
+    searchCategoryWord: string
+    searchSubcategoryWord: string
+    searchQuestionWord: string
+    searchAnswerWord: string
 }
 
 export const fetchAllCategories = async (): Promise<Category[]> => {
-    const url = 'http://localhost:8000/categories/all_categories';
+    const url = 'http://localhost:8000/categories/all_categories'
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
-    });
+    })
 
     return await response.json()
 }
@@ -38,10 +38,10 @@ export const fetchCategories = async ({
         headers: {
             'Content-Type': 'application/json',
         }
-    });
+    })
 
-    return response.json();
-};
+    return response.json()
+}
 
 // ChangeCategorySubcategoryModalで使用するAPI
 export const fetchCategoriesBySearchWord = async (
@@ -94,8 +94,8 @@ export const fetchPageCount = async (): Promise<number> => {
             'Content-Type': 'application/json',
         }
     })
-    return response.json();
-};
+    return response.json()
+}
 
 export const fetchCategory = async (
     category_id: number
@@ -121,7 +121,7 @@ export const createCategory = async (
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ name: categoryName }),
-    });
+    })
 
     return response
 }

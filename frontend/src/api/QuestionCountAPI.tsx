@@ -2,21 +2,21 @@
 // すべてのQuestionの数を取得するAPI
 export const fetchQuestionCount = async (
 ): Promise<number> => {
-    const url = 'http://localhost:8000/question_count/count';
+    const url = 'http://localhost:8000/question_count/count'
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 //  カテゴリ内のQuestionの数を取得するAPI
 export const fetchQuestionCountByCategoryId = async (
     category_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/category_id/${category_id}`;
+    const url = `http://localhost:8000/question_count/count/category_id/${category_id}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -30,7 +30,7 @@ export const fetchQuestionCountByCategoryId = async (
 export const fetchQuestionCountBySubcategoryId = async (
     subcategory_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/subcategory_id/${subcategory_id}`;
+    const url = `http://localhost:8000/question_count/count/subcategory_id/${subcategory_id}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -45,7 +45,7 @@ export const fetchQuestionCountBySubcategoryId = async (
 // ------------------------------------------------------------------------ #
 
 export const fetchCorrectedQuestionCount = async (): Promise<number> => {
-    const url = 'http://localhost:8000/question_count/count/corrected';
+    const url = 'http://localhost:8000/question_count/count/corrected'
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -60,7 +60,7 @@ export const fetchCorrectedQuestionCountByCategoryIdOrderThanXDays = async (
     category_id: number,
     x_days: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/corrected/category_id/${category_id}/order_than_x_days/${x_days}`;
+    const url = `http://localhost:8000/question_count/count/corrected/category_id/${category_id}/order_than_x_days/${x_days}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -75,7 +75,7 @@ export const fetchCorrectedQuestionCountByCategoryIdOrderThanXDays = async (
 export const fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth = async (
     category_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/corrected/category_id/${category_id}/order_than_one_month`;
+    const url = `http://localhost:8000/question_count/count/corrected/category_id/${category_id}/order_than_one_month`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -90,14 +90,14 @@ export const fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth = async (
 export const fetchCorrectedQuestionCountByCategoryId = async (
     category_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/questions/count/corrected/category_id/${category_id}`;
+    const url = `http://localhost:8000/questions/count/corrected/category_id/${category_id}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 // ------------------------------------------------------------------------ #
@@ -120,7 +120,7 @@ export const fetchTemporaryQuestionCount = async (): Promise<number> => {
 export const fetchTemporaryQuestionCountByCategoryId = async (
     category_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/temporary/category_id/${category_id}`;
+    const url = `http://localhost:8000/question_count/count/temporary/category_id/${category_id}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -134,14 +134,14 @@ export const fetchTemporaryQuestionCountByCategoryIdOrderThanXDays = async (
     category_id: number,
     x_days: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/temporary/category_id/${category_id}/order_than_x_days/${x_days}`;
+    const url = `http://localhost:8000/question_count/count/temporary/category_id/${category_id}/order_than_x_days/${x_days}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 // ------------------------------------------------------------------------ #
@@ -166,7 +166,7 @@ export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
 export const fetchUncorrectedQuestionCountByCategoryId = async (
     category_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/uncorrected/category_id/${category_id}`;
+    const url = `http://localhost:8000/question_count/count/uncorrected/category_id/${category_id}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -180,12 +180,12 @@ export const fetchUncorrectedQuestionCountByCategoryId = async (
 export const fetchUncorrectedQuestionCountBySubcategoryId = async (
     subcategory_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/uncorrected/subcategory_id/${subcategory_id}`;
+    const url = `http://localhost:8000/question_count/count/uncorrected/subcategory_id/${subcategory_id}`
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
