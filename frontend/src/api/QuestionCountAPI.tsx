@@ -37,7 +37,7 @@ export const fetchQuestionCountBySubcategoryId = async (
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 // ------------------------------------------------------------------------ #
@@ -127,7 +127,7 @@ export const fetchTemporaryQuestionCountByCategoryId = async (
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 export const fetchTemporaryQuestionCountByCategoryIdOrderThanXDays = async (
@@ -173,7 +173,7 @@ export const fetchUncorrectedQuestionCountByCategoryId = async (
             'Content-Type': 'application/json',
         }
     })
-    return await response.json();
+    return await response.json()
 }
 
 // 特定のサブカテゴリ内の不正解のQuestionの数を取得するAPI
