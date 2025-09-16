@@ -17,7 +17,7 @@ export const fetchQuestion = async (
 // 特定のサブカテゴリに紐づくQuestionを取得するAPI
 export const fetchQuestionsBySubcategoryId = async (
     subcategory_id: number
-) => {
+): Promise<Question[]> => {
     const url = `http://localhost:8000/questions/subcategory_id/${subcategory_id}`
     const response = await fetch(url, {
         method: 'GET',
@@ -44,13 +44,13 @@ export const fetchQuestionsByProblemWord = async (
 
 // Questionのis_correctを更新するAPI
 export const updateQuestionIsCorrect = async (question: Question): Promise<void> => {
-    const url = `http://localhost:8000/questions/edit_flg/${question.id}`;
+    const url = `http://localhost:8000/questions/edit_flg/${question.id}`
 
     // is_correctを順番にサイクルさせるロジック
     const updatedStatus = 
         question.is_correct === SolutionStatus.Incorrect ? SolutionStatus.Temporary :
         question.is_correct === SolutionStatus.Temporary ? SolutionStatus.Correct :
-        SolutionStatus.Incorrect;
+        SolutionStatus.Incorrect
 
     const response = await fetch(url, {
         method: 'PUT',
@@ -77,7 +77,7 @@ export const deleteQuestion = async (question_id: number): Promise<void> => {
 export const fetchQuestionCountsByLastAnsweredDate = async (
     days_array: string[]
 ): Promise<Record<string, number>> => {
-    const url = 'http://localhost:8000/question_count/count/by_last_answered_date';
+    const url = 'http://localhost:8000/question_count/count/by_last_answered_date'
     
     const response = await fetch(url, {
         method: 'POST',
@@ -87,13 +87,13 @@ export const fetchQuestionCountsByLastAnsweredDate = async (
         body: JSON.stringify({
             days_array: days_array
         }),
-    });
+    })
 
     if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`)
     }
 
-    const data: Record<string, number> = await response.json();
+    const data: Record<string, number> = await response.json()
     
     return data
 }
@@ -102,7 +102,7 @@ export const fetchQuestionCountsByLastAnsweredDate = async (
 export const incrementAnswerCount = async (
     question_id: number
 ): Promise<void> => {
-    const url = `http://localhost:8000/questions/increment_answer_count/${question_id}`;
+    const url = `http://localhost:8000/questions/increment_answer_count/${question_id}`
     const response = await fetch(url, {
         method: 'PUT',
         headers: {
@@ -117,7 +117,7 @@ export const incrementAnswerCount = async (
 export const updateLastAnsweredDate = async (
     question_id: number
 ): Promise<void> => {
-    const url = `http://localhost:8000/questions/update_last_answered_date/${question_id}`;
+    const url = `http://localhost:8000/questions/update_last_answered_date/${question_id}`
     const response = await fetch(url, {
         method: 'PUT',
         headers: {
