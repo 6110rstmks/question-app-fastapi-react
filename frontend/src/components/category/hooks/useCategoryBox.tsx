@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
-import type { SubcategoryWithQuestionCount } from "../../../types/Subcategory"
+import type { Subcategory2, SubcategoryWithQuestionCount } from "../../../types/Subcategory"
 import { fetchSubcategoriesForHomePage, createSubcategory } from "../../../api/SubcategoryAPI"
+// import { fetchQuestion } from '../../../api/QuestionAPI'
+import { fetchQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
 
 interface useCategoryBoxProps {
     categoryId: number,
@@ -71,8 +73,21 @@ export const useCategoryBox = ({
     useEffect(() => {
 
         (async () => {
-            const subcategories = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
-            setSubcategoriesWithQuestionCount(subcategories);
+            const subcategories: Subcategory2[] = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
+
+            const subcategoriesWithQuestionCount: SubcategoryWithQuestionCount[] = await Promise.all(
+                subcategories.map(async (subcategory) => {
+                    // 各サブカテゴリーに関連する質問の数を取得するAPIを呼び出す
+                    const questionCount = await fetchQuestionCountBySubcategoryId(subcategory.id)
+                    return {
+                        id: subcategory.id,
+                        name: subcategory.name,
+                        categoryId: subcategory.category_id,
+                        question_count: questionCount
+                    }
+                })
+            )
+            setSubcategoriesWithQuestionCount(subcategoriesWithQuestionCount)
         })()
     }, [searchSubcategoryWord, searchQuestionWord, searchAnswerWord])
 

@@ -143,7 +143,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
             {/* Subcategories List */}
             <div className="p-4">
                 <div className="space-y-2">
-                    {subcategoriesWithQuestionCount.slice(0, showForm ? subcategoriesWithQuestionCount.length : 4).map((subcategory: SubcategoryWithQuestionCount, index) => (
+                    {subcategoriesWithQuestionCount.slice(0, showForm ? subcategoriesWithQuestionCount.length : 4).map((subcategory: SubcategoryWithQuestionCount) => (
                         <div key={subcategory.id} className="group/item">
                             <div
                                 className="flex items-center justify-between p-3 bg-gray-50 hover:bg-blue-50 rounded-lg cursor-pointer transition-all duration-200 border border-transparent hover:border-blue-200"
