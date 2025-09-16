@@ -33,6 +33,7 @@ export const useCategoryBox = ({
 
     const categoryBoxRef = useRef<HTMLDivElement | null>(null)
 
+    // CategoryBoxに追加したサブカテゴリを表示させるための関数
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
         setSubcategoriesWithQuestionCount((prev) => [...prev, subcategory])
     }
@@ -43,11 +44,16 @@ export const useCategoryBox = ({
             return
         }
 
-        const response = await createSubcategory(inputSubcategoryName, categoryId)
-        const data = await response.json() as SubcategoryWithQuestionCount
+        const data: Subcategory2 = await createSubcategory(inputSubcategoryName, categoryId)
 
         if (subcategoriesWithQuestionCount.length < 6) {
-            addSubcategory(data)
+            const subcategoryWithQuestionCount: SubcategoryWithQuestionCount = {
+                id: data.id,
+                name: data.name,
+                categoryId: data.category_id,
+                question_count: 0 // 新規作成したサブカテゴリーの質問数は0で初期化
+            }
+            addSubcategory(subcategoryWithQuestionCount)
         }
         setInputSubcategoryName("")
         setShowForm(false)

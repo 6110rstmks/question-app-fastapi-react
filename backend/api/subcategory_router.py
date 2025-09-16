@@ -28,10 +28,6 @@ async def create_subcategory(db: AsyncDbDependency, subcategory_create: Subcateg
     new_subcategory = await subcategory_crud.create_subcategory(db, subcategory_create)
     return SubcategoryResponse.model_validate(new_subcategory, from_attributes=True)
 
-#
-# @router.get("", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
-# async def find_all(db: DbDependency):
-#     return subcategory_crud.find_subcategories_in_categorybox(db)
 
 # question_idからQuestionに紐づくSubcategoryを取得するエンドポイント
 @router.get("/question_id/{question_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
@@ -44,7 +40,6 @@ async def find_subcategories_by_question_id(
     subcategory_ids = [subcategory_id_and_question_id.subcategory_id for subcategory_id_and_question_id in subcategory_ids_and_question_ids]
     subcategory_repository = SubcategoryRepository(db)
     return await subcategory_repository.find_by_ids(subcategory_ids)
-
 
 
 @router.get("/WithCategoryName/question_id/{question_id}", response_model=list[SubcategoryWithCategoryNameResponse], status_code=status.HTTP_200_OK)

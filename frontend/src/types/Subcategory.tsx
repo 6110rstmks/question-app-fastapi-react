@@ -1,7 +1,7 @@
 export interface Subcategory {
-    id: number;
-    name: string;
-    categoryId: number;
+    id: number
+    name: string
+    categoryId: number
 }
 
 export interface Subcategory2 {
@@ -13,13 +13,13 @@ export interface Subcategory2 {
 // CategoryBox, CategoryPageで使用する型
 export interface SubcategoryWithQuestionCount extends Subcategory {
     // questionCount: number;
-    question_count: number;
+    question_count: number
 }
 
 // export interface SubcategoryWithCategoryName extends Subcategory {
 export interface SubcategoryWithCategoryName {
-    id: number;
-    name: string;
-    category_id: number;
-    category_name: string;
+    id: number
+    name: string
+    category_id: number
+    category_name: string
 }
