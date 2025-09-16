@@ -3,7 +3,7 @@ import { useNavigate } from "react-router"
 
 
 import type { Category } from "../../../types/Category"
-import type { Subcategory2, SubcategoryWithQuestionCount } from "../../../types/Subcategory"
+import type { Subcategory, SubcategoryWithQuestionCount } from "../../../types/Subcategory"
 import type { Question } from '../../../types/Question'
 
 
@@ -151,17 +151,14 @@ export const useCategoryPage = (categoryId: number) => {
 
     useEffect(() => {
         (async () => {
-            // const subcategories: SubcategoryWithQuestionCount[] = await fetchSubcategoriesWithQuestionCountByCategoryId(categoryId, searchWord)
-            const subcategories: Subcategory2[] = await fetchSubcategoriesByCategoryId(categoryId)
+            const subcategories: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId)
 
             const subcategoriesWithCount: SubcategoryWithQuestionCount[] = await Promise.all(
                 subcategories.map(async (subcategory) => {
                     const questionCount = await fetchQuestionCountByCategoryId(subcategory.id)
                     return {
-                        id: subcategory.id,
-                        name: subcategory.name,
-                        categoryId: subcategory.category_id,
-                        question_count: questionCount || 0
+                        ...subcategory,
+                        question_count: questionCount
                     }
                 })
             )
