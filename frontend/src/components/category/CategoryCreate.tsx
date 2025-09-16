@@ -42,7 +42,7 @@ const CategoryCreate: React.FC = () => {
                 <div>{errMessage && <p>{errMessage}</p>}</div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default CategoryCreate;
+export default CategoryCreate
