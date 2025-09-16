@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import type { Category } from '../../../types/Category'
-import type { Subcategory2, SubcategoryWithCategoryName } from '../../../types/Subcategory'
+import type { Subcategory, SubcategoryWithCategoryName } from '../../../types/Subcategory'
 import type { Question } from '../../../types/Question'
 
 import { fetchCategory } from '../../../api/CategoryAPI'
@@ -94,16 +94,16 @@ export const useQuestionPage = (
             setQuestion(questionData)
 
             // 所属するサブカテゴリを変更する際に使用する。
-            const subcategories: Subcategory2[] = await fetchSubcategoriesByQuestionId(questionId)
+            const subcategories: Subcategory[] = await fetchSubcategoriesByQuestionId(questionId)
 
             const data2: SubcategoryWithCategoryName[] = await Promise.all(
                 subcategories.map(async (subcategory) => {
-                    const category = await fetchCategory(subcategory.category_id)
+                    const category = await fetchCategory(subcategory.categoryId)
                     return {
                         id: subcategory.id,
                         name: subcategory.name,
-                        category_id: category.id,
-                        category_name: category.name,
+                        categoryId: category.id,
+                        categoryName: category.name,
                     }
                 })
             )
