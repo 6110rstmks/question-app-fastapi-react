@@ -93,9 +93,7 @@ export const fetchQuestionCountsByLastAnsweredDate = async (
         throw new Error(`HTTP error! status: ${response.status}`)
     }
 
-    const data: Record<string, number> = await response.json()
-    
-    return data
+    return await response.json()
 }
 
 // Questionのanswer_countをインクリメントするAPI
