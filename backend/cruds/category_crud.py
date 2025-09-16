@@ -100,7 +100,7 @@ def find_category_by_question_id(
     query2 = select(Category).where(Category.id == categoryquestion.category_id) 
     return db.execute(query2).scalars().first()
 
-def create(
+def create_category(
     db: Session, 
     category_create: CategoryCreate
 ) -> Category:
@@ -131,27 +131,10 @@ def get_page_count(db: Session) -> int:
     count_page = count_page // PAGE_SIZE + 1
     return count_page
 
+# 現在未使用
 # Questionを一つでも持つCategoryをすべて取得する。
 # SetProblem画面にて、Categoryを選択する際に使用する。
-def find_all_categories_with_questions(db: Session) -> list[Category]:
-    query1 = select(CategoryQuestion.category_id).distinct()
-    category_ids = db.execute(query1).scalars().all()
-    
-    query2 = select(Category).where(Category.id.in_(category_ids))
-    result = db.execute(query2).scalars().all()
-
-    for category in result:
-        category.question_count = len(category.questions)
-
-        category.incorrected_answered_question_count = 0
-        
-        for categoryquestion in category.questions:
-            if categoryquestion.question.is_correct == 'Incorrect':
-                category.incorrected_answered_question_count += 1
-                    
-    return result
-
-# def find_all_categories_with_questions(db: Session):
+# def find_all_categories_with_questions(db: Session) -> list[Category]:
 #     query1 = select(CategoryQuestion.category_id).distinct()
 #     category_ids = db.execute(query1).scalars().all()
     
@@ -159,15 +142,12 @@ def find_all_categories_with_questions(db: Session) -> list[Category]:
 #     result = db.execute(query2).scalars().all()
 
 #     for category in result:
-#         # 全問題数をカウント
 #         category.question_count = len(category.questions)
 
-#         # 未正解の問題数を初期化
 #         category.incorrected_answered_question_count = 0
         
-#         # 各質問に対して、未正解のものをカウント
 #         for categoryquestion in category.questions:
-#             if categoryquestion.question.is_correct == SolutionStatus.NOT_SOLVED:
+#             if categoryquestion.question.is_correct == 'Incorrect':
 #                 category.incorrected_answered_question_count += 1
                     
 #     return result

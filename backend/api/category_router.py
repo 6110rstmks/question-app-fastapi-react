@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
 from cruds import category_crud as category_cruds
-from schemas.category import CategoryResponse, CategoryCreate, CategoryResponseWithQuestionCount
+from schemas.category import CategoryResponse, CategoryCreate
 from database import get_db, get_session
 from fastapi import Query
 from config import PAGE_SIZE
@@ -82,15 +82,16 @@ async def find_all_categories(
 ):
     return (category_cruds.find_all_categories(db))
 
-@router.get(
-    "/all_categories_with_questions", 
-    response_model=list[CategoryResponseWithQuestionCount], 
-    status_code=status.HTTP_200_OK
-)
-async def find_all(
-    db: DbDependency,
-):
-    return (category_cruds.find_all_categories_with_questions(db))
+# 現在未使用
+# @router.get(
+#     "/all_categories_with_questions", 
+#     response_model=list[CategoryResponseWithQuestionCount], 
+#     status_code=status.HTTP_200_OK
+# )
+# async def find_all(
+#     db: DbDependency,
+# ):
+#     return (category_cruds.find_all_categories_with_questions(db))
 
 @router.get("/category_id/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
 async def find_category_by_id(
@@ -104,7 +105,7 @@ async def create(
     db: DbDependency, 
     category_create: CategoryCreate
 ):
-    return category_cruds.create(db, category_create)
+    return category_cruds.create_category(db, category_create)
 
 @router.get("/export/json", response_class=FileResponse)
 async def get_exported_json(db: DbDependency):
