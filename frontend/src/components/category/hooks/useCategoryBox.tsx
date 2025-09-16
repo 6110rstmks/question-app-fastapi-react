@@ -34,7 +34,7 @@ export const useCategoryBox = ({
 
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
         setSubcategoriesWithQuestionCount((prev) => [...prev, subcategory])
-    };
+    }
 
     const handleAddSubcategory = async () => {
         if (!inputSubcategoryName.trim()) {
@@ -62,19 +62,19 @@ export const useCategoryBox = ({
                 categoryBoxRef.current.style.height = "400.5px" // フォームが非表示のときの高さ
             }
         }
-    };
+    }
 
     useEffect(() => {
-        adjustHeight();
-    }, [showForm]);
+        adjustHeight()
+    }, [showForm])
 
     useEffect(() => {
 
         (async () => {
             const subcategories = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
             setSubcategoriesWithQuestionCount(subcategories);
-        })();
-    }, [searchSubcategoryWord, searchQuestionWord, searchAnswerWord]);
+        })()
+    }, [searchSubcategoryWord, searchQuestionWord, searchAnswerWord])
 
     return { 
         subcategoriesWithQuestionCount, 
@@ -83,5 +83,5 @@ export const useCategoryBox = ({
         handleAddSubcategory,
         adjustHeight, 
         categoryBoxRef 
-    };
-};
+    }
+}
