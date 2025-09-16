@@ -19,7 +19,7 @@ export const fetchSubcategoriesForHomePage = async (
 export const fetchSubcategoriesByQuestionId = async (
     question_id: number
 ): Promise<Subcategory2[]> => {
-    const response = await fetch(`http://localhost:8000/subcategories/question_id/${question_id}`);
+    const response = await fetch(`http://localhost:8000/subcategories/question_id/${question_id}`)
     if (response.ok) {
         return response.json()
     }
@@ -41,18 +41,19 @@ export const updateSubcategoryName = async (
     })
 
     if (!response.ok) {
-        throw new Error('Failed to update subcategory');
+        throw new Error('Failed to update subcategory')
     }
 }
 
 
 export const fetchSubcategory = async (
     subcategory_id: number
-) => {
+): Promise<Subcategory2> => {
     const response = await fetch(`http://localhost:8000/subcategories/${subcategory_id}`)
     if (response.ok) {
         return response.json()
     }
+    throw new Error("Failed to fetch subcategory")
 }
 
 export const createSubcategory = async (
@@ -72,7 +73,7 @@ export const createSubcategory = async (
 }
 
 export const fetchSubcategoriesByCategoryId = async (category_id: number) => {
-    const response = await fetch(`http://localhost:8000/subcategories/category_id/${category_id}`);
+    const response = await fetch(`http://localhost:8000/subcategories/category_id/${category_id}`)
     if (response.ok) {
         return response.json()
     }
