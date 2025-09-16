@@ -7,13 +7,19 @@ export const fetchSubcategoriesForHomePage = async (
     searchSubcategoryWord?: string,
     searchQuestionWord?: string,
     searchAnswerWord?: string
-): Promise<Subcategory2[]> => {
+): Promise<Subcategory[]> => {
     const url = `http://localhost:8000/subcategories/category_id/${category_id}?limit=4&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}&searchAnswerWord=${searchAnswerWord}`
     const response = await fetch(url)
-    if (response.ok) {
-        return response.json()
+    if (!response.ok) {
+        throw new Error("Failed to fetch subcategories")
     }
-    throw new Error("Failed to fetch subcategories")
+    const data: Subcategory2[] = await response.json()
+
+    return data.map(({ id, name, category_id }) => ({
+        id,
+        name,
+        categoryId: category_id,
+    }))
 }
 
 export const fetchSubcategoriesByCategoryId = async (
@@ -81,7 +87,7 @@ export const fetchSubcategory = async (
 export const createSubcategory = async (
     subcategoryName: string, 
     categoryId: number
-) => {
+): Promise<Subcategory> => {
     const url = 'http://localhost:8000/subcategories/'
     const response = await fetch(url, {
         method: 'POST',
@@ -91,6 +97,16 @@ export const createSubcategory = async (
         body: JSON.stringify({ name: subcategoryName, category_id: categoryId }),
     })
 
-    return response.json()
+    if (!response.ok) {
+        throw new Error('Failed to create subcategory')
+    }
+
+    const data: Subcategory2 = await response.json()
+
+    return {
+        id: data.id,
+        name: data.name,
+        categoryId: data.category_id,
+    }
 }
 

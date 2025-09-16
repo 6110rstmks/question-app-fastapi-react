@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import type { Subcategory2, SubcategoryWithQuestionCount } from "../../../types/Subcategory"
+import type { Subcategory, SubcategoryWithQuestionCount } from "../../../types/Subcategory"
 import { fetchSubcategoriesForHomePage, createSubcategory } from "../../../api/SubcategoryAPI"
 import { fetchQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
 
@@ -44,13 +44,11 @@ export const useCategoryBox = ({
             return
         }
 
-        const data: Subcategory2 = await createSubcategory(inputSubcategoryName, categoryId)
+        const data: Subcategory = await createSubcategory(inputSubcategoryName, categoryId)
 
         if (subcategoriesWithQuestionCount.length < 6) {
             const subcategoryWithQuestionCount: SubcategoryWithQuestionCount = {
-                id: data.id,
-                name: data.name,
-                categoryId: data.category_id,
+                ...data,
                 question_count: 0 // 新規作成したサブカテゴリーの質問数は0で初期化
             }
             addSubcategory(subcategoryWithQuestionCount)
@@ -78,16 +76,14 @@ export const useCategoryBox = ({
     useEffect(() => {
 
         (async () => {
-            const subcategories: Subcategory2[] = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
+            const subcategories: Subcategory[] = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
 
             const subcategoriesWithQuestionCount: SubcategoryWithQuestionCount[] = await Promise.all(
                 subcategories.map(async (subcategory) => {
                     // 各サブカテゴリーに関連する質問の数を取得するAPIを呼び出す
                     const questionCount = await fetchQuestionCountBySubcategoryId(subcategory.id)
                     return {
-                        id: subcategory.id,
-                        name: subcategory.name,
-                        categoryId: subcategory.category_id,
+                        ...subcategory,
                         question_count: questionCount
                     }
                 })
