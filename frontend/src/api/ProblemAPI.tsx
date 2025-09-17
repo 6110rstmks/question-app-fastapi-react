@@ -1,5 +1,6 @@
 import { format } from 'date-fns'
 import type { Question } from '../types/Question'
+export type ProblemType = "category" | "subcategory" | "random"
 
 /**
  * Fetches a list of problems based on type, solved status, count, and optional category filters.
@@ -13,7 +14,7 @@ import type { Question } from '../types/Question'
  */
 
 export const fetchProblem = async (
-    selectedType: string,
+    selectedType: ProblemType,
     solvedStatus: string,
     problemCount: number,
     selectedCategoryIds?: number[],

@@ -15,13 +15,14 @@ def generate_problems(
     db: Session, 
     problem_fetch: ProblemFetch
 ) -> list[QuestionResponse]:
+
     """
     Generate a list of questions
     """
-    blacklist = _get_blacklisted_question_ids(db)
-    threshold = _get_threshold(problem_fetch.solved_status)
+    blacklist: list[int] = _get_blacklisted_question_ids(db)
+    threshold: Optional[datetime] = _get_threshold(problem_fetch.solved_status)
     status_enum = getattr(SolutionStatus, problem_fetch.solved_status.capitalize())
-    question_ids = _get_question_ids_by_type(db, problem_fetch)
+    question_ids: list[int] = _get_question_ids_by_type(db, problem_fetch)
 
     # 初回取得: 日付閾値あり
     results = _fetch_questions(
@@ -44,8 +45,8 @@ def generate_problems(
             limit=problem_fetch.problem_count,
         )
 
-    if not results:
-        raise HTTPException(status_code=400, detail="出題する問題がありませんでした。")
+    # if not results:
+    #     raise HTTPException(status_code=400, detail="出題する問題がありませんでしたよお。")
     return results
 
 def generate_problems_by_day(
