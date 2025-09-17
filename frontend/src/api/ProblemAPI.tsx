@@ -1,12 +1,11 @@
 import { format } from 'date-fns'
 import type { Question } from '../types/Question'
-export type ProblemType = "category" | "subcategory" | "random"
 
 /**
  * Fetches a list of problems based on type, solved status, count, and optional category filters.
  *
  * @param selectedType - The type of problems to fetch ('category', 'subcategory', 'random').
- * @param solvedStatus - The solved status filter ('solved', 'unsolved', etc.).
+ * @param solvedStatus - The solved status filter ('correct', '', 'temporary').
  * @param problemCount - The number of problems to retrieve.
  * @param selectedCategoryIds - (Optional) Array of category IDs to filter problems.
  * @param selectedSubcategoryIds - (Optional) Array of subcategory IDs to filter problems.
@@ -14,8 +13,8 @@ export type ProblemType = "category" | "subcategory" | "random"
  */
 
 export const fetchProblem = async (
-    selectedType: ProblemType,
-    solvedStatus: string,
+    selectedType: "category" | "subcategory" | "random",
+    solvedStatus: "correct" | "temporary" | "incorrect",
     problemCount: number,
     selectedCategoryIds?: number[],
     selectedSubcategoryIds?: number[]

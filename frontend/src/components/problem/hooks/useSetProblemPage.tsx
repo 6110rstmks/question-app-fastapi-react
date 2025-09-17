@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { fetchProblem, fetchProblemByDay } from '../../../api/ProblemAPI'
 import type { SolutionStatus } from '../../../types/SolutionStatus'
+import type { Question } from '../../../types/Question'
 import { SolutionStatusReverse } from '../../../types/SolutionStatus'
 
 const useSetProblemPage = () => {
@@ -42,14 +43,13 @@ const useSetProblemPage = () => {
     // ボタンをクリックしたら、問題群を生成して、問題出題画面に遷移する。その際レスポンスのデータを渡す。
     const handleSetProblem = async () => {
 
-        const response = await fetchProblem(
+        const problemData: Question[] = await fetchProblem(
             'random',
-            toLowerFirst(SolutionStatusReverse[solutionStatusNumber]),
+            toLowerFirst(SolutionStatusReverse[solutionStatusNumber]) as "correct" | "incorrect" | "temporary",
             4, 
             [],
             []
         )
-        const problemData = await response.json()
         navigate('/problem', { 
             state: {
                 problemData, 
