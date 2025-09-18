@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
 from cruds import category_crud as category_cruds
-from schemas.category import CategoryResponse, CategoryCreate
+from schemas.category import CategoryResponseSchema, CategoryCreateSchema
 from database import get_db, get_session
 from fastapi import Query
 from config import PAGE_SIZE
@@ -23,7 +23,7 @@ router = APIRouter(prefix="/categories", tags=["Categories"])
 
 @router.get(
     "/home", 
-    response_model=Optional[list[CategoryResponse]], 
+    response_model=Optional[list[CategoryResponseSchema]], 
     status_code=status.HTTP_200_OK
 )
 async def find_all(
@@ -45,7 +45,7 @@ async def find_all(
         answer_word=answerWord
     )
 
-@router.get("/search", response_model=Optional[list[CategoryResponse]], status_code=status.HTTP_200_OK)
+@router.get("/search", response_model=Optional[list[CategoryResponseSchema]], status_code=status.HTTP_200_OK)
 async def find_category_by_name(
     db: DbDependency,
     search_word: str
@@ -53,7 +53,7 @@ async def find_category_by_name(
     return category_cruds.find_category_by_name(db, search_word)
 
 # question_idからQuestionに紐づくCategoryを取得するエンドポイント
-@router.get("/question_id/{question_id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
+@router.get("/question_id/{question_id}", response_model=CategoryResponseSchema, status_code=status.HTTP_200_OK)
 async def find_category_by_question_id(
     db: DbDependency, 
     question_id: int = Path(gt=0)
@@ -68,7 +68,7 @@ async def find_category_by_question_id(
 async def get_page_count(db: DbDependency):
     return category_cruds.get_page_count(db)
 
-@router.get("/all", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
+@router.get("/all", response_model=list[CategoryResponseSchema], status_code=status.HTTP_200_OK)
 async def find_all(
     db: DbDependency,
     skip: int = Query(0, ge=0),
@@ -76,7 +76,7 @@ async def find_all(
 ):
     return (category_cruds.find_all(db))[skip : skip + limit]
 
-@router.get("/all_categories", response_model=list[CategoryResponse], status_code=status.HTTP_200_OK)
+@router.get("/all_categories", response_model=list[CategoryResponseSchema], status_code=status.HTTP_200_OK)
 async def find_all_categories(
     db: DbDependency
 ):
@@ -93,19 +93,19 @@ async def find_all_categories(
 # ):
 #     return (category_cruds.find_all_categories_with_questions(db))
 
-@router.get("/category_id/{id}", response_model=CategoryResponse, status_code=status.HTTP_200_OK)
+@router.get("/category_id/{id}", response_model=CategoryResponseSchema, status_code=status.HTTP_200_OK)
 async def find_category_by_id(
     db: AsyncDbDependency,
     id: int = Path(gt=0),
 ):
     return await category_cruds.find_category_by_id(db, id)
 
-@router.post("", response_model=CategoryResponse, status_code=status.HTTP_201_CREATED)
+@router.post("", response_model=CategoryResponseSchema, status_code=status.HTTP_201_CREATED)
 async def create(
-    db: DbDependency, 
-    category_create: CategoryCreate
+    db: AsyncDbDependency, 
+    category_create: CategoryCreateSchema
 ):
-    return category_cruds.create_category(db, category_create)
+    return await category_cruds.create_category(db, category_create)
 
 @router.get("/export/json", response_class=FileResponse)
 async def get_exported_json(db: DbDependency):

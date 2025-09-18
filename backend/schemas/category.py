@@ -2,10 +2,10 @@ from typing import  List
 from pydantic import BaseModel, Field, ConfigDict
 
 
-class CategoryCreate(BaseModel):
+class CategoryCreateSchema(BaseModel):
     name: str = Field(min_length=2, examples=["PC"])
 
-class CategoryResponse(BaseModel):
+class CategoryResponseSchema(BaseModel):
     id: int = Field(gt=0, examples=[1])
     name: str = Field(min_length=2, max_length=20, examples=["PC"])
     user_id: int

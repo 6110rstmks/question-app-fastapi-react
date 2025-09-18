@@ -1,13 +1,14 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
-from schemas.category import CategoryCreate
+from schemas.category import CategoryCreateSchema
 from models import Category, CategoryQuestion, Subcategory, Question
 from config import PAGE_SIZE
 from fastapi import HTTPException
 from typing import Optional
-from src.repository.category_repository import CategoryRepository
+from src.repository.category_repository import CategoryRepository, CategoryCreate
 
+# リポジトリパターンに置換済み
 async def find_all_categories(db: AsyncSession)-> list[Category]:
     category_repository = CategoryRepository(db)
     return await category_repository.get_all()
@@ -75,7 +76,7 @@ def find_all(
     result = db.execute(query_stmt).scalars().all()
     return result[skip: skip + limit]
 
-
+# リポジトリパターンに置換済み
 async def find_category_by_id(
     db: AsyncSession, 
     id: int
@@ -100,24 +101,20 @@ def find_category_by_question_id(
     query2 = select(Category).where(Category.id == categoryquestion.category_id) 
     return db.execute(query2).scalars().first()
 
-def create_category(
-    db: Session, 
-    category_create: CategoryCreate
+# リポジトリパターンに置換済み
+async def create_category(
+    db: AsyncSession, 
+    category_create: CategoryCreateSchema
 ) -> Category:
     
 
-    stmt = select(Category).where(func.lower(Category.name) == func.lower(category_create.name))
-    existing_category = db.execute(stmt).scalars().first()
-    
-    if existing_category:
-        raise HTTPException(status_code=400, detail="Category already exists.")
-        # return
+    category_repository = CategoryRepository(db)
+    check_bool =  await category_repository.check_name_exists(category_create.name)
 
-    new_category = Category(**category_create.model_dump(), user_id=1)
-    
-    db.add(new_category)
-    db.commit()
-    return new_category
+    if check_bool:
+        raise HTTPException(status_code=400, detail="Category already exists.")
+
+    return await category_repository.create(CategoryCreate(name=category_create.name, user_id=1))
 
 # ページネーション
 def get_page_count(db: Session) -> int: 
