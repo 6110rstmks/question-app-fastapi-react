@@ -78,9 +78,9 @@ async def find_all(
 
 @router.get("/all_categories", response_model=list[CategoryResponseSchema], status_code=status.HTTP_200_OK)
 async def find_all_categories(
-    db: DbDependency
+    db: AsyncDbDependency
 ):
-    return (category_cruds.find_all_categories(db))
+    return (await category_cruds.find_all_categories(db))
 
 # 現在未使用
 # @router.get(

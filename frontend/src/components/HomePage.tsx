@@ -16,7 +16,7 @@ export const HomePage: React.FC = () => {
 
     useEffect(()  => {
         (async () => {
-            const response = await checkAuth();
+            const response = await checkAuth()
             if (response.ok) {
                 setIsAuth(true);
             }
@@ -26,7 +26,7 @@ export const HomePage: React.FC = () => {
             }
         })()
 
-    }, []);
+    }, [])
 
     const [
         searchCategoryWord, 

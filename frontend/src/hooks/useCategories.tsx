@@ -73,21 +73,19 @@ export const useCategories = (
     useEffect(() => {
 
         const loadPageCount = async () => {
-            const count = await fetchPageCount();
+            const count: number = await fetchPageCount()
             setPageCount(count)
 
-            const questionCount = await fetchQuestionCount()
+            const questionCount: number = await fetchQuestionCount()
             setQuestionCount(questionCount)
-            const uncorrectedQuestionCount = await fetchUncorrectedQuestionCount()
+            const uncorrectedQuestionCount: number = await fetchUncorrectedQuestionCount()
             setUncorrectedQuestionCount(uncorrectedQuestionCount)
-            const correctedQuestionCount = await fetchCorrectedQuestionCount()
+            const correctedQuestionCount: number = await fetchCorrectedQuestionCount()
             setCorrectedQuestionCount(correctedQuestionCount)
 
-            const tempQuestionCnt = await fetchTemporaryQuestionCount()
+            const tempQuestionCnt: number = await fetchTemporaryQuestionCount()
             setTemporaryQuestionCount(tempQuestionCnt)
-
- 
-        };
+        }
         loadPageCount()
     }, [])
 
