@@ -85,12 +85,15 @@ async def find_category_by_id(
     return await category_repository.get(id)
 
 # あいまい検索
-def find_category_by_name(
-    db: Session, 
+async def find_category_by_name(
+    db: AsyncSession, 
     search_word: str
 ) -> list[Category]:
-    query = select(Category).where(Category.name.ilike(f"%{search_word}%"))
-    return db.execute(query).scalars().all()
+    # query = select(Category).where(Category.name.ilike(f"%{search_word}%"))
+    # return db.execute(query).scalars().all()
+
+    category_repository = CategoryRepository(db)
+    return await category_repository.find_by_name_contains(search_word)
 
 def find_category_by_question_id(
     db: Session, 
@@ -106,8 +109,6 @@ async def create_category(
     db: AsyncSession, 
     category_create: CategoryCreateSchema
 ) -> Category:
-    
-
     category_repository = CategoryRepository(db)
     check_bool =  await category_repository.check_name_exists(category_create.name)
 
@@ -122,13 +123,6 @@ async def get_page_count(db: AsyncSession) -> int:
     category_repository = CategoryRepository(db)
     
     count_page = await category_repository.count_all()
-    print('じゃまいか')
-    print(count_page)
-
-    # count_page = db.scalar(
-    #                 select(func.count()).
-    #                 select_from(Category)
-    #             )
     count_page = count_page // PAGE_SIZE + 1
     return count_page
 

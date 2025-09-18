@@ -47,10 +47,10 @@ async def find_all(
 
 @router.get("/search", response_model=Optional[list[CategoryResponseSchema]], status_code=status.HTTP_200_OK)
 async def find_category_by_name(
-    db: DbDependency,
+    db: AsyncSession,
     search_word: str
 ):
-    return category_cruds.find_category_by_name(db, search_word)
+    return await category_cruds.find_category_by_name(db, search_word)
 
 # question_idからQuestionに紐づくCategoryを取得するエンドポイント
 @router.get("/question_id/{question_id}", response_model=CategoryResponseSchema, status_code=status.HTTP_200_OK)
