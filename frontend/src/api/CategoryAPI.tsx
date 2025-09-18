@@ -1,4 +1,4 @@
-import type { Category, CategoryWithQuestionCount } from '../types/Category';
+import type { Category } from '../types/Category'
 
 interface FetchCategoriesParams {
     skip: number
