@@ -84,6 +84,7 @@ async def find_category_by_id(
     category_repository = CategoryRepository(db)
     return await category_repository.get(id)
 
+# リポジトリパターンに置換済み
 # あいまい検索
 async def find_category_by_name(
     db: AsyncSession, 
