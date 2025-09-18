@@ -23,6 +23,7 @@ export const fetchQuestionCountByCategoryId = async (
             'Content-Type': 'application/json',
         }
     })
+    console.log('response', response.json)
     return await response.json()
 }
 

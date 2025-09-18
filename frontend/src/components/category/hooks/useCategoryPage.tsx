@@ -13,6 +13,7 @@ import {
     fetchUncorrectedQuestionCountByCategoryId,
     fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth,
     fetchQuestionCountByCategoryId,
+    fetchQuestionCountBySubcategoryId,
     fetchTemporaryQuestionCountByCategoryIdOrderThanXDays
 } from '../../../api/QuestionCountAPI'
 import { fetchProblem } from '../../../api/ProblemAPI'
@@ -156,13 +157,15 @@ export const useCategoryPage = (categoryId: number) => {
 
             const subcategoriesWithCount: SubcategoryWithQuestionCount[] = await Promise.all(
                 subcategories.map(async (subcategory) => {
-                    const questionCount = await fetchQuestionCountByCategoryId(subcategory.id)
+                    const questionCount: number = await fetchQuestionCountBySubcategoryId(subcategory.id)
+                    console.log('questionCount', questionCount)
                     return {
                         ...subcategory,
                         questionCount: questionCount
                     }
                 })
             )
+            console.log('subcategoriesWithCount', subcategoriesWithCount)
             setSubcategories(subcategoriesWithCount)
         })()
     }, [searchWord])

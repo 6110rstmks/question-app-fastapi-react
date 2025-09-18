@@ -61,16 +61,16 @@ const useSetProblemPage = () => {
 
     const handleTodayReview = async () => {
         const today = new Date()
-        let problemData = await fetchProblemByDay(today)
+        let problemData: Question[] = await fetchProblemByDay(today)
 
 
         // problemDataが空であれば、明日の問題を取得する
         if (!problemData ||problemData.length === 0) {
-            const confirmNextDay = window.confirm('today\'s problems are all answered. Do you want to fetch tomorrow\'s problems?')
+            const confirmNextDay: boolean = window.confirm('today\'s problems are all answered. Do you want to fetch tomorrow\'s problems?')
             if (!confirmNextDay) {
                 return
             }
-            const tomorrow = new Date(today)
+            const tomorrow: Date = new Date(today)
             tomorrow.setDate(tomorrow.getDate() + 1)
             problemData = await fetchProblemByDay(tomorrow)
         }
