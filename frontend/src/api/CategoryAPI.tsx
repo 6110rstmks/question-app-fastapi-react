@@ -114,7 +114,7 @@ export const fetchCategory = async (
 
 export const createCategory = async (
     categoryName: string
-): Promise<Category> => {
+): Promise<Response> => {
     const url = 'http://localhost:8000/categories'
     const response = await fetch(url, {
         method: 'POST',
@@ -124,6 +124,6 @@ export const createCategory = async (
         body: JSON.stringify({ name: categoryName }),
     })
 
-    return response.json()
+    return response
 }
 

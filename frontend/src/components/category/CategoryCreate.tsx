@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router"
 
-import type { Category } from "../../types/Category"
 import { createCategory } from "../../api/CategoryAPI"
 
 const CategoryCreate: React.FC = () => {
@@ -14,12 +13,14 @@ const CategoryCreate: React.FC = () => {
             setErrorMessage("カテゴリー名を入力してください")
             return
         }
-        const category: Category = await createCategory(name)
-        if (!category) {
-            setErrorMessage("カテゴリーの作成に失敗しました")
-        } else {
-            navigate("/")
+        const response = await createCategory(name)
+        if (!response.ok) {
+            const data = await response.json()
+            setErrorMessage(data.detail || "カテゴリーの作成に失敗しました")
+            return
         }
+        navigate("/")
+ 
     }
 
     return (

@@ -105,15 +105,13 @@ def create_category(
     category_create: CategoryCreate
 ) -> Category:
     
-    # case insensitiveとする。
-    existing_category = (
-        db.query(Category)
-        .filter(func.lower(Category.name) == func.lower(category_create.name))
-        .first()
-    )
+
+    stmt = select(Category).where(func.lower(Category.name) == func.lower(category_create.name))
+    existing_category = db.execute(stmt).scalars().first()
     
     if existing_category:
         raise HTTPException(status_code=400, detail="Category already exists.")
+        # return
 
     new_category = Category(**category_create.model_dump(), user_id=1)
     
