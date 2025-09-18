@@ -65,8 +65,8 @@ async def find_category_by_question_id(
 
 # page_countのルーティング
 @router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)
-async def get_page_count(db: DbDependency):
-    return category_cruds.get_page_count(db)
+async def get_page_count(db: AsyncDbDependency):
+    return await category_cruds.get_page_count(db)
 
 @router.get("/all", response_model=list[CategoryResponseSchema], status_code=status.HTTP_200_OK)
 async def find_all(

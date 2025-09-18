@@ -87,7 +87,8 @@ export const fetchCategoryByQuestionId = async (
 // }
 
 // ページネーションのページ数を取得
-export const fetchPageCount = async (): Promise<number> => {
+export const fetchPageCount = async (
+): Promise<number> => {
     const url = `http://127.0.0.1:8000/categories/page_count`
     const response = await fetch(url, {
         method: 'GET',

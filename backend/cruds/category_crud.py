@@ -116,13 +116,19 @@ async def create_category(
 
     return await category_repository.create(CategoryCreate(name=category_create.name, user_id=1))
 
+# リポジトリパターンに置換済み
 # ページネーション
-def get_page_count(db: Session) -> int: 
+async def get_page_count(db: AsyncSession) -> int:
+    category_repository = CategoryRepository(db)
+    
+    count_page = await category_repository.count_all()
+    print('じゃまいか')
+    print(count_page)
 
-    count_page = db.scalar(
-                    select(func.count()).
-                    select_from(Category)
-                )
+    # count_page = db.scalar(
+    #                 select(func.count()).
+    #                 select_from(Category)
+    #             )
     count_page = count_page // PAGE_SIZE + 1
     return count_page
 

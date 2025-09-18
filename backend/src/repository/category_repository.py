@@ -54,3 +54,9 @@ class CategoryRepository(
         stmt = select(Category).where(func.lower(Category.name) == func.lower(name))
         result = await self.db.execute(stmt)
         return result.scalars().first() is not None
+    
+    async def count_all(self) -> int:
+        # total_count = await self.db.scalar(select(func.count()).select_from(self.model))
+        stmt = select(func.count()).select_from(self.model)
+        total_count = await self.db.scalar(stmt)
+        return total_count
