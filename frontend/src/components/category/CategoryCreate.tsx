@@ -15,7 +15,7 @@ const CategoryCreate: React.FC = () => {
         }
         const response = await createCategory(name)
         if (!response.ok) {
-            const data = await response.json()
+            const data: { detail: string } = await response.json()
             setErrorMessage(data.detail || "カテゴリーの作成に失敗しました")
             return
         }
