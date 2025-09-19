@@ -155,18 +155,21 @@ export const useCategoryPage = (categoryId: number) => {
         (async () => {
             const subcategories: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId)
 
-            const subcategoriesWithCount: SubcategoryWithQuestionCount[] = await Promise.all(
-                subcategories.map(async (subcategory) => {
-                    const questionCount: number = await fetchQuestionCountBySubcategoryId(subcategory.id)
-                    console.log('questionCount', questionCount)
-                    return {
-                        ...subcategory,
-                        questionCount: questionCount
-                    }
-                })
-            )
-            console.log('subcategoriesWithCount', subcategoriesWithCount)
-            setSubcategories(subcategoriesWithCount)
+            if (subcategories.length !== 0) {
+                const subcategoriesWithCount: SubcategoryWithQuestionCount[] = await Promise.all(
+                    subcategories.map(async (subcategory) => {
+                        const questionCount: number = await fetchQuestionCountBySubcategoryId(subcategory.id)
+                        console.log('questionCount', questionCount)
+                        return {
+                            ...subcategory,
+                            questionCount: questionCount
+                        }
+                    })
+                )
+                setSubcategories(subcategoriesWithCount)
+            }
+
+
         })()
     }, [searchWord])
 
