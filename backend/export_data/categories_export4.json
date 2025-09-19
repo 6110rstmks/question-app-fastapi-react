@@ -40,7 +40,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-14"
+                            "last_answered_date": "2025-09-16"
                         },
                         {
                             "problem": "ある調の音階（＝7つの主要な音を並べたもの）に含まれない音に、一時的につける♯や♭のことをなんという",
@@ -49,7 +49,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-14"
+                            "last_answered_date": "2025-09-16"
                         },
                         {
                             "problem": "調号は曲の途中で変わることはなく、必ず曲の最初から最後まで同じである。これは正しいか",
@@ -76,7 +76,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-14"
+                            "last_answered_date": "2025-09-17"
                         },
                         {
                             "problem": "長調を英語でいうと",
@@ -94,7 +94,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-15"
+                            "last_answered_date": "2025-09-16"
                         },
                         {
                             "problem": "1オクターブ変わると、周波数はどうなる",
@@ -103,7 +103,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-14"
+                            "last_answered_date": "2025-09-16"
                         }
                     ]
                 },
@@ -113,11 +113,11 @@
                         {
                             "problem": "倍音の存在によって、同じ高さの音でも楽器ごとに何の違いが生じるか",
                             "answer": [
-                                "音色"
+                                "音色timbre"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-14"
+                            "last_answered_date": "2025-09-17"
                         }
                     ]
                 },
@@ -5182,7 +5182,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-18"
                         },
                         {
                             "problem": "Snの参加数は2種類ある。答えて、またどちらが安定",
@@ -7320,7 +7320,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-16"
                         },
                         {
                             "problem": "メンデルの法則Mendelian inheritanceを3つ",
@@ -7480,7 +7480,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-09-16"
                         },
                         {
                             "problem": "電荷をもつ分子やイオンはは細胞膜を通過できるか？",
@@ -8098,7 +8098,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-18"
                         }
                     ]
                 },
@@ -8245,7 +8245,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-09-16"
                         },
                         {
                             "problem": "サイトカインのひとつであるインターフェロンには3つの種類がある答えて",
@@ -8352,7 +8352,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-16"
                         }
                     ]
                 },
@@ -8486,7 +8486,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-16"
                         },
                         {
                             "problem": "収縮速度の速く、大きな力を短時間に発揮することができ、瞬発力やパワーが必要な運動を行うときに活躍するのは速筋かそれとも遅筋か",
@@ -8948,7 +8948,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-17"
                         },
                         {
                             "problem": "物質収支の計算式で　同化式を求める計算式",
@@ -9675,7 +9675,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-09-17"
                         },
                         {
                             "problem": "DNSレコードがバーってうえから順番にいっぱい書いてあるファイルをなんという",
@@ -9750,6 +9750,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-05-31"
+                        },
+                        {
+                            "problem": "alter stage stage_name refresh;\nsnowflakeで上記コマンドを実行する目的",
+                            "answer": [
+                                "外部ステージのファイル一覧やメタデータを最新化するためのコマンド です。\nSnowflake は外部ステージに格納されているファイルの情報（ファイル名、サイズ、最終更新日時など）を内部的に メタデータキャッシュ で管理しています。\n\nREFRESH を実行すると、このキャッシュが更新され、最新のファイル情報が Snowflake に反映されます。"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-15"
                         },
                         {
                             "problem": "Snowflakeがクラウドストレージ(AWS, Azure, GCP)にアクセスするための認証情報やアクセス制御を安全に管理するための仕組みを答えて",
@@ -12900,8 +12909,8 @@
                                 "svする方法　、どのようにsvするか"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-19"
                         },
                         {
                             "problem": "light(verb)（火をつける）の過去形は",
@@ -14748,6 +14757,15 @@
                             "last_answered_date": "2025-08-24"
                         },
                         {
+                            "problem": "クリーンアーキテクチャはフレームワークに依存するか、それともしないか",
+                            "answer": [
+                                "しない"
+                            ],
+                            "memo": "つまりクリーンアーキテクチャで実装することでフレームワークを変更することが容易になった",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-15"
+                        },
+                        {
                             "problem": "テストコードを書くメリット2",
                             "answer": [
                                 "コード修正により既存機能が壊れていないか即座に検証できる",
@@ -14773,7 +14791,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-09-16"
                         }
                     ]
                 }
@@ -14791,8 +14809,8 @@
                                 "ray tracing"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-02-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-17"
                         }
                     ]
                 }
@@ -17608,7 +17626,7 @@
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/Dm2VQGX4CLVMUSS0nGMh7o7cmRVQEcfifM2I69joZy2A0_gBInhmLQRhkWTjpIAUUnHTqK6USP-kIXRumxwCP4HvfimRdtKZQTjR-7hjJk49kjplV2xj99yr7oMF",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-17"
                         },
                         {
                             "problem": "インド洋はどこか",
@@ -21662,6 +21680,15 @@
                             "last_answered_date": "2025-05-22"
                         },
                         {
+                            "problem": "手動運用から IaC（Infrastructure as Code）に移行するとき、既存環境を Terraformのコードに紐づけるコマンドはなに",
+                            "answer": [
+                                "terraform import"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-19"
+                        },
+                        {
                             "problem": "in terraform, use case for depends_on ",
                             "answer": [
                                 "explicit ordering"
@@ -22437,7 +22464,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-17"
                         }
                     ]
                 },
@@ -23686,7 +23713,7 @@
                             ],
                             "memo": "ここで obj(5) と書いたとき、実際には Python は\n\nobj.__call__(5)\n\n\nを呼び出しています。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-18"
                         }
                     ]
                 },
@@ -23921,6 +23948,16 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-09"
+                        },
+                        {
+                            "problem": "ヒンドゥー教における 三大神",
+                            "answer": [
+                                "シヴァ",
+                                "ヴィシュヌ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-18"
                         },
                         {
                             "problem": "ベトナム北部にて元の侵攻撃退を退けた国",
@@ -24281,7 +24318,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-18"
                         },
                         {
                             "problem": "殷後期の都の遺跡をなんというか",
@@ -24510,7 +24547,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-18"
+                        },
+                        {
+                            "problem": "洪武帝（朱元璋）が制定した 明王朝の基本法典",
+                            "answer": [
+                                "明律"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-17"
                         },
                         {
                             "problem": "中国最古の王朝",
@@ -24527,8 +24573,8 @@
                                 "楊炎（ようえん）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-18"
                         },
                         {
                             "problem": "明の建国者が台頭するきっかけとなった、元末におこった白蓮教徒を中心とする反乱はなにか",
@@ -24849,7 +24895,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
+                            "last_answered_date": "2025-09-19"
                         },
                         {
                             "problem": "前10世紀前半、第2代の国王としてヘブライ王国（イスラエル王国）の全盛期を築き上げたのは誰か",
@@ -25145,6 +25191,15 @@
                             "last_answered_date": "2025-09-14"
                         },
                         {
+                            "problem": "ホルテンシウス法はどこの国で制定されたか",
+                            "answer": [
+                                "ローマ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-17"
+                        },
+                        {
                             "problem": "イッソスの戦いは何年に起こったか",
                             "answer": [
                                 "BC333年"
@@ -25207,7 +25262,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-17"
                         },
                         {
                             "problem": "スパルタに征服された奴隷農民は",
@@ -25224,8 +25279,8 @@
                                 "イオニア植民市の反乱"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-19"
                         },
                         {
                             "problem": "トスカーナ地方を中心に定住していた系統不明の先住民族は",
@@ -25296,8 +25351,8 @@
                                 "ホルテンシウス法"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-23"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-18"
                         },
                         {
                             "problem": "三大悲劇詩人を一人答えて",
@@ -25347,7 +25402,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-17"
                         },
                         {
                             "problem": "アケメネス朝ペルシアが各州に置いたサトラップを 監視するため中央から派遣した監察官を何というか。",
@@ -25577,7 +25632,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
+                            "last_answered_date": "2025-09-19"
                         },
                         {
                             "problem": "カペー朝の断絶で1328年に成立したフランスの新王朝は",
@@ -25820,6 +25875,42 @@
                             "last_answered_date": "2025-09-11"
                         }
                     ]
+                },
+                {
+                    "name": "タイ",
+                    "questions": [
+                        {
+                            "problem": "タイのアユタヤ朝で活躍した日本人は",
+                            "answer": [
+                                "山田長政"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-19"
+                        },
+                        {
+                            "problem": "ラタナコーシン朝は何仏教を保護したか",
+                            "answer": [
+                                "上座仏教"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-19"
+                        },
+                        {
+                            "problem": "最初のタイ人の王朝は",
+                            "answer": [
+                                "スコータイ朝"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-19"
+                        }
+                    ]
+                },
+                {
+                    "name": "イスラーム",
+                    "questions": []
                 }
             ]
         },
