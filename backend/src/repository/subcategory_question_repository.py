@@ -2,7 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import mapped_column
 from sqlalchemy import Integer, PrimaryKeyConstraint, ForeignKey
 
-from src.repository.base.BasicDao import BaseCreateDTO, BaseUpdateDTO, BaseReadDTO, BasicDao
+from src.repository.base.BasicDao import BaseCreateDTO, BaseUpdateDTO, BaseReadDTO
 from src.repository.base.composite_base import CompositeKeySchema, CompositeKeyDao
 
 
