@@ -65,7 +65,6 @@ export const updateQuestionIsCorrect = async (question: Question): Promise<void>
 }
 
 
-
 // Calendar.tsxで使用する
 // 日付ごとの問題数を取得するAPI
 export const fetchQuestionCountsByLastAnsweredDate = async (

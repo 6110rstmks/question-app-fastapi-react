@@ -7,6 +7,7 @@ from config import PAGE_SIZE
 from fastapi import HTTPException
 from typing import Optional
 from src.repository.category_repository import CategoryRepository, CategoryCreate
+from src.repository.category_question_repository import CategoryQuestionRepository
 
 # リポジトリパターンに置換済み
 async def find_all_categories(db: AsyncSession)-> list[Category]:
@@ -90,20 +91,20 @@ async def find_category_by_name(
     db: AsyncSession, 
     search_word: str
 ) -> list[Category]:
-    # query = select(Category).where(Category.name.ilike(f"%{search_word}%"))
-    # return db.execute(query).scalars().all()
-
     category_repository = CategoryRepository(db)
     return await category_repository.find_by_name_contains(search_word)
 
-def find_category_by_question_id(
-    db: Session, 
-    question_id: int
-) -> Optional["Category"]:
-    query = select(CategoryQuestion).where(CategoryQuestion.question_id == question_id)
-    categoryquestion = db.execute(query).scalars().first()
-    query2 = select(Category).where(Category.id == categoryquestion.category_id) 
-    return db.execute(query2).scalars().first()
+# 現在未使用
+# async def find_category_by_question_id(
+#     db: AsyncSession, 
+#     question_id: int
+# ) -> Optional["Category"]:
+#     category_question_repository = CategoryQuestionRepository(db)
+#     category_question = await category_question_repository.find_by_question_id(question_id)
+#     if not category_question:
+#         return None
+#     category_repository = CategoryRepository(db)
+#     return await category_repository.get(category_question.category_id)
 
 # リポジトリパターンに置換済み
 async def create_category(

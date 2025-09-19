@@ -49,7 +49,7 @@ const ChangeCategorySubcategoryModal: React.FC<ChangeCategorySubcategoryProps> =
         },  
         setModalIsOpen, 
         setSubcategoriesRelatedToQuestion
-    );
+    )
 
     return (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
@@ -119,7 +119,7 @@ const ChangeCategorySubcategoryModal: React.FC<ChangeCategorySubcategoryProps> =
                                     >
                                         <div className="flex items-center gap-2 text-sm">
                                             <span className="font-medium text-gray-800 bg-green-50 px-3 py-1 rounded-full">
-                                                {linkedSubcategory.category_name}
+                                                {linkedSubcategory.categoryName}
                                             </span>
                                             <ChevronRight className="h-4 w-4 text-gray-400" />
                                             <span className="text-gray-600 bg-gray-50 px-3 py-1 rounded-full">
@@ -149,7 +149,6 @@ const ChangeCategorySubcategoryModal: React.FC<ChangeCategorySubcategoryProps> =
                             <div className="flex-1 overflow-y-auto">
                                 <div className="space-y-3">
                                     {subcategoriesWithCategoryName.map((subcategoryWithCategoryName) => (
-                                        console.log("subcategoryWithCategoryName:", subcategoryWithCategoryName),
 
                                         <label 
                                             key={subcategoryWithCategoryName.id}

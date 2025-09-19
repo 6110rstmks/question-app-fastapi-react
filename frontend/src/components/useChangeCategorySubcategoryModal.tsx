@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
+
+
 import type { Category } from '../types/Category'
 import type { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcategory'
 import type { Question } from '../types/Question'
 import type { SubcategoryQuestion } from '../types/SubcategoryQuestion'
+
 import { fetchCategory, fetchCategoriesBySearchWord } from '../api/CategoryAPI'
 import { fetchSubcategory, fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
 import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
@@ -47,7 +50,7 @@ export const useCategoryPage = (
     const [
         subcategoriesWithCategoryName, 
         setSubcategoriesWithCategoryName
-    ] = useState<SubcategoryWithCategoryName[]>([]);
+    ] = useState<SubcategoryWithCategoryName[]>([])
 
     const [categories, setCategories] = useState<Category[]>()
 
@@ -56,18 +59,19 @@ export const useCategoryPage = (
 
 
     // 初期でチェックされているSubcategoryと追加でチェックされたSubcateogryの情報
-    const [linkedSubcategories, setLinkedSubcategories] = useState<SubcategoryWithCategoryName[]>([]);
+    const [linkedSubcategories, setLinkedSubcategories] = useState<SubcategoryWithCategoryName[]>([])
 
     const handleCheckboxChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value, checked } = event.target
-        const parsedValue = JSON.parse(value)
+        const parsedValue: SubcategoryWithCategoryName = JSON.parse(value)
 
         console.log(23989, parsedValue)
 
-        const subcategoryId = parseInt(parsedValue.id, 10)
+        // const subcategoryId = parseInt(parsedValue.id, 10)
+        const subcategoryId = parsedValue.id
 
-        const categoryId = parseInt(parsedValue.category_id, 10)
-        console.log(222111, parseInt(parsedValue.category_id, 10))
+        const categoryId = parsedValue.categoryId
+        console.log(222111, parsedValue.categoryId)
 
         if (checked) {
             setSelectedCategoryIds((prev) => {
@@ -102,8 +106,8 @@ export const useCategoryPage = (
                     ...(prev || []), 
                     {
                         ...parsedValue, // 既存の値をそのままコピー
-                        categoryId: parsedValue.category_id, // category_id を categoryId に変更
-                        categoryName: parsedValue.category_name, // category_name を categoryName に変更
+                        categoryId: parsedValue.categoryId, // category_id を categoryId に変更
+                        categoryName: parsedValue.categoryName, // category_name を categoryName に変更
                         // category_id と category_name は削除または更新
                     }
                 ]
@@ -207,6 +211,7 @@ export const useCategoryPage = (
         console.log(66666, selectedCategoryIds)
         console.log(77777, selectedSubcategoryIds)
         console.log(88888, question?.id)
+
 
         const response = await fetch(`http://localhost:8000/questions/change_belongs_to_subcategoryId`, {
             method: 'PUT',

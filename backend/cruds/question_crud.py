@@ -1,4 +1,5 @@
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func, text
 from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
 from models import Question, SubcategoryQuestion, CategoryQuestion
@@ -167,7 +168,7 @@ def delete_question(
     return question
 
 def change_belongs_to_subcategoryId(
-    db: AsyncSession, 
+    db: Session, 
     changeSubcategoryUpdate: QuestionBelongsToSubcategoryIdUpdate
 ) -> list[int]:
 

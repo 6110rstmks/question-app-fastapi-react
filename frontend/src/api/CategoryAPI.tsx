@@ -57,35 +57,6 @@ export const fetchCategoriesBySearchWord = async (
     return await response.json()
 }
 
-// Questionに紐づくCategoryを取得するAPI
-// 問題出題画面にて使用する。
-export const fetchCategoryByQuestionId = async (
-    question_id: number
-): Promise<Category> => {
-    const url = `http://localhost:8000/categories/question_id/${question_id}`
-    const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    })
-    return await response.json()
-}
-
-// 現在未使用
-// questionを一つでも持つcategoryをすべて取得
-// 問題出題画面にて使用する。
-// export const fetchAllCategoriesWithQuestions = async (): Promise<CategoryWithQuestionCount[]> => {
-//     const url = 'http://localhost:8000/categories/all_categories_with_questions'
-//     const response = await fetch(url, {
-//         method: 'GET',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         }
-//     })
-//     return await response.json()
-// }
-
 // ページネーションのページ数を取得
 export const fetchPageCount = async (
 ): Promise<number> => {
@@ -128,3 +99,32 @@ export const createCategory = async (
     return response
 }
 
+// Questionに紐づくCategoryを取得するAPI
+// 問題出題画面にて使用する。
+// 現在未使用
+// export const fetchCategoryByQuestionId = async (
+//     question_id: number
+// ): Promise<Category> => {
+//     const url = `http://localhost:8000/categories/question_id/${question_id}`
+//     const response = await fetch(url, {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         }
+//     })
+//     return await response.json()
+// }
+
+// 現在未使用
+// questionを一つでも持つcategoryをすべて取得
+// 問題出題画面にて使用する。
+// export const fetchAllCategoriesWithQuestions = async (): Promise<CategoryWithQuestionCount[]> => {
+//     const url = 'http://localhost:8000/categories/all_categories_with_questions'
+//     const response = await fetch(url, {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         }
+//     })
+//     return await response.json()
+// }
