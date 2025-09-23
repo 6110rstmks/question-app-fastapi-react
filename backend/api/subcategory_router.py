@@ -64,9 +64,10 @@ async def find_by_name(
 @router.get("/category_id/{category_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_by_category_id(
     db: AsyncDbDependency,
-    category_id: int = Path(gt=0)
+    category_id: int = Path(gt=0),
+    searchSubcategoryName: Optional[str] = Query(default=None, min_length=2, max_length=20)
 ):
-    return await subcategory_crud.find_subcategories_by_category_id(db, category_id)
+    return await subcategory_crud.find_subcategories_by_category_id(db, category_id, searchSubcategoryName)
 
 
 @router.put("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)

@@ -116,11 +116,14 @@ async def find_subcategory_by_name(
 # リポジトリパターンに置換済み
 async def find_subcategories_by_category_id(
     db: AsyncSession,
-    category_id: int
+    category_id: int,
+    searchSubcategoryName: Optional[str] = None
 ) -> list[SubcategoryResponse]:
     
     subcategory_repository = SubcategoryRepository(db)
-    return await subcategory_repository.find_by_category_id(category_id)
+    
+    if not searchSubcategoryName:
+        return await subcategory_repository.find_by_category_id(category_id)
 
 # リポジトリパターンに置換済み
 async def create_subcategory(
