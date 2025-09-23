@@ -68,7 +68,7 @@ class SubcategoryRepository(
         """
         return await self._find_by_fields(like_fields={"name": f"{prefix}%"})
 
-    async def find_by_category_and_name_like(self, category_id: int, name_pattern: str) -> list[SubcategoryRead]:
+    async def find_by_category_id_and_name_like(self, category_id: int, name_pattern: str) -> list[SubcategoryRead]:
         """
         カテゴリIDでの等価検索と名前でのLIKE検索を組み合わせます。
         
@@ -76,10 +76,10 @@ class SubcategoryRepository(
         :param name_pattern: 名前の検索パターン
         :return: 該当するSubcategoryのリスト
         """
-        return await self._find_by_fields_with_like(
-            like_fields={"name": name_pattern},
-            category_id=category_id
-        )
+        query = select(self.model).where(self.model.category_id == category_id).where(self.model.name.like(name_pattern))
+        print(query)
+        print(await self.db.execute(query))
+        return await self.db.execute(query)
 
     async def find_by_category_id_and_ids(self, category_id: int, ids: list[int]) -> list[SubcategoryRead] | None:
         query = select(self.model).where(self.model.category_id == category_id).where(self.model.id.in_(ids))

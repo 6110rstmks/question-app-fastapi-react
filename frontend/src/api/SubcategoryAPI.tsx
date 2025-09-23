@@ -8,8 +8,8 @@ export const fetchSubcategoriesForHomePage = async (
     searchQuestionWord?: string,
     searchAnswerWord?: string
 ): Promise<Subcategory[]> => {
-    const url = `http://localhost:8000/subcategories/category_id/${category_id}?limit=4&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}&searchAnswerWord=${searchAnswerWord}`
-    const response = await fetch(url)
+    const url: string = `http://localhost:8000/subcategories/category_id/${category_id}?limit=4&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}&searchAnswerWord=${searchAnswerWord}`
+    const response: Response = await fetch(url)
     if (!response.ok) {
         throw new Error("Failed to fetch subcategories")
     }
@@ -23,9 +23,14 @@ export const fetchSubcategoriesForHomePage = async (
 }
 
 export const fetchSubcategoriesByCategoryId = async (
-    category_id: number
+    category_id: number,
+    searchSubcategoryName?: string
 ): Promise<Subcategory[]> => {
-    const response = await fetch(`http://localhost:8000/subcategories/category_id/${category_id}`)
+    let url: string = `http://localhost:8000/subcategories/category_id/${category_id}`
+    if (searchSubcategoryName) {
+        url += `?searchSubcategoryName=${searchSubcategoryName}`
+    }
+    const response = await fetch(url)
     if (!response.ok) {
         throw new Error("Failed to fetch subcategories")
     }
