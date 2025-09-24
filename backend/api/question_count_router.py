@@ -3,7 +3,7 @@ from fastapi import APIRouter, Path, HTTPException, Depends, FastAPI
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud, question_count_crud, subcategory_crud
-from schemas.question import QuestionGetCountByLastAnsweredDate
+from schemas.question import QuestionGetCountByLastAnsweredDate, QuestionGetCountByIsCorrectInSubcategory
 from database import get_db
 
 DbDependency = Annotated[Session, Depends(get_db)]
@@ -106,12 +106,12 @@ async def get_question_corrected_count_in_category_order_than_x_days(
     return question_count_crud.get_question_temporary_count_in_category_older_than_x_days(db, category_id, x_days)
 
 
-@router.get("/count/temporary/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_temporary_count_in_subcategory(
-    db: DbDependency, 
-    subcategory_id: int = Path(gt=0)
-):
-    return question_count_crud.get_question_temporary_count_in_subcategory(db, subcategory_id)
+# @router.get("/count/temporary/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
+# async def get_question_temporary_count_in_subcategory(
+#     db: DbDependency, 
+#     subcategory_id: int = Path(gt=0)
+# ):
+#     return question_count_crud.get_question_temporary_count_in_subcategory(db, subcategory_id)
 
 # ------------------------------------------------------------------------ #
 # Uncorrected
@@ -135,9 +135,19 @@ async def get_question_uncorrected_count_in_category(
     return question_count_crud.get_question_uncorrected_count_in_category(db, category_id)
 
 # Subcategoryに紐づくQuestion数を取得するエンドポイント
-@router.get("/count/uncorrected/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_uncorrected_count_in_subcategory(
-    db: DbDependency, 
-    subcategory_id: int = Path(gt=0)
+# @router.get("/count/uncorrected/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
+# async def get_question_uncorrected_count_in_subcategory(
+#     db: DbDependency, 
+#     subcategory_id: int = Path(gt=0)
+# ):
+#     return question_count_crud.get_question_uncorrected_count_in_subcategory(db, subcategory_id)
+
+
+# ======================================================================= #
+
+@router.post("/count/is_correct/subcategory_id/", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_count_by_is_correct_in_subcategory(
+    db: DbDependency,
+    body: QuestionGetCountByIsCorrectInSubcategory,
 ):
-    return question_count_crud.get_question_uncorrected_count_in_subcategory(db, subcategory_id)
+    return question_count_crud.get_question_count_by_is_correct_in_subcategory(db, body)

@@ -39,5 +39,7 @@ class QuestionResponse(BaseModel):
 class QuestionGetCountByLastAnsweredDate(BaseModel):
     days_array: List[str] = Field(..., example=["2021-01-01", "2021-01-02"])    
 
-    
+class QuestionGetCountByIsCorrectInSubcategory(BaseModel):
+    subcategory_id: int = Field(gt=0, example=1)
+    is_correct: SolutionStatus = Field(default=SolutionStatus.Incorrect, example=SolutionStatus.Incorrect)
     

@@ -4,8 +4,10 @@ from models import Question, SubcategoryQuestion, CategoryQuestion
 from datetime import date, timedelta
 from config import SolutionStatus
 from models import CategoryBlacklist
+from schemas.question import  QuestionGetCountByIsCorrectInSubcategory
 
-def get_question_count(db: Session):
+
+def get_question_count(db: Session) -> int:
     count = db.scalar(
                     select(func.count()).
                     select_from(Question)
@@ -16,7 +18,7 @@ def get_question_count(db: Session):
 def get_question_count_in_category(
     db: Session,
     category_id: int
-):
+) -> int:
     count = db.scalar(
                     select(func.count()).
                     select_from(Question).
@@ -28,7 +30,7 @@ def get_question_count_in_category(
 def get_question_count_in_subcategory(
     db: Session,
     subcategory_id: int
-):
+) -> int:
 
     count = db.scalar(
                     select(func.count()).
@@ -41,7 +43,7 @@ def get_question_count_in_subcategory(
 def get_question_count_by_last_answered_date(
     db: Session,
     days_array: list[str]
-):
+) -> dict[str, int]:
     
     # ブラックリストカテゴリの問題IDを取得
     blacklisted_category_ids = db.execute(
@@ -122,7 +124,7 @@ def get_question_corrected_count(db: Session):
 # Temporary
 # ------------------------------------------------------------------------ #
 
-def get_question_temporary_count(db: Session):
+def get_question_temporary_count(db: Session) -> int:
     count = db.scalar(
                     select(func.count()).
                     select_from(Question).
@@ -202,3 +204,20 @@ def get_question_uncorrected_count_in_subcategory(
                 )
     return int(count)
 
+
+def get_question_count_by_is_correct_in_subcategory(
+    db: Session,
+    body: QuestionGetCountByIsCorrectInSubcategory,
+) -> int:
+
+    subcategory_id = body.subcategory_id
+    is_correct = body.is_correct
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(SubcategoryQuestion).
+                    where(SubcategoryQuestion.subcategory_id == subcategory_id).
+                    where(Question.is_correct == is_correct)
+                )
+    return int(count)
+    

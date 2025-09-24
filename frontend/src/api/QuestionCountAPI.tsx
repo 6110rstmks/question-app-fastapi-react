@@ -134,12 +134,17 @@ export const fetchTemporaryQuestionCountByCategoryId = async (
 export const fetchTemporaryQuestionCountBySubcategoryId = async (
     subcategory_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/temporary/subcategory_id/${subcategory_id}`
+    const url = 'http://localhost:8000/question_count/count/is_correct/subcategory_id/'
+
     const response = await fetch(url, {
-        method: 'GET',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-        }
+        },
+        body: JSON.stringify({
+            subcategory_id: subcategory_id,
+            is_correct: 1  // 1はTemporaryを表す
+        })
     })
     return await response.json()
 }
@@ -194,12 +199,17 @@ export const fetchUncorrectedQuestionCountByCategoryId = async (
 export const fetchUncorrectedQuestionCountBySubcategoryId = async (
     subcategory_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/uncorrected/subcategory_id/${subcategory_id}`
+    const url = 'http://localhost:8000/question_count/count/is_correct/subcategory_id/'
+
     const response = await fetch(url, {
-        method: 'GET',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-        }
+        },
+        body: JSON.stringify({
+            subcategory_id: subcategory_id,
+            is_correct: 0  // 0は不正解を表す
+        })
     })
     return await response.json()
 }
