@@ -148,6 +148,19 @@ def get_question_temporary_count_in_category_older_than_x_days(
                 )
     return int(count)
 
+def get_question_temporary_count_in_subcategory(
+    db: Session,
+    subcategory_id: int
+):
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(SubcategoryQuestion).
+                    where(Question.is_correct == SolutionStatus.Temporary).
+                    where(SubcategoryQuestion.subcategory_id == subcategory_id)
+                )
+    return int(count)
+
 
 # ------------------------------------------------------------------------ #
 # Uncorrected

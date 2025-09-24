@@ -106,6 +106,13 @@ async def get_question_corrected_count_in_category_order_than_x_days(
     return question_count_crud.get_question_temporary_count_in_category_older_than_x_days(db, category_id, x_days)
 
 
+@router.get("/count/temporary/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
+async def get_question_temporary_count_in_subcategory(
+    db: DbDependency, 
+    subcategory_id: int = Path(gt=0)
+):
+    return question_count_crud.get_question_temporary_count_in_subcategory(db, subcategory_id)
+
 # ------------------------------------------------------------------------ #
 # Uncorrected
 # ------------------------------------------------------------------------ #
