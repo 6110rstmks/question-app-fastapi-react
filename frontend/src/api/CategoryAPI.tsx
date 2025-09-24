@@ -21,7 +21,7 @@ export const fetchAllCategories = async (): Promise<Category[]> => {
     return await response.json()
 }
 
-// ホーム画面の初期状態にて、カテゴリー一覧を取得するためのAPI
+// ホーム画面の初期状態にて、カテゴリー一覧を取得するためのAPIを叩く
 // カテゴリ検索を行った際も、以下のAPIでカテゴリー一覧を取得する
 export const fetchCategories = async ({
     skip,
@@ -43,7 +43,7 @@ export const fetchCategories = async ({
     return response.json()
 }
 
-// ChangeCategorySubcategoryModalで使用するAPI
+// ChangeCategorySubcategoryModalで使用するAPIを叩く
 export const fetchCategoriesBySearchWord = async (
     searchWord: string
 ): Promise<Category[]> => {

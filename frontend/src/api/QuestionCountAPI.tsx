@@ -131,6 +131,19 @@ export const fetchTemporaryQuestionCountByCategoryId = async (
     return await response.json()
 }
 
+export const fetchTemporaryQuestionCountBySubcategoryId = async (
+    subcategory_id: number
+): Promise<number> => {
+    const url = `http://localhost:8000/question_count/count/temporary/subcategory_id/${subcategory_id}`
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return await response.json()
+}
+
 export const fetchTemporaryQuestionCountByCategoryIdOrderThanXDays = async (
     category_id: number,
     x_days: number

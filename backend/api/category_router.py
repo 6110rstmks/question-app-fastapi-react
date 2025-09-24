@@ -45,6 +45,7 @@ async def find_all(
         answer_word=answerWord
     )
 
+# ChangeCategorySubcategoryModalで使用するAPI
 @router.get("/search", response_model=Optional[list[CategoryResponseSchema]], status_code=status.HTTP_200_OK)
 async def find_category_by_name(
     db: AsyncDbDependency,
@@ -82,16 +83,6 @@ async def find_all_categories(
 ):
     return (await category_cruds.find_all_categories(db))
 
-# 現在未使用
-# @router.get(
-#     "/all_categories_with_questions", 
-#     response_model=list[CategoryResponseWithQuestionCount], 
-#     status_code=status.HTTP_200_OK
-# )
-# async def find_all(
-#     db: DbDependency,
-# ):
-#     return (category_cruds.find_all_categories_with_questions(db))
 
 @router.get("/category_id/{id}", response_model=CategoryResponseSchema, status_code=status.HTTP_200_OK)
 async def find_category_by_id(
@@ -272,4 +263,13 @@ def git_push_json_file(file_path: Path):
     # if 'backup/json' in repo.branches:
     #     repo.git.branch('-D', 'bsackup/json')  # D
 
-
+# 現在未使用
+# @router.get(
+#     "/all_categories_with_questions", 
+#     response_model=list[CategoryResponseWithQuestionCount], 
+#     status_code=status.HTTP_200_OK
+# )
+# async def find_all(
+#     db: DbDependency,
+# ):
+#     return (category_cruds.find_all_categories_with_questions(db))

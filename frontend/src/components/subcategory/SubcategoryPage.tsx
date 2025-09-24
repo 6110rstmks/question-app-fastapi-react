@@ -35,6 +35,7 @@ const SubcategoryPage: React.FC = () => {
         setIsEditing,
         questionCount,
         uncorrectedQuestionCount,
+        temporaryQuestionCount,
         handleKeyPress,
         handleSetUnsolvedProblem,
         handleSetTemporaryProblem
@@ -142,7 +143,7 @@ const SubcategoryPage: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-slate-600 text-sm font-medium">Temporary</p>
-                <p className="text-3xl font-bold text-amber-600">{uncorrectedQuestionCount}</p>
+                <p className="text-3xl font-bold text-amber-600">{temporaryQuestionCount}</p>
               </div>
               <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
               </div>

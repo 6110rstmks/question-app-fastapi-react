@@ -10,8 +10,9 @@ import { handleNavigateToCategoryPage } from '../../../utils/navigate_function'
 
 import { updateSubcategoryName } from '../../../api/SubcategoryAPI'
 import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
-import { fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
+import { fetchTemporaryQuestionCountBySubcategoryId, fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
 import { fetchProblem } from '../../../api/ProblemAPI'
+
 
 interface categoryInfo {
     id: number
@@ -24,9 +25,15 @@ export const useSubcategoryPage = (
 ) => {
     const [subcategoryName, setSubcategoryName] = useState<string>('')
     const [questions, setQuestions] = useState<Question[]>([])
+
     const [
         uncorrectedQuestionCount,
         setUncorrectedQuestionCount
+    ] = useState<number | null>(null)
+
+    const [
+        temporaryQuestionCount,
+        setTemporaryQuestionCount
     ] = useState<number | null>(null)
 
     const [
@@ -103,7 +110,7 @@ export const useSubcategoryPage = (
     //「削除」と入力してクリックすることで削除が実行される。
     const handleDeleteSubcategory = async () => {
 
-        let confirmation = prompt("削除を実行するには、「削除」と入力してください:")
+        let confirmation: string | null = prompt("削除を実行するには、「削除」と入力してください:")
 
         if (confirmation !== '削除') {
             return
@@ -115,7 +122,7 @@ export const useSubcategoryPage = (
             return
         }
 
-        const response = await fetch(`http://localhost:8000/subcategories/${subcategoryId}`, {
+        const response: Response = await fetch(`http://localhost:8000/subcategories/${subcategoryId}`, {
             method: 'DELETE',
         })
         if (!response.ok) {
@@ -169,6 +176,9 @@ export const useSubcategoryPage = (
             const uncorrectedQuestionCount: number = await fetchUncorrectedQuestionCountBySubcategoryId(subcategoryId)
             setUncorrectedQuestionCount(uncorrectedQuestionCount)
 
+            const temporaryQuestionCount: number = await fetchTemporaryQuestionCountBySubcategoryId(subcategoryId)
+            setTemporaryQuestionCount(temporaryQuestionCount)
+
             setQuestionCount(questions_data.length)
         })()
 
@@ -196,6 +206,7 @@ export const useSubcategoryPage = (
         setIsEditing,
         questionCount,
         uncorrectedQuestionCount,
+        temporaryQuestionCount,
         handleKeyPress,
         handleSetUnsolvedProblem,
         handleSetTemporaryProblem

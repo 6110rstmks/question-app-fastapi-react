@@ -14,6 +14,8 @@ async def find_all_categories(db: AsyncSession)-> list[Category]:
     category_repository = CategoryRepository(db)
     return await category_repository.get_all()
 
+# リポジトリパターンにこれから移管
+
 def find_all(
     db: Session, 
     limit: int, 
@@ -94,17 +96,6 @@ async def find_category_by_name(
     category_repository = CategoryRepository(db)
     return await category_repository.find_by_name_contains(search_word)
 
-# 現在未使用
-# async def find_category_by_question_id(
-#     db: AsyncSession, 
-#     question_id: int
-# ) -> Optional["Category"]:
-#     category_question_repository = CategoryQuestionRepository(db)
-#     category_question = await category_question_repository.find_by_question_id(question_id)
-#     if not category_question:
-#         return None
-#     category_repository = CategoryRepository(db)
-#     return await category_repository.get(category_question.category_id)
 
 # リポジトリパターンに置換済み
 async def create_category(
@@ -148,3 +139,15 @@ async def get_page_count(db: AsyncSession) -> int:
 #                 category.incorrected_answered_question_count += 1
                     
 #     return result
+
+# 現在未使用
+# async def find_category_by_question_id(
+#     db: AsyncSession, 
+#     question_id: int
+# ) -> Optional["Category"]:
+#     category_question_repository = CategoryQuestionRepository(db)
+#     category_question = await category_question_repository.find_by_question_id(question_id)
+#     if not category_question:
+#         return None
+#     category_repository = CategoryRepository(db)
+#     return await category_repository.get(category_question.category_id)
