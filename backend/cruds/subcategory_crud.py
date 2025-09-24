@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 
-from sqlalchemy import select, update, func
+from sqlalchemy import select, func
 from schemas.subcategory import SubcategoryCreateSchema, SubcategoryUpdateSchema, SubcategoryResponse
 from models import Subcategory, SubcategoryQuestion, Question, Category
 from cruds import question_crud as question_cruds
@@ -122,8 +122,11 @@ async def find_subcategories_by_category_id(
     
     subcategory_repository = SubcategoryRepository(db)
     
-    if not searchSubcategoryName:
-        return await subcategory_repository.find_by_category_id(category_id)
+    if searchSubcategoryName:
+        print(998989)
+        return await subcategory_repository.find_by_category_id_and_name_like(category_id, f"%{searchSubcategoryName}%")    
+    return await subcategory_repository.find_by_category_id(category_id)
+
 
 # リポジトリパターンに置換済み
 async def create_subcategory(
@@ -144,9 +147,9 @@ async def delete_subcategory(
     
     subcategory_repository = SubcategoryRepository(db)
     
-    questions = question_cruds.find_all_questions_in_subcategory(db, id)
+    questions = await question_cruds.find_all_questions_in_subcategory(db, id)
     
     for question in questions:
-        question_cruds.delete_question(db, question.id)
-    
+        await question_cruds.delete_question(db, question.id)
+
     return await subcategory_repository.delete(id)

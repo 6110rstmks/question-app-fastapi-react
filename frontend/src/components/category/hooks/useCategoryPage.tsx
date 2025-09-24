@@ -58,6 +58,7 @@ export const useCategoryPage = (categoryId: number) => {
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchWord(e.target.value)
+        console.log(e.target.value)
     }
 
     const addSubcategory = (subcategory: SubcategoryWithQuestionCount) => {
@@ -143,7 +144,6 @@ export const useCategoryPage = (categoryId: number) => {
             setUncorrectedQuestionCount(uncorrectedQuestionCount)
 
             const temporaryQuestionCount = await fetchTemporaryQuestionCountByCategoryIdOrderThanXDays(categoryId, 15)
-            console.log(temporaryQuestionCount)
             setTemporaryQuestionCountFifteenDaysAgo(temporaryQuestionCount)
 
             const correctedQuestionCount = await fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth(categoryId)
@@ -153,13 +153,15 @@ export const useCategoryPage = (categoryId: number) => {
 
     useEffect(() => {
         (async () => {
-            const subcategories: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId)
+            const subcategories: Subcategory[] = await fetchSubcategoriesByCategoryId(categoryId, searchWord)
+            console.log(398738);
+            console.log(subcategories);
 
             if (subcategories.length !== 0) {
+                console.log(4444)
                 const subcategoriesWithCount: SubcategoryWithQuestionCount[] = await Promise.all(
                     subcategories.map(async (subcategory) => {
                         const questionCount: number = await fetchQuestionCountBySubcategoryId(subcategory.id)
-                        console.log('questionCount', questionCount)
                         return {
                             ...subcategory,
                             questionCount: questionCount
