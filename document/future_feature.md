@@ -27,6 +27,8 @@ frontendテストコードを網羅する。
 
 pip install coverageできちんと関数に対してテストがあるか調べる。
 
+uvに移行
+
 
 patchを使用してbackendコードをmockする。
 
