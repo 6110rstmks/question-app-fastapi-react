@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom'
 import Modal from 'react-modal'
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
 
 import QuestionEditModal from './QuestionEditModal'
 import ChangeCategorySubcategory from '../ChangeCategorySubcategoryModal'
@@ -35,6 +37,11 @@ const QuestionPage: React.FC = () => {
     const [
         changeSubcategoryModalIsOpen,
         setChangeSubcategoryModalIsOpen
+    ] = useState<boolean>(false)
+
+    const [
+        markdownFlg,
+        setMarkdownFlg
     ] = useState<boolean>(false)
 
     // location.stateがnullの場合にlocalStorageから取得
@@ -101,137 +108,172 @@ const QuestionPage: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
                 {/* Header */}
                 <div className="bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-6">
-                <div className="flex items-center justify-between">
-                    <h1 className="text-white font-bold text-xl">
-                    Question ID: {question?.id}
-                    </h1>
-                    <div className="text-indigo-100 text-sm font-medium">
-                    {question?.last_answered_date.slice(0, 10)}
+                    <div className="flex items-center justify-between">
+                        <h1 className="text-white font-bold text-xl">
+                        Question ID: {question?.id}
+                        </h1>
+                        <div className="text-indigo-100 text-sm font-medium">
+                        {question?.last_answered_date.slice(0, 10)}
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 {/* Question Content */}
                 <div className="p-8">
-                <div className="flex flex-col lg:flex-row lg:items-start gap-6 mb-8">
-                    {/* Problem Section */}
-                    <div className="flex-1">
-                    <div className="mb-4">
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                        <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
-                        問題
-                        </h2>
-                        <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-indigo-500">
-                        {question?.problem && question.problem.includes('\\') ? (
-                            <BlockMath math={question.problem} />
-                        ) : (
-                            <div className="text-gray-700 leading-relaxed">
-                                {RenderMemoWithLinks(question?.problem || '')}
+                    <div className="flex flex-col lg:flex-row lg:items-start gap-6 mb-8">
+
+
+                        {/* 切り替えボタン */}
+                        <button
+                            onClick={() => setMarkdownFlg((prev) => !prev)}
+                            className="ml-4 px-3 py-1 text-sm rounded-lg border border-indigo-500 text-indigo-600 hover:bg-indigo-50 transition"
+                        >
+                            {markdownFlg ? "通常表示" : "Markdown表示"}
+                        </button>
+
+                        {/* Problem Section */}
+                        {/* <div className="flex-1">
+                            <div className="mb-4">
+                                <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                                    <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
+                                    問題
+                                </h2>
+                                <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-indigo-500">
+                                    {question?.problem && question.problem.includes('\\') ? (
+                                        <BlockMath math={question.problem} />
+                                    ) : (
+                                        <div className="text-gray-700 leading-relaxed">
+                                            {RenderMemoWithLinks(question?.problem || '')}
+                                        </div>
+                                    )}
+                                </div>
                             </div>
-                        )}
+                        </div> */}
+                        <div className="flex-1">
+                            <div className="mb-4">
+                                <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                                    <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
+                                    問題
+                                </h2>
+                                <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-indigo-500">
+                                {question?.problem && question.problem.includes("\\") ? (
+                                    <BlockMath math={question.problem} />
+                                ) : markdownFlg ? (
+                                    <ReactMarkdown
+                                    remarkPlugins={[remarkGfm]}
+                                    >
+                                    {question?.problem || ""}
+                                    </ReactMarkdown>
+                                ) : (
+                                    <div className="text-gray-700 leading-relaxed">
+                                    {RenderMemoWithLinks(question?.problem || "")}
+                                    </div>
+                                )}
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        {/* Status Badge */}
+                        <div className="lg:w-48 flex-shrink-0">
+                        <div className="bg-gray-50 rounded-xl p-4">
+                            <h3 className="text-sm font-medium text-gray-600 mb-3">ステータス</h3>
+                            <button
+                                className={`w-full px-4 py-3 rounded-lg font-medium text-sm transition-all duration-200 transform hover:scale-105 ${
+                                    question?.is_correct === SolutionStatus.Correct ? 
+                                        'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25' : 
+                                    question?.is_correct === SolutionStatus.Temporary ? 
+                                        'bg-amber-500 text-white shadow-lg shadow-amber-500/25' : 
+                                        'bg-red-500 text-white shadow-lg shadow-red-500/25'
+                                }`}
+                                onClick={() => handleUpdateIsCorrect(question, setQuestion)}
+                            >
+                                {question?.is_correct === SolutionStatus.Incorrect ? 'Incorrect' :
+                                question?.is_correct === SolutionStatus.Temporary ? 'Temp Correct' :
+                                'Correct'}
+                            </button>
+                        </div>
                         </div>
                     </div>
+
+                    {/* Answer Section */}
+                    <div className="mb-8">
+                        <button
+                            className={`w-full px-6 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] ${
+                                showAnswer ? 
+                                    'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25' : 
+                                    'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                            }`}
+                            onClick={() => setShowAnswer(!showAnswer)}
+                        >
+                            {showAnswer ? '🔼 回答を隠す' : '🔽 回答を表示'}
+                        </button>
+                        
+                        <div className={`mt-4 transition-all duration-300 overflow-hidden ${
+                            showAnswer ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+                        }`}>
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-indigo-100">
+                            {question?.answer.map((answer, index) => (
+                                <div key={index} className="text-gray-700 leading-relaxed">
+                                    {answer.split('\n').map((line, i) => (
+                                        <React.Fragment key={i}>
+                                        {isLatex(line) ? (
+                                            <BlockMath math={line} />
+                                        ) : (
+                                            <>
+                                            {line}
+                                            <br />
+                                            </>
+                                        )}
+                                        </React.Fragment>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                        </div>
                     </div>
 
-                    {/* Status Badge */}
-                    <div className="lg:w-48 flex-shrink-0">
-                    <div className="bg-gray-50 rounded-xl p-4">
-                        <h3 className="text-sm font-medium text-gray-600 mb-3">ステータス</h3>
-                        <button
-                            className={`w-full px-4 py-3 rounded-lg font-medium text-sm transition-all duration-200 transform hover:scale-105 ${
-                                question?.is_correct === SolutionStatus.Correct ? 
-                                    'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25' : 
-                                question?.is_correct === SolutionStatus.Temporary ? 
-                                    'bg-amber-500 text-white shadow-lg shadow-amber-500/25' : 
-                                    'bg-red-500 text-white shadow-lg shadow-red-500/25'
-                            }`}
-                            onClick={() => handleUpdateIsCorrect(question, setQuestion)}
+                    {/* Action Buttons */}
+                    <div className="flex flex-wrap gap-3 mb-8">
+                        <button 
+                            onClick={() => handleDeleteQuestion(categoryId, subcategoryId, questionId, categoryName)} 
+                            className="px-6 py-3 bg-red-500 text-white rounded-lg font-medium hover:bg-red-600 transition-colors duration-200 shadow-lg shadow-red-500/25 transform hover:scale-105"
                         >
-                            {question?.is_correct === SolutionStatus.Incorrect ? 'Incorrect' :
-                            question?.is_correct === SolutionStatus.Temporary ? 'Temp Correct' :
-                            'Correct'}
+                            🗑️ DELETE
+                        </button>
+                        <button 
+                            onClick={() => handleAnswerQuestion(question!)}
+                            className="px-6 py-3 bg-emerald-500 text-white rounded-lg font-medium hover:bg-emerald-600 transition-colors duration-200 shadow-lg shadow-emerald-500/25 transform hover:scale-105"
+                        >
+                            ✅ この問題を回答した！
+                        </button>
+                        <button 
+                            onClick={() => setEditModalIsOpen(true)}
+                            className="px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200 shadow-lg shadow-blue-500/25 transform hover:scale-105"
+                        >
+                            ✏️ Edit
+                        </button>
+                        <button 
+                            onClick={() => setChangeSubcategoryModalIsOpen(true)}
+                            className="px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors duration-200 shadow-lg shadow-purple-500/25 transform hover:scale-105"
+                        >
+                            🔄 Change Category
                         </button>
                     </div>
-                    </div>
-                </div>
 
-                {/* Answer Section */}
-                <div className="mb-8">
-                    <button
-                        className={`w-full px-6 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] ${
-                            showAnswer ? 
-                                'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25' : 
-                                'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                        }`}
-                        onClick={() => setShowAnswer(!showAnswer)}
-                    >
-                        {showAnswer ? '🔼 回答を隠す' : '🔽 回答を表示'}
-                    </button>
-                    
-                    <div className={`mt-4 transition-all duration-300 overflow-hidden ${
-                        showAnswer ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
-                    }`}>
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-indigo-100">
-                        {question?.answer.map((answer, index) => (
-                            <div key={index} className="text-gray-700 leading-relaxed">
-                                {answer.split('\n').map((line, i) => (
-                                    <React.Fragment key={i}>
-                                    {isLatex(line) ? (
-                                        <BlockMath math={line} />
-                                    ) : (
-                                        <>
-                                        {line}
-                                        <br />
-                                        </>
-                                    )}
-                                    </React.Fragment>
-                                ))}
+                    {/* Memo Section */}
+                    {question?.memo && (
+                        <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-6 border-l-4 border-amber-400">
+                            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                                <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
+                                メモ
+                            </h3>
+                            <div className="text-gray-700 leading-relaxed">
+                                {RenderMemoWithLinks(question.memo)}
                             </div>
-                        ))}
-                    </div>
-                    </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-wrap gap-3 mb-8">
-                    <button 
-                        onClick={() => handleDeleteQuestion(categoryId, subcategoryId, questionId, categoryName)} 
-                        className="px-6 py-3 bg-red-500 text-white rounded-lg font-medium hover:bg-red-600 transition-colors duration-200 shadow-lg shadow-red-500/25 transform hover:scale-105"
-                    >
-                        🗑️ DELETE
-                    </button>
-                    <button 
-                        onClick={() => handleAnswerQuestion(question!)}
-                        className="px-6 py-3 bg-emerald-500 text-white rounded-lg font-medium hover:bg-emerald-600 transition-colors duration-200 shadow-lg shadow-emerald-500/25 transform hover:scale-105"
-                    >
-                        ✅ この問題を回答した！
-                    </button>
-                    <button 
-                        onClick={() => setEditModalIsOpen(true)}
-                        className="px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200 shadow-lg shadow-blue-500/25 transform hover:scale-105"
-                    >
-                        ✏️ Edit
-                    </button>
-                    <button 
-                        onClick={() => setChangeSubcategoryModalIsOpen(true)}
-                        className="px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors duration-200 shadow-lg shadow-purple-500/25 transform hover:scale-105"
-                    >
-                        🔄 Change Category
-                    </button>
-                </div>
-
-                {/* Memo Section */}
-                {question?.memo && (
-                    <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-6 border-l-4 border-amber-400">
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                            <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
-                            メモ
-                        </h3>
-                        <div className="text-gray-700 leading-relaxed">
-                            {RenderMemoWithLinks(question.memo)}
                         </div>
-                    </div>
-                )}
+                    )}
                 </div>
             </div>
 
