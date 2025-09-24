@@ -4,7 +4,7 @@ from models import Question, SubcategoryQuestion, CategoryQuestion
 from datetime import date, timedelta
 from config import SolutionStatus
 from models import CategoryBlacklist
-from schemas.question import  QuestionGetCountByIsCorrectInSubcategory
+from schemas.question import  QuestionGetCountByIsCorrectInSubcategory, QuestionGetCountByIsCorrectInCategory
 
 
 def get_question_count(db: Session) -> int:
@@ -217,6 +217,22 @@ def get_question_count_by_is_correct_in_subcategory(
                     select_from(Question).
                     join(SubcategoryQuestion).
                     where(SubcategoryQuestion.subcategory_id == subcategory_id).
+                    where(Question.is_correct == is_correct)
+                )
+    return int(count)
+
+def get_question_count_by_is_correct_in_category(
+    db: Session,
+    body: QuestionGetCountByIsCorrectInCategory,
+) -> int:
+
+    category_id = body.category_id
+    is_correct = body.is_correct
+    count = db.scalar(
+                    select(func.count()).
+                    select_from(Question).
+                    join(CategoryQuestion).
+                    where(CategoryQuestion.category_id == category_id).
                     where(Question.is_correct == is_correct)
                 )
     return int(count)

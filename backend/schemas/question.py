@@ -42,4 +42,8 @@ class QuestionGetCountByLastAnsweredDate(BaseModel):
 class QuestionGetCountByIsCorrectInSubcategory(BaseModel):
     subcategory_id: int = Field(gt=0, example=1)
     is_correct: SolutionStatus = Field(default=SolutionStatus.Incorrect, example=SolutionStatus.Incorrect)
+
+class QuestionGetCountByIsCorrectInCategory(BaseModel):
+    category_id: int = Field(gt=0, example=1)
+    is_correct: SolutionStatus = Field(default=SolutionStatus.Incorrect, example=SolutionStatus.Incorrect)
     

@@ -23,7 +23,6 @@ export const fetchQuestionCountByCategoryId = async (
             'Content-Type': 'application/json',
         }
     })
-    console.log('response', response.json)
     return await response.json()
 }
 
@@ -91,12 +90,17 @@ export const fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth = async (
 export const fetchCorrectedQuestionCountByCategoryId = async (
     category_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/questions/count/corrected/category_id/${category_id}`
+    const url = 'http://localhost:8000/question_count/count/is_correct/category_id/'
+
     const response = await fetch(url, {
-        method: 'GET',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-        }
+        },
+        body: JSON.stringify({
+            category_id: category_id,
+            is_correct: 2  // 2は正解を表す
+        })
     })
     return await response.json()
 }
@@ -121,12 +125,17 @@ export const fetchTemporaryQuestionCount = async (): Promise<number> => {
 export const fetchTemporaryQuestionCountByCategoryId = async (
     category_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/temporary/category_id/${category_id}`
+    const url = 'http://localhost:8000/question_count/count/is_correct/category_id/'
+
     const response = await fetch(url, {
-        method: 'GET',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-        }
+        },
+        body: JSON.stringify({
+            category_id: category_id,
+            is_correct: 1  // 1はTemporaryを表す
+        })
     })
     return await response.json()
 }
@@ -177,20 +186,24 @@ export const fetchUncorrectedQuestionCount = async (): Promise<number> => {
         }
     })
     
-    const data = await response.json()
-    return data
+    return await response.json()
 }
 
 // 特定のカテゴリ内の不正解のQuestionの数を取得するAPI
 export const fetchUncorrectedQuestionCountByCategoryId = async (
     category_id: number
 ): Promise<number> => {
-    const url = `http://localhost:8000/question_count/count/uncorrected/category_id/${category_id}`
+    const url = 'http://localhost:8000/question_count/count/is_correct/category_id/'
+
     const response = await fetch(url, {
-        method: 'GET',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-        }
+        },
+        body: JSON.stringify({
+            category_id: category_id,
+            is_correct: 0  // 0は不正解を表す
+        })
     })
     return await response.json()
 }
