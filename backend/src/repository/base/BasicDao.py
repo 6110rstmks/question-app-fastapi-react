@@ -157,7 +157,7 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
             for field_name, pattern in like_fields.items():
                 column = getattr(self.model, field_name, None)
                 if column is not None:
-                    stmt = stmt.where(column.like(pattern))
+                    stmt = stmt.where(column.ilike(pattern))
 
         if limit is not None:
             stmt = stmt.limit(limit)

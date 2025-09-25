@@ -1,3 +1,5 @@
+from datetime import date
+
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func, text
@@ -7,7 +9,6 @@ from typing import Optional
 from models import Question, SubcategoryQuestion, CategoryQuestion
 from cruds import category_question_crud as category_question_cruds
 from cruds import subcategory_question_crud as subcategory_question_cruds
-from datetime import date
 from schemas.question import QuestionCreateSchema, QuestionResponse, QuestionUpdateSchema, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
 
 from src.repository.question_repository import QuestionRepository, QuestionCreate
@@ -15,24 +16,32 @@ from src.repository.category_question_repository import CategoryQuestionReposito
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository, SubcategoryQuestionCreate
 from database import SessionDependency
 
-def find_all_questions(
-    db: AsyncSession,
+# リポジトリパターンに置換済み
+async def find_all_questions(
     search_word: str = None,
+    session=SessionDependency,
 ) -> list[QuestionResponse]:
     result = []
-    
-    result = db.query(Question).all()
+
+    question_repository = QuestionRepository(session)
+    result = await question_repository.get_all()
 
     if search_word:
         # 問題文で検索
-        result_a = db.query(Question).filter(
-            Question.problem.ilike(f"%{search_word}%")
-        ).all()
+        # result_a = db.query(Question).filter(
+        #     Question.problem.ilike(f"%{search_word}%")
+        # ).all()
+        result_a = await question_repository.find_by_problem_contains(search_word)
 
-        query1 = select(Question).where(
-            func.array_to_string(Question.answer, ',').ilike(f"%{search_word}%")
-        )
-        result_b = db.execute(query1).scalars().all()
+        # query1 = select(Question).where(
+        #     func.array_to_string(Question.answer, ',').ilike(f"%{search_word}%")
+        # )
+        # result_b = db.execute(query1).scalars().all()
+        result_b = await question_repository.find_by_answer_contains(search_word)
+        print(result_a)
+        print('ツアー')
+        print(result_b)
+        
         
         result = list({q.id: q for q in (result_a + result_b)}.values())
 
@@ -43,6 +52,7 @@ def find_all_questions_in_category(
     db: AsyncSession, 
     category_id: int
 ) -> list[QuestionResponse]:
+    
     query = select(Question).where(CategoryQuestion.category_id == category_id)
 
     return db.execute(query).scalars().all()
@@ -62,12 +72,16 @@ def find_all_questions_in_subcategory(
         
     return questions
 
-def find_question_by_id(db: AsyncSession, id: int) -> Question:
-    query = select(Question).where(Question.id == id)
-    return db.execute(query).scalars().first()
+# リポジトリパターンに置換済み
+async def find_question_by_id(
+    id: int,
+    session=SessionDependency, 
+) -> Question:
+    # query = select(Question).where(Question.id == id)
+    # return db.execute(query).scalars().first()
 
-def find_by_name(db: AsyncSession, name: str) -> list[Question]:
-    return db.query(Question).filter(Question.name.like(f"%{name}%")).all()
+    question_repository = QuestionRepository(session)
+    return question_repository.get(id)
 
 # リポジトリパターンに置換済み
 async def create(
