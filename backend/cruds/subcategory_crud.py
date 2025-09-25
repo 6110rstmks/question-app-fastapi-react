@@ -1,5 +1,4 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import Session
 
 from sqlalchemy import select, func
 from schemas.subcategory import SubcategoryCreateSchema, SubcategoryUpdateSchema, SubcategoryResponse
@@ -83,14 +82,6 @@ async def find_subcategory_by_id(
     subcategory_repository = SubcategoryRepository(db)
     return await subcategory_repository.get(id)
 
-
-# リポジトリパターンに置換しない
-async def find_subcategories_with_category_name_by_question_id(
-    db: Session, 
-    question_id: int
-) -> list[SubcategoryResponse]:
-    query1 = select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name")).join(SubcategoryQuestion, Subcategory.id == SubcategoryQuestion.subcategory_id).join(Category, Subcategory.category_id == Category.id).where(SubcategoryQuestion.question_id == question_id)
-    return db.execute(query1).fetchall()
 
 # リポジトリパターンに置換済み
 async def find_subcategory_by_name(
