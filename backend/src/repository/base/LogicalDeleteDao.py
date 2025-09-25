@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Any, Iterable, List, Literal, Optional, Type, TypeVar
+from typing import Any, Iterable, List, Literal, Type, TypeVar
 
 from pydantic import BaseModel
 from sqlalchemy import TIMESTAMP, asc, delete, desc, insert, Integer, update

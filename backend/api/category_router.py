@@ -53,16 +53,7 @@ async def find_category_by_name(
 ):
     return await category_cruds.find_category_by_name(db, search_word)
 
-# question_idからQuestionに紐づくCategoryを取得するエンドポイント
-@router.get("/question_id/{question_id}", response_model=CategoryResponseSchema, status_code=status.HTTP_200_OK)
-async def find_category_by_question_id(
-    db: DbDependency, 
-    question_id: int = Path(gt=0)
-):
-    found_category = category_cruds.find_category_by_question_id(db, question_id)
-    if not found_category:
-        raise HTTPException(status_code=404, detail="Category not found")
-    return found_category
+
 
 # page_countのルーティング
 @router.get("/page_count", response_model=int, status_code=status.HTTP_200_OK)
@@ -273,3 +264,15 @@ def git_push_json_file(file_path: Path):
 #     db: DbDependency,
 # ):
 #     return (category_cruds.find_all_categories_with_questions(db))
+
+# 現在未使用
+# question_idからQuestionに紐づくCategoryを取得するエンドポイント
+# @router.get("/question_id/{question_id}", response_model=CategoryResponseSchema, status_code=status.HTTP_200_OK)
+# async def find_category_by_question_id(
+#     db: DbDependency, 
+#     question_id: int = Path(gt=0)
+# ):
+#     found_category = category_cruds.find_category_by_question_id(db, question_id)
+#     if not found_category:
+#         raise HTTPException(status_code=404, detail="Category not found")
+#     return found_category

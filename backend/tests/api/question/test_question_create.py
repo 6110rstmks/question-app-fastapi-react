@@ -1,5 +1,7 @@
 from fastapi.testclient import TestClient
 
+def test_create_question_異常系_ログインしていない状態では失敗する(client_fixture: TestClient):
+    pass
 
 def test_create_question_正常系(client_fixture: TestClient):
     new_question = {
