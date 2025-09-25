@@ -23,7 +23,6 @@ class CategoryUpdate(BaseUpdateDTO):
     pass
 
 
-
 class CategoryRead(BaseReadDTO):
     id: int
     name: str
@@ -56,7 +55,6 @@ class CategoryRepository(
         return result.scalars().first() is not None
     
     async def count_all(self) -> int:
-        # total_count = await self.db.scalar(select(func.count()).select_from(self.model))
         stmt = select(func.count()).select_from(self.model)
         total_count = await self.db.scalar(stmt)
         return total_count
