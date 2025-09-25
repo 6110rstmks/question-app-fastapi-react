@@ -1,6 +1,8 @@
-from fastapi.testclient import TestClient
+# from fastapi.testclient import TestClient
+from httpx import AsyncClient
 
-def test_create_question_異常系_ログインしていない状態では失敗する(client_fixture: TestClient):
+
+async def test_create_question_異常系_ログインしていない状態では失敗する(client_fixture: AsyncClient):
     pass
 
 def test_create_question_正常系(client_fixture: TestClient):

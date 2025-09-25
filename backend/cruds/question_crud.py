@@ -1,14 +1,19 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, func, text
-from schemas.question import QuestionCreate, QuestionUpdate, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
+from typing import Optional
+
+
 from models import Question, SubcategoryQuestion, CategoryQuestion
-from sqlalchemy.exc import SQLAlchemyError
 from cruds import category_question_crud as category_question_cruds
 from cruds import subcategory_question_crud as subcategory_question_cruds
 from datetime import date
-from schemas.question import QuestionResponse
-from typing import Optional
+from schemas.question import QuestionCreateSchema, QuestionResponse, QuestionUpdateSchema, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
+
+from src.repository.question_repository import QuestionRepository, QuestionCreate
+from src.repository.category_question_repository import CategoryQuestionRepository, CategoryQuestionCreate
+from src.repository.subcategory_question_repository import SubcategoryQuestionRepository, SubcategoryQuestionCreate
+from database import SessionDependency
 
 def find_all_questions(
     db: AsyncSession,
@@ -64,35 +69,49 @@ def find_question_by_id(db: AsyncSession, id: int) -> Question:
 def find_by_name(db: AsyncSession, name: str) -> list[Question]:
     return db.query(Question).filter(Question.name.like(f"%{name}%")).all()
 
-def create(
-    db: AsyncSession, 
-    question_create: QuestionCreate
+# リポジトリパターンに置換済み
+async def create(
+    question_create: QuestionCreateSchema,
+    session=SessionDependency
 ) -> QuestionResponse:
     
-    try:
-        question_data = question_create.model_dump(exclude={"category_id", "subcategory_id"})
-        new_question = Question(
-            **question_data,
-            last_answered_date=func.current_date()
-        )
-        db.add(new_question)
-        db.commit()
+    # async with session.begin():
+    question_repository = QuestionRepository(session)
+    category_question_repository = CategoryQuestionRepository(session)
+    subcategory_question_repository = SubcategoryQuestionRepository(session)
 
-        new_category_question = CategoryQuestion(category_id=question_create.category_id, question_id=new_question.id)
-        new_subcategory_question = SubcategoryQuestion(subcategory_id=question_create.subcategory_id, question_id=new_question.id)
-        db.add(new_category_question)
-        db.add(new_subcategory_question)
-        db.commit()
-        
-        return new_question
-    except SQLAlchemyError as e:
-        db.rollback()
-        raise e
+    question = await question_repository.create(
+        QuestionCreate(
+            problem=question_create.problem, 
+            answer=question_create.answer, 
+            memo=question_create.memo, 
+            last_answered_date=date.today()
+        )
+    # , autocommit=False
+    )
+
+    await category_question_repository.create(
+        CategoryQuestionCreate(
+            category_id=question_create.category_id, 
+            question_id=question.id
+        )
+    # , autocommit=False
+    )
+
+    await subcategory_question_repository.create(
+        SubcategoryQuestionCreate(
+            subcategory_id=question_create.subcategory_id, 
+            question_id=question.id
+        )
+    # , autocommit=False
+    )
+
+    return question
 
 def update2(
     db: AsyncSession, 
     id: int, 
-    question_update: QuestionUpdate
+    question_update: QuestionUpdateSchema
 ) -> QuestionResponse:
     stmt = (
         update(Question).

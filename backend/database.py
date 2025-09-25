@@ -2,6 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from sqlalchemy.orm import sessionmaker
 from config import get_settings
+from fastapi import Depends
 
 def add_sync_schema(url: str) -> str:
     return url.replace("postgresql://", "postgresql+asyncpg://")
@@ -27,3 +28,5 @@ def get_db():
 async def get_session():
     async with AsyncSessionLocal() as session:
         yield session
+        
+SessionDependency = Depends(get_session)

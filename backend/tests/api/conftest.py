@@ -4,7 +4,7 @@ import sys
 # テスト用の最低限の環境変数をセット（app import より前！）
 os.environ.setdefault("SECRET_KEY", "test-secret")
 
-os.environ["SQLALCHEMY_DATABASE_URL"] = "postgresql+asyncpg://sorasakamoto:password@localhost:5432/fleamarket"
+os.environ["SQLALCHEMY_DATABASE_URL"] = "postgresql+asyncpg://sorasakamoto:password@localhost:5432/test_db"
 
 
 app_dir = os.path.join(os.path.dirname(__file__), "..")

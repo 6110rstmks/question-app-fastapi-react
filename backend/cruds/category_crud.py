@@ -15,7 +15,6 @@ async def find_all_categories(db: AsyncSession)-> list[Category]:
     return await category_repository.get_all()
 
 # リポジトリパターンにこれから移管
-
 def find_all(
     db: Session, 
     limit: int, 

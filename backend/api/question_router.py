@@ -4,8 +4,12 @@ from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud, question_crud
 from schemas.question import QuestionResponse, QuestionCreateSchema, QuestionIsCorrectUpdate, QuestionUpdateSchema, QuestionBelongsToSubcategoryIdUpdate, QuestionGetCountByLastAnsweredDate
-from database import get_db
+from database import get_db, SessionDependency
 from cruds import subcategory_crud as subcategory_cruds
+
+from src.repository.category_repository import CategoryRepository
+from src.repository.subcategory_repository import SubcategoryRepository
+from src.repository.question_repository import QuestionRepository
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
@@ -24,18 +28,20 @@ async def change_belongs_to_subcategoryId(
 # Questionを作成するエンドポイント
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
 async def create(
-    db: DbDependency, 
-    question_create: QuestionCreateSchema
+    question_create: QuestionCreateSchema,
+    session=SessionDependency, 
 ):
-    found_category = category_crud.find_category_by_id(db, question_create.category_id)
+    category_repository = CategoryRepository(session)
+    subcategory_repository = SubcategoryRepository(session)
+    found_category = await category_repository.get(question_create.category_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
-    
-    found_subcategory = subcategory_cruds.find_subcategory_by_id(db, question_create.subcategory_id)
+
+    found_subcategory = await subcategory_repository.get(question_create.subcategory_id)
     if not found_subcategory:
         raise HTTPException(status_code=404, detail="Subcategory not found")
-    return question_crud.create(db, question_create)
-    
+    return await question_crud.create(question_create, session=session)
+
 # Questionを更新するエンドポイント
 @router.put("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update(
@@ -108,6 +114,8 @@ async def find_all_questions_in_category(
     category_id: int = Path(gt=0)
 ):
     found_category = category_crud.find_category_by_id(db, category_id)
+    # category_repository = CategoryRepository(db)
+    # found_category = await category_repository.get(category_id)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
     return question_crud.find_all_questions_in_category(db, category_id)
