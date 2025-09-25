@@ -5,7 +5,7 @@ import { useCategoryPage } from "./hooks/useCategoryPage";
 import { handleNavigateToSubcategoryPage } from '../../utils/navigate_function'
 
 const CategoryPage: React.FC = () => {
-    const { categoryId: categoryIdStr } = useParams<{ categoryId: string }>();   
+    const { categoryId: categoryIdStr } = useParams<{ categoryId: string }>() 
     const categoryId = Number(categoryIdStr)
     const { 
         category,
