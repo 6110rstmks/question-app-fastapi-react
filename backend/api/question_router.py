@@ -3,7 +3,7 @@ from fastapi import APIRouter, Path, HTTPException, Depends, FastAPI
 from sqlalchemy.orm import Session
 from starlette import status
 from cruds import category_crud, question_crud
-from schemas.question import QuestionResponse, QuestionCreate, QuestionIsCorrectUpdate, QuestionUpdate, QuestionBelongsToSubcategoryIdUpdate, QuestionGetCountByLastAnsweredDate
+from schemas.question import QuestionResponse, QuestionCreateSchema, QuestionIsCorrectUpdate, QuestionUpdateSchema, QuestionBelongsToSubcategoryIdUpdate, QuestionGetCountByLastAnsweredDate
 from database import get_db
 from cruds import subcategory_crud as subcategory_cruds
 
@@ -25,7 +25,7 @@ async def change_belongs_to_subcategoryId(
 @router.post("", response_model=QuestionResponse, status_code=status.HTTP_201_CREATED)
 async def create(
     db: DbDependency, 
-    question_create: QuestionCreate
+    question_create: QuestionCreateSchema
 ):
     found_category = category_crud.find_category_by_id(db, question_create.category_id)
     if not found_category:
@@ -40,7 +40,7 @@ async def create(
 @router.put("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update(
     db: DbDependency,
-    question_update: QuestionUpdate,
+    question_update: QuestionUpdateSchema,
     id: int = Path(gt=0),
 ):
     updated_item = question_crud.update2(db, id, question_update)

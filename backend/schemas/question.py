@@ -5,14 +5,14 @@ from config import SolutionStatus
 from fastapi import HTTPException
 
 
-class QuestionCreate(BaseModel):
+class QuestionCreateSchema(BaseModel):
     problem: str = Field(min_length=2, max_length=9999, examples=["列志向データベースの強みを説明せよ"])
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     memo: str = Field(max_length=300, examples=["ここにquestionに関するメモを記入できます。"])
     category_id: int = Field(gt=0, example=1)
     subcategory_id: int = Field(gt=0, example=1)
     
-class QuestionUpdate(BaseModel):
+class QuestionUpdateSchema(BaseModel):
     problem: str = Field(min_length=2, max_length=9999, examples=["列志向データベースの強みを説明せよ"])
     answer: List[str] = Field(..., example=["Answer1", "Answer2"])
     memo: str = Field(max_length=999, examples=["ここにquestionに関するメモを記入できます。"])
