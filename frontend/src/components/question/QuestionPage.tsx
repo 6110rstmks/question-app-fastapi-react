@@ -53,7 +53,7 @@ const QuestionPage: React.FC = () => {
         categoryId,
         subcategoryId,
         categoryName,
-        subcategoryName
+        // subcategoryName
     } = state
 
     const { 
@@ -213,24 +213,24 @@ const QuestionPage: React.FC = () => {
                         <div className={`mt-4 transition-all duration-300 overflow-hidden ${
                             showAnswer ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
                         }`}>
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-indigo-100">
-                            {question?.answer.map((answer, index) => (
-                                <div key={index} className="text-gray-700 leading-relaxed">
-                                    {answer.split('\n').map((line, i) => (
-                                        <React.Fragment key={i}>
-                                        {isLatex(line) ? (
-                                            <BlockMath math={line} />
-                                        ) : (
-                                            <>
-                                            {line}
-                                            <br />
-                                            </>
-                                        )}
-                                        </React.Fragment>
-                                    ))}
-                                </div>
-                            ))}
-                        </div>
+                            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-indigo-100 space-y-4">
+                                {question?.answer.map((answer, index) => (
+                                    <div key={index} className="p-4 bg-white rounded-lg border text-gray-700 leading-relaxed">
+                                        {answer.split('\n').map((line, i) => (
+                                            <React.Fragment key={i}>
+                                            {isLatex(line) ? (
+                                                <BlockMath math={line} />
+                                            ) : (
+                                                <>
+                                                {line}
+                                                <br />
+                                                </>
+                                            )}
+                                            </React.Fragment>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
