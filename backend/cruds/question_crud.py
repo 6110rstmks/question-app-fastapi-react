@@ -1,17 +1,15 @@
-from datetime import date
+from datetime import date, timedelta
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
-from sqlalchemy import select, update, func, text
+from sqlalchemy import select, update
 from typing import Optional
 
 
 from models import Question, SubcategoryQuestion, CategoryQuestion
-from cruds import category_question_crud as category_question_cruds
-from cruds import subcategory_question_crud as subcategory_question_cruds
 from schemas.question import QuestionCreateSchema, QuestionResponse, QuestionUpdateSchema, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
 
-from src.repository.question_repository import QuestionRepository, QuestionCreate
+from src.repository.question_repository import QuestionRepository, QuestionCreate, QuestionUpdate
 from src.repository.category_question_repository import CategoryQuestionRepository, CategoryQuestionCreate
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository, SubcategoryQuestionCreate
 from database import SessionDependency
@@ -27,41 +25,11 @@ async def find_all_questions(
     result = await question_repository.get_all()
 
     if search_word:
-        # 問題文で検索
-        # result_a = db.query(Question).filter(
-        #     Question.problem.ilike(f"%{search_word}%")
-        # ).all()
         result_a = await question_repository.find_by_problem_contains(search_word)
-
-        # query1 = select(Question).where(
-        #     func.array_to_string(Question.answer, ',').ilike(f"%{search_word}%")
-        # )
-        # result_b = db.execute(query1).scalars().all()
         result_b = await question_repository.find_by_answer_contains(search_word)
-        print(result_a)
-        print('ツアー')
-        print(result_b)
-        
-        
         result = list({q.id: q for q in (result_a + result_b)}.values())
 
     return result
-
-
-def find_all_questions_in_category(
-    db: AsyncSession, 
-    category_id: int
-) -> list[QuestionResponse]:
-    
-    question_repository = QuestionRepository(db)
-    category_question_repository = CategoryQuestionRepository(db)
-    
-    query = select(Question).where(CategoryQuestion.category_id == category_id)
-    category_questions = category_question_repository.find_by_category_id(category_id)
-
-    questions = [question_repository.get(category_question.question_id) for category_question in category_questions]
-
-    return questions
 
 def find_all_questions_in_subcategory(
     db: AsyncSession, 
@@ -72,7 +40,7 @@ def find_all_questions_in_subcategory(
     subcategoriesquestions = db.execute(query1).scalars().all()
     questions = [subcategoryquestion.question for subcategoryquestion in subcategoriesquestions]
 
-        # 必要であれば、取得した質問データの'IS_CORRECT'を文字列に変換
+    # 必要であれば、取得した質問データの'IS_CORRECT'を文字列に変換
     for question in questions:
         question.is_correct = question.is_correct.value  # Enumを文字列に変換
         
@@ -125,43 +93,40 @@ async def create(
 
     return question
 
-async def update2(
-    db: AsyncSession, 
+# リポジトリパターンに置換済み
+async def update_question(
     id: int, 
-    question_update: QuestionUpdateSchema
+    question_update: QuestionUpdateSchema,
+    session=SessionDependency, 
 ) -> QuestionResponse:
-    stmt = (
-        update(Question).
-        where(Question.id == id).
-        values(
-                problem=question_update.problem,
-                answer=question_update.answer,
-                memo=question_update.memo,
-                is_correct=question_update.is_correct
-               )
-    )
-    db.execute(stmt)
-    db.commit()
-    updated_subcategory = await find_question_by_id(db, id)
-    return updated_subcategory
 
+    question_repository = QuestionRepository(session)
+    updated_question = await question_repository.update(
+        id,
+        QuestionUpdate(
+            problem=question_update.problem,
+            answer=question_update.answer,
+            memo=question_update.memo,
+            is_correct=question_update.is_correct
+        )
+    )
+
+    return updated_question
+
+# リポジトリパターンに置換済み
 async def update_is_correct(
-    db: AsyncSession, 
     id: int, 
-    question_is_correct_update: QuestionIsCorrectUpdate
+    question_is_correct_update: QuestionIsCorrectUpdate,
+    session=SessionDependency, 
 ) -> Optional[QuestionResponse]:
-    question = await find_question_by_id(db, id)
-    if question is None:
-        return None
 
-    stmt = (
-        update(Question).
-        where(Question.id == id).
-        values(is_correct=question_is_correct_update.is_correct)
+    question_repository = QuestionRepository(session)
+    updated_question = await question_repository.update(
+        id,
+        QuestionUpdate(is_correct=question_is_correct_update.is_correct)
     )
-    db.execute(stmt)
-    db.commit()
-    return question
+    return updated_question
+
 
 # あるサブカテゴリのis_correctをすべて更新する関数
 # async def update_is_correct_by_subcategory(
@@ -189,19 +154,20 @@ async def update_is_correct(
 
 #     return updated_questions
 
+# リポジトリパターンに置換済み
 async def delete_question(
-    db: AsyncSession,
-    question_id: int
-) -> QuestionResponse:
-    question = await find_question_by_id(db, question_id)
-    if question is None:
-        return None
-    
-    subcategory_question_cruds.delete_subcategoriesquestions(db, question_id)
-    category_question_cruds.delete(db, question_id)   
-    db.delete(question)
-    db.commit()
-    return question
+    question_id: int,
+    session=SessionDependency,
+) -> None:
+
+    category_question_repository = CategoryQuestionRepository(session)
+    subcategory_question_repository = SubcategoryQuestionRepository(session)
+    question_repository = QuestionRepository(session)
+
+    await category_question_repository.delete_by_question_id(question_id)
+    await subcategory_question_repository.delete_by_question_id(question_id)
+    await question_repository.delete(question_id)
+    return 
 
 def change_belongs_to_subcategoryId(
     db: Session, 
@@ -304,46 +270,39 @@ def change_belongs_to_subcategoryId(
 
     return changeSubcategoryUpdate.subcategory_ids
 
+# リポジトリパターンに置換済み
 async def update_last_answered_date(
-    db: AsyncSession, 
-    question_id: int
+    question_id: int,
+    session=SessionDependency
 ) -> QuestionResponse:
-    query1 = select(Question).where(Question.id == question_id)
-    question = db.execute(query1).scalars().first()
+    question_repository = QuestionRepository(session)
+    question = await question_repository.get(question_id)
+
     # last_answered_dateが現在日付の場合は、
     # last_answered_dateに現在日付の翌日をセットする。
     if question.last_answered_date == date.today():
-        stmt = (
-            update(Question).
-            where(Question.id == question_id).
-            values(
-                last_answered_date=func.current_date() + text("INTERVAL '1 day'")
-            )
+        updated_question = await question_repository.update(
+            question_id,
+            QuestionUpdate(last_answered_date=date.today() + timedelta(days=1))
         )
 
     else:
-        # last_answered_dateが現在日づげでない場合はlast_answered_dateを現在日付に更新。
-        stmt = (
-            update(Question).
-            where(Question.id == question_id).
-            values(
-                last_answered_date=func.current_date()
-            )
+        updated_question = await question_repository.update(
+            question_id,
+            QuestionUpdate(last_answered_date=date.today())
         )
-    db.execute(stmt)
-    db.commit()
-    return await find_question_by_id(db, question_id) 
 
+    return updated_question
+
+# リポジトリパターンに置換済み
 async def increment_answer_count(
-    db: AsyncSession, 
-    question_id: int
+    question_id: int,
+    session=SessionDependency
 ) -> QuestionResponse:
-    stmt = (
-        update(Question).
-        where(Question.id == question_id).
-        values(
-            answer_count=Question.answer_count + 1
-        )
+    question_repository = QuestionRepository(session)
+    updated_question = await question_repository.update(
+        question_id,
+        QuestionUpdate(answer_count=1)
     )
- 
-    return await find_question_by_id(db, question_id)
+
+    return updated_question

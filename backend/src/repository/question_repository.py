@@ -34,6 +34,7 @@ class QuestionUpdate(BaseUpdateDTO):
     memo: str | None = None
     is_correct: SolutionStatus | None = None
     answer_count: int | None = None
+    last_answered_date: date | None = None
 
 class QuestionRead(BaseReadDTO):
     id: int

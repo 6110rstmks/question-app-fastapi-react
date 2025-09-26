@@ -2,7 +2,7 @@ from typing import Annotated
 from fastapi import APIRouter, Path, HTTPException, Depends, FastAPI
 from sqlalchemy.orm import Session
 from starlette import status
-from cruds import category_crud, question_crud
+from cruds import question_crud
 from schemas.question import QuestionResponse, QuestionCreateSchema, QuestionIsCorrectUpdate, QuestionUpdateSchema, QuestionBelongsToSubcategoryIdUpdate, QuestionGetCountByLastAnsweredDate
 from database import get_db, SessionDependency
 from cruds import subcategory_crud as subcategory_cruds
@@ -45,21 +45,21 @@ async def create(
 # Questionを更新するエンドポイント
 @router.put("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update(
-    db: DbDependency,
     question_update: QuestionUpdateSchema,
     id: int = Path(gt=0),
+    session=SessionDependency,
 ):
-    updated_item = question_crud.update2(db, id, question_update)
+    updated_item = await question_crud.update_question(id, question_update, session)
     if not updated_item:
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
 
 @router.put("/increment_answer_count/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def increment_answer_count(
-    db: DbDependency,
     id: int = Path(gt=0),
+    session=SessionDependency,
 ):
-    updated_item = question_crud.increment_answer_count(db, id)
+    updated_item = await question_crud.increment_answer_count(id, session)
     if not updated_item:
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
@@ -67,10 +67,10 @@ async def increment_answer_count(
 # Questionのlast_answered_dateを更新するエンドポイント
 @router.put("/update_last_answered_date/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update_last_answered_date(
-    db: DbDependency,
     id: int = Path(gt=0),
+    session=SessionDependency,
 ):
-    updated_item = question_crud.update_last_answered_date(db, id)
+    updated_item = await question_crud.update_last_answered_date(id, session)
     if not updated_item:
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
@@ -78,12 +78,11 @@ async def update_last_answered_date(
 # Questionのcorrect_flgカラムを更新するエンドポイント
 @router.put("/edit_flg/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update_correct_flg(
-    db: DbDependency,
     question_update: QuestionIsCorrectUpdate,
     id: int = Path(gt=0),
+    session=SessionDependency
 ):
-    
-    updated_item = question_crud.update_is_correct(db, id, question_update)
+    updated_item = await question_crud.update_is_correct(id, question_update, session)
     if not updated_item:
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
@@ -99,26 +98,28 @@ async def find_all_questions(
 # Question IDからQuestionを取得するエンドポイント
 @router.get("/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def find_question_by_id(
-    db: DbDependency, 
-    id: int = Path(gt=0)
+    id: int = Path(gt=0),
+    session=SessionDependency,
 ):
-    found_question = question_crud.find_question_by_id(db, id)
+    question_repository = QuestionRepository(session)
+    found_question = await question_repository.get(id)
     if not found_question:
         raise HTTPException(status_code=404, detail="Question not found")
     return found_question
 
 # Category IDに紐づくQuestionsを取得するエンドポイント
-@router.get("/category_id/{category_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
-async def find_all_questions_in_category(
-    db: DbDependency, 
-    category_id: int = Path(gt=0)
-):
-    found_category = category_crud.find_category_by_id(db, category_id)
-    # category_repository = CategoryRepository(db)
-    # found_category = await category_repository.get(category_id)
-    if not found_category:
-        raise HTTPException(status_code=404, detail="Category not found")
-    return question_crud.find_all_questions_in_category(db, category_id)
+# このエンドポイントもしかして使用されていないかも。。。
+# @router.get("/category_id/{category_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
+# async def find_all_questions_in_category(
+#     db: DbDependency, 
+#     category_id: int = Path(gt=0)
+# ):
+#     found_category = category_crud.find_category_by_id(db, category_id)
+#     # category_repository = CategoryRepository(db)
+#     # found_category = await category_repository.get(category_id)
+#     if not found_category:
+#         raise HTTPException(status_code=404, detail="Category not found")
+#     return question_crud.find_all_questions_in_category(db, category_id)
 
 @router.get("/subcategory_id/{subcategory_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all_questions_in_subcategory(
@@ -128,14 +129,10 @@ async def find_all_questions_in_subcategory(
     return question_crud.find_all_questions_in_subcategory(db, subcategory_id)
 
 # Questionを削除するエンドポイント
-@router.delete("/{question_id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
+@router.delete("/{question_id}", response_model=None, status_code=status.HTTP_200_OK)
 async def delete(
-    db: DbDependency, 
-    question_id: int = Path(gt=0)
+    question_id: int = Path(gt=0),
+    session=SessionDependency,
 ):
-    
-    deleted_item = question_crud.delete_question(db, question_id)
-    if not deleted_item:
-        raise HTTPException(status_code=404, detail="Question not deleted")
-    return deleted_item
-
+    await question_crud.delete_question(question_id, session)
+    return

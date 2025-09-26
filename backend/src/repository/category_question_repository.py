@@ -37,4 +37,6 @@ class CategoryQuestionRepository(
 
     async def find_by_category_id(self, category_id: int) -> list[CategoryQuestionRead] | None:
         return await self._find_by_fields(category_id=category_id)
-    
+
+    async def delete_by_question_id(self, question_id: int) -> None:
+        await self._delete_by_fields(question_id=question_id)

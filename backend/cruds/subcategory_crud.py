@@ -9,6 +9,7 @@ from src.repository.category_repository import CategoryRepository
 from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryCreate, SubcategoryUpdate
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository
 from src.repository.question_repository import QuestionRepository
+from database import SessionDependency
 
 
 # カテゴリbox内で表示するサブカテゴリを取得
@@ -114,7 +115,6 @@ async def find_subcategories_by_category_id(
     subcategory_repository = SubcategoryRepository(db)
     
     if searchSubcategoryName:
-        print(998989)
         return await subcategory_repository.find_by_category_id_and_name_like(category_id, f"%{searchSubcategoryName}%")    
     return await subcategory_repository.find_by_category_id(category_id)
 
