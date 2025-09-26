@@ -53,9 +53,15 @@ def find_all_questions_in_category(
     category_id: int
 ) -> list[QuestionResponse]:
     
+    question_repository = QuestionRepository(db)
+    category_question_repository = CategoryQuestionRepository(db)
+    
     query = select(Question).where(CategoryQuestion.category_id == category_id)
+    category_questions = category_question_repository.find_by_category_id(category_id)
 
-    return db.execute(query).scalars().all()
+    questions = [question_repository.get(category_question.question_id) for category_question in category_questions]
+
+    return questions
 
 def find_all_questions_in_subcategory(
     db: AsyncSession, 
@@ -77,11 +83,8 @@ async def find_question_by_id(
     id: int,
     session=SessionDependency, 
 ) -> Question:
-    # query = select(Question).where(Question.id == id)
-    # return db.execute(query).scalars().first()
-
     question_repository = QuestionRepository(session)
-    return question_repository.get(id)
+    return await question_repository.get(id)
 
 # リポジトリパターンに置換済み
 async def create(
@@ -122,7 +125,7 @@ async def create(
 
     return question
 
-def update2(
+async def update2(
     db: AsyncSession, 
     id: int, 
     question_update: QuestionUpdateSchema
@@ -139,15 +142,15 @@ def update2(
     )
     db.execute(stmt)
     db.commit()
-    updated_subcategory = find_question_by_id(db, id)
+    updated_subcategory = await find_question_by_id(db, id)
     return updated_subcategory
 
-def update_is_correct(
+async def update_is_correct(
     db: AsyncSession, 
     id: int, 
     question_is_correct_update: QuestionIsCorrectUpdate
 ) -> Optional[QuestionResponse]:
-    question = find_question_by_id(db, id)
+    question = await find_question_by_id(db, id)
     if question is None:
         return None
 
@@ -161,36 +164,36 @@ def update_is_correct(
     return question
 
 # あるサブカテゴリのis_correctをすべて更新する関数
-def update_is_correct_by_subcategory(
-    db: AsyncSession,
-    subcategory_id: int,
-    question_is_correct_update: QuestionIsCorrectUpdate
-) -> list[QuestionResponse]:
-    # サブカテゴリに属するすべての質問を取得
-    query = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
-    subcategoriesquestions = db.execute(query).scalars().all()
+# async def update_is_correct_by_subcategory(
+#     db: AsyncSession,
+#     subcategory_id: int,
+#     question_is_correct_update: QuestionIsCorrectUpdate
+# ) -> list[QuestionResponse]:
+#     # サブカテゴリに属するすべての質問を取得
+#     query = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
+#     subcategoriesquestions = db.execute(query).scalars().all()
     
-    updated_questions = []
+#     updated_questions = []
     
-    for subcategoryquestion in subcategoriesquestions:
-        question = find_question_by_id(db, subcategoryquestion.question_id)
-        if question is not None:
-            stmt = (
-                update(Question).
-                where(Question.id == question.id).
-                values(is_correct=question_is_correct_update.is_correct)
-            )
-            db.execute(stmt)
-            db.commit()
-            updated_questions.append(question)
+#     for subcategoryquestion in subcategoriesquestions:
+#         question = await find_question_by_id(db, subcategoryquestion.question_id)
+#         if question is not None:
+#             stmt = (
+#                 update(Question).
+#                 where(Question.id == question.id).
+#                 values(is_correct=question_is_correct_update.is_correct)
+#             )
+#             db.execute(stmt)
+#             db.commit()
+#             updated_questions.append(question)
 
-    return updated_questions
+#     return updated_questions
 
-def delete_question(
+async def delete_question(
     db: AsyncSession,
     question_id: int
 ) -> QuestionResponse:
-    question = find_question_by_id(db, question_id)
+    question = await find_question_by_id(db, question_id)
     if question is None:
         return None
     
@@ -301,7 +304,7 @@ def change_belongs_to_subcategoryId(
 
     return changeSubcategoryUpdate.subcategory_ids
 
-def update_last_answered_date(
+async def update_last_answered_date(
     db: AsyncSession, 
     question_id: int
 ) -> QuestionResponse:
@@ -329,9 +332,9 @@ def update_last_answered_date(
         )
     db.execute(stmt)
     db.commit()
-    return find_question_by_id(db, question_id) 
+    return await find_question_by_id(db, question_id) 
 
-def increment_answer_count(
+async def increment_answer_count(
     db: AsyncSession, 
     question_id: int
 ) -> QuestionResponse:
@@ -343,4 +346,4 @@ def increment_answer_count(
         )
     )
  
-    return find_question_by_id(db, question_id)
+    return await find_question_by_id(db, question_id)
