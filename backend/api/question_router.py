@@ -5,7 +5,6 @@ from starlette import status
 from cruds import question_crud
 from schemas.question import QuestionResponse, QuestionCreateSchema, QuestionIsCorrectUpdate, QuestionUpdateSchema, QuestionBelongsToSubcategoryIdUpdate, QuestionGetCountByLastAnsweredDate
 from database import get_db, SessionDependency
-from cruds import subcategory_crud as subcategory_cruds
 
 from src.repository.category_repository import CategoryRepository
 from src.repository.subcategory_repository import SubcategoryRepository
