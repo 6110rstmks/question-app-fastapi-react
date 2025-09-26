@@ -123,10 +123,10 @@ async def find_question_by_id(
 
 @router.get("/subcategory_id/{subcategory_id}", response_model=list[QuestionResponse], status_code=status.HTTP_200_OK)
 async def find_all_questions_in_subcategory(
-    db: DbDependency, 
-    subcategory_id: int = Path(gt=0)
+    subcategory_id: int = Path(gt=0),
+    session=SessionDependency, 
 ):
-    return question_crud.find_all_questions_in_subcategory(db, subcategory_id)
+    return await question_crud.find_all_questions_in_subcategory(subcategory_id, session=session)
 
 # Questionを削除するエンドポイント
 @router.delete("/{question_id}", response_model=None, status_code=status.HTTP_200_OK)

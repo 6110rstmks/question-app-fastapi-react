@@ -2,7 +2,7 @@ from datetime import date, timedelta
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
-from sqlalchemy import select, update
+from sqlalchemy import select
 from typing import Optional
 
 
@@ -13,6 +13,7 @@ from src.repository.question_repository import QuestionRepository, QuestionCreat
 from src.repository.category_question_repository import CategoryQuestionRepository, CategoryQuestionCreate
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository, SubcategoryQuestionCreate
 from database import SessionDependency
+
 
 # リポジトリパターンに置換済み
 async def find_all_questions(
@@ -31,28 +32,24 @@ async def find_all_questions(
 
     return result
 
-def find_all_questions_in_subcategory(
-    db: AsyncSession, 
-    subcategory_id: int
-) -> list[Question]:
 
-    query1 = select(SubcategoryQuestion).where(SubcategoryQuestion.subcategory_id == subcategory_id)
-    subcategoriesquestions = db.execute(query1).scalars().all()
-    questions = [subcategoryquestion.question for subcategoryquestion in subcategoriesquestions]
+async def find_all_questions_in_subcategory(
+    subcategory_id: int,
+    session=SessionDependency,
+) -> list[Question]:
+    subcategory_question_repository = SubcategoryQuestionRepository(session)
+    question_repository = QuestionRepository(session)
+
+    subcategoriesquestions = await subcategory_question_repository.find_by_subcategory_id(subcategory_id)
+    question_ids = [subcategoryquestion.question_id for subcategoryquestion in subcategoriesquestions]
+
+    questions = await question_repository.find_by_ids(question_ids)
 
     # 必要であれば、取得した質問データの'IS_CORRECT'を文字列に変換
     for question in questions:
         question.is_correct = question.is_correct.value  # Enumを文字列に変換
         
     return questions
-
-# リポジトリパターンに置換済み
-async def find_question_by_id(
-    id: int,
-    session=SessionDependency, 
-) -> Question:
-    question_repository = QuestionRepository(session)
-    return await question_repository.get(id)
 
 # リポジトリパターンに置換済み
 async def create(
@@ -300,9 +297,7 @@ async def increment_answer_count(
     session=SessionDependency
 ) -> QuestionResponse:
     question_repository = QuestionRepository(session)
-    updated_question = await question_repository.update(
+    return  await question_repository.update(
         question_id,
         QuestionUpdate(answer_count=1)
     )
-
-    return updated_question

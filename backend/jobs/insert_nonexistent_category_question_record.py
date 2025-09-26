@@ -29,8 +29,8 @@ DbDependency = Annotated[Session, Depends(get_db)]
 
 def find_missing_category_questions(db: Session):
     """
-    Question テーブルに存在する question_id を持っているが、
-    CategoryQuestion テーブルに question_id がないレコードを取得
+    Questionテーブルに存在するquestion_idを持っているが、
+    CategoryQuestionテーブルに question_id がないレコードを取得
     """
     query = select(CategoryQuestion).where(
         ~exists().where(CategoryQuestion.question_id == Question.id)
@@ -47,11 +47,13 @@ def find_missing_category_questions(db: Session):
         if not result.scalars().all():
             not_existing_ids.append(question_id)
     
-        
     return not_existing_ids
 
 def insert_missing_category_questions(db: Session, missing_records_question_ids):
-    
+    """
+    CategoryQuestionテーブルに存在しないquestion_idを持つSubcategoryQuestionレコードを取得し、
+    CategoryQuestionテーブルに新たにレコードを追加する。
+    """
     query3 = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id.in_(missing_records_question_ids))
     subcategories_questions = db.execute(query3).scalars().all()
     

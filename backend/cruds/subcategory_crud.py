@@ -132,11 +132,8 @@ async def delete_subcategory(
     db: AsyncSession, 
     id: int
 ) -> Optional[SubcategoryResponse]:
-    subcategory = await find_subcategory_by_id(db, id)
-    if subcategory is None:
-        return None
-    
     subcategory_repository = SubcategoryRepository(db)
+    question_repository = QuestionRepository(db)
     
     questions = await question_cruds.find_all_questions_in_subcategory(db, id)
     
