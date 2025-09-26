@@ -76,11 +76,11 @@ async def find_subcategories_in_categorybox(
 
 # リポジトリパターンに置換済み
 async def find_subcategory_by_id(
-    db: AsyncSession, 
-    id: int
+    id: int,
+    session=SessionDependency
 ) -> Optional[SubcategoryResponse]:
 
-    subcategory_repository = SubcategoryRepository(db)
+    subcategory_repository = SubcategoryRepository(session)
     return await subcategory_repository.get(id)
 
 

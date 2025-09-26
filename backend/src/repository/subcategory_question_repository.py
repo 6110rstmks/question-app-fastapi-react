@@ -39,5 +39,8 @@ class SubcategoryQuestionRepository(
     async def find_by_subcategory_id(self, subcategory_id: int) -> list[SubcategoryQuestionRead] | None:
         return await self._find_by_fields(subcategory_id=subcategory_id)
 
+    async def find_by_question_ids(self, question_ids: list[int]) -> list[SubcategoryQuestionRead] | None:
+        return await self._find_by_fields(question_id=question_ids)
+
     async def delete_by_question_id(self, question_id: int) -> None:
         await self._delete_by_fields(question_id=question_id)

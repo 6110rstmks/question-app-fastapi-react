@@ -8,10 +8,12 @@ from fastapi import HTTPException
 from typing import Optional
 from src.repository.category_repository import CategoryRepository, CategoryCreate
 from src.repository.category_question_repository import CategoryQuestionRepository
+from database import SessionDependency
+
 
 # リポジトリパターンに置換済み
-async def find_all_categories(db: AsyncSession)-> list[Category]:
-    category_repository = CategoryRepository(db)
+async def find_all_categories(session=SessionDependency)-> list[Category]:
+    category_repository = CategoryRepository(session)
     return await category_repository.get_all()
 
 # リポジトリパターンにこれから移管
@@ -80,28 +82,28 @@ def find_all(
 
 # リポジトリパターンに置換済み
 async def find_category_by_id(
-    db: AsyncSession, 
-    id: int
+    id: int,
+    session=SessionDependency
 ) -> Optional["Category"]:
-    category_repository = CategoryRepository(db)
+    category_repository = CategoryRepository(session)
     return await category_repository.get(id)
 
 # リポジトリパターンに置換済み
 # あいまい検索
 async def find_category_by_name(
-    db: AsyncSession, 
-    search_word: str
+    search_word: str,
+    session=SessionDependency
 ) -> list[Category]:
-    category_repository = CategoryRepository(db)
+    category_repository = CategoryRepository(session)
     return await category_repository.find_by_name_contains(search_word)
 
 
 # リポジトリパターンに置換済み
 async def create_category(
-    db: AsyncSession, 
-    category_create: CategoryCreateSchema
+    category_create: CategoryCreateSchema,
+    session=SessionDependency
 ) -> Category:
-    category_repository = CategoryRepository(db)
+    category_repository = CategoryRepository(session)
     check_bool =  await category_repository.check_name_exists(category_create.name)
 
     if check_bool:
@@ -111,9 +113,9 @@ async def create_category(
 
 # リポジトリパターンに置換済み
 # ページネーション
-async def get_page_count(db: AsyncSession) -> int:
-    category_repository = CategoryRepository(db)
-    
+async def get_page_count(session=SessionDependency) -> int:
+    category_repository = CategoryRepository(session)
+
     count_page = await category_repository.count_all()
     count_page = count_page // PAGE_SIZE + 1
     return count_page

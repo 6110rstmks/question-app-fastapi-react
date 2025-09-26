@@ -1,94 +1,87 @@
-# python -m jobs.check_nonexistent_category_question_record
+# python -m jobs.insert_nonexistent_category_question_record
 # で実行する
 
-from sqlalchemy.orm import Session
 from models import CategoryQuestion, SubcategoryQuestion, Question, Subcategory
 from sqlalchemy import select, exists
-from typing import Annotated
-from fastapi import Depends
-from sqlalchemy.orm import sessionmaker, declarative_base
-from sqlalchemy import create_engine
-from config import get_settings
 
-SQLALCHEMY_DATABASE_URL = get_settings().sqlalchemy_database_url
+from jobs.check_nonexistent_category_question_record import find_missing_category_questions
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
+import asyncio
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+from database import SessionDependency, AsyncSessionLocal
 
-Base = declarative_base()
+# 以下を削除するとエラーになる。
+from src.repository.category_repository import CategorySchema
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+from src.repository.subcategory_repository import SubcategoryRepository
+from src.repository.category_question_repository import CategoryQuestionRepository, CategoryQuestionCreate
+from src.repository.question_repository import QuestionRepository
+from src.repository.subcategory_question_repository import SubcategoryQuestionRepository, SubcategoryQuestionRead
+from src.repository.base.BasicDao import BaseSchema
 
-DbDependency = Annotated[Session, Depends(get_db)]
+class SubcategoryQuestionReadWithCategory(SubcategoryQuestionRead):
+    category_id: int
 
-def find_missing_category_questions(db: Session):
-    """
-    Questionテーブルに存在するquestion_idを持っているが、
-    CategoryQuestionテーブルに question_id がないレコードを取得
-    """
-    query = select(CategoryQuestion).where(
-        ~exists().where(CategoryQuestion.question_id == Question.id)
-    )
-    
-    query1 = select(Question.id)
-    result = db.execute(query1)  # クエリを実行
-    question_ids = result.scalars().all()
-    
-    not_existing_ids = []
-    for question_id in question_ids:
-        query2 = select(CategoryQuestion).where(CategoryQuestion.question_id == question_id)
-        result = db.execute(query2)
-        if not result.scalars().all():
-            not_existing_ids.append(question_id)
-    
-    return not_existing_ids
-
-def insert_missing_category_questions(db: Session, missing_records_question_ids):
+async def insert_missing_category_questions(
+    missing_records_question_ids: list[int],
+    session=SessionDependency
+):
     """
     CategoryQuestionテーブルに存在しないquestion_idを持つSubcategoryQuestionレコードを取得し、
     CategoryQuestionテーブルに新たにレコードを追加する。
     """
-    query3 = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id.in_(missing_records_question_ids))
-    subcategories_questions = db.execute(query3).scalars().all()
+    category_question_repository = CategoryQuestionRepository(session)
+    subcategory_repository = SubcategoryRepository(session)
+    subcategories_question_repository = SubcategoryQuestionRepository(session)
+
+    subcategories_questions = await subcategories_question_repository.find_by_question_ids(missing_records_question_ids)
     
+
+    # query3 = select(SubcategoryQuestion).where(SubcategoryQuestion.question_id.in_(missing_records_question_ids))
+    # subcategories_questions = db.execute(query3).scalars().all()
+    
+    # for subcategory_question in subcategories_questions:
+    #     # query4 = select(Subcategory).where(Subcategory.id == subcategory_question.subcategory_id)
+    #     # subcategory = db.execute(query4).scalars().first()
+    #     subcategory = await subcategory_repository.get(subcategory_question.subcategory_id)
+
+        # subcategory_question.category_id = subcategory.category_id
+
+    subcategories_questions_with_category = []
+
     for subcategory_question in subcategories_questions:
-        query4 = select(Subcategory).where(Subcategory.id == subcategory_question.subcategory_id)
-        subcategory = db.execute(query4).scalars().first()
-
-        subcategory_question.category_id = subcategory.category_id
-
+        subcategory = await subcategory_repository.get(subcategory_question.subcategory_id)
+        if subcategory:
+            # SubcategoryQuestionRead を dict にして category_id を追加
+            sq_with_category = SubcategoryQuestionReadWithCategory(
+                **subcategory_question.dict(),
+                category_id=subcategory.category_id
+            )
+            subcategories_questions_with_category.append(sq_with_category)
+        else:
+            print(f"Subcategory with ID {subcategory_question.subcategory_id} not found.")
+            continue     
         
     new_category_questions = [
-        CategoryQuestion(
+        CategoryQuestionCreate(
             category_id=subcategory_question.category_id,
             question_id=subcategory_question.question_id
         )
-        for subcategory_question in subcategories_questions
+        for subcategory_question in subcategories_questions_with_category
     ]
     
-    db.add_all(new_category_questions)
-    db.commit()
-        
-    return subcategories_questions
+    count = await category_question_repository.create_many(new_category_questions)
+    return None
 
-def main():
+async def main():
     # データベースセッションを手動で作成
-    with SessionLocal() as db:
-        missing_records_question_ids = find_missing_category_questions(db)
+    async with AsyncSessionLocal() as session:
+        missing_records_question_ids = await find_missing_category_questions(session)
 
         if not missing_records_question_ids:
             print("categoryquestionの存在しないレコードはありません。")
             return
-                
-        subcategories_questions = insert_missing_category_questions(db, missing_records_question_ids)
-
-
+        await insert_missing_category_questions(missing_records_question_ids, session)
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

@@ -12,8 +12,8 @@ def get_question_count(db: Session) -> int:
                     select(func.count()).
                     select_from(Question)
                 )
-    
     return int(count)
+
 
 def get_question_count_in_category(
     db: Session,
@@ -225,15 +225,13 @@ def get_question_count_by_is_correct_in_category(
     db: Session,
     body: QuestionGetCountByIsCorrectInCategory,
 ) -> int:
-
-    category_id = body.category_id
-    is_correct = body.is_correct
     count = db.scalar(
                     select(func.count()).
                     select_from(Question).
                     join(CategoryQuestion).
-                    where(CategoryQuestion.category_id == category_id).
-                    where(Question.is_correct == is_correct)
+                    where(CategoryQuestion.category_id == body.category_id).
+                    where(Question.is_correct == body.is_correct)
                 )
+    print(count)
+    print(body.category_id)
     return int(count)
-    
