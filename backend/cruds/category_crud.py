@@ -1,5 +1,4 @@
 from sqlalchemy.orm import Session
-from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
 from schemas.category import CategoryCreateSchema
 from models import Category, CategoryQuestion, Subcategory, Question
@@ -7,7 +6,6 @@ from config import PAGE_SIZE
 from fastapi import HTTPException
 from typing import Optional
 from src.repository.category_repository import CategoryRepository, CategoryCreate
-from src.repository.category_question_repository import CategoryQuestionRepository
 from database import SessionDependency
 
 

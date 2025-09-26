@@ -16,6 +16,9 @@ from git import Repo, InvalidGitRepositoryError
 from src import data_io_json, data_io_csv
 import zipfile
 
+from database import get_db, SessionDependency
+
+
 DbDependency = Annotated[Session, Depends(get_db)]
 AsyncDbDependency = Annotated[AsyncSession, Depends(get_session)]
 
@@ -77,10 +80,10 @@ async def find_all_categories(
 
 @router.get("/category_id/{id}", response_model=CategoryResponseSchema, status_code=status.HTTP_200_OK)
 async def find_category_by_id(
-    db: AsyncDbDependency,
     id: int = Path(gt=0),
+    session=SessionDependency
 ):
-    return await category_cruds.find_category_by_id(db, id)
+    return await category_cruds.find_category_by_id(id, session)
 
 @router.post("", response_model=CategoryResponseSchema, status_code=status.HTTP_201_CREATED)
 async def create(

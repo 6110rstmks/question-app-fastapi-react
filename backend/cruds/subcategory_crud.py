@@ -5,7 +5,6 @@ from schemas.subcategory import SubcategoryCreateSchema, SubcategoryUpdateSchema
 from models import Subcategory, SubcategoryQuestion, Question, Category
 from cruds import question_crud as question_cruds
 from typing import Optional
-from src.repository.category_repository import CategoryRepository
 from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryCreate, SubcategoryUpdate
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository
 from src.repository.question_repository import QuestionRepository
@@ -92,18 +91,6 @@ async def find_subcategory_by_name(
     
     subcategory_repository = SubcategoryRepository(db)
     return await subcategory_repository.find_by_name_contains(name)
-
-# リポジトリパターンに置換しない
-# async def find_subcategories_with_category_name_by_id(
-#     db: Session, 
-#     id: int
-# ):
-#     query = (
-#         select(Subcategory.id, Subcategory.name, Subcategory.category_id, Category.name.label("category_name"))
-#         .join(Category, Subcategory.category_id == Category.id)
-#         .where(Subcategory.id == id)
-#     )
-#     return db.execute(query).fetchone()
 
 # リポジトリパターンに置換済み
 async def find_subcategories_by_category_id(

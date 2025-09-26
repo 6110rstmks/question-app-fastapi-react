@@ -22,7 +22,7 @@ async def create_subcategory(
     subcategory_create: SubcategoryCreateSchema,
     session=SessionDependency
 ):
-    found_category = await category_crud.find_category_by_id(session, subcategory_create.category_id)
+    found_category = await category_crud.find_category_by_id(subcategory_create.category_id, session)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
 

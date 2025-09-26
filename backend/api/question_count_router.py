@@ -5,7 +5,6 @@ from starlette import status
 from cruds import category_crud, question_count_crud, subcategory_crud
 from schemas.question import QuestionGetCountByLastAnsweredDate, QuestionGetCountByIsCorrectInSubcategory, QuestionGetCountByIsCorrectInCategory
 from database import get_db
-from database import SessionDependency
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
