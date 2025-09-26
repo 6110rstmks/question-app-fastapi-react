@@ -210,7 +210,7 @@ export const ProblemNormalPage: React.FC<Props> = ({
                         <div className="bg-white p-4 rounded border">
                             {localProblem.answer && localProblem.answer.length > 0 ? (
                                 localProblem.answer.map((answer, index) => (
-                                    <div key={index} className="mb-4 last:mb-0">
+                                    <div key={index} className="p-4 bg-white rounded-lg border mb-4 last:mb-0">
                                         {answer.split('\n').map((line, i) => (
                                             <React.Fragment key={i}>
                                                 {isLatex(line) ? (
