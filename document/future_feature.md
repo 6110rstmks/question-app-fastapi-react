@@ -49,7 +49,6 @@ subcategorypageのquestion一覧おいて、本日解いた問題には星をつ
 例えば、長い期間そのジャンルに触れておらず、すべてあたまから抜けている場合などに利用する。
 ex) geography > locationなど
 
-バックエンドの単体テストコードを書く。(関数単位のテストもしくはapiテスト)
 
 それをgithub actionsでbackend-ciを走らせる。（無料）
 

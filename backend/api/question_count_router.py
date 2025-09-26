@@ -9,7 +9,6 @@ from database import SessionDependency
 
 DbDependency = Annotated[Session, Depends(get_db)]
 
-
 # tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
 
 router = APIRouter(prefix="/question_count", tags=["Question Count"])
@@ -35,10 +34,10 @@ async def get_question_count_in_category(
 # サブカテゴリ内のQuestion数を取得するエンドポイント
 @router.get("/count/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_count_in_subcategory(
+    db: DbDependency,
     subcategory_id: int = Path(gt=0),
-    session=SessionDependency
 ):
-    found_subcategory = subcategory_crud.find_subcategory_by_id(subcategory_id, session)
+    found_subcategory = subcategory_crud.find_subcategory_by_id(subcategory_id, db)
     if not found_subcategory:
         raise HTTPException(status_code=404, detail="Subcategory not found")
     

@@ -1,7 +1,7 @@
 import pytest
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.tests.base_test import BasicDaoTest
+from backend.tests.repository.base_test import BasicDaoTest
 from src.repository.category_repository import CategoryRepository, CategoryCreate
 
 class TestCategoryRepository(BasicDaoTest):
