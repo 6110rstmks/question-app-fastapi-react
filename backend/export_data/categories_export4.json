@@ -31,7 +31,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "楽譜は何線か",
@@ -70,13 +70,22 @@
                             "last_answered_date": "2025-08-15"
                         },
                         {
+                            "problem": "aiuejoiu",
+                            "answer": [
+                                ""
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
+                        },
+                        {
                             "problem": "音階を英語でいうと",
                             "answer": [
                                 "scale"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "長調を英語でいうと",
@@ -4644,13 +4653,13 @@
                             "last_answered_date": "2025-07-18"
                         },
                         {
-                            "problem": "過酸化水素の分解によって発生した酸素を，水上置換でメスシリンダー内に捕集する。メスシリンダー内の気体の体積が 27℃，1.013 × 10⁵ Pa で 150 mL であるとき，酸素の物質量は何 mol か。過酸化水素の分解によって発生した酸素を，水上置換でメスシリンダー内に捕集する。メスシリンダー内の気体の体積が 27℃，1.013 × 10⁵ Pa で 150 mL であるとき，酸素の物質量は何 mol か。27℃ における水の飽和蒸気圧は 3.6 × 10³ Pa",
+                            "problem": "過酸化水素の分解によって発生した酸素を，水上置換でメスシリンダー内に捕集する。\nメスシリンダー内の気体の体積が 27℃，1.013 × 10⁵ Pa で 150 mL であるとき，酸素の物質量は何 mol か。\n過酸化水素の分解によって発生した酸素を，水上置換でメスシリンダー内に捕集する。メスシリンダー内の気体の体積が 27℃，1.013 × 10⁵ Pa で 150 mL であるとき，酸素の物質量は何 mol か。\n27℃ における水の飽和蒸気圧は 3.6 × 10³ Pa",
                             "answer": [
                                 "解説/メスシリンダー内の気体の圧力=捕集した酸素の分圧+水蒸気の分圧 なので、\nPO2+3.6×103 = 1.013×105 Pa\nPO2 =1.013×105-3.6×103 = 9.77×104 Pa\n気体の状態方程式 PV=nRT に値を代入すると、\n9.77×104 Pa×0.15 L = n [mol]×8.3×103 Pa・L/(K・mol)×(27+273)K\nn = 0.00588... ≒ 5.9×10-3"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-12"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "イオン化エネルギーといえば何をするときのエネルギーか",
@@ -4745,7 +4754,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "ozoneの匂いは無臭か",
@@ -4858,7 +4867,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "fat hydrogenation",
@@ -5430,8 +5439,8 @@
                                 "緑青（ろくしょう）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "アルカリ金属は柔らかい？硬い？",
@@ -5702,11 +5711,11 @@
                         {
                             "problem": "温度と溶媒の量が一定であるとき溶媒に溶ける気体の物質量は圧力に比例するという法則のことをなんという",
                             "answer": [
-                                "Henry's lawヘンリーの法則"
+                                "Henry's law"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -6061,7 +6070,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "通常の体細胞分裂と比べて卵割に見られる特徴は？",
@@ -6088,7 +6097,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "Spermの先体に含まれる細胞小器官organnelsのめいしょうは？",
@@ -6273,8 +6282,8 @@
                                 "a & b"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "What chlorophyll did plants get the fastest in their evolution?",
@@ -6549,8 +6558,8 @@
                                 "さつまいも"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -6616,8 +6625,8 @@
                                 "内臓脂肪"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-10"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "唾液に含まれる消化酵素は・",
@@ -6682,11 +6691,11 @@
                             "problem": "コルチ器を構成するものが二つある。答えよ",
                             "answer": [
                                 "おおい膜",
-                                "聴細胞"
+                                "hair cell"
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-06-10"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "聴細胞は何の振動により興奮させられるか。",
@@ -6742,7 +6751,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "受容器で受け取った刺激情報を処理したり、効果器に指令を出している神経系を（A）という。",
@@ -6826,7 +6835,7 @@
                             ],
                             "memo": "外に向かって信号を送るイメージで覚えれば良い",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-23"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ニューロンの軸索の膜電位の測定において膜の内外における電位差を何という",
@@ -6930,8 +6939,8 @@
                                 "後頭葉"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-07"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -6945,7 +6954,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-05"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "一塩基多型（SNP）について説明",
@@ -6954,7 +6963,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -7026,7 +7035,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-08"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "転写を促進・抑制するタンパク質を何という",
@@ -7167,7 +7176,7 @@
                         {
                             "problem": "染色体上における遺伝子の占める位置を何という？",
                             "answer": [
-                                "遺伝子座Locus"
+                                "Locus"
                             ],
                             "memo": "",
                             "is_correct": 2,
@@ -7179,8 +7188,8 @@
                                 "対合"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "相同染色体が対合してできたものを何という？",
@@ -7225,8 +7234,8 @@
                                 "細胞周期が短い"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ウニの発生においてプルテウス幼生とプリズム幼生ではどちらが先か",
@@ -7339,8 +7348,8 @@
                                 ""
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/3_1_1_1/k_sci_bio_3_1_1_1_image01.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "細胞でどんな遺伝子が発現しているか調べる方法",
@@ -7368,6 +7377,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-09-23"
+                        },
+                        {
+                            "problem": "遺伝子座を英語で",
+                            "answer": [
+                                "locus"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -7404,7 +7422,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-09"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "内外2枚の生体膜で囲まれた細胞小器官の例を3つあげよ",
@@ -7433,7 +7451,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-23"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "細胞の結合を3種類あげて",
@@ -7444,7 +7462,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-23"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "cadherinがはたらくためには何が必要",
@@ -7453,7 +7471,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-23"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "細胞と細胞外基質（ECM: extracellular matrix）との接着を仲介するタンパク質は",
@@ -7462,7 +7480,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ホルモンや神経伝達物質などの細胞外情報物質が細胞膜に存在する受容体と結合することによって細胞内で新たに生成される別種の細胞内情報物質をなんという",
@@ -7470,8 +7488,8 @@
                                 "Second messenger"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "細胞外基質（ECM）を構成する糖タンパク質をひとつあげて",
@@ -7480,7 +7498,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "電荷をもつ分子やイオンはは細胞膜を通過できるか？",
@@ -7489,7 +7507,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-18"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "膜タンパク質が細胞内にある細胞骨格と結合して強度を増す結合は固定結合、密着結合、ギャップ結合のうちどれか",
@@ -7498,7 +7516,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -7511,8 +7529,8 @@
                                 "有機物"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-23"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "生態系内の物質とエネルギーはそれぞれ循環するかどうか答えよ",
@@ -7553,7 +7571,7 @@
                             ],
                             "memo": "ヨモギ、ゴボウ、レタス、キク、コスモス、ハルジオン、ヒマワリ、ダリア",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "椎茸の旨味の成分は？",
@@ -7599,7 +7617,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-26"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "stressは自分を強くすると考えている人の脳から分泌されるストレスホルモンは？",
@@ -8038,8 +8056,8 @@
                                 "光中断"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ジャスモン酸は何から合成されるか",
@@ -8047,8 +8065,8 @@
                                 "システミン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -8098,7 +8116,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -8145,7 +8163,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-17"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "アトピー性皮膚炎の重症度を評価する指標の一つは",
@@ -8171,8 +8189,8 @@
                                 "4,13"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "手元の紙に抗体の絵を描いてください。H鎖L鎖　定常部　可変部　ジスルフィと結合なども描いて",
@@ -8218,7 +8236,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "単一の抗体産生細胞に由来するクローンから作られている抗体をなんという",
@@ -8244,7 +8262,7 @@
                                 "イブグリース"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-26"
                         },
                         {
@@ -8256,7 +8274,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-23"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "サイトカインの種類2",
@@ -8283,8 +8301,8 @@
                                 "サイトカインストーム"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-06"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "インターロイキンを主に産生するのはどの細胞ですか？",
@@ -8293,7 +8311,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "インターロイキンの異常な分泌が関与するとされる疾患はどれですか？",
@@ -8334,7 +8352,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-08-19"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "制御性T細胞",
@@ -8351,8 +8369,8 @@
                                 "乾癬"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -8486,7 +8504,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-23"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "収縮速度の速く、大きな力を短時間に発揮することができ、瞬発力やパワーが必要な運動を行うときに活躍するのは速筋かそれとも遅筋か",
@@ -8494,8 +8512,8 @@
                                 "速筋"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-26"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -8641,7 +8659,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "C4植物における光合成は二種類の細胞で行われる。答えて",
@@ -8680,6 +8698,15 @@
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOqVOVnVoEwQEcxdDS6TVvCwT4Ux3-9-RhvA&s\n\n各波長wave lengthの光に対する光合成効率のグラフをなんという？→作用スペクトル",
                             "is_correct": 1,
                             "last_answered_date": "2025-09-23"
+                        },
+                        {
+                            "problem": "Rubiscoの正式名称はリブロースビスリン酸カルボキシラーゼ・オキシゲナーゼ カルボキシラーぜの意味",
+                            "answer": [
+                                "carboxyl（カルボキシル基, –COOH） を基質に「付け加える（固定する）」反応を触媒する酵素\n\nつまり 二酸化炭素（CO₂）を基質に取り込む（カルボキシル化する）酵素 を指します"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -8790,8 +8817,8 @@
                                 ""
                             ],
                             "memo": "https://cdn-ak.f.st-hatena.com/images/fotolife/B/BambooBornY/20200706/20200706201649.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "植生は3つに分類できる",
@@ -8858,8 +8885,8 @@
                                 "きゃー、だいぶ困ったなあ\n"
                             ],
                             "memo": "(キャベツ、ダイコン、ブロッコリー、コマツナ、ナズナ、アブラナ)",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "セリ科の植物の例4",
@@ -8957,7 +8984,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "個体群の分布様式3",
@@ -9208,8 +9235,8 @@
                                 "体温"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "monetary expansion（金融拡張） と quantitative easing（量的緩和, QE）の違い",
@@ -9675,7 +9702,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-17"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "DNSレコードがバーってうえから順番にいっぱい書いてあるファイルをなんという",
@@ -9776,7 +9803,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -9792,15 +9819,6 @@
                 {
                     "name": "CNN",
                     "questions": [
-                        {
-                            "problem": "CNNの主要な層のうち、プーリング層について説明してください。",
-                            "answer": [
-                                "また、プーリング層では条件に応じて、画像内のある領域毎に画像のサンプリング操作を行います。\n\n例えば、図では画像内で2×2の範囲毎に最大値を取り出す操作(マックスプーリング)を行っています。\n\n以下、このプーリングを行う範囲をウィンドウと呼ぶことにします。"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-29"
-                        },
                         {
                             "problem": "CNNが価値を発揮している分野は何か？",
                             "answer": [
@@ -9818,6 +9836,26 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-02-22"
+                        },
+                        {
+                            "problem": "CNNにおいて入力された画像から特徴を抽出する層は3層のうちどれか",
+                            "answer": [
+                                "畳み込み層"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
+                        },
+                        {
+                            "problem": "CNNの3つの層",
+                            "answer": [
+                                "畳み込み層",
+                                "プーリング層",
+                                "全結合層"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -9863,7 +9901,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "あなたは新たに顧客データベースを利用したマーケティング戦略を検討しています。この過程において、顧客の特徴に基づいて自動的にカテゴリを分類することが求められます。  この要件を満たすために、どの機械学習アルゴリズムが適切か",
@@ -9978,8 +10016,7 @@
                             "problem": "ベクトルデータベースの代表的なライブラリを2つ挙げて",
                             "answer": [
                                 "Elasticsearch",
-                                "faiss",
-                                ""
+                                "faiss"
                             ],
                             "memo": "",
                             "is_correct": 1,
@@ -12936,8 +12973,8 @@
                                 "特定のペンとどれでもいいからペン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 }
@@ -15633,7 +15670,7 @@
                                 "垂直貿易"
                             ],
                             "memo": "https://livedoor.blogimg.jp/keppentyan/imgs/4/e/4ee04263-s.png",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-26"
                         },
                         {
@@ -21207,7 +21244,7 @@
                             ],
                             "memo": "これも結晶",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-01"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "ノーリスには冷却機能が存在しないがそれによりどのようなメリットがあるか",
@@ -21781,8 +21818,8 @@
                                 "App Service"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "Log Analytics workspaceで使用できるクエリ言語は何という",
@@ -21867,15 +21904,14 @@
                             "last_answered_date": "2025-06-17"
                         },
                         {
-                            "problem": "Azure で Public IP アドレスを付与できるリソースをいくつかあげて",
+                            "problem": "Azure で Public IP アドレスを付与できるリソースを2つあげて",
                             "answer": [
                                 "Application Gateway",
-                                "VM",
-                                ""
+                                "VM"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "What is 'sku' in Azure",
@@ -21902,7 +21938,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-13"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "Azureで提供されているメッセージングサービスは",
@@ -22318,7 +22354,7 @@
                             ],
                             "memo": "VNetからAzureサービスへのトラフィックを最適化する",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "VNet内のAzureリソース（仮想マシンなど）が送受信するトラフィック（データ）を許可・拒否するためのサービスは？",
@@ -22366,7 +22402,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "Azure AI Search のインデクサーとは",
@@ -22430,7 +22466,7 @@
                                 "エンリッチメント"
                             ],
                             "memo": "",
-                            "is_correct": 1,
+                            "is_correct": 0,
                             "last_answered_date": "2025-08-27"
                         }
                     ]
@@ -22475,7 +22511,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -22654,13 +22690,13 @@
                         {
                             "problem": "Microsoft Entraロールの種類 3つだけあげて",
                             "answer": [
-                                "グローバル管理者",
-                                "グローバル閲覧者",
-                                "ユーザ管理者"
+                                "global administorator",
+                                "global reader ",
+                                "user administorator"
                             ],
-                            "memo": "",
+                            "memo": "他にもたくさんある。",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "Azure Roleの正式名称は",
@@ -22900,7 +22936,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ローリングアップデートとブルーグリーンの違いは",
@@ -22909,7 +22945,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "docker composeとkubernetesの違いは何か。規模の観点で",
@@ -22918,7 +22954,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "一つ以上のコンテナをグループ化し、共有の実行環境を提供するKubernetesの最小単位をなんという",
@@ -22926,8 +22962,8 @@
                                 "Pod"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-22"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 }
@@ -23041,7 +23077,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "git rebase を使う際にコンフリクトが発生することがあります。 この場合、開発者はどのような手順でコンフリクトを解決し、rebase を完了すべきでしょうか？",
@@ -23266,7 +23302,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-24"
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 }
@@ -23430,7 +23466,7 @@
                             "last_answered_date": "2025-09-02"
                         },
                         {
-                            "problem": "from typing import Generic, TypeVar\n\nT = TypeVar('T')  # 型変数 T を定義\n\nclass Box(Generic[T]):\n    def __init__(self, content: T):\n        self.content = content\n\n    def get_content(self) -> T:\n        return self.content\n\nこうすることでboxクラスはどのような型が扱えるようになるか？",
+                            "problem": "```\nfrom typing import Generic, TypeVar\n\nT = TypeVar('T')  # 型変数 T を定義\n\nclass Box(Generic[T]):\n    def __init__(self, content: T):\n        self.content = content\n\n    def get_content(self) -> T:\n        return self.content\n```\n\nこうすることでboxクラスはどのような型が扱えるようになるか？",
                             "answer": [
                                 "どのような型でも扱える"
                             ],
@@ -23439,7 +23475,7 @@
                             "last_answered_date": "2025-09-10"
                         },
                         {
-                            "problem": "from typing import TypeVar\n\nT = TypeVar(\"T\", int, float)\n\n\ndef add_one_to_t_arg(arg: T) -> T:\n    return arg + 1\n\n関数add_one_to_tg_argの引数と返り値の型には何が保証されるか",
+                            "problem": "```\nfrom typing import TypeVar\n\nT = TypeVar(\"T\", int, float)\n\ndef add_one_to_t_arg(arg: T) -> T:\n    return arg + 1\n\n```\n\n関数add_one_to_tg_argの引数と返り値の型には何が保証されるか",
                             "answer": [
                                 "arg の型が int のときの返り値の型は int、 arg の型が float のときの返り値の型は float である。\nつまり引数のデータ型と返り値のデータ型が同じであることが保証される。"
                             ],
@@ -23620,7 +23656,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "モックを自作でやってみたというもの。\n\n```\nfrom my_func import get_available_seats\n\nclass Event:\n    '''イベント\n    '''\n    def __init__(self, id: int):\n        self.id = id\n\n    def check_availability(self):\n        '''空席状況を返す関数 (関数 A)\n        '''\n        # 残席数と座席数を取得する\n        available_seats = get_available_seats(self.id)\n\n        if available_seats == 0:\n            return '完売'\n        elif available_seats < 20:\n            return '残り僅か'\n        else:\n            return '余裕あり'\n=============================\nimport random\n\ndef get_available_seats(event_id: int) -> int:\n    '''残席数を返す関数 (関数 B)\n    '''\n    # 残席数 (本来はデータベースに問い合わせるが、ここでは乱数)\n    available_seats = random.randint(0, 100)\n\n    return available_seats\n=============================\nfrom unittest import TestCase\nimport my_class\nfrom my_class import Event\n\nclass EventTest(TestCase):\n    def test_availability(self):\n        # Event を作る\n        event = Event(id=1)\n\n        # モック用の関数 (必ず 0 を返す)\n        def mock_func(id):\n            return 0\n\n        # 関数 B をモック用の関数にすげ替える\n        my_class.get_available_seats = mock_func\n\n        # 空席状況を取得する\n        availability = event.check_availability()\n\n        # 空席状況が「完売」であることを確認する\n        self.assertEqual(availability, '完売')\n```\n",
@@ -23886,13 +23922,13 @@
                     "name": "m",
                     "questions": [
                         {
-                            "problem": "reactの状態管理の原則を一つ述べて",
+                            "problem": "reactの状態管理の原則について\nprops から渡せるものは state に持たせる？それとも持たせない？",
                             "answer": [
-                                "props から渡せるものは state に持たない"
+                                "持たせない"
                             ],
                             "memo": "不要に state を増やさず、データの “唯一の情報源 (Single Source of Truth)” を維持する ための考え方",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -24000,8 +24036,8 @@
                                 "神統記"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ヒンドゥー教における 三大神",
@@ -24430,7 +24466,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "中央から派遣された官吏が治める「郡」と、諸侯が治める「国」を併存させる制度である「郡国制」は、どの王朝で採用されたか？",
@@ -24798,7 +24834,7 @@
                                 "王莽　おうもう"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-26"
                         },
                         {
@@ -25171,15 +25207,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-23"
-                        },
-                        {
-                            "problem": "共和政ローマにおいて、土地改革を試みたが、元老院保守派に反対され、兄弟ともに暗殺された護民官は誰でしょう？",
-                            "answer": [
-                                "グラックス兄弟"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
                         },
                         {
                             "problem": "コリントス同盟はほとんどのギリシア諸ポリスは参加したがある国は不参加。どこの国",
@@ -25563,7 +25590,7 @@
                                 "ホスロー一世"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-19"
                         },
                         {
@@ -25763,7 +25790,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-20"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "第3次中東戦争は別名何と呼ばれていますか。\n",
@@ -25772,7 +25799,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "19世紀末から20世紀にかけて、（A）はロシアとの再保障条約を破棄して、海軍を増強し、積極的な海外膨張策をとった",
@@ -25781,7 +25808,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "1940年、フランスはドイツに降伏し、フランスの北半はドイツが占領、南半には（A）を首都とする対ドイツ協力政府が成立した。",
@@ -25790,7 +25817,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "1954年、南アジア地域の首相がスリランカで開いた会議は？",
@@ -25983,13 +26010,40 @@
                             "last_answered_date": "2025-09-24"
                         },
                         {
+                            "problem": "紀元前264年から紀元前146年の間に起こった、ローマとカルタゴによる地中海の覇権を賭けた戦いをなんという",
+                            "answer": [
+                                "ポエニ戦争"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
+                        },
+                        {
+                            "problem": "第二回ポエニ戦争のカンネーの戦いでローマ軍を破ったカルタゴの将軍は",
+                            "answer": [
+                                "ハンニバル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
                             "problem": "古代ローマにおいてコンスルは何人か",
                             "answer": [
                                 "2\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-19"
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "紀元前60年から紀元前53年にかけてポンペイウス、カエサル、クラッススによっておこなわれた政治は何か",
+                            "answer": [
+                                "第一回三頭政治"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "「友情論」「国家論」などの著者で、ローマ最大の文章家といわれるのはだれか",
@@ -25998,7 +26052,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "ローマ共和政初期の最高機関",
@@ -26010,13 +26064,22 @@
                             "last_answered_date": "2025-09-24"
                         },
                         {
+                            "problem": "共和政ローマにおいて、土地改革を試みたが、元老院保守派に反対され、兄弟ともに暗殺された護民官は誰でしょう？",
+                            "answer": [
+                                "グラックス兄弟"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
+                        },
+                        {
                             "problem": "ホルテンシウス法はどこの国で制定されたか",
                             "answer": [
                                 "ローマ"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-20"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "パトリキたちを取り仕切る司会者をなんという",
