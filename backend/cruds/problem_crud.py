@@ -15,7 +15,7 @@ def generate_problems(
     db: Session, 
     problem_fetch: ProblemFetch
 ) -> list[QuestionResponse]:
-
+    
     """
     Generate a list of questions
     """
