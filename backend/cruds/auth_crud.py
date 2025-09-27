@@ -12,6 +12,8 @@ from database import get_db
 from fastapi.responses import JSONResponse
 from typing import Optional
 
+from src.repository.user_repository import UserRepository, UserCreate
+
 
 def create_user(
     db: Session, 
