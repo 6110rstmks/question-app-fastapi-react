@@ -15,6 +15,7 @@ async def find_all_categories(session=SessionDependency)-> list[Category]:
     return await category_repository.get_all()
 
 # リポジトリパターンにこれから移管
+# まずはapiテストコードを書いてから移管する。
 def find_all(
     db: Session, 
     limit: int, 

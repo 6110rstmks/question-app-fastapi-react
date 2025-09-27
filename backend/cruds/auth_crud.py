@@ -4,7 +4,6 @@ import os
 from sqlalchemy.orm import Session
 from schemas import auth
 from models import User
-from config import get_settings
 from sqlalchemy import select
 from fastapi import Depends, HTTPException, status
 from fastapi.requests import Request
@@ -13,8 +12,6 @@ from database import get_db
 from fastapi.responses import JSONResponse
 from typing import Optional
 
-ALGORITHM = "HS256"
-SECRET_KEY = get_settings().secret_key
 
 def create_user(
     db: Session, 

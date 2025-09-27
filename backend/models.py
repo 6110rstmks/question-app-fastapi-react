@@ -102,8 +102,6 @@ class User(Base):
     username = Column(String, nullable=False, unique=True)
     password = Column(String, nullable=False)
     salt = Column(String, nullable=False)
-    created_at = Column(DateTime, default=datetime.now())
-    updated_at = Column(DateTime, default=datetime.now(), onupdate=datetime.now())
 
     categories = relationship("Category", back_populates="user")
 

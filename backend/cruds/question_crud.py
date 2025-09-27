@@ -1,15 +1,13 @@
 from datetime import date, timedelta
 
-from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
-from sqlalchemy import select
 from typing import Optional
 
 
 from models import Question, SubcategoryQuestion, CategoryQuestion
 from schemas.question import QuestionCreateSchema, QuestionResponse, QuestionUpdateSchema, QuestionIsCorrectUpdate, QuestionBelongsToSubcategoryIdUpdate
 
-from src.repository.question_repository import QuestionRepository, QuestionCreate, QuestionUpdate
+from src.repository.question_repository import QuestionRepository, QuestionCreate, QuestionUpdate, QuestionRead
 from src.repository.category_question_repository import CategoryQuestionRepository, CategoryQuestionCreate
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository, SubcategoryQuestionCreate
 from database import SessionDependency
@@ -95,7 +93,7 @@ async def update_question(
     id: int, 
     question_update: QuestionUpdateSchema,
     session=SessionDependency, 
-) -> QuestionResponse:
+) -> Optional[QuestionRead]:
 
     question_repository = QuestionRepository(session)
     updated_question = await question_repository.update(
@@ -271,7 +269,7 @@ def change_belongs_to_subcategoryId(
 async def update_last_answered_date(
     question_id: int,
     session=SessionDependency
-) -> QuestionResponse:
+) -> Optional[QuestionRead]:
     question_repository = QuestionRepository(session)
     question = await question_repository.get(question_id)
 
