@@ -108,10 +108,10 @@ async def find_subcategories_by_category_id(
 
 # リポジトリパターンに置換済み
 async def create_subcategory(
-    db: AsyncSession,
-    subcategory_create: SubcategoryCreateSchema
+    subcategory_create: SubcategoryCreateSchema,
+    session=SessionDependency
 ) -> SubcategoryResponse:
-    subcategory_repository = SubcategoryRepository(db)
+    subcategory_repository = SubcategoryRepository(session)
     return await subcategory_repository.create(SubcategoryCreate(name=subcategory_create.name, category_id=subcategory_create.category_id))
     
 

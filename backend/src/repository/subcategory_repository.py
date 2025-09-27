@@ -41,14 +41,14 @@ class SubcategoryRepository(
     async def find_by_category_id(self, category_id: int) -> list[SubcategoryRead] | None:
         return await self._find_by_fields(category_id=category_id)
 
-    async def find_by_name_like(self, name_pattern: str) -> list[SubcategoryRead]:
-        """
-        名前でLIKE検索を行います。
+    # async def find_by_name_like(self, name_pattern: str) -> list[SubcategoryRead]:
+    #     """
+    #     名前でLIKE検索を行います。
         
-        :param name_pattern: 検索パターン（例: "%検索語%", "prefix%", "%suffix"）
-        :return: 該当するSubcategoryのリスト
-        """
-        return await self._find_by_fields(like_fields={"name": name_pattern})
+    #     :param name_pattern: 検索パターン（例: "%検索語%", "prefix%", "%suffix"）
+    #     :return: 該当するSubcategoryのリスト
+    #     """
+    #     return await self._find_by_fields(like_fields={"name": name_pattern})
 
     async def find_by_name_contains(self, keyword: str) -> list[SubcategoryRead]:
         """

@@ -1,12 +1,10 @@
-from typing import Annotated, Optional
+from typing import Optional
 from fastapi import APIRouter, Path, Query, HTTPException, Depends
-from sqlalchemy.orm import Session
-from sqlalchemy.ext.asyncio import AsyncSession
+
 from starlette import status
 
 
 from schemas.subcategory import SubcategoryResponse, SubcategoryUpdateSchema, SubcategoryCreateSchema
-from database import get_session
 from cruds import subcategory_crud, category_crud
 from database import SessionDependency
 
@@ -26,7 +24,7 @@ async def create_subcategory(
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
 
-    new_subcategory = await subcategory_crud.create_subcategory(session, subcategory_create)
+    new_subcategory = await subcategory_crud.create_subcategory(subcategory_create, session)
     return SubcategoryResponse.model_validate(new_subcategory, from_attributes=True)
 
 
