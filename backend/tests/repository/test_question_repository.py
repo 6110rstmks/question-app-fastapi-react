@@ -26,5 +26,14 @@ class TestQuestionRepository(BasicDaoTest):
             last_answered_date=date.today(), 
             answer_count=5
         )
+        
+        @pytest.mark.asyncio
+        async def test_find_by_problem_starts_with(self, dao: QuestionRepository, create_dto: QuestionCreate):
+            obj = await dao.create(create_dto)
+            
+            actual = await dao.find_by_problem_starts_with("What is Pyt")
+
+            assert actual
+            self.assert_objs(actual, [obj])
+        
     
-   
