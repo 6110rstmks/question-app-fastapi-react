@@ -4781,8 +4781,8 @@
                                 "レゾール"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ナトリウムフェノキシドとH2CO3を反応させると（A）が遊離する。",
@@ -4952,8 +4952,8 @@
                                 "単結合、二重結合、三重結合"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "高温で溶かした固体のNAOHを使う反応のこと。水溶液でさえ強塩基であるNaOHを、純粋な固体で、熱して溶かすという激ヤバ反応を何という？",
@@ -7468,7 +7468,7 @@
                                 "Claudin "
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-27"
                         },
                         {
@@ -8133,8 +8133,8 @@
                                 "cell adhesion"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -8791,8 +8791,8 @@
                                 "横軸→光の強さ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "生産構造図 は二つに分類される。それぞれ答えて",
@@ -9236,7 +9236,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-14"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "外国為替相場の変動に対し、その効果が現れるまでタイムラグがあり、短期的には予想される方向とは逆の現象が起こることをなんという",
@@ -9245,7 +9245,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "国債と株式ではどちらがハイリスクハイリターンか",
+                            "answer": [
+                                "株式の方がハイリスクハイリターン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "金融緩和の　対義語は",
@@ -9272,7 +9281,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-14"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "国際標準の物価の安定は年何％？",
@@ -9290,7 +9299,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "interest rate は経済の何とたとえる？（経済ジャーナリストの後藤さん曰く））",
@@ -9311,13 +9320,32 @@
                             "last_answered_date": "2025-09-15"
                         },
                         {
+                            "problem": "FRBの使命2",
+                            "answer": [
+                                "物価の安定",
+                                "雇用の最大化"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "投資家がリスクを避け、安全資産に資金を移す投資行動や市場心理を指す言葉",
+                            "answer": [
+                                "リスクオフ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
                             "problem": "日本銀行やFRBが量的緩和を実施する際に購入する金融資産として、最も一般的なものは",
                             "answer": [
                                 "国債"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "失業率とインフレーション率（物価上昇率）の間に経験的な関係があるとした理論は",
@@ -9349,13 +9377,13 @@
                             "last_answered_date": "2025-09-11"
                         },
                         {
-                            "problem": "量的緩和が行われた場合、一般的に期待される効果",
+                            "problem": "量的緩和が行われた場合、一般的に期待される効果\n銀行がどうなったか。",
                             "answer": [
                                 "銀行の貸し出し余力が増加する"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -9373,13 +9401,22 @@
                             ],
                             "memo": "https://chu.benesse.co.jp/qat/img/3519s_s.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
                 {
                     "name": "経済誌",
                     "questions": [
+                        {
+                            "problem": "ウィリアム・スタンレー・ジェヴォンズ、カール・メンガー、レオン・ワルラスの3人の経済学者が、ほぼ同時に、かつ独立に限界効用理論を基礎にした経済学の体系を樹立し、古典派経済学に対して近代経済学を創始したこと",
+                            "answer": [
+                                "限界革命"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
+                        },
                         {
                             "problem": "What is the agreement announced by G7 to stop too much weak dollar called? ",
                             "answer": [
@@ -9401,7 +9438,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-13"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "アベノミクスの目標は",
@@ -9446,8 +9483,8 @@
                                 "だせる"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -9477,6 +9514,29 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-15"
+                        }
+                    ]
+                },
+                {
+                    "name": "イールドカーブ",
+                    "questions": [
+                        {
+                            "problem": "イールドカーブの縦軸は",
+                            "answer": [
+                                "利回り"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "イールドカーブ・コントロール 日本語ではなんと呼ばれる",
+                            "answer": [
+                                "長短金利操作"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 }
@@ -9569,9 +9629,9 @@
                             "answer": [
                                 "機器は電源を入れた時、自分のMACアドレスは知っている。\nでもネットワークで通信するためには、IPアドレスが必要。"
                             ],
-                            "memo": "",
+                            "memo": "it maps a MAC address → IP address.",
                             "is_correct": 2,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "www.example.com\nどれがサブドメインにあたるか",
@@ -9588,17 +9648,17 @@
                                 "HSTS"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
-                            "problem": "HTTPレスポンスヘッダで有名なものは何がある",
+                            "problem": "HTTPレスポンスヘッダ 例を一つあげて",
                             "answer": [
                                 "Content-Type"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "データ転送と経路制御の機能を論理的に分離し，データ転送に特化したネットワーク 機器とソフトウェアによる経路制御の組合せで実現するネットワーク技術は",
@@ -9661,7 +9721,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -9694,8 +9754,8 @@
                                 "IGP\nEGP"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -9717,8 +9777,8 @@
                                 "ICANN（アイキャン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ネームサーバが管理するドメイン情報の1レコードを何という？",
@@ -9736,7 +9796,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-07-24"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ドメインに対して権威を持つDNSサーバーを指定するDNSレコードは",
@@ -9756,7 +9816,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "CNAMEレコードの用途",
@@ -9773,8 +9833,8 @@
                                 "DNSゾーンファイル"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "FQDNの日本語での正式名称は",
@@ -9782,8 +9842,8 @@
                                 "完全修飾ドメイン名"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "App Serivceにおいてカスタムドメインを使用したい場合はDNSのtxtレコードに対して何を登録するか",
@@ -9819,7 +9879,7 @@
                                 "HTTPをHTTPSに強制する"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-27"
                         }
                     ]
@@ -9848,7 +9908,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-15"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "Snowflakeがクラウドストレージ(AWS, Azure, GCP)にアクセスするための認証情報やアクセス制御を安全に管理するための仕組みを答えて",
@@ -10466,7 +10526,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-14"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -10479,8 +10539,8 @@
                                 "二分探索木にさらに どのノードにおいても左の子の高さと右の子の高さの差が 1 以下"
                             ],
                             "memo": "https://learnersbucket.com/wp-content/uploads/2021/03/AVL-Tree-in-Javascript.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 }
@@ -10657,8 +10717,8 @@
                                 "従量課金"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-10"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "I/Oバウンドとは",
@@ -17580,7 +17640,7 @@
                             ],
                             "memo": "https://tabijo-bp.com/wp-content/uploads/images/2017111821262189e.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ウズベキスタンの上にはなんの国がある？",
@@ -18614,8 +18674,8 @@
                                 "レイキャビク"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-10"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "オランダの首都は？",
@@ -18632,8 +18692,8 @@
                                 "アネクメーネ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-09-02"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "アメリカの首都",
@@ -19907,8 +19967,8 @@
                                 "ミュンヘン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ドイツで最大規模を誇る国際空港は",
@@ -20890,8 +20950,8 @@
                                 "サンフランシスコ湾"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "氷河による侵食でできたU字谷に海水が入り込んでできた入江を何という？ちなみに沈水海岸のひとつ",
@@ -21858,8 +21918,8 @@
                                 "Argument（引数）：data ブロックの中で ユーザーが入力する値（設定値）\nAttribute（属性）定義：データソースから 取得される値（出力値）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-10"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "timeoutとかいう文法ある",
@@ -21867,8 +21927,8 @@
                                 ""
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -22147,8 +22207,8 @@
                                 "正しい。"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-09-12"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "AzureでクラウドまたはオンプレミスのWindows, Linux, macOSからアクセスできるフルマネージドのファイル共有サービスは",
@@ -23185,13 +23245,22 @@
                     "name": "rebase",
                     "questions": [
                         {
-                            "problem": "コミットメッセージが間違えていたのですが、そのコミットメッセージは4コミット前",
+                            "problem": "git merge と比べて git rebase を使うメリット",
                             "answer": [
-                                ""
+                                "コミット履歴が直線的になり、見やすくなる"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "feature ブランチを main の最新に追従させたい場合のコマンドは",
+                            "answer": [
+                                "git rebase feature main"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "git rebaseは親ブランチの変更を子ブランチに取り込むのか、それとも、子ブランチの内容を親ブランチに取り込むのかどちらですか？",
@@ -23258,8 +23327,8 @@
                                 "b49ffe3 の2つ前のコミットの状態にリセットする"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "git reset --hard HEAD~3",
@@ -23282,7 +23351,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 }
@@ -23863,6 +23932,15 @@
                             "memo": "from pydantic import BaseModel\n\nclass User(BaseModel):\n    id: int\n    name: str\n    email: str | None = None\n\nuser = User(id=1, name=\"Alice\")\n\n# 辞書に変換\nprint(user.model_dump())\n# => {'id': 1, 'name': 'Alice', 'email': None}",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-25"
+                        },
+                        {
+                            "problem": "model_dump と model_validateは役割が逆方向であるが、\ndict（または他の入力データ） → Pydantic モデルの役割を持つのはどちらか",
+                            "answer": [
+                                "model_validate"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "pydanticのmodel_validateメソッドの働き",
