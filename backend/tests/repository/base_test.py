@@ -1,6 +1,7 @@
 from datetime import datetime
 import uuid
 import pytest
+import pytest_asyncio
 
 from src.repository.base.LogicalDeleteDao import BaseCreateDTO, BaseReadDTO, BaseUpdateDTO, BasicDao, LogicalDeleteDao
 from src.repository.base.composite_base import CompositeKeyDao
@@ -21,7 +22,7 @@ class BasicDaoTest:
             else:
                 assert actual_value == v, f"{k}: {actual_value} != {v}"
 
-    @pytest.fixture(name="create_dtos")
+    @pytest_asyncio.fixture(name="create_dtos")
     async def _create_dtos(self, create_dto: BaseCreateDTO):
         return [create_dto for _ in range(3)]
 
@@ -48,7 +49,7 @@ class BasicDaoTest:
     async def test_get_with_invalid_id(self, dao: LogicalDeleteDao, create_dto: BaseCreateDTO):
         await dao.create(create_dto)
 
-        actual = await dao.get(uuid.uuid4())
+        actual = await dao.get(-1)
 
         assert actual is None
 
