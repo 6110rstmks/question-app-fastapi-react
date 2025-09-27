@@ -18,7 +18,7 @@ export const useCategories = (
 ) => {
     const [categories, setCategories] = useState<Category[]>([])
 
-    const limit =3
+    const limit = 3
 
     // アプリの初期状態の場合はカテゴリがまだ作成されていないためpageCount,questionCountはnull
     const [
@@ -99,7 +99,7 @@ export const useCategories = (
                 searchSubcategoryWord,
                 searchQuestionWord,
                 searchAnswerWord
-            });
+            })
             setCategories(categories)
 
         }

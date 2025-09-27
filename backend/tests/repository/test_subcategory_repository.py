@@ -28,15 +28,6 @@ class TestSubcategoryRepository(BasicDaoTest):
         assert actual
         self.assert_objs(actual, [obj])
         
-    # @pytest.mark.asyncio
-    # async def test_find_by_name_like(self, dao: SubcategoryRepository, create_dto: SubcategoryCreate):
-    #     obj = await dao.create(create_dto)
-        
-    #     actual = await dao.find_by_name_like("subcategory%")
-
-    #     assert actual
-    #     self.assert_objs(actual, [obj])
-        
     @pytest.mark.asyncio
     async def test_find_by_name_contains(self, dao: SubcategoryRepository, create_dto: SubcategoryCreate):
         obj = await dao.create(create_dto)
