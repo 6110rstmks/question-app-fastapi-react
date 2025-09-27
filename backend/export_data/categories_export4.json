@@ -70,6 +70,15 @@
                             "last_answered_date": "2025-08-15"
                         },
                         {
+                            "problem": "音色を英語でなんという",
+                            "answer": [
+                                "timbre"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
                             "problem": "aiuejoiu",
                             "answer": [
                                 ""
@@ -122,7 +131,7 @@
                         {
                             "problem": "倍音の存在によって、同じ高さの音でも楽器ごとに何の違いが生じるか",
                             "answer": [
-                                "音色timbre"
+                                "timbre"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -6115,7 +6124,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "一つの卵原細胞は体細胞分裂と減数分裂を経て最終的に一つの卵と（A)つの極体を生じる",
@@ -6254,8 +6263,8 @@
                                 "気門"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "旧口動物Protostomeのうち脱皮動物を二つ答えよ",
@@ -6282,7 +6291,7 @@
                                 "a & b"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-27"
                         },
                         {
@@ -6491,8 +6500,8 @@
                                 "子実体"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "鞭毛をもつ胞子を作る菌類はなにか？",
@@ -6531,7 +6540,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-27"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "キク科の野菜 2",
@@ -6540,8 +6549,8 @@
                                 "ごぼう"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "根・葉・茎の区別がない植物は？シダ植物？コケ植物？",
@@ -6549,8 +6558,17 @@
                                 "コケ植物"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "さつまいもは何科",
+                            "answer": [
+                                "ヒルガオ科"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ヒルガオ科の食べ物は",
@@ -6558,8 +6576,8 @@
                                 "さつまいも"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -6596,8 +6614,8 @@
                                 "liver"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-22"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "閉鎖血管系では、動脈から出た血液が（A）を経て静脈に戻るのに対して、開放血管系では動脈から出た血液が（B）を経て静脈に戻る。",
@@ -6862,7 +6880,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-12"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "活動電位が生じる時、ニューロンが刺激を受けると（A）が開きNa+を細胞内に流入させることで内側をplusにする。その後遅れて（B）が開いてK+が細胞外に流入して、minusに戻る",
@@ -6963,7 +6981,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -7189,7 +7207,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "相同染色体が対合してできたものを何という？",
@@ -7478,7 +7496,7 @@
                             "answer": [
                                 "integrin"
                             ],
-                            "memo": "",
+                            "memo": "細胞外基質を構成する糖タンパク質はラミニン",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-27"
                         },
@@ -7530,7 +7548,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "生態系内の物質とエネルギーはそれぞれ循環するかどうか答えよ",
@@ -7548,7 +7566,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -7567,11 +7585,11 @@
                         {
                             "problem": "キク科の植物語呂合わせ",
                             "answer": [
-                                "よごれたキク子はヒマだ"
+                                "よごれたキク子はヒマだ\nヨモギ、ゴボウ、レタス、キク、コスモス、ハルジオン、ヒマワリ、ダリア"
                             ],
-                            "memo": "ヨモギ、ゴボウ、レタス、キク、コスモス、ハルジオン、ヒマワリ、ダリア",
+                            "memo": "アブラナ科はきゃーだいぶこまったな",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "椎茸の旨味の成分は？",
@@ -7772,8 +7790,8 @@
                                 "「ナイス、いちばんビリ！」\n"
                             ],
                             "memo": "(ナシ、イチゴ、スイカ、イチジク、バナナ、ビワ、リンゴ)\n",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "マメ科のおしべの数は",
@@ -7797,7 +7815,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-07-05"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "光受容体であるクリプトクロムCryptochromeは何色の光を受容する？",
@@ -7813,9 +7831,9 @@
                             "answer": [
                                 "アブシシン酸Abscisic acid"
                             ],
-                            "memo": "",
+                            "memo": "種子の発芽を促進する植物ホルモンは ジベレリン",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-11"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "What cells do not have centrosomes?",
@@ -7859,8 +7877,8 @@
                                 "Pfr"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-05"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "（A）が作用することでセルロース繊維間の多糖の切断が促され植物細胞の細胞壁が緩むのでその分だけ植物細胞内に水が入ってきて吸水でき細胞が成長する。",
@@ -7899,8 +7917,8 @@
                                 "C=極性移動"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-14"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "茎と根のオーキシンに対する感受性について、茎の方が根よりオーキシンに対する感受性が（A）い。またこれの覚え方は？",
@@ -8020,8 +8038,8 @@
                                 "gibberellin"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-12"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "被害を受けた植物ではシステミンが合成され、システミンはさらなる植物ホルモンであるなんの生産を促すか",
@@ -8060,13 +8078,13 @@
                             "last_answered_date": "2025-09-27"
                         },
                         {
-                            "problem": "ジャスモン酸は何から合成されるか",
+                            "problem": "Jasmonic acidは何から合成されるか",
                             "answer": [
                                 "システミン"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -8079,8 +8097,8 @@
                                 "tight junction\n"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-06-11"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ハーディワインベルグを英語で",
@@ -8121,39 +8139,6 @@
                     ]
                 },
                 {
-                    "name": "physiology 腎臓",
-                    "questions": [
-                        {
-                            "problem": "腎小体はなにとなにに分けれる？",
-                            "answer": [
-                                "糸球体",
-                                "ボーマンのう"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-13"
-                        },
-                        {
-                            "problem": "腎臓一個あたり、このネフロンは （A）個あります。",
-                            "answer": [
-                                "100万個"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-25"
-                        },
-                        {
-                            "problem": "腎臓においてナトリウムイオンはどこで再吸収されるか",
-                            "answer": [
-                                "腎細菅"
-                            ],
-                            "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-27"
-                        }
-                    ]
-                },
-                {
                     "name": "physiology immunology",
                     "questions": [
                         {
@@ -8181,7 +8166,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "デュピクセントはアトピー性皮膚炎の発症に関与しているIL-4、IL-5、IL-13のうちどれを抑えるものか2",
@@ -8198,8 +8183,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4mH6KHLcluseYgW3yQNQDQR5Xon5KB26vaA&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-17"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "抗体のタンパク質を何という？",
@@ -8216,8 +8201,8 @@
                                 "骨髄bone marrow"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "化合物（化学的に合成された物質）とは異なり、生物が産生する蛋白質などを医薬品として利用するものをなんという",
@@ -8235,8 +8220,8 @@
                                 "Th2細胞"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "単一の抗体産生細胞に由来するクローンから作られている抗体をなんという",
@@ -8274,7 +8259,25 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "制御性T細胞はどのように訳される？",
+                            "answer": [
+                                "Treg"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "制御性T細胞が不足すると最も起こりやすいのは",
+                            "answer": [
+                                "自己免疫疾患（例：1型糖尿病、多発性硬化症、関節リウマチなど）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "サイトカインの種類2",
@@ -8283,8 +8286,8 @@
                                 "インターフェロン"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-04"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ウイルス感染時に重要な役割を果たすサイトカインは",
@@ -8292,8 +8295,8 @@
                                 " IFN-γ（インターフェロン・ガンマ）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-09-14"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": " サイトカインの過剰な産生により引き起こされる現象は何ですか？",
@@ -8319,8 +8322,8 @@
                                 "自己免疫疾患（例：関節リウマチ）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "JAKファミリーは4つに分類される。答えて",
@@ -8341,8 +8344,8 @@
                                 "非受容体型チロシンキナーゼ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "JAK阻害薬を用いた治療が可能な病気2",
@@ -8353,15 +8356,6 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-09-26"
-                        },
-                        {
-                            "problem": "制御性T細胞",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-23"
                         },
                         {
                             "problem": "TYK2阻害剤は何の治療にしようされますか",
@@ -8466,8 +8460,8 @@
                                 ""
                             ],
                             "memo": "https://refle-tbc.com/images/massage/muscle/erector.webp",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-09-10"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "横紋筋の例は？２",
@@ -8503,8 +8497,8 @@
                                 "筋芽細胞\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "収縮速度の速く、大きな力を短時間に発揮することができ、瞬発力やパワーが必要な運動を行うときに活躍するのは速筋かそれとも遅筋か",
@@ -8528,6 +8522,33 @@
                             "memo": "反対に、カルビンベンソン回路において、水素を与えて還元する（酸化の反対）にはATPを与えてあげてPGAからGAPを生成する。\n\n上記と一緒に覚えてあげると理解が深まる。\n\nまた、酸化的リン酸化は酸化するのを駆動力として、ADPにリン酸をくっつけてATPを生成する（ADP->ATP）\n\nつまり\n酸化（脱水素）する時→ATPをつける\n",
                             "is_correct": 1,
                             "last_answered_date": "2025-09-23"
+                        },
+                        {
+                            "problem": "解糖系Glycolysisはどこでおこるか",
+                            "answer": [
+                                "細胞質基質"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "乳酸発酵には解糖系はあるか、ないか",
+                            "answer": [
+                                "ある"
+                            ],
+                            "memo": "https://thumbnails-streaming.try-it.jp/k/biology/biology/2ba8e0b56edaeafdb1982f06a640f717_180.jpg",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "呼吸にはなんという細胞小器官が関与しているか",
+                            "answer": [
+                                "Mitochondrion\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -8649,8 +8670,8 @@
                                 "リブロースビスリン酸カルボキシラーゼ・オキシゲナーゼ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ルビスコのワードを分解するとどのような意味をとれる？",
@@ -8700,13 +8721,13 @@
                             "last_answered_date": "2025-09-23"
                         },
                         {
-                            "problem": "Rubiscoの正式名称はリブロースビスリン酸カルボキシラーゼ・オキシゲナーゼ カルボキシラーぜの意味",
+                            "problem": "Rubiscoの正式名称はリブロースビスリン酸カルボキシラーゼ・オキシゲナーゼ である。\nカルボキシラーゼの意味",
                             "answer": [
                                 "carboxyl（カルボキシル基, –COOH） を基質に「付け加える（固定する）」反応を触媒する酵素\n\nつまり 二酸化炭素（CO₂）を基質に取り込む（カルボキシル化する）酵素 を指します"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -8721,6 +8742,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-03-25"
+                        },
+                        {
+                            "problem": "発酵には電子伝達系が存在しない。そのため、解糖系で生じるNADHとH+はピルビン酸によって（酸化・還元）されてNAD+に戻る。",
+                            "answer": [
+                                "酸化"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -8834,6 +8864,39 @@
                     ]
                 },
                 {
+                    "name": "physiology kidney",
+                    "questions": [
+                        {
+                            "problem": "腎小体はなにとなにに分けれる？",
+                            "answer": [
+                                "糸球体",
+                                "ボーマンのう"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-13"
+                        },
+                        {
+                            "problem": "kidney一個あたり、このnephronは （A）個あります。",
+                            "answer": [
+                                "100万個"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "kidneyにおいてナトリウムイオンはどこで再吸収されるか",
+                            "answer": [
+                                "腎細菅"
+                            ],
+                            "memo": "",
+                            "is_correct": 2,
+                            "last_answered_date": "2025-03-27"
+                        }
+                    ]
+                },
+                {
                     "name": "anabolism 光合成 CAM植物",
                     "questions": [
                         {
@@ -8885,8 +8948,8 @@
                                 "きゃー、だいぶ困ったなあ\n"
                             ],
                             "memo": "(キャベツ、ダイコン、ブロッコリー、コマツナ、ナズナ、アブラナ)",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "セリ科の植物の例4",
@@ -8897,8 +8960,8 @@
                                 "とうき（当帰芍薬散のとうき）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "イネ科の語呂",
@@ -8907,7 +8970,7 @@
                             ],
                             "memo": "(ササ、イネ、タケ、エノコログサ、トウモロコシ、ススキ、ムギ)\n",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-09"
+                            "last_answered_date": "2025-09-26"
                         },
                         {
                             "problem": "アヤメ科は単子葉植物か双子葉植物か",
@@ -9356,7 +9419,7 @@
                             ],
                             "memo": "https://www.resona-am.co.jp/labo/amdays/20220829.html",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -9497,9 +9560,9 @@
                             "answer": [
                                 "通信用に細切れにしたデータの大きさ制限で「これくらいの大きさの細切れデータなら通れるよ（送れるよ）」な最大値のこと"
                             ],
-                            "memo": "",
+                            "memo": "例えるなら　データの車高制限",
                             "is_correct": 2,
-                            "last_answered_date": "2025-04-02"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "Why is the RARP protocol necessary？",
@@ -9757,7 +9820,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 }
@@ -12198,8 +12261,8 @@
                                 "双子葉植物　だいからりどぅん"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-08"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ammunition",
@@ -12468,8 +12531,8 @@
                                 "コンサートの来場者数はすごかったです。\n"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-19"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "He was staring out the window.",
@@ -12585,8 +12648,8 @@
                                 "前言撤回（とりけすよ）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "the darkness fell",
@@ -12639,8 +12702,8 @@
                                 "strait"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "濃硝酸　英語で",
@@ -12928,8 +12991,8 @@
                                 "one"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "準否定を6つあげて",
@@ -12938,7 +13001,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "the way SV訳し方",
@@ -13089,7 +13152,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ブルートフォース攻撃が攻撃対象IDを固定してパスワードを総当たりで試すのとは逆に、パスワードを1つに固定し、利用者IDを総当りで試していくことで不正ログインを試みるパスワードクラック手法をなんという",
@@ -13185,8 +13248,8 @@
                                 "WindowsのActive Directory"
                             ],
                             "memo": "kerberosは認証プロトコルであって、SSOではない",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "認証・認可を英語でそれぞれ答えて",
@@ -13227,22 +13290,13 @@
                             "last_answered_date": "2025-07-25"
                         },
                         {
-                            "problem": "OAuthは「認証」「認可」のどちらの役割を果たすか",
-                            "answer": [
-                                "認可　Authrization"
-                            ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-16"
-                        },
-                        {
                             "problem": "電子データが、ある日時に確かに存在していたこと、及びその日時以降に改ざんされていないことを証明するサービスのことをなんという",
                             "answer": [
                                 "タイムスタンプサービス"
                             ],
                             "memo": "FE出題\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "システムが被害を受けるリスクを想定して，保険を掛けることをなんという",
@@ -13263,15 +13317,6 @@
                             "last_answered_date": "2025-09-26"
                         },
                         {
-                            "problem": "電子メールの送信元を検証するための仕組みの「SPF（Sender Policy Framework）」では、受信メールの送信元の（A）をDNSに登録されているメールサーバの（A）と照合する。",
-                            "answer": [
-                                "IPアドレス\n"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
-                        },
-                        {
                             "problem": "OSI基本参照モデルのネットワーク層で動作し，\"認証ヘッダー(AH)\"と\"暗号ペイロード(ESP)\"の二つのプロトコルを含むのは",
                             "answer": [
                                 "IPsec"
@@ -13279,15 +13324,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-05"
-                        },
-                        {
-                            "problem": "電子メールをドメインAの送信者がドメインBの宛先に送信するとき，送信者をドメインAのメールサーバで認証するためのものは",
-                            "answer": [
-                                "SMTP AUTH"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
                         },
                         {
                             "problem": "権限付与に関する基本的な考え方はなにがある？",
@@ -13324,15 +13360,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-23"
-                        },
-                        {
-                            "problem": "GPGは公開鍵暗号方式か共通鍵暗号方式のどちらか",
-                            "answer": [
-                                "両方"
-                            ],
-                            "memo": "GPGは公開鍵暗号方式を「表向き」に使い、実際の暗号処理には共通鍵方式を使う「ハイブリッド型」です。",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-07"
                         }
                     ]
                 },
@@ -13447,7 +13474,26 @@
                 },
                 {
                     "name": "電子メール",
-                    "questions": []
+                    "questions": [
+                        {
+                            "problem": "電子メールをドメインAの送信者がドメインBの宛先に送信するとき，送信者をドメインAのメールサーバで認証するためのものは",
+                            "answer": [
+                                "SMTP AUTH"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-25"
+                        },
+                        {
+                            "problem": "電子メールの送信元を検証するための仕組みの「SPF（Sender Policy Framework）」では、受信メールの送信元の（A）をDNSに登録されているメールサーバの（A）と照合する。",
+                            "answer": [
+                                "IPアドレス\n"
+                            ],
+                            "memo": "https://www.kagoya.jp/howto/wp-content/uploads/202008b_027.png",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
+                        }
+                    ]
                 },
                 {
                     "name": "WAF",
@@ -13524,6 +13570,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-08-30"
+                        },
+                        {
+                            "problem": "GPGは公開鍵暗号方式か共通鍵暗号方式のどちらか",
+                            "answer": [
+                                "両方"
+                            ],
+                            "memo": "GPGは公開鍵暗号方式を「表向き」に使い、実際の暗号処理には共通鍵方式を使う「ハイブリッド型」です。",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-08-07"
                         }
                     ]
                 },
@@ -13538,6 +13593,15 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-15"
+                        },
+                        {
+                            "problem": "OAuthは「認証」「認可」のどちらの役割を果たすか",
+                            "answer": [
+                                "認可　Authrization"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-06-16"
                         }
                     ]
                 },
@@ -14800,7 +14864,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "クリーンアーキテクチャはフレームワークに依存するか、それともしないか",
@@ -14837,7 +14901,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "Dependency injectionとは\nクラス内で別クラスを利用するときにクラス内で直接newせず、外部から（A）で渡してあげて利用する",
@@ -14855,7 +14919,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 }
@@ -15137,8 +15201,8 @@
                                 "偏西風"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "季節風が起きる要因として覚えるフレーズとして「陸地は（A）しやすく、（B）しやすい」",
@@ -16709,8 +16773,8 @@
                                 "オーストラリア"
                             ],
                             "memo": "https://juken-geography.com/wp-content/uploads/2020/07/river-australia-map-1.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-13"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "タクラマカン砂漠の場所は",
@@ -16781,8 +16845,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSij1vR4aN4-qRiD2JXBFYmgR8gMCQ0n8NsA&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "中国の深圳の近くにはなんの地域がある",
@@ -16837,7 +16901,7 @@
                             ],
                             "memo": "https://cdn.mainichi.jp/vol1/2017/06/16/20170616biz00m010018000p/8.jpg?2",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ペルー海流の場所は",
@@ -16998,8 +17062,8 @@
                                 "アメリカの西側"
                             ],
                             "memo": "https://pbs.twimg.com/media/DqGW0yeVAAAiDhK.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "カザフスタンの上に何がある？",
@@ -17089,8 +17153,8 @@
                                 "フランス、スペイン"
                             ],
                             "memo": "https://lh4.googleusercontent.com/proxy/yPIv85nrUDnRTj-zKOyiJAz8V6SNVD69aoHlnMeFt2uDRQqf2l6lZ4Ea8D6I8EHnURueVM063PCRbpAozE7HN8QjYDweOSmnLSxur29cRwo_GA",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-25"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ベルギーはどの3つの国に囲まれているか？",
@@ -17099,9 +17163,9 @@
                                 "ドイツ（右にある）",
                                 "フランス（下にある）"
                             ],
-                            "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-08"
+                            "memo": "https://allaboutbelgium.com/wp-content/uploads/2016/05/europe-belgium-map.jpg",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "トルコの下には何があるか",
@@ -17181,8 +17245,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnxR7rTUpgIj6PVlcRUW5yLnZFbGo_AxHfw&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-17"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "デンマークの下には何の国がある？",
@@ -17208,8 +17272,8 @@
                                 "コートジボワール"
                             ],
                             "memo": "https://hugkum.sho.jp/wp-content/uploads/2023/02/1893691-1024x857.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ナイジェリア　場所",
@@ -17372,7 +17436,7 @@
                             ],
                             "memo": "https://cafegoot.com/wp-content/uploads/Map_of_Bolivia_and_neighboring_countries.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ギリシャの場所は",
@@ -17443,8 +17507,8 @@
                                 "中国の右上"
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/yMyi4m-DP1H6RQZ294-RNQz8Xr4-C8WLIFFf3ZsYcnLnL1qbkpZEyIChFCtxjYmjZOIaYS0FKuHUs-v4IkU9bgtZAF14OBswvHdq_Jt1LeDnB_qfmVW46fM1PKw5kf0",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "アメリカのテキサス州の場所",
@@ -17515,8 +17579,8 @@
                                 ""
                             ],
                             "memo": "https://tabijo-bp.com/wp-content/uploads/images/2017111821262189e.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-31"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ウズベキスタンの上にはなんの国がある？",
@@ -17607,8 +17671,8 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7-Kc1SlNxPIEAz8cTMyLqdhkbhJ48VkRUg&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-14"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "しんしゃんういぐる自治区の場所は",
@@ -17784,6 +17848,24 @@
                             "last_answered_date": "2025-06-12"
                         },
                         {
+                            "problem": "タイの右には何がある",
+                            "answer": [
+                                "ラオス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "アフガニスタンの下にある国は",
+                            "answer": [
+                                "パキスタン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
                             "problem": "カナダ楯状地の場所は？",
                             "answer": [
                                 ""
@@ -17800,7 +17882,7 @@
                             ],
                             "memo": "https://imidas.jp/library/img/genre/z-D-123-001_sp.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "アマゾン盆地とブラジル高原ではどちらが北にあるか",
@@ -18261,8 +18343,8 @@
                                 "晩婚化"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "都心部から郊外に向けて、無秩序かつ無計画に開発が進められる状態を示す言葉は？",
@@ -18984,8 +19066,8 @@
                                 "トナカイ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ホイットルセイの農業区分において商業的農業に分類される4つを答えて",
@@ -22536,7 +22618,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-17"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -23507,13 +23589,22 @@
                             "last_answered_date": "2025-09-11"
                         },
                         {
-                            "problem": "class Animal:\n    def __init__(self, name):\n        self.name = name\n        print(\"Animal init called\")\n\nclass Dog(Animal):\n    def __init__(self, name, breed):\n        （A）\n        self.breed = breed\n        print(\"Dog init called\")\n\ndog = Dog(\"Pochi\", \"Shiba\")\n\n\n問題：\n(A) の位置に super().__init__(name) を追加した場合の出力結果を答えよ。\n",
+                            "problem": "```\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n        print(\"Animal init called\")\n\nclass Dog(Animal):\n    def __init__(self, name, breed):\n        （A）\n        self.breed = breed\n        print(\"Dog init called\")\n\ndog = Dog(\"Pochi\", \"Shiba\")\n\n```\n\n問題：\n(A) の位置に super().__init__(name) を追加した場合の出力結果を答えよ。\n",
                             "answer": [
                                 "Animal init called\nDog init called\n"
                             ],
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "```\nclass Test:\n    def __init__(self):\n        return 100\n\nobj = Test()\n\n```\n\n__init__は戻り値を返しても良いか",
+                            "answer": [
+                                "だめ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "lass A(B): \n    # Omitted bulk of irrelevant code in the class\n\n    def __init__(self, uid=None):\n        self.uid = str(uid)\n\n    @classmethod\n    def get(cls, uid):\n        o = cls(uid)\n\n\n\nWhat does cls() function do inside a class method?",
@@ -23544,7 +23635,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-28"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -23788,22 +23879,31 @@
                     "name": "特殊method",
                     "questions": [
                         {
-                            "problem": "python特殊メソッドの　__init__(self, ...)の意味",
+                            "problem": "```\nclass MyClass:\n    def __init__(self, value):\n        self.value = value\n\nobj = MyClass(10)\nprint(obj.value)\n\n```\n出力値は",
                             "answer": [
-                                "インスタンスが初期化される際に呼ばれるコンストラクタメソッド。"
+                                "10"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
-                            "problem": "pythonの特殊メソッドである__call__について",
+                            "problem": "```\nclass MyClass:\n    def __init__(self, value):\n        self.value = value\n\n    def __call__(self, x):\n        return self.value + x\n\n\nobj = MyClass(10)\nresult = obj(5) \nprint(result)   \n\n```\n出力値はどうなる",
                             "answer": [
-                                "class MyClass:\n    def __init__(self, value):\n        self.value = value\n\n    def __call__(self, x):\n        return self.value + x\n\n\nobj = MyClass(10)\nresult = obj(5)  # __call__ が呼ばれる\nprint(result)    # 15\n"
+                                "15"
                             ],
-                            "memo": "ここで obj(5) と書いたとき、実際には Python は\n\nobj.__call__(5)\n\n\nを呼び出しています。",
+                            "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-25"
+                        },
+                        {
+                            "problem": "```\nclass MyClass:\n    def __call__(self, x):\n        return x * 2\n\nobj = MyClass()\nprint(obj(5))\n\n```\n出力値はどうなる",
+                            "answer": [
+                                "10"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-26"
                         }
                     ]
                 },
@@ -24790,7 +24890,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "始皇帝によって実施された、全国に郡や県を置き、皇帝が中央から派遣した官僚に治めさせるような統治制度を何というか。",
@@ -24808,7 +24908,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "農民出身で楚の軍勢を破って中国を再統一した人物は誰か。",
@@ -25011,8 +25111,8 @@
                                 "メディア"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "アケメネス朝ペルシアの建国者は",
@@ -25030,7 +25130,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-02"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ハンムラビ王はどこの国の王様か",
@@ -25798,8 +25898,8 @@
                                 "六日戦争"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "19世紀末から20世紀にかけて、（A）はロシアとの再保障条約を破棄して、海軍を増強し、積極的な海外膨張策をとった",
@@ -25886,7 +25986,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "フラン ス皇帝ナポレオン 1 世が 1806 年にヨーロッパ諸国とイギリスとの貿易を禁止した法令をなんという",
@@ -26025,7 +26125,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "古代ローマにおいてコンスルは何人か",
@@ -26034,7 +26134,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "紀元前60年から紀元前53年にかけてポンペイウス、カエサル、クラッススによっておこなわれた政治は何か",
@@ -26184,7 +26284,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
