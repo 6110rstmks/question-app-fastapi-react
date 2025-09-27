@@ -6260,11 +6260,11 @@
                         {
                             "problem": "こん虫のはらにある空気を出し入れする穴を何といいますか。",
                             "answer": [
-                                "気門"
+                                "気門Spiracle"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "旧口動物Protostomeのうち脱皮動物を二つ答えよ",
@@ -6783,11 +6783,12 @@
                         {
                             "problem": "脊椎動物Vertebrateの中枢神経系は（A）（B）からなる",
                             "answer": [
-                                "脳　脊髄spinal cor"
+                                "脳　",
+                                "脊髄spinal cor"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-14"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "大脳の外側である大脳皮質は二つに分けれる。なにとなに",
@@ -7402,7 +7403,7 @@
                                 "locus"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-27"
                         }
                     ]
@@ -7727,8 +7728,8 @@
                                 "380nm"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "医薬品や医療機器の製造販売にあたり、企業は厚生労働相に承認申請し、認められなければならない。これが認められることをなんという",
@@ -8125,7 +8126,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-04"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "細胞接着を英語で",
@@ -8259,7 +8260,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "制御性T細胞はどのように訳される？",
@@ -8268,7 +8269,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "制御性T細胞が不足すると最も起こりやすいのは",
@@ -8425,7 +8426,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "広背筋はどこにあるか",
@@ -8460,7 +8461,7 @@
                                 ""
                             ],
                             "memo": "https://refle-tbc.com/images/massage/muscle/erector.webp",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-27"
                         },
                         {
@@ -8522,6 +8523,25 @@
                             "memo": "反対に、カルビンベンソン回路において、水素を与えて還元する（酸化の反対）にはATPを与えてあげてPGAからGAPを生成する。\n\n上記と一緒に覚えてあげると理解が深まる。\n\nまた、酸化的リン酸化は酸化するのを駆動力として、ADPにリン酸をくっつけてATPを生成する（ADP->ATP）\n\nつまり\n酸化（脱水素）する時→ATPをつける\n",
                             "is_correct": 1,
                             "last_answered_date": "2025-09-23"
+                        },
+                        {
+                            "problem": "呼吸では1分子のグルコースから何分子のATPが合成されるか",
+                            "answer": [
+                                "38"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "電子伝達系は何で行われ、ATPは何分子てまきますか？",
+                            "answer": [
+                                "ミトコンドリアのクリステ",
+                                "34"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "解糖系Glycolysisはどこでおこるか",
@@ -8690,7 +8710,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-04"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "C4植物の光合成における葉肉細胞の働き。CO2をC3化合物と反応させ、（A）に変換してCO2を濃縮させる。",
@@ -8727,7 +8747,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -8902,11 +8922,11 @@
                         {
                             "problem": "CAM植物は空気中のCO2を取り込んでどのような物質で蓄積するか答えよ",
                             "answer": [
-                                "りんご酸"
+                                "りんご酸Malic acid"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "CAM植物で気孔を開くのは昼か夜どちらか",
@@ -8928,8 +8948,8 @@
                                 "単子葉植物"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-29"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ユリ科の例を3つあげてください",
@@ -8960,7 +8980,7 @@
                                 "とうき（当帰芍薬散のとうき）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-28"
                         },
                         {
@@ -9020,7 +9040,7 @@
                             ],
                             "memo": "https://biology-manabiya.net/wp-content/uploads/2018/09/d83b33e27c2447124b705d48467f4e01.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-23"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "ニッチの類似する種が互いに競争した結果、同じ場所に共存できなくなる場合がある。これをなんという",
@@ -9383,7 +9403,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -9470,7 +9490,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -9808,7 +9828,7 @@
                             "last_answered_date": "2025-09-12"
                         },
                         {
-                            "problem": "TXTレコードの種類は",
+                            "problem": "TXTレコードの種類は3",
                             "answer": [
                                 "DMARCレコード\n",
                                 "SPF TXTレコード\n",
@@ -9816,7 +9836,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "CNAMEレコードの用途",
@@ -13061,7 +13081,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "the way SV訳し方",
@@ -13629,7 +13649,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "GPGは公開鍵暗号方式か共通鍵暗号方式のどちらか",
@@ -14362,7 +14382,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-03-22"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "[Ω]の抵抗をもつ導体がある。 この導体の長さを2倍，断面積を4倍にした場合と，長さを3倍，断面積を1/2倍にした場合のそれぞれについて，抵抗がいくらになるかを求めよ。",
@@ -14451,7 +14471,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_phy/3_1_1_3/k_sci_phy_3_1_1_3_image03.png",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "振動数f(HZ)は周期T(s)の何か",
@@ -14487,8 +14507,8 @@
                                 "0.01nmから１nm"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-23"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "波長は、ギリシャ文字でなにで表す",
@@ -14514,8 +14534,8 @@
                                 "低周波数帯であるため"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-28"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -14574,8 +14594,8 @@
                                 "自由落下"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-23"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "物体を回転させる力を何という？",
@@ -14610,8 +14630,8 @@
                                 "円の接線方向"
                             ],
                             "memo": "円運動の加速度は円の中心方向",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "円運動において、角速度がπ(rad/s)のとき周期（T）は？",
@@ -16127,7 +16147,7 @@
                             ],
                             "memo": "https://www.jishin.go.jp/main/herpnews/series/2010/img/07/05_z_5.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "バイカル湖はどんな形をしている",
@@ -17225,7 +17245,7 @@
                             ],
                             "memo": "https://allaboutbelgium.com/wp-content/uploads/2016/05/europe-belgium-map.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "トルコの下には何があるか",
@@ -17495,7 +17515,7 @@
                                 ""
                             ],
                             "memo": "https://cafegoot.com/wp-content/uploads/Map_of_Bolivia_and_neighboring_countries.gif",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-27"
                         },
                         {
@@ -17568,7 +17588,7 @@
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/yMyi4m-DP1H6RQZ294-RNQz8Xr4-C8WLIFFf3ZsYcnLnL1qbkpZEyIChFCtxjYmjZOIaYS0FKuHUs-v4IkU9bgtZAF14OBswvHdq_Jt1LeDnB_qfmVW46fM1PKw5kf0",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "アメリカのテキサス州の場所",
@@ -17732,7 +17752,7 @@
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7-Kc1SlNxPIEAz8cTMyLqdhkbhJ48VkRUg&s",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "しんしゃんういぐる自治区の場所は",
@@ -21350,7 +21370,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-28"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "レーザーは単一波長の光の集まりでプリズムを通すとどうなるか",
@@ -22351,7 +22371,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -22591,7 +22611,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "Azure AI Searchのインデックスの役割",
@@ -22609,7 +22629,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -22827,7 +22847,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "Microsoft Entraロールの種類 3つだけあげて",
@@ -23319,7 +23339,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "git reset --hard b49ffe3^^\nのコマンドの意味は",
@@ -23480,8 +23500,8 @@
                                 "特定の例外が発生したときに自動的にリトライする"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "pythonの@propertyこれは何",
@@ -23490,7 +23510,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "pythonバージョン管理ツール2",
@@ -23499,7 +23519,16 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-15"
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "pythonのsetはシーケンスなオブジェクトであるか、それともシーケンスでないオブジェクトか",
+                            "answer": [
+                                "シーケンスでない"
+                            ],
+                            "memo": "つまりlistのように順番を保持しないということ",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "WSGIは並列処理が可能か",
@@ -23567,13 +23596,13 @@
                             "last_answered_date": "2025-08-15"
                         },
                         {
-                            "problem": "nums = [48, 6, 9, 21, 1]\n\nsquare_all = map(lambda num: num ** 2, nums)\n\nprint(square_all)\n\n出力値はどうなる\nlambda expression",
+                            "problem": "```\nnums = [48, 6, 9, 21, 1]\n\nsquare_all = map(lambda num: num ** 2, nums)\n\nprint(square_all)\n\n```\n\n出力値はどうなる\nlambda expression",
                             "answer": [
                                 "[2304, 36, 81, 441, 1]\n"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-07"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "raise_to_power = lambda x, y: x ** y\n\nraise_to_power(2, 3)\n\nどうなる出力値",
@@ -23583,6 +23612,24 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-07-26"
+                        },
+                        {
+                            "problem": "pythonのsetとlistを比較したとき、重複した要素を持てないのはどちらか",
+                            "answer": [
+                                "set"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "pythonにおいてイミュータブルなオブジェクトでは中身を直接変更可能であるか",
+                            "answer": [
+                                "不可能"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -23704,7 +23751,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -23807,7 +23854,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "```\nfrom unittest import TestCase\n\n# テスト対象の関数\ndef add(a, b):\n    return a + b\n\n# テストクラス\nclass TestAdd(TestCase):\n    def test_add_positive_numbers(self):\n        self.assertEqual(add(2, 3), 5)\n\n    def test_add_negative_numbers(self):\n        self.assertEqual(add(-1, -1), -2)\n\n    def test_add_zero(self):\n        self.assertEqual(add(0, 5), 5)\n\n# 実行する場合は\nif __name__ == '__main__':\n    import unittest\n    unittest.main()\n```\n\nTestCaseというクラスがある。\nこれもおぼえておいてほしい。",
@@ -23825,7 +23872,7 @@
                             ],
                             "memo": "https://qiita.com/satamame/items/1c56e7ff3fc7b2986003",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "// テスト対象のコード\n\n```\nclass calc:\n    # xとyを足した後に2倍したあとプラス1する関数\n    @staticmethod\n    def x_y_addition_and_twice(x, y):\n        z = x + y\n        tmp = calc.twice(z)\n        result = tmp + 1\n        return result\n\n    @staticmethod\n    def twice(z):\n        return \"未実装の関数です\"\n\n// テストコード\nclass MyTestCase(unittest.TestCase):\n\n    @patch(\"calc_project.src.calc.calc.twice\")\n    def test_calc_normal_case_1(self, twice_patch):\n        twice_patch.side_effect = [4, 6, 8]  # side_effectの設定\n\n        # テストケース1   \n        result = calc.x_y_addition_and_twice(1, 1)\n        self.assertEqual(5, result)\n        # テストケース2   \n        result = calc.x_y_addition_and_twice(1, 2)\n        self.assertEqual(7, result)\n        # テストケース3   \n        result = calc.x_y_addition_and_twice(2, 2)\n        self.assertEqual(9, result)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n```\n\n",
@@ -23871,7 +23918,7 @@
                             ],
                             "memo": "良記事：https://qiita.com/satamame/items/1c56e7ff3fc7b2986003",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "```\n# src/lib/example_class.py\nclass ExampleClass:\n    def __init__(self, name):\n        self._name = name\n\n    @property\n    def name(self):\n        return self._name\n\n    @classmethod\n    def class_method_example(cls):\n        return \"class method called\"\n\n    @staticmethod\n    def static_method_example():\n        return \"static method called\"\n\n    def instance_method_example(self):\n        return f\"instance method called by {self.name}\"\n\n# src/lambda_function.py (抜粋)\nimport json\nfrom lib.example_class import ExampleClass\n\ndef lambda_handler(event, context):\n    example_instance = ExampleClass(name=\"LambdaUser\")\n\n    response = {\n        \"instance_method\": example_instance.instance_method_example(),\n        \"class_method\": ExampleClass.class_method_example(),\n        \"static_method\": ExampleClass.static_method_example(),\n        \"property\": example_instance.name,\n    }\n\n    return {\"statusCode\": 200, \"body\": json.dumps(response)}\n```",
@@ -24842,7 +24889,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-17"
+                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "中国最古の王朝",
@@ -25122,7 +25169,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-22"
+                            "last_answered_date": "2025-09-27"
                         }
                     ]
                 },
@@ -26050,7 +26097,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -26256,8 +26303,8 @@
                                 "ローマ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "パトリキたちを取り仕切る司会者をなんという",
@@ -26306,13 +26353,13 @@
                     "name": "イスラーム",
                     "questions": [
                         {
-                            "problem": "622年んのムハンマドの移住はのいちにイスラーム歴の紀元元年とされた。この出来事をなんという",
+                            "problem": "622年のムハンマドの移住はのいちにイスラーム歴の紀元元年とされた。この出来事をなんという",
                             "answer": [
                                 "ヒジュラ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "イスラーム教徒は、征服した各地で （A） と呼ばれる軍営都市を建設しました。",
