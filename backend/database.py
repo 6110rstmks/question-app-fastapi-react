@@ -4,14 +4,14 @@ from sqlalchemy.orm import sessionmaker
 from config import get_settings
 from fastapi import Depends
 
-def add_sync_schema(url: str) -> str:
+def add_async_schema(url: str) -> str:
     return url.replace("postgresql://", "postgresql+asyncpg://")
 
 SQLALCHEMY_DATABASE_URL = get_settings().sqlalchemy_database_url
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
-async_engine = create_async_engine(add_sync_schema(SQLALCHEMY_DATABASE_URL))
+async_engine = create_async_engine(add_async_schema(SQLALCHEMY_DATABASE_URL))
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

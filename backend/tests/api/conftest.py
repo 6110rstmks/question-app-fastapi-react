@@ -16,7 +16,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from models import Base
 from schemas.auth import DecodedToken
 from main import app
-from database import add_sync_schema, get_session
+from database import add_async_schema, get_session
 from cruds.auth_crud import get_current_user
 from config import get_settings
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
@@ -26,7 +26,7 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 async def session_fixture():
     SQLALCHEMY_DATABASE_URL = get_settings().sqlalchemy_database_url
 
-    async_engine = create_async_engine(add_sync_schema(SQLALCHEMY_DATABASE_URL))
+    async_engine = create_async_engine(add_async_schema(SQLALCHEMY_DATABASE_URL))
 
     async with async_engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
