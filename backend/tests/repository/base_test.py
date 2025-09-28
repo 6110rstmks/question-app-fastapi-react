@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 import pytest
 import pytest_asyncio
@@ -8,9 +9,21 @@ from src.repository.base.LogicalDeleteDao import BaseCreateDTO, BaseReadDTO, Bas
 class BasicDaoTest:
     def assert_objs(self, actual: list[BaseReadDTO], expected: list[BaseReadDTO]):
         assert len(actual) == len(expected)
+        print('えええ')
+        print([x.model_dump() for x in actual])
+        print('おおお')
+        print(map(dict.items, [x.model_dump() for x in actual]))
+        print('ううう')
+        print(set(map(frozenset, map(dict.items, [x.model_dump() for x in actual]))))
+        print('かかか')
         assert set(map(frozenset, map(dict.items, [x.model_dump() for x in actual]))) == set(
             map(frozenset, map(dict.items, [x.model_dump() for x in expected]))
         )
+        
+    def assert_objs_for_array(self, actual: list[BaseReadDTO], expected: list[BaseReadDTO]):
+        assert len(actual) == len(expected)
+        norm = lambda x: json.dumps(x.model_dump(), sort_keys=True, default=str)
+        assert {norm(x) for x in actual} == {norm(x) for x in expected}
 
     def assert_obj(self, actual: BaseReadDTO, expected: BaseReadDTO):
         for k, v in expected.model_dump().items():
@@ -58,8 +71,26 @@ class BasicDaoTest:
         obj_3 = await dao.create(create_dtos[2])
 
         result = await dao.get_all()
+        
+        data = [x.model_dump() for x in create_dtos]
+        
+        list_contain_flg = False
 
-        self.assert_objs(result, [obj_1, obj_2, obj_3])
+        for i, record in enumerate(data, start=1):
+            print(f"--- record {i} ---")
+            # 内側: key, value を取り出す
+            for key, value in record.items():
+                print(f"{key} -> {value}")
+                print(f"type: {type(value)}")
+                
+                if isinstance(value, list):
+                    list_contain_flg = True
+
+        if not list_contain_flg:
+            self.assert_objs(result, [obj_1, obj_2, obj_3])
+
+        else:
+            self.assert_objs_for_array(result, [obj_1, obj_2, obj_3])
 
     @pytest.mark.asyncio
     async def test_get_all_without_data(self, dao: BasicDao):
@@ -75,8 +106,25 @@ class BasicDaoTest:
 
         actual = await dao.find_by_ids([obj_1.id, obj_2.id])
 
-        self.assert_objs(actual, [obj_1, obj_2])
+        data = [x.model_dump() for x in create_dtos]
 
+        list_contain_flg = False
+
+        for i, record in enumerate(data, start=1):
+            print(f"--- record {i} ---")
+            # 内側: key, value を取り出す
+            for key, value in record.items():
+                print(f"{key} -> {value}")
+                print(f"type: {type(value)}")
+                
+                if isinstance(value, list):
+                    list_contain_flg = True
+
+        if not list_contain_flg:
+            self.assert_objs(actual, [obj_1, obj_2])
+
+        else:
+            self.assert_objs_for_array(actual, [obj_1, obj_2])
     @pytest.mark.asyncio
     async def test_update(self, dao: BasicDao, create_dto: BaseCreateDTO, update_dto: BaseUpdateDTO):
         created = await dao.create(create_dto)

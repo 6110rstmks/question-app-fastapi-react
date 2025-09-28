@@ -79,15 +79,6 @@
                             "last_answered_date": "2025-09-27"
                         },
                         {
-                            "problem": "aiuejoiu",
-                            "answer": [
-                                ""
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
-                        },
-                        {
                             "problem": "音階を英語でいうと",
                             "answer": [
                                 "scale"
@@ -4759,11 +4750,11 @@
                         {
                             "problem": "ベンゼンに1つのメチル基（-CH3）が置換した化合物を何という",
                             "answer": [
-                                "トルエン"
+                                "トルエンToluene"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ozoneの匂いは無臭か",
@@ -4875,8 +4866,8 @@
                                 "天然ガスや石油を分留する。"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "fat hydrogenation",
@@ -4935,7 +4926,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "（A）にアルデヒド（R-CHO）を加えて穏やかに加熱すると、（A）中に含まれる銀イオンAg+が還元されて銀Agの単体が生成される。",
@@ -4981,7 +4972,7 @@
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_che/5_4_54_3/k_sci_che_5_4_54_3_image02.png",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-03"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ナフタレンの分子式は",
@@ -5200,7 +5191,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-18"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "Snの参加数は2種類ある。答えて、またどちらが安定",
@@ -5418,11 +5409,11 @@
                             "problem": "酸性の乾燥剤を二つ挙げよ",
                             "answer": [
                                 "十酸化四リン",
-                                "濃硫酸"
+                                "濃硫酸Concentrated sulfuric acid"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-18"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ハロゲンの酸化数は-1が最小だが、最大でどの酸化数をとるか。",
@@ -6213,8 +6204,8 @@
                                 "胚葉形成"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-22"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ventralの意味",
@@ -6300,8 +6291,8 @@
                                 "chlorophyll a"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "亜門を英語で",
@@ -6509,8 +6500,8 @@
                                 "ツボカビ類"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "こん虫がものの形や色を見分けるために使う目を何といいますか。",
@@ -6852,7 +6843,7 @@
                             "answer": [
                                 "遠心性神経"
                             ],
-                            "memo": "外に向かって信号を送るイメージで覚えれば良い",
+                            "memo": "外に向かって信号を送るイメージで覚えれば良い\nhttps://img.kango-roo.com/upload/images/scio/seirigaku/66-97/ch3_y3-1%20ver2.png",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-27"
                         },
@@ -6863,7 +6854,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-03-13"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "静止電位Resting potentialは膜外を0mVとしたとき約何mV？",
@@ -6946,8 +6937,8 @@
                                 "新皮質"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "大脳新皮質は4つの領域に分けることができる。答えて",
@@ -6960,6 +6951,24 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-26"
+                        },
+                        {
+                            "problem": "感覚神経は脳のどこでシナプスを形成するか",
+                            "answer": [
+                                "視床"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "中脳を英語で",
+                            "answer": [
+                                "midbrain"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -7090,8 +7099,8 @@
                                 "オペレーター"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-04-03"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "遺伝子組み変えにおいて、遺伝子を切断する酵素を何という？",
@@ -7202,12 +7211,12 @@
                             "last_answered_date": "2025-03-22"
                         },
                         {
-                            "problem": "減数分裂meiosisにおいて、相同染色体同士の接着を何という",
+                            "problem": "減数分裂meiosisにおいて、相同染色体Homologous chromosomes同士の接着を何という",
                             "answer": [
                                 "対合"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-28"
                         },
                         {
@@ -7263,7 +7272,7 @@
                             ],
                             "memo": "英語で検索をかけてもヒットしないなあ",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "プリズム幼生期において、原腸は外胚葉と接触して（A）になる部分が決まり、一次間充織から（B）が生じる",
@@ -7513,11 +7522,11 @@
                         {
                             "problem": "細胞外基質（ECM）を構成する糖タンパク質をひとつあげて",
                             "answer": [
-                                "ラミニン"
+                                "ラミニンlaminin"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "電荷をもつ分子やイオンはは細胞膜を通過できるか？",
@@ -7589,8 +7598,8 @@
                                 "よごれたキク子はヒマだ\nヨモギ、ゴボウ、レタス、キク、コスモス、ハルジオン、ヒマワリ、ダリア"
                             ],
                             "memo": "アブラナ科はきゃーだいぶこまったな",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "椎茸の旨味の成分は？",
@@ -7653,8 +7662,8 @@
                                 "cell"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-03-24"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "（A）は大気中の窒素分子から無機窒素化合物を作ることができる。この現象を（B）と呼ぶ。",
@@ -7685,7 +7694,7 @@
                             "last_answered_date": "2025-05-19"
                         },
                         {
-                            "problem": "紫外線　3種類",
+                            "problem": "紫外線ultraviolet light　3種類",
                             "answer": [
                                 "UV-A",
                                 "UV-B",
@@ -7693,7 +7702,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "赤色光の波長は約nmか",
@@ -7777,13 +7786,13 @@
                             "last_answered_date": "2025-05-15"
                         },
                         {
-                            "problem": "真皮の２％程のたんぱく質で、コラーゲンを束ね弾力のある肌を作る役割を担っているタンパク質は",
+                            "problem": "真皮dermisの２％程のproteinで、コラーゲンを束ね弾力のある肌を作る役割を担っているタンパク質は",
                             "answer": [
                                 "Elastin"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-08"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "偽果の語呂",
@@ -7800,8 +7809,17 @@
                                 "10本"
                             ],
                             "memo": "アブラナ科のおしべは６本\n",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
+                        },
+                        {
+                            "problem": "真皮を英語で",
+                            "answer": [
+                                "dermis"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -8268,7 +8286,7 @@
                                 "Treg"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-28"
                         },
                         {
@@ -8544,12 +8562,21 @@
                             "last_answered_date": "2025-09-28"
                         },
                         {
+                            "problem": "解糖系ではたらく脱水素酵素の正式名称は",
+                            "answer": [
+                                "デヒドロゲナーゼ"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
                             "problem": "解糖系Glycolysisはどこでおこるか",
                             "answer": [
                                 "細胞質基質"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-28"
                         },
                         {
@@ -8600,7 +8627,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-15"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "脂肪酸からアセチルCoAを作る反応",
@@ -9067,7 +9094,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "個体群の分布様式3",
@@ -9491,6 +9518,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "15歳以上の働く意欲のある人（労働力人口）のうち、仕事を探しても仕事に就くことのできない人（完全失業者）の割合",
+                            "answer": [
+                                "完全失業率"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -9538,8 +9574,35 @@
                     ]
                 },
                 {
-                    "name": "イールドカーブ",
+                    "name": "yield curve",
                     "questions": [
+                        {
+                            "problem": "逆イールドはなんのサインか",
+                            "answer": [
+                                "景気後退"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "イールドカーブは通常右肩上がりか、それとも右下下がりか",
+                            "answer": [
+                                "右肩あがり"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "イールドカーブの傾きが大きくなることなんという",
+                            "answer": [
+                                "スティープ化　steepening"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
                         {
                             "problem": "イールドカーブの縦軸は",
                             "answer": [
@@ -9557,6 +9620,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-27"
+                        },
+                        {
+                            "problem": "イールドカーブが右肩上がりになることをなんという",
+                            "answer": [
+                                "順イールド"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         }
                     ]
                 }
@@ -9987,7 +10059,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "CNNの3つの層",
@@ -10563,6 +10635,20 @@
                             "last_answered_date": "2025-09-28"
                         }
                     ]
+                },
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "O(1)、O(log n)、O(n^2)\nこれらの記法をなんという",
+                            "answer": [
+                                "Big-O記法"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        }
+                    ]
                 }
             ]
         },
@@ -10701,8 +10787,8 @@
                                 "point in time recovery"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "システムの一部に障害が発生しても全体としては停止することなく稼働を続け、その間に復旧を図るような設計となっているシステムをなんという",
@@ -10747,7 +10833,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-27"
+                            "last_answered_date": "2025-09-29"
                         }
                     ]
                 }
@@ -13556,6 +13642,24 @@
                     "name": "電子メール",
                     "questions": [
                         {
+                            "problem": "SPFの目的\n送信元（A）が正規のものかを判定する仕組み",
+                            "answer": [
+                                " IP アドレス"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "SPFはDNSの（A）で管理します。",
+                            "answer": [
+                                "TXTレコード"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
+                        },
+                        {
                             "problem": "電子メールをドメインAの送信者がドメインBの宛先に送信するとき，送信者をドメインAのメールサーバで認証するためのものは",
                             "answer": [
                                 "SMTP AUTH"
@@ -14989,8 +15093,8 @@
                                 "引数"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-16"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "第一級関数の特徴は？",
@@ -15036,8 +15140,8 @@
                                 "フィジビリティスタディ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-13"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
                         }
                     ]
                 },
@@ -17352,7 +17456,7 @@
                                 "コートジボワール"
                             ],
                             "memo": "https://hugkum.sho.jp/wp-content/uploads/2023/02/1893691-1024x857.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-28"
                         },
                         {
@@ -22544,7 +22648,7 @@
                             ],
                             "memo": "Azure Firewallで外部からの通信をまとめて制御し、内部はNSGで細かく制御するなど、組み合わせて利用することでよりセキュリティを強化することが可能",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -22585,19 +22689,11 @@
                             "last_answered_date": "2025-07-19"
                         },
                         {
-                            "problem": "Azure AI Searchのアナライザーとは",
+                            "problem": "Azure AI Searchのアナライザーは例えばどのようなことをする。例を３つあげて",
                             "answer": [
-                                "インデックス作成時やクエリ時にテキストをトークン（単語など）に分割し、正規化（正規表現やステミングなど）するための処理ロジック"
-                            ],
-                            "memo": "簡単に言えば、**「検索しやすくするために、テキストを加工・分解する仕組み」**です。",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
-                        },
-                        {
-                            "problem": "Azure AI Searchのアナライザーは例えばどのようなことをする。例を一つあげて",
-                            "answer": [
-                                "単語分割",
-                                "検索文字列から意味を持たない一般的な単語を削除する。\n\n例: \"the\", \"a\", \"is\" などを削除。"
+                                "単語分割\n文章を検索用に「トークン（単語や用語）」に分割する。\n例: \"The quick brown fox\" → [the, quick, brown, fox]",
+                                "正規化\n文字の大小を揃える\n\n\"Dog\" → \"dog\"\n\nアクセントやダイアクリティカルマークを除去\n\n\"café\" → \"cafe\"",
+                                "ストップワード除去\n\n意味が薄い単語（a, an, the, of など）を削除する。\n\n\"the quick brown fox\" → [quick, brown, fox]"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -23158,7 +23254,7 @@
                             "last_answered_date": "2025-08-16"
                         },
                         {
-                            "problem": "model Post {\n  id         Int        @id @default(autoincrement())\n  title      String\n  categories Category[]　←追加\n}\n\nmodel Category {\n  id    Int    @id @default(autoincrement())\n  name  String\n  posts Post[]　←追加\n}\n\nこの二つのモデルでマイグレーションしたときに、何という名前の中間テーブルが自動で作成されるか",
+                            "problem": "```\nmodel Post {\n  id         Int        @id @default(autoincrement())\n  title      String\n  categories Category[]　←追加\n}\n\nmodel Category {\n  id    Int    @id @default(autoincrement())\n  name  String\n  posts Post[]　←追加\n}\n\n```\n\nこの二つのモデルでマイグレーションしたときに、何という名前の中間テーブルが自動で作成されるか",
                             "answer": [
                                 "_CategoryToPost"
                             ],
@@ -23413,7 +23509,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "GitHub Actions のself-hosted runner ",
@@ -23556,6 +23652,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-24"
+                        },
+                        {
+                            "problem": "pythonのsetとlistで集合演算ができるのはどちらか",
+                            "answer": [
+                                "set"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "os.pathとの代替機能ライブラリ",
@@ -23881,7 +23986,7 @@
                             ],
                             "memo": "a",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-29"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "fastapi.testclientライブラリのTestClientとhttpx.AsyncClientではどちらが同期でどちらが非同期か",
@@ -23909,7 +24014,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-29"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "TestCaseとpatch関数を使ったやつ\n\nfrom unittest import TestCase\nfrom unittest.mock import patch\nfrom my_class import Event\n\nclass EventTest(TestCase):\n    def test_availability(self):\n        # Event を作る\n        event = Event(id=1)\n\n        with patch('my_class.get_available_seats') as mock_func:\n            # 残席数が 0 の場合は「完売」となること\n            mock_func.return_value = 0\n            availability = event.check_availability()\n            self.assertEqual(availability, '完売')\n\n            # 残席数が 19 の場合は「残り僅か」となること\n            mock_func.return_value = 19\n            availability = event.check_availability()\n            self.assertEqual(availability, '残り僅か')\n\n",
@@ -23945,7 +24050,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-08-28"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "pytestにおいて@pytest.mark.name_of_the_mark decorator これは何を表す",
@@ -23978,7 +24083,7 @@
                             ],
                             "memo": "from pydantic import BaseModel\n\nclass User(BaseModel):\n    id: int\n    name: str\n    email: str | None = None\n\nuser = User(id=1, name=\"Alice\")\n\n# 辞書に変換\nprint(user.model_dump())\n# => {'id': 1, 'name': 'Alice', 'email': None}",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "model_dump と model_validateは役割が逆方向であるが、\ndict（または他の入力データ） → Pydantic モデルの役割を持つのはどちらか",
@@ -24243,8 +24348,8 @@
                                 "ウィーン包囲"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "イスラーム神秘主義を表す語",
@@ -24253,7 +24358,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ヘシオドスの代表作は",
@@ -24600,8 +24705,8 @@
                                 "太陽暦"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-16"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ゲルマン人が、戦士階層による最高の意思決定機関としたものは何か。",
@@ -24633,7 +24738,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-18"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "殷後期の都の遺跡をなんというか",
@@ -24753,8 +24858,8 @@
                                 "唐護府"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "反乱軍から唐に降った節度使の（A）により907年に唐は滅ぼされた。",
@@ -24763,7 +24868,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "7世紀末、病身の高宗に変わって政権を握った、中国史上で唯一の女帝は",
@@ -24772,7 +24877,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "西晋滅亡後、江南に逃れて東晋を建てた人物は",
@@ -24781,7 +24886,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ヌルハチはどこの国に対して宣戦布告したか",
@@ -24862,7 +24967,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "司馬遷は何を編纂したか",
@@ -24889,7 +24994,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "中国最古の王朝",
@@ -24916,7 +25021,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "劉邦が項羽を破った戦いは",
@@ -24970,7 +25075,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "秦・漢に対抗したモンゴル高原の騎馬遊牧民は何か",
@@ -25114,8 +25219,8 @@
                                 "竜山文化（りゅうざんぶんか）"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-23"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "殷では何政治が行われた",
@@ -25141,8 +25246,8 @@
                                 "六朝"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "大月氏を建てたのは",
@@ -25151,7 +25256,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "唐の建国はいつか",
@@ -25264,7 +25369,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-20"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "古代バビロニアの王で、「目には目を、歯には歯を」の原則で知られる法典を制定したのは誰でしょう？",
@@ -25291,7 +25396,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-22"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "アケメネス朝ペルシアとササン朝ペルシアではどちらが先",
@@ -25761,8 +25866,8 @@
                                 "王の目・王の耳"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "BC3世紀頃、パルティア王国が設立。この国の設立者は？",
@@ -25842,8 +25947,8 @@
                                 "パルティア王国(アルサケス朝)\n"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "新王国時代にシリア・ヌビアに遠征し、そこを征服した王は？",
@@ -25875,7 +25980,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "革命前のフランスで、特権身分のうち聖職者身分を何とよんだか",
@@ -25929,7 +26034,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "十分の一税はローマ＝カトリック教会が何から徴収した税であるか",
@@ -25956,7 +26061,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "イギリスのジョン王から大陸領の大半を奪ったフランス王は？",
@@ -25982,8 +26087,8 @@
                                 "フランス、スペイン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "中世紀末にヨーロッパ諸国で成立した、身分別の代表が国政を審議する議会をなんとよぶ",
@@ -25992,7 +26097,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-20"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "カペー朝の断絶で1328年に成立したフランスの新王朝は",
@@ -26001,7 +26106,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -26015,7 +26120,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "第3次中東戦争は別名何と呼ばれていますか。\n",
@@ -26032,8 +26137,8 @@
                                 "ドイツ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "1940年、フランスはドイツに降伏し、フランスの北半はドイツが占領、南半には（A）を首都とする対ドイツ協力政府が成立した。",
@@ -26087,8 +26192,8 @@
                                 "開城"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "中国からの亡命者で衛氏朝鮮（えいし）の建国者はだれか",
@@ -26181,7 +26286,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-20"
+                            "last_answered_date": "2025-09-29"
                         }
                     ]
                 },
@@ -26209,7 +26314,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "マルコ＝ポーロがアジアでの経験や伝聞を口述した旅行記をなんという",
@@ -26241,7 +26346,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "第二回ポエニ戦争のカンネーの戦いでローマ軍を破ったカルタゴの将軍は",
@@ -26250,7 +26355,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "古代ローマにおいてコンスルは何人か",
@@ -26259,7 +26364,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "紀元前60年から紀元前53年にかけてポンペイウス、カエサル、クラッススによっておこなわれた政治は何か",
@@ -26276,8 +26381,8 @@
                                 "キケロ"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ローマ共和政初期の最高機関",
@@ -26327,7 +26432,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-20"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ラタナコーシン朝は何仏教を保護したか",
@@ -26336,7 +26441,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-19"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "最初のタイ人の王朝は",
@@ -26386,7 +26491,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-20"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ウマイヤ朝が滅亡した一番大きな原因は",
@@ -26395,7 +26500,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-19"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -26423,7 +26528,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "インドのアーリヤ社会で生まれ、バラモン教の祭司バラモンを最上位に置き、クシャトリア（武士・貴族）・バイシャ（農耕民）を支配者層、その下のシュードラ（従属民）からなる４種姓を基本とした種姓制度は",
