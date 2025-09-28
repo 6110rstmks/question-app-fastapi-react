@@ -88,7 +88,7 @@ async def delete_subcategory(
     id: int = Path(gt=0),
     session=SessionDependency
 ):
-    deleted_item = await subcategory_crud.delete_subcategory(session, id)
+    deleted_item = await subcategory_crud.delete_subcategory(id, session)
     if not deleted_item:
         raise HTTPException(status_code=404, detail="Subcategory not deleted")
     return deleted_item

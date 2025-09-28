@@ -25,12 +25,9 @@ async def find_subcategories_in_categorybox(
     subcategory_question_repository = SubcategoryQuestionRepository(db)
 
     if searchSubcategoryWord:
-        results = subcategory_repository.find_by_name_starts_with(searchSubcategoryWord)
-        print('それどうか')
+        result = subcategory_repository.find_by_name_starts_with(searchSubcategoryWord)
 
     elif searchQuestionWord and len(searchQuestionWord) >= 3:
-        # query2 = select(Question.id).where(Question.problem.istartswith(searchQuestionWord))
-        # question_ids = db.execute(query2).scalars().all()
 
         question_repository = QuestionRepository(db)
         questions = await question_repository.find_ids_by_problem_starts_with(searchQuestionWord)
@@ -114,17 +111,16 @@ async def create_subcategory(
     subcategory_repository = SubcategoryRepository(session)
     return await subcategory_repository.create(SubcategoryCreate(name=subcategory_create.name, category_id=subcategory_create.category_id))
     
-
+# リポジトリパターンに置換済み
 async def delete_subcategory(
-    db: AsyncSession, 
-    id: int
+    id: int,
+    session=SessionDependency
 ) -> Optional[SubcategoryResponse]:
-    subcategory_repository = SubcategoryRepository(db)
-    question_repository = QuestionRepository(db)
-    
-    questions = await question_cruds.find_all_questions_in_subcategory(db, id)
+    subcategory_repository = SubcategoryRepository(session)
+
+    questions = await question_cruds.find_all_questions_in_subcategory(id, session)
     
     for question in questions:
-        await question_cruds.delete_question(db, question.id)
+        await question_cruds.delete_question(question.id, session)
 
     return await subcategory_repository.delete(id)
