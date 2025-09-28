@@ -27,13 +27,32 @@ class TestQuestionRepository(BasicDaoTest):
             answer_count=5
         )
         
-        @pytest.mark.asyncio
-        async def test_find_by_problem_starts_with(self, dao: QuestionRepository, create_dto: QuestionCreate):
-            obj = await dao.create(create_dto)
-            
-            actual = await dao.find_by_problem_starts_with("What is Pyt")
+    @pytest.mark.asyncio
+    async def test_find_by_problem_starts_with(self, dao: QuestionRepository, create_dto: QuestionCreate):
+        obj = await dao.create(create_dto)
+        
+        actual = await dao.find_by_problem_starts_with("What is Pyt")
 
-            assert actual
-            self.assert_objs(actual, [obj])
+        assert actual
+        self.assert_objs_for_list(actual, [obj])
+
+    @pytest.mark.asyncio
+    async def test_find_by_problem_contains(self, dao: QuestionRepository, create_dto: QuestionCreate):
+        obj = await dao.create(create_dto)
+        
+        actual = await dao.find_by_problem_contains("hon")
+
+        assert actual
+        self.assert_objs_for_list(actual, [obj])
+        
+    @pytest.mark.asyncio
+    async def test_find_by_answer_contains(self, dao: QuestionRepository, create_dto: QuestionCreate):
+        obj = await dao.create(create_dto)
+        
+        actual = await dao.find_by_answer_contains("programming")
+
+        assert actual
+        self.assert_objs_for_list(actual, [obj])
+    
         
     

@@ -20,7 +20,7 @@ class BasicDaoTest:
             map(frozenset, map(dict.items, [x.model_dump() for x in expected]))
         )
         
-    def assert_objs_for_array(self, actual: list[BaseReadDTO], expected: list[BaseReadDTO]):
+    def assert_objs_for_list(self, actual: list[BaseReadDTO], expected: list[BaseReadDTO]):
         assert len(actual) == len(expected)
         norm = lambda x: json.dumps(x.model_dump(), sort_keys=True, default=str)
         assert {norm(x) for x in actual} == {norm(x) for x in expected}
@@ -90,7 +90,7 @@ class BasicDaoTest:
             self.assert_objs(result, [obj_1, obj_2, obj_3])
 
         else:
-            self.assert_objs_for_array(result, [obj_1, obj_2, obj_3])
+            self.assert_objs_for_list(result, [obj_1, obj_2, obj_3])
 
     @pytest.mark.asyncio
     async def test_get_all_without_data(self, dao: BasicDao):
@@ -124,7 +124,7 @@ class BasicDaoTest:
             self.assert_objs(actual, [obj_1, obj_2])
 
         else:
-            self.assert_objs_for_array(actual, [obj_1, obj_2])
+            self.assert_objs_for_list(actual, [obj_1, obj_2])
     @pytest.mark.asyncio
     async def test_update(self, dao: BasicDao, create_dto: BaseCreateDTO, update_dto: BaseUpdateDTO):
         created = await dao.create(create_dto)
