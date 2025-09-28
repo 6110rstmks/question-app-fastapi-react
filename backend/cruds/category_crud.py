@@ -1,11 +1,8 @@
-from sqlalchemy import select, func
 from schemas.category import CategoryCreateSchema
-from models import Category, CategoryQuestion, Question
 from config import PAGE_SIZE
 from fastapi import HTTPException
-from typing import Optional
 
-from src.repository.category_repository import CategoryRepository, CategoryCreate
+from src.repository.category_repository import CategoryRepository, CategoryCreate, CategoryRead
 from src.repository.subcategory_repository import SubcategoryRepository
 from src.repository.question_repository import QuestionRepository
 from src.repository.category_question_repository import CategoryQuestionRepository
@@ -15,7 +12,7 @@ from database import SessionDependency
 
 
 # リポジトリパターンに置換済み
-async def find_all_categories(session=SessionDependency)-> list[Category]:
+async def find_all_categories(session=SessionDependency)-> list[CategoryRead] | None:
     category_repository = CategoryRepository(session)
     return await category_repository.get_all()
 
@@ -29,7 +26,7 @@ async def find_all(
     question_word: str = None, 
     answer_word: str = None,
     session=SessionDependency
-) -> list[Category]:
+) -> list[CategoryRead] | None:
 
     # カテゴリテーブルがそんざいするかどうかの確認。
     # テーブルの存在確認を行う理由はデフォルトでは。
@@ -43,19 +40,13 @@ async def find_all(
     if not await category_repository.get_all():
         return None  
     
-    
     # Category欄で検索した場合
     if category_word:
-
         data = await category_repository.find_by_name_contains(category_word)
-        print('たんま')
-        print(data)
-        print('えなう')
 
     # Subcategory欄で検索した場合
     # 検索した名前のサブカテゴリを持つCategoriesを返す。
     elif subcategory_word:
-        # query2 = select(Subcategory.category_id).where(Subcategory.name.istartswith(f"%{subcategory_word}%"))
         subcategory_data = await subcategory_repository.find_by_name_contains(subcategory_word)
         category_ids = [item.category_id for item in subcategory_data]
 
@@ -91,7 +82,7 @@ async def find_all(
 async def find_category_by_id(
     id: int,
     session=SessionDependency
-) -> Optional["Category"]:
+) -> list[CategoryRead] | None:
     category_repository = CategoryRepository(session)
     return await category_repository.get(id)
 
@@ -100,7 +91,7 @@ async def find_category_by_id(
 async def find_category_by_name(
     search_word: str,
     session=SessionDependency
-) -> list[Category]:
+) -> list[CategoryRead] | None:
     category_repository = CategoryRepository(session)
     return await category_repository.find_by_name_contains(search_word)
 
@@ -109,7 +100,7 @@ async def find_category_by_name(
 async def create_category(
     category_create: CategoryCreateSchema,
     session=SessionDependency
-) -> Category:
+) -> CategoryRead:
     category_repository = CategoryRepository(session)
     check_bool =  await category_repository.check_name_exists(category_create.name)
 
