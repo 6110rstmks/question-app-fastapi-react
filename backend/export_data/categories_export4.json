@@ -6488,11 +6488,11 @@
                         {
                             "problem": "菌類において、菌糸が集まって胞子を作る構造を何という",
                             "answer": [
-                                "子実体"
+                                "子実体Sporocarp"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "鞭毛をもつ胞子を作る菌類はなにか？",
@@ -7127,7 +7127,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-29"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "遺伝子組み変えにおいて、遺伝子を切断する酵素を何という？",
@@ -8407,7 +8407,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "インターロイキンの異常な分泌が関与するとされる疾患はどれですか？",
@@ -9382,6 +9382,24 @@
                             "last_answered_date": "2025-09-28"
                         },
                         {
+                            "problem": "一般的に 金利が上がると株価はどうなる",
+                            "answer": [
+                                "下がる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
+                        },
+                        {
+                            "problem": "好景気の時は金利をどうするか",
+                            "answer": [
+                                "金利を上げる"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
+                        },
+                        {
                             "problem": "国債と株式ではどちらがハイリスクハイリターンか",
                             "answer": [
                                 "株式の方がハイリスクハイリターン"
@@ -9461,12 +9479,21 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "投資家がリスクを避け、安全資産に資金を移す投資行動や市場心理を指す言葉",
                             "answer": [
                                 "リスクオフ"
+                            ],
+                            "memo": "",
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
+                        },
+                        {
+                            "problem": "1%のデフレ経済において、手取りの給料が500万円から499万円に下がったとする。このとき実質の給料は増えており購買力は上昇しているにもかかわらず、名目の給料が減っていることを見て支出を減らそうとするようなケースを経済学用語でなんという",
+                            "answer": [
+                                "貨幣錯覚"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -9480,15 +9507,6 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-27"
-                        },
-                        {
-                            "problem": "失業率とインフレーション率（物価上昇率）の間に経験的な関係があるとした理論は",
-                            "answer": [
-                                "フィリップス曲線"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
                         },
                         {
                             "problem": "デフレーションの一般人観点のプラスの側面は2",
@@ -9549,7 +9567,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "What is the agreement announced by G7 to stop too much weak dollar called? ",
@@ -9558,7 +9576,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-15"
+                            "last_answered_date": "2025-09-29"
                         }
                     ]
                 },
@@ -9614,6 +9632,35 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-28"
+                        },
+                        {
+                            "problem": "失業率とインフレーション率（物価上昇率）の間に経験的な関係があるとした理論は",
+                            "answer": [
+                                "フィリップス曲線"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-11"
+                        },
+                        {
+                            "problem": "フィリップス曲線は通常、右肩上がりか、右下下がりか。\n縦軸が物価上昇率、横軸が失業率",
+                            "answer": [
+                                "右下下がり"
+                            ],
+                            "memo": "物価上昇率が高まると失業率は低下",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
+                        },
+                        {
+                            "problem": "失業の種類",
+                            "answer": [
+                                "自発的失業",
+                                "摩擦的失業",
+                                "構造的失業"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         }
                     ]
                 },
@@ -9670,7 +9717,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-29"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "イールドカーブは通常右肩上がりか、それとも右下下がりか",
@@ -9697,7 +9744,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "イールドカーブ・コントロール 日本語ではなんと呼ばれる",
@@ -9712,6 +9759,29 @@
                             "problem": "イールドカーブが右肩上がりになることをなんという",
                             "answer": [
                                 "順イールド"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
+                        }
+                    ]
+                },
+                {
+                    "name": "financial planning",
+                    "questions": [
+                        {
+                            "problem": "ライフイベント表の情報と現在の収支状況をもとに、将来の収支状況と貯蓄残高の推移をまとめた表をなんという",
+                            "answer": [
+                                "キャッシュフロー表"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
+                        },
+                        {
+                            "problem": "今手元にある元本が、一定期間の複利運用の結果、元利合計いくらになるかを計算するための係数をなんという",
+                            "answer": [
+                                "終価係数"
                             ],
                             "memo": "",
                             "is_correct": 0,
@@ -12972,8 +13042,8 @@
                                 "純金"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "fine adjacetment",
@@ -13261,8 +13331,8 @@
                                 "lit"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "it, oneの違いを理解するための合言葉",
@@ -15153,7 +15223,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "Dependency injectionとは\nクラス内で別クラスを利用するときにクラス内で直接newせず、外部から（A）で渡してあげて利用する",
@@ -16919,8 +16989,8 @@
                                 "ヤハウェ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-05-26"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "タイの8割の民族は何の宗教を信仰しているか",
@@ -16928,8 +16998,8 @@
                                 "仏教"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-13"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "仏教には上座仏教と大乗仏教がある。戒律がしっかりしている仏教はどちらか。",
@@ -16973,8 +17043,8 @@
                                 "イスラム教"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-11"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "インドの国民の80%は何教を信仰している",
@@ -16991,8 +17061,8 @@
                                 "チベット仏教（ラマ教）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-14"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ヨーロッパの宗教の分布をヨーロッパの北側、南西側、東側で答えて",
@@ -21641,7 +21711,7 @@
                                 "炎症後色素沈着（PIH）が出る可能性"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-29"
                         },
                         {
@@ -23640,6 +23710,15 @@
                             "last_answered_date": "2025-09-28"
                         },
                         {
+                            "problem": "dockerのマルチステージビルドはなんのために行うのか",
+                            "answer": [
+                                "イメージサイズの削減"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
+                        },
+                        {
                             "problem": "DOCKERFILEのマルチステージビルド",
                             "answer": [
                                 ""
@@ -23647,15 +23726,6 @@
                             "memo": "",
                             "is_correct": 1,
                             "last_answered_date": "2025-08-27"
-                        },
-                        {
-                            "problem": "Dockerfileの命令であるRUN and ENTRYPOINT違い",
-                            "answer": [
-                                "ENTRYPOINT：コンテナ起動時に実行されるデフォルトコマンドを定義する。\nRUN：イメージ作成時に一度だけコマンドを実行し、結果をイメージに保存する。"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-08-30"
                         },
                         {
                             "problem": "Dockerfile 内での作業ディレクトリを指定する命令は",
@@ -23754,8 +23824,8 @@
                                 "set"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "os.pathとの代替機能ライブラリ",
@@ -24509,11 +24579,11 @@
                         {
                             "problem": "インドで成立した祭式至上主義の宗教",
                             "answer": [
-                                "バラモン教"
+                                "バラモン教Brahmanism"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ロゼッタストーンに刻まれた神聖文字の解読に成功したフランスのエジプト学者は誰か",
@@ -24545,11 +24615,11 @@
                         {
                             "problem": "誰が「出エジプト」を行なったか",
                             "answer": [
-                                "モーセ"
+                                "モーセMoses"
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-07-31"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "仏の第一帝政の成立に対抗するため、英のピットが提唱して結成された同盟は何か。",
@@ -24679,8 +24749,8 @@
                                 "とっけつ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-25"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "紀元前18世紀にアナトリアを支配し、 世界最古の鉄製武器と戦車によって、 バビロン第1王朝を滅ぼした民族を何というか。",
@@ -24752,7 +24822,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ユダ王国が新バビロニアに征服されて、住民の多くがバビロンに連れ去られた出来事を何というか。",
@@ -24797,7 +24867,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-02"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ペルシア人の民族宗教は",
@@ -25291,8 +25361,8 @@
                                 "黄巾の乱（こうきんのらん"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-09"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "班固の弟で紀元前1世紀にカスピ海以東、50余りの国を服属させた人物は誰か。",
@@ -25337,8 +25407,8 @@
                                 "神権政治"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-08-14"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "中国における伝説上の最初の王朝をなんというか",
@@ -25559,7 +25629,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-02"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "前14世紀にアマルナ美術はどこの国で栄えたか",
@@ -25644,8 +25714,8 @@
                                 "プロタゴラス"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-23"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "コリントス同盟はほとんどのギリシア諸ポリスは参加したがある国は不参加。どこの国",
@@ -25940,11 +26010,11 @@
                         {
                             "problem": "前337年に結成された、スパルタを除くギリシア諸ポリスの同盟を何と言うか。 ",
                             "answer": [
-                                "コリントス同盟"
+                                "コリントス同盟League of Corinth"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-21"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "スパルタに軍国主義的な政治・軍事体制をもたらした伝説的な指導者は誰か",
@@ -25975,7 +26045,7 @@
                                 "王の目・王の耳"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-29"
                         },
                         {
@@ -26020,8 +26090,8 @@
                                 "メンフィス"
                             ],
                             "memo": "エジプト中王国の首都はテーベ\n",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ササン朝ペルシア最盛期の王で、突厥と同盟を組んでエフタルを滅ぼした人物は誰か",
@@ -26134,7 +26204,7 @@
                             ],
                             "memo": "",
                             "is_correct": 2,
-                            "last_answered_date": "2025-07-20"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "「太陽（教皇）と月（皇帝）」という比喩を用い、教皇が皇帝を凌駕する権威を持つことを強調した人物は",
@@ -26184,11 +26254,11 @@
                         {
                             "problem": "ルイ14世の異称は",
                             "answer": [
-                                "太陽王"
+                                "太陽王Sun King"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "南ネーデルラント継承戦争はどことどこの国の戦争か",
@@ -26482,7 +26552,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-29"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "第二回ポエニ戦争のカンネーの戦いでローマ軍を破ったカルタゴの将軍は",
@@ -26518,7 +26588,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-09-29"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ローマ共和政初期の最高機関",
@@ -26555,6 +26625,15 @@
                             "memo": "",
                             "is_correct": 0,
                             "last_answered_date": "2025-09-19"
+                        },
+                        {
+                            "problem": "貴族に対する平民の闘争のなか、前5世紀半ばに旧来の慣習法を明文化し、公開したローマ最古の成文法は何か",
+                            "answer": [
+                                "十二表法"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
@@ -26577,7 +26656,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "最初のタイ人の王朝は",
@@ -26627,7 +26706,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ウマイヤ朝が滅亡した一番大きな原因は",
@@ -26664,7 +26743,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "インドのアーリヤ社会で生まれ、バラモン教の祭司バラモンを最上位に置き、クシャトリア（武士・貴族）・バイシャ（農耕民）を支配者層、その下のシュードラ（従属民）からなる４種姓を基本とした種姓制度は",
