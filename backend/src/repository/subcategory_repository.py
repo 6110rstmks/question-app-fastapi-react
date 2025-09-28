@@ -1,6 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import mapped_column
 from sqlalchemy import select, String, TIMESTAMP, Column, Integer
+from pydantic import ConfigDict
 
 from src.repository.base.LogicalDeleteDao import IdSchema, BaseCreateDTO, BaseUpdateDTO, BaseReadDTO, BasicDao
 from src.util.datetime_helper import get_now
@@ -30,6 +31,7 @@ class SubcategoryRead(BaseReadDTO):
     category_id: int
     question_count: int | None = None
 
+    model_config = ConfigDict(from_attributes=True)
 
 
 class SubcategoryRepository(
@@ -76,11 +78,17 @@ class SubcategoryRepository(
         :param name_pattern: 名前の検索パターン
         :return: 該当するSubcategoryのリスト
         """
-        query = select(self.model).where(self.model.category_id == category_id).where(self.model.name.like(name_pattern))
-        print(query)
-        print(await self.db.execute(query))
-        return await self.db.execute(query)
+        query = (
+            select(self.model)
+            .where(self.model.category_id == category_id)
+            .where(self.model.name.like(name_pattern))
+        )
+        result = await self.db.execute(query)
+        entities = result.scalars().all()
+        return [SubcategoryRead.model_validate(entity) for entity in entities]
 
     async def find_by_category_id_and_ids(self, category_id: int, ids: list[int]) -> list[SubcategoryRead] | None:
         query = select(self.model).where(self.model.category_id == category_id).where(self.model.id.in_(ids))
-        return await self.db.execute(query)
+        result = await self.db.execute(query)
+        entities = result.scalars().all()
+        return [SubcategoryRead.model_validate(entity) for entity in entities]
