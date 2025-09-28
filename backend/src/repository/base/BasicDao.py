@@ -153,15 +153,8 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
                 if col is not None:
                     stmt = stmt.order_by(desc(col) if direction == "desc" else asc(col))
                     
-        print('うみ')
-        print(like_fields)
-        print('そら')
         if like_fields:
             for field_name, pattern in like_fields.items():
-                print(pattern)
-                print('あんぽん')
-                print(field_name)
-                print('やま')
                 column = getattr(self.model, field_name, None)
                 if column is not None:
                     stmt = stmt.where(column.ilike(pattern))

@@ -51,10 +51,10 @@ async def find_all(
 # ChangeCategorySubcategoryModalで使用するAPI
 @router.get("/search", response_model=Optional[list[CategoryResponseSchema]], status_code=status.HTTP_200_OK)
 async def find_category_by_name(
-    db: AsyncDbDependency,
-    search_word: str
+    search_word: str,
+    session=SessionDependency,
 ):
-    return await category_cruds.find_category_by_name(db, search_word)
+    return await category_cruds.find_category_by_name(search_word, session)
 
 
 
