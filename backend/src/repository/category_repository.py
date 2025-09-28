@@ -3,6 +3,7 @@ from sqlalchemy.orm import mapped_column
 from sqlalchemy import String, Integer
 from sqlalchemy import select, func
 from models import Category
+from pydantic import ConfigDict
 
 from src.repository.base.LogicalDeleteDao import IdSchema, BaseCreateDTO, BaseUpdateDTO, BaseReadDTO, BasicDao
 
@@ -28,6 +29,8 @@ class CategoryRead(BaseReadDTO):
     name: str
     user_id: int
     
+    model_config = ConfigDict(from_attributes=True)
+
 
 class CategoryRepository(
     BasicDao[CategorySchema, CategoryCreate, CategoryUpdate, CategoryRead]
