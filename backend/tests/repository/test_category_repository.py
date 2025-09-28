@@ -28,6 +28,15 @@ class TestCategoryRepository(BasicDaoTest):
         assert actual
         self.assert_objs(actual, [obj])
         
+    @pytest.mark.asyncio
+    async def test_find_by_name_starts_with(self, dao: CategoryRepository, create_dto: CategoryCreate):
+        obj = await dao.create(create_dto)
+        
+        actual = await dao.find_by_name_starts_with("cat")
+
+        assert actual
+        self.assert_objs(actual, [obj])
+        
     
     @pytest.mark.asyncio
     async def test_check_name_exists(self, dao: CategoryRepository, create_dto: CategoryCreate):

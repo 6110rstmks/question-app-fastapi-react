@@ -30,22 +30,22 @@ router = APIRouter(prefix="/categories", tags=["Categories"])
     status_code=status.HTTP_200_OK
 )
 async def find_all(
-    db: DbDependency,
     limit: int = PAGE_SIZE,
     skip: int = Query(0, ge=0),
     categoryWord: str = None,
     subcategoryWord: str = None,
     questionWord: str = None,
-    answerWord: str = None
+    answerWord: str = None,
+    session=SessionDependency,
 ):
-    return category_cruds.find_all(
-        db, 
+    return await category_cruds.find_all(
         skip=skip, 
         limit=limit, 
         category_word=categoryWord, 
         subcategory_word=subcategoryWord, 
         question_word=questionWord, 
-        answer_word=answerWord
+        answer_word=answerWord,
+        session=session
     )
 
 # ChangeCategorySubcategoryModalで使用するAPI
@@ -73,9 +73,9 @@ async def find_all(
 
 @router.get("/all_categories", response_model=list[CategoryResponseSchema], status_code=status.HTTP_200_OK)
 async def find_all_categories(
-    db: AsyncDbDependency
+    session=SessionDependency,
 ):
-    return (await category_cruds.find_all_categories(db))
+    return (await category_cruds.find_all_categories(session))
 
 
 @router.get("/category_id/{id}", response_model=CategoryResponseSchema, status_code=status.HTTP_200_OK)

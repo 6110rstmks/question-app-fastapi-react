@@ -17,6 +17,7 @@ export const HomePage: React.FC = () => {
     useEffect(()  => {
         (async () => {
             const response = await checkAuth()
+            console.log(response)
             if (response.ok) {
                 setIsAuth(true);
             }

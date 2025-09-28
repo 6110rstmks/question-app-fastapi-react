@@ -43,6 +43,14 @@ class CategoryRepository(
         """
         return await self._find_by_fields(like_fields={"name": f"%{keyword}%"})
 
+    async def find_by_name_starts_with(self, prefix: str) -> list[CategoryRead]:
+        """
+        名前が指定された接頭辞で始まるレコードを検索します。
+        
+        :param prefix: 検索接頭辞
+        """
+        return await self._find_by_fields(like_fields={"name": f"{prefix}%"})
+
     async def check_name_exists(self, name: str) -> bool:
         """
         指定された名前のレコードが存在するかどうかを確認します。

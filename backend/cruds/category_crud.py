@@ -1,11 +1,16 @@
-from sqlalchemy.orm import Session
 from sqlalchemy import select, func
 from schemas.category import CategoryCreateSchema
-from models import Category, CategoryQuestion, Subcategory, Question
+from models import Category, CategoryQuestion, Question
 from config import PAGE_SIZE
 from fastapi import HTTPException
 from typing import Optional
+
 from src.repository.category_repository import CategoryRepository, CategoryCreate
+from src.repository.subcategory_repository import SubcategoryRepository
+from src.repository.question_repository import QuestionRepository
+from src.repository.category_question_repository import CategoryQuestionRepository
+
+
 from database import SessionDependency
 
 
@@ -16,68 +21,71 @@ async def find_all_categories(session=SessionDependency)-> list[Category]:
 
 # リポジトリパターンにこれから移管
 # まずはapiテストコードを書いてから移管する。
-def find_all(
-    db: Session, 
+async def find_all(
     limit: int, 
     skip: int = 0,  
     category_word: str = None, 
     subcategory_word: str = None, 
     question_word: str = None, 
-    answer_word: str = None
+    answer_word: str = None,
+    session=SessionDependency
 ) -> list[Category]:
 
     # カテゴリテーブルがそんざいするかどうかの確認。
     # テーブルの存在確認を行う理由はデフォルトでは。
-    if not db.query(Category).first():
+
+    category_repository = CategoryRepository(session)
+    subcategory_repository = SubcategoryRepository(session)
+    question_repository = QuestionRepository(session)
+    category_question_repository = CategoryQuestionRepository(session)
+
+    data = []
+    if not await category_repository.get_all():
         return None  
     
-    query_stmt = select(Category)
     
     # Category欄で検索した場合
     if category_word:
-        query_stmt = (
-            query_stmt
-            .where(Category.name.istartswith(f"%{category_word}%"))
-        )
+
+        data = await category_repository.find_by_name_contains(category_word)
+        print('たんま')
+        print(data)
+        print('えなう')
 
     # Subcategory欄で検索した場合
     # 検索した名前のサブカテゴリを持つCategoriesを返す。
-    if subcategory_word:
-        query2 = select(Subcategory.category_id).where(Subcategory.name.istartswith(f"%{subcategory_word}%"))
-        category_ids = db.execute(query2).scalars().all()
-        query_stmt = query_stmt.where(Category.id.in_(category_ids))
+    elif subcategory_word:
+        # query2 = select(Subcategory.category_id).where(Subcategory.name.istartswith(f"%{subcategory_word}%"))
+        subcategory_data = await subcategory_repository.find_by_name_contains(subcategory_word)
+        category_ids = [item.category_id for item in subcategory_data]
+
+        data = await category_repository.find_by_ids(category_ids)
 
     
     # Question欄で検索した場合
     # そのQuestionを持つSubcategoryを取得するしてCategoriesで返す。
-    if question_word:
-        # query3 = select(Subcategory.category_id).where(Subcategory.questions.any(SubcategoryQuestion.question.has(SubcategoryQuestion.question.problem.istartswith(f"%{question_word}%"))))
-        # category_ids = db.execute(query3).scalars().all()
+    elif question_word:
         
-        query2 = select(Question.id).where(Question.problem.istartswith(f"%{question_word}%"))
-        question_ids = db.execute(query2).scalars().all()
-        
-        
-        query3 = (
-            select(CategoryQuestion.category_id)
-            .where(CategoryQuestion.question_id.in_(question_ids))
-        )
-        category_ids = db.execute(query3).scalars().all()
-        
-        query_stmt = query_stmt.where(Category.id.in_(category_ids))  
-    
-    if answer_word:
-        query2 = select(Question.id).where(
-            func.array_to_string(Question.answer, ',').ilike(f"%{answer_word}%")
-        )
-        question_ids = db.execute(query2).scalars().all()
-        query3 = select(CategoryQuestion.category_id).where(CategoryQuestion.question_id.in_(question_ids))
-        category_ids = db.execute(query3).scalars().all()      
-        query_stmt = query_stmt.where(Category.id.in_(category_ids))
+        question_data = await question_repository.find_by_problem_contains(question_word)
+        question_ids = [item.id for item in question_data]
+        categories_questions = await category_question_repository.find_by_question_ids(question_ids)
+        category_ids = [item.category_id for item in categories_questions]
+        data = await category_repository.find_by_ids(category_ids)
 
+    elif answer_word:
+        question_data = await question_repository.find_by_answer_contains(answer_word)
+        question_ids = [item.id for item in question_data]
+        category_ids = await category_question_repository.find_by_question_ids(question_ids)
+        category_ids = [item.category_id for item in category_ids]
+        data = await category_repository.find_by_ids(category_ids)
+
+    else:
+        data = await category_repository.get_all()
     # 結果を取得してスキップとリミットを適用
-    result = db.execute(query_stmt).scalars().all()
-    return result[skip: skip + limit]
+    # result = db.execute(query_stmt).scalars().all()
+    print(data)
+    print('うあさ')
+    return data[skip: skip + limit]
 
 # リポジトリパターンに置換済み
 async def find_category_by_id(

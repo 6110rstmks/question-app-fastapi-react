@@ -34,6 +34,9 @@ class CategoryQuestionRepository(
 
     async def find_by_question_id(self, question_id: int) -> list[CategoryQuestionRead] | None:
         return await self._find_by_fields(question_id=question_id)
+    
+    async def find_by_question_ids(self, question_ids: list[int]) -> list[CategoryQuestionRead] | None:
+        return await self._find_by_fields(question_id=question_ids)
 
     async def find_by_category_id(self, category_id: int) -> list[CategoryQuestionRead] | None:
         return await self._find_by_fields(category_id=category_id)
