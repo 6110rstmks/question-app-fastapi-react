@@ -16649,8 +16649,8 @@
                                 "マカライボ湖"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-06"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "楯状地の例2 覚えておくべきやつ",
@@ -17002,8 +17002,8 @@
                                 ""
                             ],
                             "memo": "https://oke-files.s3.amazonaws.com/uploads/qMtw0JquiE9sl/a64389c45c9b44349086926c289c6566.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "フィリピンのミンダナオ島はどこか",
@@ -17494,7 +17494,7 @@
                             ],
                             "memo": "https://social-studies-magazine.com/wp-content/uploads/2023/04/34b2c3a26d23f1f2a023575abdd8fd02-1536x1154.jpg",
                             "is_correct": 1,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ニュージーランドおよび日付変更線以東なのはポリネシア、ミクロネシア？",
@@ -18365,11 +18365,11 @@
                         {
                             "problem": "イタビラ鉄山はどこの国か",
                             "answer": [
-                                "ブラジル"
+                                "Brazil"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "パキスタンの人口は？",
@@ -18807,8 +18807,8 @@
                                 "アムステルダムAmsterdam\n"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-09"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "人間の非常住地域を何という？",
@@ -20193,7 +20193,7 @@
                             ],
                             "memo": "春小麦が北側で冬小麦が南側なのは、春小麦が寒冷な地域で栽培されるものだから。",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "アメリカにおいてアジア系の人種が多いのはどこらへんか",
@@ -20333,8 +20333,8 @@
                                 "ターチン油田"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-06"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "中国のモンゴル族は何の宗教を信仰する人が多いか",
@@ -20410,8 +20410,8 @@
                                 "外来河川"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "ペルーにある標高の高い山脈は？",
@@ -22667,8 +22667,8 @@
                                 "Azure Cosmos DB"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "Azure AI Search のインデクサーとは",
@@ -22697,7 +22697,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-12"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "AI Searchに対しての接続方法2",
@@ -22707,7 +22707,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "Azure AI Searchのインデックスの役割",
@@ -22716,7 +22716,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-14"
+                            "last_answered_date": "2025-09-28"
                         },
                         {
                             "problem": "AI Searchにおいてインデクサーの拡張機能で、画像などのテキスト情報を持たないデータを検索可能な構造に変換するものをなんという",
@@ -22725,7 +22725,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-28"
                         }
                     ]
                 },
