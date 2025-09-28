@@ -17,7 +17,7 @@ from database import SessionDependency
 async def find_all_questions(
     search_word: str = None,
     session=SessionDependency,
-) -> list[QuestionResponse]:
+) -> list[QuestionRead]:
     result = []
 
     question_repository = QuestionRepository(session)
@@ -30,11 +30,11 @@ async def find_all_questions(
 
     return result
 
-
+# リポジトリパターンに置換済み
 async def find_all_questions_in_subcategory(
     subcategory_id: int,
     session=SessionDependency,
-) -> list[Question]:
+) -> list[QuestionRead]:
     subcategory_question_repository = SubcategoryQuestionRepository(session)
     question_repository = QuestionRepository(session)
 
@@ -293,9 +293,9 @@ async def update_last_answered_date(
 async def increment_answer_count(
     question_id: int,
     session=SessionDependency
-) -> QuestionResponse:
+) -> Optional[QuestionRead]:
     question_repository = QuestionRepository(session)
-    return  await question_repository.update(
+    return await question_repository.update(
         question_id,
         QuestionUpdate(answer_count=1)
     )

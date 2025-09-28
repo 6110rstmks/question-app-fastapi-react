@@ -1,6 +1,6 @@
 from collections import defaultdict
 from datetime import datetime
-from typing import Any, Callable, Generic, Iterable, List, Literal, Optional, Type, TypeVar
+from typing import Any, Callable, Generic, Iterable, Literal, Optional, Type, TypeVar
 
 from pydantic import BaseModel
 from sqlalchemy import TIMESTAMP, asc, delete, desc, insert, Integer, update
@@ -106,7 +106,7 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
             return None
         return self.read_schema.from_entity(db_obj)
 
-    async def get_all(self) -> List[ReadSchemaType]:
+    async def get_all(self) -> list[ReadSchemaType]:
         """
         全件のレコードを取得します。
 

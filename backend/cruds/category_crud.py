@@ -7,17 +7,14 @@ from src.repository.subcategory_repository import SubcategoryRepository
 from src.repository.question_repository import QuestionRepository
 from src.repository.category_question_repository import CategoryQuestionRepository
 
-
 from database import SessionDependency
-
 
 # リポジトリパターンに置換済み
 async def find_all_categories(session=SessionDependency)-> list[CategoryRead] | None:
     category_repository = CategoryRepository(session)
     return await category_repository.get_all()
 
-# リポジトリパターンにこれから移管
-# まずはapiテストコードを書いてから移管する。
+# リポジトリパターンに置換済み
 async def find_all(
     limit: int, 
     skip: int = 0,  
