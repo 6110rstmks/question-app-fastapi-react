@@ -2,7 +2,8 @@ import { useState, useEffect, useCallback } from "react"
 import type { Question } from "../../../types/Question"
 import { 
     incrementAnswerCount,
-    updateLastAnsweredDate 
+    updateLastAnsweredDate,
+    updateSkipUntil
 } from "../../../api/QuestionAPI"
 
 export const useProblemPage = (
@@ -53,14 +54,14 @@ export const useProblemPage = (
         setShowAnswer(false)
         incrementAnswerCount(problemData[currentProblemIndex].id)
         updateLastAnsweredDate(problemData[currentProblemIndex].id)
-    };
+    }
 
     // 通常モードにおいて「解けなかった」ボタンを押すと未解決の問題リストに追加され、次の問題に進む。
     const handleAnswerUnsolved = () => {
         setUnsolvedProblems((prev) => [...prev, problemData[currentProblemIndex]])
         setCurrentProblemIndex((prev) => prev + 1)
         setShowAnswer(false)
-    };
+    }
 
     // レビューモードで「解けた」ボタンを押すと次の問題に進む。
     const handleAnswerSolvedReview = () => {
@@ -70,14 +71,14 @@ export const useProblemPage = (
 
         incrementAnswerCount(problemData[currentProblemIndex].id)
         updateLastAnsweredDate(problemData[currentProblemIndex].id)
-    };
+    }
 
     // 再出題用の関数
     const handleAnswerUnsolvedReview = () => {
         setCurrentReviewProblemIndex((prev) => prev + 1)
         setCurrentReviewProblemIndex2((prev) => prev + 1)
         setShowAnswer(false)
-    };
+    }
 
     // ProblemCompleteにおいて「解けなかった問題を再度復習する」ボタンを押すと
     // 問題のレビューモードに移行する。
@@ -88,7 +89,14 @@ export const useProblemPage = (
         setCurrentReviewProblemIndex2(0)
         setShowAnswer(false);
         setTotalReviewProblemIndex(unsolvedProblems.length)
-    };
+    }
+
+    const handleUpdateSkipUntil = async (question: Question) => {
+        await updateSkipUntil(question.id)
+        setCurrentProblemIndex((prev) => prev + 1)
+        setShowAnswer(false)
+        incrementAnswerCount(problemData[currentProblemIndex].id)
+    }
 
     // サイト内ショートカットキーの設定
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -148,5 +156,6 @@ export const useProblemPage = (
         handleAnswerSolvedReview,
         handleAnswerUnsolvedReview,
         handleNavigateToProblemReviewPage,
+        handleUpdateSkipUntil
     }
 }

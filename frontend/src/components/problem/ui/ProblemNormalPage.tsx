@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
 
+import type { Category } from "../../../types/Category"
 import type { Subcategory, SubcategoryWithCategoryName } from "../../../types/Subcategory"
 import type { Question } from "../../../types/Question"
+
 import { fetchCategory } from "../../../api/CategoryAPI"
 import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI"
+
 import { BlockMath } from "react-katex"
 import Modal from 'react-modal'
+
 import QuestionEditModal from "../../question/QuestionEditModal"
 import ChangeCategorySubcategory from "../../ChangeCategorySubcategoryModal"
+
 import RenderMemoWithLinks from '../../RenderMemoWithLinks'
 import { SolutionStatus } from "../../../types/SolutionStatus"
-import { isLatex } from "../../../utils/function"
-import { handleUpdateIsCorrect } from "../../../utils/function"
+import { isLatex, handleUpdateIsCorrect } from "../../../utils/function"
+
 
 interface Props {
     reviewFlg: boolean
@@ -28,6 +33,7 @@ interface Props {
     setEditModalIsOpen: (isOpen: boolean) => void
     changeSubcategoryModalIsOpen: boolean
     setChangeSubcategoryModalIsOpen: (isOpen: boolean) => void
+    handleUpdateSkipUntil: (question: Question) => void
 }
 
 export const ProblemNormalPage: React.FC<Props> = ({
@@ -44,6 +50,7 @@ export const ProblemNormalPage: React.FC<Props> = ({
     setEditModalIsOpen,
     changeSubcategoryModalIsOpen,
     setChangeSubcategoryModalIsOpen,
+    handleUpdateSkipUntil
 }) => {
 
     // Questionに関連するぱんくずリスト用
@@ -71,7 +78,7 @@ export const ProblemNormalPage: React.FC<Props> = ({
             
             const data2: SubcategoryWithCategoryName[] = await Promise.all(
                 subcategories.map(async (subcategory) => {
-                    const category = await fetchCategory(subcategory.categoryId)
+                    const category: Category = await fetchCategory(subcategory.categoryId)
                     return {
                         id: subcategory.id,
                         name: subcategory.name,
@@ -160,7 +167,7 @@ export const ProblemNormalPage: React.FC<Props> = ({
                         </button>
                         <button
                             className="px-3 py-1 bg-gray-500 text-white rounded text-sm hover:bg-gray-600"
-                            onClick={() => setChangeSubcategoryModalIsOpen(true)}
+                            onClick={() => handleUpdateSkipUntil(localProblem)}
                         >
                             本日はもう表示しない
                         </button>

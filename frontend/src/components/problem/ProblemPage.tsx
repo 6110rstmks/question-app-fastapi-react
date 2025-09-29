@@ -31,6 +31,7 @@ const ProblemPage: React.FC = () => {
         handleAnswerSolvedReview,
         handleAnswerUnsolvedReview,
         handleNavigateToProblemReviewPage,
+        handleUpdateSkipUntil
     } = useProblemPage(problemData);
 
     const isNormalFinished = 
@@ -90,6 +91,7 @@ const ProblemPage: React.FC = () => {
                 setEditModalIsOpen={setEditModalIsOpen}
                 changeSubcategoryModalIsOpen={changeSubcategoryModalIsOpen}
                 setChangeSubcategoryModalIsOpen={setChangeSubcategoryModalIsOpen}
+                handleUpdateSkipUntil={handleUpdateSkipUntil}
             />
         </div>
     )

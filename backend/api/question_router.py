@@ -74,6 +74,16 @@ async def update_last_answered_date(
         raise HTTPException(status_code=404, detail="Question not updated")
     return updated_item
 
+@router.put("/update_skip_until/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
+async def update_skip_until(
+    id: int = Path(gt=0),
+    session=SessionDependency,
+):
+    updated_item = await question_crud.update_skip_until(id, session)
+    if not updated_item:
+        raise HTTPException(status_code=404, detail="Question not updated")
+    return updated_item
+
 # Questionのcorrect_flgカラムを更新するエンドポイント
 @router.put("/edit_flg/{id}", response_model=QuestionResponse, status_code=status.HTTP_200_OK)
 async def update_correct_flg(

@@ -1,18 +1,18 @@
-import type { SubcategoryWithQuestionCount } from "../types/Subcategory";
-import type { Question } from "../types/Question";
+import type { SubcategoryWithQuestionCount } from "../types/Subcategory"
+import type { Question } from "../types/Question"
 import { 
     updateQuestionIsCorrect, 
     fetchQuestion, 
     incrementAnswerCount,
     updateLastAnsweredDate
-} from "../api/QuestionAPI";
+} from "../api/QuestionAPI"
 
 export const addSubcategory = (
     setSubcategories: React.Dispatch<React.SetStateAction<SubcategoryWithQuestionCount[]>>,
     subcategory: SubcategoryWithQuestionCount
 ) => {
     setSubcategories((prev) => [...prev, subcategory]);
-};
+}
 
 export const handleKeyDownForShowAnswer = (
     event: KeyboardEvent,

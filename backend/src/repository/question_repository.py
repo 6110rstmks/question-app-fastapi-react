@@ -20,6 +20,7 @@ class QuestionSchema(IdSchema):
     is_correct = mapped_column(Enum(SolutionStatus), default=SolutionStatus.Incorrect)
     answer_count = mapped_column(Integer, default=0)
     last_answered_date = mapped_column(Date, default=func.current_date())
+    skip_until = mapped_column(Date, nullable=True)
 
 
 class QuestionCreate(BaseCreateDTO):
@@ -35,6 +36,7 @@ class QuestionUpdate(BaseUpdateDTO):
     is_correct: SolutionStatus | None = None
     answer_count: int | None = None
     last_answered_date: date | None = None
+    skip_until: date | None = None
 
 class QuestionRead(BaseReadDTO):
     id: int

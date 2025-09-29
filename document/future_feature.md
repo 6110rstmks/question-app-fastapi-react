@@ -6,6 +6,8 @@ jestではなくて、vitestを導入
 
 本日はもう出題しない。機能を実装
 questionsテーブルに列を追加
+カラム名はskip_until
+フラグ管理と比べて余分なリセット処理が不要
 
 tailwindでdarkscale対応→claudeにやらせる。
 

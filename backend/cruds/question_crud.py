@@ -289,6 +289,18 @@ async def update_last_answered_date(
 
     return updated_question
 
+
+async def update_skip_until(
+    question_id: int,
+    session=SessionDependency
+) -> Optional[QuestionRead]:
+    question_repository = QuestionRepository(session)
+    updated_question = await question_repository.update(
+        question_id,
+        QuestionUpdate(skip_until=date.today())
+    )
+    return updated_question
+
 # リポジトリパターンに置換済み
 async def increment_answer_count(
     question_id: int,
@@ -299,3 +311,4 @@ async def increment_answer_count(
         question_id,
         QuestionUpdate(answer_count=1)
     )
+    

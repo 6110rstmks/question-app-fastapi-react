@@ -10,6 +10,7 @@ from fastapi import HTTPException
 from config import SolutionStatus
 from datetime import datetime, timedelta
 from typing import Optional
+from sqlalchemy import or_
 
 def generate_problems(
     db: Session, 
@@ -166,7 +167,14 @@ def _fetch_questions(
     - threshold: filter by last_answered_date if provided
     - blacklist: exclude these question IDs
     """
-    filters = [Question.is_correct == status_enum]
+
+    filters = [
+        Question.is_correct == status_enum,
+        or_(
+            Question.skip_until == None,               # NULL の場合
+            Question.skip_until < datetime.now().date()  # 今日より前
+        )
+    ]
     if question_ids is not None:
         filters.append(Question.id.in_(question_ids))
     if threshold:
@@ -174,6 +182,8 @@ def _fetch_questions(
     if blacklist:
         filters.append(Question.id.notin_(blacklist))
         
+    print(filters)
+    print('がああああ')
     stmt = (
         select(Question)
         .where(*filters)

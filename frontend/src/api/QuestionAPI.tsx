@@ -118,6 +118,19 @@ export const updateLastAnsweredDate = async (
     return response.json()
 }
 
+export const updateSkipUntil = async (
+    question_id: number,
+): Promise<void> => {
+    const url = `http://localhost:8000/questions/update_skip_until/${question_id}`
+    const response = await fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return response.json()
+}
+
 // Questionを削除するAPI
 export const deleteQuestion = async (question_id: number): Promise<void> => {
     const response = await fetch(`http://localhost:8000/questions/${question_id}`, {
