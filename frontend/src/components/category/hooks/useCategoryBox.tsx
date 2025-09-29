@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import type { Subcategory, SubcategoryWithQuestionCount } from "../../../types/Subcategory"
-import { fetchSubcategoriesForHomePage, createSubcategory } from "../../../api/SubcategoryAPI"
-import { fetchQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
+import { fetchSubcategoriesForHomePage, createSubcategory } from "../../../client/SubcategoryAPI"
+import { fetchQuestionCountBySubcategoryId } from '../../../client/QuestionCountAPI'
 
 interface useCategoryBoxProps {
     categoryId: number,

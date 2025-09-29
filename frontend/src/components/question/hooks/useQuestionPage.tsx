@@ -5,14 +5,14 @@ import type { Category } from '../../../types/Category'
 import type { Subcategory, SubcategoryWithCategoryName } from '../../../types/Subcategory'
 import type { Question } from '../../../types/Question'
 
-import { fetchCategory } from '../../../api/CategoryAPI'
-import { fetchSubcategoriesByQuestionId } from '../../../api/SubcategoryAPI'
+import { fetchCategory } from '../../../client/CategoryAPI'
+import { fetchSubcategoriesByQuestionId } from '../../../client/SubcategoryAPI'
 import { 
     deleteQuestion,
     incrementAnswerCount, 
     fetchQuestion, 
     updateLastAnsweredDate
-} from '../../../api/QuestionAPI'
+} from '../../../client/QuestionAPI'
 import { 
     handleKeyDownForShowAnswer 
 } from '../../../utils/function'

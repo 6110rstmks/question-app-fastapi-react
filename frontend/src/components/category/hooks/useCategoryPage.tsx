@@ -7,16 +7,16 @@ import type { Subcategory, SubcategoryWithQuestionCount } from "../../../types/S
 import type { Question } from '../../../types/Question'
 
 
-import { fetchCategory } from "../../../api/CategoryAPI"
-import { createSubcategory, fetchSubcategoriesByCategoryId } from "../../../api/SubcategoryAPI"
+import { fetchCategory } from "../../../client/CategoryAPI"
+import { createSubcategory, fetchSubcategoriesByCategoryId } from "../../../client/SubcategoryAPI"
 import { 
     fetchUncorrectedQuestionCountByCategoryId,
     fetchCorrectedQuestionCountByCategoryIdOrderThanOneMonth,
     fetchQuestionCountByCategoryId,
     fetchQuestionCountBySubcategoryId,
     fetchTemporaryQuestionCountByCategoryIdOrderThanXDays
-} from '../../../api/QuestionCountAPI'
-import { fetchProblem } from '../../../api/ProblemAPI'
+} from '../../../client/QuestionCountAPI'
+import { fetchProblem } from '../../../client/ProblemAPI'
 
 
 export const useCategoryPage = (categoryId: number) => {

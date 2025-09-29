@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, subMonths, eachDayOfInterval } from "date-fns"
-import { fetchQuestionCountsByLastAnsweredDate } from "../api/QuestionAPI"
-import { fetchProblemByDay } from "../api/ProblemAPI"
+import { fetchQuestionCountsByLastAnsweredDate } from "../client/QuestionAPI"
+import { fetchProblemByDay } from "../client/ProblemAPI"
 import { useNavigate } from 'react-router-dom'
 import { X } from "lucide-react"
 

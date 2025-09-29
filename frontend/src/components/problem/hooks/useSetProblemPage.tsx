@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { fetchProblem, fetchProblemByDay } from '../../../api/ProblemAPI'
+import { fetchProblem, fetchProblemByDay } from '../../../client/ProblemAPI'
 import type { SolutionStatus } from '../../../types/SolutionStatus'
 import type { Question } from '../../../types/Question'
 import { SolutionStatusReverse } from '../../../types/SolutionStatus'

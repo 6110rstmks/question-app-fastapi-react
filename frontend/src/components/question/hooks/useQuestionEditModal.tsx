@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { Question } from '../../../types/Question'
-import { fetchQuestion } from '../../../api/QuestionAPI'
+import { fetchQuestion } from '../../../client/QuestionAPI'
 import { SolutionStatus } from '../../../types/SolutionStatus'
 
 export const useQuestionEditModal = (

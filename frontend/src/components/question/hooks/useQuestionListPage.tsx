@@ -5,10 +5,10 @@ import {
 } from 'react';
 import { useNavigate } from "react-router"
 import type { Question, QuestionWithCategoryIdAndCategoryNameAndSubcategoryId } from '../../../types/Question';
-import { fetchQuestionsByProblemWord } from '../../../api/QuestionAPI'
-import { fetchCategory } from '../../../api/CategoryAPI'
-import { fetchSubcategoriesQuestionsByQuestionId } from '../../../api/SubcategoryQuestionAPI'
-import { fetchCategoryQuestionByQuestionId } from '../../../api/CategoryQuestionAPI'
+import { fetchQuestionsByProblemWord } from '../../../client/QuestionAPI'
+import { fetchCategory } from '../../../client/CategoryAPI'
+import { fetchSubcategoriesQuestionsByQuestionId } from '../../../client/SubcategoryQuestionAPI'
+import { fetchCategoryQuestionByQuestionId } from '../../../client/CategoryQuestionAPI'
 
 export const useQuestionListPage = () => {
     const [

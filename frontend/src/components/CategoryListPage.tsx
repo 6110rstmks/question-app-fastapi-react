@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fetchAllCategories } from '../api/CategoryAPI'
+import { fetchAllCategories } from '../client/CategoryAPI'
 import type { Category } from '../types/Category'
 
 const CategoryListPage = () => {

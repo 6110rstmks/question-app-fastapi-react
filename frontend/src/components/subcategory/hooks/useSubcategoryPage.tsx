@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { fetchSubcategory } from '../../../api/SubcategoryAPI'
+import { fetchSubcategory } from '../../../client/SubcategoryAPI'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import type { Subcategory } from '../../../types/Subcategory'
@@ -8,10 +8,10 @@ import type { Question } from '../../../types/Question'
 import { handleKeyDownForShowAnswer } from '../../../utils/function'
 import { handleNavigateToCategoryPage } from '../../../utils/navigate_function'
 
-import { updateSubcategoryName } from '../../../api/SubcategoryAPI'
-import { fetchQuestionsBySubcategoryId } from '../../../api/QuestionAPI'
-import { fetchTemporaryQuestionCountBySubcategoryId, fetchUncorrectedQuestionCountBySubcategoryId } from '../../../api/QuestionCountAPI'
-import { fetchProblem } from '../../../api/ProblemAPI'
+import { updateSubcategoryName } from '../../../client/SubcategoryAPI'
+import { fetchQuestionsBySubcategoryId } from '../../../client/QuestionAPI'
+import { fetchTemporaryQuestionCountBySubcategoryId, fetchUncorrectedQuestionCountBySubcategoryId } from '../../../client/QuestionCountAPI'
+import { fetchProblem } from '../../../client/ProblemAPI'
 
 
 interface categoryInfo {

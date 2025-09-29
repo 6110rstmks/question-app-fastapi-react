@@ -5,7 +5,7 @@ import {
     fetchQuestion, 
     incrementAnswerCount,
     updateLastAnsweredDate
-} from "../api/QuestionAPI"
+} from "../client/QuestionAPI"
 
 export const addSubcategory = (
     setSubcategories: React.Dispatch<React.SetStateAction<SubcategoryWithQuestionCount[]>>,

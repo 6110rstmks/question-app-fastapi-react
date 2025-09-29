@@ -5,8 +5,8 @@ import type { Category } from "../../../types/Category"
 import type { Subcategory, SubcategoryWithCategoryName } from "../../../types/Subcategory"
 import type { Question } from "../../../types/Question"
 
-import { fetchCategory } from "../../../api/CategoryAPI"
-import { fetchSubcategoriesByQuestionId } from "../../../api/SubcategoryAPI"
+import { fetchCategory } from "../../../client/CategoryAPI"
+import { fetchSubcategoriesByQuestionId } from "../../../client/SubcategoryAPI"
 
 import { BlockMath } from "react-katex"
 import Modal from 'react-modal'

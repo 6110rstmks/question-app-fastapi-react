@@ -4,7 +4,7 @@ import {
     incrementAnswerCount,
     updateLastAnsweredDate,
     updateSkipUntil
-} from "../../../api/QuestionAPI"
+} from "../../../client/QuestionAPI"
 
 export const useProblemPage = (
     problemData: Question[]

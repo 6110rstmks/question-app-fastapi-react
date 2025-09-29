@@ -6,7 +6,7 @@ import { Link } from "react-router"
 import Search from "./Search"
 import { useAuth } from "../context/AuthContext"
 import { useEffect } from "react"
-import { checkAuth } from "../api/AuthAPI"
+import { checkAuth } from "../client/AuthAPI"
 import { useNavigate } from "react-router"
 
 export const HomePage: React.FC = () => {

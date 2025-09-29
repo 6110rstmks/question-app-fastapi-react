@@ -6,9 +6,9 @@ import type { Subcategory, SubcategoryWithCategoryName  } from '../types/Subcate
 import type { Question } from '../types/Question'
 import type { SubcategoryQuestion } from '../types/SubcategoryQuestion'
 
-import { fetchCategory, fetchCategoriesBySearchWord } from '../api/CategoryAPI'
-import { fetchSubcategory, fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../api/SubcategoryAPI'
-import { fetchSubcategoriesQuestionsByQuestionId } from '../api/SubcategoryQuestionAPI'
+import { fetchCategory, fetchCategoriesBySearchWord } from '../client/CategoryAPI'
+import { fetchSubcategory, fetchSubcategoriesByCategoryId, fetchSubcategoriesByQuestionId } from '../client/SubcategoryAPI'
+import { fetchSubcategoriesQuestionsByQuestionId } from '../client/SubcategoryQuestionAPI'
 
 interface OriginalData {
     subcategory_id: number

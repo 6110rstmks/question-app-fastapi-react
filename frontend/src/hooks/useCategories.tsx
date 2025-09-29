@@ -1,13 +1,13 @@
 import { useEffect, useState, useCallback } from "react"
 import type { Category } from "../types/Category"
-import { fetchCategories, fetchPageCount } from "../api/CategoryAPI"
+import { fetchCategories, fetchPageCount } from "../client/CategoryAPI"
 import { useNavigate } from "react-router"
 import { 
     fetchQuestionCount, 
     fetchUncorrectedQuestionCount,
     fetchCorrectedQuestionCount,
     fetchTemporaryQuestionCount
-} from "../api/QuestionCountAPI"
+} from "../client/QuestionCountAPI"
 
 export const useCategories = (
     page: number,
