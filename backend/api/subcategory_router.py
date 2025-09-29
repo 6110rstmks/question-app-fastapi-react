@@ -9,7 +9,7 @@ from cruds import subcategory_crud, category_crud
 from database import SessionDependency
 
 
-from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryUpdate
+from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryUpdate, SubcategoryCreate
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository
 
 
@@ -24,7 +24,8 @@ async def create_subcategory(
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
 
-    new_subcategory = await subcategory_crud.create_subcategory(subcategory_create, session)
+    subcategory_repository = SubcategoryRepository(session)
+    new_subcategory = await subcategory_repository.create(SubcategoryCreate(name=subcategory_create.name, category_id=subcategory_create.category_id))
     return SubcategoryResponse.model_validate(new_subcategory, from_attributes=True)
 
 
@@ -47,7 +48,8 @@ async def find_subcategory_by_id(
     id: int = Path(gt=0),
     session=SessionDependency, 
 ):
-    found_subcategory = await subcategory_crud.find_subcategory_by_id(id, session)
+    subcategory_repository = SubcategoryRepository(session)
+    found_subcategory = await subcategory_repository.get(id)
     if not found_subcategory:
         raise HTTPException(status_code=404, detail="Subcategory not found")
     return found_subcategory
@@ -58,7 +60,8 @@ async def find_by_name(
     name: str = Query(min_length=2, max_length=20),
     session=SessionDependency
 ):
-    return await subcategory_crud.find_subcategory_by_name(name, session)
+    subcategory_repository = SubcategoryRepository(session)
+    return await subcategory_repository.find_by_name_contains(name)
 
 @router.get("/category_id/{category_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_by_category_id(
