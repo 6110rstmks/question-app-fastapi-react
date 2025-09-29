@@ -86,7 +86,7 @@ async def update(
 
 
 
-@router.delete("/{id}", response_model=SubcategoryResponse, status_code=status.HTTP_200_OK)
+@router.delete("/{id}", response_model=bool, status_code=status.HTTP_200_OK)
 async def delete_subcategory(
     id: int = Path(gt=0),
     session=SessionDependency
