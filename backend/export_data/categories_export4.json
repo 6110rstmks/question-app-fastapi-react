@@ -5031,11 +5031,11 @@
                         {
                             "problem": "ホルムアルデヒドと尿素からできるアミノ樹脂は何？",
                             "answer": [
-                                "尿素樹脂"
+                                "尿素樹脂Urea-formaldehyde"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ビスコースから希硫酸中でセルロースを繊維状に析出させると、（A）ができる。",
@@ -7180,8 +7180,8 @@
                                 "すにっぷ"
                             ],
                             "memo": "",
-                            "is_correct": 2,
-                            "last_answered_date": "2025-09-23"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "plasmidのような目的とする遺伝子の運び手のことを何という",
@@ -7290,7 +7290,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "ウニの発生においてプルテウス幼生とプリズム幼生ではどちらが先か",
@@ -7423,6 +7423,15 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-05-26"
+                        },
+                        {
+                            "problem": "DNAの塩基配列に1つの塩基が変化した遺伝的変異をなんという",
+                            "answer": [
+                                "SNP（スニップ）"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "1962年にカエルのクローンを作製した人物",
@@ -7883,8 +7892,8 @@
                                 "dermis"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "現在考えられている化学進化において、無機物から段階的に複雑な有機物が作成された。\nこれは正しいか",
@@ -8645,7 +8654,7 @@
                             "last_answered_date": "2025-09-28"
                         },
                         {
-                            "problem": "化学合成最近を6つあげて",
+                            "problem": "化学合成細菌を6つあげて",
                             "answer": [
                                 "亜硝酸菌",
                                 "硝酸菌",
@@ -8655,7 +8664,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "解糖系Glycolysisはどこでおこるか",
@@ -9379,7 +9388,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-29"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "一般的に 金利が上がると株価はどうなる",
@@ -9396,7 +9405,7 @@
                                 "金利を上げる"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-29"
                         },
                         {
@@ -9433,7 +9442,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "国際標準の物価の安定は年何％？",
@@ -9505,8 +9514,8 @@
                                 "国債"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "デフレーションの一般人観点のプラスの側面は2",
@@ -9649,7 +9658,7 @@
                             ],
                             "memo": "物価上昇率が高まると失業率は低下",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-29"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "失業の種類",
@@ -10414,7 +10423,7 @@
                             "last_answered_date": "2025-08-27"
                         },
                         {
-                            "problem": "TF（Term Frequency）とは何を意味しますか？",
+                            "problem": "自然言語処理においてTF（Term Frequency）とは何を意味しますか？",
                             "answer": [
                                 "単語が文書内で出現する頻度"
                             ],
@@ -12619,8 +12628,8 @@
                                 "「私の会社は、新たに制定された環境法に従う必要がある。」\n\n"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-09"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "skeletal muscle",
@@ -12979,8 +12988,8 @@
                                 "Slash-and-burn agriculture"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "He tried to blackmail her by threatening to reveal her secret.",
@@ -13823,7 +13832,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "電子メールの送信元を検証するための仕組みの「SPF（Sender Policy Framework）」では、受信メールの送信元の（A）をDNSに登録されているメールサーバの（A）と照合する。",
@@ -15737,7 +15746,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "特殊な名前が付けられている地域性の強いかぜのことを何という",
@@ -15854,8 +15863,8 @@
                                 "山口県の秋吉台（あきよしだい）"
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWwDGaAmdeZgHOOz3Qy1wM6F-wleIk-IpigQ&s",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-31"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "海外で見られるカルスト地形の場所を答えて2",
@@ -17497,7 +17506,7 @@
                             ],
                             "memo": "https://allaboutbelgium.com/wp-content/uploads/2016/05/europe-belgium-map.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "トルコの下には何があるか",
@@ -17785,8 +17794,8 @@
                                 ""
                             ],
                             "memo": "https://exam.fukuumedia.com/wp-content/uploads/2019/11/greatprenzuprean.png",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "カラクム砂漠はどこの国にある？",
@@ -18040,7 +18049,7 @@
                             ],
                             "memo": "https://p.potaufeu.asahi.com/6eab-p/picture/23957942/c0371a1149cb5e426b9a08cac458a5dd.jpg\n\nhttps://social-studies-magazine.com/wp-content/uploads/2023/04/IMG_0895-5-1536x1096.jpg",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-29"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "https://juken-geography.com/wp-content/uploads/2020/07/mountains-kantaiheiyou-e1594197143889.png 8,9を答えてください",
@@ -18189,13 +18198,13 @@
                             "last_answered_date": "2025-09-29"
                         },
                         {
-                            "problem": "アフガニスタンの下にある国は",
+                            "problem": "アフガニスタンAfghanistanの下にある国は",
                             "answer": [
                                 "Pakistan"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-29"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "カナダ楯状地の場所は？",
@@ -18344,7 +18353,7 @@
                                 "フランス語"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-29"
                         },
                         {
@@ -18354,7 +18363,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "カナダの人口最大都市は？",
@@ -19309,11 +19318,11 @@
                         {
                             "problem": "熱帯の農業方式といえば",
                             "answer": [
-                                "焼畑農業"
+                                "焼畑農業Slash-and-burn agriculture"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-08"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "通常の収穫・出荷時期よりも遅らせて栽培することを何という",
@@ -19346,7 +19355,7 @@
                         {
                             "problem": "ホイットルセイの農業区分において自給的農業に分類される5つを答えて",
                             "answer": [
-                                "焼畑農業",
+                                "焼畑農業Slash-and-burn agricultur",
                                 "遊牧",
                                 "集約的稲作農業",
                                 "集約的畑作農業",
@@ -19446,8 +19455,8 @@
                                 "端境期はざかいき"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "綿花の栽培条件を生育期と収穫期に分けて答えて",
@@ -19537,11 +19546,11 @@
                         {
                             "problem": "園芸農業のうち、都市から近い地域で新鮮な野菜などを栽培し、都市に販売する農業を漢字4文字で何というか。",
                             "answer": [
-                                "近郊農業"
+                                "近郊農業Peri-urban agriculture"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-20"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "じゃがいもは長期保存に不向き。なのでアンデス山脈では長期保存できるようにするために、何に加工している",
@@ -19673,7 +19682,7 @@
                             "last_answered_date": "2025-08-24"
                         },
                         {
-                            "problem": "無理のある焼畑農業を続けていくとどのような問題がおきるか",
+                            "problem": "無理のある焼畑農業Slash-and-burn agriculturを続けていくとどのような問題がおきるか",
                             "answer": [
                                 "砂漠化が進行"
                             ],
@@ -20740,12 +20749,11 @@
                             "answer": [
                                 "ドイツ",
                                 "オーストリア",
-                                "ハンガリー",
-                                ""
+                                "ハンガリー"
                             ],
                             "memo": "https://www.icruises.jp/area/uploads/202006/maps_danube.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-25"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "オビ川とエニセイ川とレナ川はどこに注ぎ込むか",
@@ -21108,7 +21116,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "シナ・チベット語族に属する語は？2",
@@ -23545,13 +23553,13 @@
                             "last_answered_date": "2025-09-11"
                         },
                         {
-                            "problem": "チーム開発で一般的なものとして、git rebasegがOKなのは個人ブランチか、それとも共有ブランチか",
+                            "problem": "チーム開発で一般的なものとして、git rebaseがOKなのは個人ブランチか、それとも共有ブランチか",
                             "answer": [
                                 "個人ブランチ"
                             ],
                             "memo": "共有ブランチはmergeがOK",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-11"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "git rebase コマンドの主な目的",
@@ -23711,7 +23719,7 @@
                             "last_answered_date": "2025-09-29"
                         },
                         {
-                            "problem": "DockerfileのRUN命令は、結果がdocker imageに保存される？",
+                            "problem": "DockerfileのRUN命令は、結果がdocker imageに保存される？されない？",
                             "answer": [
                                 "保存される。"
                             ],
@@ -24317,8 +24325,8 @@
                                 "10"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-26"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-30"
                         }
                     ]
                 },
@@ -24648,7 +24656,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-25"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "14~16世紀にかけてイタリアで始まり西欧各地に広まった芸術・思想上の新しい動きは？",
@@ -25147,8 +25155,8 @@
                                 "後漢"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-23"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "前漢の初代皇帝は",
@@ -25382,7 +25390,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-30"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "班固の弟で紀元前1世紀にカスピ海以東、50余りの国を服属させた人物は誰か。",
@@ -25861,7 +25869,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-20"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "浮体の原理を発見した物理学者は",
@@ -26644,7 +26652,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-19"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "貴族に対する平民の闘争のなか、前5世紀半ばに旧来の慣習法を明文化し、公開したローマ最古の成文法は何か",
