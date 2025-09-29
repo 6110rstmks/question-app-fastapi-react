@@ -6177,8 +6177,8 @@
                                 "受容体に結合"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "神経板を英語でなんという",
@@ -6300,8 +6300,8 @@
                                 "subphylum"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-11"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "二胚葉動物はなにか？",
@@ -6369,13 +6369,13 @@
                             "last_answered_date": "2025-09-23"
                         },
                         {
-                            "problem": "血管系をもたない動物は？",
+                            "problem": "血管系をもたない動物門は？",
                             "answer": [
                                 "棘皮動物Echinoderm"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "原生動物の例3",
@@ -6413,8 +6413,8 @@
                                 "子実体fruiting body"
                             ],
                             "memo": "https://d12rf6ppj1532r.cloudfront.net/images/k/0/sci_bio/12_1_12_2/k_sci_bio_12_1_12_2_image01.png\n\nいい覚え方ないかな",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "What animals have echolocation?3",
@@ -6562,6 +6562,15 @@
                             "last_answered_date": "2025-09-27"
                         },
                         {
+                            "problem": "旧口動物　英語で",
+                            "answer": [
+                                "Protostome"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
+                        },
+                        {
                             "problem": "ヒルガオ科の食べ物は",
                             "answer": [
                                 "さつまいも"
@@ -6652,8 +6661,8 @@
                                 "持っている。（アミラーゼ、トリプシン、リパーゼ）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-10"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "腸液に含まれるデンプンを分解する消化酵素は",
@@ -7010,15 +7019,6 @@
                             "memo": "",
                             "is_correct": 2,
                             "last_answered_date": "2025-09-26"
-                        },
-                        {
-                            "problem": "一塩基多型（SNP）について説明",
-                            "answer": [
-                                "DNAの塩基配列に1つの塩基が変化した遺伝的変異\ngoは遺伝的変異"
-                            ],
-                            "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
                         },
                         {
                             "problem": "スプライシングは真核生物では行わない。これは◯か×か。　",
@@ -7409,11 +7409,11 @@
                         {
                             "problem": "細胞でどんな遺伝子が発現しているか調べる方法",
                             "answer": [
-                                "DNA マイクロアレイ"
+                                "DNA マイクロアレイDNA microarray"
                             ],
                             "memo": "サンガー法は　DNAの塩基配列を調べる手法",
                             "is_correct": 1,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "cDNAのcはどういう意味ですか？",
@@ -7759,13 +7759,13 @@
                             "last_answered_date": "2025-09-11"
                         },
                         {
-                            "problem": "ラメラ構造は表皮、dermis、皮下組織のどこにあるか",
+                            "problem": "ラメラ構造は\nEpidermis、dermis、皮下組織のどこにあるか",
                             "answer": [
                                 "表皮"
                             ],
                             "memo": "https://www.esthepure.com/wp-content/uploads/2019/01/chart1-1.png",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "紫外線ultraviolet light　3種類",
@@ -8635,14 +8635,14 @@
                             "last_answered_date": "2025-09-28"
                         },
                         {
-                            "problem": "電子伝達系は何で行われ、ATPは何分子てまきますか？",
+                            "problem": "電子伝達系は何で行われ、ATPは何分子できるか",
                             "answer": [
                                 "ミトコンドリアのクリステ",
                                 "34"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "解糖系ではたらく脱水素酵素の正式名称は",
@@ -8870,7 +8870,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         }
                     ]
                 },
@@ -9211,7 +9211,7 @@
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-08-25"
+                            "last_answered_date": "2025-09-29"
                         }
                     ]
                 }
@@ -15709,8 +15709,8 @@
                                 "アタカマ砂漠Atacama Desert"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-08"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "西ヨーロッパの国って高緯度にあるのにそこまで寒くない。それはなぜか",
@@ -15957,11 +15957,11 @@
                         {
                             "problem": "太平洋を取り囲むように連なって造山帯を何造山帯というか。",
                             "answer": [
-                                "環太平洋造山帯"
+                                "環太平洋造山帯Pacific Ring of Fire"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-06-13"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "プレートのいい例えとして何がある",
@@ -16057,8 +16057,8 @@
                                 "polar night"
                             ],
                             "memo": "反対に、一日中太陽が出ている日もあります。これを白夜（びゃくや）といいます",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-24"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "アメリカの乾燥地帯で行われている農業の方法を何という？",
@@ -16806,7 +16806,7 @@
                                 "マカライボ湖"
                             ],
                             "memo": "",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-29"
                         },
                         {
@@ -16928,8 +16928,8 @@
                                 "カラクム砂漠"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "カルデラが見られる九州の山は？",
@@ -17186,7 +17186,7 @@
                                 ""
                             ],
                             "memo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSij1vR4aN4-qRiD2JXBFYmgR8gMCQ0n8NsA&s",
-                            "is_correct": 0,
+                            "is_correct": 1,
                             "last_answered_date": "2025-09-29"
                         },
                         {
@@ -17349,7 +17349,7 @@
                             ],
                             "memo": "https://ninicosme.com/wp-content/uploads/2018/03/iran-map.gif",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "オビ川はどこ",
@@ -17581,7 +17581,7 @@
                             "last_answered_date": "2025-05-22"
                         },
                         {
-                            "problem": "サハラ砂漠Sahara Desertの場所は？",
+                            "problem": "Sahara Desertの場所は？",
                             "answer": [
                                 ""
                             ],
@@ -17758,8 +17758,8 @@
                                 "チリChile"
                             ],
                             "memo": "https://hugkum.sho.jp/wp-content/uploads/2024/05/18548.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-08-27"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "アンデス山脈の場所は",
@@ -17800,11 +17800,11 @@
                         {
                             "problem": "カラクム砂漠はどこの国にある？",
                             "answer": [
-                                "トルクメニスタン"
+                                "Turkmenistan"
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-30"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "オビ川の右にある川は？",
@@ -18095,7 +18095,7 @@
                             ],
                             "memo": "https://lh3.googleusercontent.com/proxy/Dm2VQGX4CLVMUSS0nGMh7o7cmRVQEcfifM2I69joZy2A0_gBInhmLQRhkWTjpIAUUnHTqK6USP-kIXRumxwCP4HvfimRdtKZQTjR-7hjJk49kjplV2xj99yr7oMF",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-30"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "インド洋はどこか",
@@ -18164,11 +18164,11 @@
                         {
                             "problem": "トルクメニスタンの左にあるのは",
                             "answer": [
-                                "カスピ海"
+                                "カスピ海Caspian Sea"
                             ],
                             "memo": "https://dol.ismcdn.jp/mwimgs/1/d/670/img_51e4c1424cc350d487d186170d1992ad166387.jpg",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-06-10"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "テンシャン山脈の場所は",
@@ -18368,11 +18368,11 @@
                         {
                             "problem": "カナダの人口最大都市は？",
                             "answer": [
-                                "トロントToronto"
+                                "Toronto"
                             ],
                             "memo": "首都はオタワ",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-19"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "トルクメニスタンに住む人は？?",
@@ -18603,11 +18603,11 @@
                         {
                             "problem": "ラテンアメリカにおける白人と先住民せんじゅうみんの混血を何といいう",
                             "answer": [
-                                "メスチソ"
+                                "メスチソMestizo"
                             ],
                             "memo": "",
                             "is_correct": 1,
-                            "last_answered_date": "2025-04-26"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "ロシアのモスクワの街路はどのような形状か",
@@ -19094,8 +19094,8 @@
                                 "ノルウェー、アイスランド、ニュージーランド（水力強い、人口少ない）"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-05-22"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "世界の米の生産量top3",
@@ -19494,7 +19494,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "小麦と大麦ではどちらがより北の寒冷な地域で栽培されるか",
@@ -19817,7 +19817,7 @@
                             "last_answered_date": "2025-05-12"
                         },
                         {
-                            "problem": "サハラ砂漠の南側の部分のステップ気候のことをなんという",
+                            "problem": "sahara desertの南側の部分のステップ気候のことをなんという",
                             "answer": [
                                 "サヘル"
                             ],
@@ -19968,8 +19968,8 @@
                                 "タイガ"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-12"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "亜寒帯冬季少雨気候(Dw)の定義",
@@ -20257,8 +20257,8 @@
                                 "ミュンヘン"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-27"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "ドイツで最大規模を誇る国際空港は",
@@ -22663,7 +22663,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "Azure Machine Learning でデータの前処理を行うために使用できるモジュールはどれですか？",
@@ -23509,7 +23509,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-09"
+                            "last_answered_date": "2025-09-29"
                         },
                         {
                             "problem": "git push --force-with-lease originはgit push --force と何が違う？",
@@ -26674,8 +26674,8 @@
                                 "山田長政"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-28"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-09-30"
                         },
                         {
                             "problem": "ラタナコーシン朝は何仏教を保護したか",
@@ -26693,7 +26693,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-21"
+                            "last_answered_date": "2025-09-29"
                         }
                     ]
                 },
