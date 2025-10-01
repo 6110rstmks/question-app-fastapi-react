@@ -87,10 +87,10 @@ async def find_category_by_id(
 
 @router.post("", response_model=CategoryResponseSchema, status_code=status.HTTP_201_CREATED)
 async def create(
-    db: AsyncDbDependency, 
-    category_create: CategoryCreateSchema
+    category_create: CategoryCreateSchema,
+    session=SessionDependency,
 ):
-    return await category_cruds.create_category(db, category_create)
+    return await category_cruds.create_category(category_create, session)
 
 @router.get("/export/json", response_class=FileResponse)
 async def get_exported_json(db: DbDependency):

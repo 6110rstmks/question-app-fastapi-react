@@ -19,7 +19,7 @@ backend/utils/s3.py
 frontendテストコードを網羅する。
 - 
 
-せっかくデータがあるのでRAGとか導入したいな。それより先にandroid作成
+せっかくデータがあるのでRAGとか導入したいな。それより先にandroidのクライアントアプリを作成
 
 
 pip install coverageできちんと関数に対してテストがあるか調べる。
