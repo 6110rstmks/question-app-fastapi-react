@@ -9276,8 +9276,8 @@
                                 "貨幣市場"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-04-15"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
                         },
                         {
                             "problem": "供給曲線はなぜ右肩あがりなのか。説明して",
@@ -9815,6 +9815,29 @@
                 {
                     "name": "m",
                     "questions": []
+                },
+                {
+                    "name": "cmd",
+                    "questions": [
+                        {
+                            "problem": "カレントディレクトリ以下から拡張子が .log のファイルをすべて探し出すコマンドを書け。",
+                            "answer": [
+                                "find . -type f -name \"*.log\"\n"
+                            ],
+                            "memo": "-type f でファイルのみ\n\n-name \"*.log\" で拡張子を指定",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
+                        },
+                        {
+                            "problem": "カレントディレクトリ以下から 100MB以上 のファイルを検索するコマンドを書け。",
+                            "answer": [
+                                "find . -type f -size +100M\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
+                        }
+                    ]
                 }
             ]
         },
@@ -10119,7 +10142,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-10-02"
                         }
                     ]
                 },
@@ -10312,13 +10335,13 @@
                             "last_answered_date": "2025-09-01"
                         },
                         {
-                            "problem": "教師あり学習を用いて機械学習モデルを構築することを検討しています。どのアルゴリズムを選択すべきでしょうか。",
+                            "problem": "教師あり学習Supervised learningを用いて機械学習モデルを構築することを検討しています。どのアルゴリズムを選択すべきでしょうか。",
                             "answer": [
                                 "線形回帰"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-09-12"
+                            "is_correct": 2,
+                            "last_answered_date": "2025-10-02"
                         },
                         {
                             "problem": "機械学習のプロセスを効率化し、専門知識を持たない人々でも活用できる技術のことを何という",
@@ -14468,7 +14491,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-10"
+                            "last_answered_date": "2025-10-01"
                         },
                         {
                             "problem": "プログラマが明示的にメモリの確保（mallocなど）と解放（freeなど）を行う 必要があるのはスタック領域かヒープ領域かどちらか？",
@@ -21729,8 +21752,8 @@
                                 "694nm"
                             ],
                             "memo": "",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-10-02"
                         },
                         {
                             "problem": "Qスイッチルビーレーザーとは、発振媒質に何を用いている？",
@@ -23362,6 +23385,20 @@
                 {
                     "name": "vite",
                     "questions": []
+                },
+                {
+                    "name": "Javascript",
+                    "questions": [
+                        {
+                            "problem": "javascriptはシングルスレッドかマルチスレッドか",
+                            "answer": [
+                                "シングルスレッド"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
+                        }
+                    ]
                 }
             ]
         },
@@ -23683,8 +23720,35 @@
                                 "with"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-05"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-02"
+                        },
+                        {
+                            "problem": "GitHub Actions の runner（ランナー） とは",
+                            "answer": [
+                                "ワークフローを実際に実行するマシン"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
+                        },
+                        {
+                            "problem": "GitHubにおいて、ソースコードのバージョンを管理し、配布可能な形で公開する仕組み",
+                            "answer": [
+                                "GitHub relase"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
+                        },
+                        {
+                            "problem": "GitHub Releaseを作成すると、自動的にどのようなアーカイブファイルが生成されますか？",
+                            "answer": [
+                                "tar.gz と zip"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
                         },
                         {
                             "problem": "GitHub Actionsワークフローにおいてon:   workflow_call:の利用用途は",
@@ -23843,7 +23907,7 @@
                             "answer": [
                                 "WSGI"
                             ],
-                            "memo": "",
+                            "memo": "仕組みのイメージ\n[Webサーバー] ⇄ [WSGI] ⇄ [Webアプリケーション/フレームワーク]\n\n\n例:\n\nGunicorn（サーバー） ⇄ WSGI ⇄ Flask（アプリ）\n\nApache（mod_wsgi） ⇄ WSGI ⇄ Django（アプリ",
                             "is_correct": 0,
                             "last_answered_date": "2025-10-01"
                         },
@@ -23854,7 +23918,7 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-10-02"
+                            "last_answered_date": "2025-10-01"
                         },
                         {
                             "problem": "pythonにおいて絶対インポートは（A）にあるディレクトリを起点にモジュールを探す",
@@ -23872,7 +23936,25 @@
                             ],
                             "memo": "",
                             "is_correct": 0,
-                            "last_answered_date": "2025-09-24"
+                            "last_answered_date": "2025-10-01"
+                        },
+                        {
+                            "problem": "Python製Webアプリケーション用の WSGI HTTPサーバーは",
+                            "answer": [
+                                "Gunicorn"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
+                        },
+                        {
+                            "problem": "pythonで複数のスレッドをたてるにはどのモジュールを使用すれば良いか",
+                            "answer": [
+                                "threading\n"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
                         },
                         {
                             "problem": "pythonのsetとlistで集合演算ができるのはどちらか",
@@ -24896,8 +24978,8 @@
                                 "ダマスクス"
                             ],
                             "memo": "",
-                            "is_correct": 1,
-                            "last_answered_date": "2025-07-20"
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
                         },
                         {
                             "problem": "1782年に興った現在まで続くタイの王朝は",
@@ -26147,8 +26229,8 @@
                                 "メンフィス"
                             ],
                             "memo": "エジプト中王国の首都はテーベ\n",
-                            "is_correct": 0,
-                            "last_answered_date": "2025-09-29"
+                            "is_correct": 1,
+                            "last_answered_date": "2025-10-02"
                         },
                         {
                             "problem": "ササン朝ペルシア最盛期の王で、突厥と同盟を組んでエフタルを滅ぼした人物は誰か",
@@ -26837,6 +26919,43 @@
         {
             "name": "GCP",
             "subcategories": []
+        },
+        {
+            "name": "csharp",
+            "subcategories": [
+                {
+                    "name": "m",
+                    "questions": [
+                        {
+                            "problem": "NuGet パッケージはpytonでいうとなに",
+                            "answer": [
+                                "pip"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
+                        },
+                        {
+                            "problem": "C#プロジェクトの定義ファイル",
+                            "answer": [
+                                "C#プロジェクトの定義ファイル"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
+                        },
+                        {
+                            "problem": "what  purposes can the using keyword serve in C#?",
+                            "answer": [
+                                "importing namespaces"
+                            ],
+                            "memo": "",
+                            "is_correct": 0,
+                            "last_answered_date": "2025-10-01"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
