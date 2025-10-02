@@ -85,7 +85,7 @@ class SubcategoryRepository(
         query = (
             select(self.model)
             .where(self.model.category_id == category_id)
-            .where(self.model.name.like(name_pattern))
+            .where(self.model.name.ilike(name_pattern))
         )
         result = await self.db.execute(query)
         entities = result.scalars().all()
