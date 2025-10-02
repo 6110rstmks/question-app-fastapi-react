@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Any, Callable, Generic, Iterable, Literal, Optional, Type, TypeVar
 
 from pydantic import BaseModel
-from sqlalchemy import TIMESTAMP, asc, delete, desc, insert, Integer, update
+from sqlalchemy import TIMESTAMP, asc, delete, desc, insert, Integer, func
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import Mapped, mapped_column
@@ -113,7 +113,26 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
         :return: レコードのリスト
         """
         return await self._find_by_fields()
+    
+    async def get_count(self) -> int:
+        """
+        全件のレコード数を取得します。
 
+        :return: レコードの件数
+        """
+        stmt = select(func.count()).select_from(self.model)
+        result = await self.db.execute(stmt)
+        return result.scalar_one()
+
+    async def get_count_by_ids(self, ids: list[int]) -> int:
+        """
+        指定したIDのレコード数を取得します。
+
+        :param id: 検索対象のID
+        :return: レコードの件数
+        """
+        return await self._get_count_by_fields(id=ids)
+    
     async def find_by_ids(self, ids: list[int]) -> list[ReadSchemaType]:
         """
         指定したIDのレコードを取得します。
@@ -122,7 +141,7 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
         :return: レコードのリスト
         """
         return await self._find_by_fields(id=ids)
-
+    
     async def _find_by_fields(
         self,
         like_fields: dict[str, str] | None = None,
@@ -165,6 +184,30 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
         result = await self.db.execute(stmt)
         objs = result.scalars().all()
         return [self.read_schema.from_entity(obj) for obj in objs]
+
+    async def _get_count_by_fields(
+        self,
+        **kwargs: Any
+    ) -> int:
+        """
+        任意のカラム値に基づいてレコードを検索し、件数を取得します。
+        複数カラム指定可能。値に list/tuple/set を渡すと IN 条件になります。
+
+        :param kwargs: 検索対象のカラム名と値のマッピング
+        :return: 該当レコードの件数
+        """
+        stmt = select(func.count()).select_from(self.model)
+
+        for field_name, value in kwargs.items():
+            column = getattr(self.model, field_name, None)
+            if column is not None:
+                if isinstance(value, Iterable) and not isinstance(value, (str, bytes)):
+                    stmt = stmt.where(column.in_(value))
+                else:
+                    stmt = stmt.where(column == value)
+
+        result = await self.db.execute(stmt)
+        return result.scalar_one()
     
 
     async def _find_grouped_by_fields(
@@ -272,5 +315,6 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
         return result.rowcount
 
     async def _get(self, id: int) -> ModelType | None:
-        result = await self.db.execute(select(self.model).where(self.model.id == id))
+        stmt = select(self.model).where(self.model.id == id)
+        result = await self.db.execute(stmt)
         return result.scalars().first()

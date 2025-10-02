@@ -1,5 +1,7 @@
 ### 将来実装予定の案
 
+問題出題画面の
+
 react hook form 導入しや
 
 jestではなくて、vitestを導入
@@ -24,7 +26,7 @@ frontendテストコードを網羅する。
 
 pip install coverageできちんと関数に対してテストがあるか調べる。
 
-uvに移行
+uvに移行　優先度低　　これより前にrag実装したい
 
 
 patchを使用してbackendコードをmockする。
@@ -52,11 +54,6 @@ ex) geography > locationなど
 問題生成画面の右側にて、question検索ができてそれを表示させれるようにしたい。
 
 github actionsにはdependabotを入れる
-
-今日といた問題を復習を押して、表示させたときは、
-この問題は本日は表示しない。
-とさせる。
-その後、日付が翌日になったら、
 
 questionpage一覧において、incorrect, correct,temporaryの状態を変化させると回答した回数がインクリメントされるが、
 

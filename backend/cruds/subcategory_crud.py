@@ -1,13 +1,14 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-
-from sqlalchemy import select, func
-from schemas.subcategory import SubcategoryResponse
-from models import Subcategory, SubcategoryQuestion, Question
-from cruds import question_crud as question_cruds
 from typing import Optional
-from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryCreate, SubcategoryRead
+
+
+from cruds import question_crud as question_cruds
+
+from src.repository.subcategory_repository import SubcategoryRepository, SubcategoryRead
 from src.repository.subcategory_question_repository import SubcategoryQuestionRepository
 from src.repository.question_repository import QuestionRepository
+
+
 from database import SessionDependency
 
 
@@ -28,7 +29,6 @@ async def find_subcategories_in_categorybox(
 
     if searchSubcategoryWord:
         result = subcategory_repository.find_by_name_starts_with(searchSubcategoryWord)
-        print(result)
 
     elif searchQuestionWord and len(searchQuestionWord) >= 3:
 
@@ -45,16 +45,22 @@ async def find_subcategories_in_categorybox(
         result = await subcategory_repository.find_by_category_id_and_ids(category_id, subcategory_ids)
 
     elif searchAnswerWord and len(searchAnswerWord) >= 3:
-        query2 = select(Question.id).where(
-            func.array_to_string(Question.answer, ',').ilike(f"%{searchAnswerWord}%")
-        )
-        question_ids = db.execute(query2).scalars().all()
-        
-        query3 = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id.in_(question_ids))
-        subcategory_ids = db.execute(query3).scalars().all()
-        
-        query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.id.in_(subcategory_ids))
-        print('それどうな')
+        # query2 = select(Question.id).where(
+        #     func.array_to_string(Question.answer, ',').ilike(f"%{searchAnswerWord}%")
+        # )
+        questions = await question_repository.find_by_answer_contains(searchAnswerWord)
+
+        question_ids = [question.id for question in questions]
+
+        # query3 = select(SubcategoryQuestion.subcategory_id).where(SubcategoryQuestion.question_id.in_(question_ids))
+        subcategories_questions = []
+        for question_id in question_ids:
+            subcategories_questions.extend(await subcategory_question_repository.find_by_question_ids(question_id))
+        subcategory_ids = [sq.subcategory_id for sq in subcategories_questions]
+        # subcategory_ids = db.execute(query3).scalars().all()
+
+        # query = select(Subcategory).where(Subcategory.category_id == category_id).where(Subcategory.id.in_(subcategory_ids))
+        result = await subcategory_repository.find_by_category_id_and_ids(category_id, subcategory_ids)
     else:
         # query = select(Subcategory).where(Subcategory.category_id == category_id)
         result = await subcategory_repository.find_by_category_id(category_id)
@@ -75,7 +81,7 @@ async def find_subcategories_in_categorybox(
 async def find_subcategory_by_id(
     id: int,
     session=SessionDependency
-) -> Optional[SubcategoryResponse]:
+) -> Optional[SubcategoryRead]:
 
     subcategory_repository = SubcategoryRepository(session)
     return await subcategory_repository.get(id)

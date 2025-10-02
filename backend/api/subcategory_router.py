@@ -1,5 +1,5 @@
 from typing import Optional
-from fastapi import APIRouter, Path, Query, HTTPException, Depends
+from fastapi import APIRouter, Path, Query, HTTPException
 
 from starlette import status
 

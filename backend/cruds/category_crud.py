@@ -71,8 +71,6 @@ async def find_all(
         data = await category_repository.get_all()
     # 結果を取得してスキップとリミットを適用
     # result = db.execute(query_stmt).scalars().all()
-    print(data)
-    print('うあさ')
     return data[skip: skip + limit]
 
 # リポジトリパターンに置換済み

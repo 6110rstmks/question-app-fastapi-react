@@ -182,8 +182,6 @@ def _fetch_questions(
     if blacklist:
         filters.append(Question.id.notin_(blacklist))
         
-    print(filters)
-    print('がああああ')
     stmt = (
         select(Question)
         .where(*filters)

@@ -6,7 +6,12 @@ from cruds import category_crud, question_count_crud, subcategory_crud
 from schemas.question import QuestionGetCountByLastAnsweredDate, QuestionGetCountByIsCorrectInSubcategory, QuestionGetCountByIsCorrectInCategory
 from database import get_db
 
+from src.repository.question_repository import QuestionRepository
+
 DbDependency = Annotated[Session, Depends(get_db)]
+
+from database import get_db, SessionDependency
+
 
 # tags は、FastAPIでAPIルーターやエンドポイントにメタデータを追加するために使用されるオプションの引数です。これにより、APIドキュメント（例えば、Swagger UI）においてAPIエンドポイントをカテゴリごとにグループ化することができます。
 
@@ -15,32 +20,34 @@ app = FastAPI()
 
 # Question数を取得するエンドポイント
 @router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
-async def get_question_count(db: DbDependency):
-    return question_count_crud.get_question_count(db)
+async def get_question_count(session=SessionDependency):
+    question_repository = QuestionRepository(session)
+    return question_repository.get_count()
+
 
 # カテゴリ内のQuestion数を取得するエンドポイント
 @router.get("/count/category_id/{category_id}", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_count_in_category(
-    db: DbDependency,
-    category_id: int = Path(gt=0)
+    category_id: int = Path(gt=0),
+    session=SessionDependency
 ):  
-    found_category = category_crud.find_category_by_id(db, category_id)
+    found_category = await category_crud.find_category_by_id(category_id, session)
     if not found_category:
         raise HTTPException(status_code=404, detail="Category not found")
     
-    return question_count_crud.get_question_count_in_category(db, category_id)
+    return await question_count_crud.get_question_count_in_category(category_id, session)
 
 # サブカテゴリ内のQuestion数を取得するエンドポイント
 @router.get("/count/subcategory_id/{subcategory_id}", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_count_in_subcategory(
-    db: DbDependency,
     subcategory_id: int = Path(gt=0),
+    session=SessionDependency
 ):
-    found_subcategory = subcategory_crud.find_subcategory_by_id(subcategory_id, db)
+    found_subcategory = await subcategory_crud.find_subcategory_by_id(subcategory_id, session)
     if not found_subcategory:
         raise HTTPException(status_code=404, detail="Subcategory not found")
-    
-    return question_count_crud.get_question_count_in_subcategory(db, subcategory_id)
+
+    return await question_count_crud.get_question_count_in_subcategory(subcategory_id, session)
 
 # 最終回答日時ごとのQuestion数を取得するエンドポイント
 @router.post("/count/by_last_answered_date", response_model=Dict[str, int], status_code=status.HTTP_200_OK)

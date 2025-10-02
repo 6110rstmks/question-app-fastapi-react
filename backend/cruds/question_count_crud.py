@@ -6,40 +6,39 @@ from config import SolutionStatus
 from models import CategoryBlacklist
 from schemas.question import  QuestionGetCountByIsCorrectInSubcategory, QuestionGetCountByIsCorrectInCategory
 
+from src.repository.question_repository import QuestionRepository
+from src.repository.category_question_repository import CategoryQuestionRepository
+from src.repository.subcategory_question_repository import SubcategoryQuestionRepository
 
-def get_question_count(db: Session) -> int:
-    count = db.scalar(
-                    select(func.count()).
-                    select_from(Question)
-                )
-    return int(count)
+from database import SessionDependency
 
 
-def get_question_count_in_category(
-    db: Session,
-    category_id: int
+async def get_question_count_in_category(
+    category_id: int,
+    session=SessionDependency
 ) -> int:
-    count = db.scalar(
-                    select(func.count()).
-                    select_from(Question).
-                    join(CategoryQuestion).
-                    where(CategoryQuestion.category_id == category_id)
-                )
+    category_question_repository = CategoryQuestionRepository(session)
+    question_repository = QuestionRepository(session)
+
+    categories_questions = await category_question_repository.find_by_category_id(category_id)
+    question_ids = [cq.question_id for cq in categories_questions]
+    count = await question_repository.get_count_by_ids(question_ids)
     return int(count)
 
-def get_question_count_in_subcategory(
-    db: Session,
-    subcategory_id: int
+async def get_question_count_in_subcategory(
+    subcategory_id: int,
+    session=SessionDependency
 ) -> int:
-
-    count = db.scalar(
-                    select(func.count()).
-                    select_from(Question).
-                    join(SubcategoryQuestion).
-                    where(SubcategoryQuestion.subcategory_id == subcategory_id)
-                )
+    subcategory_question_repository = SubcategoryQuestionRepository(session)
+    question_repository = QuestionRepository(session)
+    
+    subcategories_questions = await subcategory_question_repository.find_by_subcategory_id(subcategory_id)
+    question_ids = [sq.question_id for sq in subcategories_questions]
+    count = await question_repository.get_count_by_ids(question_ids)
     return int(count)
 
+
+# カレンダーに表示する用。
 def get_question_count_by_last_answered_date(
     db: Session,
     days_array: list[str]
@@ -232,6 +231,4 @@ def get_question_count_by_is_correct_in_category(
                     where(CategoryQuestion.category_id == body.category_id).
                     where(Question.is_correct == body.is_correct)
                 )
-    print(count)
-    print(body.category_id)
     return int(count)

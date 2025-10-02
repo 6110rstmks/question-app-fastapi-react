@@ -220,8 +220,6 @@ def git_push_json_file(file_path: Path):
     
     REPO_DIR = os.path.abspath("")
     INDEX_ADD_FILE_PATH = os.path.join(EXPORT_DIR, "categories_export4.json")
-    print(INDEX_ADD_FILE_PATH)
-    print('パン')
     # repo = Repo(REPO_DIR)
     repo = _get_repo(Path(__file__).resolve().parent)
     wt = Path(repo.working_tree_dir).resolve()  # リポジトリのルート
