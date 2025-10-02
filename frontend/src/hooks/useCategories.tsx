@@ -75,14 +75,12 @@ export const useCategories = (
         const loadPageCount = async () => {
             const count: number = await fetchPageCount()
             setPageCount(count)
-
             const questionCount: number = await fetchQuestionCount()
             setQuestionCount(questionCount)
             const uncorrectedQuestionCount: number = await fetchUncorrectedQuestionCount()
             setUncorrectedQuestionCount(uncorrectedQuestionCount)
             const correctedQuestionCount: number = await fetchCorrectedQuestionCount()
             setCorrectedQuestionCount(correctedQuestionCount)
-
             const tempQuestionCnt: number = await fetchTemporaryQuestionCount()
             setTemporaryQuestionCount(tempQuestionCnt)
         }
@@ -91,7 +89,7 @@ export const useCategories = (
 
     useEffect(() => {
         const loadCategories = async () => {
-            const skip = (page - 1) * limit
+            const skip: number = (page - 1) * limit
             const categories: Category[] = await fetchCategories({
                 skip,
                 limit,
@@ -101,7 +99,6 @@ export const useCategories = (
                 searchAnswerWord
             })
             setCategories(categories)
-
         }
         loadCategories()
     }, [

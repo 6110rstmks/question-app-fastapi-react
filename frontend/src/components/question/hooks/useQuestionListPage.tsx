@@ -41,7 +41,6 @@ export const useQuestionListPage = () => {
     }, [handleKeyDown])
 
     const handleSearchQuestionClick = async () => {
-        console.log(9898797)
         if (searchWord.trim() === "") return
         // const questions_data: QuestionWithCategoryIdAndCategoryNameAndSubcategoryId[] =
         // await fetchQuestionsWithCategoryIdAndCategoryNameAndSubcategoryIdByProblemWord(

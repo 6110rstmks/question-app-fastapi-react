@@ -8,7 +8,7 @@ export const fetchSubcategoriesForHomePage = async (
     searchQuestionWord?: string,
     searchAnswerWord?: string
 ): Promise<Subcategory[]> => {
-    const url: string = `http://localhost:8000/subcategories/category_id/${category_id}?limit=4&searchSubcategoryWord=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}&searchAnswerWord=${searchAnswerWord}`
+    const url: string = `http://localhost:8000/subcategories/category_id/${category_id}?limit=4&searchSubcategoryName=${searchSubcategoryWord}&searchQuestionWord=${searchQuestionWord}&searchAnswerWord=${searchAnswerWord}`
     const response: Response = await fetch(url)
     if (!response.ok) {
         throw new Error("Failed to fetch subcategories")

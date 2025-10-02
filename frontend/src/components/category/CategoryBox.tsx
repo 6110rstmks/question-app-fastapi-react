@@ -40,7 +40,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         searchQuestionWord,
         searchAnswerWord
     })
-    const totalQuestions = subcategoriesWithQuestionCount.reduce((sum, sub) => sum + sub.questionCount, 0);
+    const totalQuestions = subcategoriesWithQuestionCount.reduce((sum, sub) => sum + sub.questionCount, 0)
 
     const navigate = useNavigate()
 

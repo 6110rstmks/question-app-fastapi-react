@@ -76,7 +76,7 @@ export const useCategoryBox = ({
     useEffect(() => {
 
         (async () => {
-            const subcategories: Subcategory[] = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord, searchQuestionWord, searchAnswerWord);
+            const subcategories: Subcategory[] = await fetchSubcategoriesForHomePage(categoryId, searchSubcategoryWord, searchQuestionWord, searchAnswerWord)
 
             const subcategoriesWithQuestionCount: SubcategoryWithQuestionCount[] = await Promise.all(
                 subcategories.map(async (subcategory) => {

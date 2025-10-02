@@ -1,4 +1,3 @@
-from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Optional
 
 
@@ -14,21 +13,23 @@ from database import SessionDependency
 
 # カテゴリbox内で表示するサブカテゴリを取得
 async def find_subcategories_in_categorybox(
-    db: AsyncSession, 
-    category_id: int, 
-    limit: int, 
-    searchSubcategoryWord: str, 
-    searchQuestionWord: str, 
-    searchAnswerWord: str
+    category_id: int,
+    limit: int,
+    searchSubcategoryWord: str,
+    searchQuestionWord: str,
+    searchAnswerWord: str,
+    session=SessionDependency
 ) -> list[SubcategoryRead]:
-    subcategory_repository = SubcategoryRepository(db)
-    question_repository = QuestionRepository(db)
-    subcategory_question_repository = SubcategoryQuestionRepository(db)
-    subcategory_question_repository = SubcategoryQuestionRepository(db)
+    subcategory_repository = SubcategoryRepository(session)
+    question_repository = QuestionRepository(session)
+    subcategory_question_repository = SubcategoryQuestionRepository(session)
+    subcategory_question_repository = SubcategoryQuestionRepository(session)
 
 
     if searchSubcategoryWord:
         result = subcategory_repository.find_by_name_starts_with(searchSubcategoryWord)
+        print('どうどう')
+        print(result)
 
     elif searchQuestionWord and len(searchQuestionWord) >= 3:
 
@@ -77,7 +78,6 @@ async def find_subcategories_in_categorybox(
     return result[0: 0 + limit]
 
 
-# リポジトリパターンに置換済み
 async def find_subcategory_by_id(
     id: int,
     session=SessionDependency
@@ -87,30 +87,27 @@ async def find_subcategory_by_id(
     return await subcategory_repository.get(id)
 
 
-# リポジトリパターンに置換済み
 async def find_subcategories_by_category_id(
     category_id: int,
     searchSubcategoryName: Optional[str] = None,
     session=SessionDependency
 ) -> list[SubcategoryRead]:
-
+    print()
     subcategory_repository = SubcategoryRepository(session)
-
+    print('ここ')
+    print(searchSubcategoryName)
+    print(await subcategory_repository.find_by_category_id_and_name_like(category_id, f"%{searchSubcategoryName}%"))
     if searchSubcategoryName:
         return await subcategory_repository.find_by_category_id_and_name_like(category_id, f"%{searchSubcategoryName}%")    
     return await subcategory_repository.find_by_category_id(category_id)
 
     
-# リポジトリパターンに置換済み
 async def delete_subcategory(
     id: int,
     session=SessionDependency
 ) -> Optional[SubcategoryRead]:
     subcategory_repository = SubcategoryRepository(session)
-
     questions = await question_cruds.find_all_questions_in_subcategory(id, session)
-    
     for question in questions:
         await question_cruds.delete_question(question.id, session)
-
     return await subcategory_repository.delete(id)
