@@ -22,7 +22,7 @@ app = FastAPI()
 @router.get("/count", response_model=int, status_code=status.HTTP_200_OK)
 async def get_question_count(session=SessionDependency):
     question_repository = QuestionRepository(session)
-    return question_repository.get_count()
+    return await question_repository.get_count()
 
 
 # カテゴリ内のQuestion数を取得するエンドポイント

@@ -66,7 +66,7 @@ async def find_by_name(
 @router.get("/category_id/{category_id}", response_model=list[SubcategoryResponse], status_code=status.HTTP_200_OK)
 async def find_by_category_id(
     category_id: int = Path(gt=0),
-    searchSubcategoryName: Optional[str] = Query(default=None, min_length=2, max_length=20),
+    searchSubcategoryName: Optional[str] = Query(default=None, min_length=0, max_length=20),
     session=SessionDependency
 ):
     subcategories = await subcategory_crud.find_subcategories_by_category_id(category_id, searchSubcategoryName, session)

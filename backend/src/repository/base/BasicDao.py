@@ -120,11 +120,13 @@ class BasicDao(Generic[ModelType, CreateSchemaType, UpdateSchemaType, ReadSchema
 
         :return: レコードの件数
         """
+        print('たまご2')
         stmt = select(func.count()).select_from(self.model)
         result = await self.db.execute(stmt)
         return result.scalar_one()
 
     async def get_count_by_ids(self, ids: list[int]) -> int:
+        print('たまご')
         """
         指定したIDのレコード数を取得します。
 
