@@ -98,8 +98,8 @@ export const HomePage: React.FC = () => {
                     searchCategoryWord={searchCategoryWord}
                     setSearchCategoryWord={setSearchCategoryWord}
                     setSearchSubcategoryWord={setSearchSubcategoryWord}
-                    setSearchQuestionWord={setSearchQuestionWord}
-                    setSearchAnswerWord={setSearchAnswerWord}
+                    // setSearchQuestionWord={setSearchQuestionWord}
+                    // setSearchAnswerWord={setSearchAnswerWord}
                     page={page} 
                     setPage={setPage} 
                     autoFocus={true}
@@ -109,8 +109,8 @@ export const HomePage: React.FC = () => {
                     searchSubcategoryWord={searchSubcategoryWord}
                     setSearchCategoryWord={setSearchCategoryWord}
                     setSearchSubcategoryWord={setSearchSubcategoryWord}
-                    setSearchQuestionWord={setSearchQuestionWord}
-                    setSearchAnswerWord={setSearchAnswerWord}
+                    // setSearchQuestionWord={setSearchQuestionWord}
+                    // setSearchAnswerWord={setSearchAnswerWord}
                     page={page} 
                     setPage={setPage} 
                 />
@@ -120,26 +120,6 @@ export const HomePage: React.FC = () => {
                 >
                     Question一覧検索ページ
                 </Link>
-                <Search 
-                    type="question"
-                    searchQuestionWord={searchQuestionWord}
-                    setSearchCategoryWord={setSearchCategoryWord}
-                    setSearchSubcategoryWord={setSearchSubcategoryWord}
-                    setSearchQuestionWord={setSearchQuestionWord}
-                    setSearchAnswerWord={setSearchAnswerWord}
-                    page={page} 
-                    setPage={setPage} 
-                />
-                <Search 
-                    type="answer"
-                    searchAnswerWord={searchAnswerWord}
-                    setSearchCategoryWord={setSearchCategoryWord}
-                    setSearchSubcategoryWord={setSearchSubcategoryWord}
-                    setSearchQuestionWord={setSearchQuestionWord}
-                    setSearchAnswerWord={setSearchAnswerWord}
-                    page={page} 
-                    setPage={setPage} 
-                /> 
             </div>
             
             <Pagination

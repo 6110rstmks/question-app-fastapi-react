@@ -8,8 +8,8 @@ interface SearchProps {
     searchAnswerWord?: string
     setSearchCategoryWord: (word: string) => void
     setSearchSubcategoryWord: (word: string) => void
-    setSearchQuestionWord: (word: string) => void
-    setSearchAnswerWord: (word: string) => void
+    // setSearchQuestionWord: (word: string) => void
+    // setSearchAnswerWord: (word: string) => void
     page: number
     setPage: (page: number) => void
     autoFocus?: boolean
@@ -23,8 +23,8 @@ const Search: React.FC<SearchProps> = ({
     searchAnswerWord = '',  
     setSearchCategoryWord,
     setSearchSubcategoryWord,
-    setSearchQuestionWord,
-    setSearchAnswerWord,
+    // setSearchQuestionWord,
+    // setSearchAnswerWord,
     setPage,
     autoFocus
 }) => {
@@ -32,24 +32,24 @@ const Search: React.FC<SearchProps> = ({
         if (type === 'category') {
             setSearchCategoryWord(e.target.value)
             setSearchSubcategoryWord('')
-            setSearchQuestionWord('')
-            setSearchAnswerWord('')
+            // setSearchQuestionWord('')
+            // setSearchAnswerWord('')
         } else if (type === 'subcategory') {
             setSearchCategoryWord('')
             setSearchSubcategoryWord(e.target.value)
-            setSearchQuestionWord('')
-            setSearchAnswerWord('')
+            // setSearchQuestionWord('')
+            // setSearchAnswerWord('')
         } else if (type === 'question') {
             setSearchCategoryWord('')
             setSearchSubcategoryWord('')
-            setSearchQuestionWord(e.target.value)
-            setSearchAnswerWord('')
+            // setSearchQuestionWord(e.target.value)
+            // setSearchAnswerWord('')
         }
         else {
             setSearchCategoryWord('')
             setSearchSubcategoryWord('')
-            setSearchQuestionWord('')
-            setSearchAnswerWord(e.target.value)
+            // setSearchQuestionWord('')
+            // setSearchAnswerWord(e.target.value)
         }
         setPage(1)
     }

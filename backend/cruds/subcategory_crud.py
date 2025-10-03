@@ -28,8 +28,6 @@ async def find_subcategories_in_categorybox(
 
     if searchSubcategoryWord:
         result = subcategory_repository.find_by_name_starts_with(searchSubcategoryWord)
-        print('どうどう')
-        print(result)
 
     elif searchQuestionWord and len(searchQuestionWord) >= 3:
 
@@ -92,11 +90,7 @@ async def find_subcategories_by_category_id(
     searchSubcategoryName: Optional[str] = None,
     session=SessionDependency
 ) -> list[SubcategoryRead]:
-    print()
     subcategory_repository = SubcategoryRepository(session)
-    print('ここ')
-    print(searchSubcategoryName)
-    print(await subcategory_repository.find_by_category_id_and_name_like(category_id, f"%{searchSubcategoryName}%"))
     if searchSubcategoryName:
         return await subcategory_repository.find_by_category_id_and_name_like(category_id, f"%{searchSubcategoryName}%")    
     return await subcategory_repository.find_by_category_id(category_id)
