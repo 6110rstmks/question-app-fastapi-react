@@ -122,33 +122,7 @@ const QuestionPage: React.FC = () => {
                 <div className="p-8">
                     <div className="flex flex-col lg:flex-row lg:items-start gap-6 mb-8">
 
-
-                        {/* 切り替えボタン */}
-                        <button
-                            onClick={() => setMarkdownFlg((prev) => !prev)}
-                            className="ml-4 px-3 py-1 text-sm rounded-lg border border-indigo-500 text-indigo-600 hover:bg-indigo-50 transition"
-                        >
-                            {markdownFlg ? "通常表示" : "Markdown表示"}
-                        </button>
-
                         {/* Problem Section */}
-                        {/* <div className="flex-1">
-                            <div className="mb-4">
-                                <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                                    <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
-                                    問題
-                                </h2>
-                                <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-indigo-500">
-                                    {question?.problem && question.problem.includes('\\') ? (
-                                        <BlockMath math={question.problem} />
-                                    ) : (
-                                        <div className="text-gray-700 leading-relaxed">
-                                            {RenderMemoWithLinks(question?.problem || '')}
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        </div> */}
                         <div className="flex-1">
                             <div className="mb-4">
                                 <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
@@ -194,6 +168,17 @@ const QuestionPage: React.FC = () => {
                                 'Correct'}
                             </button>
                         </div>
+                        <div className="bg-gray-50 rounded-xl p-4 mt-6">
+                            <h3 className="text-sm font-medium text-gray-600 mb-3">画面表示</h3>
+                            <button
+                                onClick={() => setMarkdownFlg((prev) => !prev)}
+                                className="w-full px-4 py-3 rounded-lg font-medium text-sm bg-blue-500 text-white shadow-lg shadow-blue-500/25 hover:bg-blue-600 transition-colors duration-200 transform hover:scale-105"
+                            >
+                                {markdownFlg ? "通常表示" : "Markdown表示"}
+                            </button>
+
+                        </div>
+
                         </div>
                     </div>
 
