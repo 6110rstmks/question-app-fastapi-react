@@ -22,7 +22,7 @@ https://zenn.dev/tenta_shiratori/articles/8e368a916b418a
 # ディレクトリ構成について考える
 https://zenn.dev/tenta_shiratori/articles/9be477249f8d80
 
-# 関数について
+# 関数
 引数に指定するid(category_id, subcategory_id)のデータ型は全てnumberに統一
 
 ## 関数名の統一

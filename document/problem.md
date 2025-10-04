@@ -3,19 +3,18 @@
 
 ## SetProblemPage
 
-Status、Genreについて以下から選択可能
-- ランダムに出題（default）
-- カテゴリから出題
+- problem.statusから出題
+  - Incorrectから出題
+  - Temporaryから出題
+- カレンダーから出題
+- 本日、昨日の日付から出題
 
-<hr>
-
-- Incorrect
-- Temporary
-
-### カレンダーから出題
+**カレンダーから出題**<br>
 日付を選択して出題することができる。（Incorrect）
 
-### 本日の日付、昨日の日付のものから出題することができる。
+
+**本日、昨日の日付から出題**<br>
+Incorrectから出題
 
 ## CategoryPage
 
