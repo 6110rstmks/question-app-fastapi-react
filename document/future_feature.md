@@ -1,10 +1,12 @@
 ### 将来実装予定の案
 
+jestではなくて、vitestを導入（最優先タスク）
+
+
 問題出題画面の
 
 react hook form 導入しや
 
-jestではなくて、vitestを導入
 
 tailwindでdarkscale対応→claudeにやらせる。
 

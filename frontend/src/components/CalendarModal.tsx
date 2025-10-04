@@ -21,12 +21,12 @@ const CalendarModal: React.FC<CalendarModalProps> = ({
         setQuestionCounts
     ] = useState<Record<string, number>>({})
 
-    const startMonth = startOfMonth(currentDate)
-    const endMonth = endOfMonth(currentDate)
-    const startDate = startOfWeek(startMonth)
-    const endDate = endOfWeek(endMonth)
+    const startMonth: Date = startOfMonth(currentDate)
+    const endMonth: Date = endOfMonth(currentDate)
+    const startDate: Date = startOfWeek(startMonth)
+    const endDate: Date = endOfWeek(endMonth)
 
-    const days = eachDayOfInterval({ start: startDate, end: endDate })
+    const days: Date[] = eachDayOfInterval({ start: startDate, end: endDate })
 
     const navigate = useNavigate()
 
