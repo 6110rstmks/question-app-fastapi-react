@@ -1,15 +1,31 @@
-import React from "react"
-import { useLocation } from "react-router"
+import React, { useEffect }  from "react"
+import { useLocation, useNavigate } from "react-router"
+
 import type { Question } from "../../types/Question"
+
 import { useProblemPage } from "./hooks/useProblemPage"
+
 import { ProblemNormalPage } from "./ui/ProblemNormalPage"
 import { ProblemCompletePage } from "./ui/ProblemCompletePage"
 
 const ProblemPage: React.FC = () => {
     const location = useLocation()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (!location.state) {
+            navigate('/')
+        }
+    }, [location.state, navigate])
+
+    // ✅ null の場合はレンダーをスキップ（navigateが完了するまで空表示）
+    if (!location.state) {
+        return null
+    }
+
     const { problemData, from, backToId } = location.state as {
         problemData: Question[]
-        from: string
+        from: 'subcategoryPage' | 'categoryPage' | 'setProblemPage'
         backToId: number // 戻る先のID(カテゴリIDまたはサブカテゴリIDが入る)
     }
 

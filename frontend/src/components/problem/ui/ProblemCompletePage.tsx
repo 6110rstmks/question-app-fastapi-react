@@ -6,7 +6,7 @@ import { CheckCircle, Trophy, RotateCcw, ArrowLeft, BookOpen, Target } from "luc
 interface Props {
     unsolvedCount: number
     handleNavigateToProblemReviewPage: () => void
-    from?: string
+    from: 'subcategoryPage' | 'categoryPage' | 'setProblemPage'
     backToId?: number
 }
 
